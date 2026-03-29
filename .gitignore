@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
+
+# Large binary files
+*.pdf
+
+# Source dictionaries (downloaded at build time)
+data/dictionaries/it_full.txt
+data/dictionaries/morph-it_048.txt
+
+# Claude Code local settings
+.claude/
