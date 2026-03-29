@@ -256,7 +256,12 @@ def rejoin_lines(text: str) -> str:
         else:
             # Handle hyphenated line breaks
             if current and current[-1].endswith("-"):
-                current[-1] = current[-1][:-1] + stripped
+                # Only rejoin if next line starts lowercase (broken word).
+                # Preserves genuine hyphens at line end (e.g., compound words).
+                if stripped[0].islower():
+                    current[-1] = current[-1][:-1] + stripped
+                else:
+                    current.append(stripped)
             else:
                 current.append(stripped)
 
@@ -271,7 +276,7 @@ def collapse_spaces(text: str) -> str:
     return re.sub(r"  +", " ", text)
 
 
-def atomic_write_json(path: Path, data: dict) -> None:
+def atomic_write_json(path: Path, data: dict | list) -> None:
     """Write JSON atomically: write to temp file, then rename."""
     tmp_fd, tmp_path = tempfile.mkstemp(dir=path.parent, suffix=".tmp")
     try:

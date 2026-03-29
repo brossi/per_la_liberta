@@ -1,0 +1,375 @@
+/* Bilingual edition: Per la Libertà! / For Freedom!
+   Loeb Classical Library-style facing pages.
+   Italian (verso/left) — English (recto/right) */
+
+/* === Font === */
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('../assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('../assets/fonts/Bodoni_Moda/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: italic;
+}
+
+/* Small Caps variant for headers */
+@font-face {
+  font-family: 'Bodoni Moda SC';
+  src: url('../assets/fonts/Bodoni_Moda_SC/BodoniModaSC-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+/* === Base Typography === */
+:root {
+  --body-size: 10.5pt;
+  --leading: 1.55;
+  --heading-tracking: 0.12em;
+  --color-body: #1a1a1a;
+  --color-muted: #666;
+  --color-accent: #8b0000;
+  --gutter: 2.5em;
+}
+
+html {
+  font-family: 'Bodoni Moda', 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-size: var(--body-size);
+  font-optical-sizing: auto;
+  line-height: var(--leading);
+  color: var(--color-body);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* === Title Page === */
+.title-page {
+  text-align: center;
+  padding: 20vh 2em 10vh;
+  page-break-after: always;
+}
+
+.title-it {
+  font-size: 2.4em;
+  font-weight: 700;
+  letter-spacing: var(--heading-tracking);
+  margin-bottom: 0.2em;
+}
+
+.title-en {
+  font-size: 1.8em;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-muted);
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.subtitle {
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0.5em 0;
+}
+
+.author {
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin-top: 2em;
+}
+
+/* === Part Pages === */
+.part-page {
+  text-align: center;
+  padding: 30vh 2em 10vh;
+  page-break-before: always;
+  page-break-after: always;
+}
+
+.part-page h2 {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: var(--heading-tracking);
+  text-transform: uppercase;
+  margin: 0.3em 0;
+}
+
+.part-page h2[lang="en"] {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.4em;
+  text-transform: none;
+  color: var(--color-muted);
+}
+
+/* === Chapters === */
+.chapter {
+  page-break-before: always;
+  margin-bottom: 3em;
+}
+
+.chapter-header {
+  text-align: center;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.8em;
+  border-bottom: 0.5pt solid var(--color-muted);
+}
+
+.chapter-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: var(--heading-tracking);
+  margin: 0 0 0.3em;
+}
+
+.chapter-title span[lang="it"] {
+  display: block;
+}
+
+.chapter-title span[lang="en"] {
+  display: block;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.85em;
+  color: var(--color-muted);
+  margin-top: 0.2em;
+}
+
+.page-ref {
+  display: block;
+  font-size: 0.8em;
+  color: var(--color-muted);
+  margin-top: 0.3em;
+}
+
+.page-citation {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 0.5pt dotted var(--color-accent);
+}
+
+.page-citation:hover {
+  color: #b00000;
+}
+
+/* === Two-Column Spread === */
+.spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gutter);
+  align-items: start;
+}
+
+.verso, .recto {
+  padding: 0;
+}
+
+.verso {
+  border-right: 0.5pt solid #ddd;
+  padding-right: var(--gutter);
+}
+
+.spread p {
+  margin: 0 0 0.8em;
+  text-align: justify;
+  text-indent: 1.5em;
+  hyphens: auto;
+}
+
+/* First paragraph of each column: no indent */
+.verso p:first-child,
+.recto p:first-child {
+  text-indent: 0;
+}
+
+/* === Colophon === */
+.colophon {
+  page-break-before: always;
+  padding: 10vh 3em;
+  font-size: 0.9em;
+  color: var(--color-muted);
+}
+
+.colophon h2 {
+  font-size: 1.3em;
+  letter-spacing: var(--heading-tracking);
+  margin-bottom: 1em;
+}
+
+.colophon a {
+  color: var(--color-accent);
+}
+
+/* === Page Image Overlay (slides from left) === */
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 45vw;
+  height: 100vh;
+  background: #fafaf8;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.page-overlay.open {
+  transform: translateX(0);
+}
+
+.page-overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 1.2em;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: 0.95em;
+  color: var(--color-muted);
+  flex-shrink: 0;
+}
+
+.page-overlay-header button {
+  background: none;
+  border: none;
+  font-size: 1.6em;
+  cursor: pointer;
+  color: var(--color-muted);
+  padding: 0 0.3em;
+  line-height: 1;
+}
+
+.page-overlay-header button:hover {
+  color: var(--color-body);
+}
+
+.page-overlay-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.page-overlay-body img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.page-overlay-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6em 1.2em;
+  border-top: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.page-overlay-nav button {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0.3em 0.8em;
+  cursor: pointer;
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: 0.85em;
+  color: var(--color-body);
+}
+
+.page-overlay-nav button:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.page-overlay-nav button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.page-overlay-nav a {
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-size: 0.8em;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.page-overlay-nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Screen-specific === */
+@media screen {
+  body {
+    max-width: 60em;
+    margin: 2em auto;
+    padding: 0 2em;
+  }
+
+  .chapter-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    padding-top: 0.5em;
+  }
+}
+
+/* === Print / PDF (WeasyPrint paged media) === */
+@media print {
+  @page {
+    size: 7in 10in;
+    margin: 1in 0.75in 1in 0.75in;
+
+    @top-center {
+      content: "Per la Libertà! · For Freedom!";
+      font-size: 8pt;
+      color: #999;
+      font-style: italic;
+    }
+
+    @bottom-center {
+      content: counter(page);
+      font-size: 9pt;
+      color: #999;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .title-page {
+    page-break-after: always;
+  }
+
+  .chapter {
+    page-break-before: always;
+  }
+
+  .page-citation {
+    color: var(--color-body);
+    border: none;
+    text-decoration: none;
+  }
+
+  /* Hide link underlines in print */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

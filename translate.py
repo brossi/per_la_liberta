@@ -57,18 +57,18 @@ def translate_chapter(text: str, title: str, api_key: str) -> tuple[str, str]:
 
     from utils import retry_api_call
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client = anthropic.Anthropic(api_key=api_key, timeout=300.0)
 
-    estimated_tokens = max(8192, len(text) // 3)
-    max_output = min(estimated_tokens, 64000)
+    max_tokens = 128000
+    thinking_budget = 32000
 
     def _call():
         return client.messages.create(
             model="claude-sonnet-4-6",
-            max_tokens=max_output + 10000,
+            max_tokens=max_tokens,
             thinking={
                 "type": "enabled",
-                "budget_tokens": 10000,
+                "budget_tokens": thinking_budget,
             },
             system=(
                 "You are translating a 1913 Italian book titled 'Per la Libertà!' (For Freedom!) "
@@ -124,6 +124,15 @@ def translate(output_dir: Path, state_dir: Path, api_key: str | None = None) -> 
     else:
         progress = {}
 
+    # Prune stale progress entries for chapters that no longer exist
+    current_ids = {ch["id"] for ch in chapters}
+    stale = [k for k in progress if k not in current_ids]
+    if stale:
+        for k in stale:
+            del progress[k]
+        atomic_write_json(progress_path, progress)
+        print(f"  Pruned {len(stale)} stale progress entries")
+
     # Translate each chapter
     for i, ch in enumerate(chapters):
         ch_id = ch["id"]
@@ -138,7 +147,19 @@ def translate(output_dir: Path, state_dir: Path, api_key: str | None = None) -> 
         atomic_write_json(progress_path, progress)
 
         try:
-            translated, stop_reason = translate_chapter(ch["text"], ch["title"], api_key)
+            # Extract page markers before translation, reinsert after.
+            # Don't rely on the LLM to preserve HTML comments.
+            page_marker = ""
+            page_match = re.search(r"<!-- pages:\d+-\d+ -->", ch["text"])
+            if page_match:
+                page_marker = page_match.group(0)
+            text_for_translation = re.sub(r"<!-- pages:\d+-\d+ -->\n?", "", ch["text"])
+
+            translated, stop_reason = translate_chapter(text_for_translation, ch["title"], api_key)
+
+            # Reinsert page marker at the top of the translated text
+            if page_marker:
+                translated = page_marker + "\n\n" + translated
 
             # Save individual chapter translation
             ch_path = translations_dir / f"{ch_id}.md"
@@ -213,6 +234,45 @@ def assemble_translation(
     output_path = output_dir / "english_translation.md"
     output_path.write_text("\n".join(md_lines), encoding="utf-8")
     print(f"\n  English translation: {output_path}")
+
+    # Generate source_pages.json sidecar with IA links
+    _generate_source_pages(output_dir, "\n".join(md_lines))
+
+
+IA_ITEM_ID = "perlalibertdal00cres"
+
+
+def _generate_source_pages(output_dir: Path, markdown_text: str) -> None:
+    """Extract page references from markdown and generate source_pages.json."""
+    import re
+
+    page_refs = re.findall(
+        r"^(#{2,3}\s.+)\n[\s\S]*?<!-- pages:(\d+)-(\d+) -->",
+        markdown_text,
+        re.MULTILINE,
+    )
+
+    if not page_refs:
+        return
+
+    source_pages = {}
+    for header, start_page, end_page in page_refs:
+        title = header.lstrip("#").strip()
+        ch_id = re.sub(r"[^a-z0-9]", "_", title.lower()).strip("_")
+        start = int(start_page)
+        end = int(end_page)
+        # IA uses 0-indexed page numbers in URLs
+        source_pages[ch_id] = {
+            "title": title,
+            "pages": list(range(start, end + 1)),
+            "ia_url": f"https://archive.org/details/{IA_ITEM_ID}/page/n{start - 1}/mode/1up",
+        }
+
+    sidecar_path = output_dir / "source_pages.json"
+    sidecar_path.write_text(
+        json.dumps(source_pages, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    print(f"  Source pages sidecar: {sidecar_path} ({len(source_pages)} chapters)")
 
 
 if __name__ == "__main__":

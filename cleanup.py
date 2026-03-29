@@ -96,7 +96,10 @@ def is_noise_line(line: str) -> bool:
     return False
 
 
-_ACCENT_MAP = str.maketrans("àáâèéêìíîòóôùúû", "aaaeeeiiiooouu" + "u")
+_ACCENT_MAP = str.maketrans(
+    "àáâèéêìíîòóôùúûÀÁÂÈÉÊÌÍÎÒÓÔÙÚÛ",
+    "aaaeeeiiiooouu" + "u" + "AAAEEEIIIOOOUU" + "U",
+)
 
 
 def _strip_accents(text: str) -> str:
@@ -260,12 +263,9 @@ def llm_correct_italian(text: str, chapter_title: str, api_key: str) -> str:
 
     from utils import retry_api_call
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client = anthropic.Anthropic(api_key=api_key, timeout=300.0)
 
-    # Estimate tokens needed: ~1 token per 4 chars, with headroom
-    estimated_tokens = max(8192, len(text) // 3)
-    # Cap at model max
-    max_output = min(estimated_tokens, 64000)
+    max_output = 128000
 
     def _call():
         return client.messages.create(
@@ -304,6 +304,13 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
     """Clean reconciled text and produce final Italian markdown."""
     chapters_path = data_dir / "reconciled_chapters.json"
     chapters = json.loads(chapters_path.read_text(encoding="utf-8"))
+
+    # Load page provenance if available (from 3-way reconciliation)
+    chapter_pages_path = data_dir / "chapter_pages.json"
+    chapter_pages = {}
+    if chapter_pages_path.exists():
+        chapter_pages = json.loads(chapter_pages_path.read_text(encoding="utf-8"))
+        print(f"  Page provenance loaded for {len(chapter_pages)} chapters")
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -369,6 +376,12 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
             # Normalize chapter title
             ch_num = ch["id"].split("_ch")[1] if "_ch" in ch["id"] else ""
             md_lines.extend([f"### {ch['title']}", ""])
+
+        # Insert page provenance marker if available
+        pages = chapter_pages.get(ch["id"])
+        if pages:
+            md_lines.append(f"<!-- pages:{pages[0]}-{pages[-1]} -->")
+            md_lines.append("")
 
         md_lines.append(text)
         md_lines.extend(["", ""])

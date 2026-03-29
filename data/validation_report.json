@@ -1,0 +1,44 @@
+{
+  "overall": "fail",
+  "checks": [
+    {
+      "name": "chapter_count",
+      "passed": true,
+      "h2_count": 3,
+      "h3_count": 57,
+      "issues": []
+    },
+    {
+      "name": "no_empty_chapters",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "name": "quote_balance",
+      "passed": false,
+      "issues": [
+        "Guillemet imbalance: 41 « vs 53 »",
+        "Smart double quote imbalance: 35 “ vs 37 ”"
+      ]
+    },
+    {
+      "name": "italian_char_coverage",
+      "passed": true,
+      "foreign_char_ratio": 0.083,
+      "issues": []
+    },
+    {
+      "name": "no_ascii_remnants",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "name": "word_count_preservation",
+      "passed": true,
+      "reconciled_words": 207377,
+      "cleaned_words": 203014,
+      "retention_pct": 97.9,
+      "issues": []
+    }
+  ]
+}
