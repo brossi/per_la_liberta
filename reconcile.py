@@ -268,7 +268,7 @@ def reconcile_words_3way(
                 result.append(w1)
                 continue
             elif n2 == n3:
-                # Copy 2 and 3 agree — prefer w2 (ABBYY, different physical copy)
+                # Copy 2 and 3 agree — prefer w2 (different physical copy)
                 result.append(w2)
                 continue
             else:
