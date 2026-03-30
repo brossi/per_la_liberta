@@ -8,7 +8,10 @@ DATA_DIR = BASE_DIR / "data"
 OUTPUT_DIR = BASE_DIR / "output"
 STATE_DIR = BASE_DIR / "state"
 
-STEPS = ["download", "ocr", "reconcile", "triage", "cleanup", "validate", "translate", "typeset", "all"]
+STEPS = [
+    "download", "ocr", "reconcile", "triage", "cleanup",
+    "adjudicate", "validate", "translate", "typeset", "all",
+]
 
 
 def main():
@@ -102,6 +105,17 @@ def main():
         from cleanup import cleanup
 
         cleanup(DATA_DIR, OUTPUT_DIR, use_llm=args.llm_cleanup, api_key=args.api_key)
+        print()
+
+    if args.step in ("adjudicate", "all"):
+        print("Step 5b: Adjudicating unresolved hyphenated tokens...")
+        from adjudicate import adjudicate
+
+        results = adjudicate(DATA_DIR)
+        if results:
+            from utils import atomic_write_json
+
+            atomic_write_json(DATA_DIR / "adjudication_results.json", results)
         print()
 
     if args.step in ("validate", "all"):

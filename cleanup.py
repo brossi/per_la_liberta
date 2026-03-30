@@ -419,8 +419,17 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
     return text.strip(), dehyphen_flags
 
 
-def llm_correct_italian(text: str, chapter_title: str, api_key: str) -> str:
-    """Use Claude to correct remaining OCR errors in Italian text."""
+def llm_correct_italian(
+    text: str,
+    chapter_title: str,
+    api_key: str,
+    zingarelli_context: str = "",
+) -> str:
+    """Use Claude to correct remaining OCR errors in Italian text.
+
+    If zingarelli_context is provided, it is appended to the user message
+    to give the LLM period-appropriate dictionary evidence for flagged tokens.
+    """
     import anthropic
 
     from utils import retry_api_call
@@ -428,6 +437,19 @@ def llm_correct_italian(text: str, chapter_title: str, api_key: str) -> str:
     client = anthropic.Anthropic(api_key=api_key, timeout=300.0)
 
     max_output = 128000
+
+    user_content = (
+        f"Correct OCR errors in the following chapter ({chapter_title}). "
+        f"Return only the corrected Italian text:\n\n{text}"
+    )
+    if zingarelli_context:
+        user_content += (
+            "\n\n--- REFERENCE ---\n"
+            "The following tokens were flagged as potentially broken or garbled. "
+            "Use the Zingarelli 1922 dictionary evidence below to inform your corrections. "
+            "Tokens marked 'not found' may be proper nouns (keep as-is) or noise (remove).\n\n"
+            + zingarelli_context
+        )
 
     def _call():
         return client.messages.create(
@@ -444,17 +466,13 @@ def llm_correct_italian(text: str, chapter_title: str, api_key: str) -> str:
                 "- Do NOT translate — output must be in Italian\n"
                 "- Do NOT add or remove content — only fix OCR errors\n"
                 "- Common OCR errors: 'e' for 'c', 'ii' for 'u', 'im' for 'un', 'm-' artifacts, "
-                "parentheses inside words, mid-word capitals\n"
+                "parentheses inside words, mid-word capitals, r↔i confusion at line breaks\n"
+                "- If a REFERENCE section with Zingarelli 1922 dictionary evidence is provided, "
+                "use it to validate corrections for flagged tokens\n"
                 "- Return ONLY the corrected text, no commentary"
             ),
             messages=[
-                {
-                    "role": "user",
-                    "content": (
-                        f"Correct OCR errors in the following chapter ({chapter_title}). "
-                        f"Return only the corrected Italian text:\n\n{text}"
-                    ),
-                }
+                {"role": "user", "content": user_content}
             ],
         )
 
@@ -527,7 +545,12 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
             bar = "█" * filled + "░" * (bar_width - filled)
             print(f"\r  [{bar}] {i+1}/{total}  {ch['title']:<35s}", end="", flush=True)
             try:
-                text = llm_correct_italian(text, ch["title"], api_key)
+                # Build Zingarelli context for this chapter's flagged tokens
+                zingarelli_ctx = ""
+                if flags:
+                    from adjudicate import zingarelli_context_for_flags
+                    zingarelli_ctx = zingarelli_context_for_flags(flags)
+                text = llm_correct_italian(text, ch["title"], api_key, zingarelli_ctx)
                 time.sleep(1)  # Rate limiting
             except Exception as e:
                 print(f"\n    LLM error on {ch['id']}, using regex-cleaned text: {e}")
