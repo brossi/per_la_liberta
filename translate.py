@@ -254,6 +254,73 @@ def translate(
     assemble_translation(output_dir, state_dir, chapters)
 
 
+_ITALIAN_NUMBERS = {
+    "Primo": "One", "Secondo": "Two", "Terzo": "Three", "Quarto": "Four",
+    "Quinto": "Five", "Sesto": "Six", "Settimo": "Seven", "Ottavo": "Eight",
+    "Nono": "Nine", "Decimo": "Ten", "Undicesimo": "Eleven",
+    "Dodicesimo": "Twelve", "Tredicesimo": "Thirteen",
+    "Quattordicesimo": "Fourteen", "Quindicesimo": "Fifteen",
+    "Sedicesimo": "Sixteen", "Diciassettesimo": "Seventeen",
+    "Diciottesimo": "Eighteen", "Diciannovesimo": "Nineteen",
+    "Ventesimo": "Twenty", "Ventesimoterzo": "Twenty-Three",
+    "Ventesimoquarto": "Twenty-Four", "Trentesimo": "Thirty",
+    # OCR garbles from Part 2 chapter headers
+    "O^indiccsimo": "Eleven",  # Undicesimo
+    "Dccimoscttimo": "Seventeen",  # Decimosettimo
+    "Dccimottavo": "Eighteen",  # Decimottavo
+    "Decimonono": "Nineteen",  # Decimonono (non-standard spelling)
+}
+
+_ITALIAN_ORDINAL_PARTS = {
+    "Decimo": "Ten", "Ventesimo": "Twenty", "Trentesimo": "Thirty",
+    "Primo": "One", "Secondo": "Two", "Terzo": "Three", "Quarto": "Four",
+    "Quinto": "Five", "Sesto": "Six", "Settimo": "Seven", "Ottavo": "Eight",
+    "Nono": "Nine",
+}
+
+
+def _italian_to_english_title(title: str) -> str:
+    """Translate an Italian chapter title to English."""
+    structural = {
+        "Prefazione": "Preface",
+        "Parte Prima": "Part One",
+        "Parte Seconda": "Part Two",
+    }
+    if title in structural:
+        return structural[title]
+
+    # "Capitolo Primo" → "Chapter One"
+    m = re.match(r"Capitolo\s+(.+)", title)
+    if not m:
+        return title
+
+    rest = m.group(1).strip()
+
+    # Single-word number: "Primo", "Dodicesimo", "Ventesimoterzo"
+    if rest in _ITALIAN_NUMBERS:
+        return f"Chapter {_ITALIAN_NUMBERS[rest]}"
+
+    # Compound: "Decimo Quinto" → "Fifteen", "Ventesimo Primo" → "Twenty-One"
+    parts = rest.split()
+    if len(parts) == 2 and parts[0] in _ITALIAN_ORDINAL_PARTS and parts[1] in _ITALIAN_ORDINAL_PARTS:
+        tens = _ITALIAN_ORDINAL_PARTS[parts[0]]
+        ones = _ITALIAN_ORDINAL_PARTS[parts[1]]
+        # Special cases for teens
+        teens = {
+            ("Ten", "One"): "Eleven", ("Ten", "Two"): "Twelve",
+            ("Ten", "Three"): "Thirteen", ("Ten", "Four"): "Fourteen",
+            ("Ten", "Five"): "Fifteen", ("Ten", "Six"): "Sixteen",
+            ("Ten", "Seven"): "Seventeen", ("Ten", "Eight"): "Eighteen",
+            ("Ten", "Nine"): "Nineteen",
+        }
+        teen = teens.get((tens, ones))
+        if teen:
+            return f"Chapter {teen}"
+        return f"Chapter {tens}-{ones}"
+
+    return f"Chapter {rest}"
+
+
 def assemble_translation(
     output_dir: Path, state_dir: Path, chapters: list[dict]
 ) -> None:
@@ -281,16 +348,16 @@ def assemble_translation(
 
         translated = ch_path.read_text(encoding="utf-8")
 
-        # Add header
+        # Strip LLM-generated chapter headings from the translation body
+        # (we add our own canonical heading below)
+        translated = re.sub(r"^#{1,3}\s+.*(?:chapter|capitolo).*$", "", translated,
+                            flags=re.IGNORECASE | re.MULTILINE)
+        translated = re.sub(r"^(?:CHAPTER|Chapter)\s+(?:the\s+)?[A-Z][A-Za-z\- ]+$", "", translated,
+                            flags=re.MULTILINE)
+        translated = translated.strip()
+
         level = "#" * ch["level"]
-        # Translate structural titles
-        title = ch["title"]
-        title_map = {
-            "Prefazione": "Preface",
-            "Parte Prima": "Part One",
-            "Parte Seconda": "Part Two",
-        }
-        display_title = title_map.get(title, title)
+        display_title = _italian_to_english_title(ch["title"])
 
         md_lines.extend([f"{level} {display_title}", ""])
         md_lines.append(translated)

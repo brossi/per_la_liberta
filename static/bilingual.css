@@ -30,12 +30,13 @@
 
 /* === Base Typography === */
 :root {
-  --body-size: 10.5pt;
+  --body-size: 16px;
   --leading: 1.55;
   --heading-tracking: 0.12em;
-  --color-body: #1a1a1a;
-  --color-muted: #666;
+  --color-body: #483826;
+  --color-muted: #8b7b58;
   --color-accent: #8b0000;
+  --paper: #d7c594;
   --gutter: 2.5em;
 }
 
@@ -50,29 +51,28 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background: var(--paper);
 }
 
 /* === Title Page === */
 .title-page {
-  text-align: center;
-  padding: 20vh 2em 10vh;
+  padding: 20vh 0 10vh;
   page-break-after: always;
 }
 
-.title-it {
-  font-size: 2.4em;
-  font-weight: 700;
-  letter-spacing: var(--heading-tracking);
-  margin-bottom: 0.2em;
+.title-col {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.title-en {
-  font-size: 1.8em;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--color-muted);
-  margin-top: 0;
-  margin-bottom: 1.5em;
+.title-text {
+  font-size: 2.2em;
+  font-weight: 700;
+  letter-spacing: var(--heading-tracking);
+  margin: 0 0 0.8em;
 }
 
 .subtitle {
@@ -126,24 +126,23 @@ body {
   border-bottom: 0.5pt solid var(--color-muted);
 }
 
+.chapter-title-spread {
+  margin-bottom: 0.3em;
+}
+
+.chapter-title-col {
+  text-align: center;
+}
+
+.chapter-title-col[lang="en"] .chapter-title {
+  font-style: normal;
+}
+
 .chapter-title {
   font-size: 1.5em;
   font-weight: 700;
   letter-spacing: var(--heading-tracking);
-  margin: 0 0 0.3em;
-}
-
-.chapter-title span[lang="it"] {
-  display: block;
-}
-
-.chapter-title span[lang="en"] {
-  display: block;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 0.85em;
-  color: var(--color-muted);
-  margin-top: 0.2em;
+  margin: 0;
 }
 
 .page-ref {
@@ -166,18 +165,19 @@ body {
 /* === Two-Column Spread === */
 .spread {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 38em) minmax(0, 38em);
   gap: var(--gutter);
   align-items: start;
-}
-
-.verso, .recto {
-  padding: 0;
+  justify-content: center;
 }
 
 .verso {
+  padding-right: calc(var(--gutter) / 2);
   border-right: 0.5pt solid #ddd;
-  padding-right: var(--gutter);
+}
+
+.recto {
+  padding-left: calc(var(--gutter) / 2);
 }
 
 .spread p {
@@ -218,7 +218,7 @@ body {
   left: 0;
   width: 45vw;
   height: 100vh;
-  background: #fafaf8;
+  background: #f0e8d4;
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -314,10 +314,167 @@ body {
   text-decoration: underline;
 }
 
+/* === Font Size Controls === */
+.font-size-controls {
+  position: fixed;
+  top: 0.8em;
+  right: 0.8em;
+  z-index: 900;
+  display: flex;
+  gap: 0;
+}
+
+.font-size-controls button {
+  background: #f0e8d4;
+  border: 1px solid #d0c9b8;
+  padding: 0.3em 0.6em;
+  font-size: 1em;
+  cursor: pointer;
+  color: var(--color-muted);
+  line-height: 1;
+  font-family: 'Bodoni Moda', Georgia, serif;
+}
+
+.font-size-controls button:first-child {
+  border-radius: 3px 0 0 3px;
+  border-right: none;
+}
+
+.font-size-controls button:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.font-size-controls button:hover {
+  color: var(--color-body);
+  border-color: #bbb;
+}
+
+/* === Chapter Index Panel (slides from right) === */
+.toc-trigger {
+  position: fixed;
+  top: 0.8em;
+  left: 0.8em;
+  z-index: 900;
+  background: #f0e8d4;
+  border: 1px solid #d0c9b8;
+  border-radius: 3px;
+  padding: 0.3em 0.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: var(--color-muted);
+  line-height: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.toc-trigger:hover {
+  color: var(--color-body);
+  border-color: #bbb;
+}
+
+.toc-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 22em;
+  max-width: 85vw;
+  height: 100vh;
+  background: #f0e8d4;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.toc-panel.open {
+  transform: translateX(0);
+}
+
+.toc-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 1.2em;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: var(--heading-tracking);
+  color: var(--color-body);
+  flex-shrink: 0;
+}
+
+.toc-panel-header button {
+  background: none;
+  border: none;
+  font-size: 1.6em;
+  cursor: pointer;
+  color: var(--color-muted);
+  padding: 0 0.3em;
+  line-height: 1;
+}
+
+.toc-panel-header button:hover {
+  color: var(--color-body);
+}
+
+.toc-list {
+  flex: 1;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+.toc-list li {
+  margin: 0;
+}
+
+.toc-list a {
+  display: block;
+  padding: 0.4em 1.2em;
+  color: var(--color-body);
+  text-decoration: none;
+  font-size: 0.9em;
+  line-height: 1.4;
+  border-left: 3px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.toc-list a:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-left-color: var(--color-accent);
+}
+
+.toc-list .toc-en {
+  display: block;
+  font-style: italic;
+  font-size: 0.85em;
+  color: var(--color-muted);
+  margin-top: 0.1em;
+}
+
+.toc-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1050;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.toc-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* === Screen-specific === */
 @media screen {
   body {
-    max-width: 60em;
+    max-width: 82em;
     margin: 2em auto;
     padding: 0 2em;
   }
@@ -325,7 +482,7 @@ body {
   .chapter-header {
     position: sticky;
     top: 0;
-    background: white;
+    background: #f0e8d4;
     z-index: 10;
     padding-top: 0.5em;
   }
@@ -354,6 +511,10 @@ body {
   body {
     margin: 0;
     padding: 0;
+  }
+
+  .toc-trigger, .toc-panel, .toc-backdrop, .font-size-controls {
+    display: none;
   }
 
   .title-page {

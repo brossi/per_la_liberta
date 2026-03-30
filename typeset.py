@@ -63,9 +63,13 @@ def _parse_chapters(markdown_text: str) -> list[dict]:
 
 
 def _split_paragraphs(text: str) -> list[str]:
-    """Split text into paragraphs on blank lines."""
+    """Split text into paragraphs on blank lines.
+
+    Strips markdown headings (# lines) that the LLM may have included
+    at the top of translated chapters.
+    """
     paras = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
-    return paras
+    return [p for p in paras if not re.match(r"^#{1,3}\s", p)]
 
 
 def _align_chapters(italian_chapters: list[dict], english_chapters: list[dict]) -> list[dict]:
@@ -175,12 +179,38 @@ def generate_html(
         "  </div>",
         "</div>",
         "",
+        "<!-- Fixed TOC trigger -->",
+        '<button id="toc-trigger" class="toc-trigger" aria-label="Table of contents">&#9776;</button>',
+        "",
+        "<!-- Font size controls -->",
+        '<div class="font-size-controls">',
+        '  <button id="font-smaller" aria-label="Decrease font size">&minus;</button>',
+        '  <button id="font-larger" aria-label="Increase font size">&plus;</button>',
+        '</div>',
+        "",
+        "<!-- Slide-in chapter index -->",
+        '<nav id="toc-panel" class="toc-panel">',
+        '  <div class="toc-panel-header">',
+        '    <span>Contents</span>',
+        '    <button id="toc-close" aria-label="Close">&times;</button>',
+        '  </div>',
+        '  <ul id="toc-list" class="toc-list"></ul>',
+        '</nav>',
+        '<div id="toc-backdrop" class="toc-backdrop"></div>',
+        "",
         '<div class="title-page">',
-        '<h1 class="title-it" lang="it">Per la Libertà!</h1>',
-        '<h1 class="title-en" lang="en">For Freedom!</h1>',
-        '<p class="subtitle" lang="it">Dalle mie conversazioni col Conte Carlo di Rudio,<br>complice di Felice Orsini</p>',
-        '<p class="subtitle" lang="en">From my conversations with Count Carlo di Rudio,<br>accomplice of Felice Orsini</p>',
-        '<p class="author">Cesare Crespi (1913)</p>',
+        '  <div class="spread">',
+        '    <div class="verso title-col" lang="it">',
+        '      <h1 class="title-text">PER LA LIBERTÀ!</h1>',
+        '      <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio,<br>complice di Felice Orsini</p>',
+        '      <p class="author">Cesare Crespi (1913)</p>',
+        '    </div>',
+        '    <div class="recto title-col" lang="en">',
+        '      <h1 class="title-text">FOR FREEDOM!</h1>',
+        '      <p class="subtitle">From my conversations with Count Carlo di Rudio,<br>accomplice of Felice Orsini</p>',
+        '      <p class="author">Cesare Crespi (1913)</p>',
+        '    </div>',
+        '  </div>',
         "</div>",
         "",
     ]
@@ -209,8 +239,13 @@ def generate_html(
         ia_link = ""
         page_label = ""
         if pair["page_range"]:
-            start, end = pair["page_range"]
-            ia_url = source_pages.get((start, end), "")
+            raw_start, end = pair["page_range"]
+            # Chapter page ranges overlap: start page is shared with the
+            # previous chapter's last page.  Bump by 1 so the link opens
+            # on this chapter's own first page (except for the very first
+            # chapter, where there is no prior overlap).
+            start = raw_start + 1 if raw_start > 7 else raw_start
+            ia_url = source_pages.get((raw_start, end), "")
             if not ia_url:
                 ia_url = f"https://archive.org/details/{IA_ITEM_ID}/page/n{start - 1}/mode/1up"
             book_start = start - PDF_PAGE_OFFSET
@@ -225,13 +260,14 @@ def generate_html(
                 f'title="View original scan">{page_label}</a>'
             )
 
+        ch_id = re.sub(r"[^a-z0-9]", "-", pair["italian_title"].lower()).strip("-")
         html_parts.extend([
-            '<section class="chapter">',
+            f'<section class="chapter" id="ch-{ch_id}">',
             '  <div class="chapter-header">',
-            f'    <{level_tag} class="chapter-title">',
-            f'      <span lang="it">{_escape_html(pair["italian_title"])}</span>',
-            f'      <span lang="en">{_escape_html(pair["english_title"])}</span>' if pair["english_title"] else "",
-            f"    </{level_tag}>",
+            '    <div class="spread chapter-title-spread">',
+            f'      <div class="chapter-title-col" lang="it"><{level_tag} class="chapter-title">{_escape_html(pair["italian_title"])}</{level_tag}></div>',
+            f'      <div class="chapter-title-col" lang="en"><{level_tag} class="chapter-title">{_escape_html(pair["english_title"])}</{level_tag}></div>' if pair["english_title"] else '      <div class="chapter-title-col"></div>',
+            '    </div>',
             f'    <span class="page-ref">{ia_link}</span>' if ia_link else "",
             "  </div>",
             '  <div class="spread">',
@@ -260,11 +296,12 @@ def generate_html(
 
     # Colophon
     html_parts.extend([
-        '<div class="colophon">',
+        '<div class="colophon" id="colophon">',
         "  <h2>Colophon</h2>",
         "  <p>This bilingual edition was produced from two independent OCR scans of the",
         f'  1913 first edition published by Canessa Printing Co., reconciled via three-way',
-        "  collation with a Gemini Pro vision-OCR witness, and translated by Claude (Anthropic).</p>",
+        "  collation with a Gemini Pro vision-OCR witness, and translated by Claude Sonnet 4.6 (Anthropic).</p>",
+        "  <p>Translation processing by Ben Rossi on March 30, 2026.</p>",
         f'  <p>Source scans: <a href="https://archive.org/details/{IA_ITEM_ID}">Internet Archive</a></p>',
         "  <p>Typeface: Bodoni Moda</p>",
         "</div>",
@@ -323,6 +360,70 @@ def generate_html(
         "    if (e.target === overlay) overlay.classList.remove('open');",
         "  });",
         "})();",
+        "",
+        "// Chapter index panel",
+        "(() => {",
+        "  const trigger = document.getElementById('toc-trigger');",
+        "  const panel = document.getElementById('toc-panel');",
+        "  const backdrop = document.getElementById('toc-backdrop');",
+        "  const closeBtn = document.getElementById('toc-close');",
+        "  const list = document.getElementById('toc-list');",
+        "",
+        "  // Build TOC from chapter sections",
+        "  document.querySelectorAll('section.chapter').forEach(sec => {",
+        "    const enCol = sec.querySelector('.chapter-title-col[lang=\"en\"] .chapter-title');",
+        "    const itCol = sec.querySelector('.chapter-title-col[lang=\"it\"] .chapter-title');",
+        "    const title = enCol ? enCol.textContent : (itCol ? itCol.textContent : null);",
+        "    if (!title) return;",
+        "    const li = document.createElement('li');",
+        "    const a = document.createElement('a');",
+        "    a.href = '#' + sec.id;",
+        "    a.textContent = title;",
+        "    a.addEventListener('click', () => { panel.classList.remove('open'); backdrop.classList.remove('open'); });",
+        "    li.appendChild(a);",
+        "    list.appendChild(li);",
+        "  });",
+        "",
+        "  // Add colophon link",
+        "  const cLi = document.createElement('li');",
+        "  const cA = document.createElement('a');",
+        "  cA.href = '#colophon';",
+        "  cA.textContent = 'Colophon';",
+        "  cA.addEventListener('click', () => { panel.classList.remove('open'); backdrop.classList.remove('open'); });",
+        "  cLi.appendChild(cA);",
+        "  list.appendChild(cLi);",
+        "",
+        "  function toggle(open) {",
+        "    panel.classList.toggle('open', open);",
+        "    backdrop.classList.toggle('open', open);",
+        "  }",
+        "  trigger.addEventListener('click', () => toggle(!panel.classList.contains('open')));",
+        "  closeBtn.addEventListener('click', () => toggle(false));",
+        "  backdrop.addEventListener('click', () => toggle(false));",
+        "  document.addEventListener('keydown', e => { if (e.key === 'Escape') toggle(false); });",
+        "})();",
+        "",
+        "// Font size controls",
+        "(() => {",
+        "  const root = document.documentElement;",
+        "  const STEP = 1;",
+        "  const MIN = 10;",
+        "  const MAX = 24;",
+        "  let size = 16;",
+        "  const saved = localStorage.getItem('fontSize');",
+        "  if (saved) { size = parseInt(saved); root.style.fontSize = size + 'px'; }",
+        "",
+        "  document.getElementById('font-smaller').addEventListener('click', () => {",
+        "    size = Math.max(MIN, size - STEP);",
+        "    root.style.fontSize = size + 'px';",
+        "    localStorage.setItem('fontSize', size);",
+        "  });",
+        "  document.getElementById('font-larger').addEventListener('click', () => {",
+        "    size = Math.min(MAX, size + STEP);",
+        "    root.style.fontSize = size + 'px';",
+        "    localStorage.setItem('fontSize', size);",
+        "  });",
+        "})();",
         "</script>",
         "",
         "</body>",
@@ -368,15 +469,16 @@ def typeset(output_dir: Path) -> None:
         source_pages_path=source_pages_path,
     )
 
-    # Generate PDF
-    pdf_path = output_dir / "bilingual.pdf"
-    try:
-        generate_pdf(html_path, pdf_path)
-    except ImportError:
-        print("  Warning: weasyprint not installed — skipping PDF generation")
-        print("  Install with: uv add weasyprint")
-    except Exception as e:
-        print(f"  PDF generation failed: {e}")
+    # PDF generation disabled — WeasyPrint requires DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
+    # To re-enable, uncomment the block below.
+    # pdf_path = output_dir / "bilingual.pdf"
+    # try:
+    #     generate_pdf(html_path, pdf_path)
+    # except ImportError:
+    #     print("  Warning: weasyprint not installed — skipping PDF generation")
+    #     print("  Install with: uv add weasyprint")
+    # except Exception as e:
+    #     print(f"  PDF generation failed: {e}")
 
 
 if __name__ == "__main__":

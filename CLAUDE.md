@@ -60,6 +60,8 @@ Set in `.env` (gitignored, loaded automatically by `pipeline.py` via `python-dot
 
 Keys can also be passed via `--api-key` / `--gemini-api-key` flags, but `.env` is preferred.
 
+Anthropic API account is Tier 4 (4,000 RPM, 2M input TPM, 400-800K output TPM for Sonnet). Translation and cleanup can safely run 20-30+ parallel workers.
+
 ## Key Technical Decisions
 
 ### OCR Strategy

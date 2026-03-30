@@ -1,0 +1,69 @@
+<!-- pages:148-152 -->
+
+# Chapter Six
+
+FOR several days I forced myself to suppress the thoughts that swarmed tumultously through my head, whilst renewing old acquaintances. At the same time I sought some foothold that might put an end to my extremely precarious financial situation and secure me work and bread for the future.
+
+One evening, shortly before sunset, I was making my way home, unusually weary, almost dispirited, from my customary wanderings, when, turning the corner into the square of Shoah, I literally collided with Simon Bernard.
+
+"Bravo! I was just coming from your lodgings. Signor Orsini has written. Do you know what he has written? That he knows you by proof. That he wants a man in whom he places his fullest trust. Either you, or the whole affair goes to ruin. What do you intend to do?"
+
+This time I answered: "I have given my word to Felice Orsini; I shall keep it."
+
+Instead of returning home directly, we walked round the square three or four times. Orsini's letter had dissolved the coldness of Simon Bernard and loosened his tongue. I learned that Felice Orsini was already in Paris, gathering the threads of his design; that the means definitively chosen for the attempt was that of bombs. That the Baron Egassy di Torocfalda had conceived a wholly novel type, fashioned in the form of a hedgehog, each point armed with a percussion cap, so that they would explode however they might be thrown. The Taylor foundry at Birmingham had cast them piece by piece, as though they were gas fittings. The compound intended to detonate them was mercury fulminate. The same Baron di Torrocfalda had taught Orsini how to prepare it, and the latter had profited so well from the lesson that he came through the business having barely scorched a few fingers.
+
+On taking his leave, Simon Bernard urged me to hold myself in readiness, as the order to depart might reach me from one day to the next. And I concluded at once that the time had come to solicit the cooperation of Giuseppe Mazzini.
+
+To obtain a meeting with him was not so simple a matter as it might appear; whether because the Maestro, watched as he was by every police force in the world, had grown wary; or whether, as many maintained, certain persons by whom he had surrounded himself were at pains to keep at a distance all those who might effectively assist him in some bold undertaking of his. In conversation among friends one would say, sometimes with a smile but more often with no little vexation, that it was harder to obtain an audience with Giuseppe Mazzini than with the Queen of England.
+
+In those days, to tell the truth, there had gathered about me, along with Massarenti, several other individuals whom I knew to be in close relations with the Maestro. But my legitimate mistrust had led me to play, in their company, the part of the man who listens and does not speak.
+
+Unexpectedly, chance appeared to favour me. I was walking in Cheapside with a certain Gori, formerly a band-leader in the Zambeccari Legion, when I caught sight, a short distance ahead, of Mazzini walking arm in arm with a stranger. I quickened my pace and drew level with him. Naturally I could not speak of so weighty a matter in the presence of strangers, and after the necessary greetings I was obliged to confine myself to telling Mazzini that I wished to have a meeting with him, and to beg him to indicate the hour and place. Giuseppe Mazzini gazed into the air, as though seeking inspiration there; then, having asked for my address, he said that Massarenti would be able to tell me something on the matter. Massarenti — of all people, precisely the fish that repelled us! We parted ways.
+
+Events rushed headlong and drew me into their vortex before Mazzini made any sign. What would have come of it had I been able to speak with him? Would he have dissuaded me from the enterprise, or would he have lent to it the contribution of his influence and his ardent soul? These are questions that were put to me repeatedly. Certainly, to answer them signifies nothing. Yet I observe: the man who wrote that certain exceptional actions, aimed at the vindication of human rights, must not be judged by the measure of common morality; the man who pointed out to Gallenga the dagger that should have killed Carlo Alberto; who had a part — not clearly defined, yet certain — in the Tebaldi conspiracy against Luigi Bonaparte, could not logically oppose that of Felice Orsini. And the Maestro knew full well where logic has its dwelling place!
+
+The Tebaldi conspiracy was in fact organised in that very year, 1857. Napoleon III frequented the house of the Countess Sommariva for reasons which, it was said, were better known to him than to the Countess's own family. Tebaldi and his two accomplices were to enter that house with a false key, and seize the person of the Emperor. It appears they wished to compel him to abdicate. But the capture of a man so closely guarded could not be effected without bloodshed, and in the eyes of the Maestro the life of a simple police constable was worth no less than that of an Emperor. As it was, Tebaldi's two accomplices were unable to keep the secret, and all three were arrested. Tebaldi was consigned to the Île du Diable; his two accomplices to Algeria.
+
+The reaction provoked by the misdeeds of Luigi Napoleon was too intense not to manifest itself in a violent and personal form. Regicide was in the air, and Napoleon knew it so well that as early as 1852, after the coup d'état and before the proclamation of the Empire, he had the Romagnols Galli and Rossini deported to Cayenne, guilty of nothing but having fallen foul of the infamous Law of Suspects.
+
+The attempt of that other bold Romagnol, Giovanni Pianori, failed because Napoleon, unable to shelter himself
+
+*"Sotto l'usbergo del sentirsi puro"* — beneath the shield of a clear conscience — secretly wore a coat of mail. Pianori was struck down before he could fire his second shot. He swelled the ranks of those martyrs who died beneath the guillotine.
+
+His brother, already embittered by political hatred, upon that tragic death felt his furies redouble within his breast. He left Italy, nursing thoughts of a resounding vengeance. But scarcely had he touched French soil when he was arrested and deported to the hell of the tropical islands, like Galli and Rossini, without the shadow of a trial.
+
+Fierce tempers, those of the Pianori! They acknowledged no duty save the vindication of their own rights and those of others, and towards that end they pressed forward, resolute, without troubling themselves about the Laws, which they regarded as a scarecrow devised by the cunning for purposes of domination and plunder; without regard for their own lives, which they called well spent if spent in cancelling an injustice.
+
+Giovanni Pianori, the man guillotined, stands out in all his grim entirety from yet another tragic incident. He loved his wife to distraction. Compelled by the turbulent vicissitudes of his existence to leave her, he had entrusted her to the care of a close friend who, having insinuated himself into the heart of the charming woman placed in his keeping, showed himself too tender a lover to remain a faithful friend. Some zealous acquaintance whispered the painful truth into the ear of the betrayed husband, who, braving a thousand dangers, made a sudden return. It proved easy to wrest from his terrified wife the ill-advised confession. He became calm once more and did not lay a finger upon her; but he imposed absolute silence with that resoluteness which brooks no reply.
+
+The intimate friend arrived. Pianori, dissembling, invited him, after a brief conversation, outside. They would be able to discuss certain secret political matters with greater freedom in the open air. Then suddenly, in the darkness, the friend felt himself confronted with this question: "What would you do to a friend to whom you had entrusted your honour, and all that is most dear to you in the world, if he were to dishonour you, if he were to betray you?"
+
+— You have pronounced your own sentence!
+
+And without another word he left him gasping in his own blood.
+
+A crime? I do not say otherwise. I say only that iron times make iron men, and that it is folly to expect mild manners and sheepish sentiments from people accustomed to the daily spectacle of virtue dangling from a gallows. And I say also that abstract ideas are fixed in practical life, incarnate in History, not by timid bleating, but by the impetuous action of tempers such as these.
+
+The next letter sent me by Felice Orsini had been written in Paris, but its envelope bore no postmark other than that of London. Evidently a trustworthy third party had received it and re-posted it from that city. Orsini begged me to call upon a Miss Elisa Cheney, residing in Cambdentown, who would deliver to me a valise and a pair of gold spectacles. What was really meant by "gold spectacles" I learnt shortly afterwards from Simon Bernard. In all likelihood, so as not to attract the attention of the customs officers with an excessively bulky parcel, Felice Orsini had carried with him, on his journey to Paris, only a portion of the mercury fulminate he required. He was now entrusting me with the conveyance of the remainder.
+
+I went to Cambdentown that very evening. Miss Elisa Cheney, a woman apparently in her thirties, slender, slight, dark-haired, not beautiful in the classical sense but very attractive, received me with exquisite graciousness and a smile upon her lips. The valise she handed me was, more precisely, one of those bags the English call a carpet bag — its sides of fabric, its base of leather. Upon the sides a tiger was embroidered. The receptacle for the mercury fulminate was of mahogany and had every appearance of a toilet-case. It sat upon the mantelpiece among some trinkets and a clock. Before reaching out to take it, the young lady tossed Orsini's letter onto the marble surround. She was perfectly composed; so much so that her unvarying smile did not falter even when she held the box in her fingers. Either she was endowed with nerves of proof, or she was ignorant of the terrible power of the elegant object she was handing me. She stood watching me in silence while I stowed it back in the bag; then, all of a sudden, still smiling: "You are going to Paris? Bon voyage and my compliments to Signor Orsini!"
+
+When I returned home and Elisa came to offer me her cheek for the customary kiss, the child in her arms, I had to make an effort to carry the valise with an easy air. "Have you been shopping?" she asked, and stretched out her arm. But I said lightly: "Take care! The tiger is alive and might scratch you!" Then, becoming serious again: "It is only papers that cannot interest you." And I locked the tiger away in a cupboard — the tiger capable of rending apart, concealed beside the other embroidered and harmless one.
+
+The following day, the 8th of January, 1858, Simon Bernard appeared once more upon the threshold. His expression was grave, almost solemn, and I, who was now expecting some definitive communication, understood at once that four turns about the square were most advisable. Nor was I mistaken.
+
+"You must leave," Bernard said to me. "Orsini reckons, indeed, that you should set out tomorrow morning. In that case, tomorrow evening, between six and eight, you would arrive in Paris. He will be at the station — the rest will take care of itself. But should you be unable to depart in time, or should Orsini, through some unforeseen mishap, fail to keep the appointment, take note of his address!" And he dictated it to me.
+
+He took his leave with a hearty handshake and the assurance: "Au revoir, in a few days, in Paris."
+
+That evening, on returning home, I did not give Elisa the customary kiss, as though to prepare her for the parting. While she laid the table for supper, I sat apart, nervously tormenting my beard. She caught me with my eyes fixed upon her and, unable to restrain herself, threw her arms about my neck, murmuring softly in my ear: "Carlo, what is the matter?"
+
+Then I rose, stroked her hair, kissed her brow, and spoke words which, on another occasion, in a very different circumstance, I had impressed upon her tender heart, almost as the seal of a solemn covenant: "The conspirator must be solitary even in the bosom of his family. He must at times forget that he has a mother, a wife, and children. If his appointed hour arrives, he closes his ears to prayers, he does not see the tears, and he departs — departs without confiding his secrets even to the air he breathes. Elisa — that hour has come!"
+
+She turned pale and, at first, found not a word, breathed not a sigh. But it was as though a certain key had been struck; it must necessarily sound a certain note. She smiled sadly and, with a thread of voice that yet revealed the sovereign mastery of her spirit: "What can I say, Carlo? I know that you fight for a just cause; that you can do nothing of which I need be ashamed. Go, and come back soon — as honest as you are, more glorious!"
+
+I knelt and covered her hands with kisses, as on the day of our betrothal.
+
+So as not to prolong the painful hours, I had resolved to leave the house that very evening, if not London; I would be more resolute and more composed in the morning, at the embarkation. We supped in silence; the fullness of our feelings we exchanged in glances, in long caresses. At a certain moment I drew out my watch. She understood, and rose and ran into the other little room of ours. She returned carrying in her arms our first-born, plump and rosy amid white linen.
+
+He slept and smiled — perhaps, in his dream, at his mother's full breast. I embraced Elisa's head with deep feeling, murmured some word of counsel to her — one more kiss with trembling lips — then I fled!
