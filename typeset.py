@@ -34,8 +34,16 @@ def _parse_chapters(markdown_text: str) -> list[dict]:
             level = 2 if line.startswith("## ") else 3
             title = line.lstrip("#").strip()
 
-            # Skip structural-only headers
+            # Skip book title
             if title in ("Per la Libertà!", "For Freedom!"):
+                current = None
+                current_lines = []
+                continue
+
+            # Part headers have no body text — include them immediately
+            structural_parts = {"Parte Prima", "Parte Seconda", "Part One", "Part Two"}
+            if title in structural_parts:
+                chapters.append({"title": title, "level": level, "page_range": None, "paragraphs": []})
                 current = None
                 current_lines = []
                 continue
@@ -73,15 +81,41 @@ def _split_paragraphs(text: str) -> list[str]:
 
 
 def _align_chapters(italian_chapters: list[dict], english_chapters: list[dict]) -> list[dict]:
-    """Align Italian and English chapters by position into bilingual pairs."""
-    # Filter out structural headers (Parte Prima, Part One, etc.)
-    structural = {"Parte Prima", "Parte Seconda", "Part One", "Part Two"}
+    """Align Italian and English chapters by position into bilingual pairs.
 
-    it_content = [ch for ch in italian_chapters if ch["title"] not in structural]
-    en_content = [ch for ch in english_chapters if ch["title"] not in structural]
+    Structural headers (Parte Prima / Part One) are preserved in-order
+    so the typesetter can render part divider pages.
+    """
+    structural_it = {"Parte Prima": "Part One", "Parte Seconda": "Part Two"}
+    structural_en = {"Part One", "Part Two"}
+
+    # Separate structural from content chapters, preserving order via indices
+    it_content = []
+    it_structural = {}  # index-in-content → structural chapter
+    content_idx = 0
+    for ch in italian_chapters:
+        if ch["title"] in structural_it:
+            it_structural[content_idx] = ch
+        else:
+            it_content.append(ch)
+            content_idx += 1
+
+    en_content = [ch for ch in english_chapters if ch["title"] not in structural_en]
 
     pairs = []
     for i in range(max(len(it_content), len(en_content))):
+        # Insert part divider before this chapter if needed
+        if i in it_structural:
+            st = it_structural[i]
+            pairs.append({
+                "italian_title": st["title"],
+                "english_title": structural_it.get(st["title"], ""),
+                "italian_paragraphs": [],
+                "english_paragraphs": [],
+                "page_range": None,
+                "level": st["level"],
+            })
+
         it_ch = it_content[i] if i < len(it_content) else None
         en_ch = en_content[i] if i < len(en_content) else None
 
@@ -215,16 +249,20 @@ def generate_html(
         "",
     ]
 
-    current_part_it = None
+    current_part_it = ""
+    current_part_en = ""
 
     for pair in pairs:
         # Detect part transitions
         title = pair["italian_title"]
         if pair["level"] == 2 and title not in ("Prefazione",):
             # Part header — render as a separator page
+            current_part_it = pair["italian_title"]
+            current_part_en = pair["english_title"]
             en_title = pair["english_title"]
+            part_id = re.sub(r"[^a-z0-9]", "-", title.lower()).strip("-")
             html_parts.extend([
-                '<div class="part-page">',
+                f'<div class="part-page" id="part-{part_id}">',
                 f'  <h2 lang="it">{_escape_html(title)}</h2>',
                 f'  <h2 lang="en">{_escape_html(en_title)}</h2>' if en_title else "",
                 "</div>",
@@ -260,13 +298,16 @@ def generate_html(
                 f'title="View original scan">{page_label}</a>'
             )
 
-        ch_id = re.sub(r"[^a-z0-9]", "-", pair["italian_title"].lower()).strip("-")
+        part_prefix = re.sub(r"[^a-z0-9]", "-", current_part_it.lower()).strip("-") + "-" if current_part_it else ""
+        ch_id = part_prefix + re.sub(r"[^a-z0-9]", "-", pair["italian_title"].lower()).strip("-")
+        part_label_it = f'<span class="part-label">{_escape_html(current_part_it)}</span>' if current_part_it else ""
+        part_label_en = f'<span class="part-label">{_escape_html(current_part_en)}</span>' if current_part_en else ""
         html_parts.extend([
             f'<section class="chapter" id="ch-{ch_id}">',
             '  <div class="chapter-header">',
             '    <div class="spread chapter-title-spread">',
-            f'      <div class="chapter-title-col" lang="it"><{level_tag} class="chapter-title">{_escape_html(pair["italian_title"])}</{level_tag}></div>',
-            f'      <div class="chapter-title-col" lang="en"><{level_tag} class="chapter-title">{_escape_html(pair["english_title"])}</{level_tag}></div>' if pair["english_title"] else '      <div class="chapter-title-col"></div>',
+            f'      <div class="chapter-title-col" lang="it">{part_label_it}<{level_tag} class="chapter-title">{_escape_html(pair["italian_title"])}</{level_tag}></div>',
+            f'      <div class="chapter-title-col" lang="en">{part_label_en}<{level_tag} class="chapter-title">{_escape_html(pair["english_title"])}</{level_tag}></div>' if pair["english_title"] else '      <div class="chapter-title-col"></div>',
             '    </div>',
             f'    <span class="page-ref">{ia_link}</span>' if ia_link else "",
             "  </div>",
@@ -369,15 +410,28 @@ def generate_html(
         "  const closeBtn = document.getElementById('toc-close');",
         "  const list = document.getElementById('toc-list');",
         "",
-        "  // Build TOC from chapter sections",
-        "  document.querySelectorAll('section.chapter').forEach(sec => {",
-        "    const enCol = sec.querySelector('.chapter-title-col[lang=\"en\"] .chapter-title');",
-        "    const itCol = sec.querySelector('.chapter-title-col[lang=\"it\"] .chapter-title');",
+        "  // Build TOC from part pages and chapter sections",
+        "  document.querySelectorAll('.part-page, section.chapter').forEach(el => {",
+        "    if (el.classList.contains('part-page')) {",
+        "      const h2 = el.querySelector('h2[lang=\"en\"]') || el.querySelector('h2');",
+        "      if (!h2) return;",
+        "      const li = document.createElement('li');",
+        "      li.className = 'toc-part';",
+        "      const a = document.createElement('a');",
+        "      a.href = '#' + el.id;",
+        "      a.textContent = h2.textContent;",
+        "      a.addEventListener('click', () => { panel.classList.remove('open'); backdrop.classList.remove('open'); });",
+        "      li.appendChild(a);",
+        "      list.appendChild(li);",
+        "      return;",
+        "    }",
+        "    const enCol = el.querySelector('.chapter-title-col[lang=\"en\"] .chapter-title');",
+        "    const itCol = el.querySelector('.chapter-title-col[lang=\"it\"] .chapter-title');",
         "    const title = enCol ? enCol.textContent : (itCol ? itCol.textContent : null);",
         "    if (!title) return;",
         "    const li = document.createElement('li');",
         "    const a = document.createElement('a');",
-        "    a.href = '#' + sec.id;",
+        "    a.href = '#' + el.id;",
         "    a.textContent = title;",
         "    a.addEventListener('click', () => { panel.classList.remove('open'); backdrop.classList.remove('open'); });",
         "    li.appendChild(a);",

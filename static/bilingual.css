@@ -36,7 +36,7 @@
   --color-body: #483826;
   --color-muted: #8b7b58;
   --color-accent: #8b0000;
-  --paper: #d7c594;
+  --paper: #dfd1a9;
   --gutter: 2.5em;
 }
 
@@ -138,6 +138,16 @@ body {
   font-style: normal;
 }
 
+.part-label {
+  display: block;
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: var(--heading-tracking);
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.2em;
+}
+
 .chapter-title {
   font-size: 1.5em;
   font-weight: 700;
@@ -218,7 +228,7 @@ body {
   left: 0;
   width: 45vw;
   height: 100vh;
-  background: #f0e8d4;
+  background: #dfd1a9;
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -325,12 +335,12 @@ body {
 }
 
 .font-size-controls button {
-  background: #f0e8d4;
+  background: #dfd1a9;
   border: 1px solid #d0c9b8;
   padding: 0.3em 0.6em;
   font-size: 1em;
   cursor: pointer;
-  color: var(--color-muted);
+  color: var(--color-body);
   line-height: 1;
   font-family: 'Bodoni Moda', Georgia, serif;
 }
@@ -355,7 +365,7 @@ body {
   top: 0.8em;
   left: 0.8em;
   z-index: 900;
-  background: #f0e8d4;
+  background: #dfd1a9;
   border: 1px solid #d0c9b8;
   border-radius: 3px;
   padding: 0.3em 0.5em;
@@ -378,7 +388,7 @@ body {
   width: 22em;
   max-width: 85vw;
   height: 100vh;
-  background: #f0e8d4;
+  background: #dfd1a9;
   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -448,6 +458,19 @@ body {
   border-left-color: var(--color-accent);
 }
 
+.toc-list .toc-part {
+  margin-top: 0.6em;
+  border-top: 1px solid #d0c9b8;
+  padding-top: 0.3em;
+}
+
+.toc-list .toc-part a {
+  font-weight: 700;
+  letter-spacing: var(--heading-tracking);
+  font-size: 0.95em;
+  color: var(--color-body);
+}
+
 .toc-list .toc-en {
   display: block;
   font-style: italic;
@@ -482,7 +505,7 @@ body {
   .chapter-header {
     position: sticky;
     top: 0;
-    background: #f0e8d4;
+    background: #dfd1a9;
     z-index: 10;
     padding-top: 0.5em;
   }
