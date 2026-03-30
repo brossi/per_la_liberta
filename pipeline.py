@@ -3,6 +3,10 @@
 import argparse
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
 OUTPUT_DIR = BASE_DIR / "output"
@@ -36,6 +40,10 @@ def main():
         "--llm-cleanup",
         action="store_true",
         help="Use LLM to correct Italian text during cleanup (requires API key)",
+    )
+    parser.add_argument(
+        "--chapter",
+        help="Run LLM cleanup on a single chapter only (e.g. p2_ch21)",
     )
     parser.add_argument(
         "--skip-ocr",
@@ -104,7 +112,11 @@ def main():
         print("Step 5: Cleaning up OCR artifacts...")
         from cleanup import cleanup
 
-        cleanup(DATA_DIR, OUTPUT_DIR, use_llm=args.llm_cleanup, api_key=args.api_key)
+        cleanup(DATA_DIR, OUTPUT_DIR, use_llm=args.llm_cleanup, api_key=args.api_key, chapter=args.chapter)
+        if args.llm_cleanup:
+            from cleanup import reconcile_flags
+
+            reconcile_flags(DATA_DIR, OUTPUT_DIR)
         print()
 
     if args.step in ("adjudicate", "all"):

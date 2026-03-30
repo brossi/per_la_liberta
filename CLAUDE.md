@@ -28,18 +28,18 @@ uv sync
 uv run python -m spacy download it_core_news_lg
 
 # Full pipeline
-uv run python pipeline.py --api-key YOUR_ANTHROPIC_KEY --gemini-api-key YOUR_GEMINI_KEY
+uv run python pipeline.py
 
 # Individual steps
 uv run python pipeline.py --step download
-uv run python pipeline.py --step ocr --gemini-api-key KEY
+uv run python pipeline.py --step ocr
 uv run python pipeline.py --step reconcile
-uv run python pipeline.py --step triage --api-key KEY
+uv run python pipeline.py --step triage
 uv run python pipeline.py --step cleanup
-uv run python pipeline.py --step cleanup --llm-cleanup --api-key KEY  # with LLM correction + Zingarelli context
+uv run python pipeline.py --step cleanup --llm-cleanup  # with LLM correction + Zingarelli context
 uv run python pipeline.py --step adjudicate
 uv run python pipeline.py --step validate
-uv run python pipeline.py --step translate --api-key KEY
+uv run python pipeline.py --step translate
 uv run python pipeline.py --step typeset
 
 # OCR with parallel workers (4x speedup for Pro)
@@ -54,9 +54,11 @@ uv run python pipeline.py --no-triage    # majority vote only, skip LLM triage
 
 ## Environment Variables
 
-Set in `.env` (gitignored):
+Set in `.env` (gitignored, loaded automatically by `pipeline.py` via `python-dotenv`):
 - `ANTHROPIC_API_KEY` — for cleanup LLM pass, triage, and translation
 - `GEMINI_API_KEY` — for OCR (Gemini Flash/Pro)
+
+Keys can also be passed via `--api-key` / `--gemini-api-key` flags, but `.env` is preferred.
 
 ## Key Technical Decisions
 
@@ -113,8 +115,9 @@ data/
   flagged_segments.json           # Word-level disagreements
   chapter_pages.json              # Chapter → PDF page mapping
   dictionaries/it_combined.txt    # Italian frequency dictionary
-  review_flags.json                # Tokens needing LLM review: unresolved hyphens, stray symbols (step 5 sidecar)
-  corrections.json                # Durable corrections: LLM fixes + manual overrides (persists across re-runs)
+  review_flags.json                # Tokens needing LLM review: unresolved hyphens, stray symbols (step 5 sidecar, pre-LLM)
+  review_flags_remaining.json     # Flags still present in output after LLM corrections (post-LLM)
+  corrections.json                # Durable corrections: LLM fixes + manual overrides + image-based fixes (persists across re-runs)
   adjudication_results.json       # Zingarelli-classified tokens (step 5b)
   validation_report.json          # Validation results (step 6)
 output/
@@ -137,12 +140,23 @@ static/
 
 ## Current Status
 
-- Steps 1-6 complete: 3-way reconciliation, dehyphenation (27 tokens fixed), and adjudication done
-- Adjudication classified 41 flagged tokens: 13 compounds, 9 NER, 19 unknown (need LLM)
-- LLM cleanup (`--llm-cleanup`) not yet run — will receive Zingarelli context for flagged tokens
+- Steps 1-6 complete including LLM cleanup pass — Italian text ready for translation
+- LLM cleanup (Sonnet 4.6) made 5,080 durable corrections across all 58 chapters (~3.8 corrections/1000 chars)
+- Corrections stored in `data/corrections.json` — persists across re-runs, no redundant API calls
+- One corrupted passage in p2_ch18 (pages 197-198) was fixed using page images sent to both Sonnet 4.6 and Gemini 3 Pro — both produced identical clean results
+- Flag reconciliation: 332 original flags → 85 remaining (mostly legitimate `lowercase_after_break` and hyphenated compounds/NER)
+- Remaining flags in `data/review_flags_remaining.json`; original pre-LLM flags preserved in `data/review_flags.json`
 - Step 7 (translation) not yet run
 - Step 8 (typeset) generates HTML with Italian-only; English column pending translation
 - The PDF on disk is the LOC scan: `public-gdcmassbookdig-perlalibertdal00cres-perlalibertdal00cres.pdf` (82MB, gitignored)
+
+### Pipeline changes made during cleanup
+- `pipeline.py` loads `.env` via `python-dotenv` (added as dependency)
+- `--chapter` flag added: run LLM cleanup on a single chapter (e.g. `--chapter p2_ch21`) — others use cached corrections
+- Cleanup skips LLM API calls for chapters that already have durable corrections in `corrections.json`
+- Flag reconciliation runs automatically after `--llm-cleanup`, writes `review_flags_remaining.json`
+- API client timeout increased to 600s (from 300s) for large chapters
+- TODO in `cleanup.py`: add Gemini 3 Pro as fallback LLM when Anthropic API is unavailable
 
 ## Related Project
 

@@ -858,6 +858,7 @@ dependencies = [
     { name = "google-genai" },
     { name = "pillow" },
     { name = "pymupdf" },
+    { name = "python-dotenv" },
     { name = "rapidfuzz" },
     { name = "requests" },
     { name = "sacrebleu" },
@@ -872,6 +873,7 @@ requires-dist = [
     { name = "google-genai", specifier = ">=1.69.0" },
     { name = "pillow", specifier = ">=12.1.1" },
     { name = "pymupdf", specifier = ">=1.27.2.2" },
+    { name = "python-dotenv", specifier = ">=1.2.2" },
     { name = "rapidfuzz", specifier = ">=3.14.3" },
     { name = "requests", specifier = ">=2.33.0" },
     { name = "sacrebleu", specifier = ">=2.6.0" },
@@ -1125,6 +1127,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/69/56/e4d7e1bd70d997713649c5ce530b2d15a5fc2245a74ca820fc2d51d89d4d/pyphen-0.17.2.tar.gz", hash = "sha256:f60647a9c9b30ec6c59910097af82bc5dd2d36576b918e44148d8b07ef3b4aa3", size = 2079470 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/7b/1f/c2142d2edf833a90728e5cdeb10bdbdc094dde8dbac078cee0cf33f5e11b/pyphen-0.17.2-py3-none-any.whl", hash = "sha256:3a07fb017cb2341e1d9ff31b8634efb1ae4dc4b130468c7c39dd3d32e7c3affd", size = 2079358 },
+]
+
+[[package]]
+name = "python-dotenv"
+version = "1.2.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/ed/0301aeeac3e5353ef3d94b6ec08bbcabd04a72018415dcb29e588514bba8/python_dotenv-1.2.2.tar.gz", hash = "sha256:2c371a91fbd7ba082c2c1dc1f8bf89ca22564a087c2c287cd9b662adde799cf3", size = 50135 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0b/d7/1959b9648791274998a9c3526f6d0ec8fd2233e4d4acce81bbae76b44b2a/python_dotenv-1.2.2-py3-none-any.whl", hash = "sha256:1d8214789a24de455a8b8bd8ae6fe3c6b69a5e3d64aa8a8e5d68e694bbcb285a", size = 22101 },
 ]
 
 [[package]]

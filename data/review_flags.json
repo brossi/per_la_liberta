@@ -63,84 +63,12 @@
       "reason": "ner_candidate"
     },
     {
-      "token": "a;a",
-      "left": "a",
-      "right": "a",
-      "offset": 2464,
-      "reason": "missing_space",
-      "context": " libri sgocciolanti di dottrina;altri ancora esimi come avvocat"
-    },
-    {
-      "token": "i;m",
-      "left": "i",
-      "right": "m",
-      "offset": 7178,
-      "reason": "missing_space",
-      "context": "ne, ne aveva usurpato i fulmini;ma solo per essa e sulle rovine"
-    },
-    {
-      "token": "i,o",
-      "left": "i",
-      "right": "o",
-      "offset": 12457,
-      "reason": "missing_space",
-      "context": "lde.\n\nIn forza di quei Trattati,ogni moto italiano, anche pacif"
-    },
-    {
       "token": "o,q",
       "left": "o",
       "right": "q",
       "offset": 15004,
       "reason": "missing_space",
       "context": "minose affermazioni del Diritto,quanto e più dell'amore.\n\nI via"
-    },
-    {
-      "token": "à;c",
-      "left": "à",
-      "right": "c",
-      "offset": 23407,
-      "reason": "missing_space",
-      "context": "ersi alla periferia della città;che un Governo Provvisorio si e"
-    },
-    {
-      "token": "a;c",
-      "left": "a",
-      "right": "c",
-      "offset": 23869,
-      "reason": "missing_space",
-      "context": "e man forte alla causa italiana;che bande armate scorrevano la "
-    },
-    {
-      "token": "i;i",
-      "left": "i",
-      "right": "i",
-      "offset": 25009,
-      "reason": "missing_space",
-      "context": "po e vivi bruciò amanti e sposi;insangui-\n\nnò il castello degli"
-    },
-    {
-      "token": "i,o",
-      "left": "i",
-      "right": "o",
-      "offset": 31993,
-      "reason": "missing_space",
-      "context": "alde. In forza di quei Trattati,ogni moto italiano, anche pacif"
-    },
-    {
-      "token": "o,q",
-      "left": "o",
-      "right": "q",
-      "offset": 37698,
-      "reason": "missing_space",
-      "context": "minose affermazioni del Diritto,quanto e più dell'amore. E tant"
-    },
-    {
-      "token": "i,p",
-      "left": "i",
-      "right": "p",
-      "offset": 42419,
-      "reason": "missing_space",
-      "context": "tesso, un comitato di cittadini,preceduto da bandiera bianca, v"
     },
     {
       "token": "n",
@@ -168,30 +96,6 @@
     }
   ],
   "p1_ch04": [
-    {
-      "token": "e:l",
-      "left": "e",
-      "right": "l",
-      "offset": 6886,
-      "reason": "missing_space",
-      "context": " ad una sola fazione importante:la sortita verso Mestre che rif"
-    },
-    {
-      "token": "o;m",
-      "left": "o",
-      "right": "m",
-      "offset": 16657,
-      "reason": "missing_space",
-      "context": " mi procurassi un travestimento;ma il conio veneziano, disgrazi"
-    },
-    {
-      "token": "i;m",
-      "left": "i",
-      "right": "m",
-      "offset": 16926,
-      "reason": "missing_space",
-      "context": " senso d'amarezza che ne provai;ma finì per consolarmi l'idea c"
-    },
     {
       "token": "f",
       "left": "to irresistibile e, per allora.",
@@ -242,22 +146,6 @@
       "offset": 3799,
       "reason": "missing_space",
       "context": "duo a ehi procedeva dalla città;facile ai Francesi asserragliat"
-    },
-    {
-      "token": "i;m",
-      "left": "i",
-      "right": "m",
-      "offset": 3968,
-      "reason": "missing_space",
-      "context": "utamente, a ridiventare padroni;ma il mantenercisi era per noi "
-    },
-    {
-      "token": "e;p",
-      "left": "e",
-      "right": "p",
-      "offset": 8331,
-      "reason": "missing_space",
-      "context": "devamo diradare le loro schiere;per noi doloranti delle loro fe"
     },
     {
       "token": "c",
@@ -336,14 +224,6 @@
       "reason": "f_ligature",
       "context": "sene schernito, se ne vendicò atterrandolo con un calcio... non ultimo, ",
       "suggestion": "afferrandolo"
-    },
-    {
-      "token": "a;s",
-      "left": "a",
-      "right": "s",
-      "offset": 2861,
-      "reason": "missing_space",
-      "context": "bili sono accatastati nella via;si leva il selciato, si lavora "
     },
     {
       "token": "o,s",
@@ -588,22 +468,6 @@
   ],
   "p1_ch16": [
     {
-      "token": "o;p",
-      "left": "o",
-      "right": "p",
-      "offset": 683,
-      "reason": "missing_space",
-      "context": "ono per qualche tempo, fremendo;poi, sospettando il tradimento,"
-    },
-    {
-      "token": "o;m",
-      "left": "o",
-      "right": "m",
-      "offset": 2817,
-      "reason": "missing_space",
-      "context": " Mazzini:\" Sconsigliare il moto;ma aiutarlo strenuamente quando"
-    },
-    {
       "token": "u",
       "left": "uon uso alla seconda giornata!\"",
       "right": "un fucile. E ne possedevano rap",
@@ -683,28 +547,12 @@
   ],
   "p1_ch21": [
     {
-      "token": "o;p",
-      "left": "o",
-      "right": "p",
-      "offset": 3333,
-      "reason": "missing_space",
-      "context": " e pane e latte da un montanaro;poi, a Neumark, stempero lautam"
-    },
-    {
       "token": "e;p",
       "left": "e",
       "right": "p",
       "offset": 7150,
       "reason": "missing_space",
       "context": "co; mi toccò il piede col piede;poi, senza voltare il viso, sim"
-    },
-    {
-      "token": "a;l",
-      "left": "a",
-      "right": "l",
-      "offset": 12984,
-      "reason": "missing_space",
-      "context": "e il compenso di una gentilezza;la donna a ritrarsi, con mosse "
     },
     {
       "token": "e:m",
@@ -772,14 +620,6 @@
     }
   ],
   "p1_ch22": [
-    {
-      "token": "a;m",
-      "left": "a",
-      "right": "m",
-      "offset": 4139,
-      "reason": "missing_space",
-      "context": "vano la redenzione della Patria;ma in nessuna, come a Mantova, "
-    },
     {
       "token": "c",
       "left": "i nemico leale, d'uomo d'onore.",
@@ -909,30 +749,6 @@
       "reason": "ner_candidate"
     },
     {
-      "token": "o,t",
-      "left": "o",
-      "right": "t",
-      "offset": 694,
-      "reason": "missing_space",
-      "context": "suna influenza\" di quell'onesto,tra le file del partito che era"
-    },
-    {
-      "token": "i,a",
-      "left": "i",
-      "right": "a",
-      "offset": 2823,
-      "reason": "missing_space",
-      "context": " l'Orsini ha rilevato: \"stanchi,aff amati, laceri, vestiti da a"
-    },
-    {
-      "token": "i,a",
-      "left": "i",
-      "right": "a",
-      "offset": 3550,
-      "reason": "missing_space",
-      "context": " qualche complicazione. E basti,a noi che viviamo in California"
-    },
-    {
       "token": "e,e",
       "left": "e",
       "right": "e",
@@ -947,14 +763,6 @@
       "offset": 8769,
       "reason": "missing_space",
       "context": "dei aviatori che la sollevavano;ma essa non riesciva a nasconde"
-    },
-    {
-      "token": "o,t",
-      "left": "o",
-      "right": "t",
-      "offset": 18149,
-      "reason": "missing_space",
-      "context": "suna influenza\" di quell'onesto,tra le file del partito che era"
     },
     {
       "token": "f",
@@ -1039,36 +847,12 @@
       "context": "re la canna rispose il Bonacina,facendo l'atto di applicargli u"
     },
     {
-      "token": "a,s",
-      "left": "a",
-      "right": "s",
-      "offset": 8015,
-      "reason": "missing_space",
-      "context": "antonando per una via solitaria,si trovò a faccia a faccia il B"
-    },
-    {
-      "token": "o;n",
-      "left": "o",
-      "right": "n",
-      "offset": 12774,
-      "reason": "missing_space",
-      "context": "ardi, doveva serbare allo sposo;nella cugina si compiaceva, sof"
-    },
-    {
       "token": "o;B",
       "left": "o",
       "right": "B",
       "offset": 17407,
       "reason": "missing_space",
       "context": "ia — egli diceva — ebbe il Moro;Belluno, che è più pìccola, ha "
-    },
-    {
-      "token": "a;q",
-      "left": "a",
-      "right": "q",
-      "offset": 22242,
-      "reason": "missing_space",
-      "context": "no cospicue per la loro assenza;quelle\" Situation wanted\" si mi"
     },
     {
       "token": "i",
@@ -1270,38 +1054,6 @@
   ],
   "p2_ch06": [
     {
-      "token": "e;s",
-      "left": "e",
-      "right": "s",
-      "offset": 1980,
-      "reason": "missing_space",
-      "context": "o facile come potrebbe sembrare;sia che il Maestro, spiato da t"
-    },
-    {
-      "token": "l;g",
-      "left": "l",
-      "right": "g",
-      "offset": 9828,
-      "reason": "missing_space",
-      "context": "propria vita, che dicevano\n\n~fl;ga;'ffr~\n\nbene spesa, se spesa "
-    },
-    {
-      "token": "a,a",
-      "left": "a",
-      "right": "a",
-      "offset": 10085,
-      "reason": "missing_space",
-      "context": "e fortunose della sua esistenza,ad allontanarsene, l'aveva affi"
-    },
-    {
-      "token": "o;l",
-      "left": "o",
-      "right": "l",
-      "offset": 17409,
-      "reason": "missing_space",
-      "context": "ll'imbarco. Si cenò in silenzio;la piena degli affetti scambiav"
-    },
-    {
       "token": "a",
       "left": " labbra frementi... poi fuggii!",
       "right": "al seno turgido di mamma saa. A",
@@ -1327,28 +1079,12 @@
       "reason": "unresolved"
     },
     {
-      "token": "i,c",
-      "left": "i",
-      "right": "c",
-      "offset": 2074,
-      "reason": "missing_space",
-      "context": "racciare fraternamente l'Orsini,che se ne sta ritto ed in attes"
-    },
-    {
       "token": "e;l",
       "left": "e",
       "right": "l",
       "offset": 4123,
       "reason": "missing_space",
       "context": "lato, coli 'occhio intelligente;la pallidezza del volto rendeva"
-    },
-    {
-      "token": "i,c",
-      "left": "i",
-      "right": "c",
-      "offset": 8527,
-      "reason": "missing_space",
-      "context": "racciare fraternamente l'Orsini,che se ne sta ritto ed in attes"
     },
     {
       "token": "ù:i",
@@ -1544,14 +1280,6 @@
       "context": "nciava il nome di Tomaso Allsop;ma la Polizia era messa ormai, "
     },
     {
-      "token": "o;p",
-      "left": "o",
-      "right": "p",
-      "offset": 7012,
-      "reason": "missing_space",
-      "context": " era a letto, col capo fasciato;prova che si era, se non altro,"
-    },
-    {
       "token": "l",
       "left": "evo naacota Lama di Damasoo,...",
       "right": "lama terribile I\n\nPare che sull",
@@ -1656,14 +1384,6 @@
       "token": "e,c",
       "left": "e",
       "right": "c",
-      "offset": 5968,
-      "reason": "missing_space",
-      "context": ", essa aveva incominciato da me,che ero il più giovine, il suo "
-    },
-    {
-      "token": "e,c",
-      "left": "e",
-      "right": "c",
       "offset": 6629,
       "reason": "missing_space",
       "context": ", essa aveva incominciato da me,che ero il più gioviale, il suo"
@@ -1694,22 +1414,6 @@
     }
   ],
   "p2_ch16": [
-    {
-      "token": "o:i",
-      "left": "o",
-      "right": "i",
-      "offset": 1704,
-      "reason": "missing_space",
-      "context": "ma debbo dirlo ad onor del vero:il guaio della mente di Felice "
-    },
-    {
-      "token": "o,i",
-      "left": "o",
-      "right": "i",
-      "offset": 7314,
-      "reason": "missing_space",
-      "context": " più d'uno. Facile, per esempio,il mostrarsi coraggiosi alla lu"
-    },
     {
       "token": "o,i",
       "left": "o",
@@ -1773,14 +1477,6 @@
       "offset": 1668,
       "reason": "missing_space",
       "context": "uno Stato to o di una religione,almeno sinché vivono, quali arc"
-    },
-    {
-      "token": "a;b",
-      "left": "a",
-      "right": "b",
-      "offset": 2688,
-      "reason": "missing_space",
-      "context": "non vollero piegarsi, non basta;bisogna esporle sanguinolenti a"
     },
     {
       "token": "é",
@@ -1906,14 +1602,6 @@
       "context": "iva, ma si faceva precedere da * qualche sollievo.\n\nUn'altra ci"
     },
     {
-      "token": "e;t",
-      "left": "e",
-      "right": "t",
-      "offset": 2155,
-      "reason": "missing_space",
-      "context": "ragoni e ne conservava le tinte;traverso e forte, malgrado l'et"
-    },
-    {
       "token": "f",
       "left": " precedere da qualche sollievo.",
       "right": "finestre, circostanza contribui",
@@ -1948,52 +1636,12 @@
   ],
   "p2_ch19": [
     {
-      "token": "i;i",
-      "left": "i",
-      "right": "i",
-      "offset": 5546,
-      "reason": "missing_space",
-      "context": "ortatore spirituale dell'Orsini;il cappellano della Conciergeri"
-    },
-    {
-      "token": "o;m",
-      "left": "o",
-      "right": "m",
-      "offset": 5924,
-      "reason": "missing_space",
-      "context": "ulsa, mi offerse un bicchierino;ma ebbe il torto di osservare c"
-    },
-    {
-      "token": "a;m",
-      "left": "a",
-      "right": "m",
-      "offset": 7164,
-      "reason": "missing_space",
-      "context": " indossare una camicia scollata;mi scalzarono colle loro propri"
-    },
-    {
-      "token": "e;m",
-      "left": "e",
-      "right": "m",
-      "offset": 9668,
-      "reason": "missing_space",
-      "context": "de, intercettava la mia visuale;ma non tanto che non scorgessi "
-    },
-    {
       "token": "i,e",
       "left": "i",
       "right": "e",
       "offset": 18453,
       "reason": "missing_space",
       "context": "a!\"\n\nmani. Identici preparativi,eseguiti rapidamente, lasciaron"
-    },
-    {
-      "token": "e;m",
-      "left": "e",
-      "right": "m",
-      "offset": 20855,
-      "reason": "missing_space",
-      "context": "de, intercettava la mia visuale;ma non tanto che non scorgessi "
     },
     {
       "token": "i",
@@ -2045,14 +1693,6 @@
     }
   ],
   "p2_ch20": [
-    {
-      "token": "i;l",
-      "left": "i",
-      "right": "l",
-      "offset": 5552,
-      "reason": "missing_space",
-      "context": "giungevano assolutamente ignoti;la terza perchè, guardando in f"
-    },
     {
       "token": "l",
       "left": "ituirvi quella dell'intelletto.",
@@ -2108,14 +1748,6 @@
       "right": "guardiano",
       "offset": 20691,
       "reason": "unresolved"
-    },
-    {
-      "token": "o;l",
-      "left": "o",
-      "right": "l",
-      "offset": 11536,
-      "reason": "missing_space",
-      "context": "ficargli la morte di mio marito;la quale era del resto già conf"
     },
     {
       "token": "a",
@@ -2190,14 +1822,6 @@
       "reason": "unresolved"
     },
     {
-      "token": "o:U",
-      "left": "o",
-      "right": "U",
-      "offset": 2272,
-      "reason": "missing_space",
-      "context": "ccorrendo, non tornerei daccapo:Un cane francese mi ha sedotta "
-    },
-    {
       "token": "c",
       "left": "che non tra i felici del mondo.",
       "right": "ci. In compagnia, peggio che an",
@@ -2240,28 +1864,12 @@
       "reason": "ner_candidate"
     },
     {
-      "token": "e;m",
-      "left": "e",
-      "right": "m",
-      "offset": 6734,
-      "reason": "missing_space",
-      "context": "li aveva contribuito alle spese;ma il carico che portava nella "
-    },
-    {
       "token": "e,a",
       "left": "e",
       "right": "a",
       "offset": 8199,
       "reason": "missing_space",
       "context": "mbisse appena. Diedi una voce e,alzai, alto nell'aria il pugno,"
-    },
-    {
-      "token": "o;l",
-      "left": "o",
-      "right": "l",
-      "offset": 12156,
-      "reason": "missing_space",
-      "context": "lli avevano fatto il dover loro;la cannoniera, grave d'onda, av"
     },
     {
       "token": "e:f",
@@ -2314,22 +1922,6 @@
   ],
   "p2_ch26": [
     {
-      "token": "o;m",
-      "left": "o",
-      "right": "m",
-      "offset": 1257,
-      "reason": "missing_space",
-      "context": " il nostro cappello di palmetto;ma la tempesta aveva lasciato p"
-    },
-    {
-      "token": "i;q",
-      "left": "i",
-      "right": "q",
-      "offset": 4866,
-      "reason": "missing_space",
-      "context": "tisi a rimuovere cesti e barili;quali a distendere reti. Altri,"
-    },
-    {
       "token": "i",
       "left": "renderle pressochè inservibili.",
       "right": "in parte guaste le nostre provv",
@@ -2354,22 +1946,6 @@
       "offset": 3079,
       "reason": "missing_space",
       "context": "la scorre via, scorre... finché:s229ffi:\n\nentra nell'acque torb"
-    },
-    {
-      "token": "a,a",
-      "left": "a",
-      "right": "a",
-      "offset": 12434,
-      "reason": "missing_space",
-      "context": "'italiano con dolcezza insolita,a bocca straniera ed era più ch"
-    },
-    {
-      "token": "a,a",
-      "left": "a",
-      "right": "a",
-      "offset": 29212,
-      "reason": "missing_space",
-      "context": "'italiano con dolcezza insolita,a bocca straniera ed era più ch"
     },
     {
       "token": "e",
@@ -2506,14 +2082,6 @@
       "context": "le fiabe create dall'esuberante,e viziata fantasia di un bimbo."
     },
     {
-      "token": "i;l",
-      "left": "i",
-      "right": "l",
-      "offset": 17505,
-      "reason": "missing_space",
-      "context": "cevo:\n\n\"O tosto o' tardi, rotti;li inciampi, il bene trionferà "
-    },
-    {
       "token": "i",
       "left": "rizia assottigliava la mercede.",
       "right": "i'atto in simili momenti, il pa",
@@ -2633,14 +2201,6 @@
       "right": "fr",
       "offset": 7174,
       "reason": "unresolved"
-    },
-    {
-      "token": "a;m",
-      "left": "a",
-      "right": "m",
-      "offset": 1281,
-      "reason": "missing_space",
-      "context": "ratta al giogo nefasto del Papa;ma la Monarchia altro non fece "
     },
     {
       "token": "a:a",

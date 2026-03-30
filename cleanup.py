@@ -564,6 +564,8 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
     return text.strip(), review_flags, punct_fixes
 
 
+# TODO: Add Gemini 3 Pro as a fallback LLM for Italian correction when
+# the Anthropic API is unavailable or timing out on specific chapters.
 def llm_correct_italian(
     text: str,
     chapter_title: str,
@@ -579,7 +581,7 @@ def llm_correct_italian(
 
     from utils import retry_api_call
 
-    client = anthropic.Anthropic(api_key=api_key, timeout=300.0)
+    client = anthropic.Anthropic(api_key=api_key, timeout=600.0)
 
     max_output = 128000
 
@@ -715,8 +717,12 @@ def extract_corrections_from_diff(
     return corrections
 
 
-def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: str | None = None) -> None:
-    """Clean reconciled text and produce final Italian markdown."""
+def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: str | None = None, chapter: str | None = None) -> None:
+    """Clean reconciled text and produce final Italian markdown.
+
+    If chapter is set (e.g. 'p2_ch21'), only that chapter gets the LLM pass;
+    all others apply cached corrections only.
+    """
     chapters_path = data_dir / "reconciled_chapters.json"
     chapters = json.loads(chapters_path.read_text(encoding="utf-8"))
 
@@ -794,24 +800,32 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
             bar_width = 30
             filled = int(bar_width * (i / total))
             bar = "█" * filled + "░" * (bar_width - filled)
-            print(f"\r  [{bar}] {i+1}/{total}  {ch['title']:<35s}", end="", flush=True)
-            try:
-                # Build Zingarelli context for this chapter's flagged tokens
-                zingarelli_ctx = ""
-                if flags:
-                    from adjudicate import zingarelli_context_for_flags
-                    zingarelli_ctx = zingarelli_context_for_flags(flags)
-                pre_llm_text = text
-                text = llm_correct_italian(text, ch["title"], api_key, zingarelli_ctx)
-                # Extract individual corrections from the LLM diff
-                ch_corrections = extract_corrections_from_diff(
-                    pre_llm_text, text, ch["id"]
-                )
-                if ch_corrections:
-                    new_corrections[ch["id"]] = ch_corrections
-                time.sleep(1)  # Rate limiting
-            except Exception as e:
-                print(f"\n    LLM error on {ch['id']}, using regex-cleaned text: {e}")
+            # Determine if this chapter should get the LLM pass
+            if chapter is not None:
+                run_llm = ch["id"] == chapter
+            else:
+                run_llm = not corrections.get(ch["id"])
+            if not run_llm:
+                print(f"\r  [{bar}] {i+1}/{total}  {ch['title']:<35s} (cached)", end="", flush=True)
+            else:
+                print(f"\r  [{bar}] {i+1}/{total}  {ch['title']:<35s}", end="", flush=True)
+                try:
+                    # Build Zingarelli context for this chapter's flagged tokens
+                    zingarelli_ctx = ""
+                    if flags:
+                        from adjudicate import zingarelli_context_for_flags
+                        zingarelli_ctx = zingarelli_context_for_flags(flags)
+                    pre_llm_text = text
+                    text = llm_correct_italian(text, ch["title"], api_key, zingarelli_ctx)
+                    # Extract individual corrections from the LLM diff
+                    ch_corrections = extract_corrections_from_diff(
+                        pre_llm_text, text, ch["id"]
+                    )
+                    if ch_corrections:
+                        new_corrections[ch["id"]] = ch_corrections
+                    time.sleep(1)  # Rate limiting
+                except Exception as e:
+                    print(f"\n    LLM error on {ch['id']}, using regex-cleaned text: {e}")
 
         # Add part headers
         if ch["part"] != current_part:
@@ -880,6 +894,47 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
 
     print(f"\n  Output: {output_path}")
     print(f"  Total chapters: {len(chapters)}")
+
+
+def reconcile_flags(data_dir: Path, output_dir: Path) -> None:
+    """Compare review_flags.json against the final output and write only surviving flags.
+
+    Preserves review_flags.json (pre-LLM) intact; writes review_flags_remaining.json
+    with only the flags whose context still appears in italian_clean.md.
+    """
+    flags_path = data_dir / "review_flags.json"
+    output_path = output_dir / "italian_clean.md"
+
+    if not flags_path.exists() or not output_path.exists():
+        print("  reconcile_flags: missing review_flags.json or italian_clean.md, skipping")
+        return
+
+    flags = json.loads(flags_path.read_text(encoding="utf-8"))
+    output_text = output_path.read_text(encoding="utf-8")
+
+    remaining: dict[str, list[dict]] = {}
+    total_original = 0
+    total_remaining = 0
+
+    for ch_id, ch_flags in flags.items():
+        for f in ch_flags:
+            total_original += 1
+            context = f.get("context", "").strip()
+            token = f.get("token", "")
+            search = context if context else token
+            if search and search in output_text:
+                remaining.setdefault(ch_id, []).append(f)
+                total_remaining += 1
+
+    from utils import atomic_write_json
+
+    remaining_path = data_dir / "review_flags_remaining.json"
+    atomic_write_json(remaining_path, remaining)
+
+    resolved = total_original - total_remaining
+    print(f"  Flag reconciliation: {total_original} original → {total_remaining} remaining ({resolved} resolved by LLM)")
+    print(f"  Original flags preserved: {flags_path.name}")
+    print(f"  Remaining flags written: {remaining_path.name}")
 
 
 if __name__ == "__main__":
