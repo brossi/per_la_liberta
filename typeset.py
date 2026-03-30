@@ -187,13 +187,16 @@ def generate_html(
     except ValueError:
         page_img_rel = Path(os.path.relpath(page_img_dir.resolve(), output_path.parent.resolve()))
 
+    import hashlib
+    css_hash = hashlib.md5(CSS_PATH.read_bytes()).hexdigest()[:8]
+
     html_parts = [
         "<!DOCTYPE html>",
         '<html lang="mul">',
         "<head>",
         '<meta charset="utf-8">',
         "<title>Per la Libertà! / For Freedom!</title>",
-        f'<link rel="stylesheet" href="{css_rel}">',
+        f'<link rel="stylesheet" href="{css_rel}?v={css_hash}">',
         "</head>",
         "<body>",
         "",
