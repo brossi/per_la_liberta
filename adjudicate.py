@@ -1,6 +1,6 @@
 """Adjudicate unresolved hyphenated tokens using the Zingarelli 1922 dictionary.
 
-Reads dehyphenation_flags.json (sidecar from cleanup step) and classifies each
+Reads review_flags.json (sidecar from cleanup step) and classifies each
 token by looking up its parts in the period-appropriate Italian dictionary.
 
 Classifications:
@@ -197,9 +197,9 @@ def adjudicate(data_dir: Path) -> dict:
 
     Returns a dict mapping chapter_id → list of adjudicated entries.
     """
-    flags_path = data_dir / "dehyphenation_flags.json"
+    flags_path = data_dir / "review_flags.json"
     if not flags_path.exists():
-        print("  No dehyphenation flags found")
+        print("  No review flags found")
         return {}
 
     flags = json.loads(flags_path.read_text(encoding="utf-8"))

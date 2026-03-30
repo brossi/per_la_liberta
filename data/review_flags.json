@@ -1,0 +1,2727 @@
+{
+  "p1_ch01": [
+    {
+      "token": "a;u",
+      "left": "a",
+      "right": "u",
+      "offset": 14864,
+      "reason": "missing_space",
+      "context": "gante, le visite di convenienza;un balbettare infantile di vest"
+    },
+    {
+      "token": "e",
+      "left": "o lavoro ed alla vita civile!..",
+      "right": "ella soggiunse — alla vita del ",
+      "offset": 10597,
+      "reason": "lowercase_after_break",
+      "context": "o lavoro ed alla vita civile!..\n\nella soggiunse — alla vita del "
+    },
+    {
+      "token": "s",
+      "left": "lberi\". Essi si ergono diritti.",
+      "right": "senza fronde, come colonne imma",
+      "offset": 17647,
+      "reason": "lowercase_after_break",
+      "context": "lberi\". Essi si ergono diritti.\n\nsenza fronde, come colonne imma"
+    },
+    {
+      "token": "s",
+      "left": "e guancie il bacio del mattino.",
+      "right": "sono scomparsi; i Bramini passa",
+      "offset": 19530,
+      "reason": "lowercase_after_break",
+      "context": "e guancie il bacio del mattino.\n\nsono scomparsi; i Bramini passa"
+    }
+  ],
+  "p1_ch02": [
+    {
+      "token": "Mastai-Ferretti",
+      "left": "Mastai",
+      "right": "Ferretti",
+      "offset": 2937,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "Lombardo-Veneto",
+      "left": "Lombardo",
+      "right": "Veneto",
+      "offset": 17420,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "Lombardo-Veneto",
+      "left": "Lombardo",
+      "right": "Veneto",
+      "offset": 29122,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "Lombardo-Veneto",
+      "left": "Lombardo",
+      "right": "Veneto",
+      "offset": 35897,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "a;a",
+      "left": "a",
+      "right": "a",
+      "offset": 2464,
+      "reason": "missing_space",
+      "context": " libri sgocciolanti di dottrina;altri ancora esimi come avvocat"
+    },
+    {
+      "token": "i;m",
+      "left": "i",
+      "right": "m",
+      "offset": 7178,
+      "reason": "missing_space",
+      "context": "ne, ne aveva usurpato i fulmini;ma solo per essa e sulle rovine"
+    },
+    {
+      "token": "i,o",
+      "left": "i",
+      "right": "o",
+      "offset": 12457,
+      "reason": "missing_space",
+      "context": "lde.\n\nIn forza di quei Trattati,ogni moto italiano, anche pacif"
+    },
+    {
+      "token": "o,q",
+      "left": "o",
+      "right": "q",
+      "offset": 15004,
+      "reason": "missing_space",
+      "context": "minose affermazioni del Diritto,quanto e più dell'amore.\n\nI via"
+    },
+    {
+      "token": "à;c",
+      "left": "à",
+      "right": "c",
+      "offset": 23407,
+      "reason": "missing_space",
+      "context": "ersi alla periferia della città;che un Governo Provvisorio si e"
+    },
+    {
+      "token": "a;c",
+      "left": "a",
+      "right": "c",
+      "offset": 23869,
+      "reason": "missing_space",
+      "context": "e man forte alla causa italiana;che bande armate scorrevano la "
+    },
+    {
+      "token": "i;i",
+      "left": "i",
+      "right": "i",
+      "offset": 25009,
+      "reason": "missing_space",
+      "context": "po e vivi bruciò amanti e sposi;insangui-\n\nnò il castello degli"
+    },
+    {
+      "token": "i,o",
+      "left": "i",
+      "right": "o",
+      "offset": 31993,
+      "reason": "missing_space",
+      "context": "alde. In forza di quei Trattati,ogni moto italiano, anche pacif"
+    },
+    {
+      "token": "o,q",
+      "left": "o",
+      "right": "q",
+      "offset": 37698,
+      "reason": "missing_space",
+      "context": "minose affermazioni del Diritto,quanto e più dell'amore. E tant"
+    },
+    {
+      "token": "i,p",
+      "left": "i",
+      "right": "p",
+      "offset": 42419,
+      "reason": "missing_space",
+      "context": "tesso, un comitato di cittadini,preceduto da bandiera bianca, v"
+    },
+    {
+      "token": "n",
+      "left": "vire all'arte per raffigurarlo.",
+      "right": "n simbolo dell'Italia di quei t",
+      "offset": 12924,
+      "reason": "lowercase_after_break",
+      "context": "vire all'arte per raffigurarlo.\n\nn simbolo dell'Italia di quei t"
+    },
+    {
+      "token": "n",
+      "left": "l sesso, né Téta furono difesa.",
+      "right": "nolente strappato alla sua fami",
+      "offset": 13877,
+      "reason": "lowercase_after_break",
+      "context": "l sesso, né Téta furono difesa.\n\nnolente strappato alla sua fami"
+    },
+    {
+      "token": "u",
+      "left": ", la loquel di parecchi volumi.",
+      "right": "uffizi.\n\nLa dinamica che agitav",
+      "offset": 21095,
+      "reason": "lowercase_after_break",
+      "context": ", la loquel di parecchi volumi.\n\nuffizi.\n\nLa dinamica che agitav"
+    }
+  ],
+  "p1_ch04": [
+    {
+      "token": "e:l",
+      "left": "e",
+      "right": "l",
+      "offset": 6886,
+      "reason": "missing_space",
+      "context": " ad una sola fazione importante:la sortita verso Mestre che rif"
+    },
+    {
+      "token": "o;m",
+      "left": "o",
+      "right": "m",
+      "offset": 16657,
+      "reason": "missing_space",
+      "context": " mi procurassi un travestimento;ma il conio veneziano, disgrazi"
+    },
+    {
+      "token": "i;m",
+      "left": "i",
+      "right": "m",
+      "offset": 16926,
+      "reason": "missing_space",
+      "context": " senso d'amarezza che ne provai;ma finì per consolarmi l'idea c"
+    },
+    {
+      "token": "f",
+      "left": "to irresistibile e, per allora.",
+      "right": "fui salvo. Ma alla seconda infr",
+      "offset": 8361,
+      "reason": "lowercase_after_break",
+      "context": "to irresistibile e, per allora.\n\nfui salvo. Ma alla seconda infr"
+    },
+    {
+      "token": "c",
+      "left": "vo sempre, immutato, nel petto.",
+      "right": "cuore anelante la Libertà, il c",
+      "offset": 17175,
+      "reason": "lowercase_after_break",
+      "context": "vo sempre, immutato, nel petto.\n\ncuore anelante la Libertà, il c"
+    }
+  ],
+  "p1_ch05": [
+    {
+      "token": "Strasbiu-go",
+      "left": "Strasbiu",
+      "right": "go",
+      "offset": 2455,
+      "reason": "unresolved"
+    },
+    {
+      "token": "f",
+      "left": "i ed alle proprie mire segrete.",
+      "right": "fidasse piano sembrava abbandon",
+      "offset": 3542,
+      "reason": "lowercase_after_break",
+      "context": "i ed alle proprie mire segrete.\n\nfidasse piano sembrava abbandon"
+    },
+    {
+      "token": "f",
+      "left": "ran parte, alle loro sconfitte!",
+      "right": "fi 27 n.\n\n1 sovversivi di Franc",
+      "offset": 8911,
+      "reason": "lowercase_after_break",
+      "context": "ran parte, alle loro sconfitte!\n\nfi 27 n.\n\n1 sovversivi di Franc"
+    }
+  ],
+  "p1_ch06": [
+    {
+      "token": "à;f",
+      "left": "à",
+      "right": "f",
+      "offset": 3799,
+      "reason": "missing_space",
+      "context": "duo a ehi procedeva dalla città;facile ai Francesi asserragliat"
+    },
+    {
+      "token": "i;m",
+      "left": "i",
+      "right": "m",
+      "offset": 3968,
+      "reason": "missing_space",
+      "context": "utamente, a ridiventare padroni;ma il mantenercisi era per noi "
+    },
+    {
+      "token": "e;p",
+      "left": "e",
+      "right": "p",
+      "offset": 8331,
+      "reason": "missing_space",
+      "context": "devamo diradare le loro schiere;per noi doloranti delle loro fe"
+    },
+    {
+      "token": "c",
+      "left": "vare, al loro fianco, l'offesa.",
+      "right": "ce: essi raggiunsero il loro ar",
+      "offset": 17037,
+      "reason": "lowercase_after_break",
+      "context": "vare, al loro fianco, l'offesa.\n\nce: essi raggiunsero il loro ar"
+    },
+    {
+      "token": "o",
+      "left": "a sua tenacia sino all'estremo.",
+      "right": "o.nn. O-\n\nEra imminente la nott",
+      "offset": 20469,
+      "reason": "lowercase_after_break",
+      "context": "a sua tenacia sino all'estremo.\n\no.nn. O-\n\nEra imminente la nott"
+    },
+    {
+      "token": "i",
+      "left": "i dello splendido sole di Roma!",
+      "right": "i.\".ì;\n\nce: essi raggiunsero il",
+      "offset": 23198,
+      "reason": "lowercase_after_break",
+      "context": "i dello splendido sole di Roma!\n\ni.\".ì;\n\nce: essi raggiunsero il"
+    }
+  ],
+  "p1_ch07": [
+    {
+      "token": "g",
+      "left": "so, il gemito estremo di Anita.",
+      "right": "gra ritenevo non difettasse che",
+      "offset": 12144,
+      "reason": "lowercase_after_break",
+      "context": "so, il gemito estremo di Anita.\n\ngra ritenevo non difettasse che"
+    }
+  ],
+  "p1_ch08": [
+    {
+      "token": "j,s",
+      "left": "j",
+      "right": "s",
+      "offset": 15540,
+      "reason": "missing_space",
+      "context": " po' di svago, in un caffé.\n\nTj,sala sala era gremita di milita"
+    },
+    {
+      "token": "v",
+      "left": "dolori suscitati dalla Nazione.",
+      "right": "va inviato al sacerdozio. Scopp",
+      "offset": 7244,
+      "reason": "lowercase_after_break",
+      "context": "dolori suscitati dalla Nazione.\n\nva inviato al sacerdozio. Scopp"
+    },
+    {
+      "token": "m",
+      "left": "mmo nel gran vortice di Parigi.",
+      "right": "mese il Giugno del 1851 e per l",
+      "offset": 18200,
+      "reason": "lowercase_after_break",
+      "context": "mmo nel gran vortice di Parigi.\n\nmese il Giugno del 1851 e per l"
+    }
+  ],
+  "p1_ch09": [
+    {
+      "token": "OO-fr",
+      "left": "OO",
+      "right": "fr",
+      "offset": 7710,
+      "reason": "unresolved"
+    },
+    {
+      "token": "atterrandolo",
+      "left": "tt",
+      "right": "ff",
+      "offset": 4359,
+      "reason": "f_ligature",
+      "context": "sene schernito, se ne vendicò atterrandolo con un calcio... non ultimo, ",
+      "suggestion": "afferrandolo"
+    },
+    {
+      "token": "a;s",
+      "left": "a",
+      "right": "s",
+      "offset": 2861,
+      "reason": "missing_space",
+      "context": "bili sono accatastati nella via;si leva il selciato, si lavora "
+    },
+    {
+      "token": "o,s",
+      "left": "o",
+      "right": "s",
+      "offset": 14495,
+      "reason": "missing_space",
+      "context": "un gioco, si scommette, ridendo,sulla sicurezza del tiro.. bers"
+    },
+    {
+      "token": "p",
+      "left": "almente sospinti dai gendiurmi.",
+      "right": "paghi addetti alla fabbricazion",
+      "offset": 2082,
+      "reason": "lowercase_after_break",
+      "context": "almente sospinti dai gendiurmi.\n\npaghi addetti alla fabbricazion"
+    },
+    {
+      "token": "v",
+      "left": " trovò di fronte creatura viva!",
+      "right": "villaggi pochi avevano tenuto t",
+      "offset": 3831,
+      "reason": "lowercase_after_break",
+      "context": " trovò di fronte creatura viva!\n\nvillaggi pochi avevano tenuto t"
+    },
+    {
+      "token": "n",
+      "left": "il nastro della Legion d'onore!",
+      "right": "notte che ora avvenuto precisam",
+      "offset": 4482,
+      "reason": "lowercase_after_break",
+      "context": "il nastro della Legion d'onore!\n\nnotte che ora avvenuto precisam"
+    },
+    {
+      "token": "s",
+      "left": " maggiore: i propri pregiudizi!",
+      "right": "se: 'ora dopo, egli si coricava",
+      "offset": 7440,
+      "reason": "lowercase_after_break",
+      "context": " maggiore: i propri pregiudizi!\n\nse: 'ora dopo, egli si coricava"
+    },
+    {
+      "token": "d",
+      "left": "verso il cupo baratro di Sedan!",
+      "right": "ds 42 s:\n\n1 pochi avevano tenut",
+      "offset": 17227,
+      "reason": "lowercase_after_break",
+      "context": "verso il cupo baratro di Sedan!\n\nds 42 s:\n\n1 pochi avevano tenut"
+    },
+    {
+      "token": "l",
+      "left": " scettro ''per diritto divino!\"",
+      "right": "liuigi Napoleone annunciò all'E",
+      "offset": 29966,
+      "reason": "lowercase_after_break",
+      "context": " scettro ''per diritto divino!\"\n\nliuigi Napoleone annunciò all'E"
+    },
+    {
+      "token": "é",
+      "left": "verso il cupo baratro di Sedan!",
+      "right": "én\n\nJE\n\nCapìtolo Decimo\n\nHBBAND",
+      "offset": 30196,
+      "reason": "lowercase_after_break",
+      "context": "verso il cupo baratro di Sedan!\n\nén\n\nJE\n\nCapìtolo Decimo\n\nHBBAND"
+    },
+    {
+      "token": "f",
+      "left": "e che il nostro Padre celeste \"",
+      "right": "figurarsi se volevo perdere il ",
+      "offset": 40589,
+      "reason": "lowercase_after_break",
+      "context": "e che il nostro Padre celeste \"\n\nfigurarsi se volevo perdere il "
+    },
+    {
+      "token": "v",
+      "left": ", divenne sinonimo di venalità.",
+      "right": "voli'epoca in cui io l'attraver",
+      "offset": 42265,
+      "reason": "lowercase_after_break",
+      "context": ", divenne sinonimo di venalità.\n\nvoli'epoca in cui io l'attraver"
+    }
+  ],
+  "p1_ch10": [
+    {
+      "token": "f",
+      "left": " chiasso, aveva af-\n\n-A-iA^fiT\"",
+      "right": "ferrato il Trolli per le lunghe",
+      "offset": 9709,
+      "reason": "lowercase_after_break",
+      "context": " chiasso, aveva af-\n\n-A-iA^fiT\"\n\nferrato il Trolli per le lunghe"
+    }
+  ],
+  "p1_ch11": [
+    {
+      "token": "Lombardo-Veneto",
+      "left": "Lombardo",
+      "right": "Veneto",
+      "offset": 10781,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "n",
+      "left": "mpo, viveva rifugiato a Torino.",
+      "right": "n Barozzi, durante Tassedio di ",
+      "offset": 205,
+      "reason": "lowercase_after_break",
+      "context": "mpo, viveva rifugiato a Torino.\n\nn Barozzi, durante Tassedio di "
+    }
+  ],
+  "p1_ch12": [
+    {
+      "token": "v",
+      "left": "era telegraficamente informato.",
+      "right": "vo la parete posteriore d'un al",
+      "offset": 3967,
+      "reason": "lowercase_after_break",
+      "context": "era telegraficamente informato.\n\nvo la parete posteriore d'un al"
+    },
+    {
+      "token": "s",
+      "left": "a della \"Regina d'Inghilterra:\"",
+      "right": "sguatteri ed inservienti, affac",
+      "offset": 5947,
+      "reason": "lowercase_after_break",
+      "context": "a della \"Regina d'Inghilterra:\"\n\nsguatteri ed inservienti, affac"
+    },
+    {
+      "token": "i",
+      "left": "omini per amarsi fraternamente!",
+      "right": "is\n\n-è-fefrfl-\n\nProvocata dalla",
+      "offset": 12660,
+      "reason": "lowercase_after_break",
+      "context": "omini per amarsi fraternamente!\n\nis\n\n-è-fefrfl-\n\nProvocata dalla"
+    },
+    {
+      "token": "s",
+      "left": "della '^ Regina d'Inghilterra:\"",
+      "right": "sguatteri ed inservienti, affac",
+      "offset": 14829,
+      "reason": "lowercase_after_break",
+      "context": "della '^ Regina d'Inghilterra:\"\n\nsguatteri ed inservienti, affac"
+    },
+    {
+      "token": "p",
+      "left": "uardia, a destra ed a sinistra.",
+      "right": "potevo considerarmi in trappola",
+      "offset": 18290,
+      "reason": "lowercase_after_break",
+      "context": "uardia, a destra ed a sinistra.\n\npotevo considerarmi in trappola"
+    }
+  ],
+  "p1_ch13": [
+    {
+      "token": "fl-flH",
+      "left": "fl",
+      "right": "flH",
+      "offset": 14615,
+      "reason": "unresolved"
+    },
+    {
+      "token": "d",
+      "left": "e quanto avessi veduto e udito.",
+      "right": "discutere più a seguiti Essi no",
+      "offset": 3363,
+      "reason": "lowercase_after_break",
+      "context": "e quanto avessi veduto e udito.\n\ndiscutere più a seguiti Essi no"
+    },
+    {
+      "token": "i",
+      "left": " vigilare se nulla di\n\n•♦-fior\"",
+      "right": "insolito fosse avvenuto che ind",
+      "offset": 11215,
+      "reason": "lowercase_after_break",
+      "context": " vigilare se nulla di\n\n•♦-fior\"\n\ninsolito fosse avvenuto che ind"
+    },
+    {
+      "token": "c",
+      "left": " to Calvi non ammette equivoci.",
+      "right": "c. e.\n\n3Btb7m:\n\ndiscutere più a",
+      "offset": 22029,
+      "reason": "lowercase_after_break",
+      "context": " to Calvi non ammette equivoci.\n\nc. e.\n\n3Btb7m:\n\ndiscutere più a"
+    }
+  ],
+  "p1_ch14": [
+    {
+      "token": "austro-ungariche",
+      "left": "austro",
+      "right": "ungariche",
+      "offset": 4224,
+      "reason": "unresolved"
+    },
+    {
+      "token": "austro-ungariche",
+      "left": "austro",
+      "right": "ungariche",
+      "offset": 7309,
+      "reason": "unresolved"
+    }
+  ],
+  "p1_ch15": [
+    {
+      "token": "a:l",
+      "left": "a",
+      "right": "l",
+      "offset": 12172,
+      "reason": "missing_space",
+      "context": "Giuseppe Mazzini.\n\nverso il qua:le convergeva, da ogni parte d'"
+    },
+    {
+      "token": "v",
+      "left": "dita seaxae, la fronte ampia...",
+      "right": "vigliando, quel corpo sottile, ",
+      "offset": 3489,
+      "reason": "lowercase_after_break",
+      "context": "dita seaxae, la fronte ampia...\n\nvigliando, quel corpo sottile, "
+    },
+    {
+      "token": "g",
+      "left": "odio della presente obbiezione.",
+      "right": "gli impulsi virili, il non cont",
+      "offset": 5241,
+      "reason": "lowercase_after_break",
+      "context": "odio della presente obbiezione.\n\ngli impulsi virili, il non cont"
+    },
+    {
+      "token": "n",
+      "left": "no tutto è perduto.\" \"Mazzini.\"",
+      "right": "nre%i linee, sciagura immensa! ",
+      "offset": 11971,
+      "reason": "lowercase_after_break",
+      "context": "no tutto è perduto.\" \"Mazzini.\"\n\nnre%i linee, sciagura immensa! "
+    },
+    {
+      "token": "v",
+      "left": "ole, rivedevo Giuseppe Mazzini.",
+      "right": "verso il qua:le convergeva, da ",
+      "offset": 12161,
+      "reason": "lowercase_after_break",
+      "context": "ole, rivedevo Giuseppe Mazzini.\n\nverso il qua:le convergeva, da "
+    }
+  ],
+  "p1_ch16": [
+    {
+      "token": "o;p",
+      "left": "o",
+      "right": "p",
+      "offset": 683,
+      "reason": "missing_space",
+      "context": "ono per qualche tempo, fremendo;poi, sospettando il tradimento,"
+    },
+    {
+      "token": "o;m",
+      "left": "o",
+      "right": "m",
+      "offset": 2817,
+      "reason": "missing_space",
+      "context": " Mazzini:\" Sconsigliare il moto;ma aiutarlo strenuamente quando"
+    },
+    {
+      "token": "u",
+      "left": "uon uso alla seconda giornata!\"",
+      "right": "un fucile. E ne possedevano rap",
+      "offset": 3364,
+      "reason": "lowercase_after_break",
+      "context": "uon uso alla seconda giornata!\"\n\nun fucile. E ne possedevano rap"
+    }
+  ],
+  "p1_ch17": [
+    {
+      "token": "o;g",
+      "left": "o",
+      "right": "g",
+      "offset": 2922,
+      "reason": "missing_space",
+      "context": "azionale, elegante, mitìtaresco;gente con larghe cicatrici; fig"
+    },
+    {
+      "token": "o",
+      "left": "ttuto ed in esilio, esercitava.",
+      "right": "oltre il prestigio della fama, ",
+      "offset": 3139,
+      "reason": "lowercase_after_break",
+      "context": "ttuto ed in esilio, esercitava.\n\noltre il prestigio della fama, "
+    },
+    {
+      "token": "n",
+      "left": "lla ricompensa... il martirio!\"",
+      "right": "n mio incarico preliminare spec",
+      "offset": 10218,
+      "reason": "lowercase_after_break",
+      "context": "lla ricompensa... il martirio!\"\n\nn mio incarico preliminare spec"
+    },
+    {
+      "token": "o",
+      "left": "rni e mi riibettevo in viaggio.",
+      "right": "oltre il prestìgio della fama, ",
+      "offset": 15288,
+      "reason": "lowercase_after_break",
+      "context": "rni e mi riibettevo in viaggio.\n\noltre il prestìgio della fama, "
+    },
+    {
+      "token": "n",
+      "left": "asa ricompense.. * il martino!\"",
+      "right": "n mio incarico preBminaro q>eei",
+      "offset": 22101,
+      "reason": "lowercase_after_break",
+      "context": "asa ricompense.. * il martino!\"\n\nn mio incarico preBminaro q>eei"
+    }
+  ],
+  "p1_ch18": [
+    {
+      "token": "z",
+      "left": "o che tu sia piovuto dal cielo!",
+      "right": "zo E papà agricoli, scivolavano",
+      "offset": 6158,
+      "reason": "lowercase_after_break",
+      "context": "o che tu sia piovuto dal cielo!\n\nzo E papà agricoli, scivolavano"
+    },
+    {
+      "token": "n",
+      "left": "esto momento non ho più padre!\"",
+      "right": "n povero vecchio rimase per un ",
+      "offset": 18366,
+      "reason": "lowercase_after_break",
+      "context": "esto momento non ho più padre!\"\n\nn povero vecchio rimase per un "
+    }
+  ],
+  "p1_ch19": [
+    {
+      "token": "fl-ta",
+      "left": "fl",
+      "right": "ta",
+      "offset": 2830,
+      "reason": "unresolved"
+    }
+  ],
+  "p1_ch21": [
+    {
+      "token": "o;p",
+      "left": "o",
+      "right": "p",
+      "offset": 3333,
+      "reason": "missing_space",
+      "context": " e pane e latte da un montanaro;poi, a Neumark, stempero lautam"
+    },
+    {
+      "token": "e;p",
+      "left": "e",
+      "right": "p",
+      "offset": 7150,
+      "reason": "missing_space",
+      "context": "co; mi toccò il piede col piede;poi, senza voltare il viso, sim"
+    },
+    {
+      "token": "a;l",
+      "left": "a",
+      "right": "l",
+      "offset": 12984,
+      "reason": "missing_space",
+      "context": "e il compenso di una gentilezza;la donna a ritrarsi, con mosse "
+    },
+    {
+      "token": "e:m",
+      "left": "e",
+      "right": "m",
+      "offset": 17623,
+      "reason": "missing_space",
+      "context": "i che la Legge è la Legge e che:m. praBcritta per la chiuiiara "
+    },
+    {
+      "token": "b",
+      "left": "gida, immobile come un macigno.",
+      "right": "bocche vidi nettamente me ed io",
+      "offset": 2119,
+      "reason": "lowercase_after_break",
+      "context": "gida, immobile come un macigno.\n\nbocche vidi nettamente me ed io"
+    },
+    {
+      "token": "s",
+      "left": "... io sguscio e l 'attraverso.",
+      "right": "se: poi, o messi sull'avviso, c",
+      "offset": 10321,
+      "reason": "lowercase_after_break",
+      "context": "... io sguscio e l 'attraverso.\n\nse: poi, o messi sull'avviso, c"
+    },
+    {
+      "token": "l",
+      "left": "enza. Posso dormire tranquillo!",
+      "right": "l'ora prescritta per la chiusur",
+      "offset": 17982,
+      "reason": "lowercase_after_break",
+      "context": "enza. Posso dormire tranquillo!\n\nl'ora prescritta per la chiusur"
+    },
+    {
+      "token": "r",
+      "left": "nermi dal ridere rumorosamente.",
+      "right": "rio; entrai nel villaggio e nel",
+      "offset": 22286,
+      "reason": "lowercase_after_break",
+      "context": "nermi dal ridere rumorosamente.\n\nrio; entrai nel villaggio e nel"
+    },
+    {
+      "token": "s",
+      "left": "pirito ne rimase come travolto.",
+      "right": "spari!\n\ndi fronte, l'uno a dest",
+      "offset": 23611,
+      "reason": "lowercase_after_break",
+      "context": "pirito ne rimase come travolto.\n\nspari!\n\ndi fronte, l'uno a dest"
+    },
+    {
+      "token": "d",
+      "left": "e rimase come travolto.\n\nspari!",
+      "right": "di fronte, l'uno a destra, l'al",
+      "offset": 23619,
+      "reason": "lowercase_after_break",
+      "context": "e rimase come travolto.\n\nspari!\n\ndi fronte, l'uno a destra, l'al"
+    },
+    {
+      "token": "m",
+      "left": "'urto di piatti e di stoviglie.",
+      "right": "messo un appetito, un appetito!",
+      "offset": 24089,
+      "reason": "lowercase_after_break",
+      "context": "'urto di piatti e di stoviglie.\n\nmesso un appetito, un appetito!"
+    }
+  ],
+  "p1_ch22": [
+    {
+      "token": "a;m",
+      "left": "a",
+      "right": "m",
+      "offset": 4139,
+      "reason": "missing_space",
+      "context": "vano la redenzione della Patria;ma in nessuna, come a Mantova, "
+    },
+    {
+      "token": "c",
+      "left": "i nemico leale, d'uomo d'onore.",
+      "right": "calma imperturbabile della avve",
+      "offset": 7345,
+      "reason": "lowercase_after_break",
+      "context": "i nemico leale, d'uomo d'onore.\n\ncalma imperturbabile della avve"
+    },
+    {
+      "token": "r",
+      "left": "e inalberati i colo-\n\nJS^fctt,\"",
+      "right": "ri santi della redenzione; non ",
+      "offset": 11709,
+      "reason": "lowercase_after_break",
+      "context": "e inalberati i colo-\n\nJS^fctt,\"\n\nri santi della redenzione; non "
+    },
+    {
+      "token": "v",
+      "left": "i venne delittuosamente rapita!",
+      "right": "viere, un Roberto Morin, un Fon",
+      "offset": 15029,
+      "reason": "lowercase_after_break",
+      "context": "i venne delittuosamente rapita!\n\nviere, un Roberto Morin, un Fon"
+    }
+  ],
+  "p1_ch23": [
+    {
+      "token": "franco-prussiana",
+      "left": "franco",
+      "right": "prussiana",
+      "offset": 15548,
+      "reason": "unresolved"
+    },
+    {
+      "token": "franco-prussiana",
+      "left": "franco",
+      "right": "prussiana",
+      "offset": 32318,
+      "reason": "unresolved"
+    },
+    {
+      "token": "franco-prussiana",
+      "left": "franco",
+      "right": "prussiana",
+      "offset": 46781,
+      "reason": "unresolved"
+    },
+    {
+      "token": "z:M",
+      "left": "z",
+      "right": "M",
+      "offset": 11238,
+      "reason": "missing_space",
+      "context": "rali, a formulare, sull'av.\n\nwz:M\"è-\n\nvenire della Francia, i p"
+    },
+    {
+      "token": "a",
+      "left": "i cagionava nn piacere intenso.",
+      "right": "arrivo a Zurigo, egli mi aveva ",
+      "offset": 3444,
+      "reason": "lowercase_after_break",
+      "context": "i cagionava nn piacere intenso.\n\narrivo a Zurigo, egli mi aveva "
+    },
+    {
+      "token": "w",
+      "left": "liberali, a formulare, sull'av.",
+      "right": "wz:M\"è-\n\nvenire della Francia, ",
+      "offset": 11237,
+      "reason": "lowercase_after_break",
+      "context": "liberali, a formulare, sull'av.\n\nwz:M\"è-\n\nvenire della Francia, "
+    },
+    {
+      "token": "b",
+      "left": " \"Che cosa è venuto a far qui!\"",
+      "right": "breve e terribile. \"A Londra mi",
+      "offset": 21986,
+      "reason": "lowercase_after_break",
+      "context": " \"Che cosa è venuto a far qui!\"\n\nbreve e terribile. \"A Londra mi"
+    },
+    {
+      "token": "h",
+      "left": "a mi s'accu- venuto a far qui?\"",
+      "right": "he: Ve lo dirò fra un secondo! ",
+      "offset": 22046,
+      "reason": "lowercase_after_break",
+      "context": "a mi s'accu- venuto a far qui?\"\n\nhe: Ve lo dirò fra un secondo! "
+    },
+    {
+      "token": "r",
+      "left": "iedi legati, in pasto ai pesci!",
+      "right": "resto tu il Caronti vi avrebbe ",
+      "offset": 25123,
+      "reason": "lowercase_after_break",
+      "context": "iedi legati, in pasto ai pesci!\n\nresto tu il Caronti vi avrebbe "
+    },
+    {
+      "token": "v",
+      "left": "l'Austria di un intero vespaio.",
+      "right": "vuoi! Il Satanasso! Per fortuna",
+      "offset": 25226,
+      "reason": "lowercase_after_break",
+      "context": "l'Austria di un intero vespaio.\n\nvuoi! Il Satanasso! Per fortuna"
+    },
+    {
+      "token": "t",
+      "left": "nato nel tentativo di Maloggia.",
+      "right": "t Questo Orioli era il fratello",
+      "offset": 27425,
+      "reason": "lowercase_after_break",
+      "context": "nato nel tentativo di Maloggia.\n\nt Questo Orioli era il fratello"
+    },
+    {
+      "token": "a",
+      "left": "credeva di vendicare la Patria!",
+      "right": "arrivo a Zurigo, egli mi aveva ",
+      "offset": 35814,
+      "reason": "lowercase_after_break",
+      "context": "credeva di vendicare la Patria!\n\narrivo a Zurigo, egli mi aveva "
+    }
+  ],
+  "p1_ch24": [
+    {
+      "token": "Lombardo-Veneto",
+      "left": "Lombardo",
+      "right": "Veneto",
+      "offset": 27436,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "o,t",
+      "left": "o",
+      "right": "t",
+      "offset": 694,
+      "reason": "missing_space",
+      "context": "suna influenza\" di quell'onesto,tra le file del partito che era"
+    },
+    {
+      "token": "i,a",
+      "left": "i",
+      "right": "a",
+      "offset": 2823,
+      "reason": "missing_space",
+      "context": " l'Orsini ha rilevato: \"stanchi,aff amati, laceri, vestiti da a"
+    },
+    {
+      "token": "i,a",
+      "left": "i",
+      "right": "a",
+      "offset": 3550,
+      "reason": "missing_space",
+      "context": " qualche complicazione. E basti,a noi che viviamo in California"
+    },
+    {
+      "token": "e,e",
+      "left": "e",
+      "right": "e",
+      "offset": 7547,
+      "reason": "missing_space",
+      "context": "io di erbe, al primo albeggiare,e, e, contemplata l'aurora, ci "
+    },
+    {
+      "token": "o;m",
+      "left": "o",
+      "right": "m",
+      "offset": 8769,
+      "reason": "missing_space",
+      "context": "dei aviatori che la sollevavano;ma essa non riesciva a nasconde"
+    },
+    {
+      "token": "o,t",
+      "left": "o",
+      "right": "t",
+      "offset": 18149,
+      "reason": "missing_space",
+      "context": "suna influenza\" di quell'onesto,tra le file del partito che era"
+    },
+    {
+      "token": "f",
+      "left": "la memoria gli facesse difetto.",
+      "right": "frasi di riconoscimento ramment",
+      "offset": 1817,
+      "reason": "lowercase_after_break",
+      "context": "la memoria gli facesse difetto.\n\nfrasi di riconoscimento ramment"
+    },
+    {
+      "token": "a",
+      "left": "rammentare il generale Fremont.",
+      "right": "aÈIMSE il\n\nMa il Fremont doveva",
+      "offset": 3618,
+      "reason": "lowercase_after_break",
+      "context": "rammentare il generale Fremont.\n\naÈIMSE il\n\nMa il Fremont doveva"
+    },
+    {
+      "token": "p",
+      "left": "nello stesso rivo dell'agnello.",
+      "right": "pretesto qualsiasi stavano le c",
+      "offset": 4023,
+      "reason": "lowercase_after_break",
+      "context": "nello stesso rivo dell'agnello.\n\npretesto qualsiasi stavano le c"
+    },
+    {
+      "token": "i",
+      "left": "uto sue istruzioni, si congedò.",
+      "right": "imminente di Maloggia non era a",
+      "offset": 6674,
+      "reason": "lowercase_after_break",
+      "context": "uto sue istruzioni, si congedò.\n\nimminente di Maloggia non era a"
+    },
+    {
+      "token": "d",
+      "left": "a, commiserazione più profonda.",
+      "right": "d'innanzi ad un Commissario Fed",
+      "offset": 11840,
+      "reason": "lowercase_after_break",
+      "context": "a, commiserazione più profonda.\n\nd'innanzi ad un Commissario Fed"
+    },
+    {
+      "token": "y",
+      "left": "el Codice che le specificavano.",
+      "right": "yyTV ■\n\ncombino a chi riceve ge",
+      "offset": 15475,
+      "reason": "lowercase_after_break",
+      "context": "el Codice che le specificavano.\n\nyyTV ■\n\ncombino a chi riceve ge"
+    },
+    {
+      "token": "d",
+      "left": "r deludere la Polisia SvlEzera.",
+      "right": "da Felice Orsini per deludere l",
+      "offset": 17734,
+      "reason": "lowercase_after_break",
+      "context": "r deludere la Polisia SvlEzera.\n\nda Felice Orsini per deludere l"
+    },
+    {
+      "token": "d",
+      "left": "he era più propriamente il suo.",
+      "right": "dosso proprio mentre leggevamo ",
+      "offset": 18209,
+      "reason": "lowercase_after_break",
+      "context": "he era più propriamente il suo.\n\ndosso proprio mentre leggevamo "
+    }
+  ],
+  "p2_ch01": [
+    {
+      "token": "a,s",
+      "left": "a",
+      "right": "s",
+      "offset": 6683,
+      "reason": "missing_space",
+      "context": "a... per non rimettervi più ria,si trovò a faccia a faccia il p"
+    },
+    {
+      "token": "a,f",
+      "left": "a",
+      "right": "f",
+      "offset": 6979,
+      "reason": "missing_space",
+      "context": "re la canna rispose il Bonacina,facendo l'atto di applicargli u"
+    },
+    {
+      "token": "a,s",
+      "left": "a",
+      "right": "s",
+      "offset": 8015,
+      "reason": "missing_space",
+      "context": "antonando per una via solitaria,si trovò a faccia a faccia il B"
+    },
+    {
+      "token": "o;n",
+      "left": "o",
+      "right": "n",
+      "offset": 12774,
+      "reason": "missing_space",
+      "context": "ardi, doveva serbare allo sposo;nella cugina si compiaceva, sof"
+    },
+    {
+      "token": "o;B",
+      "left": "o",
+      "right": "B",
+      "offset": 17407,
+      "reason": "missing_space",
+      "context": "ia — egli diceva — ebbe il Moro;Belluno, che è più pìccola, ha "
+    },
+    {
+      "token": "a;q",
+      "left": "a",
+      "right": "q",
+      "offset": 22242,
+      "reason": "missing_space",
+      "context": "no cospicue per la loro assenza;quelle\" Situation wanted\" si mi"
+    },
+    {
+      "token": "i",
+      "left": "leguò nella oscurità della via.",
+      "right": "innanzi muso duro, da quella se",
+      "offset": 6427,
+      "reason": "lowercase_after_break",
+      "context": "leguò nella oscurità della via.\n\ninnanzi muso duro, da quella se"
+    },
+    {
+      "token": "n",
+      "left": " una resa anche onorevole, mai!",
+      "right": "n ponte di Rudio si era decìso ",
+      "offset": 14255,
+      "reason": "lowercase_after_break",
+      "context": " una resa anche onorevole, mai!\n\nn ponte di Rudio si era decìso "
+    },
+    {
+      "token": "p",
+      "left": "valore nelle grandi intraprese!",
+      "right": "per essere più forti, più grand",
+      "offset": 14738,
+      "reason": "lowercase_after_break",
+      "context": "valore nelle grandi intraprese!\n\nper essere più forti, più grand"
+    },
+    {
+      "token": "f",
+      "left": "riprendere le nostre lezioni I\"",
+      "right": "fredda. Quel fascino scivolava ",
+      "offset": 19720,
+      "reason": "lowercase_after_break",
+      "context": "riprendere le nostre lezioni I\"\n\nfredda. Quel fascino scivolava "
+    },
+    {
+      "token": "s",
+      "left": "hi mai si è preso cura di mef \"",
+      "right": "s: suo primo sospetto cadde sul",
+      "offset": 23468,
+      "reason": "lowercase_after_break",
+      "context": "hi mai si è preso cura di mef \"\n\ns: suo primo sospetto cadde sul"
+    },
+    {
+      "token": "d",
+      "left": "delle sue critiche circostanze.",
+      "right": "dunque che mistero era quello f",
+      "offset": 23824,
+      "reason": "lowercase_after_break",
+      "context": "delle sue critiche circostanze.\n\ndunque che mistero era quello f"
+    },
+    {
+      "token": "q",
+      "left": "la luce delle grandi occasioni.",
+      "right": "quaderni e l'animato conversare",
+      "offset": 26166,
+      "reason": "lowercase_after_break",
+      "context": "la luce delle grandi occasioni.\n\nquaderni e l'animato conversare"
+    }
+  ],
+  "p2_ch03": [
+    {
+      "token": "afl-fl",
+      "left": "afl",
+      "right": "fl",
+      "offset": 34319,
+      "reason": "unresolved"
+    },
+    {
+      "token": "n",
+      "left": " mi è conteso da altri ideali?\"",
+      "right": "n ponte di Rudio agiva inconsci",
+      "offset": 300,
+      "reason": "lowercase_after_break",
+      "context": " mi è conteso da altri ideali?\"\n\nn ponte di Rudio agiva inconsci"
+    },
+    {
+      "token": "l",
+      "left": "del pensiero e la tradizionale.",
+      "right": "larga ospitalità del popolo ing",
+      "offset": 1584,
+      "reason": "lowercase_after_break",
+      "context": "del pensiero e la tradizionale.\n\nlarga ospitalità del popolo ing"
+    },
+    {
+      "token": "q",
+      "left": " che pasticcio, che pasticcio!\"",
+      "right": "quanto quei giorni la guerra di",
+      "offset": 3694,
+      "reason": "lowercase_after_break",
+      "context": " che pasticcio, che pasticcio!\"\n\nquanto quei giorni la guerra di"
+    },
+    {
+      "token": "d",
+      "left": "zze. Ogni istante per-\n\n-e-fl\"\"",
+      "right": "duto è sottratto alla vostra fe",
+      "offset": 29509,
+      "reason": "lowercase_after_break",
+      "context": "zze. Ogni istante per-\n\n-e-fl\"\"\n\nduto è sottratto alla vostra fe"
+    },
+    {
+      "token": "n",
+      "left": "he ci vuol tanto?\" E fuggì via.",
+      "right": "n momento decisivo era giunto. ",
+      "offset": 29694,
+      "reason": "lowercase_after_break",
+      "context": "he ci vuol tanto?\" E fuggì via.\n\nn momento decisivo era giunto. "
+    },
+    {
+      "token": "n",
+      "left": "e ci vuol tanto t\" E fuggì via.",
+      "right": "n momento decisivo era giunto. ",
+      "offset": 37773,
+      "reason": "lowercase_after_break",
+      "context": "e ci vuol tanto t\" E fuggì via.\n\nn momento decisivo era giunto. "
+    },
+    {
+      "token": "n",
+      "left": " Tanimo, se ne aveva la forza!\"",
+      "right": "n conte pensava: ''Benedetta la",
+      "offset": 41188,
+      "reason": "lowercase_after_break",
+      "context": " Tanimo, se ne aveva la forza!\"\n\nn conte pensava: ''Benedetta la"
+    },
+    {
+      "token": "n",
+      "left": "lisa, le baciava, le baciava...",
+      "right": "n 9 Dicembre 1855 veniva legali",
+      "offset": 42024,
+      "reason": "lowercase_after_break",
+      "context": "lisa, le baciava, le baciava...\n\nn 9 Dicembre 1855 veniva legali"
+    }
+  ],
+  "p2_ch04": [
+    {
+      "token": "m",
+      "left": "rava nel petto, poi\n\npiù nulla!",
+      "right": "m: riebbi un barlume di coscien",
+      "offset": 3425,
+      "reason": "lowercase_after_break",
+      "context": "rava nel petto, poi\n\npiù nulla!\n\nm: riebbi un barlume di coscien"
+    },
+    {
+      "token": "g",
+      "left": "iungevano sommamente importune.",
+      "right": "giorni combattendo al fianco di",
+      "offset": 5896,
+      "reason": "lowercase_after_break",
+      "context": "iungevano sommamente importune.\n\ngiorni combattendo al fianco di"
+    },
+    {
+      "token": "n",
+      "left": " in cavità e giudicate mortali!",
+      "right": "n Foschini chiuse splendidament",
+      "offset": 8517,
+      "reason": "lowercase_after_break",
+      "context": " in cavità e giudicate mortali!\n\nn Foschini chiuse splendidament"
+    }
+  ],
+  "p2_ch05": [
+    {
+      "token": "r",
+      "left": "o, nelle grandi congiu-\n\nHi'O'.",
+      "right": "re — mi fece osservare — è appv",
+      "offset": 9483,
+      "reason": "lowercase_after_break",
+      "context": "o, nelle grandi congiu-\n\nHi'O'.\n\nre — mi fece osservare — è appv"
+    },
+    {
+      "token": "n",
+      "left": "e, alle barricate della domane.",
+      "right": "nuovo lasciammo quella sera ste",
+      "offset": 16552,
+      "reason": "lowercase_after_break",
+      "context": "e, alle barricate della domane.\n\nnuovo lasciammo quella sera ste"
+    },
+    {
+      "token": "m",
+      "left": " parlare ero maggiore libertà.\"",
+      "right": "mìo appena, mi si piantò azzard",
+      "offset": 18633,
+      "reason": "lowercase_after_break",
+      "context": " parlare ero maggiore libertà.\"\n\nmìo appena, mi si piantò azzard"
+    },
+    {
+      "token": "t",
+      "left": "\"Sta bene. Non parliamone più!\"",
+      "right": "tato Segreto aveva deciso di pa",
+      "offset": 21149,
+      "reason": "lowercase_after_break",
+      "context": "\"Sta bene. Non parliamone più!\"\n\ntato Segreto aveva deciso di pa"
+    },
+    {
+      "token": "n",
+      "left": "i il mio visitatore ad entrare.",
+      "right": "n bimbo sgambettava nella catin",
+      "offset": 24372,
+      "reason": "lowercase_after_break",
+      "context": "i il mio visitatore ad entrare.\n\nn bimbo sgambettava nella catin"
+    }
+  ],
+  "p2_ch06": [
+    {
+      "token": "e;s",
+      "left": "e",
+      "right": "s",
+      "offset": 1980,
+      "reason": "missing_space",
+      "context": "o facile come potrebbe sembrare;sia che il Maestro, spiato da t"
+    },
+    {
+      "token": "l;g",
+      "left": "l",
+      "right": "g",
+      "offset": 9828,
+      "reason": "missing_space",
+      "context": "propria vita, che dicevano\n\n~fl;ga;'ffr~\n\nbene spesa, se spesa "
+    },
+    {
+      "token": "a,a",
+      "left": "a",
+      "right": "a",
+      "offset": 10085,
+      "reason": "missing_space",
+      "context": "e fortunose della sua esistenza,ad allontanarsene, l'aveva affi"
+    },
+    {
+      "token": "o;l",
+      "left": "o",
+      "right": "l",
+      "offset": 17409,
+      "reason": "missing_space",
+      "context": "ll'imbarco. Si cenò in silenzio;la piena degli affetti scambiav"
+    },
+    {
+      "token": "a",
+      "left": " labbra frementi... poi fuggii!",
+      "right": "al seno turgido di mamma saa. A",
+      "offset": 17877,
+      "reason": "lowercase_after_break",
+      "context": " labbra frementi... poi fuggii!\n\nal seno turgido di mamma saa. A"
+    },
+    {
+      "token": "n",
+      "left": "era dei martiri ghigliottinati.",
+      "right": "n fratello suo, già corrucciati",
+      "offset": 20787,
+      "reason": "lowercase_after_break",
+      "context": "era dei martiri ghigliottinati.\n\nn fratello suo, già corrucciati"
+    }
+  ],
+  "p2_ch07": [
+    {
+      "token": "semi-volontaria",
+      "left": "semi",
+      "right": "volontaria",
+      "offset": 9515,
+      "reason": "unresolved"
+    },
+    {
+      "token": "i,c",
+      "left": "i",
+      "right": "c",
+      "offset": 2074,
+      "reason": "missing_space",
+      "context": "racciare fraternamente l'Orsini,che se ne sta ritto ed in attes"
+    },
+    {
+      "token": "e;l",
+      "left": "e",
+      "right": "l",
+      "offset": 4123,
+      "reason": "missing_space",
+      "context": "lato, coli 'occhio intelligente;la pallidezza del volto rendeva"
+    },
+    {
+      "token": "i,c",
+      "left": "i",
+      "right": "c",
+      "offset": 8527,
+      "reason": "missing_space",
+      "context": "racciare fraternamente l'Orsini,che se ne sta ritto ed in attes"
+    },
+    {
+      "token": "ù:i",
+      "left": "ù",
+      "right": "i",
+      "offset": 14755,
+      "reason": "missing_space",
+      "context": "elle lo pregava di fermarsi più:i lungo, aveva risposto che la "
+    },
+    {
+      "token": "r",
+      "left": "a alla mia mente. Il piroscafo.",
+      "right": "rallentato dal vento e dai maro",
+      "offset": 1349,
+      "reason": "lowercase_after_break",
+      "context": "a alla mia mente. Il piroscafo.\n\nrallentato dal vento e dai maro"
+    },
+    {
+      "token": "c",
+      "left": " Popoli ed alla luce del Sole..",
+      "right": "che si compirà sì compirà!\"\n\npr",
+      "offset": 6429,
+      "reason": "lowercase_after_break",
+      "context": " Popoli ed alla luce del Sole..\n\nche si compirà sì compirà!\"\n\npr"
+    },
+    {
+      "token": "p",
+      "left": "..\n\nche si compirà sì compirà!\"",
+      "right": "protesta. Non è lasciò o mi non",
+      "offset": 6458,
+      "reason": "lowercase_after_break",
+      "context": "..\n\nche si compirà sì compirà!\"\n\nprotesta. Non è lasciò o mi non"
+    },
+    {
+      "token": "f",
+      "left": "zatamente in segreto, ci nuolo.",
+      "right": "fida dell'altra unione che si c",
+      "offset": 6736,
+      "reason": "lowercase_after_break",
+      "context": "zatamente in segreto, ci nuolo.\n\nfida dell'altra unione che si c"
+    },
+    {
+      "token": "j",
+      "left": "ocabilmente il proprio destino!",
+      "right": "j",
+      "offset": 18030,
+      "reason": "lowercase_after_break",
+      "context": "ocabilmente il proprio destino!\n\nj"
+    }
+  ],
+  "p2_ch08": [
+    {
+      "token": "semi-volontaria",
+      "left": "semi",
+      "right": "volontaria",
+      "offset": 366,
+      "reason": "unresolved"
+    },
+    {
+      "token": "n",
+      "left": "citurno e le eran visite brevi.",
+      "right": "n pomeriggio del Sabato (12 Gen",
+      "offset": 4155,
+      "reason": "lowercase_after_break",
+      "context": "citurno e le eran visite brevi.\n\nn pomeriggio del Sabato (12 Gen"
+    }
+  ],
+  "p2_ch09": [
+    {
+      "token": "l",
+      "left": "litarvi la fuga e la salvezza.\"",
+      "right": "lì tratta una borsa, ci contava",
+      "offset": 949,
+      "reason": "lowercase_after_break",
+      "context": "litarvi la fuga e la salvezza.\"\n\nlì tratta una borsa, ci contava"
+    },
+    {
+      "token": "ì",
+      "left": "prabito si mostrava rigonfia...",
+      "right": "ìe\n\njaE\n\nd'assentarsi per fare,",
+      "offset": 6119,
+      "reason": "lowercase_after_break",
+      "context": "prabito si mostrava rigonfia...\n\nìe\n\njaE\n\nd'assentarsi per fare,"
+    },
+    {
+      "token": "t",
+      "left": "prabito si mostrava rigonfia...",
+      "right": "te! \" Perchè non ci sgusciasser",
+      "offset": 9253,
+      "reason": "lowercase_after_break",
+      "context": "prabito si mostrava rigonfia...\n\nte! \" Perchè non ci sgusciasser"
+    }
+  ],
+  "p2_ch10": [
+    {
+      "token": "l",
+      "left": " procuratogli dai suoi delitti!",
+      "right": "li Italiano non paga il Sabato ",
+      "offset": 3182,
+      "reason": "lowercase_after_break",
+      "context": " procuratogli dai suoi delitti!\n\nli Italiano non paga il Sabato "
+    },
+    {
+      "token": "c",
+      "left": "li che mi fischiavano sul capo.",
+      "right": "colpisse il ffi: ma un attimo e",
+      "offset": 7143,
+      "reason": "lowercase_after_break",
+      "context": "li che mi fischiavano sul capo.\n\ncolpisse il ffi: ma un attimo e"
+    },
+    {
+      "token": "a",
+      "left": " lato, non vidi Giuseppe Pieri.",
+      "right": "aseeoondata l'eroica impresa de",
+      "offset": 8307,
+      "reason": "lowercase_after_break",
+      "context": " lato, non vidi Giuseppe Pieri.\n\naseeoondata l'eroica impresa de"
+    }
+  ],
+  "p2_ch11": [
+    {
+      "token": "s",
+      "left": "esta fasciata... Felice Orsini!",
+      "right": "sino allo scoppio della terza b",
+      "offset": 10856,
+      "reason": "lowercase_after_break",
+      "context": "esta fasciata... Felice Orsini!\n\nsino allo scoppio della terza b"
+    },
+    {
+      "token": "d",
+      "left": "temente, a destra e a sinistra.",
+      "right": "derise, il a erv&ggìo, la perse",
+      "offset": 11510,
+      "reason": "lowercase_after_break",
+      "context": "temente, a destra e a sinistra.\n\nderise, il a erv&ggìo, la perse"
+    }
+  ],
+  "p2_ch12": [
+    {
+      "token": "scón-eva",
+      "left": "scón",
+      "right": "eva",
+      "offset": 1082,
+      "reason": "unresolved"
+    },
+    {
+      "token": "g",
+      "left": "ia. Era il Prefetto di Polizia.",
+      "right": "gli trassero alfine in una gran",
+      "offset": 1217,
+      "reason": "lowercase_after_break",
+      "context": "ia. Era il Prefetto di Polizia.\n\ngli trassero alfine in una gran"
+    },
+    {
+      "token": "n",
+      "left": "ylva, conoscete questi arneait\"",
+      "right": "nterrogatorio, era rimasto ritt",
+      "offset": 8808,
+      "reason": "lowercase_after_break",
+      "context": "ylva, conoscete questi arneait\"\n\nnterrogatorio, era rimasto ritt"
+    },
+    {
+      "token": "p",
+      "left": " più tardi. Nessuna obbiezione\"",
+      "right": "passaporto più tardi. Nessuna a",
+      "offset": 12385,
+      "reason": "lowercase_after_break",
+      "context": " più tardi. Nessuna obbiezione\"\n\npassaporto più tardi. Nessuna a"
+    },
+    {
+      "token": "m",
+      "left": " iu una cia della Conciergerie!",
+      "right": "meno.\" Accettai. se: disse il s",
+      "offset": 16662,
+      "reason": "lowercase_after_break",
+      "context": " iu una cia della Conciergerie!\n\nmeno.\" Accettai. se: disse il s"
+    }
+  ],
+  "p2_ch13": [
+    {
+      "token": "Saxe-Coburg",
+      "left": "Saxe",
+      "right": "Coburg",
+      "offset": 6489,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "p;m",
+      "left": "p",
+      "right": "m",
+      "offset": 6566,
+      "reason": "missing_space",
+      "context": "nciava il nome di Tomaso Allsop;ma la Polizia era messa ormai, "
+    },
+    {
+      "token": "o;p",
+      "left": "o",
+      "right": "p",
+      "offset": 7012,
+      "reason": "missing_space",
+      "context": " era a letto, col capo fasciato;prova che si era, se non altro,"
+    },
+    {
+      "token": "l",
+      "left": "evo naacota Lama di Damasoo,...",
+      "right": "lama terribile I\n\nPare che sull",
+      "offset": 12560,
+      "reason": "lowercase_after_break",
+      "context": "evo naacota Lama di Damasoo,...\n\nlama terribile I\n\nPare che sull"
+    },
+    {
+      "token": "g",
+      "left": "e che mi conducessero a Mazas.!",
+      "right": "gera ripugnaiuBa, perchè il con",
+      "offset": 18159,
+      "reason": "lowercase_after_break",
+      "context": "e che mi conducessero a Mazas.!\n\ngera ripugnaiuBa, perchè il con"
+    }
+  ],
+  "p2_ch14": [
+    {
+      "token": "Hott",
+      "left": "tt",
+      "right": "ff",
+      "offset": 5495,
+      "reason": "f_ligature",
+      "context": "l Cancelliere, mi vidi metter Hott 'occhio una copia conforme pr",
+      "suggestion": "hoff"
+    },
+    {
+      "token": "e;i",
+      "left": "e",
+      "right": "i",
+      "offset": 619,
+      "reason": "missing_space",
+      "context": " segreta, in abito da borgliese;il quale mi annunciò che avrebb"
+    },
+    {
+      "token": "l",
+      "left": " colla frode e collo spergiuro.",
+      "right": "lo ero rinchiuso in una cella a",
+      "offset": 492,
+      "reason": "lowercase_after_break",
+      "context": " colla frode e collo spergiuro.\n\nlo ero rinchiuso in una cella a"
+    },
+    {
+      "token": "d",
+      "left": "ni, Aatorìtà in punta di piedi.",
+      "right": "do delle mie preoccupazioni tor",
+      "offset": 4924,
+      "reason": "lowercase_after_break",
+      "context": "ni, Aatorìtà in punta di piedi.\n\ndo delle mie preoccupazioni tor"
+    },
+    {
+      "token": "d",
+      "left": "dio dila giovinezza... dormivo.",
+      "right": "do tra il materiale della sul q",
+      "offset": 5346,
+      "reason": "lowercase_after_break",
+      "context": "dio dila giovinezza... dormivo.\n\ndo tra il materiale della sul q"
+    },
+    {
+      "token": "s",
+      "left": " hanno pienamente corroborate!\"",
+      "right": "s: mia nuova villeggiatura avev",
+      "offset": 7806,
+      "reason": "lowercase_after_break",
+      "context": " hanno pienamente corroborate!\"\n\ns: mia nuova villeggiatura avev"
+    },
+    {
+      "token": "g",
+      "left": "eney, l'amica di Felice Orsini.",
+      "right": "guerre le altre persone che mi ",
+      "offset": 16765,
+      "reason": "lowercase_after_break",
+      "context": "eney, l'amica di Felice Orsini.\n\nguerre le altre persone che mi "
+    },
+    {
+      "token": "g",
+      "left": "vr 'esso, nascondeva la faccia.",
+      "right": "guerre procedette con una celer",
+      "offset": 16957,
+      "reason": "lowercase_after_break",
+      "context": "vr 'esso, nascondeva la faccia.\n\nguerre procedette con una celer"
+    },
+    {
+      "token": "n",
+      "left": "era lasciata condurre a Parigi.",
+      "right": "na mossa disperata. Io avevo be",
+      "offset": 23059,
+      "reason": "lowercase_after_break",
+      "context": "era lasciata condurre a Parigi.\n\nna mossa disperata. Io avevo be"
+    },
+    {
+      "token": "l",
+      "left": " pareva m'inseguissero!.JXsECL.",
+      "right": "laE\n\n— E' questo l'uomo che ha ",
+      "offset": 27350,
+      "reason": "lowercase_after_break",
+      "context": " pareva m'inseguissero!.JXsECL.\n\nlaE\n\n— E' questo l'uomo che ha "
+    }
+  ],
+  "p2_ch15": [
+    {
+      "token": "e,c",
+      "left": "e",
+      "right": "c",
+      "offset": 5968,
+      "reason": "missing_space",
+      "context": ", essa aveva incominciato da me,che ero il più giovine, il suo "
+    },
+    {
+      "token": "e,c",
+      "left": "e",
+      "right": "c",
+      "offset": 6629,
+      "reason": "missing_space",
+      "context": ", essa aveva incominciato da me,che ero il più gioviale, il suo"
+    },
+    {
+      "token": "a;m",
+      "left": "a",
+      "right": "m",
+      "offset": 10451,
+      "reason": "missing_space",
+      "context": "ieme con sufficiente scaltrezza;ma fatica sprecata!...!... poch"
+    },
+    {
+      "token": "s",
+      "left": "la lutto quanto il mio passato.",
+      "right": "subito, finito, abbassò gli occ",
+      "offset": 1545,
+      "reason": "lowercase_after_break",
+      "context": "la lutto quanto il mio passato.\n\nsubito, finito, abbassò gli occ"
+    },
+    {
+      "token": "f",
+      "left": "i opportuno di farvi assumere.\"",
+      "right": "formale E eiò spiega perchè dai",
+      "offset": 4306,
+      "reason": "lowercase_after_break",
+      "context": "i opportuno di farvi assumere.\"\n\nformale E eiò spiega perchè dai"
+    }
+  ],
+  "p2_ch16": [
+    {
+      "token": "o:i",
+      "left": "o",
+      "right": "i",
+      "offset": 1704,
+      "reason": "missing_space",
+      "context": "ma debbo dirlo ad onor del vero:il guaio della mente di Felice "
+    },
+    {
+      "token": "o,i",
+      "left": "o",
+      "right": "i",
+      "offset": 7314,
+      "reason": "missing_space",
+      "context": " più d'uno. Facile, per esempio,il mostrarsi coraggiosi alla lu"
+    },
+    {
+      "token": "o,i",
+      "left": "o",
+      "right": "i",
+      "offset": 18512,
+      "reason": "missing_space",
+      "context": "più d'uno.\n\nFacile, pei- \"empio,il mostrarsi coragl{Ì0BÌ alla l"
+    },
+    {
+      "token": "a:g",
+      "left": "a",
+      "right": "g",
+      "offset": 20492,
+      "reason": "missing_space",
+      "context": "nure olezzanti, il cielo impara:ggiabile d'Italia; avrebbe cosp"
+    },
+    {
+      "token": "i",
+      "left": "ima altrimenti nobile e grande.",
+      "right": "in un campo diverso ed in diver",
+      "offset": 4206,
+      "reason": "lowercase_after_break",
+      "context": "ima altrimenti nobile e grande.\n\nin un campo diverso ed in diver"
+    },
+    {
+      "token": "m",
+      "left": "oncernessero in modo esclusivo.",
+      "right": "meno che essi non lo concerness",
+      "offset": 7031,
+      "reason": "lowercase_after_break",
+      "context": "oncernessero in modo esclusivo.\n\nmeno che essi non lo concerness"
+    },
+    {
+      "token": "l",
+      "left": "ratti di affascinante bellezza!",
+      "right": "la scarsa stima della forza e d",
+      "offset": 14791,
+      "reason": "lowercase_after_break",
+      "context": "ratti di affascinante bellezza!\n\nla scarsa stima della forza e d"
+    }
+  ],
+  "p2_ch17": [
+    {
+      "token": "meraA-iglia",
+      "left": "meraA",
+      "right": "iglia",
+      "offset": 5975,
+      "reason": "unresolved"
+    },
+    {
+      "token": "Est-Ange",
+      "left": "Est",
+      "right": "Ange",
+      "offset": 11651,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "e,a",
+      "left": "e",
+      "right": "a",
+      "offset": 1668,
+      "reason": "missing_space",
+      "context": "uno Stato to o di una religione,almeno sinché vivono, quali arc"
+    },
+    {
+      "token": "a;b",
+      "left": "a",
+      "right": "b",
+      "offset": 2688,
+      "reason": "missing_space",
+      "context": "non vollero piegarsi, non basta;bisogna esporle sanguinolenti a"
+    },
+    {
+      "token": "é",
+      "left": "sa li ha sepolti senza esequie.",
+      "right": "é\n\ne senza feretro, in buche fu",
+      "offset": 3007,
+      "reason": "lowercase_after_break",
+      "context": "sa li ha sepolti senza esequie.\n\né\n\ne senza feretro, in buche fu"
+    },
+    {
+      "token": "e",
+      "left": " noi non lo aveva neppur visto.",
+      "right": "e senza feretro, in buche fuori",
+      "offset": 9850,
+      "reason": "lowercase_after_break",
+      "context": " noi non lo aveva neppur visto.\n\ne senza feretro, in buche fuori"
+    },
+    {
+      "token": "d",
+      "left": " Lnigi Napoleone era diventato.",
+      "right": "dopo averlo cannoneggiato, il p",
+      "offset": 22360,
+      "reason": "lowercase_after_break",
+      "context": " Lnigi Napoleone era diventato.\n\ndopo averlo cannoneggiato, il p"
+    },
+    {
+      "token": "e",
+      "left": "io rimase sempre insoddisfatto.",
+      "right": "e senza feretro, in buche fuori",
+      "offset": 25253,
+      "reason": "lowercase_after_break",
+      "context": "io rimase sempre insoddisfatto.\n\ne senza feretro, in buche fuori"
+    },
+    {
+      "token": "l",
+      "left": " ad arbitrio di Sua Eccellenza.",
+      "right": "l'n esempio: Quando il Presiden",
+      "offset": 31083,
+      "reason": "lowercase_after_break",
+      "context": " ad arbitrio di Sua Eccellenza.\n\nl'n esempio: Quando il Presiden"
+    },
+    {
+      "token": "d",
+      "left": " Luigi Napoleone era diventato.",
+      "right": "dopo averlo cannoneggiato, il p",
+      "offset": 33825,
+      "reason": "lowercase_after_break",
+      "context": " Luigi Napoleone era diventato.\n\ndopo averlo cannoneggiato, il p"
+    },
+    {
+      "token": "n",
+      "left": "o reciprocamente nel suo cuore.",
+      "right": "n Pieri dondolava la testa e te",
+      "offset": 34434,
+      "reason": "lowercase_after_break",
+      "context": "o reciprocamente nel suo cuore.\n\nn Pieri dondolava la testa e te"
+    },
+    {
+      "token": "ì",
+      "left": "o la Sfua, non la mia condanna.",
+      "right": "ìE\n\nQuell 'imagine mi rimase ta",
+      "offset": 35503,
+      "reason": "lowercase_after_break",
+      "context": "o la Sfua, non la mia condanna.\n\nìE\n\nQuell 'imagine mi rimase ta"
+    }
+  ],
+  "p2_ch18": [
+    {
+      "token": "cappellano-dragone",
+      "left": "cappellano",
+      "right": "dragone",
+      "offset": 5955,
+      "reason": "unresolved"
+    },
+    {
+      "token": "cappellano-dragone",
+      "left": "cappellano",
+      "right": "dragone",
+      "offset": 7985,
+      "reason": "unresolved"
+    },
+    {
+      "token": "cappellano-dragone",
+      "left": "cappellano",
+      "right": "dragone",
+      "offset": 11480,
+      "reason": "unresolved"
+    },
+    {
+      "token": "Ht-buudante",
+      "left": "Ht",
+      "right": "buudante",
+      "offset": 28734,
+      "reason": "unresolved"
+    },
+    {
+      "token": "irasL-inasse",
+      "left": "irasL",
+      "right": "inasse",
+      "offset": 28925,
+      "reason": "unresolved"
+    },
+    {
+      "token": "capjicllano-dragone",
+      "left": "capjicllano",
+      "right": "dragone",
+      "offset": 31480,
+      "reason": "unresolved"
+    },
+    {
+      "token": "cappellano-dragone",
+      "left": "cappellano",
+      "right": "dragone",
+      "offset": 33500,
+      "reason": "unresolved"
+    },
+    {
+      "token": "*",
+      "left": "da",
+      "right": "qualche",
+      "offset": 28129,
+      "reason": "stray_symbol",
+      "context": "iva, ma si faceva precedere da * qualche sollievo.\n\nUn'altra ci"
+    },
+    {
+      "token": "e;t",
+      "left": "e",
+      "right": "t",
+      "offset": 2155,
+      "reason": "missing_space",
+      "context": "ragoni e ne conservava le tinte;traverso e forte, malgrado l'et"
+    },
+    {
+      "token": "f",
+      "left": " precedere da qualche sollievo.",
+      "right": "finestre, circostanza contribui",
+      "offset": 801,
+      "reason": "lowercase_after_break",
+      "context": " precedere da qualche sollievo.\n\nfinestre, circostanza contribui"
+    },
+    {
+      "token": "n",
+      "left": "ssava un'altra volta il Cristo.",
+      "right": "nera; essi avevano combattuto a",
+      "offset": 27410,
+      "reason": "lowercase_after_break",
+      "context": "ssava un'altra volta il Cristo.\n\nnera; essi avevano combattuto a"
+    },
+    {
+      "token": "d",
+      "left": "are, suicidandosi, la mia fine.",
+      "right": "della vita, avrebbe potuto rass",
+      "offset": 28477,
+      "reason": "lowercase_after_break",
+      "context": "are, suicidandosi, la mia fine.\n\ndella vita, avrebbe potuto rass"
+    },
+    {
+      "token": "i",
+      "left": "o esattamento dalla sua rovina.",
+      "right": "innesta diffidenza era in me im",
+      "offset": 34219,
+      "reason": "lowercase_after_break",
+      "context": "o esattamento dalla sua rovina.\n\ninnesta diffidenza era in me im"
+    }
+  ],
+  "p2_ch19": [
+    {
+      "token": "i;i",
+      "left": "i",
+      "right": "i",
+      "offset": 5546,
+      "reason": "missing_space",
+      "context": "ortatore spirituale dell'Orsini;il cappellano della Conciergeri"
+    },
+    {
+      "token": "o;m",
+      "left": "o",
+      "right": "m",
+      "offset": 5924,
+      "reason": "missing_space",
+      "context": "ulsa, mi offerse un bicchierino;ma ebbe il torto di osservare c"
+    },
+    {
+      "token": "a;m",
+      "left": "a",
+      "right": "m",
+      "offset": 7164,
+      "reason": "missing_space",
+      "context": " indossare una camicia scollata;mi scalzarono colle loro propri"
+    },
+    {
+      "token": "e;m",
+      "left": "e",
+      "right": "m",
+      "offset": 9668,
+      "reason": "missing_space",
+      "context": "de, intercettava la mia visuale;ma non tanto che non scorgessi "
+    },
+    {
+      "token": "i,e",
+      "left": "i",
+      "right": "e",
+      "offset": 18453,
+      "reason": "missing_space",
+      "context": "a!\"\n\nmani. Identici preparativi,eseguiti rapidamente, lasciaron"
+    },
+    {
+      "token": "e;m",
+      "left": "e",
+      "right": "m",
+      "offset": 20855,
+      "reason": "missing_space",
+      "context": "de, intercettava la mia visuale;ma non tanto che non scorgessi "
+    },
+    {
+      "token": "i",
+      "left": " nel profondo e di disseccarla.",
+      "right": "i\\Ientre mi avvolgevano il capo",
+      "offset": 8359,
+      "reason": "lowercase_after_break",
+      "context": " nel profondo e di disseccarla.\n\ni\\Ientre mi avvolgevano il capo"
+    },
+    {
+      "token": "s",
+      "left": "quanto ci è costata la Patria!\"",
+      "right": "s: azzurri, come fie avesse una",
+      "offset": 17121,
+      "reason": "lowercase_after_break",
+      "context": "quanto ci è costata la Patria!\"\n\ns: azzurri, come fie avesse una"
+    },
+    {
+      "token": "m",
+      "left": "h, eh!... ce no sarebbe voluto!",
+      "right": "martire risuonò nel silenzio se",
+      "offset": 17874,
+      "reason": "lowercase_after_break",
+      "context": "h, eh!... ce no sarebbe voluto!\n\nmartire risuonò nel silenzio se"
+    },
+    {
+      "token": "t",
+      "left": "orire, non sa essere delatore!\"",
+      "right": "ti di luce, si chiusero; ma il ",
+      "offset": 17990,
+      "reason": "lowercase_after_break",
+      "context": "orire, non sa essere delatore!\"\n\nti di luce, si chiusero; ma il "
+    },
+    {
+      "token": "m",
+      "left": "quanto ci è costata la Patria!\"",
+      "right": "mani. Identici preparativi,eseg",
+      "offset": 18428,
+      "reason": "lowercase_after_break",
+      "context": "quanto ci è costata la Patria!\"\n\nmani. Identici preparativi,eseg"
+    },
+    {
+      "token": "x",
+      "left": "e teste... il turpe canestro...",
+      "right": "x x x\n\nIl Conte di Rudio, sopra",
+      "offset": 24955,
+      "reason": "lowercase_after_break",
+      "context": "e teste... il turpe canestro...\n\nx x x\n\nIl Conte di Rudio, sopra"
+    }
+  ],
+  "p2_ch20": [
+    {
+      "token": "i;l",
+      "left": "i",
+      "right": "l",
+      "offset": 5552,
+      "reason": "missing_space",
+      "context": "giungevano assolutamente ignoti;la terza perchè, guardando in f"
+    },
+    {
+      "token": "l",
+      "left": "ituirvi quella dell'intelletto.",
+      "right": "lìatificata la grazia, il Presi",
+      "offset": 3340,
+      "reason": "lowercase_after_break",
+      "context": "ituirvi quella dell'intelletto.\n\nlìatificata la grazia, il Presi"
+    },
+    {
+      "token": "ì",
+      "left": "oi trascorsi, al Padre celeste.",
+      "right": "ìe\n\nzs\n\nil Cristo. Il quale, co",
+      "offset": 6866,
+      "reason": "lowercase_after_break",
+      "context": "oi trascorsi, al Padre celeste.\n\nìe\n\nzs\n\nil Cristo. Il quale, co"
+    },
+    {
+      "token": "b",
+      "left": "ebbo piangere, o debbo ridere?\"",
+      "right": "bino; non più avvolto nei lini ",
+      "offset": 10836,
+      "reason": "lowercase_after_break",
+      "context": "ebbo piangere, o debbo ridere?\"\n\nbino; non più avvolto nei lini "
+    },
+    {
+      "token": "c",
+      "left": "mia apparizione era svanita!...",
+      "right": "ce.-\"\n\nH\n\nMI\n\nuna parola! Penso",
+      "offset": 14611,
+      "reason": "lowercase_after_break",
+      "context": "mia apparizione era svanita!...\n\nce.-\"\n\nH\n\nMI\n\nuna parola! Penso"
+    },
+    {
+      "token": "d",
+      "left": "ria della sorte che\n\nai\n\n-MM> \"",
+      "right": "divertiva il piccino colla chia",
+      "offset": 18417,
+      "reason": "lowercase_after_break",
+      "context": "ria della sorte che\n\nai\n\n-MM> \"\n\ndivertiva il piccino colla chia"
+    }
+  ],
+  "p2_ch21": [
+    {
+      "token": "fl-ftfr",
+      "left": "fl",
+      "right": "ftfr",
+      "offset": 19355,
+      "reason": "unresolved"
+    },
+    {
+      "token": "galeotto-guardiano",
+      "left": "galeotto",
+      "right": "guardiano",
+      "offset": 20691,
+      "reason": "unresolved"
+    },
+    {
+      "token": "o;l",
+      "left": "o",
+      "right": "l",
+      "offset": 11536,
+      "reason": "missing_space",
+      "context": "ficargli la morte di mio marito;la quale era del resto già conf"
+    },
+    {
+      "token": "a",
+      "left": " un crocefisso ed una medaglia.",
+      "right": "aveva deposto sul mio petto e, ",
+      "offset": 8210,
+      "reason": "lowercase_after_break",
+      "context": " un crocefisso ed una medaglia.\n\naveva deposto sul mio petto e, "
+    },
+    {
+      "token": "s",
+      "left": "nfortato al tuo letto di morte.",
+      "right": "s: E che hai risposto all'ottim",
+      "offset": 12398,
+      "reason": "lowercase_after_break",
+      "context": "nfortato al tuo letto di morte.\n\ns: E che hai risposto all'ottim"
+    },
+    {
+      "token": "c",
+      "left": " Io lo sento, mio marito vive!\"",
+      "right": "cesi. Benché la sciagura fosse ",
+      "offset": 12729,
+      "reason": "lowercase_after_break",
+      "context": " Io lo sento, mio marito vive!\"\n\ncesi. Benché la sciagura fosse "
+    }
+  ],
+  "p2_ch22": [
+    {
+      "token": "galeotto-guardiano",
+      "left": "galeotto",
+      "right": "guardiano",
+      "offset": 4412,
+      "reason": "unresolved"
+    },
+    {
+      "token": "n",
+      "left": "ia saggezza, mi venne in aiuto.",
+      "right": "n penitenziario riceveva le sue",
+      "offset": 8710,
+      "reason": "lowercase_after_break",
+      "context": "ia saggezza, mi venne in aiuto.\n\nn penitenziario riceveva le sue"
+    },
+    {
+      "token": "t",
+      "left": "afferrare pei piedi ''Uno, due.",
+      "right": "tre \" Prima di lanciarlo, avrei",
+      "offset": 16895,
+      "reason": "lowercase_after_break",
+      "context": "afferrare pei piedi ''Uno, due.\n\ntre \" Prima di lanciarlo, avrei"
+    }
+  ],
+  "p2_ch23": [
+    {
+      "token": "capisi-iì",
+      "left": "capisi",
+      "right": "iì",
+      "offset": 2924,
+      "reason": "unresolved"
+    },
+    {
+      "token": "battello-pilota",
+      "left": "battello",
+      "right": "pilota",
+      "offset": 3777,
+      "reason": "unresolved"
+    },
+    {
+      "token": "battello-pilota",
+      "left": "battello",
+      "right": "pilota",
+      "offset": 9792,
+      "reason": "unresolved"
+    },
+    {
+      "token": "o:U",
+      "left": "o",
+      "right": "U",
+      "offset": 2272,
+      "reason": "missing_space",
+      "context": "ccorrendo, non tornerei daccapo:Un cane francese mi ha sedotta "
+    },
+    {
+      "token": "c",
+      "left": "che non tra i felici del mondo.",
+      "right": "ci. In compagnia, peggio che an",
+      "offset": 3078,
+      "reason": "lowercase_after_break",
+      "context": "che non tra i felici del mondo.\n\nci. In compagnia, peggio che an"
+    },
+    {
+      "token": "n",
+      "left": "e affievolite dalla lontananza.",
+      "right": "n mio piano si andava svolgendo",
+      "offset": 13641,
+      "reason": "lowercase_after_break",
+      "context": "e affievolite dalla lontananza.\n\nn mio piano si andava svolgendo"
+    }
+  ],
+  "p2_ch24": [
+    {
+      "token": "e",
+      "left": "rebbe grazia. Ed ora ascolta...",
+      "right": "ex ufficiale della marina franc",
+      "offset": 7085,
+      "reason": "lowercase_after_break",
+      "context": "rebbe grazia. Ed ora ascolta...\n\nex ufficiale della marina franc"
+    }
+  ],
+  "p2_ch25": [
+    {
+      "token": "franco-piemontese",
+      "left": "franco",
+      "right": "piemontese",
+      "offset": 5826,
+      "reason": "unresolved"
+    },
+    {
+      "token": "IIA-II",
+      "left": "IIA",
+      "right": "II",
+      "offset": 7817,
+      "reason": "ner_candidate"
+    },
+    {
+      "token": "e;m",
+      "left": "e",
+      "right": "m",
+      "offset": 6734,
+      "reason": "missing_space",
+      "context": "li aveva contribuito alle spese;ma il carico che portava nella "
+    },
+    {
+      "token": "e,a",
+      "left": "e",
+      "right": "a",
+      "offset": 8199,
+      "reason": "missing_space",
+      "context": "mbisse appena. Diedi una voce e,alzai, alto nell'aria il pugno,"
+    },
+    {
+      "token": "o;l",
+      "left": "o",
+      "right": "l",
+      "offset": 12156,
+      "reason": "missing_space",
+      "context": "lli avevano fatto il dover loro;la cannoniera, grave d'onda, av"
+    },
+    {
+      "token": "e:f",
+      "left": "e",
+      "right": "f",
+      "offset": 12562,
+      "reason": "missing_space",
+      "context": "Nord. Io gli grido nervosamente:fai?\" fai\"\"\n\n— Sta zitto! L'Abe"
+    },
+    {
+      "token": "o",
+      "left": "maestra e ritrova la tua Bomal\"",
+      "right": "opportunismo, delle codarde ter",
+      "offset": 2024,
+      "reason": "lowercase_after_break",
+      "context": "maestra e ritrova la tua Bomal\"\n\nopportunismo, delle codarde ter"
+    },
+    {
+      "token": "o",
+      "left": " esigenze di ima Àionarchia!...",
+      "right": "opportunismo, quanto in tergive",
+      "offset": 2688,
+      "reason": "lowercase_after_break",
+      "context": " esigenze di ima Àionarchia!...\n\nopportunismo, quanto in tergive"
+    },
+    {
+      "token": "d",
+      "left": "ce, un pezzo da cinque franchi.",
+      "right": "d'innanzi ai piatti di stagno, ",
+      "offset": 8307,
+      "reason": "lowercase_after_break",
+      "context": "ce, un pezzo da cinque franchi.\n\nd'innanzi ai piatti di stagno, "
+    },
+    {
+      "token": "i",
+      "left": "ovano al fianco, a lama alzata.",
+      "right": "ila la minaccia fu ima precauzi",
+      "offset": 9241,
+      "reason": "lowercase_after_break",
+      "context": "ovano al fianco, a lama alzata.\n\nila la minaccia fu ima precauzi"
+    },
+    {
+      "token": "c",
+      "left": "mascelle e preme,\n\nj& ZZt j&!&.",
+      "right": "colle braccia tese il vuoto, qu",
+      "offset": 11935,
+      "reason": "lowercase_after_break",
+      "context": "mascelle e preme,\n\nj& ZZt j&!&.\n\ncolle braccia tese il vuoto, qu"
+    }
+  ],
+  "p2_ch26": [
+    {
+      "token": "o;m",
+      "left": "o",
+      "right": "m",
+      "offset": 1257,
+      "reason": "missing_space",
+      "context": " il nostro cappello di palmetto;ma la tempesta aveva lasciato p"
+    },
+    {
+      "token": "i;q",
+      "left": "i",
+      "right": "q",
+      "offset": 4866,
+      "reason": "missing_space",
+      "context": "tisi a rimuovere cesti e barili;quali a distendere reti. Altri,"
+    },
+    {
+      "token": "i",
+      "left": "renderle pressochè inservibili.",
+      "right": "in parte guaste le nostre provv",
+      "offset": 3657,
+      "reason": "lowercase_after_break",
+      "context": "renderle pressochè inservibili.\n\nin parte guaste le nostre provv"
+    },
+    {
+      "token": "k",
+      "left": "ngati, sanguinanti, sfiniti!...",
+      "right": "ktfMH^a^H\"\"\"",
+      "offset": 10366,
+      "reason": "lowercase_after_break",
+      "context": "ngati, sanguinanti, sfiniti!...\n\nktfMH^a^H\"\"\""
+    }
+  ],
+  "p2_ch27": [
+    {
+      "token": "é:s",
+      "left": "é",
+      "right": "s",
+      "offset": 3079,
+      "reason": "missing_space",
+      "context": "la scorre via, scorre... finché:s229ffi:\n\nentra nell'acque torb"
+    },
+    {
+      "token": "a,a",
+      "left": "a",
+      "right": "a",
+      "offset": 12434,
+      "reason": "missing_space",
+      "context": "'italiano con dolcezza insolita,a bocca straniera ed era più ch"
+    },
+    {
+      "token": "a,a",
+      "left": "a",
+      "right": "a",
+      "offset": 29212,
+      "reason": "missing_space",
+      "context": "'italiano con dolcezza insolita,a bocca straniera ed era più ch"
+    },
+    {
+      "token": "e",
+      "left": "re, senza pericolo, il fiume t\"",
+      "right": "entra con torbide, giallognole ",
+      "offset": 3627,
+      "reason": "lowercase_after_break",
+      "context": "re, senza pericolo, il fiume t\"\n\nentra con torbide, giallognole "
+    },
+    {
+      "token": "v",
+      "left": "rme... il capitano deirAbeille.",
+      "right": "vento. Parlava l'italiano con d",
+      "offset": 12388,
+      "reason": "lowercase_after_break",
+      "context": "rme... il capitano deirAbeille.\n\nvento. Parlava l'italiano con d"
+    },
+    {
+      "token": "v",
+      "left": "ceano li avesse.se inghiottiti!",
+      "right": "vento. Parlava l'italiano con d",
+      "offset": 18402,
+      "reason": "lowercase_after_break",
+      "context": "ceano li avesse.se inghiottiti!\n\nvento. Parlava l'italiano con d"
+    },
+    {
+      "token": "e",
+      "left": "la al cospetto del Governatore.",
+      "right": "entra nell'acque torbide, giall",
+      "offset": 22063,
+      "reason": "lowercase_after_break",
+      "context": "la al cospetto del Governatore.\n\nentra nell'acque torbide, giall"
+    }
+  ],
+  "p2_ch28": [
+    {
+      "token": "i",
+      "left": "mia esistenza; ma anche perchè.",
+      "right": "in tempo tanto breve, mi seppe ",
+      "offset": 1542,
+      "reason": "lowercase_after_break",
+      "context": "mia esistenza; ma anche perchè.\n\nin tempo tanto breve, mi seppe "
+    },
+    {
+      "token": "c",
+      "left": "vanotto, entrato rumorosamente.",
+      "right": "corse al mio tavolino, gridando",
+      "offset": 7480,
+      "reason": "lowercase_after_break",
+      "context": "vanotto, entrato rumorosamente.\n\ncorse al mio tavolino, gridando"
+    },
+    {
+      "token": "r",
+      "left": "ver denunciato i tuoi complici.",
+      "right": "rifuggfule Sai 'aumitìllere tro",
+      "offset": 8825,
+      "reason": "lowercase_after_break",
+      "context": "ver denunciato i tuoi complici.\n\nrifuggfule Sai 'aumitìllere tro"
+    },
+    {
+      "token": "ì",
+      "left": "dolarmi e mandarmi alla rovina.",
+      "right": "ìe mi si permetta di passare pe",
+      "offset": 15242,
+      "reason": "lowercase_after_break",
+      "context": "dolarmi e mandarmi alla rovina.\n\nìe mi si permetta di passare pe"
+    },
+    {
+      "token": "e",
+      "left": " del cuore, un altare per te! \"",
+      "right": "e poco importa. Ma sempre balen",
+      "offset": 17353,
+      "reason": "lowercase_after_break",
+      "context": " del cuore, un altare per te! \"\n\ne poco importa. Ma sempre balen"
+    }
+  ],
+  "p2_ch29": [
+    {
+      "token": "*",
+      "left": "\"delle",
+      "right": "delle",
+      "offset": 7293,
+      "reason": "stray_symbol",
+      "context": "Così cadde la storiella \"delle * delle porte spalancate\".\n\nIl s"
+    },
+    {
+      "token": "ì",
+      "left": "nò mai persona non compromessa.",
+      "right": "ìe il barone Egassy oriundo dei",
+      "offset": 8524,
+      "reason": "lowercase_after_break",
+      "context": "nò mai persona non compromessa.\n\nìe il barone Egassy oriundo dei"
+    },
+    {
+      "token": "t",
+      "left": " e muti e ciechi di Torocfalda.",
+      "right": "te alla questione, ben più vita",
+      "offset": 10585,
+      "reason": "lowercase_after_break",
+      "context": " e muti e ciechi di Torocfalda.\n\nte alla questione, ben più vita"
+    },
+    {
+      "token": "é",
+      "left": "ie proprie dita, nell'eternità!",
+      "right": "é\n\nIl \"Reasoner'', organo di qu",
+      "offset": 13790,
+      "reason": "lowercase_after_break",
+      "context": "ie proprie dita, nell'eternità!\n\né\n\nIl \"Reasoner'', organo di qu"
+    }
+  ],
+  "p2_ch30": [
+    {
+      "token": "*",
+      "left": "\"Mi",
+      "right": "Mi",
+      "offset": 15957,
+      "reason": "stray_symbol",
+      "context": "cchi e, con voce sommessa: \"Mi * Mi permetta, non come sacerdot"
+    },
+    {
+      "token": "o:S",
+      "left": "o",
+      "right": "S",
+      "offset": 12081,
+      "reason": "missing_space",
+      "context": " una creatura innocente!\n\nEd io:Se mio figlio è innocente, perc"
+    },
+    {
+      "token": "e,e",
+      "left": "e",
+      "right": "e",
+      "offset": 13702,
+      "reason": "missing_space",
+      "context": "le fiabe create dall'esuberante,e viziata fantasia di un bimbo."
+    },
+    {
+      "token": "i;l",
+      "left": "i",
+      "right": "l",
+      "offset": 17505,
+      "reason": "missing_space",
+      "context": "cevo:\n\n\"O tosto o' tardi, rotti;li inciampi, il bene trionferà "
+    },
+    {
+      "token": "i",
+      "left": "rizia assottigliava la mercede.",
+      "right": "i'atto in simili momenti, il pa",
+      "offset": 688,
+      "reason": "lowercase_after_break",
+      "context": "rizia assottigliava la mercede.\n\ni'atto in simili momenti, il pa"
+    },
+    {
+      "token": "d",
+      "left": ", in che cosa potessi servirlo.",
+      "right": "dal I miei parrocchiani sono tu",
+      "offset": 2863,
+      "reason": "lowercase_after_break",
+      "context": ", in che cosa potessi servirlo.\n\ndal I miei parrocchiani sono tu"
+    },
+    {
+      "token": "t",
+      "left": "a costo di riuscire importuno.\"",
+      "right": "tutti i quadrupedi a cui, con l",
+      "offset": 3589,
+      "reason": "lowercase_after_break",
+      "context": "a costo di riuscire importuno.\"\n\ntutti i quadrupedi a cui, con l"
+    },
+    {
+      "token": "s",
+      "left": "è l'unica, vera gloria nostra!\"",
+      "right": "suo visino bianco come il guanc",
+      "offset": 17779,
+      "reason": "lowercase_after_break",
+      "context": "è l'unica, vera gloria nostra!\"\n\nsuo visino bianco come il guanc"
+    }
+  ],
+  "p2_ch31": [
+    {
+      "token": "Plon-plon",
+      "left": "Plon",
+      "right": "plon",
+      "offset": 1531,
+      "reason": "unresolved"
+    },
+    {
+      "token": "Plon-plon",
+      "left": "Plon",
+      "right": "plon",
+      "offset": 2078,
+      "reason": "unresolved"
+    },
+    {
+      "token": "p",
+      "left": "li avvenimenti, temporeggiando.",
+      "right": "parte soverchiamente annunciava",
+      "offset": 3309,
+      "reason": "lowercase_after_break",
+      "context": "li avvenimenti, temporeggiando.\n\nparte soverchiamente annunciava"
+    },
+    {
+      "token": "p",
+      "left": "Be, di dettar patti, gli porge.",
+      "right": "perchè se Novembre cinga il cap",
+      "offset": 10873,
+      "reason": "lowercase_after_break",
+      "context": "Be, di dettar patti, gli porge.\n\nperchè se Novembre cinga il cap"
+    },
+    {
+      "token": "i",
+      "left": "tessa e i sereni convincimenti.",
+      "right": "ionari della redenzione la via ",
+      "offset": 14878,
+      "reason": "lowercase_after_break",
+      "context": "tessa e i sereni convincimenti.\n\nionari della redenzione la via "
+    },
+    {
+      "token": "e",
+      "left": "ta, la parte del moderno Caino.",
+      "right": "eanguinarla nel petto patriotti",
+      "offset": 21080,
+      "reason": "lowercase_after_break",
+      "context": "ta, la parte del moderno Caino.\n\neanguinarla nel petto patriotti"
+    },
+    {
+      "token": "n",
+      "left": " di Marsala: \"0 Roma, o morte!\"",
+      "right": "ne morte, non il si grida a Par",
+      "offset": 22509,
+      "reason": "lowercase_after_break",
+      "context": " di Marsala: \"0 Roma, o morte!\"\n\nne morte, non il si grida a Par"
+    },
+    {
+      "token": "p",
+      "left": "libertà e di fare le sue scuse.",
+      "right": "papaveri Monarchia Ministero es",
+      "offset": 26035,
+      "reason": "lowercase_after_break",
+      "context": "libertà e di fare le sue scuse.\n\npapaveri Monarchia Ministero es"
+    },
+    {
+      "token": "s",
+      "left": "onfacevano al piccolo Piemonte.",
+      "right": "sottostata e sottostia a tanti ",
+      "offset": 26670,
+      "reason": "lowercase_after_break",
+      "context": "onfacevano al piccolo Piemonte.\n\nsottostata e sottostia a tanti "
+    },
+    {
+      "token": "p",
+      "left": "i ed inermi e d'essere codarda!",
+      "right": "parte soverchiamente nelle arti",
+      "offset": 27594,
+      "reason": "lowercase_after_break",
+      "context": "i ed inermi e d'essere codarda!\n\nparte soverchiamente nelle arti"
+    }
+  ],
+  "p2_ch32": [
+    {
+      "token": "fl-fr",
+      "left": "fl",
+      "right": "fr",
+      "offset": 7174,
+      "reason": "unresolved"
+    },
+    {
+      "token": "a;m",
+      "left": "a",
+      "right": "m",
+      "offset": 1281,
+      "reason": "missing_space",
+      "context": "ratta al giogo nefasto del Papa;ma la Monarchia altro non fece "
+    },
+    {
+      "token": "a:a",
+      "left": "a",
+      "right": "a",
+      "offset": 4284,
+      "reason": "missing_space",
+      "context": "ntimento patriottico; una più a:abietta rinuncia ai diritti ed "
+    },
+    {
+      "token": "i;p",
+      "left": "i",
+      "right": "p",
+      "offset": 13474,
+      "reason": "missing_space",
+      "context": "archia commettesse mille errori;poiché, colma la misura, essa p"
+    },
+    {
+      "token": "e",
+      "left": "overi imposti all'anime virili.",
+      "right": "e contemplare, immobili, lo str",
+      "offset": 3682,
+      "reason": "lowercase_after_break",
+      "context": "overi imposti all'anime virili.\n\ne contemplare, immobili, lo str"
+    },
+    {
+      "token": "l",
+      "left": "no lungo, benedetto e glorioso.",
+      "right": "litti; nella politica estera le",
+      "offset": 14273,
+      "reason": "lowercase_after_break",
+      "context": "no lungo, benedetto e glorioso.\n\nlitti; nella politica estera le"
+    },
+    {
+      "token": "e",
+      "left": "onosa \"cessione\" della Venezia!",
+      "right": "e contemplare, immobili, lo str",
+      "offset": 24751,
+      "reason": "lowercase_after_break",
+      "context": "onosa \"cessione\" della Venezia!\n\ne contemplare, immobili, lo str"
+    }
+  ],
+  "p2_ch33": [
+    {
+      "token": "ii-atricida",
+      "left": "ii",
+      "right": "atricida",
+      "offset": 19894,
+      "reason": "unresolved"
+    },
+    {
+      "token": "r",
+      "left": "n c'è posto sulla rosaria nave.",
+      "right": "rafforzare\n\nFINE Mi\n\njK\n\nSE Ho ",
+      "offset": 2982,
+      "reason": "lowercase_after_break",
+      "context": "n c'è posto sulla rosaria nave.\n\nrafforzare\n\nFINE Mi\n\njK\n\nSE Ho "
+    },
+    {
+      "token": "u",
+      "left": "ere, cause buone da difendere!\"",
+      "right": "una lettera di Giuseppe Mazzini",
+      "offset": 5064,
+      "reason": "lowercase_after_break",
+      "context": "ere, cause buone da difendere!\"\n\nuna lettera di Giuseppe Mazzini"
+    },
+    {
+      "token": "l",
+      "left": "dì quella che abbiamo trovato.\"",
+      "right": "lo volevo dirgli: \"Lasciarla qu",
+      "offset": 6126,
+      "reason": "lowercase_after_break",
+      "context": "dì quella che abbiamo trovato.\"\n\nlo volevo dirgli: \"Lasciarla qu"
+    },
+    {
+      "token": "m",
+      "left": "a, non le riesce meno molesta.\"",
+      "right": "morto, il pensiero umano non si",
+      "offset": 17446,
+      "reason": "lowercase_after_break",
+      "context": "a, non le riesce meno molesta.\"\n\nmorto, il pensiero umano non si"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "prefazione": [
+    {
+      "find": "mirasse ad afferrare * dei tempi,\"",
+      "replace": "mirasse ad afferrare \"l'anima dei tempi,\"",
+      "reason": "stray_symbol",
+      "source": "manual"
+    }
+  ]
+}

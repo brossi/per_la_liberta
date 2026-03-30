@@ -1,5 +1,6 @@
 """Step 3: Clean OCR artifacts and optionally use LLM for Italian text correction."""
 
+import difflib
 import json
 import logging
 import os
@@ -246,6 +247,9 @@ def is_noise_line(line: str) -> bool:
     # Lines that are OCR page separator patterns
     if re.match(r"^[-\s\dEeISsBa3Ì5:;\(\)\^»«fr]+$", stripped):
         return True
+    # Fascicle/dispensa markers: "Disp. I", "Diip. 3", etc.
+    if re.match(r"^Di[si]p\.?\s+[IVX0-9]+$", stripped, re.IGNORECASE):
+        return True
     return False
 
 
@@ -280,6 +284,57 @@ def apply_pre_filters(text: str) -> str:
     for pattern, replacement in SUBSTITUTION_RULES:
         text = _case_preserving_sub(pattern, replacement, text)
     return text
+
+
+# Punctuation normalization rules: (compiled_regex, replacement)
+# Order matters — garbled quote patterns before doubled punctuation.
+_PUNCT_RULES: list[tuple[re.Pattern, str]] = [
+    # Spaced single-quote pairs → double quote (OCR misread of curly quotes).
+    # Closing ' ' (preceded by word/punct on same line): consume leading space
+    (re.compile(r"(?<=[\w.,;:!?]) +'\s+'"), '"'),
+    # Opening ' ' (followed by a word on same line): consume trailing space
+    (re.compile(r"'\s+' +(?=\w)"), '"'),
+    # Remaining ' ' (no clear context)
+    (re.compile(r"'\s+'"), '"'),
+    # Caret or asterisk + quote combos → double quote
+    (re.compile(r"[\^*]\s*'"), '"'),
+    # Asterisk pairs → double quote
+    (re.compile(r"\*\s*\*"), '"'),
+    # Runs of 2+ same punctuation → single (with optional whitespace
+    # between, since the spacing fix later may not have run yet)
+    (re.compile(r"(?:;\s*){2,};?"), ";"),
+    (re.compile(r"(?:,\s*){2,},?"), ","),
+    (re.compile(r"(?::\s*){2,}:?"), ":"),
+    # Stray guillemets → double quote (not used in the 1913 original)
+    (re.compile(r"[«»]"), '"'),
+    # Guillemet OCR misreads (angle brackets)
+    (re.compile(r"<<"), '"'),
+    (re.compile(r">>"), '"'),
+    # Mid-word comma → apostrophe (thin apostrophe glyph misread as comma)
+    (re.compile(r"(?<=[a-zA-ZÀ-ÿ]),(?=[a-zA-ZÀ-ÿ])"), "'"),
+    # Mid-word backtick → apostrophe
+    (re.compile(r"(?<=[a-zA-ZÀ-ÿ])`(?=[a-zA-ZÀ-ÿ])"), "'"),
+    # Double/triple hyphens → em-dash
+    (re.compile(r"-{2,}"), "—"),
+    # Stray caret between words — OCR noise from Bodoni decorative elements
+    (re.compile(r"(?<=\w)\s+\^\s+(?=\w)"), " "),
+]
+
+
+def normalize_punctuation(text: str) -> tuple[str, int]:
+    """Normalize OCR-garbled punctuation marks.
+
+    The 1913 book uses typographic double quotation marks and em-dashes for
+    dialogue. OCR witnesses frequently misread these as spaced single-quote
+    pairs, doubled punctuation, or caret/asterisk noise.
+
+    Returns (normalized_text, total_replacements).
+    """
+    total = 0
+    for pattern, replacement in _PUNCT_RULES:
+        text, n = pattern.subn(replacement, text)
+        total += n
+    return text, total
 
 
 def apply_dictionary_correction(text: str) -> str:
@@ -379,11 +434,12 @@ def apply_dictionary_correction(text: str) -> str:
     return "\n".join(result_lines)
 
 
-def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[dict]]:
+def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[dict], int]:
     """Apply OCR cleanup: noise removal, pre-filters, dehyphenation, dictionary correction.
 
-    Returns (cleaned_text, dehyphen_flags) where dehyphen_flags lists tokens
-    that contained hyphens but could not be resolved by dictionary lookup.
+    Returns (cleaned_text, review_flags, punct_fixes) where review_flags
+    lists tokens needing LLM review (unresolved hyphens, stray symbols)
+    and punct_fixes is the number of punctuation normalizations applied.
     """
     # Remove noise lines
     lines = text.split("\n")
@@ -396,10 +452,13 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
     # Apply high-confidence regex pre-filters (più garbles, 5AN, etc.)
     text = apply_pre_filters(text)
 
+    # Normalize garbled punctuation (spaced quote pairs, doubled ;; ,, ::, etc.)
+    text, punct_fixes = normalize_punctuation(text)
+
     # Dehyphenate broken words BEFORE dictionary correction —
     # otherwise spaCy splits "assicuri-azioni" into fragments and
     # symspellpy may "correct" each half to the wrong word.
-    text, dehyphen_flags = dehyphenate_text(text, word_set)
+    text, review_flags = dehyphenate_text(text, word_set)
 
     # Apply dictionary-based correction via symspellpy (NER-aware)
     text = apply_dictionary_correction(text)
@@ -416,7 +475,93 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
     # Collapse multiple blank lines
     text = re.sub(r"\n{3,}", "\n\n", text)
 
-    return text.strip(), dehyphen_flags
+    # Flag stray OCR noise symbols between words (e.g. * ^ replacing lost text)
+    # for LLM review — these can't be fixed by regex since the original text is unknown.
+    _STRAY_SYMBOL_RE = re.compile(r"(?<=\w) ([*^]) (?=\w)")
+    for m in _STRAY_SYMBOL_RE.finditer(text):
+        ctx_start = max(0, m.start() - 30)
+        ctx_end = min(len(text), m.end() + 30)
+        review_flags.append({
+            "token": m.group(1),
+            "left": text[ctx_start:m.start()].split()[-1] if text[ctx_start:m.start()].split() else "",
+            "right": text[m.end():ctx_end].split()[0] if text[m.end():ctx_end].split() else "",
+            "offset": m.start(),
+            "reason": "stray_symbol",
+            "context": text[ctx_start:ctx_end],
+        })
+
+    # Flag probable f-ligature misreads: words not in dictionary that become
+    # valid with fi/fl/ff ligature correction (e.g. "atterrandolo" → "afferrandolo").
+    _FLIG_SUBS = [
+        ("u", "fi"), ("n", "fi"), ("ri", "fi"),
+        ("d", "fl"), ("tl", "fl"),
+        ("tf", "ff"), ("tt", "ff"),
+    ]
+    _WORD_RE = re.compile(r"\b([a-zA-ZÀ-ÿ]{4,})\b")
+    if word_set is None:
+        word_set = _get_word_set()
+    seen_flig: set[str] = set()
+    for m in _WORD_RE.finditer(text):
+        w = m.group(1)
+        lower = w.lower()
+        if lower in seen_flig or _in_word_set(lower, word_set):
+            continue
+        seen_flig.add(lower)
+        for ocr_form, correct_form in _FLIG_SUBS:
+            pos = 0
+            found = False
+            while not found:
+                idx = lower.find(ocr_form, pos)
+                if idx == -1:
+                    break
+                candidate = lower[:idx] + correct_form + lower[idx + len(ocr_form):]
+                if _in_word_set(candidate, word_set):
+                    ctx_start = max(0, m.start() - 30)
+                    ctx_end = min(len(text), m.end() + 30)
+                    review_flags.append({
+                        "token": w,
+                        "left": ocr_form,
+                        "right": correct_form,
+                        "offset": m.start(),
+                        "reason": "f_ligature",
+                        "context": text[ctx_start:ctx_end],
+                        "suggestion": candidate,
+                    })
+                    found = True
+                pos = idx + 1
+
+    # Flag missing space after punctuation (e.g. "Trattati,ogni") — likely
+    # OCR-collapsed spacing or apostrophe ambiguity. Too risky to auto-fix
+    # since some may be legitimate elisions or abbreviations.
+    _MISSING_SPACE_RE = re.compile(r"[a-zA-ZÀ-ÿ]([,;:])([a-zA-ZÀ-ÿ])")
+    for m in _MISSING_SPACE_RE.finditer(text):
+        ctx_start = max(0, m.start() - 30)
+        ctx_end = min(len(text), m.end() + 30)
+        review_flags.append({
+            "token": m.group(0),
+            "left": m.group(0)[0],
+            "right": m.group(2),
+            "offset": m.start(),
+            "reason": "missing_space",
+            "context": text[ctx_start:ctx_end],
+        })
+
+    # Flag paragraph-initial lowercase — unlikely to be intentional in this text,
+    # typically a broken sentence at a page boundary or OCR noise.
+    _PARA_LOWER_RE = re.compile(r"[.!?\"]\n\n([a-zà-ÿ])")
+    for m in _PARA_LOWER_RE.finditer(text):
+        ctx_start = max(0, m.start() - 30)
+        ctx_end = min(len(text), m.end() + 30)
+        review_flags.append({
+            "token": m.group(1),
+            "left": text[ctx_start:m.start() + 1],
+            "right": text[m.start(1):ctx_end],
+            "offset": m.start(1),
+            "reason": "lowercase_after_break",
+            "context": text[ctx_start:ctx_end],
+        })
+
+    return text.strip(), review_flags, punct_fixes
 
 
 def llm_correct_italian(
@@ -480,6 +625,96 @@ def llm_correct_italian(
     return response.content[0].text
 
 
+def apply_corrections(
+    text: str,
+    chapter_id: str,
+    corrections: dict[str, list[dict]],
+    review_flags: list[dict],
+) -> tuple[str, list[dict], int]:
+    """Apply saved corrections to cleaned text and suppress resolved flags.
+
+    Returns (corrected_text, remaining_flags, applied_count).
+    """
+    chapter_corrections = corrections.get(chapter_id, [])
+    if not chapter_corrections:
+        return text, review_flags, 0
+
+    applied = 0
+    suppressed_tokens: set[str] = set()
+
+    for entry in chapter_corrections:
+        find = entry["find"]
+        replace = entry["replace"]
+
+        if find not in text:
+            continue
+
+        if replace == ":override":
+            # Suppress the flag but leave text unchanged
+            suppressed_tokens.add(find)
+            applied += 1
+        else:
+            text = text.replace(find, replace, 1)
+            suppressed_tokens.add(find)
+            applied += 1
+
+    # Remove flags whose token or context matches a correction
+    if suppressed_tokens:
+        remaining = []
+        for flag in review_flags:
+            token = flag.get("token", "")
+            context = flag.get("context", "")
+            if any(t in token or t in context for t in suppressed_tokens):
+                continue
+            remaining.append(flag)
+        review_flags = remaining
+
+    return text, review_flags, applied
+
+
+def extract_corrections_from_diff(
+    original: str,
+    corrected: str,
+    chapter_id: str,
+    context_chars: int = 40,
+) -> list[dict]:
+    """Diff original and LLM-corrected text to extract individual corrections.
+
+    Each correction captures enough surrounding context to be unique.
+    Returns a list of correction entries for corrections.json.
+    """
+    sm = difflib.SequenceMatcher(None, original, corrected, autojunk=False)
+    corrections = []
+
+    for tag, i1, i2, j1, j2 in sm.get_opcodes():
+        if tag == "equal":
+            continue
+
+        orig_snippet = original[i1:i2]
+        new_snippet = corrected[j1:j2]
+
+        # Skip whitespace-only changes
+        if orig_snippet.strip() == new_snippet.strip():
+            continue
+
+        # Build find string with enough context to be unique
+        ctx_start = max(0, i1 - context_chars)
+        ctx_end = min(len(original), i2 + context_chars)
+        find_with_ctx = original[ctx_start:ctx_end]
+
+        # Build corresponding replacement (same context, different core)
+        replace_with_ctx = original[ctx_start:i1] + new_snippet + original[i2:ctx_end]
+
+        corrections.append({
+            "find": find_with_ctx,
+            "replace": replace_with_ctx,
+            "reason": "llm_correction",
+            "source": "llm",
+        })
+
+    return corrections
+
+
 def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: str | None = None) -> None:
     """Clean reconciled text and produce final Italian markdown."""
     chapters_path = data_dir / "reconciled_chapters.json"
@@ -491,6 +726,14 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
     if chapter_pages_path.exists():
         chapter_pages = json.loads(chapter_pages_path.read_text(encoding="utf-8"))
         print(f"  Page provenance loaded for {len(chapter_pages)} chapters")
+
+    # Load durable corrections file (persists LLM fixes and manual overrides)
+    corrections_path = data_dir / "corrections.json"
+    corrections: dict[str, list[dict]] = {}
+    if corrections_path.exists():
+        corrections = json.loads(corrections_path.read_text(encoding="utf-8"))
+        total_entries = sum(len(v) for v in corrections.values())
+        print(f"  Corrections loaded: {total_entries} entries from {corrections_path.name}")
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -530,14 +773,22 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
     total = len(chapters)
     all_flags: dict[str, list[dict]] = {}
     dehyphen_fixed = 0
-    dehyphen_flagged = 0
+    review_flagged = 0
+    total_punct_fixes = 0
+    total_corrections_applied = 0
+    new_corrections: dict[str, list[dict]] = {}
 
     for i, ch in enumerate(chapters):
-        text, flags = clean_text(ch["text"], word_set)
+        text, flags, punct_fixes = clean_text(ch["text"], word_set)
+        total_punct_fixes += punct_fixes
+
+        # Apply durable corrections (LLM fixes from prior runs + manual overrides)
+        text, flags, n_applied = apply_corrections(text, ch["id"], corrections, flags)
+        total_corrections_applied += n_applied
 
         if flags:
             all_flags[ch["id"]] = flags
-            dehyphen_flagged += len(flags)
+            review_flagged += len(flags)
 
         if use_llm:
             bar_width = 30
@@ -550,7 +801,14 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
                 if flags:
                     from adjudicate import zingarelli_context_for_flags
                     zingarelli_ctx = zingarelli_context_for_flags(flags)
+                pre_llm_text = text
                 text = llm_correct_italian(text, ch["title"], api_key, zingarelli_ctx)
+                # Extract individual corrections from the LLM diff
+                ch_corrections = extract_corrections_from_diff(
+                    pre_llm_text, text, ch["id"]
+                )
+                if ch_corrections:
+                    new_corrections[ch["id"]] = ch_corrections
                 time.sleep(1)  # Rate limiting
             except Exception as e:
                 print(f"\n    LLM error on {ch['id']}, using regex-cleaned text: {e}")
@@ -591,11 +849,32 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
     output_path.write_text("\n".join(md_lines), encoding="utf-8")
 
     # Write sidecar file with unresolved hyphenated tokens for LLM adjudication
-    sidecar_path = data_dir / "dehyphenation_flags.json"
+    sidecar_path = data_dir / "review_flags.json"
+    if total_punct_fixes:
+        print(f"  Punctuation: {total_punct_fixes} fixes (garbled quotes, doubled punctuation, stray guillemets)")
+
+    if total_corrections_applied:
+        print(f"  Corrections: {total_corrections_applied} applied from {corrections_path.name}")
+
+    # Merge new LLM corrections into the durable corrections file
+    if new_corrections:
+        from utils import atomic_write_json
+        for ch_id, ch_corrs in new_corrections.items():
+            existing = corrections.get(ch_id, [])
+            # Avoid duplicates: skip corrections whose find string already exists
+            existing_finds = {e["find"] for e in existing}
+            for c in ch_corrs:
+                if c["find"] not in existing_finds:
+                    existing.append(c)
+            corrections[ch_id] = existing
+        atomic_write_json(corrections_path, corrections)
+        new_count = sum(len(v) for v in new_corrections.values())
+        print(f"  New LLM corrections: {new_count} saved → {corrections_path.name}")
+
     if all_flags:
         from utils import atomic_write_json
         atomic_write_json(sidecar_path, all_flags)
-        print(f"  Dehyphenation: {dehyphen_flagged} unresolved tokens flagged → {sidecar_path.name}")
+        print(f"  Review flags: {review_flagged} tokens flagged for LLM review → {sidecar_path.name}")
     elif sidecar_path.exists():
         sidecar_path.unlink()
 

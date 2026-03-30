@@ -11,6 +11,9 @@ import re
 from pathlib import Path
 
 IA_ITEM_ID = "perlalibertdal00cres"
+# Offset between PDF leaf numbers and printed book page numbers.
+# PDF leaf 7 = book page 1 (leaves 1-6 are cover + front matter).
+PDF_PAGE_OFFSET = 6
 FONT_DIR = Path(__file__).parent / "assets" / "fonts"
 CSS_PATH = Path(__file__).parent / "static" / "bilingual.css"
 
@@ -210,10 +213,13 @@ def generate_html(
             ia_url = source_pages.get((start, end), "")
             if not ia_url:
                 ia_url = f"https://archive.org/details/{IA_ITEM_ID}/page/n{start - 1}/mode/1up"
-            page_label = f"pp. {start}\u2013{end}"
+            book_start = start - PDF_PAGE_OFFSET
+            book_end = end - PDF_PAGE_OFFSET
+            page_label = f"pp. {book_start}\u2013{book_end}"
             ia_link = (
                 f'<a href="#" class="page-citation" '
                 f'data-page-start="{start}" data-page-end="{end}" '
+                f'data-page-offset="{PDF_PAGE_OFFSET}" '
                 f'data-ia-url="{ia_url}" '
                 f'data-img-dir="{page_img_rel}" '
                 f'title="View original scan">{page_label}</a>'
@@ -274,13 +280,13 @@ def generate_html(
         "  const closeBtn = document.getElementById('page-overlay-close');",
         "  const prevBtn = document.getElementById('page-overlay-prev');",
         "  const nextBtn = document.getElementById('page-overlay-next');",
-        "  let currentPage = 0, startPage = 0, endPage = 0, imgDir = '';",
+        "  let currentPage = 0, startPage = 0, endPage = 0, imgDir = '', pageOffset = 0;",
         "",
         "  function showPage(n) {",
         "    currentPage = Math.max(startPage, Math.min(n, endPage));",
         "    const padded = String(currentPage).padStart(4, '0');",
         "    img.src = imgDir + '/page_' + padded + '.png';",
-        "    title.textContent = 'Page ' + currentPage;",
+        "    title.textContent = 'Page ' + (currentPage - pageOffset);",
         "    prevBtn.disabled = currentPage <= startPage;",
         "    nextBtn.disabled = currentPage >= endPage;",
         "    const iaBase = 'https://archive.org/details/' + '" + IA_ITEM_ID + "' + '/page/n' + (currentPage - 1) + '/mode/1up';",
@@ -292,6 +298,7 @@ def generate_html(
         "      e.preventDefault();",
         "      startPage = parseInt(a.dataset.pageStart);",
         "      endPage = parseInt(a.dataset.pageEnd);",
+        "      pageOffset = parseInt(a.dataset.pageOffset || '0');",
         "      imgDir = a.dataset.imgDir;",
         "      showPage(startPage);",
         "      overlay.classList.add('open');",

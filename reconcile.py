@@ -544,6 +544,9 @@ def reconcile(data_dir: Path) -> None:
                     search_pos = ch_text_end
                     pages = set()
                     for entry in page_map:
+                        # Skip low-content pages (cover, blanks, title page, catalog card)
+                        if entry["char_end"] - entry["char_start"] < 500:
+                            continue
                         if entry["char_start"] <= ch_text_end and entry["char_end"] >= ch_text_start:
                             pages.add(entry["page"])
                     if pages:

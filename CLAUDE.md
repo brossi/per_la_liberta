@@ -113,7 +113,8 @@ data/
   flagged_segments.json           # Word-level disagreements
   chapter_pages.json              # Chapter → PDF page mapping
   dictionaries/it_combined.txt    # Italian frequency dictionary
-  dehyphenation_flags.json        # Unresolved hyphenated tokens (step 5 sidecar)
+  review_flags.json                # Tokens needing LLM review: unresolved hyphens, stray symbols (step 5 sidecar)
+  corrections.json                # Durable corrections: LLM fixes + manual overrides (persists across re-runs)
   adjudication_results.json       # Zingarelli-classified tokens (step 5b)
   validation_report.json          # Validation results (step 6)
 output/
