@@ -1,11 +1,13 @@
 """Step 3: Clean OCR artifacts and optionally use LLM for Italian text correction."""
 
 import json
+import logging
 import os
 import re
 import time
 from pathlib import Path
 
+log = logging.getLogger(__name__)
 
 # Regex-based OCR artifact patterns to remove or fix
 NOISE_LINE_PATTERN = re.compile(
@@ -63,6 +65,157 @@ def _get_ner_nlp():
 
         _get_ner_nlp._nlp = spacy.load("it_core_news_lg", disable=["parser", "lemmatizer"])
     return _get_ner_nlp._nlp
+
+
+# OCR confusion pairs observed at line-break boundaries in Bodoni typeface.
+# Maps OCR-misread character → list of likely intended characters.
+# - r→i: dominant pattern; Bodoni's 'r' is a short vertical stroke whose
+#         top-right flag is lost at scan edges, reading as 'i'
+# - e→i: Bodoni 'e' and 'i' differ only in the crossbar
+BOUNDARY_SUBSTITUTIONS: dict[str, list[str]] = {
+    "i": ["r", "e"],
+}
+
+# Pattern matching letter-hyphen-letter tokens (Unicode-aware).
+# Each side must be ≥2 chars: Italian syllabification never produces
+# single-char fragments, so 1-char sides are always OCR noise.
+_HYPHEN_TOKEN_RE = re.compile(r"([a-zA-ZÀ-ÿ]{2,})-([a-zA-ZÀ-ÿ]{2,})")
+
+
+def _get_word_set() -> set[str]:
+    """Lazy-load the Italian dictionary as a plain set for O(1) membership checks."""
+    if not hasattr(_get_word_set, "_words"):
+        words = set()
+        dict_path = Path(__file__).parent / "data" / "dictionaries" / "it_combined.txt"
+        with open(dict_path, encoding="utf-8") as f:
+            for line in f:
+                parts = line.split()
+                if parts:
+                    words.add(parts[0].lower())
+        _get_word_set._words = words
+    return _get_word_set._words
+
+
+def _in_word_set(word: str, word_set: set[str]) -> bool:
+    """Check dictionary membership, accent-insensitive.
+
+    The 1913 text uses accento facoltativo liberally and OCR sometimes
+    introduces spurious accents. We accept a match if the accent-stripped
+    form exists in the dictionary.
+    """
+    lower = word.lower()
+    if lower in word_set:
+        return True
+    stripped = _strip_accents(lower)
+    return stripped != lower and stripped in word_set
+
+
+def dehyphenate_token(left: str, right: str, word_set: set[str]) -> str | None:
+    """Try to rejoin a hyphenated token, returning the corrected form or None.
+
+    Multi-pass strategy:
+      1. Simple join — check dictionary
+      2. OCR substitution at last 1-2 chars of left half
+      3. OCR substitution at first 1-2 chars of right half
+      4. Drop duplicated character at boundary (OCR sometimes doubles a char
+         across the break, e.g. 'sottosta-ati' from 'sottostati')
+
+    Returns the joined word if any pass succeeds, else None.
+    """
+    # Pass 1: simple join
+    joined = left + right
+    if _in_word_set(joined, word_set):
+        return joined
+
+    # Pass 2: substitute at the end of the left half (last 2 chars)
+    for pos in range(max(0, len(left) - 2), len(left)):
+        ch = left[pos].lower()
+        if ch in BOUNDARY_SUBSTITUTIONS:
+            for replacement in BOUNDARY_SUBSTITUTIONS[ch]:
+                candidate = left[:pos] + replacement + left[pos + 1:] + right
+                if _in_word_set(candidate, word_set):
+                    return candidate
+
+    # Pass 3: substitute at the start of the right half (first 2 chars)
+    for pos in range(min(2, len(right))):
+        ch = right[pos].lower()
+        if ch in BOUNDARY_SUBSTITUTIONS:
+            for replacement in BOUNDARY_SUBSTITUTIONS[ch]:
+                candidate = left + right[:pos] + replacement + right[pos + 1:]
+                if _in_word_set(candidate, word_set):
+                    return candidate
+
+    # Pass 4: drop a spurious boundary character.
+    # 4a: OCR sometimes reads 'r' as 'ri', inserting an extra 'i' at the
+    #     break (e.g. 'assicuri-azioni' from 'assicurazioni').
+    if len(left) > 1 and left[-1].lower() == "i":
+        candidate = left[:-1] + right
+        if _in_word_set(candidate, word_set):
+            return candidate
+    if len(right) > 1 and right[0].lower() == "i":
+        candidate = left + right[1:]
+        if _in_word_set(candidate, word_set):
+            return candidate
+    # 4b: duplicated character at the join boundary — the OCR may have
+    #     doubled a char across the line break (e.g. 'sottosta-ati').
+    if (len(left) > 1 and len(right) > 1
+            and left[-1].lower() == right[0].lower()
+            and left[-1].lower() != "i"):  # already handled in 4a
+        candidate = left[:-1] + right
+        if _in_word_set(candidate, word_set):
+            return candidate
+        candidate = left + right[1:]
+        if _in_word_set(candidate, word_set):
+            return candidate
+
+    return None
+
+
+def dehyphenate_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[dict]]:
+    """Fix mid-line hyphenated tokens where joining produces a valid Italian word.
+
+    Returns (corrected_text, flags) where flags is a list of unresolved
+    hyphenated tokens for sidecar output.
+    """
+    if word_set is None:
+        word_set = _get_word_set()
+
+    flags: list[dict] = []
+
+    def _replacer(m: re.Match) -> str:
+        left, right = m.group(1), m.group(2)
+
+        # Skip if either side is purely digits (dates like 1848-1849)
+        if left.isdigit() or right.isdigit():
+            return m.group(0)
+
+        result = dehyphenate_token(left, right, word_set)
+        if result is not None:
+            log.info("Dehyphenated: %s-%s → %s", left, right, result)
+            return result
+
+        # Unresolved — flag for sidecar with classification hint
+        has_nonalpha = any(
+            not c.isalpha() and c != "-" for c in m.group(0)
+        )
+        both_caps = left[0].isupper() and right[0].isupper()
+        if has_nonalpha:
+            reason = "ocr_noise"
+        elif both_caps:
+            reason = "ner_candidate"
+        else:
+            reason = "unresolved"
+        flags.append({
+            "token": m.group(0),
+            "left": left,
+            "right": right,
+            "offset": m.start(),
+            "reason": reason,
+        })
+        return m.group(0)
+
+    corrected = _HYPHEN_TOKEN_RE.sub(_replacer, text)
+    return corrected, flags
 
 
 def is_noise_line(line: str) -> bool:
@@ -226,8 +379,12 @@ def apply_dictionary_correction(text: str) -> str:
     return "\n".join(result_lines)
 
 
-def clean_text(text: str) -> str:
-    """Apply OCR cleanup: noise removal, pre-filters, dictionary correction."""
+def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[dict]]:
+    """Apply OCR cleanup: noise removal, pre-filters, dehyphenation, dictionary correction.
+
+    Returns (cleaned_text, dehyphen_flags) where dehyphen_flags lists tokens
+    that contained hyphens but could not be resolved by dictionary lookup.
+    """
     # Remove noise lines
     lines = text.split("\n")
     cleaned_lines = []
@@ -238,6 +395,11 @@ def clean_text(text: str) -> str:
 
     # Apply high-confidence regex pre-filters (più garbles, 5AN, etc.)
     text = apply_pre_filters(text)
+
+    # Dehyphenate broken words BEFORE dictionary correction —
+    # otherwise spaCy splits "assicuri-azioni" into fragments and
+    # symspellpy may "correct" each half to the wrong word.
+    text, dehyphen_flags = dehyphenate_text(text, word_set)
 
     # Apply dictionary-based correction via symspellpy (NER-aware)
     text = apply_dictionary_correction(text)
@@ -254,7 +416,7 @@ def clean_text(text: str) -> str:
     # Collapse multiple blank lines
     text = re.sub(r"\n{3,}", "\n\n", text)
 
-    return text.strip()
+    return text.strip(), dehyphen_flags
 
 
 def llm_correct_italian(text: str, chapter_title: str, api_key: str) -> str:
@@ -320,6 +482,9 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
             print("  Warning: No API key provided, skipping LLM correction")
             use_llm = False
 
+    # Pre-load the word set once for all chapters
+    word_set = _get_word_set()
+
     # Sort chapters: prefazione first, then p1_ch01..p1_ch24, then p2_ch01..p2_ch33
     def chapter_sort_key(ch):
         if ch["id"] == "prefazione":
@@ -344,11 +509,17 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
     ]
 
     current_part = 0
-
     total = len(chapters)
+    all_flags: dict[str, list[dict]] = {}
+    dehyphen_fixed = 0
+    dehyphen_flagged = 0
 
     for i, ch in enumerate(chapters):
-        text = clean_text(ch["text"])
+        text, flags = clean_text(ch["text"], word_set)
+
+        if flags:
+            all_flags[ch["id"]] = flags
+            dehyphen_flagged += len(flags)
 
         if use_llm:
             bar_width = 30
@@ -395,6 +566,16 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
 
     output_path = output_dir / "italian_clean.md"
     output_path.write_text("\n".join(md_lines), encoding="utf-8")
+
+    # Write sidecar file with unresolved hyphenated tokens for LLM adjudication
+    sidecar_path = data_dir / "dehyphenation_flags.json"
+    if all_flags:
+        from utils import atomic_write_json
+        atomic_write_json(sidecar_path, all_flags)
+        print(f"  Dehyphenation: {dehyphen_flagged} unresolved tokens flagged → {sidecar_path.name}")
+    elif sidecar_path.exists():
+        sidecar_path.unlink()
+
     print(f"\n  Output: {output_path}")
     print(f"  Total chapters: {len(chapters)}")
 
