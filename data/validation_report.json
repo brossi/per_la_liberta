@@ -17,14 +17,13 @@
       "name": "quote_balance",
       "passed": false,
       "issues": [
-        "Guillemet imbalance: 41 « vs 53 »",
-        "Smart double quote imbalance: 35 “ vs 37 ”"
+        "Smart double quote imbalance: 20 “ vs 23 ”"
       ]
     },
     {
       "name": "italian_char_coverage",
       "passed": true,
-      "foreign_char_ratio": 0.083,
+      "foreign_char_ratio": 0.056,
       "issues": []
     },
     {
@@ -35,9 +34,9 @@
     {
       "name": "word_count_preservation",
       "passed": true,
-      "reconciled_words": 207377,
-      "cleaned_words": 203014,
-      "retention_pct": 97.9,
+      "reconciled_words": 175390,
+      "cleaned_words": 159875,
+      "retention_pct": 91.2,
       "issues": []
     }
   ]

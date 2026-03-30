@@ -60,6 +60,99 @@ def split_paragraphs(text: str) -> list[str]:
     return paras
 
 
+def _is_near_duplicate(
+    norm_text: str, included_norms: list[str], threshold: float = 0.7,
+) -> bool:
+    """Check if normalized text is a near-duplicate of any already-included paragraph."""
+    if not norm_text or len(norm_text) < 20:
+        return True  # Too short to be meaningful — skip
+    for inc in included_norms:
+        sm = SequenceMatcher(None, norm_text, inc)
+        if sm.ratio() > threshold:
+            return True
+        # Containment check: is most of norm_text found within inc?
+        matching_chars = sum(block.size for block in sm.get_matching_blocks())
+        if matching_chars / len(norm_text) > 0.8:
+            return True
+    return False
+
+
+def _split_merged_chapters(
+    ch_map1: dict, ch_map2: dict, all_ids: list[str],
+) -> None:
+    """Split Copy2 chapters that absorbed adjacent chapters missing from Copy2.
+
+    When Copy2 is missing a chapter that Copy1 has, the missing chapter's content
+    was merged into the preceding Copy2 chapter. This function detects these cases
+    and splits Copy2 using Copy1's chapter boundaries as a guide.
+    """
+    c1_ids = set(ch_map1.keys())
+    c2_ids = set(ch_map2.keys())
+    missing_from_c2 = c1_ids - c2_ids
+
+    if not missing_from_c2:
+        return
+
+    for ch_id in sorted(missing_from_c2):
+        c1_missing = ch_map1.get(ch_id)
+        if not c1_missing:
+            continue
+
+        # Find the preceding chapter that contains the merged content
+        ch_num = int(ch_id.split("ch")[1])
+        part = ch_id.split("_")[0]
+        prev_id = f"{part}_ch{ch_num - 1:02d}"
+        c2_host = ch_map2.get(prev_id)
+        c1_prev = ch_map1.get(prev_id)
+
+        if not c2_host or not c1_prev:
+            continue
+
+        # Only split if Copy2 chapter is significantly larger than Copy1's version
+        if len(c2_host["text"]) < len(c1_prev["text"]) * 1.4:
+            continue
+
+        # Use Copy1's chapter length ratio to estimate the split point in Copy2
+        # Copy1 prev chapter ends at ~len(c1_prev) chars; in Copy2 this maps to
+        # approximately the same fraction of the merged text
+        c1_prev_len = len(c1_prev["text"])
+        c1_total = c1_prev_len + len(c1_missing["text"])
+        split_fraction = c1_prev_len / c1_total
+        approx_split = int(len(c2_host["text"]) * split_fraction)
+
+        # Find the nearest paragraph break to the approximate split point
+        text = c2_host["text"]
+        # Search for a double-newline near the split point
+        best_break = approx_split
+        for offset in range(0, min(2000, len(text) - approx_split)):
+            for pos in [approx_split + offset, approx_split - offset]:
+                if 0 < pos < len(text) - 1 and text[pos:pos+2] == "\n\n":
+                    best_break = pos
+                    break
+            else:
+                continue
+            break
+
+        # Split the text
+        host_text = text[:best_break].rstrip()
+        split_text = text[best_break:].lstrip()
+
+        if not split_text:
+            continue
+
+        # Update the host chapter
+        c2_host["text"] = host_text
+
+        # Create the missing chapter in Copy2
+        ch_map2[ch_id] = {
+            "id": ch_id,
+            "title": c1_missing["title"],
+            "part": c1_missing["part"],
+            "text": split_text,
+        }
+        print(f"    Split {prev_id} in Copy2: {prev_id}={len(host_text):,} + {ch_id}={len(split_text):,} chars")
+
+
 def align_paragraphs(
     paras1: list[str], paras2: list[str]
 ) -> list[tuple[str | None, str | None]]:
@@ -135,13 +228,25 @@ def align_paragraphs_3way(
             used_3.add(k)
         triples.append((p1, p2, p3))
 
-    # Add any unmatched paragraphs from Copy 2 and Copy 3
+    # Add unmatched paragraphs only if they aren't near-duplicates of included text
+    included_norms = []
+    for (p1, p2, p3) in triples:
+        for p in (p1, p2, p3):
+            if p is not None:
+                included_norms.append(normalize_for_comparison(p))
+
     for j, p2 in enumerate(paras2):
         if j not in used_2:
-            triples.append((None, p2, None))
+            norm_p2 = normalize_for_comparison(p2)
+            if not _is_near_duplicate(norm_p2, included_norms):
+                triples.append((None, p2, None))
+                included_norms.append(norm_p2)
     for k, p3 in enumerate(paras3):
         if k not in used_3:
-            triples.append((None, None, p3))
+            norm_p3 = normalize_for_comparison(p3)
+            if not _is_near_duplicate(norm_p3, included_norms):
+                triples.append((None, None, p3))
+                included_norms.append(norm_p3)
 
     return triples
 
@@ -422,6 +527,9 @@ def reconcile(data_dir: Path) -> None:
         ch_map3 = {ch["id"]: ch for ch in chapters3}
         print(f"  Copy 3 chapters: {len(chapters3)}")
 
+    # Split Copy2 chapters that absorbed missing adjacent chapters
+    _split_merged_chapters(ch_map1, ch_map2, sorted(ch_map1.keys()))
+
     all_ids = sorted(set(ch_map1.keys()) | set(ch_map2.keys()) | set(ch_map3.keys()))
 
     reconciled_chapters = []
@@ -453,21 +561,28 @@ def reconcile(data_dir: Path) -> None:
 
             aligned = align_paragraphs_3way(paras1, paras2, paras3)
             reconciled_paras = []
+            reconciled_norms = []
 
             for para_idx, (p1, p2, p3) in enumerate(aligned):
                 texts = [t for t in [p1, p2, p3] if t is not None]
                 if len(texts) == 3:
                     merged, flagged = reconcile_words_3way(p1, p2, p3, ch_id, para_idx)
                     reconciled_paras.append(merged)
+                    reconciled_norms.append(normalize_for_comparison(merged))
                     all_flagged.extend(flagged)
                     stats["all_differ"] += sum(1 for f in flagged if f["resolution_method"] == "all_differ")
                 elif len(texts) == 2:
                     t1, t2 = texts[0], texts[1]
                     merged, flagged = reconcile_words(t1, t2, ch_id, para_idx)
                     reconciled_paras.append(merged)
+                    reconciled_norms.append(normalize_for_comparison(merged))
                     all_flagged.extend(flagged)
                 else:
-                    reconciled_paras.append(texts[0])
+                    # Single-source paragraph: skip if near-duplicate of already-included
+                    norm = normalize_for_comparison(texts[0])
+                    if not _is_near_duplicate(norm, reconciled_norms):
+                        reconciled_paras.append(texts[0])
+                        reconciled_norms.append(norm)
 
             reconciled_chapters.append({
                 "id": ch_id,
@@ -484,15 +599,23 @@ def reconcile(data_dir: Path) -> None:
 
             aligned = align_paragraphs(paras1, paras2)
             reconciled_paras = []
+            reconciled_norms = []
 
             for para_idx, (p1, p2) in enumerate(aligned):
                 if p1 is None and p2 is not None:
-                    reconciled_paras.append(p2)
+                    norm = normalize_for_comparison(p2)
+                    if not _is_near_duplicate(norm, reconciled_norms):
+                        reconciled_paras.append(p2)
+                        reconciled_norms.append(norm)
                 elif p2 is None and p1 is not None:
-                    reconciled_paras.append(p1)
+                    norm = normalize_for_comparison(p1)
+                    if not _is_near_duplicate(norm, reconciled_norms):
+                        reconciled_paras.append(p1)
+                        reconciled_norms.append(norm)
                 elif p1 is not None and p2 is not None:
                     merged, flagged = reconcile_words(p1, p2, ch_id, para_idx)
                     reconciled_paras.append(merged)
+                    reconciled_norms.append(normalize_for_comparison(merged))
                     all_flagged.extend(flagged)
 
             reconciled_chapters.append({

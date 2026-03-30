@@ -2069,12 +2069,6 @@
   ],
   "p1_ch05": [
     {
-      "find": "'ASSEDIO di Roma va indissolubilmente co",
-      "replace": "Here is the corrected Italian text:\n\nL'ASSEDIO di Roma va indissolubilmente co",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
       "find": "ora, dì sembrava, nuovi orizzonti avventano e i due figli di Ortensia, partecipa",
       "replace": "ora, dì sembrava, nuovi orizzonti avventurano e i due figli di Ortensia, partecipa",
       "reason": "llm_correction",
@@ -2268,12 +2262,6 @@
     }
   ],
   "p1_ch06": [
-    {
-      "find": "ELL'INSINUAEE la mia personalità fra i g",
-      "replace": "Here is the corrected Italian text:\n\nNELL'INSINUAEE la mia personalità fra i g",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
     {
       "find": "ELL'INSINUAEE la mia personalità fra i grandi che si",
       "replace": "ELL'INSINUARE la mia personalità fra i grandi che si",
@@ -2643,12 +2631,6 @@
   ],
   "p1_ch07": [
     {
-      "find": "NON intendo narrare la storia particolar",
-      "replace": "Here is the corrected Italian text:\n\nNON intendo narrare la storia particolar",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
       "find": "dinot tendeva ad impossessarsi del Gianieolo per assalto diretto. Senonchè la fie",
       "replace": "dinot tendeva ad impossessarsi del Gianicolo per assalto diretto. Senonchè la fie",
       "reason": "llm_correction",
@@ -2962,12 +2944,6 @@
     }
   ],
   "p1_ch08": [
-    {
-      "find": "e EEEQRINAI, quasi alla deriva, T I per ",
-      "replace": "Ecco il te EEEQRINAI, quasi alla deriva, T I per ",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
     {
       "find": "e EEEQRINAI, quasi alla deriva, T I per v",
       "replace": "esto EEEQRINAI, quasi alla deriva, T I per v",
@@ -5022,12 +4998,6 @@
     }
   ],
   "p1_ch12": [
-    {
-      "find": "DELLA ELXiA mia escursione che si spin- ",
-      "replace": "Ecco il testo corretto del Capitolo DELLA ELXiA mia escursione che si spin- ",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
     {
       "find": "DELLA ELXiA mia escursione che si spin- I ■ se, p",
       "replace": "DodiA mia escursione che si spin- I ■ se, p",
@@ -7914,12 +7884,6 @@
     }
   ],
   "p1_ch18": [
-    {
-      "find": "TOCCAI Coirà, ove dal Clementi, che trov",
-      "replace": "Ecco il testo corretto del Capitolo Decimo Ottavo:\n\nTOCCAI Coirà, ove dal Clementi, che trov",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
     {
       "find": "TOCCAI Coirà, ove dal Clementi, che trovavasi allora",
       "replace": "TOCCAI Coira, ove dal Clementi, che trovavasi allora",
@@ -14769,12 +14733,6 @@
   ],
   "p2_ch07": [
     {
-      "find": "LA domane, procedevo a tutto vapore vers",
-      "replace": "Here is the corrected Italian text:\n\nLA domane, procedevo a tutto vapore vers",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
       "find": "lla capace di modificare la storia, o nudi 'altro fuorché la desolazione e la morte",
       "replace": "lla capace di modificare la storia, o null'altro fuorché la desolazione e la morte",
       "reason": "llm_correction",
@@ -15472,12 +15430,6 @@
     }
   ],
   "p2_ch08": [
-    {
-      "find": "0 CELLA sera stessa, ero tranquillamente ",
-      "replace": "Ecco CELLA sera stessa, ero tranquillamente ",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
     {
       "find": "0 CELLA sera stessa, ero tranquillamente rip",
       "replace": "0 il testo corretto:\n\nLLA sera stessa, ero tranquillamente rip",
@@ -17163,12 +17115,6 @@
   ],
   "p2_ch13": [
     {
-      "find": "Ecco come e perchè, gli avvenimen ti precipitassero. Innanz",
-      "replace": "Ecco come e perchè gli avvenimen ti precipitassero. Innanz",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
       "find": "tutto, le confidenze avventate fatte da O Giuseppe Pieri alla Rosina Hartmann ^^ m",
       "replace": "tutto, le confidenze avventate fatte da Giuseppe Pieri alla Rosina Hartmann ^^ m",
       "reason": "llm_correction",
@@ -18846,12 +18792,6 @@
     }
   ],
   "p2_ch15": [
-    {
-      "find": "OUANDO l'uscio della cella si richiuse fu",
-      "replace": "Ecco il testo corretto:\n\nQUANDO l'uscio della cella si richiuse fu",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
     {
       "find": "a. Saturno e l'altro mi interrogarono coli 'espressione del viso. \"Tutto è finit",
       "replace": "a. Saturno e l'altro mi interrogarono con li 'espressione del viso. \"Tutto è finit",
@@ -24767,12 +24707,6 @@
   ],
   "p2_ch27": [
     {
-      "find": "Eia navicella scorre via, scorre.. finchè",
-      "replace": "Ecco ia navicella scorre via, scorre.. finchè",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
       "find": "Eia navicella scorre via, scorre.. finchè ",
       "replace": "Eil testo corretto:\n\nLa navicella scorre via, scorre.. finchè ",
       "reason": "llm_correction",
@@ -29802,12 +29736,6 @@
     }
   ],
   "p2_ch21": [
-    {
-      "find": "LIBERO... fra un anno!\" Non lo avevo det",
-      "replace": "Here is the corrected Italian text:\n\nLIBERO... fra un anno!\" Non lo avevo det",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
     {
       "find": "di condurre a buon termine l 'impresa.\n\nDirò e la Spagna non sono, dalla costa francese, l'ultima Tuie. Più studiavo il carattere del mio inglese e più mi convincevo che il giorno della sua liberazione arrivò be",
       "replace": "di condurre a buon termine l 'impresa.\n\nIl giorno della sua liberazione arrivò be",

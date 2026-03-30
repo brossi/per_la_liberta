@@ -624,7 +624,13 @@ def llm_correct_italian(
         )
 
     response = retry_api_call(_call)
-    return response.content[0].text
+    result = response.content[0].text
+    # Strip LLM preamble that sometimes precedes the corrected text
+    result = re.sub(
+        r"^(?:Here is the corrected.*?|Ecco il testo corretto.*?):\s*\n+",
+        "", result, count=1, flags=re.IGNORECASE,
+    )
+    return result
 
 
 def apply_corrections(

@@ -55,6 +55,18 @@ def main():
         action="store_true",
         help="Skip LLM triage (majority vote only)",
     )
+    parser.add_argument(
+        "--workers", type=int, default=1,
+        help="Concurrent translation workers (default: 1)",
+    )
+    parser.add_argument(
+        "--thinking-budget", type=int, default=4096,
+        help="Translation thinking budget in tokens (default: 4096)",
+    )
+    parser.add_argument(
+        "--no-thinking", action="store_true",
+        help="Disable extended thinking for translation",
+    )
     args = parser.parse_args()
 
     if args.step in ("download", "all"):
@@ -141,7 +153,11 @@ def main():
         print("Step 7: Translating to English...")
         from translate import translate
 
-        translate(OUTPUT_DIR, STATE_DIR, api_key=args.api_key)
+        translate(
+            OUTPUT_DIR, STATE_DIR, api_key=args.api_key,
+            workers=args.workers, thinking_budget=args.thinking_budget,
+            no_thinking=args.no_thinking,
+        )
         print()
 
     if args.step in ("typeset", "all"):

@@ -1,4 +1,4 @@
-"""Step 4: Translate cleaned Italian text to English using Claude API."""
+"""Step 7: Translate cleaned Italian text to English using Claude API."""
 
 import json
 import os
@@ -12,6 +12,7 @@ def parse_italian_markdown(text: str) -> list[dict]:
     chapters = []
     current_chapter = None
     current_lines = []
+    current_part = None  # Track "Parte Prima" / "Parte Seconda"
 
     for line in text.split("\n"):
         # Detect chapter/section headers
@@ -24,14 +25,27 @@ def parse_italian_markdown(text: str) -> list[dict]:
             header_level = 2 if line.startswith("## ") else 3
             title = line.lstrip("#").strip()
 
-            # Skip the book title and metadata
-            if title in ("Per la Libertà!", "Parte Prima", "Parte Seconda"):
-                current_chapter = {"id": title.lower().replace(" ", "_"), "title": title, "level": header_level, "is_structural": True}
+            # Track parts; skip the book title
+            if title == "Per la Libertà!":
+                current_chapter = {"id": "per_la_liberta_", "title": title, "level": header_level, "is_structural": True}
+                current_lines = []
+                continue
+            if title == "Parte Prima":
+                current_part = "p1"
+                current_chapter = {"id": "parte_prima", "title": title, "level": header_level, "is_structural": True}
+                current_lines = []
+                continue
+            if title == "Parte Seconda":
+                current_part = "p2"
+                current_chapter = {"id": "parte_seconda", "title": title, "level": header_level, "is_structural": True}
                 current_lines = []
                 continue
 
+            base_id = re.sub(r"[^a-z0-9]", "_", title.lower()).strip("_")
+            ch_id = f"{current_part}_{base_id}" if current_part else base_id
+
             current_chapter = {
-                "id": re.sub(r"[^a-z0-9]", "_", title.lower()).strip("_"),
+                "id": ch_id,
                 "title": title,
                 "level": header_level,
                 "is_structural": False,
@@ -48,7 +62,27 @@ def parse_italian_markdown(text: str) -> list[dict]:
     return [ch for ch in chapters if not ch.get("is_structural") or ch.get("text")]
 
 
-def translate_chapter(text: str, title: str, api_key: str) -> tuple[str, str]:
+SYSTEM_PROMPT = (
+    "You are translating a 1913 Italian book titled 'Per la Libertà!' (For Freedom!) "
+    "by Cesare Crespi. It documents conversations with Count Carlo di Rudio about "
+    "Italian unification, the Risorgimento, and the Orsini conspiracy against Napoleon III.\n\n"
+    "Translation guidelines:\n"
+    "- Produce a faithful, literary English translation\n"
+    "- Maintain the early 20th century literary style and tone\n"
+    "- Preserve all proper nouns, place names, and historical references in their original form "
+    "(e.g., keep 'Felice Orsini', 'Mazzini', 'Radetzky', Italian place names)\n"
+    "- Preserve paragraph structure\n"
+    "- Translate footnotes in place\n"
+    "- Do not add commentary or notes — output only the English translation\n"
+    "- For Italian expressions that have no good English equivalent, keep the Italian "
+    "in italics (using *asterisks*) with a brief inline gloss if needed"
+)
+
+
+def translate_chapter(
+    text: str, title: str, api_key: str,
+    thinking_budget: int = 4096, no_thinking: bool = False,
+) -> tuple[str, str]:
     """Translate a single chapter from Italian to English.
 
     Returns (translated_text, stop_reason).
@@ -60,38 +94,27 @@ def translate_chapter(text: str, title: str, api_key: str) -> tuple[str, str]:
     client = anthropic.Anthropic(api_key=api_key, timeout=300.0)
 
     max_tokens = 128000
-    thinking_budget = 32000
+    kwargs = {
+        "model": "claude-sonnet-4-6",
+        "max_tokens": max_tokens,
+        "system": SYSTEM_PROMPT,
+        "messages": [
+            {
+                "role": "user",
+                "content": f"Translate the following chapter ({title}):\n\n{text}",
+            }
+        ],
+    }
+    if no_thinking:
+        kwargs["thinking"] = {"type": "disabled"}
+    else:
+        kwargs["thinking"] = {
+            "type": "enabled",
+            "budget_tokens": thinking_budget,
+        }
 
     def _call():
-        return client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=max_tokens,
-            thinking={
-                "type": "enabled",
-                "budget_tokens": thinking_budget,
-            },
-            system=(
-                "You are translating a 1913 Italian book titled 'Per la Libertà!' (For Freedom!) "
-                "by Cesare Crespi. It documents conversations with Count Carlo di Rudio about "
-                "Italian unification, the Risorgimento, and the Orsini conspiracy against Napoleon III.\n\n"
-                "Translation guidelines:\n"
-                "- Produce a faithful, literary English translation\n"
-                "- Maintain the early 20th century literary style and tone\n"
-                "- Preserve all proper nouns, place names, and historical references in their original form "
-                "(e.g., keep 'Felice Orsini', 'Mazzini', 'Radetzky', Italian place names)\n"
-                "- Preserve paragraph structure\n"
-                "- Translate footnotes in place\n"
-                "- Do not add commentary or notes — output only the English translation\n"
-                "- For Italian expressions that have no good English equivalent, keep the Italian "
-                "in italics (using *asterisks*) with a brief inline gloss if needed"
-            ),
-            messages=[
-                {
-                    "role": "user",
-                    "content": f"Translate the following chapter ({title}):\n\n{text}",
-                }
-            ],
-        )
+        return client.messages.create(**kwargs)
 
     response = retry_api_call(_call)
 
@@ -99,7 +122,10 @@ def translate_chapter(text: str, title: str, api_key: str) -> tuple[str, str]:
     return translated, response.stop_reason
 
 
-def translate(output_dir: Path, state_dir: Path, api_key: str | None = None) -> None:
+def translate(
+    output_dir: Path, state_dir: Path, api_key: str | None = None,
+    workers: int = 1, thinking_budget: int = 4096, no_thinking: bool = False,
+) -> None:
     """Translate Italian markdown to English, chapter by chapter."""
     from utils import atomic_write_json
 
@@ -113,6 +139,9 @@ def translate(output_dir: Path, state_dir: Path, api_key: str | None = None) -> 
 
     chapters = parse_italian_markdown(italian_text)
     print(f"  Found {len(chapters)} translatable chapters")
+
+    thinking_desc = "disabled" if no_thinking else f"{thinking_budget:,} tokens"
+    print(f"  Thinking: {thinking_desc}, Workers: {workers}")
 
     # Load or create progress file
     translations_dir = state_dir / "translations"
@@ -133,29 +162,51 @@ def translate(output_dir: Path, state_dir: Path, api_key: str | None = None) -> 
         atomic_write_json(progress_path, progress)
         print(f"  Pruned {len(stale)} stale progress entries")
 
-    # Translate each chapter
+    # Build list of chapters that need translation
+    todo = []
     for i, ch in enumerate(chapters):
         ch_id = ch["id"]
-
         if progress.get(ch_id, {}).get("status") == "done":
             print(f"  [{i+1}/{len(chapters)}] {ch['title']}: already translated")
-            continue
+        else:
+            todo.append((i, ch))
 
-        print(f"  [{i+1}/{len(chapters)}] Translating: {ch['title']}...")
+    if not todo:
+        print("  All chapters already translated.")
+        assemble_translation(output_dir, state_dir, chapters)
+        return
 
-        progress[ch_id] = {"status": "in_progress"}
-        atomic_write_json(progress_path, progress)
+    print(f"  {len(todo)} chapters to translate")
+
+    import threading
+
+    progress_lock = threading.Lock()
+    done_count = len(chapters) - len(todo)
+
+    def _translate_one(idx_ch: tuple[int, dict]) -> None:
+        nonlocal done_count
+        i, ch = idx_ch
+        ch_id = ch["id"]
+
+        print(f"  [{i+1}/{len(chapters)}] Starting: {ch['title']} ({len(ch['text']):,} chars)")
+        t0 = time.monotonic()
+
+        with progress_lock:
+            progress[ch_id] = {"status": "in_progress"}
+            atomic_write_json(progress_path, progress)
 
         try:
             # Extract page markers before translation, reinsert after.
-            # Don't rely on the LLM to preserve HTML comments.
             page_marker = ""
             page_match = re.search(r"<!-- pages:\d+-\d+ -->", ch["text"])
             if page_match:
                 page_marker = page_match.group(0)
             text_for_translation = re.sub(r"<!-- pages:\d+-\d+ -->\n?", "", ch["text"])
 
-            translated, stop_reason = translate_chapter(text_for_translation, ch["title"], api_key)
+            translated, stop_reason = translate_chapter(
+                text_for_translation, ch["title"], api_key,
+                thinking_budget=thinking_budget, no_thinking=no_thinking,
+            )
 
             # Reinsert page marker at the top of the translated text
             if page_marker:
@@ -166,24 +217,38 @@ def translate(output_dir: Path, state_dir: Path, api_key: str | None = None) -> 
             ch_path.write_text(translated, encoding="utf-8")
 
             # Detect truncation
-            if stop_reason == "max_tokens":
-                print(f"    WARNING: Translation truncated (hit max_tokens)")
-                progress[ch_id] = {"status": "truncated", "file": str(ch_path.name)}
-            elif len(translated) / max(len(ch["text"]), 1) < 0.3:
-                print(f"    WARNING: Translation suspiciously short ({len(translated):,} vs {len(ch['text']):,} input chars)")
-                progress[ch_id] = {"status": "truncated", "file": str(ch_path.name)}
-            else:
-                progress[ch_id] = {"status": "done", "file": str(ch_path.name)}
-
-            atomic_write_json(progress_path, progress)
-
-            print(f"    Done ({len(translated):,} chars)")
-            time.sleep(1)  # Rate limiting
+            elapsed = time.monotonic() - t0
+            with progress_lock:
+                done_count += 1
+                if stop_reason == "max_tokens":
+                    print(f"  [{done_count}/{len(chapters)}] {ch['title']}: TRUNCATED (max_tokens) [{elapsed:.1f}s]")
+                    progress[ch_id] = {"status": "truncated", "file": str(ch_path.name)}
+                elif len(translated) / max(len(ch["text"]), 1) < 0.3:
+                    print(f"  [{done_count}/{len(chapters)}] {ch['title']}: TRUNCATED ({len(translated):,} vs {len(ch['text']):,} chars) [{elapsed:.1f}s]")
+                    progress[ch_id] = {"status": "truncated", "file": str(ch_path.name)}
+                else:
+                    print(f"  [{done_count}/{len(chapters)}] {ch['title']}: done ({len(translated):,} chars) [{elapsed:.1f}s]")
+                    progress[ch_id] = {"status": "done", "file": str(ch_path.name)}
+                atomic_write_json(progress_path, progress)
 
         except Exception as e:
-            print(f"    Error: {e}")
-            progress[ch_id] = {"status": "error", "error": str(e)}
-            atomic_write_json(progress_path, progress)
+            elapsed = time.monotonic() - t0
+            with progress_lock:
+                done_count += 1
+                print(f"  [{done_count}/{len(chapters)}] {ch['title']}: ERROR — {e} [{elapsed:.1f}s]")
+                progress[ch_id] = {"status": "error", "error": str(e)}
+                atomic_write_json(progress_path, progress)
+
+    if workers <= 1:
+        for item in todo:
+            _translate_one(item)
+    else:
+        from concurrent.futures import ThreadPoolExecutor, as_completed
+
+        with ThreadPoolExecutor(max_workers=workers) as executor:
+            futures = {executor.submit(_translate_one, item): item for item in todo}
+            for future in as_completed(futures):
+                future.result()  # propagate unexpected exceptions
 
     # Assemble final English markdown
     assemble_translation(output_dir, state_dir, chapters)
@@ -280,7 +345,17 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--api-key", help="Anthropic API key")
+    parser.add_argument("--workers", type=int, default=1,
+                        help="Concurrent translation workers (default: 1)")
+    parser.add_argument("--thinking-budget", type=int, default=4096,
+                        help="Extended thinking budget in tokens (default: 4096)")
+    parser.add_argument("--no-thinking", action="store_true",
+                        help="Disable extended thinking entirely")
     args = parser.parse_args()
 
     base = Path(__file__).parent
-    translate(base / "output", base / "state", api_key=args.api_key)
+    translate(
+        base / "output", base / "state", api_key=args.api_key,
+        workers=args.workers, thinking_budget=args.thinking_budget,
+        no_thinking=args.no_thinking,
+    )
