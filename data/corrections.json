@@ -1236,6 +1236,11 @@
       "find": "ba-roso",
       "replace": "ba-roso",
       "reason": "accepted:needs_scan"
+    },
+    {
+      "find": "ba-roso ustioni",
+      "replace": "bastioni",
+      "reason": "scan_verified"
     }
   ],
   "p1_ch03": [
@@ -2981,6 +2986,11 @@
       "find": "allo-doli",
       "replace": "allo-doli",
       "reason": "accepted:needs_scan"
+    },
+    {
+      "find": "splendidi dedican-Ordine di idee che potrebbe sembrare ispirato ad impeto barbarico; ma che allo-doli, ritenevo",
+      "replace": "splendidi dedicandoli, ritenevo",
+      "reason": "scan_verified:page_break_merge_error"
     }
   ],
   "p1_ch08": [
