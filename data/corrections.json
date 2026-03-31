@@ -2090,6 +2090,12 @@
       "find": "irapre-veduto",
       "replace": "irapre-veduto",
       "reason": "accepted:already_fixed"
+    },
+    {
+      "find": "impre-veduto",
+      "replace": "impreveduto",
+      "reason": "dehyphenation",
+      "source": "manual"
     }
   ],
   "p1_ch05": [
@@ -2657,6 +2663,12 @@
       "replace": "devamo diradare le loro schiere; per noi doloranti delle loro fe",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "tra-scinantisi",
+      "replace": "trascinantisi",
+      "reason": "dehyphenation",
+      "source": "manual"
     }
   ],
   "p1_ch07": [
@@ -2991,6 +3003,12 @@
       "find": "splendidi dedican-Ordine di idee che potrebbe sembrare ispirato ad impeto barbarico; ma che allo-doli, ritenevo",
       "replace": "splendidi dedicandoli, ritenevo",
       "reason": "scan_verified:page_break_merge_error"
+    },
+    {
+      "find": "dedican-dolly",
+      "replace": "dedicandoli",
+      "reason": "ocr_correction",
+      "source": "manual"
     }
   ],
   "p1_ch08": [
@@ -4290,6 +4308,12 @@
       "find": "un olocausto di parecchie migliaia di peno-sicuro, il più sbrigativo, il meno crudele, per paralizzare il parricida, non passò per la mente ad alcuno o, per lo meno, nessuno osò parlarne. Luigi Napoleone aveva osò il Colpo cifre rivelatrici. Malfattore codardo, colpite a morte le vittime, diventa livido di Stato; quantità era il perno a",
       "replace": "un olocausto di parecchie migliaia di persone! Ma Luigi Napoleone non osò mai pubblicare cifre rivelatrici. Malfattore codardo, colpite a morte le vittime, diventa livido di fronte all'enorme quantità dei cadaveri e pone ogni cura nel trafugarli ai propri occhi, non meno che agli altrui. Il mezzo più sicuro, il più sbrigativo, il meno crudele, per paralizzare il parricida, non passò per la mente ad alcuno o, per lo meno, nessuno osò parlarne. Luigi Napoleone aveva meditato il Colpo di Stato; egli era il perno a",
       "reason": "scan_verified:column_interleave_fix"
+    },
+    {
+      "find": "perso-ci",
+      "replace": "persone",
+      "reason": "ocr_correction",
+      "source": "manual"
     }
   ],
   "p1_ch10": [
@@ -8026,6 +8050,12 @@
       "replace": "\n\nTre giorni e mi riibettevo in viaggio.",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "gio-venta",
+      "replace": "gioventù",
+      "reason": "ocr_correction",
+      "source": "manual"
     }
   ],
   "p1_ch18": [
@@ -17311,6 +17341,12 @@
       "find": "scón-eva",
       "replace": "scón-eva",
       "reason": "accepted:already_fixed"
+    },
+    {
+      "find": "Plon-Plon",
+      "replace": "Plon-Plon",
+      "reason": "accepted:ner",
+      "source": "manual"
     }
   ],
   "p2_ch13": [
@@ -20624,8 +20660,36 @@
   ],
   "p2_ch18": [
     {
-      "find": "IL giorno seguente, alla Kioquette. Ci f",
-      "replace": "Looking at this OCR-corrupted text, I need to carefully reconstruct the clean chapter by removing duplicated passages, fixing garbled words, and restoring proper Italian. The OCR has created many artifacts including repeated sections, garbled tokens, and broken formatting.\n\nIL giorno seguente, alla Kioquette. Ci f",
+      "find": "ragoni e ne conservava le tinte;traverso e forte, malgrado l'et",
+      "replace": "ragoni e ne conservava le tinte; traverso e forte, malgrado l'et",
+      "reason": "missing_space_fix",
+      "source": "targeted_flag"
+    },
+    {
+      "find": "\n\nLa voce del Pieri era, del resto, la nota predominante in quell'ambiente ristretto e severo. E come mai egli, già tanto loquace anche nelle circostanze più incolori 190 s:\n\nglissi\n\ndella vita, avrebbe potuto rassegnarsi al silenzio, ora che forti emozioni lo esaltavano?\n\nParlava e discuteva di tutto ostinatamente... talora anche con vena comica abbondante, specie se gli capitava di confutare gli sproloqui dei nostri Giudici. Ma gira e rigira, ritornava di preferenza sulle sue idee politiche e filosofiche; come se una voragine lo trascinasse inesorabilmente nel cannoncino di quell 'imbuto.\n\nStrano contrasto col contegno del nostro capo, dalla cui cella non usciva, per ore ed ore, il minimo indizio di vita; tanto che parecchie volte mi ero domandato se essa non fosse la tomba di Felice Orsini e se Felice Orsini non fosse diventato la tomba dell'anima sua.\n\nUn'ora al giorno, ci era concesso di passeggiare nel gran cortile; ma non contemporaneamente. Il Pieri era tratto alla sua boccata d'aria, solo; al suo ritorno, io e l'Orsini uscivamo assieme. Portavamo la nostra camicia di forza anche passeggiando ed eravamo guardati, più che a vista, a punta di moschetto.\n\nIn quella breve ora, l'Orsini allargava i polmoni come uomo che rinasca; ma lo sguardo che rivolgeva all'azzurro era pieno di melanconia. Passeggiava celermente ed io, allevato a disciplina militare, lo seguivo, istintivamente un po' in disparte. Avveniva questo: Se io ero di malumore e non parlavo, egli rivolgeva il capo e mi interrogava colio sguardo quasi dicesse: \"Tempesta!?\" Ma se parlavo, tirava via come assorto nella visione d'altri mondi o, se rispondeva, le eran parole tratte dal profondo, col cavaturaccioli.\n\nQuelle parole brevi, bastarono a rivelarmi l'uomo che subiva rapidamente una trasformazione radicale.\n\nFelice Orsini aveva portato in carcere\n\ndue risentimenti; quello contro il Pieri e quello contro Giuseppe Mazzini. È noto che nelle sue \"Memorie\" l'iracondo romagnolo tratteggiava il Mazzini come un moderno Maometto che presuma modellare i destini d'Europa sui capricci delle sue odalische — circostanza questa, di cui si servì a meraviglia il monarchico Cavour. Egli diffuse quelle Memorie a un m ghiaia di copie, gettando così astutamente un ponte che offerse il destro di passare il Rubicone, di ripiegare la bandiera dal motto \"Dio e Popolo\" a troppi e troppi mazziniani, o titubanti per mollezza di fibra, o ansiosi di coonestare, con qualsiasi pretesto, calcoli bassi e venali.\n\nMa l'astio intenso contro il Maestro dileguò il giorno che le guardie e Giulio Favre informarono l'Orsini della nobile difesa di lui fatta dal \"Profeta\" l'indomani dell'attentato, quando altri patrioti, meticolosi sui mezzi di redimere la Patria, lo avevano quasi stigmatizzato come un assassino volgare.\n\nA questa trasformazione, che potrei chiamare rigenerante, un'altra più vasta e di tutt 'altro genere fece riscontro. Meglio affrontar subito l'argomento. Felice Orsini fu l'unico dei tre morituri che ascol tasse, più che passivamente, con compiacente orecchio, le esortazioni del cappellano-dragone. E le nostre passeggiate giornaliere mi insinuarono il preacntimealo di quello che poi avvenne. Le convinzioni lentamente acquistate nella combattuta esistenza si andavano, nell'Orsini, disintegrando e lasciavano riapparire, anzi predominare, i sottostrati saturi di fole assorbite nella ignara fanciullezza. Nell'imminenza della sua fine, egli fece ritorno a quelle pratiche religiose a cui solo la cieca moltitudine dovrebbe attribuire ancora virtù essenziali.\n\nSi inganna perciò e mentisce, inconsciamente, al vero, chi ammirando la stoica fortezza colla quale l'Orsini salì il patibolo, volle farne un modello di coerenza da contrapporre alla figura di Silvio Pellico e d'altri, rammollito, quasi, dai patimenti. Ma sbaglierebbe del pari chi presumesse di tutelarne la grandezza sorvolando sulla sua conversione. Il silenzio nulla attenua e nulla cancella.\n\nBen si può dire a sua difesa, che egli soccombette ad una causa tutt 'altro che ignobile. Capace di ardimenti leonini sotto un impulso fugace, egli nulla poteva, grazie alla sua natura superlativamente sensitiva, contro un pensiero tormentoso, insistente, ostinato, fisso... non quello della morte che gli sovrastava; ma l'altro derivante dalla coscienza della propria responsabilità nella rovina degli alti ideali; dalla visione della tragica morte altrui. I suoi capelli n'erano rapidamente incanutiti... più d'una tenue fibra del suo cervello ne doveva essere rimasta scossa e quasi scalfita.",
+      "replace": "",
+      "reason": "remove_duplicate_passage",
+      "source": "sonnet_with_page_image"
+    },
+    {
+      "find": "inconacia-mente",
+      "replace": "inconsciamente",
+      "reason": "llm_flag_fix:unresolved"
+    },
+    {
+      "find": "cappellano-dragone",
+      "replace": "cappellano-dragone",
+      "reason": "accepted"
+    },
+    {
+      "find": "voragine {•> iras-nasse inesorabilmente",
+      "replace": "voragine lo trascinasse inesorabilmente",
+      "reason": "scan_verified:ocr_correction",
+      "source": "manual"
+    },
+    {
+      "find": "IL giorno seguente, alla Kioquette. Ci fec",
+      "replace": "Il giorno seguente, alla Kioquette. Ci fec",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -20666,44 +20730,8 @@
       "source": "llm"
     },
     {
-      "find": " faceva precedere da qualche sollievo.\n\nfinestre, circostanza contribuiva a render",
-      "replace": " faceva precedere da qualche sollievo.\n\nUnestre, circostanza contribuiva a render",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "ceva precedere da qualche sollievo.\n\nfinestre, circostanza contribuiva a rendermi ",
-      "replace": "ceva precedere da qualche sollievo.\n\nfin'altre, circostanza contribuiva a rendermi ",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": " precedere da qualche sollievo.\n\nfinestre, circostanza contribuiva a rendermi più ",
-      "replace": " precedere da qualche sollievo.\n\nfinestra circostanza contribuiva a rendermi più ",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "a contribuiva a rendermi più sopportabile che comunica col cortile, scorge di fronte l'uscio e la triste ora attuale. Le mie guardie ",
-      "replace": "a contribuiva a rendermi più sopportabile la triste ora attuale. Le mie guardie ",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
       "find": " Le mie guardie mi avevano seguito alla lioquette. Avrebbero dormito alternativame",
       "replace": " Le mie guardie mi avevano seguito alla Roquette. Avrebbero dormito alternativame",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "enzione alcuna di anticipare, suicidandosi, la mia fine. Pieri era oltre la paret",
-      "replace": "enzione alcuna di anticipare, suicidandomi, la mia fine. Pieri era oltre la paret",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "di anticipare, suicidandosi, la mia fine. Pieri era oltre la parete di sinistra; oltre la parete di destra, la mia.\n\nIl giorno stesso del nostro trasloco,",
-      "replace": "di anticipare, suicidandosi, la mia fine.\n\nIl giorno stesso del nostro trasloco,",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -20714,38 +20742,8 @@
       "source": "llm"
     },
     {
-      "find": "rte\n\nlo avrebbe ormai sollevato da un gru peso e che gli sarebbe giunta tanto più",
-      "replace": "rte\n\nlo avrebbe ormai sollevato da un gran peso e che gli sarebbe giunta tanto più",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "più presto. Giulio Favre, per ottenerne Taasenso, dovette quasi forzargli la mano",
-      "replace": "più presto. Giulio Favre, per ottenerne l'aasenso, dovette quasi forzargli la mano",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "ù presto. Giulio Favre, per ottenerne Taasenso, dovette quasi forzargli la mano.\n",
-      "replace": "ù presto. Giulio Favre, per ottenerne Tassenso, dovette quasi forzargli la mano.\n",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "Principiarono i giorni dell'agonia e trascorsero scorsero veloci. Per uno stato d'animo a",
-      "replace": "Principiarono i giorni dell'agonia e trascorsero veloci. Per uno stato d'animo a",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "iegabile, i ricordi di quei giorni mi laìnpeggiano nella mente a sbalzi, risaltand",
-      "replace": "iegabile, i ricordi di quei giorni mi lampeggiano nella mente a sbalzi, risaltand",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": ", i ricordi di quei giorni mi laìnpeggiano nella mente a sbalzi, risaltando quasi",
-      "replace": ", i ricordi di quei giorni mi laìnpeggiamo nella mente a sbalzi, risaltando quasi",
+      "find": "orte lo avrebbe ormai sollevato da un gru peso e che gli sarebbe giunta tanto più",
+      "replace": "orte lo avrebbe ormai sollevato da un gran peso e che gli sarebbe giunta tanto più",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -20756,404 +20754,932 @@
       "source": "llm"
     },
     {
-      "find": "e sarebbe sempre il benvenuto a un patto; non parlarmi mai di soggetti religiosi.",
-      "replace": "e sarebbe sempre il benvenuto a un patto: non parlarmi mai di soggetti religiosi.",
+      "find": "io, ora che forti emozioni lo esaltavano t\n\nParlava e discuteva di tutto oatinatam",
+      "replace": "io, ora che forti emozioni lo esaltavano?\n\nParlava e discuteva di tutto oatinatam",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " mai di soggetti religiosi. Promise e majitenne la parola.\n\nGiuseppe Pieri, invece",
-      "replace": " mai di soggetti religiosi. Promise e mantenne la parola.\n\nGiuseppe Pieri, invece",
+      "find": "tavano t\n\nParlava e discuteva di tutto oatinatameotf... talora anche eon vena com",
+      "replace": "tavano t\n\nParlava e discuteva di tutto ostinatameotf... talora anche eon vena com",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "o. Costretto dalle pietose circostanze, Tex capitano dovette far buon viso a più ",
-      "replace": "o. Costretto dalle pietose circostanze, l'ex capitano dovette far buon viso a più ",
+      "find": "\nParlava e discuteva di tutto oatinatameotf... talora anche eon vena comica Ht-bu",
+      "replace": "\nParlava e discuteva di tutto oatinatamentf... talora anche eon vena comica Ht-bu",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "uace anche nelle circostanze più incolore\n\njot 190 s:\n\nglissi\n\ndella vita, avrebbe pot",
-      "replace": "uace anche nelle circostanze più incolori 190 s:\n\nglissi\n\ndella vita, avrebbe pot",
+      "find": "arlava e discuteva di tutto oatinatameotf... talora anche eon vena comica Ht-buud",
+      "replace": "arlava e discuteva di tutto oatinatameote... talora anche eon vena comica Ht-buud",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "che nelle circostanze più incolore\n\njot 190 s:\n\nglissi\n\ndella vita, avrebbe potuto rassegnarsi a",
-      "replace": "che nelle circostanze più incolore\n\njot della vita, avrebbe potuto rassegnarsi a",
+      "find": " di tutto oatinatameotf... talora anche eon vena comica Ht-buudante, speaic se gl",
+      "replace": " di tutto oatinatameotf... talora anche con vena comica Ht-buudante, speaic se gl",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "tto ostinatamente... talora anche con verna comica abbondante, specie se gli capi",
-      "replace": "tto ostinatamente... talora anche con vena comica abbondante, specie se gli capi",
+      "find": "tameotf... talora anche eon vena comica Ht-buudante, speaic se gli capitava di eoof",
+      "replace": "tameotf... talora anche eon vena comica abuudante, speaic se gli capitava di eoof",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " fosse diventato la tomba dell'anima sua\n\nUn'ora al giorno, ci era concesso di p",
-      "replace": " fosse diventato la tomba dell'anima sua.\n\nUn'ora al giorno, ci era concesso di p",
+      "find": "otf... talora anche eon vena comica Ht-buudante, speaic se gli capitava di eoofuta",
+      "replace": "otf... talora anche eon vena comica Ht-bbondante, speaic se gli capitava di eoofuta",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " quella breve ora, l'Orsini allargava i i>polmoni come uomo che rinasca; ma lo sgu",
-      "replace": " quella breve ora, l'Orsini allargava i polmoni come uomo che rinasca; ma lo sgu",
+      "find": "a anche eon vena comica Ht-buudante, speaic se gli capitava di eoofutare gli spro",
+      "replace": "a anche eon vena comica Ht-buudante, specic se gli capitava di eoofutare gli spro",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "egli rivolgeva il capo e mi interrogava olio sguardo quasi dicesse: \"Tempesta!?\"",
-      "replace": "egli rivolgeva il capo e mi interrogava colio sguardo quasi dicesse: \"Tempesta!?\"",
+      "find": "anche eon vena comica Ht-buudante, speaic se gli capitava di eoofutare gli sprolo",
+      "replace": "anche eon vena comica Ht-buudante, speaie se gli capitava di eoofutare gli sprolo",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "li rivolgeva il capo e mi interrogava olio sguardo quasi dicesse: \"Tempesta!?\" Ma",
-      "replace": "li rivolgeva il capo e mi interrogava ollo sguardo quasi dicesse: \"Tempesta!?\" Ma",
+      "find": " Ht-buudante, speaic se gli capitava di eoofutare gli sproloqui dei nostri Oitidi",
+      "replace": " Ht-buudante, speaic se gli capitava di coofutare gli sproloqui dei nostri Oitidi",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ome assorto nella visione d'altri mondi 0, se rispondeva, le eran parole tratte d",
-      "replace": "ome assorto nella visione d'altri mondi o, se rispondeva, le eran parole tratte d",
+      "find": "t-buudante, speaic se gli capitava di eoofutare gli sproloqui dei nostri Oitidici",
+      "replace": "t-buudante, speaic se gli capitava di eonfutare gli sproloqui dei nostri Oitidici",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "Pieri e quello contro Giuseppe Mazzini. E' noto che nelle sue \"Memorie\" l'iracondo",
-      "replace": "Pieri e quello contro Giuseppe Mazzini. È noto che nelle sue \"Memorie\" l'iracondo",
+      "find": "a di eoofutare gli sproloqui dei nostri Oitidici. Ma gira e rigira, ritornava di ",
+      "replace": "a di eoofutare gli sproloqui dei nostri gitidici. Ma gira e rigira, ritornava di ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "o Cavour. Egli diffuse quelle Memorie a xm ghiaia di copie, gettando così astutam",
-      "replace": "o Cavour. Egli diffuse quelle Memorie a un m ghiaia di copie, gettando così astutam",
+      "find": "di eoofutare gli sproloqui dei nostri Oitidici. Ma gira e rigira, ritornava di pre",
+      "replace": "di eoofutare gli sproloqui dei nostri Oiudici. Ma gira e rigira, ritornava di pre",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "Cavour. Egli diffuse quelle Memorie a xm ghiaia di copie, gettando così astutamen",
-      "replace": "Cavour. Egli diffuse quelle Memorie a xmighiaia di copie, gettando così astutamen",
+      "find": "egno del nostro capo, dalla cui cella nou usciva, per ore ed ore, ìl minimo indiz",
+      "replace": "egno del nostro capo, dalla cui cella non usciva, per ore ed ore, ìl minimo indiz",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "vour. Egli diffuse quelle Memorie a xm ghiaia di copie, gettando così astutamente",
-      "replace": "vour. Egli diffuse quelle Memorie a xm gliaia di copie, gettando così astutamente",
+      "find": "a cui cella nou usciva, per ore ed ore, ìl minimo indizio di vita; tanto che pare",
+      "replace": "a cui cella nou usciva, per ore ed ore, il minimo indizio di vita; tanto che pare",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "meticolosi sui mezzi di redimere la Patra, lo avevano quasi stigmatizzato come u",
-      "replace": "meticolosi sui mezzi di redimere la Patria, lo avevano quasi stigmatizzato come u",
+      "find": "to che parecchie volte mi ero domandato nn essA non fosse la tomba di Felice Orsin",
+      "replace": "to che parecchie volte mi ero domandato se essA non fosse la tomba di Felice Orsin",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "seggiate giornaliere mi insinuarono il px'eacntimealo di quello che poi avvenne. L",
-      "replace": "seggiate giornaliere mi insinuarono il preacntimealo di quello che poi avvenne. L",
+      "find": " parecchie volte mi ero domandato nn essA non fosse la tomba di Felice Orsini t s",
+      "replace": " parecchie volte mi ero domandato nn essa non fosse la tomba di Felice Orsini t s",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "giate giornaliere mi insinuarono il px'eacntimealo di quello che poi avvenne. Le c",
-      "replace": "giate giornaliere mi insinuarono il px'esentimealo di quello che poi avvenne. Le c",
+      "find": "essA non fosse la tomba di Felice Orsini t se Felice Orsini nou fosse diventalo la",
+      "replace": "essA non fosse la tomba di Felice Orsini; se Felice Orsini nou fosse diventalo la",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "iornaliere mi insinuarono il px'eacntimealo di quello che poi avvenne. Le convinzi",
-      "replace": "iornaliere mi insinuarono il px'eacntimento di quello che poi avvenne. Le convinzi",
+      "find": "a di Felice Orsini t se Felice Orsini nou fosse diventalo la tomba dell'anima sua",
+      "replace": "a di Felice Orsini t se Felice Orsini non fosse diventalo la tomba dell'anima sua",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " riapparire, anzi predominare, i sottostati saturi di fole assorbite nella ignar",
-      "replace": " riapparire, anzi predominare, i sottostrati saturi di fole assorbite nella ignar",
+      "find": "ini t se Felice Orsini nou fosse diventalo la tomba dell'anima sua\n\nUn'ora al gio",
+      "replace": "ini t se Felice Orsini nou fosse diventato la tomba dell'anima sua\n\nUn'ora al gio",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "\nSi inganna perciò e mentisce, inconscia-\n\n3iÌt9IÌE:\n\nmente, al vero, chi ammirando la stoica ",
-      "replace": "\nSi inganna perciò e mentisce, inconsciamente, al vero, chi ammirando la stoica ",
+      "find": " fosse diventalo la tomba dell'anima sua\n\nUn'ora al giorno, ci era eoncesiso di ",
+      "replace": " fosse diventalo la tomba dell'anima sua.\n\nUn'ora al giorno, ci era eoncesiso di ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "gura di Silvio Pellico e d'altri, rammolito, quasi, dai patimenti. Ma sbagliereb",
-      "replace": "gura di Silvio Pellico e d'altri, rammollito, quasi, dai patimenti. Ma sbagliereb",
+      "find": "ell'anima sua\n\nUn'ora al giorno, ci era eoncesiso di passeggiare nel gran cortile",
+      "replace": "ell'anima sua\n\nUn'ora al giorno, ci era concesiso di passeggiare nel gran cortile",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ra di Silvio Pellico e d'altri, rammolito, quasi, dai patimenti. Ma sbaglierebbe ",
-      "replace": "ra di Silvio Pellico e d'altri, rammoliti, quasi, dai patimenti. Ma sbaglierebbe ",
+      "find": "ima sua\n\nUn'ora al giorno, ci era eoncesiso di passeggiare nel gran cortile; ma n",
+      "replace": "ima sua\n\nUn'ora al giorno, ci era eoncesso di passeggiare nel gran cortile; ma n",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "fita.\n\nFelice Orsini non posò mai del reato, d'innanzi ai suoi contemporanei, com",
-      "replace": "fita.\n\nFelice Orsini non posò mai del resto, d'innanzi ai suoi contemporanei, com",
+      "find": "aneamente. Il Pieri era tratto alla sua toccala d'aria, solo; al suo ritorno, io ",
+      "replace": "aneamente. Il Pieri era tratto alla sua boccala d'aria, solo; al suo ritorno, io ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "etri. Ci trattava in modo molto affabile: né mai tralasciava di adoperarsi per in",
-      "replace": "etri. Ci trattava in modo molto affabile; né mai tralasciava di adoperarsi per in",
+      "find": "ente. Il Pieri era tratto alla sua toccala d'aria, solo; al suo ritorno, io e l'O",
+      "replace": "ente. Il Pieri era tratto alla sua toccata d'aria, solo; al suo ritorno, io e l'O",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": ". Ci trattava in modo molto affabile: né mai tralasciava di adoperarsi per insinuare nell'animo nostro qualche raggio di speranza... ora\n\naffermando che il Tribunale d'Appello avrebbe, con tutta probabilità, annullato il nostro processo; ora assicurando che l'Imperatrice e un forte partito di Corte si mostravano propensi alla clemenza così apertamente che l'animo di Napoleone avrebbe finito per rimanerne influenzate e vinto. j\n\nMa né i suoi modi, né la sua fisionomia intelligente valevano a dissipare la diffidenza istintiva, a colmare l'abisso che separa il cospiratore da un uomo che deve, per forza di- cose, dargli la caccia e trarre il proprio esattamento dalla sua rovina.\n\nQuesta diffidenza era in me inasprita da altre circostanze. A più riprese, io aveva inviato ad Elisa lettere appassionatissime. Quando volevo scrivere, la guardia di turno mi Liberava, più o meno, la destra; poi, rilegatala, portava Io scritto al Direttore del carcere perchè vi apponesse il nulla osta. Ma le mie calde invocazioni non ebbero risposta... silenzio assoluto, come se l 'Elisa mi avesse completamente abbandonato, o fosse morta. E' facile immaginarsi le mie torture. Poi, d'improvviso, mi entrò nel cuore il sospetto che si trattasse di una raffinata crudeltà della Polizia, per fini che non potevo ben comprendere, ma la cui esistenza intuivo. Da quel momento le mie torture cessarono... per far posto ad un soixio rancore contro chi me le aveva procurate.\n\nInoltre il Pietri aveva il torto di condurci'e al carcere, quasi costantemente, ora questo, ora quel personaggio. Una morbosi curiosità pare sospingesse le alte classi a verificare, che so io? forse se eran proprio contesti di carne e d'ossa coloro elle avevano osato provocare tanto scompiglio. A me quell 'esser messo in mostra, come una belva in gabbia, pesava terribilmente.\n\n■JBt 192 iC\n\nMI\n\nUn giorno vero, chi ammirando la stoica fortezza colla quale l'Orsini salì il patibolo, volle farne un modello di coerenza da contrapporre alla figura di Silvio Pellico e d'altri, rammollite, quasi, dai patimenti. Ma sbaglierebbe del pari chi presumesse di tutelarne la grandezza sorvolando sulla sua conversione. Il silenzio nulla attenua e nulla cancella. Ben si può dire a sua difesa, che egli soccombette ad una causa tutt'altro che ignobile. Capace di ardimenti leonini sotto un impulso fugace, egli nulla poteva, grazie alla sua natura superlativamente sensitiva, contro un pensiero tormentoso, insistente, ostinato, fisso... non quello della morte che gli sovrastava; ma l'altro derivante dalla coscienza della propria responsabilità nella rovina degli alti ideali; dalla visione della tragica morte altrui. I suoi capelli n'erano rapidamente incanutiti... più d'una tenue fibra del suo cervello ne doveva essere rimasta scossa e quasi scalfita. Felice Orsini non posò mai del resto, d'innanzi ai suoi contemporanei, come uno scopritore di verità filosofiche e morali. Patriotta si disse, invece, e fu sin dalla prima giovinezza; patriota fu e si proclamò sinchè ebbe il capo sotto la lama della ghigliottina. Egli aveva promesso all'Italia ogni sua energia e sin l'ultima stilla del proprio sangue. L'Italia ebbe figli più grandi, non più incondizionatamente fedeli. Io dico che non c'è bisogno di spigolare in altri campi per costituire la gloria di Felice Orsini!... Oltre il cappellano-dragone faceva quasi giornalmente la sua comparsa alla Roquette un personaggio molto potente, il Prefetto della Polizia Pietri. Ci trattava in modo molto affabile; nè mai tralasciava di adoperarsi per insin",
-      "replace": ". Ci trattava in modo molto affabile: né mai tralasciava di adoperarsi per insin",
+      "find": " di forza anche passeggiando ed eravamo ^ardati, più che a vista, u punta di mosc",
+      "replace": " di forza anche passeggiando ed eravamo guardati, più che a vista, u punta di mosc",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " per rimanerne influenzato e vinto. Ma nè i suoi modi, nè la sua fisionomia intel",
-      "replace": " per rimanerne influenzato e vinto. Ma né i suoi modi, nè la sua fisionomia intel",
+      "find": "do ed eravamo ^ardati, più che a vista, u punta di moschetto.\n\nIn quella breve or",
+      "replace": "do ed eravamo ^ardati, più che a vista, a punta di moschetto.\n\nIn quella breve or",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "nfluenzato e vinto. Ma nè i suoi modi, nè la sua fisionomia intelligente valevano",
-      "replace": "nfluenzato e vinto. Ma nè i suoi modi, né la sua fisionomia intelligente valevano",
+      "find": " quella breve ora, l'Orsini allargava i |)olmonÌ come uomo che rinasca; ma lo sgua",
+      "replace": " quella breve ora, l'Orsini allargava i polmonÌ come uomo che rinasca; ma lo sgua",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "volevo scrivere, la guardia di turno mi trovai più cella, col Pietri, un militare",
-      "replace": "volevo scrivere, la guardia di turno mi liberovai più cella, col Pietri, un militare",
+      "find": " breve ora, l'Orsini allargava i |)olmonÌ come uomo che rinasca; ma lo sguardo ch",
+      "replace": " breve ora, l'Orsini allargava i |)olmoni come uomo che rinasca; ma lo sguardo ch",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "levo scrivere, la guardia di turno mi trovai più cella, col Pietri, un militare r",
-      "replace": "levo scrivere, la guardia di turno mi travai più cella, col Pietri, un militare r",
+      "find": " all'azzurro era pieno di melanconia. Paiiseggiava celeramenle ed io, allevato a d",
+      "replace": " all'azzurro era pieno di melanconia. Passeggiava celeramenle ed io, allevato a d",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "o scrivere, la guardia di turno mi trovai più cella, col Pietri, un militare rile",
-      "replace": "o scrivere, la guardia di turno mi trova, più cella, col Pietri, un militare rile",
+      "find": "no di melanconia. Paiiseggiava celeramenle ed io, allevato a disciplina militare,",
+      "replace": "no di melanconia. Paiiseggiava celeramente ed io, allevato a disciplina militare,",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "vere, la guardia di turno mi trovai più cella, col Pietri, un militare rilegatala",
-      "replace": "vere, la guardia di turno mi trovai più o mella, col Pietri, un militare rilegatala",
+      "find": "umore e non parlavo, egli rivolgeva il cupo e mi totetrogava collo sguardo quasi ",
+      "replace": "umore e non parlavo, egli rivolgeva il capo e mi totetrogava collo sguardo quasi ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "re, la guardia di turno mi trovai più cella, col Pietri, un militare rilegatala, ",
-      "replace": "re, la guardia di turno mi trovai più ceno, la, col Pietri, un militare rilegatala, ",
+      "find": "on parlavo, egli rivolgeva il cupo e mi totetrogava collo sguardo quasi dicesse: \"",
+      "replace": "on parlavo, egli rivolgeva il cupo e mi intetrogava collo sguardo quasi dicesse: \"",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " la guardia di turno mi trovai più cella, col Pietri, un militare rilegatala, bor",
-      "replace": " la guardia di turno mi trovai più cella col Pietri, un militare rilegatala, bor",
+      "find": "arlavo, egli rivolgeva il cupo e mi totetrogava collo sguardo quasi dicesse: \"Tem",
+      "replace": "arlavo, egli rivolgeva il cupo e mi toterrogava collo sguardo quasi dicesse: \"Tem",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "a guardia di turno mi trovai più cella, col Pietri, un militare rilegatala, bordo che ",
-      "replace": "a guardia di turno mi trovai più cella, detri, un militare rilegatala, bordo che ",
+      "find": "a collo sguardo quasi dicesse: \"Tempesta IT\" Ma se parlavo, tirava via carne assort",
+      "replace": "a collo sguardo quasi dicesse: \"Tempesta?\" Ma se parlavo, tirava via carne assort",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ia di turno mi trovai più cella, col Pietri, un militare rilegatala, bordo che s",
-      "replace": "ia di turno mi trovai più cella, col Piestri, un militare rilegatala, bordo che s",
+      "find": "Tempesta IT\" Ma se parlavo, tirava via carne assorto nella visione d'altri mondi o,",
+      "replace": "Tempesta IT\" Ma se parlavo, tirava via come assorto nella visione d'altri mondi o,",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " di turno mi trovai più cella, col Pietri, un militare rilegatala, bordo che scr",
-      "replace": " di turno mi trovai più cella, col Pietra; poi, un militare rilegatala, bordo che scr",
+      "find": "visione d'altri mondi o, se rispondeva, te era\" parole tratte dal profondo, col c",
+      "replace": "visione d'altri mondi o, se rispondeva, le era\" parole tratte dal profondo, col c",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "i turno mi trovai più cella, col Pietri, un militare rilegatala, bordo che scritto al Dirett",
-      "replace": "i turno mi trovai più cella, col Pietri, rilegatala, bordo che scritto al Dirett",
+      "find": "e d'altri mondi o, se rispondeva, te era\" parole tratte dal profondo, col cavatur",
+      "replace": "e d'altri mondi o, se rispondeva, te era parole tratte dal profondo, col cavatur",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "la, col Pietri, un militare rilegatala, bordo che scritto al Direttore del carcer",
-      "replace": "la, col Pietri, un militare rilegatala, pordo che scritto al Direttore del carcer",
+      "find": "l cavaturaccioli.\n\nQuelle parole brevi, haslarooo a rivelarmi l'uomo che subiva r",
+      "replace": "l cavaturaccioli.\n\nQuelle parole brevi, baslarooo a rivelarmi l'uomo che subiva r",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " col Pietri, un militare rilegatala, bordo che scritto al Direttore del carcere p",
-      "replace": " col Pietri, un militare rilegatala, bortava lo che scritto al Direttore del carcere p",
+      "find": "avaturaccioli.\n\nQuelle parole brevi, haslarooo a rivelarmi l'uomo che subiva rapi",
+      "replace": "avaturaccioli.\n\nQuelle parole brevi, hastarooo a rivelarmi l'uomo che subiva rapi",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ol Pietri, un militare rilegatala, bordo che scritto al Direttore del carcere perchè",
-      "replace": "ol Pietri, un militare rilegatala, bordo scritto al Direttore del carcere perchè",
+      "find": "uraccioli.\n\nQuelle parole brevi, haslarooo a rivelarmi l'uomo che subiva rapidame",
+      "replace": "uraccioli.\n\nQuelle parole brevi, haslarono a rivelarmi l'uomo che subiva rapidame",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "e scritto al Direttore del carcere perchè vi apponesse il nulla osta. Ma le mie c",
-      "replace": "e scritto al Direttore del carcere perché vi apponesse il nulla osta. Ma le mie c",
+      "find": "carcere due risentimenti; quello contro ìl Pieri e quello contro Giuseppe Manzini",
+      "replace": "carcere due risentimenti; quello contro il Pieri e quello contro Giuseppe Manzini",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "mpletamente abbandonato, o fosse morta. E' facile immaginarsi le mie torture. Poi,",
-      "replace": "mpletamente abbandonato, o fosse morta. È facile immaginarsi le mie torture. Poi,",
+      "find": "tro ìl Pieri e quello contro Giuseppe Manzini. E' noto che nelle sue \"Memorie\" l'",
+      "replace": "tro ìl Pieri e quello contro Giuseppe Mazzini. E' noto che nelle sue \"Memorie\" l'",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "un sordo rancore contro chi me le aveva la testa fasciata. Non rammento bene tor",
-      "replace": "un sordo rancore contro chi me le aveva procurate.\n\nInola testa fasciata. Non rammento bene tor",
+      "find": "ni. E' noto che nelle sue \"Memorie\" l'irawHido romagnolo tratteggiava il Mazzini come ",
+      "replace": "ni. E' noto che nelle sue \"Memorie\" l'irruente romagnolo tratteggiava il Mazzini come ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "n sordo rancore contro chi me le aveva la testa fasciata. Non rammento bene tort",
-      "replace": "n sordo rancore contro chi me le aveva ltre il Pietri aveva testa fasciata. Non rammento bene tort",
+      "find": "cui si servì a meraviglia il monarchico (':4vour. Kgli diffuse quelle Memorie a m^ t",
+      "replace": "cui si servì a meraviglia il monarchico Cavour. Kgli diffuse quelle Memorie a m^ t",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "sordo rancore contro chi me le aveva la testa fasciata. Non rammento bene torto di condurr",
-      "replace": "sordo rancore contro chi me le aveva la iata. Non rammento bene torto di condurr",
+      "find": "vì a meraviglia il monarchico (':4vour. Kgli diffuse quelle Memorie a m^ tfìiaia ",
+      "replace": "vì a meraviglia il monarchico (':4vour. Egli diffuse quelle Memorie a m^ tfìiaia ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "re contro chi me le aveva la testa fasciata. Non rammento bene torto di condurre al carcere, quasi cos",
-      "replace": "re contro chi me le aveva la testa fascil torto di condurre al carcere, quasi cos",
+      "find": "':4vour. Kgli diffuse quelle Memorie a m^ tfìiaia di copie, gettando così astutauin. ",
+      "replace": "':4vour. Kgli diffuse quelle Memorie a migliaia di copie, gettando così astutauin. ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "lassi a verificare, che so io? forse se fosse il generale Magnan o il generale Eo",
-      "replace": "lassi a verificare, che so io? forse se eran proprio composti di carne e d'osse il generale Magnan o il generale Eo",
+      "find": "^ tfìiaia di copie, gettando così astutauin. te un ponte che offerse ìl destro di ",
+      "replace": "^ tfìiaia di copie, gettando così astutamen. te un ponte che offerse ìl destro di ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "i a verificare, che so io? forse se fosse il generale Magnan o il generale Eogue",
-      "replace": "i a verificare, che so io? forse se fossa coloro che il generale Magnan o il generale Eogue",
+      "find": "fìiaia di copie, gettando così astutauin. te un ponte che offerse ìl destro di pas",
+      "replace": "fìiaia di copie, gettando così astutauinte un ponte che offerse ìl destro di pas",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "a verificare, che so io? forse se fosse il generale Magnan o il generale Eoguet. Il ",
-      "replace": "a verificare, che so io? forse se fosse avenerale Magnan o il generale Eoguet. Il ",
+      "find": "così astutauin. te un ponte che offerse ìl destro di passare il Rubicone, di ripi",
+      "replace": "così astutauin. te un ponte che offerse il destro di passare il Rubicone, di ripi",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ificare, che so io? forse se fosse il generale Magnan o il generale Eoguet. Il Pietri osato",
-      "replace": "ificare, che so io? forse se fosse il gevan o il generale Eoguet. Il Pietri osato",
+      "find": "e, di ripiegare la bandiera dal motto \"Dìo e Popolo\" a troppi e trop pi mazzinian",
+      "replace": "e, di ripiegare la bandiera dal motto \"Dio e Popolo\" a troppi e trop pi mazzinian",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " io? forse se fosse il generale Magnan o il generale Eoguet. Il Pietri osato provocare tanto scompiglio. A me ",
-      "replace": " io? forse se fosse il generale Magnan o osato provocare tanto scompiglio. A me ",
+      "find": "opolo\" a troppi e trop pi mazziniani, o litubaoti per mollezza dì fibra, o ansios",
+      "replace": "opolo\" a troppi e trop pi mazziniani, o titubaoti per mollezza dì fibra, o ansios",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " osato provocare tanto scompiglio. A me lo presentò semplicemente mostra, come u",
-      "replace": " osato provocare tanto scompiglio. A me quelo presentò semplicemente mostra, come u",
+      "find": " a troppi e trop pi mazziniani, o litubaoti per mollezza dì fibra, o ansiosi di c",
+      "replace": " a troppi e trop pi mazziniani, o litubanti per mollezza dì fibra, o ansiosi di c",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "osato provocare tanto scompiglio. A me lo presentò semplicemente mostra, come un",
-      "replace": "osato provocare tanto scompiglio. A me ll'esser messo presentò semplicemente mostra, come un",
+      "find": "i mazziniani, o litubaoti per mollezza dì fibra, o ansiosi di coonestare, con qua",
+      "replace": "i mazziniani, o litubaoti per mollezza di fibra, o ansiosi di coonestare, con qua",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ato provocare tanto scompiglio. A me lo presentò semplicemente mostra, come una delle",
-      "replace": "ato provocare tanto scompiglio. A me lo intò semplicemente mostra, come una delle",
+      "find": "alsiasi pretesto, calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro ",
+      "replace": "alsiasi pretesto, calcoli bassi e venali.\n\nMa l'antico intenso contro i| Maestro ",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ovocare tanto scompiglio. A me lo presentò semplicemente mostra, come una delle vostre gabbia, i",
-      "replace": "ovocare tanto scompiglio. A me lo presen mostra, come una delle vostre gabbia, i",
+      "find": "o, calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl gior",
+      "replace": "o, calcoli bassi e venali,\n\nMa l'antico rantenso contro i| Maestro dilegua ìl gior",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "presentò semplicemente mostra, come una delle vostre gabbia, il che fece prorompe",
-      "replace": "presentò semplicemente mostra, come una belle vostre gabbia, il che fece prorompe",
+      "find": " calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno",
+      "replace": " calcoli bassi e venali,\n\nMa l'antico incorenso contro i| Maestro dilegua ìl giorno",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "sentò semplicemente mostra, come una delle vostre gabbia, il che fece prorompere i",
-      "replace": "sentò semplicemente mostra, come una delva vostre gabbia, il che fece prorompere i",
+      "find": "alcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno che",
+      "replace": "alcoli bassi e venali,\n\nMa l'antico inte contro i| Maestro dilegua ìl giorno che",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "tò semplicemente mostra, come una delle vostre gabbia, il che fece prorompere il mio m",
-      "replace": "tò semplicemente mostra, come una delle in gabbia, il che fece prorompere il mio m",
+      "find": " e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno che le guardi",
+      "replace": " e venali,\n\nMa l'antico intenso contro il Maestro dilegua ìl giorno che le guardi",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "e mostra, come una delle vostre gabbia, il che fece prorompere il mio mal umore,",
-      "replace": "e mostra, come una delle vostre gabbia, pesava terribil che fece prorompere il mio mal umore,",
+      "find": "'antico intenso contro i| Maestro dilegua ìl giorno che le guardie e Giulio Favre",
+      "replace": "'antico intenso contro i| Maestro dileguò ìl giorno che le guardie e Giulio Favre",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "mostra, come una delle vostre gabbia, il che fece prorompere il mio mal umore, dibattei aspramente che io non avevo cercato di colpir",
-      "replace": "mostra, come una delle vostre gabbia, ilmente che io non avevo cercato di colpir",
+      "find": "ntico intenso contro i| Maestro dilegua ìl giorno che le guardie e Giulio Favre i",
+      "replace": "ntico intenso contro i| Maestro dilegua il giorno che le guardie e Giulio Favre i",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "re il mio mal umore, dibattei aspramente che io non avevo cercato di colpire se non che l'uomo che fu la rovina del mio Paese. E quanto all'essere vittima... ben volontieri avrei mutato panni con quel ferito.\n\nUn giorno mi trovai nella cella, col ",
-      "replace": "re il mio mal umore, dibattei aspramente.\n\nUn giorno mi trovai nella cella, col ",
+      "find": "vre informarono l'Orsini della nobile diTesa di Ini l'atta dal \"Profeta\" l'indo m",
+      "replace": "vre informarono l'Orsini della nobile difesa di Ini l'atta dal \"Profeta\" l'indo m",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ione d'Italia, quanto Napoleone. Cosicchè se io consideravo le cose coll'occhio del patriota illuminato, non tarderei a comprendere di poter giovare meglio a me stesso ed alla Patria aiutando, alleandomi per così dire, all'uomo che avevo tentato d'uccidere. Credo che la mia faccia esprimesse tutta la mia profonda meraviglia, perchè il Pietri mi mise paternamente una mano sulla spalla e abbassando sempre più la voce, disse: \"So che tratto con un giovanotto intelligente e mi attendo perciò di non essere considerato come uno zotico. Tra Sua Maestà e i suoi alti disegni, stanno i nemici interni dell'Impero. Troppo deboli per agire apertamente, si sono segretamente alleati ai nemici esterni ed hanno congiurato. Io non sono venuto a proporle nulla di disonorevole. La salvezza, il benessere degli Stati hanno le loro esigenze ineluttabili. Aiuti l'alto personaggio, da cui può dipendere il trionfo della causa italiana; lo premunisca contro i suoi nemici interni ed io le do la mia parola d'onore che Ella non tarderà a raggiungere la sua giovane sposa. Per quale strana aberrazione, vorrebbe lasciarla povera, abbandonata e sola a lottare nel mondo e contro il mondo?\" Ora la ragion vera del preteso silenzio di Elisa mi appariva, più che adombrata, evidente; ora il mio sdegno aveva doppia ragione di prorompere. \"Non so nulla— risposi — e nulla posso rivelare. Ma quand'anche... voi, voi stesso, se acco- 193 -7- (C. by C. C.)\n\nParve meravigliarsi; vostre proposte, sareste il primo a provare orrore per me. Nè da voi, Corso, me le sarei aspettate... gli Italiani aborrono i traditori!” La mia naturale vivacità mi sospingeva a gestire e, non potendolo, tremavo. Ma senza volerlo, avevo toccato una corda sensibile in un cuore non al tutto spoglio di nobili sentimenti. Io vidi quell'uomo, rotto a tante emozioni, coprirsi la faccia colle mani. Pochi secondi e mi guardava in viso... i suoi occhi erano rossi di lagrime. Partì promettendo che avrebbe fatto tutto quanto dipendeva da lui per salvare la nostra testa. Se falliva nell'intento, avrebbe rassegnato le proprie dimissioni. Io non ha motivo alcuno per dubitare della sincerità di quell'uomo; ma dire ciò che realmente abbia fatto, o tentato di fare, non so. Questo è certo: L'undici Marzo egli venne alla Roquette e comunicò a Felice Orsini, se non altro, le sue speranze. Fu poco prima dell'ora destinata alla nostra passeggiata. La conversazione fra i due ferveva ancora, quando quell'ora suonò e le guardie mi trassero nel cortile, solo. Al mio ritorno, Felice Orsini, sempre così taciturno e quasi cupo, mi apparve d'un subito trasformato e sto per dire ilare. Non appena mi vide, disse ad alta voce: “Di Rudio, sta di buon animo. Noi non saremo giustiziati!” Questo avveniva, ripeto, la mattina dell'undici Marzo. La sera stessa, la Corte di Cassazione respingeva il nostro appello. Se l'affermazione dell'Orsini era destinata ad avere riscontro nella realtà, gli avvenimenti del 12 Marzo lo avrebbero dimostrato. La giornata trascorse e le no stre aspettative rimasero deluse. La stessa notte del 12, al chiarore delle torcie, si accontentò di stringersi nelle spalle. ad erigere il patibolo. La spiegazione dell'enigma? L'ebbi più tardi dalla bocca di Mathieu de la Drôme. L'opinione pubblica esercitava una forte pressione a nostro favore. A dispetto della Polizia, nei ritrovi popolari si cantava una canzone esaltante, “gli eroi del 14 Gennaio”. Per la clemenza si erano dichiarati l'Imperatrice e un forte partito di Corte. Napoleone III chiamava indecenti le loro manifestazioni; ma non gli bastava l'animo d'opporvisi apertamente. Eliminare i nemici caduti in suo potere, gettare lo spavento tra quelli che gli erano sfuggiti... tale il segreto anelito del liberticida; ma bisognava farlo, dandosi l'aria d'aver la mano forzata, quasi per scrupoloso rispetto alle Leggi, addossandone ad altri la responsabilità. Il Consiglio di Stato venne radunato per decidere sulla maggiore o minore opportunità della grazia sovrana e l'Imperatore vi fece un'apparizione fugace. “Liberi i Consiglieri della Corona — disse — di votare secondo la propria coscienza; ma non poteva esimersi dal manifestare una sua convinzione. In quel Consesso, si celavano i traditori!” Era la fosca minaccia. I Consiglieri venivano radunati non per assecondare la marea della pietà, ma per rendere un servigio al padrone. Potevano i dignitari di un Impero, la cui essenza era l'affarismo e la corruzione e che, in tal vortice, avrebbe travolta la Francia intera, titubare tra le laute sinecure e la vita di pochi reietti, fatti incapaci di reagire e di nuocere? E non aveva la ragion di Stato dissimulate ben altre codardi? Quasi non bastasse, l'Arcivescovo di Parigi, subodorata la situazione, ammorta la mite influenza di Eugenia Montijo, ponendo tra essa e l'Imperatore, le ponderate, sottili esortazioni della Chiesa. Mai gli odi e gli interessi del clericalismo e dello Stato si erano mostrati tanto affini... i congiurati odoravano di Masso- 194\n\nnera; giorno seguente ritornò solo e, prima per metter fine a quel potere mondano che è lo scopo mal celato e supremo d'ogni imbroglio religioso; essi, potendolo, avrebbero rinnovata la lotta. Ben valeva la pena di entrare nella cella stette per qualche secondo, ritto sulla soglia, ingombrando il vano colla sua bella ed alta persona. A me parve di notare in quella fisionomia qualcosa di insolito, di inquisitivo. Entrò e, dopo aver ripetuto, in modo più affabile e, sto per dire, più paterno del solito, le solite frasi, si fregò la fronte e, abbassando alquanto la voce — la guardia era, del resto, uscita al suo apparire — mi parlò intensamente della sua profonda simpatia per la mia giovinezza. E, compiangendo la triste sorte che mi era riserbata, un pò ' per forza di circostanze, un pò ' anche — ^disse — per la suprema leggerezza de' miei compagni, mi assicurò d'aver molto meditato per trovar modo di salvarmi... e non me solo! Già io sapevo come a Corte non si rifuggisse dall 'adottare misure temperate a clemenza. Ma io ignoravo —\n\nsoggiunse Consiglio di Stato ed il clero!... Napoleone III n'ebbe più di quanto sperava e il suo animo, che Sua Maestà i era pure animato da vivissime simpatie per l'Italia, la cui grandezza ammirava, le cui sventure profondamente lo commuovevano. Una volta messo su simile via, un uomo simile, sè potrebbe predire dove si arresterebbe? Certo nessun sovrano d'Europa era in grado di poter giovare alla redenzione d'Italia, quanto Napoleone. Cosicché se io consideravo le cose coll 'occhio",
-      "replace": "ione d'Italia, quanto Napoleone. Cosicché se io consideravo le cose coll 'occhio",
+      "find": "rmarono l'Orsini della nobile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'",
+      "replace": "rmarono l'Orsini della nobile diTesa di lui l'atta dal \"Profeta\" l'indo mani dell'",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ò dipendere il trionfo della causa italicina; lo premunisca contro i suoi nemici i",
-      "replace": "ò dipendere il trionfo della causa italiana; lo premunisca contro i suoi nemici i",
+      "find": "ono l'Orsini della nobile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'atte",
+      "replace": "ono l'Orsini della nobile diTesa di Ini fatta dal \"Profeta\" l'indo mani dell'atte",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "quand 'anche... voi, voi stesso, se acco-\n\nMl\n\nglissi le vostre proposte, sareste il pr",
-      "replace": "quand 'anche... voi, voi stesso, se accoglissi le vostre proposte, sareste il pr",
+      "find": "bile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'attentato, quando altri",
+      "replace": "bile diTesa di Ini l'atta dal \"Profeta\" il'indo mani dell'attentato, quando altri",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "he... voi, voi stesso, se acco-\n\nMl\n\nglissi le vostre proposte, sareste il primo",
-      "replace": "he... voi, voi stesso, se acco-\n\nMl\n\ngliessi le vostre proposte, sareste il primo",
+      "find": "ile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'attentato, quando altri pat",
+      "replace": "ile diTesa di Ini l'atta dal \"Profeta\" l do mani dell'attentato, quando altri pat",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "to a tante emozioni, coprirsi la faccia folle mani. Pochi secondi e mi guardava i",
-      "replace": "to a tante emozioni, coprirsi la faccia colle mani. Pochi secondi e mi guardava i",
+      "find": "ltri patrioti, meticolosi sui mezzi di rrtlimere la Patra, lo avevano quasi stigmat",
+      "replace": "ltri patrioti, meticolosi sui mezzi di redimere la Patra, lo avevano quasi stigmat",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "eticolosi sui mezzi di rrtlimere la Patra, lo avevano quasi stigmatizzato come u",
+      "replace": "eticolosi sui mezzi di rrtlimere la Patria, lo avevano quasi stigmatizzato come u",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lo avevano quasi stigmatizzato come un a^wassiuo volgare.\n\nA questa trasformazione",
+      "replace": "lo avevano quasi stigmatizzato come un assassiuo volgare.\n\nA questa trasformazione",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "vano quasi stigmatizzato come un a^wassiuo volgare.\n\nA questa trasformazione, che",
+      "replace": "vano quasi stigmatizzato come un a^wassino volgare.\n\nA questa trasformazione, che",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ni fu l'unico dei tre morituri che ascollastìc, più che passivamente, con come>ìa",
+      "replace": "ni fu l'unico dei tre morituri che ascoltastìc, più che passivamente, con come>ìa",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "fu l'unico dei tre morituri che ascollastìc, più che passivamente, con come>ìaeeote",
+      "replace": "fu l'unico dei tre morituri che ascollasse, più che passivamente, con come>ìaeeote",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "collastìc, più che passivamente, con come>ìaeeote orecchio, le esortazioni del c",
+      "replace": "collastìc, più che passivamente, con compiace>ìaeeote orecchio, le esortazioni del c",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ollastìc, più che passivamente, con come>ìaeeote orecchio, le esortazioni del capjicll",
+      "replace": "ollastìc, più che passivamente, con comente orecchio, le esortazioni del capjicll",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ìaeeote orecchio, le esortazioni del capjicllano-dragone. E le nostro passeggiate g",
+      "replace": "ìaeeote orecchio, le esortazioni del cappellano-dragone. E le nostro passeggiate g",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ioni del capjicllano-dragone. E le nostro passeggiate giornaliere mi insinuarono ",
+      "replace": "ioni del capjicllano-dragone. E le nostre passeggiate giornaliere mi insinuarono ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "iornaliere mi insinuarono il presentimen- 10 di quello che poi avvenne. Le convinzio",
+      "replace": "iornaliere mi insinuarono il presentimento di quello che poi avvenne. Le convinzio",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "nella combattuta esistenza si andavano, uel 'Omini, disintegrando e lascìnvanu ri",
+      "replace": "nella combattuta esistenza si andavano, nel 'Omini, disintegrando e lascìnvanu ri",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "la combattuta esistenza si andavano, uel 'Omini, disintegrando e lascìnvanu riapp",
+      "replace": "la combattuta esistenza si andavano, uell'Omini, disintegrando e lascìnvanu riapp",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " combattuta esistenza si andavano, uel 'Omini, disintegrando e lascìnvanu riappar",
+      "replace": " combattuta esistenza si andavano, uel 'uomini, disintegrando e lascìnvanu riappar",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "davano, uel 'Omini, disintegrando e lascìnvanu riapparire, anzi iiredominare, ì so",
+      "replace": "davano, uel 'Omini, disintegrando e lasciavanu riapparire, anzi iiredominare, ì so",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o, uel 'Omini, disintegrando e lascìnvanu riapparire, anzi iiredominare, ì sottos",
+      "replace": "o, uel 'Omini, disintegrando e lascìnvano riapparire, anzi iiredominare, ì sottos",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ntegrando e lascìnvanu riapparire, anzi iiredominare, ì sottoslruli saturi di fole",
+      "replace": "ntegrando e lascìnvanu riapparire, anzi predominare, ì sottoslruli saturi di fole",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "scìnvanu riapparire, anzi iiredominare, ì sottoslruli saturi di fole assorbite ne",
+      "replace": "scìnvanu riapparire, anzi iiredominare, i sottoslruli saturi di fole assorbite ne",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " riapparire, anzi iiredominare, ì sottoslruli saturi di fole assorbite nella igna",
+      "replace": " riapparire, anzi iiredominare, ì sottostruli saturi di fole assorbite nella igna",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "iapparire, anzi iiredominare, ì sottoslruli saturi di fole assorbite nella ignara ",
+      "replace": "iapparire, anzi iiredominare, ì sottoslrati saturi di fole assorbite nella ignara ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " l'imminenza della sua fine, egli fece rìtoi no a quelle pratiche religio>e a cui",
+      "replace": " l'imminenza della sua fine, egli fece ritoi no a quelle pratiche religio>e a cui",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "imminenza della sua fine, egli fece rìtoi no a quelle pratiche religio>e a cui sol",
+      "replace": "imminenza della sua fine, egli fece rìtorno a quelle pratiche religio>e a cui sol",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " fece rìtoi no a quelle pratiche religio>e a cui solo la cieca moltitudine dovreb",
+      "replace": " fece rìtoi no a quelle pratiche religiose a cui solo la cieca moltitudine dovreb",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "mmirando la stoica fortezza colla quale rOrsini sali il patibolo, volle farne un ",
+      "replace": "mmirando la stoica fortezza colla quale l'Orsini sali il patibolo, volle farne un ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " stoica fortezza colla quale rOrsini sali il patibolo, volle farne un modello di ",
+      "replace": " stoica fortezza colla quale rOrsini salì il patibolo, volle farne un modello di ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a di Silvio Pellico e d'altri, rammollite, quasi, dai patimenti. Ma sbaglierebbe ",
+      "replace": "a di Silvio Pellico e d'altri, rammolliti, quasi, dai patimenti. Ma sbaglierebbe ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "dezza sorvolando sulla sua conversione. U silenzio nulla attenua e nulla cancella",
+      "replace": "dezza sorvolando sulla sua conversione. Il silenzio nulla attenua e nulla cancella",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "obile. Capace di ardimenti leonini sotto, un impulso fugace, egli nulla poteva, g",
+      "replace": "obile. Capace di ardimenti leonini sotto un impulso fugace, egli nulla poteva, g",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "fugace, egli nulla poteva, grazie alla sia natura superlativamente sensitiva, con",
+      "replace": "fugace, egli nulla poteva, grazie alla sua natura superlativamente sensitiva, con",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lla visione della tragica morte altrui. 1 suoi capelli n'erano rapidamente incanu",
+      "replace": "lla visione della tragica morte altrui. I suoi capelli n'erano rapidamente incanu",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " capelli n'erano rapidamente incanutiti più d 'una tenue fibra del suo cervello ",
+      "replace": " capelli n'erano rapidamente incanutiti e più d 'una tenue fibra del suo cervello ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " di verità filosofiche e morali. Patriotta si disse, invece, e fu sin dalla prima",
+      "replace": " di verità filosofiche e morali. Patriota si disse, invece, e fu sin dalla prima",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " ebbe il capo sotto la lama della ghiglipttiua. Egli aveva promesso all'Italia og",
+      "replace": " ebbe il capo sotto la lama della ghigliottiua. Egli aveva promesso all'Italia og",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e il capo sotto la lama della ghiglipttiua. Egli aveva promesso all'Italia ogni s",
+      "replace": "e il capo sotto la lama della ghiglipttina. Egli aveva promesso all'Italia ogni s",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ndizionatamente fedeli. Io dico che non e 'è bisogno di spigolare in altri campi p",
+      "replace": "ndizionatamente fedeli. Io dico che non c'è bisogno di spigolare in altri campi p",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "er costituire la gloria di Felice Orsinil\n\nOltre il cappellano-dragone faceva qua",
+      "replace": "er costituire la gloria di Felice Orsini!\n\nOltre il cappellano-dragone faceva qua",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "operarsi per insinuare nell'animo nostro. qualche raggio di speranza... ora affer",
+      "replace": "operarsi per insinuare nell'animo nostro qualche raggio di speranza... ora affer",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "to di Corte si mostravano propensi alla demenza cosi apertamente che Tanimo di Na",
+      "replace": "to di Corte si mostravano propensi alla clemenza cosi apertamente che Tanimo di Na",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " si mostravano propensi alla demenza cosi apertamente che Tanimo di Napoleone avr",
+      "replace": " si mostravano propensi alla demenza così apertamente che Tanimo di Napoleone avr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "pensi alla demenza cosi apertamente che Tanimo di Napoleone avrebbe finito per ri",
+      "replace": "pensi alla demenza cosi apertamente che l'animo di Napoleone avrebbe finito per ri",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " avrebbe finito per rimanerne influenzate e vinto.\n\nMa né i suoi modi, né la sua ",
+      "replace": " avrebbe finito per rimanerne influenzato e vinto.\n\nMa né i suoi modi, né la sua ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "pare la diffidenza istintiva, a colmare rabisao che separa il cospiratore da un u",
+      "replace": "pare la diffidenza istintiva, a colmare l'abisao che separa il cospiratore da un u",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "la diffidenza istintiva, a colmare rabisao che separa il cospiratore da un uomo c",
+      "replace": "la diffidenza istintiva, a colmare rabisso che separa il cospiratore da un uomo c",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e, dargli la caccia e trarre il proprio esattamento dalla sua rovina. innesta di",
+      "replace": "e, dargli la caccia e trarre il proprio sostesattamento dalla sua rovina. innesta di",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", dargli la caccia e trarre il proprio esattamento dalla sua rovina. innesta diffid",
+      "replace": ", dargli la caccia e trarre il proprio entamento dalla sua rovina. innesta diffid",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "l proprio esattamento dalla sua rovina. innesta diffidenza era in me imuiprita da a",
+      "replace": "l proprio esattamento dalla sua rovina. Questa diffidenza era in me imuiprita da a",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " rovina. innesta diffidenza era in me imuiprita da altre circostanze. A più ripres",
+      "replace": " rovina. innesta diffidenza era in me imprita da altre circostanze. A più ripres",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ina. innesta diffidenza era in me imuiprita da altre circostanze. A più riprese, ",
+      "replace": "ina. innesta diffidenza era in me imuiprontata da altre circostanze. A più riprese, ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "alde invocazioni non ebbero risposta... • silenzio assoluto, come se l'Elisa mi av",
+      "replace": "alde invocazioni non ebbero risposta... silenzio assoluto, come se l'Elisa mi av",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "completamente abbandonato, o fosse morta £' facile iuiaginarsi le mie torture. P",
+      "replace": "completamente abbandonato, o fosse morta. £' facile iuiaginarsi le mie torture. P",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ompletamente abbandonato, o fosse morta £' facile iuiaginarsi le mie torture. Poi,",
+      "replace": "ompletamente abbandonato, o fosse morta È facile iuiaginarsi le mie torture. Poi,",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e abbandonato, o fosse morta £' facile iuiaginarsi le mie torture. Poi, d'improvvi",
+      "replace": "e abbandonato, o fosse morta £' facile immaginarsi le mie torture. Poi, d'improvvi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e le alte classi a verificare, che so io forse se eran proprio contesti di carne",
+      "replace": "e le alte classi a verificare, che so io, forse se eran proprio contesti di carne",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "n mostra, come una belva in gabbia, pesala terribilmente.\n\nUn giorno mi trovai ne",
+      "replace": "n mostra, come una belva in gabbia, pesava terribilmente.\n\nUn giorno mi trovai ne",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "rno mi trovai nella cella, col Pietri, uu militare d'alto bordo che aveva la test",
+      "replace": "rno mi trovai nella cella, col Pietri, un militare d'alto bordo che aveva la test",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "testa fasciata. Non rammento bene se fos- He il generale Ma^an o il generale Roguel",
+      "replace": "testa fasciata. Non rammento bene se fosse il generale Ma^an o il generale Roguel",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " rammento bene se fos- He il generale Ma^an o il generale Roguel. Il Pietri me lo",
+      "replace": " rammento bene se fos- He il generale Macan o il generale Roguel. Il Pietri me lo",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "He il generale Ma^an o il generale Roguel. Il Pietri me lo presentò semplicemente",
+      "replace": "He il generale Ma^an o il generale Roguet. Il Pietri me lo presentò semplicemente",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "l che fece prorompere il mio mal umore. Hibattei aspramente che io non avevo cerc",
+      "replace": "l che fece prorompere il mio mal umore. Ribattei aspramente che io non avevo cerc",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "uale interesse potesse avere la Polizia Dell'intercettare le lettere di mia mogli",
+      "replace": "uale interesse potesse avere la Polizia nell'intercettare le lettere di mia mogli",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "re le lettere di mia moglie.\n\nParve meraTÌgliarsi; ma ai accontentò dì stringersi ",
+      "replace": "re le lettere di mia moglie.\n\nParve meravigliarsi; ma ai accontentò dì stringersi ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "di mia moglie.\n\nParve meraTÌgliarsi; ma ai accontentò dì stringersi nelle spalle.",
+      "replace": "di mia moglie.\n\nParve meraTÌgliarsi; ma si accontentò dì stringersi nelle spalle.",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "\nParve meraTÌgliarsi; ma ai accontentò dì stringersi nelle spalle.\n\n11 giorno seg",
+      "replace": "\nParve meraTÌgliarsi; ma ai accontentò di stringersi nelle spalle.\n\n11 giorno seg",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "accontentò dì stringersi nelle spalle.\n\n11 giorno seguente ritornò solo e, prima d",
+      "replace": "accontentò dì stringersi nelle spalle.\n\nIl giorno seguente ritornò solo e, prima d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "cella stette per qualche secondo, ritto eolia soglia, ingombrando il vano colla su",
+      "replace": "cella stette per qualche secondo, ritto sulia soglia, ingombrando il vano colla su",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "la stette per qualche secondo, ritto eolia soglia, ingombrando il vano colla sua ",
+      "replace": "la stette per qualche secondo, ritto eolla soglia, ingombrando il vano colla sua ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a soglia, ingombrando il vano colla sua delia ed alta persona. A me parve di nota",
+      "replace": "a soglia, ingombrando il vano colla sua belia ed alta persona. A me parve di nota",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "oglia, ingombrando il vano colla sua delia ed alta persona. A me parve di notare ",
+      "replace": "oglia, ingombrando il vano colla sua della ed alta persona. A me parve di notare ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " trovar modo di salvarmi e non me solo! 'già io sapevo come a Corte non Ed rifuggi",
+      "replace": " trovar modo di salvarmi e non me solo! Già io sapevo come a Corte non Ed rifuggi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e solo! 'già io sapevo come a Corte non Ed rifuggisse dall 'adottare misure temper",
+      "replace": "e solo! 'già io sapevo come a Corte non si rifuggisse dall 'adottare misure temper",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " clemenza. Ma io ignoravo — soggiunse — uhe Sua Maestà l'Imperatore era pure anim",
+      "replace": " clemenza. Ma io ignoravo — soggiunse — che Sua Maestà l'Imperatore era pure anim",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "mente lo commuovevano. Una volta messo sa simile via, un uomo simile, chi potrebb",
+      "replace": "mente lo commuovevano. Una volta messo su simile via, un uomo simile, chi potrebb",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", chi potrebbe predire dove si arresterelibeì Certo nessun sovrano d'Europa era in",
+      "replace": ", chi potrebbe predire dove si arresterebbeì Certo nessun sovrano d'Europa era in",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "i potrebbe predire dove si arresterelibeì Certo nessun sovrano d'Europa era in gr",
+      "replace": "i potrebbe predire dove si arresterelibe? Certo nessun sovrano d'Europa era in gr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "illuminato, non tarderei a comprendere dì poter giovare meglio a me stesso ed all",
+      "replace": "illuminato, non tarderei a comprendere di poter giovare meglio a me stesso ed all",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "alla Patria aiutando, alleandomi per cosi dire, all'uomo che avevo tentato d'ucci",
+      "replace": "alla Patria aiutando, alleandomi per così dire, all'uomo che avevo tentato d'ucci",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "'uccidere.\n\nCredo che la mia faccia esprìmesse tutta la mia profonda meraviglia, ",
+      "replace": "'uccidere.\n\nCredo che la mia faccia esprimesse tutta la mia profonda meraviglia, ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ti ai nemici esterni ed hanno congiurato, lo non sono venuto a proporle nulla di ",
+      "replace": "ti ai nemici esterni ed hanno congiurato. lo non sono venuto a proporle nulla di ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " ai nemici esterni ed hanno congiurato, lo non sono venuto a proporle nulla di di",
+      "replace": " ai nemici esterni ed hanno congiurato, Io non sono venuto a proporle nulla di di",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ole. La salvezza, il benessere degli Stali hanno le loro esigenze ineluttabili. A",
+      "replace": "ole. La salvezza, il benessere degli Stati hanno le loro esigenze ineluttabili. A",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ò dipendere il trionfo della causa italiiiiiii; Io premunisca contro i suoi nemici int",
+      "replace": "ò dipendere il trionfo della causa italiana; Io premunisca contro i suoi nemici int",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ere il trionfo della causa italiiiiiii; Io premunisca contro i suoi nemici intern",
+      "replace": "ere il trionfo della causa italiiiiiii; lo premunisca contro i suoi nemici intern",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "erni ed io le do la mia parola d'onore clie Ella non tarderà a raggiungere la sua ",
+      "replace": "erni ed io le do la mia parola d'onore che Ella non tarderà a raggiungere la sua ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "la non tarderà a raggiungere la sua gioviinc sposa. Per quale strana aberrazione, ",
+      "replace": "la non tarderà a raggiungere la sua giovanc sposa. Per quale strana aberrazione, ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "non tarderà a raggiungere la sua gioviinc sposa. Per quale strana aberrazione, vo",
+      "replace": "non tarderà a raggiungere la sua gioviine sposa. Per quale strana aberrazione, vo",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "la a lottare nel mondo e contro il mondo ì\"\n\nOra la ragion vera del preteso silenz",
+      "replace": "la a lottare nel mondo e contro il mondo?\"\n\nOra la ragion vera del preteso silenz",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " — risposi — e nulla posso rivelare. Ma kaan> d'anche... voi, voi stesso, se accog",
+      "replace": " — risposi — e nulla posso rivelare. Ma quan> d'anche... voi, voi stesso, se accog",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "isposi — e nulla posso rivelare. Ma kaan> d'anche... voi, voi stesso, se accoglies",
+      "replace": "isposi — e nulla posso rivelare. Ma kaand'anche... voi, voi stesso, se accoglies",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ate... gli Italiani aborrono i traditori I\"\n\nLa mia naturale vivacità mi sospingev",
+      "replace": "ate... gli Italiani aborrono i traditori!\"\n\nLa mia naturale vivacità mi sospingev",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21170,38 +21696,8 @@
       "source": "llm"
     },
     {
-      "find": "l patibolo.\n\nLa spiegazione dell 'enigma!\n\nL'ebbi più tardi dalla bocca di Mathieu ",
-      "replace": "l patibolo.\n\nLa spiegazione dell 'enigma? L'ebbi più tardi dalla bocca di Mathieu ",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
       "find": "iù tardi dalla bocca di Mathieu de la Dròme. L'opinione pubblica esercitava una f",
       "replace": "iù tardi dalla bocca di Mathieu de la Drôme. L'opinione pubblica esercitava una f",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "olizia, nei ritrovi popolari si cantava lui canzone esaltante, \"gli eroi del 14 G",
-      "replace": "olizia, nei ritrovi popolari si cantava ui canzone esaltante, \"gli eroi del 14 G",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "izia, nei ritrovi popolari si cantava lui canzone esaltante, \"gli eroi del 14 Gen",
-      "replace": "izia, nei ritrovi popolari si cantava luna canzone esaltante, \"gli eroi del 14 Gen",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "n gli bastava l'animo d'opporvisi apertamente. mente. Eliminare i nemici caduti in suo ",
-      "replace": "n gli bastava l'animo d'opporvisi apertamente. Eliminare i nemici caduti in suo ",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "n quel Consesso, si celavano i traditori 1\"\n\nEra la fosca minaccia. I Consiglieri ",
-      "replace": "n quel Consesso, si celavano i traditori!\"\n\nEra la fosca minaccia. I Consiglieri ",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21212,20 +21708,8 @@
       "source": "llm"
     },
     {
-      "find": " Parigi, subodorata la situazione, ammorta la mite influenza di Eugenia Montijo, p",
-      "replace": " Parigi, subodorata la situazione, ammorzò la mite influenza di Eugenia Montijo, p",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "ffini... i congiurati odoravano di Masso-\n\nnera; essi avevano combattuto anima e co",
-      "replace": "ffini... i congiurati odoravano di Massonera; essi avevano combattuto anima e co",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": ".. i congiurati odoravano di Masso-\n\nnera; essi avevano combattuto anima e corpo",
-      "replace": ".. i congiurati odoravano di Masso-\n\nneria; essi avevano combattuto anima e corpo",
+      "find": "Parigi, subodorata la situazione, ammorta la mite influenza di Eugenia Montijo, p",
+      "replace": "Parigi, subodorata la situazione, ammortì la mite influenza di Eugenia Montijo, p",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21236,14 +21720,14 @@
       "source": "llm"
     },
     {
-      "find": " sconfessava un'altra volta il Cristo.\n\nnera; essi avevano combattuto anima e II Consiglio di Stato ed il clero I... c",
-      "replace": " sconfessava un'altra volta il Cristo.\n\nII Consiglio di Stato ed il clero I... c",
+      "find": "si sconfessava un'altra volta il Cristo. nera; essi avevano combattuto anima e II Consiglio di Stato ed il clero I... c",
+      "replace": "si sconfessava un'altra volta il Cristo.\n\nII Consiglio di Stato ed il clero I... c",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "\nnera; essi avevano combattuto anima e II Consiglio di Stato ed il clero I... cor",
-      "replace": "\nnera; essi avevano combattuto anima e Il Consiglio di Stato ed il clero I... cor",
+      "find": " nera; essi avevano combattuto anima e II Consiglio di Stato ed il clero I... cor",
+      "replace": " nera; essi avevano combattuto anima e Il Consiglio di Stato ed il clero I... cor",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21290,44 +21774,10 @@
       "source": "llm"
     },
     {
-      "find": "sé stesso: \"Oh quante sono le coscienze Cristo, scienze vendute!\"\n\nCiò costituiva, per noi, un g",
-      "replace": "sé stesso: \"Oh quante sono le coscienze vendute!\"\n\nCiò costituiva, per noi, un g",
+      "find": "sé stesso: \"Oh quante sono le coscienze Cristo, scienze vendute!\"",
+      "replace": "sé stesso: \"Oh quante sono le coscienze vendute!\"",
       "reason": "llm_correction",
       "source": "llm"
-    },
-    {
-      "find": "o le coscienze Cristo, scienze vendute!\"\n\nCiò costituiva, per noi, un grande vantaggio sulla Conciergerie; la morte era in prospettiva, ma si faceva precedere da * qualche sollievo.\n\nUn'altra circostanza contribuiva a rendermi più sopportabile la triste ora attuale. Le mie guardie mi avevano seguito alla Ivoquette. Avrebbero dormito alternativamente per tenermi sotto continua sorveglianza; ma ciò non mi contrariava affatto, perchè io non avevo intenzione alcuna di anticipare, suicidandosi, la mia fine.\n\ndella vita, avrebbe potuto rassegnarsi al silenzio, ora che forti emozioni lo esaltavano t\n\nParlava e discuteva di tutto oatinatameotf... talora anche eon vena comica Ht-buudante, speaic se gli capitava di eoofutare gli sproloqui dei nostri Oitidici. Ma gira e rigira, ritornava di preferenza sulle sue idee politiche e filosofiche; come se una voragine {•> iras-nasse inesorabilmente nel cannoncino di quell'imbuto.\n\nStrano contrasto col contegno del nostro capo, dalla cui cella nou usciva, per ore ed ore, ìl minimo indizio di vita; tanto che parecchie volte mi ero domandato nn essA non fosse la tomba di Felice Orsini t se Felice Orsini nou fosse diventalo la tomba dell'anima sua\n\nUn'ora al giorno, ci era eoncesiso di passeggiare nel gran cortile; ma non contemporaneamente. Il Pieri era tratto alla sua toccala d'aria, solo; al suo ritorno, io e l'Orsini uscivamo assieme. Portavamo la nostra camicia di forza anche passeggiando ed eravamo ^ardati, più che a vista, u punta di moschetto.\n\nIn quella breve ora, l'Orsini allargava i |)olmonÌ come uomo che rinasca; ma lo sguardo che rivolgeva all'azzurro era pieno di melanconia. Paiiseggiava celeramenle ed io, allevato a disciplina militare, lo seguivo, istintivamente un po' in disparte. Avveniva questo: Se io ero di malumore e non parlavo, egli rivolgeva il cupo e mi totetrogava collo sguardo quasi dicesse: \"Tempesta IT\" Ma se parlavo, tirava via carne assorto nella visione d'altri mondi o, se rispondeva, te era\" parole tratte dal profondo, col cavaturaccioli.\n\nQuelle parole brevi, haslarooo a rivelarmi l'uomo che subiva rapidamente una trasformazione radicale.\n\nFelice Orsini aveva portato in carcere\n\ndue risentimenti; quello contro ìl Pieri e quello contro Giuseppe Manzini. E' noto che nelle sue \"Memorie\" l'irawHido romagnolo tratteggiava il Mazzini come un moderno Maometto che presuma modellare i destini d'Europa sui capricci delle sue odalische — circostanza questa, di cui si servì a meraviglia il monarchico (':4vour. Kgli diffuse quelle Memorie a m^ tfìiaia di copie, gettando così astutauin. te un ponte che offerse ìl destro di passare il Rubicone, di ripiegare la bandiera dal motto \"Dìo e Popolo\" a troppi e trop pi mazziniani, o litubaoti per mollezza dì fibra, o ansiosi di coonestare, con qualsiasi pretesto, calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno che le guardie e Giulio Favre informarono l'Orsini della nobile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'attentato, quando altri patrioti, meticolosi sui mezzi di rrtlimere la Patra, lo avevano quasi stigmatizzato come un a^wassiuo volgare.\n\nA questa trasformazione, che potrei chiamare rigenerante, un'altra più vasta e di tutt'altro genere fece riscontro. Meglio affrontar subito l'argomento. Felice Orsini fu l'unico dei tre morituri che ascollastìc, più che passivamente, con come>ìaeeote orecchio, le esortazioni del capjicllano-dragone. E le nostro passeggiate giornaliere mi insinuarono il presentimen- 10 di quello che poi avvenne. Le convinzioni lentamente acquistate nella combattuta esistenza si andavano, uel 'Omini, disintegrando e lascìnvanu riapparire, anzi iiredominare, ì sottoslruli saturi di fole assorbite nella ignara fanciullezza. Nel l'imminenza della sua fine, egli fece rìtoi no a quelle pratiche religio>e a cui solo la cieca moltitudine dovrebbe attribuire ancora virtù essenziali.\n\nSi inganna perciò e mentisce, inconscia-\n\nmente, al vero, chi ammirando la stoica fortezza colla quale rOrsini sali il patibolo, volle farne un modello di coerenza da contrapporre alla figura di Silvio Pellico e d'altri, rammollite, quasi, dai patimenti. Ma sbaglierebbe del pari chi presumesse di tutelarne la grandezza sorvolando sulla sua conversione. U silenzio nulla attenua e nulla cancella.\n\nBen si può dire a sua difesa, che egli soccombette ad una causa tutt 'altro che ignobile. Capace di ardimenti leonini sotto, un impulso fugace, egli nulla poteva, grazie alla sia natura superlativamente sensitiva, contro un pensiero tormentoso, insistente, ostinato, fisso... non quello della morte che gli sovrastava; ma l'altro derivante dalla coscienza della propria responsabilità nella rovina degli alti ideali; dalla visione della tragica morte altrui. 1 suoi capelli n'erano rapidamente incanutiti più d 'una tenue fibra\n\ndel suo cervello ne doveva essere rimasta scossa e quasi scalfita.\n\nFelice Orsini non posò mai del resto, d'innanzi ai suoi contemporanei, come uno scopritore di verità filosofiche e morali. Patriotta si disse, invece, e fu sin dalla prima giovinezza; patriota fu e si proclamò sinché ebbe il capo sotto la lama della ghiglipttiua. Egli aveva promesso all'Italia ogni sua energia e sin l'ultima stilla del proprio sangue. L'Italia ebbe figli più grandi, non più incondizionatamente fedeli. Io dico che non e 'è bisogno di spigolare in altri campi per costituire la gloria di Felice Orsinil\n\nOltre il cappellano-dragone faceva quasi giornalmente la sua comparsa alla Roquette un personaggio molto potente, il Prefetto della Polizia Pietri. Ci trattava in modo molto affabile; né mai tralasciava di adoperarsi per insinuare nell'animo nostro. qualche raggio di speranza... ora\n\naffermando che il Tribunale d'Appello avrebbe, con tutta probabilità, annullato il nostro processo; ora assicurando che l'Imperatrice e un forte partito di Corte si mostravano propensi alla demenza cosi apertamente che Tanimo di Napoleone avrebbe finito per rimanerne influenzate e vinto.\n\nMa né i suoi modi, né la sua fisionomia intelligente valevano a dissipare la diffidenza istintiva, a colmare rabisao che separa il cospiratore da un uomo che deve, per forza di cose, dargli la caccia e trarre il proprio esattamento dalla sua rovina.\n\ninnesta diffidenza era in me imuiprita da altre circostanze. A più riprese, io aveva inviato ad Elisa lettere appassionatissime. Quando volevo scrivere, la guardia di turno mi liberava, più o meno, la destra; poi, rilegatala, portava lo scritto al Direttore del carcere perché vi apponesse il nulla osta. Ma le mie calde invocazioni non ebbero risposta... • silenzio assoluto, come se l'Elisa mi avesse completamente abbandonato, o fosse morta £' facile iuiaginarsi le mie torture. Poi, d'improvviso, mi entrò nel cuore il sospetto che si trattasse di una raffinata crudeltà della Polizia, per fini che non potevo ben comprendere, ma la cui esistenza intuivo. Da quel momento le mie torture cessarono... per far posto ad un sordo rancore contro chi me le aveva procurate.\n\nInoltre il Pietri aveva il torto di condurre al carcere, quasi costantemente, ora questo, ora quel personaggio. Una morbosa curiosità pare sospingesse le alte classi a verificare, che so io forse se eran proprio contesti di carne e d'ossa coloro che avevano osato provocare tanto scompiglio. A me quell 'esser messo in mostra, come una belva in gabbia, pesala terribilmente.\n\nUn giorno mi trovai nella cella, col Pietri, uu militare d'alto bordo che aveva la testa fasciata. Non rammento bene se fos- He il generale Ma^an o il generale Roguel. Il Pietri me lo presentò semplicemente come \"una delle vostre vittime\"; il che fece prorompere il mio mal umore. Hibattei aspramente che io non avevo cercato di colpire se non che l'uomo che fu la rovina del mio Paese. E quanto all'essere vittima ben volentieri avrei mutato panni con quel ferito.\n\nA questo il militare si fece innanzi e, porgendomi la sua destra, affermò che non conservava il minimo rancore, né con me, né con altri. Ed io strinsi, come meglio mi venne dato, quella mano, ma non risposi e, rivolgendomi al Prefetto, gli chiesi quale interesse potesse avere la Polizia Dell'intercettare le lettere di mia moglie.\n\nParve meraTÌgliarsi; ma ai accontentò dì stringersi nelle spalle.\n\n11 giorno seguente ritornò solo e, prima di entrare nella cella stette per qualche secondo, ritto eolia soglia, ingombrando il vano colla sua delia ed alta persona. A me parve di notare in quella fisionomia qualcosa di insolito, di inquisitivo. Entrò e, dopo aver ripetuto, in modo più affabile e, sto per dire, più paterno del solito, le solite frasi, si fregò la fronte e, abbassando alquanto la voce — la guardia era, del resto, uscita al suo apparire — mi parlò intensamente della sua profonda simpatia per la mia giovinezza. E, compiangendo la triste sorte che mi era riserbata, un po' per forza di circostanze, un po' anche — disse — per la suprema leggerezza de' miei compagni, mi assicurò d'aver molto\n\nmeditato per trovar modo di salvarmi\n\ne non me solo! 'già io sapevo come a Corte non Ed rifuggisse dall 'adottare misure temperate a clemenza. Ma io ignoravo —\n\nsoggiunse — uhe Sua Maestà l'Imperatore era pure animato da vivissime simpatie per l'Italia, la cui grandezza ammirava, le cui sventure profondamente lo commuovevano. Una volta messo sa simile via, un uomo simile, chi potrebbe predire dove si arresterelibeì Certo nessun sovrano d'Europa era in grado di poter giovare alla redenzione d'Italia, quanto Napoleone. Cosicché se io consideravo le cose coll'occhio del patriota illuminato, non tarderei a comprendere dì poter giovare meglio a me stesso ed alla Patria aiutando, alleandomi per cosi dire, all'uomo che avevo tentato d'uccidere.\n\nCredo che la mia faccia esprìmesse tutta la mia profonda meraviglia, perchè il Pietri mi mise paternamente una mano sulla spalla e abbassando sempre più la voce, disse:\n\n\"So che tratto con un giovanotto intelligente e mi attendo perciò di non essere considerato come uno zotico. Tra Sua Maestà e i suoi alti disegni, stanno i nemici interni dell'Impero. Troppo deboli per agire apertamente, si sono segretamente alleati ai nemici esterni ed hanno congiurato, lo non sono venuto a proporle nulla di disonorevole. La salvezza, il benessere degli Stali hanno le loro esigenze ineluttabili. Aiuti l'alto personaggio, da cui può dipendere il trionfo della causa italiiiiiii; Io premunisca contro i suoi nemici interni ed io le do la mia parola d'onore clie Ella non tarderà a raggiungere la sua gioviinc sposa. Per quale strana aberrazione, vorrebbe lasciarla povera, abbandonata e sola a lottare nel mondo e contro il mondo ì\"\n\nOra la ragion vera del preteso silenzio di Elisa mi appariva, più che adombrata, evidente; ora il mio sdegno aveva doppia ragione di prorompere. \"Non so nulla — risposi — e nulla posso rivelare. Ma kaan> d'anche... voi, voi stesso, se acco-",
-      "replace": "o le coscienze Cristo, scienze vendute!\"",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "ragoni e ne conservava le tinte;traverso e forte, malgrado l'et",
-      "replace": "ragoni e ne conservava le tinte; traverso e forte, malgrado l'et",
-      "reason": "missing_space_fix",
-      "source": "targeted_flag"
-    },
-    {
-      "find": "\n\nLa voce del Pieri era, del resto, la nota predominante in quell'ambiente ristretto e severo. E come mai egli, già tanto loquace anche nelle circostanze più incolori 190 s:\n\nglissi\n\ndella vita, avrebbe potuto rassegnarsi al silenzio, ora che forti emozioni lo esaltavano?\n\nParlava e discuteva di tutto ostinatamente... talora anche con vena comica abbondante, specie se gli capitava di confutare gli sproloqui dei nostri Giudici. Ma gira e rigira, ritornava di preferenza sulle sue idee politiche e filosofiche; come se una voragine lo trascinasse inesorabilmente nel cannoncino di quell 'imbuto.\n\nStrano contrasto col contegno del nostro capo, dalla cui cella non usciva, per ore ed ore, il minimo indizio di vita; tanto che parecchie volte mi ero domandato se essa non fosse la tomba di Felice Orsini e se Felice Orsini non fosse diventato la tomba dell'anima sua.\n\nUn'ora al giorno, ci era concesso di passeggiare nel gran cortile; ma non contemporaneamente. Il Pieri era tratto alla sua boccata d'aria, solo; al suo ritorno, io e l'Orsini uscivamo assieme. Portavamo la nostra camicia di forza anche passeggiando ed eravamo guardati, più che a vista, a punta di moschetto.\n\nIn quella breve ora, l'Orsini allargava i polmoni come uomo che rinasca; ma lo sguardo che rivolgeva all'azzurro era pieno di melanconia. Passeggiava celermente ed io, allevato a disciplina militare, lo seguivo, istintivamente un po' in disparte. Avveniva questo: Se io ero di malumore e non parlavo, egli rivolgeva il capo e mi interrogava colio sguardo quasi dicesse: \"Tempesta!?\" Ma se parlavo, tirava via come assorto nella visione d'altri mondi o, se rispondeva, le eran parole tratte dal profondo, col cavaturaccioli.\n\nQuelle parole brevi, bastarono a rivelarmi l'uomo che subiva rapidamente una trasformazione radicale.\n\nFelice Orsini aveva portato in carcere\n\ndue risentimenti; quello contro il Pieri e quello contro Giuseppe Mazzini. È noto che nelle sue \"Memorie\" l'iracondo romagnolo tratteggiava il Mazzini come un moderno Maometto che presuma modellare i destini d'Europa sui capricci delle sue odalische — circostanza questa, di cui si servì a meraviglia il monarchico Cavour. Egli diffuse quelle Memorie a un m ghiaia di copie, gettando così astutamente un ponte che offerse il destro di passare il Rubicone, di ripiegare la bandiera dal motto \"Dio e Popolo\" a troppi e troppi mazziniani, o titubanti per mollezza di fibra, o ansiosi di coonestare, con qualsiasi pretesto, calcoli bassi e venali.\n\nMa l'astio intenso contro il Maestro dileguò il giorno che le guardie e Giulio Favre informarono l'Orsini della nobile difesa di lui fatta dal \"Profeta\" l'indomani dell'attentato, quando altri patrioti, meticolosi sui mezzi di redimere la Patria, lo avevano quasi stigmatizzato come un assassino volgare.\n\nA questa trasformazione, che potrei chiamare rigenerante, un'altra più vasta e di tutt 'altro genere fece riscontro. Meglio affrontar subito l'argomento. Felice Orsini fu l'unico dei tre morituri che ascol tasse, più che passivamente, con compiacente orecchio, le esortazioni del cappellano-dragone. E le nostre passeggiate giornaliere mi insinuarono il preacntimealo di quello che poi avvenne. Le convinzioni lentamente acquistate nella combattuta esistenza si andavano, nell'Orsini, disintegrando e lasciavano riapparire, anzi predominare, i sottostrati saturi di fole assorbite nella ignara fanciullezza. Nell'imminenza della sua fine, egli fece ritorno a quelle pratiche religiose a cui solo la cieca moltitudine dovrebbe attribuire ancora virtù essenziali.\n\nSi inganna perciò e mentisce, inconsciamente, al vero, chi ammirando la stoica fortezza colla quale l'Orsini salì il patibolo, volle farne un modello di coerenza da contrapporre alla figura di Silvio Pellico e d'altri, rammollito, quasi, dai patimenti. Ma sbaglierebbe del pari chi presumesse di tutelarne la grandezza sorvolando sulla sua conversione. Il silenzio nulla attenua e nulla cancella.\n\nBen si può dire a sua difesa, che egli soccombette ad una causa tutt 'altro che ignobile. Capace di ardimenti leonini sotto un impulso fugace, egli nulla poteva, grazie alla sua natura superlativamente sensitiva, contro un pensiero tormentoso, insistente, ostinato, fisso... non quello della morte che gli sovrastava; ma l'altro derivante dalla coscienza della propria responsabilità nella rovina degli alti ideali; dalla visione della tragica morte altrui. I suoi capelli n'erano rapidamente incanutiti... più d'una tenue fibra del suo cervello ne doveva essere rimasta scossa e quasi scalfita.",
-      "replace": "",
-      "reason": "remove_duplicate_passage",
-      "source": "sonnet_with_page_image"
-    },
-    {
-      "find": "della vita, avrebbe potuto rassegnarsi al silenzio, ora che forti emozioni lo esaltavano t\n\nParlava e discuteva di tutto oatinatameotf... talora anche eon vena comica Ht-buudante, speaic se gli capitava di eoofutare gli sproloqui dei nostri Oitidici. Ma gira e rigira, ritornava di preferenza sulle sue idee politiche e filosofiche; come se una voragine {•> iras-nasse inesorabilmente nel cannoncino di quell'imbuto.\n\nStrano contrasto col contegno del nostro capo, dalla cui cella nou usciva, per ore ed ore, ìl minimo indizio di vita; tanto che parecchie volte mi ero domandato nn essA non fosse la tomba di Felice Orsini t se Felice Orsini nou fosse diventalo la tomba dell'anima sua\n\nUn'ora al giorno, ci era eoncesiso di passeggiare nel gran cortile; ma non contemporaneamente. Il Pieri era tratto alla sua toccala d'aria, solo; al suo ritorno, io e l'Orsini uscivamo assieme. Portavamo la nostra camicia di forza anche passeggiando ed eravamo ^ardati, più che a vista, u punta di moschetto.\n\nIn quella breve ora, l'Orsini allargava i |)olmonÌ come uomo che rinasca; ma lo sguardo che rivolgeva all'azzurro era pieno di melanconia. Paiiseggiava celeramenle ed io, allevato a disciplina militare, lo seguivo, istintivamente un po' in disparte. Avveniva questo: Se io ero di malumore e non parlavo, egli rivolgeva il cupo e mi totetrogava collo sguardo quasi dicesse: \"Tempesta IT\" Ma se parlavo, tirava via carne assorto nella visione d'altri mondi o, se rispondeva, te era\" parole tratte dal profondo, col cavaturaccioli.\n\nQuelle parole brevi, haslarooo a rivelarmi l'uomo che subiva rapidamente una trasformazione radicale.\n\nFelice Orsini aveva portato in carcere\n\ndue risentimenti; quello contro ìl Pieri e quello contro Giuseppe Manzini. E' noto che nelle sue \"Memorie\" l'irawHido romagnolo tratteggiava il Mazzini come un moderno Maometto che presuma modellare i destini d'Europa sui capricci delle sue odalische — circostanza questa, di cui si servì a meraviglia il monarchico (':4vour. Kgli diffuse quelle Memorie a m^ tfìiaia di copie, gettando così astutauin. te un ponte che offerse ìl destro di passare il Rubicone, di ripiegare la bandiera dal motto \"Dìo e Popolo\" a troppi e trop pi mazziniani, o litubaoti per mollezza dì fibra, o ansiosi di coonestare, con qualsiasi pretesto, calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno che le guardie e Giulio Favre informarono l'Orsini della nobile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'attentato, quando altri patrioti, meticolosi sui mezzi di rrtlimere la Patra, lo avevano quasi stigmatizzato come un a^wassiuo volgare.\n\nA questa trasformazione, che potrei chiamare rigenerante, un'altra più vasta e di tutt'altro genere fece riscontro. Meglio affrontar subito l'argomento. Felice Orsini fu l'unico dei tre morituri che ascollastìc, più che passivamente, con come>ìaeeote orecchio, le esortazioni del capjicllano-dragone. E le nostro passeggiate giornaliere mi insinuarono il presentimen- 10 di quello che poi avvenne. Le convinzioni lentamente acquistate nella combattuta esistenza si andavano, uel 'Omini, disintegrando e lascìnvanu riapparire, anzi iiredominare, ì sottoslruli saturi di fole assorbite nella ignara fanciullezza. Nel l'imminenza della sua fine, egli fece rìtoi no a quelle pratiche religio>e a cui solo la cieca moltitudine dovrebbe attribuire ancora virtù essenziali.\n\nSi inganna perciò e mentisce, inconscia-\n\nmente, al vero, chi ammirando la stoica fortezza colla quale rOrsini sali il patibolo, volle farne un modello di coerenza da contrapporre alla figura di Silvio Pellico e d'altri, rammollite, quasi, dai patimenti. Ma sbaglierebbe del pari chi presumesse di tutelarne la grandezza sorvolando sulla sua conversione. U silenzio nulla attenua e nulla cancella.\n\nBen si può dire a sua difesa, che egli soccombette ad una causa tutt 'altro che ignobile. Capace di ardimenti leonini sotto, un impulso fugace, egli nulla poteva, grazie alla sia natura superlativamente sensitiva, contro un pensiero tormentoso, insistente, ostinato, fisso... non quello della morte che gli sovrastava; ma l'altro derivante dalla coscienza della propria responsabilità nella rovina degli alti ideali; dalla visione della tragica morte altrui. 1 suoi capelli n'erano rapidamente incanutiti più d 'una tenue fibra\n\ndel suo cervello ne doveva essere rimasta scossa e quasi scalfita.",
-      "replace": "della vita, avrebbe potuto rassegnarsi al silenzio, ora che forti emozioni lo esaltavano?\n\nParlava e discuteva di tutto ostinatamente.... talora anche con vena comica abbondante, specie se gli capitava di confutare gli sproloqui dei nostri Giudici. Ma gira e rigira, ritornava di preferenza sulle sue idee politiche e filosofiche; come se una voragine lo trascinasse inesorabilmente nel cannoncino di quell'imbuto.\n\nStrano contrasto col contegno del nostro capo, dalla cui cella non usciva, per ore ed ore, il minimo indizio di vita; tanto che parecchie volte mi ero domandato se essa non fosse la tomba di Felice Orsini e se Felice Orsini non fosse diventato la tomba dell'anima sua..............\n\nUn'ora al giorno, ci era concesso di passeggiare nel gran cortile; ma non contemporaneamente. Il Pieri era tratto alla sua boccata d'aria, solo; al suo ritorno, io e l'Orsini uscivamo assieme. Portavamo la nostra camicia di forza anche passeggiando ed eravamo guardati, più che a vista, a punta di moschetto.\n\nIn quella breve ora, l'Orsini allargava i polmoni come uomo che rinasca; ma lo sguardo che rivolgeva all'azzurro era pieno di melanconia. Passeggiava celeramente ed io, allevato a disciplina militare, lo seguivo, istintivamente un po' in disparte. Avveniva questo: Se io ero di malumore e non parlavo, egli rivolgeva il capo e mi interrogava collo sguardo quasi dicesse: \"Tempesta!?\" Ma se parlavo, tirava via come assorto nella visione d'altri mondi o, se rispondeva, le eran parole tratte dal profondo, col cavaturaccioli.\n\nQuelle parole brevi, bastarono a rivelarmi l'uomo che subiva rapidamente una trasformazione radicale.\n\nFelice Orsini aveva portato in carcere due risentimenti; quello contro il Pieri e quello contro Giuseppe Mazzini. E' noto che nelle sue \"Memorie\" l'iracondo romagnolo tratteggiava il Mazzini come un moderno Maometto che presuma modellare i destini d'Europa sui capricci delle sue odalische — circostanza questa, di cui si servì a meraviglia il monarchico Cavour. Egli diffuse quelle Memorie a migliaia di copie, gettando così astutamente un ponte che offerse il destro di passare il Rubicone, di ripiegare la bandiera dal motto \"Dio e Popolo\" a troppi e troppi mazziniani, o titubanti per mollezza di fibra, o ansiosi di coonestare, con qualsiasi pretesto, calcoli bassi e venali.\n\nMa l'astio intenso contro il Maestro dileguò il giorno che le guardie e Giulio Favre informarono l'Orsini della nobile difesa di lui fatta dal \"Profeta\" l'indomani dell'attentato, quando altri patrioti, meticolosi sui mezzi di redimere la Patria, lo avevano quasi stigmatizzato come un assassino volgare.\n\nA questa trasformazione, che potrei chiamare rigenerante, un'altra più vasta e di tutt'altro genere fece riscontro. Meglio affrontar subito l'argomento. Felice Orsini fu l'unico dei tre morituri che ascoltasse, più che passivamente, con compiacente orecchio, le esortazioni del cappellano-dragone. E le nostre passeggiate giornaliere mi insinuarono il presentimento di quello che poi avvenne. Le convinzioni lentamente acquistate nella combattuta esistenza si andavano, nell'Orsini, disintegrando e lasciavano riapparire, anzi predominare, i sottostrati saturi di fole assorbite nella ignara fanciullezza. Nell'imminenza della sua fine, egli fece ritorno a quelle pratiche religiose a cui solo la cieca moltitudine dovrebbe attribuire ancora virtù essenziali.\n\nSi inganna perciò e mentisce, inconscia­mente, al vero, chi ammirando la stoica fortezza colla quale l'Orsini salì il patibolo, volle farne un modello di coerenza da contrapporre alla figura di Silvio Pellico e d'altri, rammollite, quasi, dai patimenti. Ma sbaglierebbe del pari chi presumesse di tutelarne la grandezza sorvolando sulla sua conversione. Il silenzio nulla attenua e nulla cancella.\n\nBen si può dire a sua difesa, che egli soccombette ad una causa tutt'altro che ignobile. Capace di ardimenti leonini sotto un impulso fugace, egli nulla poteva, grazie alla sua natura superlativamente sensitiva, contro un pensiero tormentoso, insistente, ostinato, fisso.... non quello della morte che gli sovrastava; ma l'altro derivante dalla coscienza della propria responsabilità nella rovina degli alti ideali; dalla visione della tragica morte altrui. I suoi capelli n'erano rapidamente incanutiti.... più d'una tenue fibra del suo cervello ne doveva essere rimasta scossa e quasi scalfita.",
-      "reason": "image_ocr_correction",
-      "source": "sonnet_with_page_image"
-    },
-    {
-      "find": "inconacia-mente",
-      "replace": "inconsciamente",
-      "reason": "llm_flag_fix:unresolved"
-    },
-    {
-      "find": "cappellano-dragone",
-      "replace": "cappellano-dragone",
-      "reason": "accepted"
     }
   ],
   "p2_ch19": [
@@ -25840,6 +26290,12 @@
       "find": "let-lungo",
       "replace": "let-lungo",
       "reason": "accepted:structural_reconstruction_needed"
+    },
+    {
+      "find": "(^nnse!a",
+      "replace": "giunse la",
+      "reason": "ocr_correction:f_ligature",
+      "source": "manual"
     }
   ],
   "p2_ch29": [

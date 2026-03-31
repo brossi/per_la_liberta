@@ -1,55 +1,10 @@
 {
-  "p1_ch04": [
-    {
-      "token": "impre-veduto",
-      "left": "impre",
-      "right": "veduto",
-      "offset": 9990,
-      "reason": "unresolved"
-    }
-  ],
-  "p1_ch06": [
-    {
-      "token": "tra-scinantisi",
-      "left": "tra",
-      "right": "scinantisi",
-      "offset": 7053,
-      "reason": "unresolved"
-    }
-  ],
-  "p1_ch07": [
-    {
-      "token": "dedican-dolly",
-      "left": "dedican",
-      "right": "dolly",
-      "offset": 10800,
-      "reason": "unresolved"
-    }
-  ],
-  "p1_ch09": [
-    {
-      "token": "perso-ci",
-      "left": "perso",
-      "right": "ci",
-      "offset": 17884,
-      "reason": "unresolved"
-    }
-  ],
   "p1_ch13": [
     {
       "token": "mu-discutere",
       "left": "mu",
       "right": "discutere",
       "offset": 19849,
-      "reason": "unresolved"
-    }
-  ],
-  "p1_ch17": [
-    {
-      "token": "gio-venta",
-      "left": "gio",
-      "right": "venta",
-      "offset": 6617,
       "reason": "unresolved"
     }
   ],
@@ -69,15 +24,6 @@
       "right": "calma",
       "offset": 9989,
       "reason": "unresolved"
-    }
-  ],
-  "p2_ch12": [
-    {
-      "token": "Plon-Plon",
-      "left": "Plon",
-      "right": "Plon",
-      "offset": 1510,
-      "reason": "ner_candidate"
     }
   ],
   "p2_ch13": [
@@ -103,17 +49,6 @@
       "right": "dragone",
       "offset": 5806,
       "reason": "unresolved"
-    }
-  ],
-  "p2_ch28": [
-    {
-      "token": "nnse",
-      "left": "n",
-      "right": "fi",
-      "offset": 3389,
-      "reason": "f_ligature",
-      "context": "on passarono molti giorni e (^nnse!a triste nuova che essa era s",
-      "suggestion": "finse"
     }
   ]
 }
