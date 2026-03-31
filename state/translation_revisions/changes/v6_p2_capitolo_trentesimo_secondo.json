@@ -1,0 +1,21 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T19:14:56.780717+00:00",
+  "chapter_id": "p2_capitolo_trentesimo_secondo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "oppressive yoke of Austria",
+      "new": "hateful yoke of Austria",
+      "reason": "Edgren: esoso = 'hateful, detestable' — not 'oppressive'",
+      "context_sentence": "ullets. (1)\n\nIn 1866 Venetia was wrested from the hateful yoke of Austria; yet only at the cost of mysterious defeats, of h"
+    },
+    {
+      "old": "band of &quot;madmen&quot;",
+      "new": "handful of \"madmen\"",
+      "reason": "Edgren: manipolo = 'handful' (primary meaning) — 'band' is less precise",
+      "context_sentence": "ir hollow pomposity, their inferiority before the handful of \"madmen\" who stubbornly insisted upon an Italy whole and g"
+    }
+  ]
+}

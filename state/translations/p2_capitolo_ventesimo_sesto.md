@@ -1,14 +1,16 @@
 <!-- pages:232-235 -->
 
+## Revised Translation — Chapter Twenty-Six
+
 CHAPTER TWENTY-SIX
 
-I COULD not recount, in perfect chronological order and as though reading from a ship's log, the manifold vicissitudes of our arduous ordeal. I shall say briefly of those which most properly determined its course.
+I COULD not recount, in perfect chronological order and as though reading from a ship's log, the manifold vicissitudes of our arduous trial. I shall say briefly of those which most properly determined its course.
 
 The storms, invoked by Cousin, came — and came with such fury as to imperil vessels far sturdier than our own. It was not the sea alone we had to contend with; it was sea and sky in league together, battering us with a persistence that seemed almost to betray some deliberate intent.
 
 To comprehend the full intensity of our danger, one would need to be seasoned in the art of navigation. For those who are, no description is needed; for those who are not, no description suffices. For two days and three nights we found ourselves in worse straits than those unhappy souls condemned to labour in those subterranean dungeons where water enters in cunningly measured jets. Either work the pump without respite, or drown.
 
-It was then that I understood in all its weight the phrase: "And the floodgates of heaven were opened." Whoever was not keeping every fibre, every atom of himself locked to the oars that held us in balance, toiled feverishly to bail out the boat. For this purpose our palmetto hats served us well; but the storm had left several of us bare-headed — these resorted to the only implement still within their reach: their wooden clogs. In such a predicament, no resource, however slight, was to be neglected.
+It was then that I understood in all its weight the phrase: "And the floodgates of heaven were opened." Whoever was not keeping every fibre, every atom of himself grappled to the oars that held us in balance, toiled feverishly to bail out the boat. For this purpose our palmetto hats served us well; but the storm had left several of us bare-headed — these resorted to the only implement still within their reach: their wooden clogs. In such a predicament, no resource, however slight, was to be neglected.
 
 The driving rain, the waves that rendered any distant view impossible, and above all the profound darkness, had yet another grave and unexpected peril in store for us on the third night. Blacker than the night itself, and like a phantom rising up threateningly from the abyss, we found ourselves face to face with a great sailing vessel. Cousin had barely time to wrench the tiller; but the surge was so violent that for an instant we believed ourselves swamped and finished. The fearsome apparition swept past us, vast and swift; then it vanished, as though it had dissolved into the darkness.
 

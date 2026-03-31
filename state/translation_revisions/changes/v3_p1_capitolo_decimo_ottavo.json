@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:49:24.420799+00:00",
+  "chapter_id": "p1_capitolo_decimo_ottavo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "reputation",
+      "new": "name",
+      "reason": "Edgren: nomea = 'name (reputation)' — 'name' is the primary definition given and is the period-appropriate rendering; 'reputation' is the secondary sense",
+      "context_sentence": "and the pride of the valley. Jealous of their own name, they left the easy enterprises to lesser men and"
+    }
+  ]
+}

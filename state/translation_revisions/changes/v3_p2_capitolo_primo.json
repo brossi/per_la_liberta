@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:11:57.801932+00:00",
+  "chapter_id": "p2_capitolo_primo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "intellects",
+      "new": "genius",
+      "reason": "Edgren: ingegno = 'natural talent (genius)'; 'intellects' is less precise than the dictionary's primary definition",
+      "context_sentence": "pirator? Setting aside the disproportion of their genius, the only substantial difference between the two"
+    }
+  ]
+}

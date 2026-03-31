@@ -1,0 +1,21 @@
+{
+  "version": 5,
+  "timestamp": "2026-03-31T18:02:26.648778+00:00",
+  "chapter_id": "p2_capitolo_ventesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "yearning",
+      "new": "panting",
+      "reason": "Edgren: anelito = 'strong breathing (panting)'; the related verb anelare = 'be breathlessly eager, desire eagerly (long ardently)'; 'panting' is the period dictionary's primary rendering of the noun",
+      "context_sentence": "e living, there had already succeeded a desperate panting for intense life, for freedom! Hope, violently ex"
+    },
+    {
+      "old": "longing for her kisses",
+      "new": "panting for her kisses",
+      "reason": "Edgren: anelare = 'be breathlessly eager, desire eagerly (long ardently)'; anelito = 'strong breathing (panting)'; 'panting for' is the period dictionary's primary rendering of the verb",
+      "context_sentence": "the Madonna in a Flemish painting. The child was panting for her kisses and tugging at her skirts. One second more, and m"
+    }
+  ]
+}

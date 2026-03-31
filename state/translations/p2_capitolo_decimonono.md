@@ -2,11 +2,11 @@
 
 # Chapter the Nineteenth
 
-ON the evening of the twelfth, the chaplain Hughon came to pay me his customary visit. He was grave, grave, grave. I spoke to him of our rejected appeal, and he grew flustered. Then the suspicion of the grim truth flashed upon me, and I resorted to several stratagems to confirm it. But Hughon promptly assumed the air of the innocent, and sheltering behind that simple artifice, became unassailable. Perhaps every suspicion of mine might have dissolved, had my visitor not extended his hand as he took his leave. Those fingers seemed to me to trace mysterious signs in the air, so visibly did they tremble.
+ON the evening of the twelfth, the chaplain Hughon came to pay me his customary visit. He was grave, grave, grave. I spoke to him of our rejected appeal, and he grew flustered. Then the suspicion of the grim truth flashed upon me, and I resorted to several subterfuges to confirm it. But Hughon promptly assumed the air of the ingenuous, and sheltering behind that simple artifice, became unassailable. Perhaps every suspicion of mine might have dissolved, had my visitor not extended his hand as he took his leave. Those fingers seemed to me to trace mysterious signs in the air, so visibly did they tremble.
 
-I awaited the return of Saturno who, of the two guards, seemed to me the more candid, and without even giving him time to remove his cap: "Saturno," I said, "I know that tomorrow morning I shall be led to my death. Listen well, and do, you who are good, exactly as I bid in my last wishes. At five o'clock you will wake me..."
+I awaited the return of Saturno who, of the two guards, seemed to me the more candid, and without even giving him time to remove his cap: "Saturno," I said, "I know that tomorrow morning I shall be led to punishment. Listen well, and do, you who are good, exactly as I bid in my last wishes. At five o'clock you will wake me..."
 
-Here he began to protest. Why had I put such nonsense into my head? The appeal being rejected, there remained still, thanks to our connections, a great deal of rope to unravel, and before anything... eh, eh!... it would take much more than that!
+Here he began to protest. Why had I put such nonsense into my head? The appeal being rejected, there remained still, thanks to our connections, a great deal of rope to twist, and before anything... eh, eh!... it would take much more than that!
 
 "My friend, Monsieur Hughon intended to hear my confession and instead... I have confessed him. He has revealed everything to me!"
 

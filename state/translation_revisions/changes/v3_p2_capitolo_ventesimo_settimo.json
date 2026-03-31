@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T18:12:17.249682+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_settimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "hull",
+      "new": "hulk",
+      "reason": "Edgren: scafo = 'hulk (carcass of a ship)'",
+      "context_sentence": "rried eyes, drawn against the blue sky, the black hulk of a cutter. It had emerged as if by surprise fro"
+    },
+    {
+      "old": "warning",
+      "new": "admonishment",
+      "reason": "Edgren: ammonimento = 'admonishment'",
+      "context_sentence": "e no notice of us; but a cannon shot, fired as an admonishment, blew away every illusion. The little herring mov"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 5,
+  "timestamp": "2026-03-31T18:12:51.641280+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_terzo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "CHAPTER THE TWENTY-THIRD\n\nI HAD scarcely flung my canvas sack upon the quay of the Island of Salvation when hope flooded my breast — intense, imperious.",
+      "new": "## Revised Translation — Chapter the Twenty-Third\n\nCHAPTER THE TWENTY-THIRD\n\nI HAD scarcely flung my canvas sack upon the quay of the Island of Salvation when hope flooded my breast — intense, imperious.",
+      "reason": "Changed (no dictionary annotation provided)",
+      "context_sentence": "## Revised Translation — Chapter the Twenty-Third\n\nCHAPTER THE TWENTY-THIRD\n\nI HAD scarcely flung my"
+    }
+  ]
+}

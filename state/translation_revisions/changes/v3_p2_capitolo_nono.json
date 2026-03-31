@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:27:34.290144+00:00",
+  "chapter_id": "p2_capitolo_nono",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "wholeness of spirit",
+      "new": "integrity of spirit",
+      "reason": "Edgren: interézza [intero], F.: (strength); integrity — 'integrity' is the period-appropriate English rendering",
+      "context_sentence": "unacknowledged principles one contributes more by integrity of spirit than by the force of gold. Gold is wanting to the"
+    }
+  ]
+}

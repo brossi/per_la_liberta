@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:55:18.579349+00:00",
+  "chapter_id": "p1_capitolo_ventesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "open a villainy",
+      "new": "manifest a knavery",
+      "reason": "Edgren: furfanteria = knavery; palese = manifest, plain",
+      "context_sentence": "upright to the last, and would not dare commit so manifest a knavery. As for me, he himself had accompanied me as far"
+    }
+  ]
+}

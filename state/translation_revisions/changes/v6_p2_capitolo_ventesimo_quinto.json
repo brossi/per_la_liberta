@@ -1,0 +1,21 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:48:21.177151+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_quinto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "fierce struggle",
+      "new": "strenuous struggle",
+      "reason": "Edgren: strenuo = strenuously (implying strenuous); 'strenua lotta' is better rendered 'strenuous struggle' than 'fierce struggle'",
+      "context_sentence": "deas and men of the new order had continued their strenuous struggle for the conquest of the future, and great events"
+    },
+    {
+      "old": "mean aggrandizement",
+      "new": "niggardly aggrandizement",
+      "reason": "Edgren: gretto = parsimonious (miserly, niggardly); 'niggardly' is the more period-appropriate English equivalent",
+      "context_sentence": "he French; and in either case, what results?... a niggardly aggrandizement of his Piedmont; a small additional source of rev"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:29:09.889111+00:00",
+  "chapter_id": "p2_capitolo_decimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "iron armour cunningly disguised",
+      "new": "iron cuirasses cunningly disguised",
+      "reason": "Edgren: corazza = CUIRASS (primary definition), armour (secondary); 'ferree corazze ben dissimulate' more precisely rendered as iron cuirasses",
+      "context_sentence": "ch Napoleon III sat, as it were concealed, behind iron cuirasses cunningly disguised, came second and was attended before and behind b"
+    }
+  ]
+}

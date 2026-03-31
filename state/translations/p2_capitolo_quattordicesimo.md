@@ -8,7 +8,7 @@ I was confined in a ground-floor cell. A companion was assigned to me — an age
 
 He appeared to perceive my thought and begged me not to judge by appearances. If he could not do me good, he would at least do me no harm.
 
-Half an hour later, the bolts grated and the heavy door swung on its hinges. Two persons entered: the Examining Magistrate and a man dressed as a municipal street-sweeper, with one empty socket, hideously scarred. Two guards remained standing at the threshold.
+Half an hour later, the bolts grated and the heavy door swung on its hinges. Two persons entered: the Examining Magistrate and a man dressed as a municipal street-sweeper, with one empty eye-socket, hideously scarred. Two guards remained standing at the threshold.
 
 "Well, then! Kimf —" said the Magistrate after a brief silence.
 
@@ -49,6 +49,10 @@ My intimate connexion with the conspirators, and my knowledge of their designs, 
 The following day I was transferred from Mazas, in a closed carriage, to the Conciergerie. I was assigned cell No. 1, and soon learnt that Pieri was confined in No. 2, Gomez in No. 3, and Orsini in No. 4.
 
 My new place of sojourn measured, roughly, ten feet by fifteen. Light entered timidly through a small window set with heavy iron bars, situated near the ceiling. In the door, at the height of a man, was a circular aperture — a five-franc piece would have passed through it only with difficulty. It permitted the warders to observe my every movement; it permitted me to observe, up to a certain point, whatever passed in the corridor. On the walls, the hands of the prisoners who had preceded me had undoubtedly carved verses and maxims, afterwards scraped away without mercy by the warders' knives.
+
+What fragments of hearts and what reflections of souls refined by suffering, stolen from my meditation by the narrow observance of duty! The history of one of those souls I knew, in every particular, from my childhood. It was indeed from my cell that Marshal Ney had gone forth, to have his patriot breast shattered by the Bourbons' lead!
+
+At the Conciergerie too I had two guards. Of them I must say something. The more congenial was a former non-commissioned officer of the navy. The State, having wrung from him the best years of his life, had rescued him from destitution by entrusting him with tasks of dubious stamp that evidently went against the grain of his nature. A large family, poor and without connections, kept him bound to his lot; but his resignation was only apparent, and I was not long in perceiving that his secret rancour, finding no outlet, was accumulating drop by drop in his heart. Nature had denied him the resolution and the impulse that drive men to virile acts; unless a foolish discipline, too long endured, had cut away his every force of will. Yet he still admired in others the virtues that were not his own, and his instincts revealed themselves, in the substratum — and perhaps without his own knowledge — as rebellious. The years have effaced his surname from my memory. His Christian name was, if I am not mistaken, one very common among the Parisian people — a mythological name: Saturn!
 
 The other guard was a former soldier of the marine infantry — a rather stout man of few words, who would sit for hours on end with his hands upon his stomach, fingers interlaced, placidly revolving his two thumbs one about the other, now in one direction, now in the reverse. He was fond of dozing.
 

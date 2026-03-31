@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T19:09:24.354356+00:00",
+  "chapter_id": "p2_capitolo_trentesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "marble-cutting yard",
+      "new": "marble saw-mill",
+      "reason": "Edgren: segheria = saw-mill; lastra = flat stone, slate, plate-glass; 'marble saw-mill' reflects both terms more precisely",
+      "context_sentence": "French convict, who, having found employment at a marble saw-mill, had induced his employer to take me on for polis"
+    }
+  ]
+}

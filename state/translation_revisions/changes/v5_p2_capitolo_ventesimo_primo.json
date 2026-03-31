@@ -1,0 +1,15 @@
+{
+  "version": 5,
+  "timestamp": "2026-03-31T18:07:36.940674+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_primo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "raised up to itself",
+      "new": "drawn into itself",
+      "reason": "Edgren: inalare = inhale (draw in); Italian 'inalato a sé stesso' reflects this sense of drawing inward, not raising upward",
+      "context_sentence": "all ages by all peoples, had with secular energy drawn into itself that temple, worthy of a God. Oh how beautiful is"
+    }
+  ]
+}

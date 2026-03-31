@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T18:14:47.942206+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_ottavo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "without its dangers",
+      "new": "without its perils",
+      "reason": "Edgren: pericolo = PERIL (danger, risk); 'perils' is given as the primary English equivalent",
+      "context_sentence": "y departure for England by ordinary means was not without its perils, he offered to <change old=\"secure me a berth\" re"
+    },
+    {
+      "old": "secure me a berth",
+      "new": "engage me a berth",
+      "reason": "Edgren: accaparrare = engage or take by paying earnest; 'engage' is the period-appropriate rendering",
+      "context_sentence": "alent\">without its perils</change>, he offered to engage me a berth on a man-of-war that would set course for the cap"
+    }
+  ]
+}

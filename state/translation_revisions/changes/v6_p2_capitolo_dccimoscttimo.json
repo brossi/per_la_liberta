@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:23:38.190770+00:00",
+  "chapter_id": "p2_capitolo_dccimoscttimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "affront",
+      "new": "offence",
+      "reason": "Edgren: offesa = offence (injury, displeasure)",
+      "context_sentence": "nd regarded our attempt as one regards a personal offence.\n\nThe trial was, at its core, a repetition of the"
+    }
+  ]
+}

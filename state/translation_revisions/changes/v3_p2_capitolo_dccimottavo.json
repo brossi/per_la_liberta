@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:48:06.612584+00:00",
+  "chapter_id": "p2_capitolo_dccimottavo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "bearable",
+      "new": "supportable",
+      "reason": "Edgren: sopportabile = supportable",
+      "context_sentence": "ibuted to making the present melancholy hour more supportable. My guards had followed me to La Roquette. They w"
+    }
+  ]
+}

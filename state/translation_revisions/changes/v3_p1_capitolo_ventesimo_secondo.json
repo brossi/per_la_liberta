@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:01:24.998411+00:00",
+  "chapter_id": "p1_capitolo_ventesimo_secondo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "raising their elbows too freely",
+      "new": "raising their elbows excessively",
+      "reason": "Edgren: soverchiamente = 'excessively (too much)'; 'too freely' understates the dictionary's clear rendering",
+      "context_sentence": "dore. Here they committed the fatal imprudence of raising their elbows excessively and picking a quarrel with the innkeeper. They we"
+    }
+  ]
+}

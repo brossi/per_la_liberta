@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:13:34.602269+00:00",
+  "chapter_id": "p2_capitolo_secondo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "Wrapped in a white dressing-gown",
+      "new": "Wrapped in a white mantle",
+      "reason": "Edgren: accappatoio = mantle; combing-cloth",
+      "context_sentence": "He turned with a start — he was alone no longer!\n\nWrapped in a white mantle, her hair partly gathered up and partly flowing f"
+    }
+  ]
+}

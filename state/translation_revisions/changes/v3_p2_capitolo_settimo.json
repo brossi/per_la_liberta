@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:24:10.495270+00:00",
+  "chapter_id": "p2_capitolo_settimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "travelling bag",
+      "new": "valise",
+      "reason": "Edgren: valigia = 'valise (portmanteau; carpet-bag)' — 'valise' is the primary period-appropriate equivalent",
+      "context_sentence": "ll steam towards my destiny. To face it, I had my valise... between the leather and the wooden panel of th"
+    },
+    {
+      "old": "meeting",
+      "new": "colloquy",
+      "reason": "Edgren: colloquio = 'colloquy (conference)' — 'colloquy' is the primary period-appropriate equivalent",
+      "context_sentence": "en entrusted to me by Dr. Bernard during our last colloquy. Above all, I had my youth and my courage. What w"
+    },
+    {
+      "old": "the general panic",
+      "new": "the terror",
+      "reason": "Edgren: spavento = 'terror (fright, fear)' — 'general panic' is not supported; the Italian has no 'general' and spavento means fright or terror",
+      "context_sentence": "rue tempest, indeed. The upheaval of stomachs and the terror spread great confusion aboard. But the infinite,"
+    },
+    {
+      "old": "bag",
+      "new": "valise",
+      "reason": "Edgren: valigia = 'valise (portmanteau; carpet-bag)' — maintaining consistency with revised first instance",
+      "context_sentence": "ome samples of beer.\n\nI was rummaging through the valise, already turned upside-down by the Customs offici"
+    }
+  ]
+}

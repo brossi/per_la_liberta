@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:47:02.197314+00:00",
+  "chapter_id": "p1_capitolo_decimo_settimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "amanuensis",
+      "new": "secretary",
+      "reason": "Edgren: amanuénse = secretary",
+      "context_sentence": "ment for several of us. We were introduced to his secretary, one Bardini, a Paduan law student, and he, in hi"
+    }
+  ]
+}

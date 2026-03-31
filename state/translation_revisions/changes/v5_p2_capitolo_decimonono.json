@@ -1,0 +1,27 @@
+{
+  "version": 5,
+  "timestamp": "2026-03-31T18:00:04.303494+00:00",
+  "chapter_id": "p2_capitolo_decimonono",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "several stratagems",
+      "new": "several subterfuges",
+      "reason": "Edgren: sotterfugio [L. subter-fugium], M.: subterfuge — direct cognate is more precise and period-appropriate than 'stratagems'",
+      "context_sentence": "the grim truth flashed upon me, and I resorted to several subterfuges to confirm it. But Hughon promptly assumed <chang"
+    },
+    {
+      "old": "the air of the innocent",
+      "new": "the air of the ingenuous",
+      "reason": "Edgren: ingenuo [L. -nuus], ADJ.: ingenuous (sincere, candid) — 'ingenuous' is the dictionary's own English rendering, distinct from 'innocent'",
+      "context_sentence": "hange> to confirm it. But Hughon promptly assumed the air of the ingenuous, and sheltering behind that simple artifice, beca"
+    },
+    {
+      "old": "led to my death",
+      "new": "led to execution",
+      "reason": "Edgren: supplizio [L. -plicium, bending down], M.: punishment; penalty; torment (torture) — 'led to execution' renders the specific juridical sense of 'supplizio' more faithfully than the loose 'led to my death'",
+      "context_sentence": "I said, \"I know that tomorrow morning I shall be led to execution. Listen well, and do, you who are good, exactly a"
+    }
+  ]
+}

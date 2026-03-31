@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:16:13.349174+00:00",
+  "chapter_id": "p2_capitolo_terzo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "disquiet",
+      "new": "alarm",
+      "reason": "Edgren: sgomento = fear (alarm)",
+      "context_sentence": "imple as it was, stirred in his breast a singular alarm, succeeded by a no less singular irritation. \"Why"
+    }
+  ]
+}

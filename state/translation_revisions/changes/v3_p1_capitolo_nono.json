@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:27:24.769503+00:00",
+  "chapter_id": "p1_capitolo_nono",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "troops advancing with gravity",
+      "new": "bands advancing with gravity",
+      "reason": "Edgren: schiera = 'armed host (troop, band); body; herd; mass: @ —, in troops, by bands' — 'bands' is the more direct period rendering of schiere in this context of irregular movement",
+      "context_sentence": "eyond the barrier, suddenly a coming and going of bands advancing with gravity..., the silence that betokens a storm.\n\nQuickenin"
+    }
+  ]
+}

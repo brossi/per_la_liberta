@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:13:36.915743+00:00",
+  "chapter_id": "p2_capitolo_tredicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "predicament",
+      "new": "pass",
+      "reason": "Edgren: frangente = unforeseen accident, difficult case — 'difficult case' or 'pass' is the period-appropriate rendering",
+      "context_sentence": "omb in his pocket and found himself in a terrible pass, perhaps, but he had not the slightest doubt of s"
+    }
+  ]
+}

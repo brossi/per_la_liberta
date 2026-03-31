@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:38:54.921669+00:00",
+  "chapter_id": "p1_capitolo_tredicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "pragmatism",
+      "new": "positivism",
+      "reason": "Edgren: positivismo = positivism",
+      "context_sentence": "d practical men — possessed of that short-sighted positivism which consists in letting the world run undisturb"
+    },
+    {
+      "old": "task",
+      "new": "care",
+      "reason": "Edgren: cura = care (management)",
+      "context_sentence": "to recline in an armchair, leaving to the Sun the care of ripening events, as it ripens gourds.\"\n\nThe mo"
+    },
+    {
+      "old": "glory and ornament",
+      "new": "lustre and ornament",
+      "reason": "Edgren: lustro = lustre (gloss); decoro = dignity (decorum); ornament",
+      "context_sentence": "even today there is no shortage of supermen, the lustre and ornament of our Italy, who, being unable to refute the dec"
+    },
+    {
+      "old": "marvels",
+      "new": "portents",
+      "reason": "Edgren: portento = portent (omen)",
+      "context_sentence": "ver them with both feet and continue to extol the portents of the armchair, persisting in the old slanders."
+    }
+  ]
+}

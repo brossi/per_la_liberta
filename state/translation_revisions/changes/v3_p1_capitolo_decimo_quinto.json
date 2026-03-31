@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:42:30.404021+00:00",
+  "chapter_id": "p1_capitolo_decimo_quinto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "soft-spoken",
+      "new": "subdued",
+      "reason": "Edgren: sommesso = submissive (humble; subdued); low — 'subdued' better captures the dictionary sense than 'soft-spoken'",
+      "context_sentence": "he robust servant who approached me, stooping and subdued, I glimpsed the conspirator ready to straighten h"
+    },
+    {
+      "old": "Three lines — an immense calamity!",
+      "new": "Brief lines — an immense calamity!",
+      "reason": "Edgren supports 'brevi' as meaning brief/short, not 'three'; the Italian 'Brevi linee' means 'Brief lines', not 'Three lines'",
+      "context_sentence": "d be in vain. In Milan all is lost.\" — Mazzini.*\n\nBrief lines — an immense calamity! They seemed to my eyes to have been traced by a p"
+    }
+  ]
+}

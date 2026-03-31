@@ -75,7 +75,27 @@ def main():
         "--revert-to", type=int,
         help="Revert translations to a prior snapshot version (use with --step refine)",
     )
+    parser.add_argument(
+        "--local", action="store_true",
+        help="Generate QR codes pointing to localhost:8000 instead of GitHub Pages",
+    )
+    parser.add_argument(
+        "--site-base",
+        help="Base URL for QR codes (default: GitHub Pages URL, or localhost:8000 with --local)",
+    )
     args = parser.parse_args()
+
+    # Resolve chapter IDs: accept either short (p1_ch01) or long (p1_capitolo_primo)
+    if args.chapter:
+        raw_ids = [c.strip() for c in args.chapter.split(",")]
+        italian_md = OUTPUT_DIR / "italian_clean.md"
+        if italian_md.exists():
+            from utils import resolve_chapter_ids
+            ch_list = resolve_chapter_ids(raw_ids, italian_md)
+        else:
+            ch_list = raw_ids  # fallback for early pipeline steps
+    else:
+        ch_list = None
 
     if args.step in ("download", "all"):
         print("Step 1: Downloading OCR texts...")
@@ -176,13 +196,11 @@ def main():
             print(f"Step 7b: Reverting translations to version {args.revert_to}...")
             from refine import revert_to_version
 
-            ch_list = [c.strip() for c in args.chapter.split(",")] if args.chapter else None
             revert_to_version(args.revert_to, STATE_DIR, OUTPUT_DIR, chapters=ch_list)
         else:
             print("Step 7b: Refining translations with Edgren 1901...")
             from refine import refine
 
-            ch_list = [c.strip() for c in args.chapter.split(",")] if args.chapter else None
             refine(
                 OUTPUT_DIR, STATE_DIR, chapters=ch_list,
                 api_key=args.api_key, thinking_budget=args.thinking_budget,
@@ -193,7 +211,8 @@ def main():
         print("Step 8: Typesetting bilingual edition...")
         from typeset import typeset
 
-        typeset(OUTPUT_DIR, STATE_DIR)
+        site_base = args.site_base or ("http://localhost:8000" if args.local else None)
+        typeset(OUTPUT_DIR, STATE_DIR, site_base=site_base)
         print()
 
     print("Done!")

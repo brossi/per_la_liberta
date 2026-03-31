@@ -1,0 +1,21 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:44:22.607016+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_terzo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "imperious",
+      "new": "overpowering",
+      "reason": "Edgren: prepotente = 'very powerful; M.: tyrant' — 'overpowering' is closer to the literal force of the Italian than 'imperious'",
+      "context_sentence": "Salvation when hope flooded my breast — intense, overpowering.\n\nThe island, with a little play of imagination,"
+    },
+    {
+      "old": "rowing boat",
+      "new": "rowing bark",
+      "reason": "Edgren: barca = 'bark (small boat)' — 'bark' is the period-appropriate English rendering given by the dictionary",
+      "context_sentence": "as to plunge me into deep reflection was a small rowing bark running over the waves at no great distance from"
+    }
+  ]
+}

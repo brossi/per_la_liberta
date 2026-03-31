@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:05:22.144139+00:00",
+  "chapter_id": "p1_capitolo_ventesimoterzo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "something discordant",
+      "new": "something heterogeneous",
+      "reason": "Edgren: eterogeneo = heterogeneous",
+      "context_sentence": "ting the air, it was not long before I discovered something heterogeneous. There were handshakes that resolved themselves i"
+    },
+    {
+      "old": "even at the midday break",
+      "new": "even at the afternoon luncheon",
+      "reason": "Edgren: merenda = afternoon luncheon",
+      "context_sentence": "companied them. In sum, a coldness, a coldness! — even at the afternoon luncheon, when lips exchanged somewhat more spontaneous ph"
+    }
+  ]
+}

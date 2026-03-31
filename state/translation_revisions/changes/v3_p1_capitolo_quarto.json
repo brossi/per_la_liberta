@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:15:01.910133+00:00",
+  "chapter_id": "p1_capitolo_quarto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "wholeness of spirit",
+      "new": "integrity of spirit",
+      "reason": "Edgren: interezza = integrity",
+      "context_sentence": "ished themselves most that year, by valour and by integrity of spirit, was a patriot most dear to my family, a certain"
+    }
+  ]
+}

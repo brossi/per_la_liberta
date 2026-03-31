@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:16:24.560723+00:00",
+  "chapter_id": "p1_capitolo_quinto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "ranks",
+      "new": "bosom",
+      "reason": "Edgren: grembo = 'lap (bosom); middle' — 'bosom' is the primary and period-appropriate rendering of 'nel loro grembo'; 'ranks' is an interpretive substitution not supported by the dictionary",
+      "context_sentence": "e. The Carbonari, who had received him into their bosom, regarded him with suspicion as early as 1831; fo"
+    }
+  ]
+}

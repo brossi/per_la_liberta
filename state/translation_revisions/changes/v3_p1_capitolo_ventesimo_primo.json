@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:59:22.833274+00:00",
+  "chapter_id": "p1_capitolo_ventesimo_primo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "piazza... along one of its sides it flanked the principal street, and it was upon this side that the main entrance opened.",
+      "new": "\"Queen of England\"... along one of its sides it flanked the principal street, and it was upon this side that the main entrance opened.",
+      "reason": "The Italian reads 'Regina d'Inghilterra' (Queen of England), which the current translation omits, replacing it with 'piazza.' The inn name should be retained.",
+      "context_sentence": "At one corner of the square stood the inn of the \"Queen of England\"... along one of its sides it flanked the principal street, and it was upon this side that the main entrance opened.\n\nI entered, went up to the first floor, and found"
+    }
+  ]
+}

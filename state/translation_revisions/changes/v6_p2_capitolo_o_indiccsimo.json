@@ -1,0 +1,21 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:18:32.762776+00:00",
+  "chapter_id": "p2_capitolo_o_indiccsimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "to draw me back from my convictions",
+      "new": "to drag me back from my convictions",
+      "reason": "Edgren: trascinare = drag along, move — 'drag' is the dictionary's primary rendering",
+      "context_sentence": "n they endeavoured, as though by tacit agreement, to drag me back from my convictions. They put forward, among other things, the sympat"
+    },
+    {
+      "old": "compact",
+      "new": "pact",
+      "reason": "Edgren: patto = pact (agreement; compact) — 'pact' is listed as the primary definition",
+      "context_sentence": "If not, I would pay for it myself. We sealed the pact with a vigorous handshake.\n\nMathieu de la Drôme p"
+    }
+  ]
+}

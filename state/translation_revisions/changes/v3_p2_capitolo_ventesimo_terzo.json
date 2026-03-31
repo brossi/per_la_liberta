@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T18:04:00.759933+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_terzo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "gliding over the waves",
+      "new": "running over the waves",
+      "reason": "Edgren: scorrente = 'running (flowing)'; 'running over the waves' is the more literal period-appropriate rendering",
+      "context_sentence": "e me into deep reflection was a small rowing boat running over the waves at no great distance from the shore. It carried f"
+    }
+  ]
+}

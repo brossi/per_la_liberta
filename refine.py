@@ -168,6 +168,9 @@ def _parse_changes(revised_text: str, original_text: str) -> tuple[str, list[dic
     # Strip all <change> tags, keeping the new text
     clean = _CHANGE_RE.sub(r"\3", clean)
 
+    # Filter no-ops (Claude sometimes emits <change> tags where old == new)
+    changes = [c for c in changes if c["old"] != c["new"]]
+
     # Fallback: if no tags found but text differs, use difflib
     if not changes and clean.strip() != original_text.strip():
         changes = _diff_fallback(original_text, clean)

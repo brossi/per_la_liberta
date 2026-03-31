@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:33:27.562105+00:00",
+  "chapter_id": "p2_capitolo_dodicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "bent over their desks",
+      "new": "intent upon their desks",
+      "reason": "Edgren: intento = intent (attentive, diligent); 'bent over' is idiomatic but loses the precision of the Italian 'intenti allo scrittoio'",
+      "context_sentence": "which were occupied, despite the hour, by clerks intent upon their desks. Arriving at a fourth, I sat for a long while bef"
+    },
+    {
+      "old": "see of the man seated there",
+      "new": "discern of the man seated there",
+      "reason": "Edgren: scorgere = discern (perceive, distinguish); 'discern' is the primary period-appropriate equivalent given by Edgren",
+      "context_sentence": "wall. The stirrups were so high as to allow me to discern of the man seated there only the crown of his skull and nothing more — th"
+    }
+  ]
+}

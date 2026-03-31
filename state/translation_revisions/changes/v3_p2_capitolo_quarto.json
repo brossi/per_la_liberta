@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:17:45.288078+00:00",
+  "chapter_id": "p2_capitolo_quarto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "Slantova",
+      "new": "Mantua",
+      "reason": "Italian source reads 'Mantova,' the standard English form of which is Mantua; 'Slantova' is a clear mistranslation",
+      "context_sentence": "had been darkly implicated in the conspiracies of Mantua. Yet Rossi is a very common surname in Italy, and"
+    }
+  ]
+}

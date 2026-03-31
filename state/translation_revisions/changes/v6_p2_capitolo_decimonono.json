@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:29:31.698622+00:00",
+  "chapter_id": "p2_capitolo_decimonono",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "execution",
+      "new": "punishment",
+      "reason": "Edgren: supplizio = punishment; penalty; torment (torture)",
+      "context_sentence": ", \"I know that tomorrow morning I shall be led to punishment. Listen well, and do, you who are good, exactly a"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:31:12.477651+00:00",
+  "chapter_id": "p2_capitolo_undicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "hum",
+      "new": "humming",
+      "reason": "Edgren: ronzìo = humming (buzz, rumble) — the gerundive noun form 'humming' is the primary dictionary rendering",
+      "context_sentence": "of the city reached me in a confused murmur, the humming of an immense beehive. The Seine, grown darker by"
+    }
+  ]
+}

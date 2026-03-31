@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:26:36.116766+00:00",
+  "chapter_id": "p2_capitolo_dccimottavo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "surveillance",
+      "new": "watch",
+      "reason": "Edgren: sorve-gliànza, F.: watch (vigilance) — 'watch' is the period-appropriate English equivalent given by Edgren",
+      "context_sentence": "sleep in turns so as to keep me under continuous watch; but this did not trouble me in the least, for I"
+    }
+  ]
+}

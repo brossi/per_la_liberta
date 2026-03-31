@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:16:32.633487+00:00",
+  "chapter_id": "p2_capitolo_quattordicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "eye-hollow",
+      "new": "eye-socket",
+      "reason": "Edgren: orbita = 'hollow of the eye' — 'eye-socket' is the more standard period English anatomical term for the orbital cavity",
+      "context_sentence": "sed as a municipal street-sweeper, with one empty eye-socket, hideously scarred. Two guards remained standing"
+    }
+  ]
+}

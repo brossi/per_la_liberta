@@ -1,0 +1,27 @@
+{
+  "version": 5,
+  "timestamp": "2026-03-31T17:49:20.530446+00:00",
+  "chapter_id": "p2_capitolo_o_indiccsimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "shaking my head",
+      "new": "wagging my head",
+      "reason": "Edgren: dondo-lare = swing; dally — the motion described is a swinging or wagging, not a lateral shake",
+      "context_sentence": "animate the imperial Court. To this I replied by wagging my head and smiling. A curious dispute arose from this, a"
+    },
+    {
+      "old": "making a wager",
+      "new": "laying a wager",
+      "reason": "Edgren: scom-méssa, F.: wager: fare una —, lay a wager — the dictionary idiom favours 'lay a wager'",
+      "context_sentence": "curious dispute arose from this, and we ended by laying a wager. If the Tribunal pronounced a sentence of death,"
+    },
+    {
+      "old": "pact",
+      "new": "compact",
+      "reason": "Edgren: patto [L. pactum], M.: pact (agreement; compact) — 'compact' is the equally valid period rendering and avoids repetition with 'sealed'",
+      "context_sentence": "If not, I would pay for it myself. We sealed the compact with a vigorous handshake.\n\nMathieu de la Drôme p"
+    }
+  ]
+}

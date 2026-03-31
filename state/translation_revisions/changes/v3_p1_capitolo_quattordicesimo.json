@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:40:10.192336+00:00",
+  "chapter_id": "p1_capitolo_quattordicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "formidable heaving",
+      "new": "formidable undulation",
+      "reason": "Edgren: ondeggiamento = undulation (vibration)",
+      "context_sentence": "waters, as if forewarning its approach, took on a formidable undulation, and our frail craft tossed about in wild abandon"
+    },
+    {
+      "old": "violence of the storm",
+      "new": "tyranny of the storm",
+      "reason": "Edgren: prepotenza = tyranny",
+      "context_sentence": "hat desperate struggle between human will and the tyranny of the storm. But judging it imprudent to turn my back upon th"
+    }
+  ]
+}

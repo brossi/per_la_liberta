@@ -1,0 +1,15 @@
+{
+  "version": 5,
+  "timestamp": "2026-03-31T17:47:19.938908+00:00",
+  "chapter_id": "p1_capitolo_ventesimoquarto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "openly acknowledged chief",
+      "new": "manifest chief",
+      "reason": "Edgren: palese [L. palàm, openly], ADJ.: known (manifest, plain) — 'manifest' is the period dictionary's primary rendering, and pairs more naturally with 'effective' in the compound phrase 'capo effettivo e palese'",
+      "context_sentence": "rie*, names Giuseppe Mazzini as the effective and manifest chief of this attempt, using as pretext the meagre numb"
+    }
+  ]
+}

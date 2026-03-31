@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T18:01:42.512926+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_secondo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "Indeed he pushed",
+      "new": "Nay, he pushed",
+      "reason": "Edgren: anzi = 'rather, nay; on the contrary' — 'Indeed' is not among the listed equivalents; 'Nay' is the period-appropriate rendering",
+      "context_sentence": "ere than he had us transferred to the upper deck. Nay, he pushed his benevolent partiality so far as to permit me,"
+    },
+    {
+      "old": "another hundred wretches",
+      "new": "another hundred derelicts",
+      "reason": "Edgren: derelitto = 'derelict (abandoned)'; the Italian 'derelitti' used as a noun is directly rendered 'derelicts' per Edgren",
+      "context_sentence": "hundred convicts were disembarked.\n\nI, Gomez, and another hundred derelicts boarded a small steamer, and on the eleventh of D"
+    }
+  ]
+}

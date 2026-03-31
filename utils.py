@@ -69,6 +69,59 @@ COMPOUND_ORDINALS = {
 }
 
 
+def build_chapter_id_map(italian_md_path: Path) -> dict[str, str]:
+    """Build a mapping from short IDs (p1_ch01) to long IDs (p1_capitolo_primo).
+
+    Returns a dict that maps both formats to the canonical long ID,
+    so either can be used as input.
+    """
+    from translate import parse_italian_markdown
+
+    text = italian_md_path.read_text(encoding="utf-8")
+    chapters = parse_italian_markdown(text)
+    content = [ch for ch in chapters if not ch.get("is_structural")]
+
+    mapping: dict[str, str] = {}
+    current_part = None
+    part_idx = 0
+
+    for ch in content:
+        long_id = ch["id"]
+        if long_id.startswith("p1_") and current_part != "p1":
+            current_part = "p1"
+            part_idx = 0
+        elif long_id.startswith("p2_") and current_part != "p2":
+            current_part = "p2"
+            part_idx = 0
+        elif long_id == "prefazione":
+            mapping["prefazione"] = "prefazione"
+            continue
+
+        part_idx += 1
+        short_id = f"{current_part}_ch{part_idx:02d}"
+        mapping[short_id] = long_id
+        mapping[long_id] = long_id  # long form maps to itself
+
+    return mapping
+
+
+def resolve_chapter_ids(raw_ids: list[str], italian_md_path: Path) -> list[str]:
+    """Resolve a list of chapter IDs, accepting either short or long format.
+
+    Accepts: p1_ch01, p1_capitolo_primo, prefazione, etc.
+    Returns: list of canonical long-form IDs.
+    """
+    id_map = build_chapter_id_map(italian_md_path)
+    resolved = []
+    for raw in raw_ids:
+        if raw in id_map:
+            resolved.append(id_map[raw])
+        else:
+            print(f"  Warning: unknown chapter ID '{raw}', passing through as-is")
+            resolved.append(raw)
+    return resolved
+
+
 def strip_accents(text: str) -> str:
     """Remove accents for comparison purposes."""
     nfkd = unicodedata.normalize("NFKD", text)

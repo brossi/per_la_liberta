@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:02:49.965727+00:00",
+  "chapter_id": "prefazione",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "vigorous poetry",
+      "new": "strong poetry",
+      "reason": "Edgren: forte = 'strong (robust...)'",
+      "context_sentence": "d him pulsing with intense life, still distilling strong poetry, still capable of indignation and of tears... How"
+    }
+  ]
+}

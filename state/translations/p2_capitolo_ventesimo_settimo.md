@@ -1,8 +1,8 @@
 <!-- pages:235-240 -->
 
-The little vessel glides on, glides on... until there appeared before our weary, harried eyes, drawn against the blue sky, the black hull of a cutter. It had emerged as if by surprise from the shore, at so short a distance that the mere thought of evading it would have been madness. We flattered ourselves, for a moment, that those on board would take no notice of us; but a cannon shot, fired as a warning, blew away every illusion. The little herring moved toward the shark, the shark moved toward the little herring... the distance vanished with such rapidity that before long we were able to make out the flag flying from the sternpost.
+The little vessel glides on, glides on... until there appeared before our weary, harried eyes, drawn against the blue sky, the black hulk of a cutter. It had emerged as if by surprise from the shore, at so short a distance that the mere thought of evading it would have been madness. We flattered ourselves, for a moment, that those on board would take no notice of us; but a cannon shot, fired as an admonishment, blew away every illusion. The little herring moved toward the shark, the shark moved toward the little herring... the distance vanished with such rapidity that before long we were able to make out the flag flying from the sternpost.
 
-Lift up your hearts! It was the symbol of pride and liberty; of humanity and progress... the English flag!!
+Lift up your hearts! It was the symbol of pride and liberty; of humanity and progress... the English flag!
 
 Leaning over the rail of his cutter, a black captain, surrounded by half a dozen black sailors, demanded of us, in a tone of command, who we were and whether we carried on board any goods subject to customs duties. When I had answered him, he straightened up in astonishment, and pointing his finger: "You don't mean to tell me you have crossed more than a thousand miles of sea on that span of hollow wood?"
 

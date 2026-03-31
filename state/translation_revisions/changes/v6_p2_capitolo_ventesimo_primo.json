@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:37:18.168571+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_primo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "infer",
+      "new": "conclude",
+      "reason": "Edgren: arguire = argue (infer, conclude) — 'conclude' better reflects the sense of drawing a reasoned judgement from available evidence, which fits the context of assessing a man's means",
+      "context_sentence": "re, of few words; he possessed, from what I could conclude, means more than sufficient. Like the great major"
+    }
+  ]
+}

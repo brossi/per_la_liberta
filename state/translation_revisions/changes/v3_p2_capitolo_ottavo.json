@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:26:15.470033+00:00",
+  "chapter_id": "p2_capitolo_ottavo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "a fitting soil in which to pour out",
+      "new": "a propitious soil in which to pour out",
+      "reason": "Edgren: propizio = propitious (kind, favorable)",
+      "context_sentence": "his intimate life, and seemed happy to have found a propitious soil in which to pour out the torrent of his speech — less Tuscan than pure"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:53:05.825696+00:00",
+  "chapter_id": "p2_capitolo_ventesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "happy occasion",
+      "new": "auspicious occasion",
+      "reason": "Edgren: fausto = 'auspicious (FAVoURable, happy, propitious)' — 'auspicious' is the primary and most period-appropriate rendering",
+      "context_sentence": "n and a mother, had been pleased to solemnise the auspicious occasion by granting a pardon that would lift a woman, a m"
+    },
+    {
+      "old": "reaching for her kisses",
+      "new": "longing for her kisses",
+      "reason": "Edgren: anelire = 'be breathlessly eager, desire eagerly (long ardently)' — 'reaching for' introduces a physical gesture absent from the Italian; 'longing for' follows the dictionary sense of eager desire",
+      "context_sentence": "the Madonna in a Flemish painting. The child was longing for her kisses and tugging at her skirts. One second more, and m"
+    }
+  ]
+}

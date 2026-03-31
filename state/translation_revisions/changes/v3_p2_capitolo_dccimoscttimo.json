@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:45:08.103334+00:00",
+  "chapter_id": "p2_capitolo_dccimoscttimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "brute power",
+      "new": "tyranny",
+      "reason": "Edgren: prepotenza = tyranny",
+      "context_sentence": "been compelled, in order to subsist, to reinforce tyranny with artifice. <change old=\"Brute power\" reason=\""
+    },
+    {
+      "old": "Brute power",
+      "new": "Tyranny",
+      "reason": "Edgren: prepotenza = tyranny",
+      "context_sentence": "otenza = tyranny\">tyranny</change> with artifice. Tyranny is, by its very nature, intermittent and does not"
+    }
+  ]
+}

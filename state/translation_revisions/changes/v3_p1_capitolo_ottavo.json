@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:24:22.905778+00:00",
+  "chapter_id": "p1_capitolo_ottavo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "the fatal aftermath of the Piedmontese cannonades",
+      "new": "the fatal train of the Piedmontese cannon-shots",
+      "reason": "Edgren: strascico = 'drawing or dragging along; train of a gown'; cannonata = 'cannon-shot'",
+      "context_sentence": "eri were, at that time, terribly hated in Genoa — the fatal train of the Piedmontese cannon-shots!\n\nI continued to live by humble labour and by exp"
+    }
+  ]
+}

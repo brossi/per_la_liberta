@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T18:07:51.730309+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_quinto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "a mean enlargement of his Piedmont",
+      "new": "a mean aggrandizement of his Piedmont",
+      "reason": "Edgren: ingrandimento = 'aggrandizement (enlargement)'; aggrandizement is the primary definition and more period-appropriate in a political context",
+      "context_sentence": "the French; and in either case, what results?... a mean aggrandizement of his Piedmont; a small additional source of revenue for the old"
+    }
+  ]
+}

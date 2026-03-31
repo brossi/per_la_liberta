@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:50:44.058333+00:00",
+  "chapter_id": "p2_capitolo_decimonono",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "to unravel",
+      "new": "to twist",
+      "reason": "Edgren: torcere = 'twist (wring, writhe, wrest)'; the Italian idiom 'molto filo da torcere' uses torcere in its literal sense of twisting, not unravelling",
+      "context_sentence": ", thanks to our connections, a great deal of rope to twist, and before anything... eh, eh!... it would take"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:30:51.596871+00:00",
+  "chapter_id": "p1_capitolo_decimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "Trolli guessed the purpose",
+      "new": "Trolli saw the purpose at a glance",
+      "reason": "Edgren: intuire = 'know intuitively (know at a glance)'; 'guessed' implies uncertainty whereas intuire denotes immediate intuitive perception",
+      "context_sentence": "a large loaf of bread and tucked it under my arm. Trolli saw the purpose at a glance and did likewise. As workmen returning from their"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:36:09.062299+00:00",
+  "chapter_id": "p2_capitolo_tredicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "rebuff",
+      "new": "affront",
+      "reason": "Edgren: smacco = affront (insult); abuse — 'affront' is the primary period-appropriate rendering",
+      "context_sentence": "ut the Police would not resign themselves to this affront, and charged the agent Hébert, who knew Pieri per"
+    }
+  ]
+}

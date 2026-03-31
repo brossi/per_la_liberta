@@ -1,8 +1,10 @@
 <!-- pages:222-225 -->
 
+## Revised Translation — Chapter the Twenty-Third
+
 CHAPTER THE TWENTY-THIRD
 
-I HAD scarcely flung my canvas sack upon the quay of the Island of Salvation when hope flooded my breast — intense, imperious.
+I HAD scarcely flung my canvas sack upon the quay of the Island of Salvation when hope flooded my breast — intense, overpowering.
 
 The island, with a little play of imagination, presented the shape of a figure 8. Upon the larger loop, which was also the higher, stood the dwellings, the hospital, a church; upon the smaller loop were the workshops, and at its outermost curve, the barracks. From that extremity, facing more or less exactly to the northwest, one could toss a stone by hand onto the long islet of the Devil — the very same that was later to become grimly celebrated for the squalid drama of which Captain Dreyfus was the victim. At low tide, it was not difficult, by leaping from rock to exposed rock, to pass from one island to the other with dry feet.
 
@@ -10,7 +12,7 @@ To the east, another small islet rose from the waters, called San Giuseppe — a
 
 The island upon which I found myself measured, by rough estimate and along its greatest diameter, an extent of some two miles. Its shores were rocky and full of inlets.
 
-These were circumstances I had noted in passing. What succeeded in capturing my attention and fixing it so as to plunge me into deep reflection was a small rowing boat gliding over the waves at no great distance from the shore. It carried four or five convicts aboard, who were rowing and singing. I thought to myself: "What is there to prevent these men from making for the open sea? True, one does not cross the Ocean by oar alone. But why do they not procure themselves a sail? I left a canoe in the waters of the Oyapock, and here I find another at the Island of Salvation. Courage, di Rudio — you have lost nothing!"
+These were circumstances I had noted in passing. What succeeded in capturing my attention and fixing it so as to plunge me into deep reflection was a small rowing bark running over the waves at no great distance from the shore. It carried four or five convicts aboard, who were rowing and singing. I thought to myself: "What is there to prevent these men from making for the open sea? True, one does not cross the Ocean by oar alone. But why do they not procure themselves a sail? I left a canoe in the waters of the Oyapock, and here I find another at the Island of Salvation. Courage, di Rudio — you have lost nothing!"
 
 I was still standing motionless, my eye fixed upon that nutshell of a craft, when I felt a touch upon my shoulder. I turned with a start and found myself face to face with a man wearing the grotesque uniform of a convict.
 

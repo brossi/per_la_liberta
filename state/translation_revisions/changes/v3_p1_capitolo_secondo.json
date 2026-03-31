@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:10:20.604037+00:00",
+  "chapter_id": "p1_capitolo_secondo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "remotest corner",
+      "new": "uttermost extremity",
+      "reason": "Edgren: lembo = extremity, limit; estremo = extreme, utmost — 'uttermost extremity' reflects both dictionary definitions more precisely than 'remotest corner'",
+      "context_sentence": "betta de Domini.\n\nMy family has old roots in that uttermost extremity of Italy. Angelo Biave wrote of it — and wrote, b"
+    }
+  ]
+}

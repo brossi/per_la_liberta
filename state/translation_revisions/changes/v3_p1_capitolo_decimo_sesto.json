@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:44:27.052593+00:00",
+  "chapter_id": "p1_capitolo_decimo_sesto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "summoning the squads",
+      "new": "convoking the squads",
+      "reason": "Edgren: convocare = convoke, assemble — 'convoke' is the period-appropriate English equivalent",
+      "context_sentence": "ction, Assi and certain other leaders, instead of convoking the squads, vanished. The few brave men lying in wait, findi"
+    },
+    {
+      "old": "seething with fury",
+      "new": "chafing",
+      "reason": "Edgren: fremere = chafe, fret; tremble with rage or passion — 'chafing' is the period-appropriate rendering",
+      "context_sentence": "their numbers far too meagre, waited for a time, chafing; then, suspecting treachery, or supposing that ev"
+    }
+  ]
+}

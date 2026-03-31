@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:32:57.564104+00:00",
+  "chapter_id": "p1_capitolo_undicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "parish priest of San Pietro in Campo",
+      "new": "rector of San Pietro in Campo",
+      "reason": "Edgren: parroco = rector (of a parish, parson)",
+      "context_sentence": "r, when I was informed that Don Bastiano Barozzi, rector of San Pietro in Campo, was living as a refugee in Turin.\n\nBarozzi, duri"
+    },
+    {
+      "old": "lend a hand at their execution",
+      "new": "lend a hand in their punishment",
+      "reason": "Edgren: supplizio = punishment; penalty; torment (torture). 'Execution' is not among the listed meanings.",
+      "context_sentence": "he powerful — to hear their confessions, and even lend a hand in their punishment.\n\nDeeply versed in ancient history, Don Bastiano"
+    }
+  ]
+}

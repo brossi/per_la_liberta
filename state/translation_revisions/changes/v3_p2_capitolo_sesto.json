@@ -1,0 +1,27 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:22:45.313998+00:00",
+  "chapter_id": "p2_capitolo_sesto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "tumultously",
+      "new": "tumultuously",
+      "reason": "Edgren: tumultuare = 'make a tumult, be tumultuous'; the adjectival form is given as 'tumultuoso', adverb 'tumultuosamente' — the translation misspells the English equivalent",
+      "context_sentence": "rced myself to suppress the thoughts that swarmed tumultuously through my head, whilst renewing old acquaintance"
+    },
+    {
+      "old": "customary wanderings",
+      "new": "customary excursion",
+      "reason": "Edgren: escursione = 'excursion; raid' — 'wanderings' is an interpretive departure from the source word",
+      "context_sentence": "home, unusually weary, almost dispirited, from my customary excursion, when, turning the corner into the square of Shoa"
+    },
+    {
+      "old": "design",
+      "new": "conspiracy",
+      "reason": "Edgren: trama = 'woof, weft; conspiracy' — 'conspiracy' is the period-appropriate English equivalent given directly in the dictionary",
+      "context_sentence": "as already in Paris, gathering the threads of his conspiracy; that the means definitively chosen for the attem"
+    }
+  ]
+}

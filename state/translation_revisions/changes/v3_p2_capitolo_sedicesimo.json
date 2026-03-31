@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:42:40.788746+00:00",
+  "chapter_id": "p2_capitolo_sedicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "a mind adroit",
+      "new": "a genius adroit",
+      "reason": "Edgren: ingegno = 'natural talent (genius); craftiness'",
+      "context_sentence": "he conspiracy against Napoleon III reveals in him a genius adroit in conceiving a design in broad outline. But the"
+    },
+    {
+      "old": "small details",
+      "new": "trifles",
+      "reason": "Edgren: inezia = 'worthless thing, trifle, nothing'",
+      "context_sentence": "s, when analysed, proves to consist in the sum of trifles patiently worked with a chisel. Felice Orsini, in"
+    }
+  ]
+}

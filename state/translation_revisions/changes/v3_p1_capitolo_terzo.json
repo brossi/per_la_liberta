@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:12:08.978992+00:00",
+  "chapter_id": "p1_capitolo_terzo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "delicate fingers",
+      "new": "slender fingers",
+      "reason": "Edgren: tenui = thin (slender); 'delicate' is not among the dictionary's definitions",
+      "context_sentence": "lous world of small things, he bent down, and his slender fingers played among the little stones that glittered at"
+    }
+  ]
+}

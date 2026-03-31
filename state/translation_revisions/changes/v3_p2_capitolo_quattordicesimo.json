@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:38:55.785204+00:00",
+  "chapter_id": "p2_capitolo_quattordicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "socket",
+      "new": "eye-hollow",
+      "reason": "Edgren: orbita = hollow of the eye",
+      "context_sentence": "sed as a municipal street-sweeper, with one empty eye-hollow, hideously scarred. Two guards remained standing"
+    }
+  ]
+}

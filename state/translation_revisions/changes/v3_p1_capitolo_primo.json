@@ -1,0 +1,21 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:06:15.401150+00:00",
+  "chapter_id": "p1_capitolo_primo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "put me in mind of",
+      "new": "put me in mind of",
+      "reason": "Edgren: rammentare = 'put in mind (remind)'",
+      "context_sentence": "ived only a few hours before, on a train that had put me in mind of those which, from every corner of France, converg"
+    },
+    {
+      "old": "realm of shadows",
+      "new": "kingdom of shadows",
+      "reason": "Edgren: regno = 'kingdom (realm)'; ombra = shadows — 'kingdom of shadows' is the more literal and period-appropriate rendering",
+      "context_sentence": "They pass quietly, light as beings come from the kingdom of shadows, and they smile at the children and smile at the"
+    }
+  ]
+}

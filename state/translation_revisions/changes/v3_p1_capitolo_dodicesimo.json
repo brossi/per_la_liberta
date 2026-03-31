@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:35:33.396451+00:00",
+  "chapter_id": "p1_capitolo_dodicesimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "rang out",
+      "new": "and surname rang out",
+      "reason": "Edgren: nome = name, cognome = cognomen (surname); the Italian 'nome e cognome' specifies both given name and surname, which 'full name and surname' renders more precisely",
+      "context_sentence": "ate, violent as a blow to the chest, my full name and surname rang out.\n\nIn that instant, I believed myself discovered a"
+    }
+  ]
+}

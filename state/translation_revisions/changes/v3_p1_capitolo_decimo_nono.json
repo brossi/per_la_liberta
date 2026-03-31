@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:53:52.410744+00:00",
+  "chapter_id": "p1_capitolo_decimo_nono",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "gendarmes",
+      "new": "ruffians",
+      "reason": "Edgren: sghèrro = ruffian (cutthroat); Italian 'sgherri' is distinct from 'gendarmi' which appears separately in the text",
+      "context_sentence": "break his bamboo cane across the shoulders of the ruffians, and it was only with considerable effort that th"
+    },
+    {
+      "old": "henchmen",
+      "new": "ruffians",
+      "reason": "Edgren: sghèrro = ruffian (cutthroat); a more period-accurate rendering of 'sgherri'",
+      "context_sentence": "from my mind even the last traces of doubt — the ruffians of Austria had surrounded the house.\n\nInside, the"
+    },
+    {
+      "old": "gendarme",
+      "new": "ruffian",
+      "reason": "Edgren: sghèrro = ruffian (cutthroat); Italian 'uno sgherro' is distinct from 'gendarme/gendarmi' used elsewhere in the text",
+      "context_sentence": "kitchen. In less time than it takes to tell, one ruffian slipped a running noose around his neck; another"
+    },
+    {
+      "old": "gendarmes",
+      "new": "ruffians",
+      "reason": "Edgren: sghèrro = ruffian (cutthroat); Italian 'gli sgherri' is distinct from 'gendarmi' used elsewhere",
+      "context_sentence": "tened himself and, stepping forward as far as the ruffians holding the rope allowed him, snarled through cle"
+    }
+  ]
+}

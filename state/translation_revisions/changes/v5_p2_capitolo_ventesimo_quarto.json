@@ -1,0 +1,21 @@
+{
+  "version": 5,
+  "timestamp": "2026-03-31T18:14:43.111558+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_quarto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "provisions",
+      "new": "victuals",
+      "reason": "Edgren: vettovaglia = victuals (provisions), with 'victuals' given as the primary period-appropriate English equivalent",
+      "context_sentence": "d and reckoned upon it. To save the indispensable victuals from our limited daily ration would have demanded"
+    },
+    {
+      "old": "supplies",
+      "new": "victuals",
+      "reason": "Edgren: vettovaglia = victuals (provisions); the referent is the same vettovaglie, warranting consistent rendering",
+      "context_sentence": "olonged for our hunger and for my impatience. The victuals would have to be purchased gradually at the penit"
+    }
+  ]
+}

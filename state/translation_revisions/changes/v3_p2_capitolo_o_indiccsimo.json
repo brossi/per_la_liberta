@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:40:41.910934+00:00",
+  "chapter_id": "p2_capitolo_o_indiccsimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "pact",
+      "new": "pact",
+      "reason": "Edgren: patto = pact (agreement; compact) — 'pact' is confirmed as the correct period rendering",
+      "context_sentence": "If not, I would pay for it myself. We sealed the pact with a vigorous handshake.\n\nMathieu de la Drôme p"
+    }
+  ]
+}

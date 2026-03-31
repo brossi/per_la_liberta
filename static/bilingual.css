@@ -170,6 +170,20 @@ body {
   margin-top: 0.3em;
 }
 
+.scan-qr {
+  display: inline-block;
+  vertical-align: middle;
+  width: 4em;
+  height: 4em;
+  margin-left: 0.5em;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.scan-qr:hover {
+  opacity: 1;
+}
+
 .page-citation {
   color: var(--color-accent);
   text-decoration: none;
@@ -183,10 +197,11 @@ body {
 /* === Two-Column Spread === */
 .spread {
   display: grid;
-  grid-template-columns: minmax(0, 38em) minmax(0, 38em);
+  grid-template-columns: minmax(0, 33em) minmax(0, 33em);
   gap: var(--gutter);
   align-items: start;
-  justify-content: center;
+  justify-content: start;
+  overflow: visible;
 }
 
 .verso {
@@ -552,9 +567,9 @@ body {
 /* === Screen-specific === */
 @media screen {
   body {
-    max-width: 82em;
+    max-width: 90em;
     margin: 2em auto;
-    padding: 0 2em;
+    padding: 0 1em 0 1em;
   }
 
   .chapter-header {
@@ -568,6 +583,10 @@ body {
 
 /* === Revision Marginalia === */
 .recto {
+  overflow: visible;
+}
+
+.recto p {
   position: relative;
 }
 
@@ -577,14 +596,17 @@ body {
 
 .marginalia {
   position: absolute;
-  right: -12em;
-  width: 10em;
-  font-size: 0.72em;
+  right: -20em;
+  top: 0; /* overridden by JS to align with .revised span */
+  width: 18em;
+  display: block;
+  font-size: 0.94em;
   line-height: 1.35;
   color: var(--color-muted);
   border-left: 1.5px solid var(--color-accent);
   padding-left: 0.5em;
-  margin-top: -1.2em;
+  text-indent: 0;
+  text-align: left;
 }
 
 .margin-old {
@@ -597,6 +619,19 @@ body {
   display: block;
   margin-top: 0.2em;
   font-size: 0.9em;
+  text-indent: 0;
+  padding-left: 0;
+}
+
+.marginalia:hover,
+.marginalia.active {
+  color: var(--color-body);
+  cursor: pointer;
+}
+
+.revised.highlight {
+  background: rgba(139, 0, 0, 0.12);
+  border-bottom-style: solid;
 }
 
 .no-marginalia .marginalia {
@@ -605,6 +640,10 @@ body {
 
 .no-marginalia .revised {
   border-bottom: none;
+}
+
+.no-marginalia .spread {
+  justify-content: center;
 }
 
 /* === Print / PDF (WeasyPrint paged media) === */
@@ -632,7 +671,7 @@ body {
     padding: 0;
   }
 
-  .toc-trigger, .toc-panel, .toc-backdrop, .font-size-controls, .marginalia {
+  .toc-trigger, .toc-panel, .toc-backdrop, .font-size-controls, .marginalia, .scan-qr {
     display: none;
   }
 

@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T19:05:10.280113+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_ottavo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "first mate",
+      "new": "second mate",
+      "reason": "Edgren: 'secondo' = second; 'secondo' in Italian nautical usage denotes the second officer, not the first mate",
+      "context_sentence": "my pocket a couple of shillings borrowed from the second mate of the *John Romelly*; I was wearing the trousers"
+    }
+  ]
+}

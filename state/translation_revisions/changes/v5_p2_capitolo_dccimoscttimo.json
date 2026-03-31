@@ -1,0 +1,15 @@
+{
+  "version": 5,
+  "timestamp": "2026-03-31T17:53:56.690885+00:00",
+  "chapter_id": "p2_capitolo_dccimoscttimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "display of fine attire",
+      "new": "splendour of attire",
+      "reason": "Edgren: sfoggio = splendour (sumptuousness); 'display of fine attire' adds 'fine' not present in the Italian and weakens the sense of ostentatious splendour",
+      "context_sentence": "oom was thronged with men and ladies. There was a splendour of attire... people had come to the trial as to the theatre"
+    }
+  ]
+}

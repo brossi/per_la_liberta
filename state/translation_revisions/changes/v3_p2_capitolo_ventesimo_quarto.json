@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T18:05:24.825911+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_quarto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "fierceness, the outrage inflicted upon them by foreign fierceness",
+      "new": "tyranny, the outrage inflicted upon them by foreign tyranny",
+      "reason": "Edgren: prepotenza = tyranny",
+      "context_sentence": "vate one; for having avenged, with our own native tyranny, the outrage inflicted upon them by foreign tyranny. Christ forgave much — so it is said — to those w"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T18:49:53.909656+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_sesto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "locked to",
+      "new": "grappled to",
+      "reason": "Edgren: aggrappare = grapple — 'grappled to' is the more period-appropriate rendering of 'aggrappato'",
+      "context_sentence": "as not keeping every fibre, every atom of himself grappled to the oars that held us in balance, toiled feverish"
+    }
+  ]
+}

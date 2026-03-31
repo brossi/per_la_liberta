@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T18:09:35.803361+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_sesto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "ordeal",
+      "new": "trial",
+      "reason": "Edgren: prova = proof (test); the period-appropriate English rendering is 'trial' rather than 'ordeal'",
+      "context_sentence": "p's log, the manifold vicissitudes of our arduous trial. I shall say briefly of those which most properly"
+    }
+  ]
+}

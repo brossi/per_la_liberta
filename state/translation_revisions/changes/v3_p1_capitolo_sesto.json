@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T16:19:27.872942+00:00",
+  "chapter_id": "p1_capitolo_sesto",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "Thus the brave Lombard youth blotted out the stain of past civil discord, and saturating with their blood the soil of the Gracchi, traced upon it — invisible to the eye, but blazing in every heart — the fateful words: *\"Italia Italia una, Roma capitale d'Italia!\"*\n\nIt was in that assault that Enrico Dandolo ceased to breathe and to fight for his — for our — Country.",
+      "new": "Thus the brave Lombard youth blotted out the stain of past civil discord, and saturating with their blood the soil of the Gracchi, traced upon it — invisible to the eye, but blazing in every heart — the fateful words: <change old='\"Italia Italia una, Roma capitale d\\'Italia!\"' reason=\"Duplication of 'Italia' in translation; Italian source reads 'Italia una, Roma capitale d\\'Italia!' with no repetition\">\"Italia una, Roma capitale d'Italia!\"</change>\n\nIt was in that assault that Enrico Dandolo ceased to breathe and to fight for his — for our — Country.",
+      "reason": "Changed (no dictionary annotation provided)",
+      "context_sentence": "Thus the brave Lombard youth blotted out the stain of past civil discord, and saturating with their "
+    }
+  ]
+}

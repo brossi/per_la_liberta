@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T17:58:17.192237+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_primo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "gather",
+      "new": "infer",
+      "reason": "Edgren: arguire = argue (infer, conclude); 'infer' is the dictionary's primary equivalent and more period-precise than 'gather'",
+      "context_sentence": "re, of few words; he possessed, from what I could infer, means more than sufficient. Like the great major"
+    }
+  ]
+}

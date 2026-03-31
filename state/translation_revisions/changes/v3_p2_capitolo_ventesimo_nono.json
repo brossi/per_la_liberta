@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "timestamp": "2026-03-31T18:16:58.798927+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_nono",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "the right of property",
+      "new": "the right of free speech",
+      "reason": "Italian source reads 'il diritto di «libera parola»' (the right of 'free speech/free word'); 'property' has no basis in the original Italian",
+      "context_sentence": "ionary, as it represents a clear mistranslation:\n\nthe right of free speech\n\nNo other changes were warranted. The Edgren dict"
+    }
+  ]
+}

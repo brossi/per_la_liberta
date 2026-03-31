@@ -11,6 +11,7 @@ import re
 from pathlib import Path
 
 IA_ITEM_ID = "perlalibertdal00cres"
+SITE_BASE = "https://brossi.github.io/PER_LA_LIBERTA"
 # Offset between PDF leaf numbers and printed book page numbers.
 # PDF leaf 7 = book page 1 (leaves 1-6 are cover + front matter).
 PDF_PAGE_OFFSET = 6
@@ -149,6 +150,111 @@ def _para_to_html(text: str) -> str:
     return text
 
 
+def _qr_data_uri(url: str, scale: int = 3) -> str:
+    """Generate a QR code as a PNG data URI."""
+    import base64
+    import io
+
+    import segno
+
+    qr = segno.make(url)
+    buf = io.BytesIO()
+    qr.save(buf, kind="png", scale=scale, border=1)
+    b64 = base64.b64encode(buf.getvalue()).decode()
+    return f"data:image/png;base64,{b64}"
+
+
+def _generate_scan_viewer(output_path: Path) -> None:
+    """Generate a lightweight standalone scan viewer page.
+
+    Reads start/end page from the URL hash (e.g., scan.html#127-134)
+    and displays the page image with prev/next navigation.
+    """
+    html = f"""\
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Per la Libertà! — Source Scan</title>
+<style>
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+  body {{ background: #1a1a1a; color: #ccc; font-family: system-ui, sans-serif;
+         display: flex; flex-direction: column; height: 100vh; height: 100dvh; }}
+  .header {{ padding: 0.5em 1em; font-size: 0.9em; color: #999;
+             border-bottom: 1px solid #333; flex-shrink: 0;
+             display: flex; justify-content: space-between; align-items: center; }}
+  .header a {{ color: #c47; text-decoration: none; }}
+  .viewer {{ flex: 1; overflow: auto; display: flex; align-items: flex-start;
+             justify-content: center; padding: 0.5em; }}
+  .viewer img {{ max-width: 100%; max-height: 100%; height: auto;
+                 border: 1px solid #333; }}
+  .nav {{ padding: 0.6em 1em; border-top: 1px solid #333; flex-shrink: 0;
+          display: flex; justify-content: space-between; align-items: center; }}
+  .nav button {{ background: #333; border: 1px solid #555; color: #ccc;
+                 padding: 0.5em 1.2em; border-radius: 4px; font-size: 1em;
+                 cursor: pointer; }}
+  .nav button:active {{ background: #555; }}
+  .nav button:disabled {{ opacity: 0.3; }}
+  .nav .page-info {{ font-size: 0.9em; }}
+</style>
+</head>
+<body>
+<div class="header">
+  <span id="title">Source Scan</span>
+  <a id="ia-link" href="#" target="_blank">Internet Archive</a>
+</div>
+<div class="viewer">
+  <img id="img" src="" alt="Source page scan">
+</div>
+<div class="nav">
+  <button id="prev">&lsaquo; Prev</button>
+  <span class="page-info" id="page-info"></span>
+  <button id="next">Next &rsaquo;</button>
+</div>
+<script>
+const OFFSET = {PDF_PAGE_OFFSET};
+const IA_ITEM = '{IA_ITEM_ID}';
+const m = location.hash.match(/^#(\\d+)-(\\d+)$/);
+if (!m) {{ document.body.innerHTML = '<p style="padding:2em;color:#999">No page range specified. URL should be scan.html#START-END</p>'; }}
+else {{
+  let cur = parseInt(m[1]), start = cur, end = parseInt(m[2]);
+  const img = document.getElementById('img');
+  const info = document.getElementById('page-info');
+  const iaLink = document.getElementById('ia-link');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  function show(n) {{
+    cur = Math.max(start, Math.min(n, end));
+    const pad = String(cur).padStart(4, '0');
+    img.src = 'assets/page_images/page_' + pad + '.png';
+    info.textContent = 'p. ' + (cur - OFFSET) + ' of ' + (start - OFFSET) + '\\u2013' + (end - OFFSET);
+    prevBtn.disabled = cur <= start;
+    nextBtn.disabled = cur >= end;
+    iaLink.href = 'https://archive.org/details/' + IA_ITEM + '/page/n' + (cur - 1) + '/mode/1up';
+    document.getElementById('title').textContent = 'p. ' + (cur - OFFSET);
+  }}
+  prevBtn.addEventListener('click', () => show(cur - 1));
+  nextBtn.addEventListener('click', () => show(cur + 1));
+  document.addEventListener('keydown', e => {{
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    if (e.key === 'ArrowRight') show(cur + 1);
+  }});
+  // Swipe support for mobile
+  let touchX = 0;
+  document.addEventListener('touchstart', e => {{ touchX = e.touches[0].clientX; }});
+  document.addEventListener('touchend', e => {{
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  }});
+  show(start);
+}}
+</script>
+</body>
+</html>"""
+    output_path.write_text(html, encoding="utf-8")
+
+
 def _load_revision_changes(state_dir: Path | None) -> dict[str, list[dict]]:
     """Load revision change metadata indexed by chapter_id.
 
@@ -161,18 +267,24 @@ def _load_revision_changes(state_dir: Path | None) -> dict[str, list[dict]]:
     if not changes_dir.exists():
         return {}
 
-    result: dict[str, list[dict]] = {}
+    accumulated: dict[str, dict[tuple, dict]] = {}
     for path in sorted(changes_dir.glob("v*_*.json")):
         try:
             data = json.loads(path.read_text(encoding="utf-8"))
             ch_id = data.get("chapter_id", "")
             changes = data.get("changes", [])
             if ch_id and changes:
-                # Later versions overwrite earlier ones (files are sorted by version)
-                result[ch_id] = changes
+                if ch_id not in accumulated:
+                    accumulated[ch_id] = {}
+                for change in changes:
+                    old = change.get("old", "")
+                    new = change.get("new", "")
+                    if old and new and old != new:  # skip no-ops
+                        # Later versions win for same old→new pair
+                        accumulated[ch_id][(old, new)] = change
         except (json.JSONDecodeError, KeyError):
             continue
-    return result
+    return {ch_id: list(changes.values()) for ch_id, changes in accumulated.items()}
 
 
 def generate_html(
@@ -181,6 +293,7 @@ def generate_html(
     output_path: Path,
     source_pages_path: Path | None = None,
     state_dir: Path | None = None,
+    site_base: str | None = None,
 ) -> Path:
     """Generate bilingual HTML from Italian and English markdown."""
     italian_text = italian_path.read_text(encoding="utf-8")
@@ -291,6 +404,7 @@ def generate_html(
         "",
     ]
 
+    _rev_counter = [0]  # mutable counter for revision IDs
     current_part_it = ""
     current_part_en = ""
 
@@ -339,6 +453,14 @@ def generate_html(
                 f'data-img-dir="{page_img_rel}" '
                 f'title="View original scan">{page_label}</a>'
             )
+            _base = site_base or SITE_BASE
+            qr_url = f"{_base}/scan.html#{start}-{end}"
+            qr_src = _qr_data_uri(qr_url)
+            ia_link += (
+                f' <img class="scan-qr" src="{qr_src}" '
+                f'alt="QR: {page_label}" '
+                f'title="Scan to view source pages on another device">'
+            )
 
         part_prefix = re.sub(r"[^a-z0-9]", "-", current_part_it.lower()).strip("-") + "-" if current_part_it else ""
         ch_id = part_prefix + re.sub(r"[^a-z0-9]", "-", pair["italian_title"].lower()).strip("-")
@@ -381,25 +503,28 @@ def generate_html(
                 new_text = change.get("new", "")
                 reason = change.get("reason", "")
                 if old_text and new_text and new_text in p:
-                    # Wrap the changed text with a revision marker
+                    # Link revised text and marginalia via shared data-rev-id
+                    rev_id = f"rev-{_rev_counter[0]}"
+                    _rev_counter[0] += 1
                     escaped_new = _escape_html(new_text)
                     para_html = para_html.replace(
                         escaped_new,
-                        f'<span class="revised">{escaped_new}</span>',
-                        1,  # only first occurrence
+                        f'<span class="revised" data-rev="{rev_id}">{escaped_new}</span>',
+                        1,
                     )
-                    # Truncate reason for display
-                    short_reason = reason[:80] + "..." if len(reason) > 80 else reason
+                    short_reason = reason[:150] + "..." if len(reason) > 150 else reason
                     para_marginalia.append(
+                        f'<span class="marginalia" data-rev="{rev_id}">'
                         f'<span class="margin-old">{_escape_html(old_text)}</span>'
                         f'<span class="margin-reason">{_escape_html(short_reason)}</span>'
+                        f'</span>'
                     )
 
-            html_parts.append(f"      <p>{para_html}</p>")
+            # Inject marginalia inside the paragraph so it aligns vertically
+            # Uses <span> not <aside> — block elements inside <p> are invalid HTML
+            margin_html = "".join(para_marginalia)
 
-            # Inject marginalia notes if any changes were found
-            for note in para_marginalia:
-                html_parts.append(f'      <aside class="marginalia">{note}</aside>')
+            html_parts.append(f"      <p>{margin_html}{para_html}</p>")
 
         html_parts.extend([
             "    </div>",
@@ -565,14 +690,111 @@ def generate_html(
         "  });",
         "})();",
         "",
-        "// Marginalia toggle",
+        "// Marginalia: alignment, hover linking, click-to-activate, keyboard nav",
         "(() => {",
+        "  const notes = () => Array.from(document.querySelectorAll('.marginalia'));",
+        "  let activeRev = null;",
+        "",
+        "  // Align each marginalia vertically with its .revised span",
+        "  function alignMarginalia() {",
+        "    document.querySelectorAll('p > .marginalia').forEach(note => {",
+        "      const rev = note.dataset.rev;",
+        "      const revised = rev && document.querySelector('.revised[data-rev=\"' + rev + '\"]');",
+        "      if (!revised) return;",
+        "      const pRect = note.parentElement.getBoundingClientRect();",
+        "      const rRect = revised.getBoundingClientRect();",
+        "      note.style.top = (rRect.top - pRect.top) + 'px';",
+        "    });",
+        "  }",
+        "  alignMarginalia();",
+        "  window.addEventListener('resize', alignMarginalia);",
+        "  new MutationObserver(alignMarginalia).observe(document.documentElement,",
+        "    { attributes: true, attributeFilter: ['style'] });",
+        "",
+        "  // Helper: find the .revised span paired with a marginalia note",
+        "  function getRevised(note) {",
+        "    const rev = note.dataset.rev;",
+        "    return rev ? document.querySelector('.revised[data-rev=\"' + rev + '\"]') : null;",
+        "  }",
+        "",
+        "  // Hover: highlight the revised text when hovering its marginalia",
+        "  document.addEventListener('mouseover', e => {",
+        "    const note = e.target.closest('.marginalia');",
+        "    if (!note) return;",
+        "    const revised = getRevised(note);",
+        "    if (revised) revised.classList.add('highlight');",
+        "  });",
+        "  document.addEventListener('mouseout', e => {",
+        "    const note = e.target.closest('.marginalia');",
+        "    if (!note) return;",
+        "    const revised = getRevised(note);",
+        "    if (revised) revised.classList.remove('highlight');",
+        "  });",
+        "",
+        "  // Click: set active marginalia for keyboard navigation",
+        "  function setActive(note) {",
+        "    document.querySelectorAll('.marginalia.active').forEach(n => n.classList.remove('active'));",
+        "    document.querySelectorAll('.revised.highlight').forEach(r => r.classList.remove('highlight'));",
+        "    if (note) {",
+        "      note.classList.add('active');",
+        "      const revised = getRevised(note);",
+        "      if (revised) revised.classList.add('highlight');",
+        "      activeRev = note.dataset.rev;",
+        "    } else {",
+        "      activeRev = null;",
+        "    }",
+        "  }",
+        "",
+        "  document.addEventListener('click', e => {",
+        "    const note = e.target.closest('.marginalia');",
+        "    if (note) { setActive(note); return; }",
+        "    if (!e.target.closest('.marginalia, .revised')) setActive(null);",
+        "  });",
+        "",
+        "  // Toggle visibility",
         "  const btn = document.getElementById('toggle-marginalia');",
         "  const saved = localStorage.getItem('hideMarginalia');",
         "  if (saved === 'true') document.body.classList.add('no-marginalia');",
         "  btn.addEventListener('click', () => {",
         "    const hidden = document.body.classList.toggle('no-marginalia');",
         "    localStorage.setItem('hideMarginalia', hidden);",
+        "    if (hidden) setActive(null);",
+        "  });",
+        "",
+        "  // Keyboard: m/Shift+m navigates from active note, or by scroll position",
+        "  document.addEventListener('keydown', e => {",
+        "    if (e.key !== 'm' && e.key !== 'M') return;",
+        "    if (document.body.classList.contains('no-marginalia')) return;",
+        "    const all = notes();",
+        "    if (!all.length) return;",
+        "",
+        "    let idx = -1;",
+        "    if (activeRev) {",
+        "      idx = all.findIndex(n => n.dataset.rev === activeRev);",
+        "    }",
+        "",
+        "    let target;",
+        "    if (idx >= 0) {",
+        "      // Navigate relative to active note",
+        "      const next = e.shiftKey ? idx - 1 : idx + 1;",
+        "      target = all[Math.max(0, Math.min(next, all.length - 1))];",
+        "    } else {",
+        "      // Navigate by scroll position",
+        "      const scrollY = window.scrollY + window.innerHeight / 3;",
+        "      if (e.shiftKey) {",
+        "        for (let i = all.length - 1; i >= 0; i--) {",
+        "          if (all[i].getBoundingClientRect().top + window.scrollY < scrollY - 10) { target = all[i]; break; }",
+        "        }",
+        "      } else {",
+        "        for (const n of all) {",
+        "          if (n.getBoundingClientRect().top + window.scrollY > scrollY + 10) { target = n; break; }",
+        "        }",
+        "      }",
+        "    }",
+        "    if (target) {",
+        "      setActive(target);",
+        "      target.scrollIntoView({ behavior: 'smooth', block: 'center' });",
+        "    }",
         "  });",
         "})();",
         "</script>",
@@ -597,7 +819,7 @@ def generate_pdf(html_path: Path, output_path: Path) -> Path:
     return output_path
 
 
-def typeset(output_dir: Path, state_dir: Path | None = None) -> None:
+def typeset(output_dir: Path, state_dir: Path | None = None, site_base: str | None = None) -> None:
     """Generate bilingual HTML and PDF from Italian + English markdown."""
     italian_path = output_dir / "italian_clean.md"
     english_path = output_dir / "english_translation.md"
@@ -619,7 +841,13 @@ def typeset(output_dir: Path, state_dir: Path | None = None) -> None:
         html_path,
         source_pages_path=source_pages_path,
         state_dir=state_dir,
+        site_base=site_base,
     )
+
+    # Generate standalone scan viewer for QR code targets
+    scan_path = output_dir / "scan.html"
+    _generate_scan_viewer(scan_path)
+    print(f"  Scan viewer: {scan_path}")
 
     # PDF generation disabled — WeasyPrint requires DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
     # To re-enable, uncomment the block below.

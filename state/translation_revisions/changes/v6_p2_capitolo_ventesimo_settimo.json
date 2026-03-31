@@ -1,0 +1,15 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T19:02:39.326772+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_settimo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "the English flag!!",
+      "new": "the English flag!",
+      "reason": "Changed (no dictionary annotation provided)",
+      "context_sentence": "the English flag!"
+    }
+  ]
+}

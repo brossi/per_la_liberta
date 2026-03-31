@@ -1,0 +1,33 @@
+{
+  "version": 6,
+  "timestamp": "2026-03-31T19:12:13.213473+00:00",
+  "chapter_id": "p2_capitolo_trentesimo_primo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "treaty of alliance was torn up",
+      "new": "pact of alliance was torn up",
+      "reason": "Edgren: patto = 'pact (agreement; compact)'",
+      "context_sentence": "rilateral, and part of Lombardy itself.\n\nThus the pact of alliance was torn up in the very face of Vittorio Emanuele II, who, by"
+    },
+    {
+      "old": "voice",
+      "new": "vote",
+      "reason": "Edgren: votare2 = 'vote'; voto in Italian is 'vote', not 'voice'",
+      "context_sentence": "t followed, so much as a *pro forma* consultative vote.\n\nThat reversal of front, that breach of faith, t"
+    },
+    {
+      "old": "self-evident",
+      "new": "manifest",
+      "reason": "Edgren: palese = 'known (manifest, plain)'",
+      "context_sentence": "'s manœuvres, in part confessed, in part only too manifest. Napoleon had descended into the valley of the Po"
+    },
+    {
+      "old": "tenth of November",
+      "new": "thirtieth of November",
+      "reason": "Italian text reads 'Il 30 Novembre'; 30th, not 10th",
+      "context_sentence": "che into the bosom of the Italian family.\n\nOn the thirtieth of November of that year, I received from the English newspap"
+    }
+  ]
+}
