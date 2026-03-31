@@ -12,7 +12,7 @@ English translation of *"Per la libertà! (Dalle mie conversazioni col conte Car
 |------|------|-------------|
 | 1. Download | `download.py` | Fetches 2 DJVU text copies from Internet Archive (LOC + Google/Harvard) |
 | 2. OCR | `ocr.py` | Gemini Flash (page mapping) + Gemini Pro (quality witness) on the LOC PDF scan |
-| 3. Reconcile | `reconcile.py` | 3-way paragraph/word alignment with majority voting |
+| 3. Reconcile | `reconcile.py` | 2-way paragraph alignment (Copies 1 & 2) with Copy 3 as word-level adjudicator |
 | 4. Triage | `triage.py` | LLM categorization + resolution of remaining disagreements |
 | 5. Cleanup | `cleanup.py` | Noise removal, regex pre-filters, dehyphenation, symspellpy correction, spaCy NER protection |
 | 5b. Adjudicate | `adjudicate.py` | Classifies unresolved hyphens via Zingarelli 1922 dictionary: compound / NER / unknown |
@@ -65,10 +65,12 @@ Anthropic API account is Tier 4 (4,000 RPM, 2M input TPM, 400-800K output TPM fo
 ## Key Technical Decisions
 
 ### OCR Strategy
-Three independent OCR witnesses for majority voting:
-- **Copy 1**: LOC scan → Internet Archive Tesseract
-- **Copy 2**: Google/Harvard scan → IA OCR (different physical copy, likely different OCR engine)
-- **Copy 3**: LOC scan → Gemini Pro vision (different engine, same scan as Copy 1)
+Three independent OCR witnesses:
+- **Copy 1**: LOC scan → Internet Archive Tesseract (primary witness)
+- **Copy 2**: Google/Harvard scan → IA OCR (primary witness, different physical copy)
+- **Copy 3**: LOC scan → Gemini Pro vision (word-level adjudicator only — not used for paragraph structure)
+
+Copies 1 & 2 define paragraph structure via 2-way alignment. Copy 3 participates only at word level: for each aligned paragraph pair, the corresponding text is located in Copy 3 via chunk-anchor substring search, then used as a third witness for `reconcile_words_3way()` majority voting.
 
 ### Italian Linguistic Handling
 - **Accent preservation**: symspellpy edit-distance-1 corrections skip accent-only changes (e.g., pàtria→patria) — defers to LLM which has sentence context. The 1913 text uses accento facoltativo liberally.
@@ -104,6 +106,8 @@ Chunked OCR text of the *Vocabolario della Lingua Italiana* by Nicola Zingarelli
 - **Typeface**: Bodoni Moda (variable font with optical size axis) — matches 1913 Italian Didone aesthetic
 - **Layout**: Loeb Classical Library-style facing pages (Italian left, English right)
 - **Source scan overlay**: Slide-in panel from left showing original PDF page images, navigable with arrow keys
+- **TOC**: Slide-in chapter index with collapsible Part 1/Part 2 `<details>/<summary>` sections
+- **CSS variables**: All colors, borders, shadows, and backgrounds defined in `:root` (16 variables) — no hardcoded hex values outside `:root` and `@media print`
 - **PDF**: WeasyPrint (HTML→PDF). Render per-chapter then merge for performance (not yet implemented — currently single-pass).
 
 ## File Structure
@@ -142,81 +146,29 @@ static/
 
 ## Current Status
 
-- Steps 1-6 complete including LLM cleanup pass — Italian text ready for translation
-- LLM cleanup (Sonnet 4.6) made 5,080 durable corrections across all 58 chapters (~3.8 corrections/1000 chars)
+- All pipeline steps (1-8) complete
+- LLM cleanup (Sonnet 4.6) made ~5,500 durable corrections across all 58 chapters, including targeted passes on p1_ch13, p1_ch18, p1_ch22, p2_ch13, p2_ch18
 - Corrections stored in `data/corrections.json` — persists across re-runs, no redundant API calls
-- One corrupted passage in p2_ch18 (pages 197-198) was fixed using page images sent to both Sonnet 4.6 and Gemini 3 Pro — both produced identical clean results
-- Review flags: 0 remaining (was 107 → fixed via dedup, paragraph joining, LLM+scan verification, and accepted tokens)
+- Review flags: 0 remaining — all 13 flags from reconcile fix resolved via direct corrections + LLM cleanup
 - Accepted tokens stored in `corrections.json` with `find == replace` and reason `accepted:*`
-- Step 7 (translation) not yet run
-- Step 8 (typeset) generates HTML with Italian-only; English column pending translation
+- Translation (step 7) and typesetting (step 8) complete — bilingual HTML generated
 - The PDF on disk is the LOC scan: `public-gdcmassbookdig-perlalibertdal00cres-perlalibertdal00cres.pdf` (82MB, gitignored)
 
-### Known structural issues requiring manual reconstruction
+### Reconcile fix: Copy 3 role inversion (resolved)
 
-Four passages have garbled text from column-interleaving or paragraph alignment failures during reconciliation. Each needs the source scan pages to reconstruct the correct text, then a find/replace entry in `corrections.json`.
+The original `align_paragraphs_3way()` treated Copy 3 (Gemini OCR) as an equal paragraph-level witness. Gemini produces 5-16x fewer paragraphs than Copies 1/2 (no blank lines at page boundaries), so `SequenceMatcher` couldn't align them, causing content drops, interleaving, and wholesale appending of unmatched mega-paragraphs.
 
-**After reconstructing these, investigate the root cause (below) and fix `reconcile.py` to prevent recurrence.**
+**Fix applied**: `align_paragraphs_3way()` was replaced with:
+1. **2-way paragraph alignment** using existing `align_paragraphs()` on Copies 1 & 2 only
+2. **Per-paragraph Copy 3 lookup** via `_find_copy3_text()` — chunk-anchor substring search with quality gate (SequenceMatcher ratio >= 0.50)
+3. **Copy 3 never contributes paragraphs** — only used as third witness for `reconcile_words_3way()` when a match is found; falls back to 2-way `reconcile_words()` otherwise
 
-| Chapter | Token | Pages | Issue | Severity |
-|---------|-------|-------|-------|----------|
-| p1_ch13 | `rivo-scoli` | 69-72 | ~4,600 chars of narrative missing — alignment jumped from page 68 to page 73, dropping the Calvi/Locarno mission sequence | 18% of chapter missing |
-| p1_ch12 | `ave-SÌT` | 63-64 | Garbled sentence at page break, text from another passage merged in ("inseguito da una pattuglia" doesn't belong here) | ~1 sentence |
-| p2_ch13 | `su-ar` | ~175 | Garbled sentence with surrounding OCR noise (`HolùacciBno`, `&d`, `emìnuzzare`) | ~1 sentence |
-| p2_ch28 | `let-lungo` | ~242 | Garbled sentence with surrounding OCR noise (`•"ft""`, `T Bada`) | ~1 sentence |
+Key functions added to `reconcile.py`:
+- `_build_norm_map(text)` — accent-stripped normalization with original position tracking
+- `_find_copy3_region(para_norm, ch3_norm, search_start)` — chunk-anchor search with monotonic cursor
+- `_find_copy3_text(para_text, ch3_norm, ch3_orig, norm_to_orig, search_start)` — top-level lookup with quality gate
 
-**Reconstruction workflow:**
-1. Read the source scan page images (`assets/page_images/page_NNNN.png`) for the affected pages
-2. Read copy3_raw.txt for the same pages (use `copy3_flash_page_map.json` to find character offsets)
-3. Reconstruct the correct text from the scans
-4. Add a find/replace entry to `corrections.json` with reason `scan_verified:structural_reconstruction`
-5. Run `uv run python pipeline.py --step cleanup` to apply
-
-### Root cause: Copy 3 role inversion in reconciliation
-
-The structural issues stem from an architectural problem in `reconcile.py`: **Copy 3 (Gemini OCR) is treated as an equal third witness when it was designed to be an adjudicator** — a tiebreaker for word-level disagreements between Copies 1 and 2.
-
-#### The intended design (from OCR Strategy section above)
-- **Copies 1 & 2**: Two independent IA DJVU text extractions (different physical scans, likely different OCR engines) — the **primary witnesses** that define the text structure
-- **Copy 3**: Gemini Pro vision OCR on the LOC scan — a **quality adjudicator** to cast deciding votes when Copies 1 and 2 disagree on individual words
-
-#### What the code actually does (`align_paragraphs_3way`, lines 207-272)
-1. Uses Copy 1 as the paragraph **anchor** — aligns Copies 2 and 3 independently against Copy 1's paragraph structure
-2. Treats all three copies equally at word level — `reconcile_words_3way()` does majority voting with equal weight
-3. Appends **unmatched Copy 3 paragraphs as single-source additions** (lines 265-270) if they pass the dedup check — this is the core bug
-
-#### Why this breaks
-Gemini OCR doesn't insert blank lines at page boundaries, so it produces 5-16x fewer paragraphs than the IA copies:
-
-| Chapter | Copy 1 paras | Copy 2 paras | Copy 3 paras | Ratio |
-|---------|-------------|-------------|-------------|-------|
-| p1_ch08 | 74 | 61 | 14 | 5.3x |
-| p1_ch09 | 74 | 146 | 9 | 16.2x |
-| p1_ch10 | 108 | N/A | 10 | 10.8x |
-| p1_ch12 | 60 | 54 | 5 | 12.0x |
-| p1_ch13 | 106 | 90 | 12 | 8.8x |
-| p2_ch13 | 65 | 61 | 8 | 8.1x |
-| p2_ch28 | 67 | 67 | 8 | 8.4x |
-
-When `SequenceMatcher` tries to align 100 short paragraphs against 12 giant ones:
-- Most Copy 1 paragraphs can't match anything in Copy 3 (200-char paragraphs don't match 5000-char ones)
-- Copy 3's unmatched giant paragraphs pass the dedup check and get **appended wholesale** — this was the source of duplicate content blocks
-- When a Copy 3 paragraph does match, word-level merge uses it with equal weight, potentially pulling in Gemini's different line-breaking choices over the two primary witnesses
-- Paragraph alignment failures cause content to be dropped or interleaved from wrong columns
-
-#### Pipeline fix needed in `reconcile.py`
-
-**Change Copy 3's role from equal witness to word-level adjudicator:**
-
-1. **Paragraph structure must come from Copies 1 & 2 only.** Do 2-way paragraph alignment on Copies 1 and 2 (the existing `align_paragraphs()` function). Copy 3 should not contribute paragraphs or influence paragraph boundaries.
-
-2. **Copy 3 participates only at word level.** For each aligned paragraph pair from Copies 1 & 2, find the corresponding text in Copy 3 (by normalized substring matching against Copy 3's giant paragraphs) and use it as the third witness for `reconcile_words_3way()`.
-
-3. **Never append Copy 3 single-source paragraphs.** Lines 265-270 should be removed or guarded — Copy 3 content that doesn't match anything in Copies 1/2 should be discarded, not appended.
-
-4. **Handle the 2-copy case properly.** When Copies 1 and 2 both have a paragraph but Copy 3 has no matching text for it, fall back to 2-way word reconciliation (which already exists as `reconcile_words()`).
-
-This is a significant refactor of `align_paragraphs_3way()` and the per-chapter reconciliation loop. The existing `_is_near_duplicate()` improvements (rapidfuzz two-tier matching) should be retained as a safety net.
+Four previously garbled passages (p1_ch12, p1_ch13, p2_ch13, p2_ch28) were resolved by the reconcile fix. Residual OCR noise in p1_ch13, p1_ch18, p1_ch22, p2_ch13, and p2_ch18 was cleaned up via targeted LLM cleanup passes (Sonnet 4.6).
 
 ### Pipeline changes made during cleanup
 - `pipeline.py` loads `.env` via `python-dotenv` (added as dependency)
