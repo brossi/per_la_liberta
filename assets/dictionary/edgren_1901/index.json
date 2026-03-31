@@ -1,0 +1,138 @@
+{
+  "_source": "Edgren, Italian and English Dictionary, 1901",
+  "_note": "OCR text from Internet Archive (cu31924019173982_djvu.txt). Chunked by letter.",
+  "chunks": {
+    "A": {
+      "file": "a.txt",
+      "lines": 8218,
+      "size_kb": 219.4,
+      "headwords": 2126
+    },
+    "B": {
+      "file": "b.txt",
+      "lines": 3954,
+      "size_kb": 96.1,
+      "headwords": 987
+    },
+    "C": {
+      "file": "c.txt",
+      "lines": 9156,
+      "size_kb": 239.7,
+      "headwords": 2125
+    },
+    "D": {
+      "file": "d.txt",
+      "lines": 4378,
+      "size_kb": 113.1,
+      "headwords": 1073
+    },
+    "E": {
+      "file": "e.txt",
+      "lines": 2204,
+      "size_kb": 57.0,
+      "headwords": 609
+    },
+    "F": {
+      "file": "f.txt",
+      "lines": 3992,
+      "size_kb": 116.2,
+      "headwords": 886
+    },
+    "G": {
+      "file": "g.txt",
+      "lines": 3751,
+      "size_kb": 109.3,
+      "headwords": 900
+    },
+    "H": {
+      "file": "h.txt",
+      "lines": 11,
+      "size_kb": 0.1,
+      "headwords": 2
+    },
+    "I": {
+      "file": "i.txt",
+      "lines": 9223,
+      "size_kb": 240.5,
+      "headwords": 2386
+    },
+    "K": {
+      "file": "k.txt",
+      "lines": 8,
+      "size_kb": 0.1,
+      "headwords": 0
+    },
+    "L": {
+      "file": "l.txt",
+      "lines": 2668,
+      "size_kb": 71.7,
+      "headwords": 669
+    },
+    "M": {
+      "file": "m.txt",
+      "lines": 4911,
+      "size_kb": 136.8,
+      "headwords": 1301
+    },
+    "N": {
+      "file": "n.txt",
+      "lines": 1334,
+      "size_kb": 34.9,
+      "headwords": 350
+    },
+    "O": {
+      "file": "o.txt",
+      "lines": 1903,
+      "size_kb": 49.4,
+      "headwords": 511
+    },
+    "P": {
+      "file": "p.txt",
+      "lines": 7759,
+      "size_kb": 217.4,
+      "headwords": 2037
+    },
+    "Q": {
+      "file": "q.txt",
+      "lines": 449,
+      "size_kb": 13.7,
+      "headwords": 110
+    },
+    "R": {
+      "file": "r.txt",
+      "lines": 7603,
+      "size_kb": 199.2,
+      "headwords": 2029
+    },
+    "S": {
+      "file": "s.txt",
+      "lines": 14669,
+      "size_kb": 399.6,
+      "headwords": 3436
+    },
+    "T": {
+      "file": "t.txt",
+      "lines": 4063,
+      "size_kb": 110.0,
+      "headwords": 1037
+    },
+    "U": {
+      "file": "u.txt",
+      "lines": 659,
+      "size_kb": 16.6,
+      "headwords": 147
+    },
+    "V": {
+      "file": "v.txt",
+      "lines": 2765,
+      "size_kb": 78.6,
+      "headwords": 671
+    },
+    "Z": {
+      "file": "z.txt",
+      "lines": 571,
+      "size_kb": 14.0,
+      "headwords": 124
+    }
+  }
+}

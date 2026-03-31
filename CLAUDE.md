@@ -6,7 +6,7 @@ English translation of *"Per la libertà! (Dalle mie conversazioni col conte Car
 
 ## Pipeline Architecture
 
-**9-step pipeline** (`pipeline.py`): download → ocr → reconcile → triage → cleanup → adjudicate → validate → translate → typeset
+**10-step pipeline** (`pipeline.py`): download → ocr → reconcile → triage → cleanup → adjudicate → validate → translate → refine → typeset
 
 | Step | File | What it does |
 |------|------|-------------|
@@ -18,7 +18,8 @@ English translation of *"Per la libertà! (Dalle mie conversazioni col conte Car
 | 5b. Adjudicate | `adjudicate.py` | Classifies unresolved hyphens via Zingarelli 1922 dictionary: compound / NER / unknown |
 | 6. Validate | `validate.py` | 6 assertion checks on cleaned output |
 | 7. Translate | `translate.py` | Claude Sonnet 4.6 with extended thinking (32K budget), per-chapter with resume |
-| 8. Typeset | `typeset.py` | Bilingual HTML/PDF with Loeb-style facing pages, slide-in source scan overlay |
+| 7b. Refine | `refine.py` | Post-hoc translation refinement with Edgren 1901 dictionary context + version tracking |
+| 8. Typeset | `typeset.py` | Bilingual HTML/PDF with Loeb-style facing pages, slide-in source scan overlay, revision marginalia |
 
 ## Running
 
@@ -40,6 +41,10 @@ uv run python pipeline.py --step cleanup --llm-cleanup  # with LLM correction + 
 uv run python pipeline.py --step adjudicate
 uv run python pipeline.py --step validate
 uv run python pipeline.py --step translate
+uv run python pipeline.py --step translate --with-edgren  # with Edgren 1901 dictionary context
+uv run python pipeline.py --step refine --chapter p1_capitolo_primo  # refine specific chapters
+uv run python pipeline.py --step refine                              # refine all chapters
+uv run python pipeline.py --step refine --revert-to 1                # revert to snapshot version
 uv run python pipeline.py --step typeset
 
 # OCR with parallel workers (4x speedup for Pro)
@@ -96,11 +101,33 @@ Chunked OCR text of the *Vocabolario della Lingua Italiana* by Nicola Zingarelli
 - Used by `cleanup.py --llm-cleanup` to provide the LLM with dictionary context for flagged tokens in each chapter
 - Lookup via `adjudicate.zingarelli_lookup(word)` and `adjudicate.zingarelli_context_for_flags(flags)`
 
+### Edgren 1901 Italian-English Dictionary
+OCR text of the *Italian and English Dictionary* by Hjalmar Edgren (1901) — provides period-appropriate Italian→English translations. Complements Zingarelli (which validates Italian word existence) with English equivalents.
+
+- 22 letter chunks in `assets/dictionary/edgren_1901/` (A–Z) + `headwords.json` + `index.json`
+- Raw OCR from Internet Archive (`cu31924019173982_djvu.txt`, ~4.6MB)
+- Dictionary uses compressed entry format: sub-entries prefixed with `-` (e.g., `-tà` under `liber-` for `libertà`)
+- Lookup via `edgren.edgren_lookup(word)` — lemmatizes via spaCy, tries exact headword match, flexible text search (handles hyphens/accents), then fuzzy fallback
+- Batch lookup via `edgren.edgren_entries_for_words(words)` — ~64% hit rate on typical chapter vocabulary
+- Used by `translate.py --with-edgren` for prompt enrichment during translation
+- Used by `refine.py` for post-hoc translation refinement
+
 ### Translation
 - Claude Sonnet 4.6 with 128K max_tokens and 32K thinking budget
 - Page provenance markers (`<!-- pages:N-M -->`) extracted before translation, reinserted after
 - Truncation detection: flags `stop_reason == "max_tokens"` or output < 30% of input length
 - Resumable via `state/translation_progress.json`
+- Optional `--with-edgren` flag enriches prompts with Edgren 1901 dictionary context for period-appropriate word choices
+
+### Translation Refinement
+- Post-hoc review of existing translations against Edgren 1901 dictionary evidence
+- Manual-only step (`--step refine`), never runs as part of `--step all`
+- Configurable scope: all chapters, specific chapters via `--chapter`
+- Claude annotates changes with `<change old="..." reason="...">new text</change>` inline tags
+- Full snapshot of `state/translations/` before each refinement pass
+- Change metadata stored per-chapter in `state/translation_revisions/changes/`
+- Revert to any prior version via `--revert-to N`
+- Changes visualized as marginalia in the bilingual HTML (toggle via ✎ button)
 
 ### Typesetting
 - **Typeface**: Bodoni Moda (variable font with optical size axis) — matches 1913 Italian Didone aesthetic
@@ -128,15 +155,20 @@ data/
   validation_report.json          # Validation results (step 6)
 output/
   italian_clean.md                # Cleaned Italian markdown (step 5)
-  english_translation.md          # English translation (step 7, not yet generated)
+  english_translation.md          # English translation (step 7)
   bilingual.html                  # Bilingual web edition (step 8)
   bilingual.pdf                   # Bilingual print edition (step 8)
   source_pages.json               # Chapter → IA page URLs (generated during step 7)
 state/
   translation_progress.json       # Per-chapter translation status
   translations/                   # Individual chapter .md files
+  translation_revisions/          # Revision tracking (step 7b)
+    revision_log.json             # Version history + snapshot references
+    changes/                      # Per-version per-chapter change metadata
+    snapshots/                    # Full chapter snapshots by timestamp
 assets/
   dictionary/zingarelli_1922/     # Chunked 1922 Italian dictionary (22 letter files + index.json)
+  dictionary/edgren_1901/         # Chunked 1901 Italian-English dictionary (22 letter files + headwords.json)
   fonts/Bodoni_Moda/              # Variable + static font files (SIL OFL)
   fonts/Bodoni_Moda_SC/           # Small caps variant
   page_images/                    # Rendered PDF pages as PNG (gitignored)

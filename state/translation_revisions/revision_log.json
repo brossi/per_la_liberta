@@ -1,0 +1,14 @@
+{
+  "current_version": 2,
+  "revisions": [
+    {
+      "version": 1,
+      "timestamp": "2026-03-31T15-17-35",
+      "source": "pre_refinement",
+      "scope": [
+        "p1_capitolo_primo"
+      ],
+      "snapshot_dir": "2026-03-31T15-17-35"
+    }
+  ]
+}

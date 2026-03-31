@@ -149,11 +149,38 @@ def _para_to_html(text: str) -> str:
     return text
 
 
+def _load_revision_changes(state_dir: Path | None) -> dict[str, list[dict]]:
+    """Load revision change metadata indexed by chapter_id.
+
+    Returns {chapter_id: [changes]} for the most recent version of each chapter.
+    Returns empty dict if no revisions exist.
+    """
+    if not state_dir:
+        return {}
+    changes_dir = state_dir / "translation_revisions" / "changes"
+    if not changes_dir.exists():
+        return {}
+
+    result: dict[str, list[dict]] = {}
+    for path in sorted(changes_dir.glob("v*_*.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            ch_id = data.get("chapter_id", "")
+            changes = data.get("changes", [])
+            if ch_id and changes:
+                # Later versions overwrite earlier ones (files are sorted by version)
+                result[ch_id] = changes
+        except (json.JSONDecodeError, KeyError):
+            continue
+    return result
+
+
 def generate_html(
     italian_path: Path,
     english_path: Path,
     output_path: Path,
     source_pages_path: Path | None = None,
+    state_dir: Path | None = None,
 ) -> Path:
     """Generate bilingual HTML from Italian and English markdown."""
     italian_text = italian_path.read_text(encoding="utf-8")
@@ -163,6 +190,17 @@ def generate_html(
     en_chapters = _parse_chapters(english_text)
 
     pairs = _align_chapters(it_chapters, en_chapters)
+
+    # Load revision change data for marginalia
+    revision_changes = _load_revision_changes(state_dir)
+
+    # Build ordered list of content chapter IDs from Italian source.
+    # Can't use title-based dict: Part 1 and Part 2 share chapter names
+    # (e.g., both have "Capitolo Primo"), so a dict would clobber entries.
+    from translate import parse_italian_markdown
+    italian_parsed = parse_italian_markdown(italian_text)
+    _content_chapter_ids = [ch["id"] for ch in italian_parsed if not ch.get("is_structural")]
+    _content_ch_idx = 0  # consumed in pair loop below
 
     # Load source pages for IA links
     source_pages = {}
@@ -223,6 +261,7 @@ def generate_html(
         '<div class="font-size-controls">',
         '  <button id="font-smaller" aria-label="Decrease font size">&minus;</button>',
         '  <button id="font-larger" aria-label="Increase font size">&plus;</button>',
+        '  <button id="toggle-marginalia" aria-label="Toggle revision notes" title="Toggle revision notes">&#9998;</button>',
         '</div>',
         "",
         "<!-- Slide-in chapter index -->",
@@ -327,9 +366,40 @@ def generate_html(
             '    <div class="recto" lang="en">',
         ])
 
-        # English paragraphs
+        # English paragraphs (with marginalia for revision changes)
+        ch_id = _content_chapter_ids[_content_ch_idx] if _content_ch_idx < len(_content_chapter_ids) else ""
+        _content_ch_idx += 1
+        ch_changes = revision_changes.get(ch_id, [])
+
         for p in pair["english_paragraphs"]:
-            html_parts.append(f"      <p>{_para_to_html(p)}</p>")
+            para_html = _para_to_html(p)
+
+            # Check if any revision changes apply to this paragraph
+            para_marginalia = []
+            for change in ch_changes:
+                old_text = change.get("old", "")
+                new_text = change.get("new", "")
+                reason = change.get("reason", "")
+                if old_text and new_text and new_text in p:
+                    # Wrap the changed text with a revision marker
+                    escaped_new = _escape_html(new_text)
+                    para_html = para_html.replace(
+                        escaped_new,
+                        f'<span class="revised">{escaped_new}</span>',
+                        1,  # only first occurrence
+                    )
+                    # Truncate reason for display
+                    short_reason = reason[:80] + "..." if len(reason) > 80 else reason
+                    para_marginalia.append(
+                        f'<span class="margin-old">{_escape_html(old_text)}</span>'
+                        f'<span class="margin-reason">{_escape_html(short_reason)}</span>'
+                    )
+
+            html_parts.append(f"      <p>{para_html}</p>")
+
+            # Inject marginalia notes if any changes were found
+            for note in para_marginalia:
+                html_parts.append(f'      <aside class="marginalia">{note}</aside>')
 
         html_parts.extend([
             "    </div>",
@@ -494,6 +564,17 @@ def generate_html(
         "    localStorage.setItem('fontSize', size);",
         "  });",
         "})();",
+        "",
+        "// Marginalia toggle",
+        "(() => {",
+        "  const btn = document.getElementById('toggle-marginalia');",
+        "  const saved = localStorage.getItem('hideMarginalia');",
+        "  if (saved === 'true') document.body.classList.add('no-marginalia');",
+        "  btn.addEventListener('click', () => {",
+        "    const hidden = document.body.classList.toggle('no-marginalia');",
+        "    localStorage.setItem('hideMarginalia', hidden);",
+        "  });",
+        "})();",
         "</script>",
         "",
         "</body>",
@@ -516,7 +597,7 @@ def generate_pdf(html_path: Path, output_path: Path) -> Path:
     return output_path
 
 
-def typeset(output_dir: Path) -> None:
+def typeset(output_dir: Path, state_dir: Path | None = None) -> None:
     """Generate bilingual HTML and PDF from Italian + English markdown."""
     italian_path = output_dir / "italian_clean.md"
     english_path = output_dir / "english_translation.md"
@@ -537,6 +618,7 @@ def typeset(output_dir: Path) -> None:
         english_path if has_english else italian_path,
         html_path,
         source_pages_path=source_pages_path,
+        state_dir=state_dir,
     )
 
     # PDF generation disabled — WeasyPrint requires DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib

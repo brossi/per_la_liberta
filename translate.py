@@ -82,8 +82,12 @@ SYSTEM_PROMPT = (
 def translate_chapter(
     text: str, title: str, api_key: str,
     thinking_budget: int = 4096, no_thinking: bool = False,
+    edgren_context: str | None = None,
 ) -> tuple[str, str]:
     """Translate a single chapter from Italian to English.
+
+    If edgren_context is provided, it is appended to the user message as a
+    period-appropriate dictionary reference block.
 
     Returns (translated_text, stop_reason).
     """
@@ -93,6 +97,16 @@ def translate_chapter(
 
     client = anthropic.Anthropic(api_key=api_key, timeout=300.0)
 
+    user_content = f"Translate the following chapter ({title}):\n\n{text}"
+    if edgren_context:
+        user_content += (
+            "\n\n---\n"
+            "Period-appropriate definitions from the Edgren Italian-English "
+            "Dictionary (1901). Use these to inform your word choices. Prefer "
+            "period meanings over modern ones where they differ:\n\n"
+            + edgren_context
+        )
+
     max_tokens = 128000
     kwargs = {
         "model": "claude-sonnet-4-6",
@@ -101,7 +115,7 @@ def translate_chapter(
         "messages": [
             {
                 "role": "user",
-                "content": f"Translate the following chapter ({title}):\n\n{text}",
+                "content": user_content,
             }
         ],
     }
@@ -125,6 +139,7 @@ def translate_chapter(
 def translate(
     output_dir: Path, state_dir: Path, api_key: str | None = None,
     workers: int = 1, thinking_budget: int = 4096, no_thinking: bool = False,
+    with_edgren: bool = False,
 ) -> None:
     """Translate Italian markdown to English, chapter by chapter."""
     from utils import atomic_write_json
@@ -141,7 +156,24 @@ def translate(
     print(f"  Found {len(chapters)} translatable chapters")
 
     thinking_desc = "disabled" if no_thinking else f"{thinking_budget:,} tokens"
-    print(f"  Thinking: {thinking_desc}, Workers: {workers}")
+    edgren_desc = " + Edgren 1901" if with_edgren else ""
+    print(f"  Thinking: {thinking_desc}, Workers: {workers}{edgren_desc}")
+
+    # Lazy-load Edgren dictionary if requested
+    _edgren_extract = None
+    _edgren_batch = None
+    _edgren_format = None
+    if with_edgren:
+        from edgren import (
+            chunk_edgren,
+            edgren_entries_for_words,
+            extract_content_words,
+            format_edgren_context,
+        )
+        chunk_edgren()  # ensure chunks exist
+        _edgren_extract = extract_content_words
+        _edgren_batch = edgren_entries_for_words
+        _edgren_format = format_edgren_context
 
     # Load or create progress file
     translations_dir = state_dir / "translations"
@@ -203,9 +235,17 @@ def translate(
                 page_marker = page_match.group(0)
             text_for_translation = re.sub(r"<!-- pages:\d+-\d+ -->\n?", "", ch["text"])
 
+            # Build Edgren dictionary context if requested
+            edgren_ctx = None
+            if _edgren_extract and _edgren_batch and _edgren_format:
+                words = _edgren_extract(text_for_translation)
+                entries = _edgren_batch(words)
+                edgren_ctx = _edgren_format(entries) if entries else None
+
             translated, stop_reason = translate_chapter(
                 text_for_translation, ch["title"], api_key,
                 thinking_budget=thinking_budget, no_thinking=no_thinking,
+                edgren_context=edgren_ctx,
             )
 
             # Reinsert page marker at the top of the translated text

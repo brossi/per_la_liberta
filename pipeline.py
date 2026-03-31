@@ -14,7 +14,7 @@ STATE_DIR = BASE_DIR / "state"
 
 STEPS = [
     "download", "ocr", "reconcile", "triage", "cleanup",
-    "adjudicate", "validate", "translate", "typeset", "all",
+    "adjudicate", "validate", "translate", "refine", "typeset", "all",
 ]
 
 
@@ -66,6 +66,14 @@ def main():
     parser.add_argument(
         "--no-thinking", action="store_true",
         help="Disable extended thinking for translation",
+    )
+    parser.add_argument(
+        "--with-edgren", action="store_true",
+        help="Enrich translation prompts with Edgren 1901 dictionary context",
+    )
+    parser.add_argument(
+        "--revert-to", type=int,
+        help="Revert translations to a prior snapshot version (use with --step refine)",
     )
     args = parser.parse_args()
 
@@ -158,14 +166,34 @@ def main():
             OUTPUT_DIR, STATE_DIR, api_key=args.api_key,
             workers=args.workers, thinking_budget=args.thinking_budget,
             no_thinking=args.no_thinking,
+            with_edgren=args.with_edgren,
         )
+        print()
+
+    # Refine is manual-only — never runs as part of "all"
+    if args.step == "refine":
+        if args.revert_to is not None:
+            print(f"Step 7b: Reverting translations to version {args.revert_to}...")
+            from refine import revert_to_version
+
+            ch_list = [c.strip() for c in args.chapter.split(",")] if args.chapter else None
+            revert_to_version(args.revert_to, STATE_DIR, OUTPUT_DIR, chapters=ch_list)
+        else:
+            print("Step 7b: Refining translations with Edgren 1901...")
+            from refine import refine
+
+            ch_list = [c.strip() for c in args.chapter.split(",")] if args.chapter else None
+            refine(
+                OUTPUT_DIR, STATE_DIR, chapters=ch_list,
+                api_key=args.api_key, thinking_budget=args.thinking_budget,
+            )
         print()
 
     if args.step in ("typeset", "all"):
         print("Step 8: Typesetting bilingual edition...")
         from typeset import typeset
 
-        typeset(OUTPUT_DIR)
+        typeset(OUTPUT_DIR, STATE_DIR)
         print()
 
     print("Done!")

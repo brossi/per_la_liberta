@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Per la Libertà! / For Freedom!</title>
-<link rel="stylesheet" href="../static/bilingual.css?v=563b1988">
+<link rel="stylesheet" href="../static/bilingual.css?v=bb6ed4f4">
 </head>
 <body>
 
@@ -30,6 +30,7 @@
 <div class="font-size-controls">
   <button id="font-smaller" aria-label="Decrease font size">&minus;</button>
   <button id="font-larger" aria-label="Increase font size">&plus;</button>
+  <button id="toggle-marginalia" aria-label="Toggle revision notes" title="Toggle revision notes">&#9998;</button>
 </div>
 
 <!-- Slide-in chapter index -->
@@ -158,7 +159,8 @@
     </div>
     <div class="recto" lang="en">
       <p>LOS ANGELES, on a splendid summer morning. I had arrived only a few hours before, on a train that had put me in mind of those which, from every corner of France, converge upon the shrine at Lourdes.</p>
-      <p>For the metropolis of southern California, situated near the ocean, between the desert and the orange groves, is a great centre of attraction for all those who have the misfortune of living beyond the Rockies: where, in summer, the sun prostrates men and herds alike, like wilted grass; where the frost of the long winter makes the earth rigid and impenetrable even to the blows of a pickaxe; where cyclones sweep through the immense valleys, uprooting trees and demolishing houses.</p>
+      <p>For the metropolis of southern California, situated near the ocean, between the desert and the orange groves, is a great centre of attraction for all those who have the misfortune of living beyond the Rockies: where, in summer, the sun prostrates men and herds alike, like <span class="revised">withered grass</span>; where the frost of the long winter makes the earth rigid and impenetrable even to the blows of a pickaxe; where cyclones sweep through the immense valleys, uprooting trees and demolishing houses.</p>
+      <aside class="marginalia"><span class="margin-old">wilted grass</span><span class="margin-reason">Edgren: appassito = withered (fade); the primary definition is 'withered', not '...</span></aside>
       <p>The wretched souls whom consumption gnaws at their hollow chests find in the "City of Angels" the deeply azure sky and the balmy air that give the illusion and the hope.</p>
       <p>How many of them I had encountered in the streets during those few hours! They pass quietly, light as beings come from the realm of shadows, and they smile at the children and smile at the flowers. In their optimism, which here becomes extraordinarily tenacious, they accept as indisputable truth the merciful lie that their loved ones murmur in their ear with every fit of coughing.</p>
       <p>They go to sit in the shade of the flowering orange trees, and sometimes, while they cling in reverie to the sweetnesses of life; while the waxen corollas, all unknowing, breathe above their heads their invisible, most piercing fragrance... the waxen flesh breathes out, all unknowing, its invisible last breath... The breeze stirs from the sea and, mingling that breath and that fragrance, carries them away across the green countryside, away across the arid desert, away into the infinite mystery!..</p>
@@ -5221,6 +5223,17 @@ C. C.</p>
     size = Math.min(MAX, size + STEP);
     root.style.fontSize = size + 'px';
     localStorage.setItem('fontSize', size);
+  });
+})();
+
+// Marginalia toggle
+(() => {
+  const btn = document.getElementById('toggle-marginalia');
+  const saved = localStorage.getItem('hideMarginalia');
+  if (saved === 'true') document.body.classList.add('no-marginalia');
+  btn.addEventListener('click', () => {
+    const hidden = document.body.classList.toggle('no-marginalia');
+    localStorage.setItem('hideMarginalia', hidden);
   });
 })();
 </script>

@@ -43,7 +43,7 @@ Cesare Crespi.
 
 LOS ANGELES, on a splendid summer morning. I had arrived only a few hours before, on a train that had put me in mind of those which, from every corner of France, converge upon the shrine at Lourdes.
 
-For the metropolis of southern California, situated near the ocean, between the desert and the orange groves, is a great centre of attraction for all those who have the misfortune of living beyond the Rockies: where, in summer, the sun prostrates men and herds alike, like wilted grass; where the frost of the long winter makes the earth rigid and impenetrable even to the blows of a pickaxe; where cyclones sweep through the immense valleys, uprooting trees and demolishing houses.
+For the metropolis of southern California, situated near the ocean, between the desert and the orange groves, is a great centre of attraction for all those who have the misfortune of living beyond the Rockies: where, in summer, the sun prostrates men and herds alike, like withered grass; where the frost of the long winter makes the earth rigid and impenetrable even to the blows of a pickaxe; where cyclones sweep through the immense valleys, uprooting trees and demolishing houses.
 
 The wretched souls whom consumption gnaws at their hollow chests find in the "City of Angels" the deeply azure sky and the balmy air that give the illusion and the hope.
 

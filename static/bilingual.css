@@ -351,6 +351,9 @@ body {
 
 .font-size-controls button:first-child {
   border-radius: 3px 0 0 3px;
+}
+
+.font-size-controls button:not(:last-child) {
   border-right: none;
 }
 
@@ -563,6 +566,47 @@ body {
   }
 }
 
+/* === Revision Marginalia === */
+.recto {
+  position: relative;
+}
+
+.revised {
+  border-bottom: 1px dotted var(--color-accent);
+}
+
+.marginalia {
+  position: absolute;
+  right: -12em;
+  width: 10em;
+  font-size: 0.72em;
+  line-height: 1.35;
+  color: var(--color-muted);
+  border-left: 1.5px solid var(--color-accent);
+  padding-left: 0.5em;
+  margin-top: -1.2em;
+}
+
+.margin-old {
+  display: block;
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.margin-reason {
+  display: block;
+  margin-top: 0.2em;
+  font-size: 0.9em;
+}
+
+.no-marginalia .marginalia {
+  display: none;
+}
+
+.no-marginalia .revised {
+  border-bottom: none;
+}
+
 /* === Print / PDF (WeasyPrint paged media) === */
 @media print {
   @page {
@@ -588,8 +632,12 @@ body {
     padding: 0;
   }
 
-  .toc-trigger, .toc-panel, .toc-backdrop, .font-size-controls {
+  .toc-trigger, .toc-panel, .toc-backdrop, .font-size-controls, .marginalia {
     display: none;
+  }
+
+  .revised {
+    border-bottom: none;
   }
 
   .title-page {

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "timestamp": "2026-03-31T15:22:06.158551+00:00",
+  "chapter_id": "p1_capitolo_primo",
+  "source": "edgren_refinement",
+  "model": "claude-sonnet-4-6",
+  "changes": [
+    {
+      "old": "wilted grass",
+      "new": "withered grass",
+      "reason": "Edgren: appassito = withered (fade); the primary definition is 'withered', not 'wilted'",
+      "context_sentence": "mer, the sun prostrates men and herds alike, like withered grass; where the frost of the long winter makes the ear"
+    }
+  ]
+}
