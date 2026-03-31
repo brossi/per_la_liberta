@@ -1,31 +1,4 @@
 {
-  "p1_ch13": [
-    {
-      "token": "mu-discutere",
-      "left": "mu",
-      "right": "discutere",
-      "offset": 19849,
-      "reason": "unresolved"
-    }
-  ],
-  "p1_ch18": [
-    {
-      "token": "soe-cimi",
-      "left": "soe",
-      "right": "cimi",
-      "offset": 6296,
-      "reason": "unresolved"
-    }
-  ],
-  "p1_ch22": [
-    {
-      "token": "colo-calma",
-      "left": "colo",
-      "right": "calma",
-      "offset": 9989,
-      "reason": "unresolved"
-    }
-  ],
   "p2_ch13": [
     {
       "token": "leg-lama",

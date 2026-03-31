@@ -6660,6 +6660,768 @@
       "find": "rivo-scoli",
       "replace": "rivo-scoli",
       "reason": "accepted:pages_69-72_missing_from_reconciliation"
+    },
+    {
+      "find": " che sia valso a Giuseppe Mazzini tante ealuonìe, tante amarezze, tante defezioni",
+      "replace": " che sia valso a Giuseppe Mazzini tante caluonìe, tante amarezze, tante defezioni",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " sia valso a Giuseppe Mazzini tante ealuonìe, tante amarezze, tante defezioni qua",
+      "replace": " sia valso a Giuseppe Mazzini tante ealunìe, tante amarezze, tante defezioni qua",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ia valso a Giuseppe Mazzini tante ealuonìe, tante amarezze, tante defezioni quant",
+      "replace": "ia valso a Giuseppe Mazzini tante ealuonnie, tante amarezze, tante defezioni quant",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e, sviscerata, condurrebbe a quest'altra; \"Per:\" Per acquistare la propria indipe",
+      "replace": "e, sviscerata, condurrebbe a quest'altra: \"Per:\" Per acquistare la propria indipe",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "sviscerata, condurrebbe a quest'altra; \"Per:\" Per acquistare la propria indipendenza, ",
+      "replace": "sviscerata, condurrebbe a quest'altra; \"Per acquistare la propria indipendenza, ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "stasse fede agli uomini seri, di nulla di 'altro sarebbe stato curante se non di a",
+      "replace": "stasse fede agli uomini seri, di nulla d'altro sarebbe stato curante se non di a",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "entito, le saltano maestrevolmente di pie pari e continuano ad esaltare i portent",
+      "replace": "entito, le saltano maestrevolmente di piè pari e continuano ad esaltare i portent",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ndurre a buon fine un piano d'attacco.\n\n11 Mazzini accolse la nuova come una prova",
+      "replace": "ndurre a buon fine un piano d'attacco.\n\nIl Mazzini accolse la nuova come una prova",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "azzini accolse la nuova come una prova clie la propaganda delle sue idee aveva svi",
+      "replace": "azzini accolse la nuova come una prova che la propaganda delle sue idee aveva svi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ratellanza\" delitto il discutere più a limbo. Essi notificarono al Mazzini d'aver d",
+      "replace": "ratellanza\" delitto il discutere più a lungo. Essi notificarono al Mazzini d'aver d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "che senza il suo aiuto e senza il suo coitsenso. Dovere imprescindibile del Mazzin",
+      "replace": "che senza il suo aiuto e senza il suo consenso. Dovere imprescindibile del Mazzin",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "terile.\n\nGli ultimi del Dicembre 1852, p^ incarico avuto direttamente dal Conte G",
+      "replace": "terile.\n\nGli ultimi del Dicembre 1852, per incarico avuto direttamente dal Conte G",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "finitivo dell'insurrezione perveniva cosi nelle mani dello stesso maggiore Brizzi",
+      "replace": "finitivo dell'insurrezione perveniva così nelle mani dello stesso maggiore Brizzi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ne. Esso era dovuto nelle sue linee prin. citali, a Pietro Fortunato Calvi. Sua ba",
+      "replace": "ne. Esso era dovuto nelle sue linee princitali, a Pietro Fortunato Calvi. Sua ba",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "Esso era dovuto nelle sue linee prin. citali, a Pietro Fortunato Calvi. Sua baso ",
+      "replace": "Esso era dovuto nelle sue linee prin. cipali, a Pietro Fortunato Calvi. Sua baso ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "itali, a Pietro Fortunato Calvi. Sua baso fondamentale il principio che le armi d",
+      "replace": "itali, a Pietro Fortunato Calvi. Sua base fondamentale il principio che le armi d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "triaca era, tra l'altro, insediata, entre le mura di Milano, al Palazzo del Coman",
+      "replace": "triaca era, tra l'altro, insediata, entro le mura di Milano, al Palazzo del Coman",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "llo della Gran Guardia ed al Castello.\n\n11 primo veniva guardato, più che difeso, ",
+      "replace": "llo della Gran Guardia ed al Castello.\n\nIl primo veniva guardato, più che difeso, ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o Maggiore pranzavano in quel palazzo.\n\n11 ridurre, con un colpo di mano, la senti",
+      "replace": "o Maggiore pranzavano in quel palazzo.\n\nIl ridurre, con un colpo di mano, la senti",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a, non era sorpresa di grande difficoltà. C.\n\nQualcosa di simile, ma con mezzi più ",
+      "replace": "a, non era sorpresa di grande difficoltà.\n\nQualcosa di simile, ma con mezzi più ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ve avevano stanza cento sgherri giù di li; ma specialmente al Castello che racchi",
+      "replace": "ve avevano stanza cento sgherri giù di lì; ma specialmente al Castello che racchi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "zzini aveva sollecitato ed ottenuto dal Eossuth, in procinto di partire per gli S",
+      "replace": "zzini aveva sollecitato ed ottenuto dal Kossuth, in procinto di partire per gli S",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "Stati Uniti d'America, un proclama rivolazioDario diretto ai salì comiazioQali ac",
+      "replace": "Stati Uniti d'America, un proclama rivoluzioDario diretto ai salì comiazioQali ac",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "i Uniti d'America, un proclama rivolazioDario diretto ai salì comiazioQali acquar",
+      "replace": "i Uniti d'America, un proclama rivolazionario diretto ai salì comiazioQali acquar",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " un proclama rivolazioDario diretto ai salì comiazioQali acquartierati specialmente",
+      "replace": " un proclama rivolazioDario diretto ai suoi comiazioQali acquartierati specialmente",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "oclama rivolazioDario diretto ai salì comiazioQali acquartierati specialmente nell",
+      "replace": "oclama rivolazioDario diretto ai salì connazioQali acquartierati specialmente nell",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " rivolazioDario diretto ai salì comiazioQali acquartierati specialmente nella cas",
+      "replace": " rivolazioDario diretto ai salì comiazionali acquartierati specialmente nella cas",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ria, i figli mal domi della prode Ungherìa avrebbero fatto causa comune cogli opp",
+      "replace": "ria, i figli mal domi della prode Ungheria avrebbero fatto causa comune cogli opp",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "era impegnato a lasciare Milano nel buio, E per difenderle, Giuseppe Mazzini fece",
+      "replace": "era impegnato a lasciare Milano nel buio. E per difenderle, Giuseppe Mazzini fece",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lusingava di girare, in una quindicina dì giorni, colle forze rivoluzionarie, l'e",
+      "replace": "lusingava di girare, in una quindicina di giorni, colle forze rivoluzionarie, l'e",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e forze rivoluzionarie, l'esercito austrìaco d'Italia e di tagliarlo, all'Alpi, d",
+      "replace": "e forze rivoluzionarie, l'esercito austriaco d'Italia e di tagliarlo, all'Alpi, d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o austrìaco d'Italia e di tagliarlo, all'Alpi, dalla sua base di rinsanguare nto.",
+      "replace": "o austrìaco d'Italia e di tagliarlo, alle Alpi, dalla sua base di rinsanguare nto.",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o, all'Alpi, dalla sua base di rinsanguare nto. Bastava, per dare animo e tempo a",
+      "replace": "o, all'Alpi, dalla sua base di rinsanguame nto. Bastava, per dare animo e tempo a",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "i Stati Uniti, evitando lo strascico fatele lasciato dalle ibride alleanze, dai l",
+      "replace": "i Stati Uniti, evitando lo strascico fatale lasciato dalle ibride alleanze, dai l",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "coltelli. Persino i chiodi delle barcaccia del loro Naviglio vennero divelti e inf",
+      "replace": "coltelli. Persino i chiodi delle barcacce del loro Naviglio vennero divelti e inf",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "elti e infissi su aste... Tutto serve alia disperazione di un Popolo I\n\nEd io, pr",
+      "replace": "elti e infissi su aste... Tutto serve alla disperazione di un Popolo I\n\nEd io, pr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "tto serve alia disperazione di un Popolo I\n\nEd io, preso dalla febbre generale, gi",
+      "replace": "tto serve alia disperazione di un Popolo!\n\nEd io, preso dalla febbre generale, gi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o mila lire in oro; portarle a Sander e Itadonitz, che mi aspettavano a Locamo. At",
+      "replace": "o mila lire in oro; portarle a Sander e Radonitz, che mi aspettavano a Locamo. At",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "r e Itadonitz, che mi aspettavano a Locamo. Attenermi, nel viaggio, alla vìa del ",
+      "replace": "r e Itadonitz, che mi aspettavano a Locarno. Attenermi, nel viaggio, alla vìa del ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a Locamo. Attenermi, nel viaggio, alla vìa del Lago blaggiore e vigilare se Dalla",
+      "replace": "a Locamo. Attenermi, nel viaggio, alla via del Lago blaggiore e vigilare se Dalla",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "tenermi, nel viaggio, alla vìa del Lago blaggiore e vigilare se Dalla di insolito ",
+      "replace": "tenermi, nel viaggio, alla vìa del Lago Maggiore e vigilare se Dalla di insolito ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "la vìa del Lago blaggiore e vigilare se Dalla di insolito fosse ffi: che indicasse",
+      "replace": "la vìa del Lago blaggiore e vigilare se nulla di insolito fosse ffi: che indicasse",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "re e vigilare se Dalla di insolito fosse ffi: che indicasse scoperti i piani del Calv",
+      "replace": "re e vigilare se Dalla di insolito fosse che indicasse scoperti i piani del Calv",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " i piani del Calvi o che, intralciandoliy richiedesse la loro modificazione. Abbo",
+      "replace": " i piani del Calvi o che, intralciandoli, richiedesse la loro modificazione. Abbo",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "io passeggieri era addetto il piroscafo ''Badetzky\" che solcava il lago giornalment",
+      "replace": "io passeggieri era addetto il piroscafo \"Radetzky\" che solcava il lago giornalment",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "orto, sotto la sorveglianza di una sentii^ella. Soppressa la sentinella, riesciva ",
+      "replace": "orto, sotto la sorveglianza di una sentinella. Soppressa la sentinella, riesciva ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "i al servizio della Repubblica Veneta, aATebbero preso il comando del piroscafo e ",
+      "replace": "i al servizio della Repubblica Veneta, avrebbero preso il comando del piroscafo e ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "enenti dal Piemonte, avrebbero trovato vìa relativamente facile sin sotto le mura",
+      "replace": "enenti dal Piemonte, avrebbero trovato via relativamente facile sin sotto le mura",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " mancava qualche ora alla partenza del \"Badetzky.\" Le trascorsi passeggiando sull",
+      "replace": " mancava qualche ora alla partenza del \"Radetzky.\" Le trascorsi passeggiando sull",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "agnificenza del paesaggio, tutto verde ed smalino malgrado l'inverno, mi fece sul",
+      "replace": "agnificenza del paesaggio, tutto verde e smalino malgrado l'inverno, mi fece sul",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "cenza del paesaggio, tutto verde ed smalino malgrado l'inverno, mi fece sull'animo",
+      "replace": "cenza del paesaggio, tutto verde ed smalto malgrado l'inverno, mi fece sull'animo",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o un'impressione di tanta dolcezza che, U per lì, quasi me lo infiacchiva. E mera",
+      "replace": "o un'impressione di tanta dolcezza che, lì per lì, quasi me lo infiacchiva. E mera",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "rmogliare se non passioni basse e feroci\n\nMa non appena la campana del \"Radetzky",
+      "replace": "rmogliare se non passioni basse e feroci.\n\nMa non appena la campana del \"Radetzky",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ibelle ripigliò il sopravvento. Pensai: ''Bella è la Patria nostra. Per questo app",
+      "replace": "ibelle ripigliò il sopravvento. Pensai: \"Bella è la Patria nostra. Per questo app",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a. Ripassino l'Alpi e torneremo fratelli\".\n\nIl piroscafo prese il largo. Accesi ",
+      "replace": "a. Ripassino l'Alpi e torneremo fratelli.\".\n\nIl piroscafo prese il largo. Accesi ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ". Ripassino l'Alpi e torneremo fratelli\".\n\nIl piroscafo prese il largo. Accesi la",
+      "replace": ". Ripassino l'Alpi e torneremo fratelli\"\n\nIl piroscafo prese il largo. Accesi la",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "i, la sentinella che, con tedesca rigideisa, con regolarità da pendolo, calpestava",
+      "replace": "i, la sentinella che, con tedesca rigidezza, con regolarità da pendolo, calpestava",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " pendolo, calpestava, camminando, l'assisto; udii le voci eaotiehe uscire dal leg",
+      "replace": " pendolo, calpestava, camminando, l'assito; udii le voci eaotiehe uscire dal leg",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "va, camminando, l'assisto; udii le voci eaotiehe uscire dal legno profondo e le c",
+      "replace": "va, camminando, l'assisto; udii le voci caotiehe uscire dal legno profondo e le c",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "amminando, l'assisto; udii le voci eaotiehe uscire dal legno profondo e le compre",
+      "replace": "amminando, l'assisto; udii le voci eaotiche uscire dal legno profondo e le compre",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "uscire dal legno profondo e le compresi. •. parlavano, con lubrica franchezza, d'a",
+      "replace": "uscire dal legno profondo e le compresi... parlavano, con lubrica franchezza, d'a",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "\n\nIl nostro colpo di mano mi parve di ria- Bcìta tanto sicura, che più volte mi ramt",
+      "replace": "\n\nIl nostro colpo di mano mi parve di riuscìta tanto sicura, che più volte mi ramt",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "nostro colpo di mano mi parve di ria- Bcìta tanto sicura, che più volte mi ramtoa",
+      "replace": "nostro colpo di mano mi parve di ria- Bcita tanto sicura, che più volte mi ramtoa",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "Bcìta tanto sicura, che più volte mi ramtoarìcai d'asher solo e impreparato a tent",
+      "replace": "Bcìta tanto sicura, che più volte mi rammarìcai d'asher solo e impreparato a tent",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a tanto sicura, che più volte mi ramtoarìcai d'asher solo e impreparato a tentarl",
+      "replace": "a tanto sicura, che più volte mi ramtoaricai d'asher solo e impreparato a tentarl",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " sicura, che più volte mi ramtoarìcai d'asher solo e impreparato a tentarlo.\n\nMa ",
+      "replace": " sicura, che più volte mi ramtoarìcai d'esher solo e impreparato a tentarlo.\n\nMa ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "icura, che più volte mi ramtoarìcai d'asher solo e impreparato a tentarlo.\n\nMa a ",
+      "replace": "icura, che più volte mi ramtoarìcai d'asser solo e impreparato a tentarlo.\n\nMa a ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "gidi quanto una muraglia.\n\nPochi giorni ìnuanzi — mi si disse — erano stati messi",
+      "replace": "gidi quanto una muraglia.\n\nPochi giorni inuanzi — mi si disse — erano stati messi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "di quanto una muraglia.\n\nPochi giorni ìnuanzi — mi si disse — erano stati messi a",
+      "replace": "di quanto una muraglia.\n\nPochi giorni ìnnanzi — mi si disse — erano stati messi a",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "corse pratiche segrete; due dei nostri. ''Le AotoritH li tenevano completamente se",
+      "replace": "corse pratiche segrete; due dei nostri. \"Le AotoritH li tenevano completamente se",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "pratiche segrete; due dei nostri. ''Le AotoritH li tenevano completamente segrega",
+      "replace": "pratiche segrete; due dei nostri. ''Le AutoritH li tenevano completamente segrega",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "he segrete; due dei nostri. ''Le AotoritH li tenevano completamente segregati e s",
+      "replace": "he segrete; due dei nostri. ''Le Aotorità li tenevano completamente segregati e s",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "tivi dell'arresto nulla era trapelato. Porche tante precauzioni, tanto mistero? C",
+      "replace": "tivi dell'arresto nulla era trapelato. Perche tante precauzioni, tanto mistero? C",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " dell'arresto nulla era trapelato. Porche tante precauzioni, tanto mistero? C'era",
+      "replace": " dell'arresto nulla era trapelato. Porché tante precauzioni, tanto mistero? C'era",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "auzioni, tanto mistero? C'era da adombrassi anche per meno.\"\n\nII Radonitz ritenev",
+      "replace": "auzioni, tanto mistero? C'era da adombrarsi anche per meno.\"\n\nII Radonitz ritenev",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " C'era da adombrassi anche per meno.\"\n\nII Radonitz riteneva per certo che la Poli",
+      "replace": " C'era da adombrassi anche per meno.\"\n\nIl Radonitz riteneva per certo che la Poli",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ramava. Il tentare novità sarebbe stato nn dare nella rete a capo fitto. Egli eso",
+      "replace": "ramava. Il tentare novità sarebbe stato un dare nella rete a capo fitto. Egli eso",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a vita, sacra per lui, di tanti patrioti, Che cosa si sarebbe perso nell'indugiar",
+      "replace": "a vita, sacra per lui, di tanti patrioti. Che cosa si sarebbe perso nell'indugiar",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "perso nell'indugiare; nell 'accertare, che debite cautele, l'umore d'un nemico tan",
+      "replace": "perso nell'indugiare; nell 'accertare, con debite cautele, l'umore d'un nemico tan",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "'un nemico tanto potente e tanto crudele ì La sagge za non consisteva nell'aver fr",
+      "replace": "'un nemico tanto potente e tanto crudele? La sagge za non consisteva nell'aver fr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "tanto potente e tanto crudele ì La sagge za non consisteva nell'aver fretta; ma n",
+      "replace": "tanto potente e tanto crudele ì La saggezza non consisteva nell'aver fretta; ma n",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ell'agire in modo che la vittoria riesciase certa e come inevitabile.\n\nA tanto os",
+      "replace": "ell'agire in modo che la vittoria riescisse certa e come inevitabile.\n\nA tanto os",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " Italiani dai loro propositi, tanto vale- T\" il rinunciare per sempre ad agire. Dal ",
+      "replace": " Italiani dai loro propositi, tanto valeva il rinunciare per sempre ad agire. Dal ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " era passato giorno che il bastone austrìaco non lavorasse, che qualche catena no",
+      "replace": " era passato giorno che il bastone austriaco non lavorasse, che qualche catena no",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ventualità d'essere scoperti erano in pròporzione del tempo impiegato ad organizz",
+      "replace": "ventualità d'essere scoperti erano in proporzione del tempo impiegato ad organizz",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "rtito anche solo, mi costasse la vita.\n\nKrs presente, mentre parlavo, la moglie d",
+      "replace": "rtito anche solo, mi costasse la vita.\n\nErs presente, mentre parlavo, la moglie d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ito anche solo, mi costasse la vita.\n\nKrs presente, mentre parlavo, la moglie del",
+      "replace": "ito anche solo, mi costasse la vita.\n\nKra presente, mentre parlavo, la moglie del",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "gli altri ed ogni discussione rimase cosi troncata. La mattina seguente, mi imbar",
+      "replace": "gli altri ed ogni discussione rimase così troncata. La mattina seguente, mi imbar",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "cavo sull'Arno, piroscafo piemontese e rìdiscendovo celermente il Yerbano. Sander",
+      "replace": "cavo sull'Arno, piroscafo piemontese e ridiscendovo celermente il Yerbano. Sander",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "l'Arno, piroscafo piemontese e rìdiscendovo celermente il Yerbano. Sander e Radon",
+      "replace": "l'Arno, piroscafo piemontese e rìdiscendevo celermente il Yerbano. Sander e Radon",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "piemontese e rìdiscendovo celermente il Yerbano. Sander e Radonitz erano rimasti ",
+      "replace": "piemontese e rìdiscendovo celermente il Verbano. Sander e Radonitz erano rimasti ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "erra!\n\nChe profondo cambiamento in quello poche ore I II cielo torbido preludiava",
+      "replace": "erra!\n\nChe profondo cambiamento in quelle poche ore I II cielo torbido preludiava",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "profondo cambiamento in quello poche ore I II cielo torbido preludiava il fiocca",
+      "replace": "profondo cambiamento in quello poche ore! I II cielo torbido preludiava il fiocca",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ofondo cambiamento in quello poche ore I II cielo torbido preludiava il fioccar del",
+      "replace": "ofondo cambiamento in quello poche ore Il cielo torbido preludiava il fioccar del",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "r della neve; grigio e quasi cinereo il iago. Dalie Alpi soffiava un vento dica c",
+      "replace": "r della neve; grigio e quasi cinereo il lago. Dalie Alpi soffiava un vento dica c",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "eve; grigio e quasi cinereo il iago. Dalie Alpi soffiava un vento dica ciò che av",
+      "replace": "eve; grigio e quasi cinereo il iago. Dalle Alpi soffiava un vento dica ciò che av",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "il iago. Dalie Alpi soffiava un vento dica ciò che aveva come spazzata via la vi",
+      "replace": "il iago. Dalie Alpi soffiava un vento diaca ciò che aveva come spazzata via la vi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "l iago. Dalie Alpi soffiava un vento dica ciò che aveva come spazzata via la vita ",
+      "replace": "l iago. Dalie Alpi soffiava un vento dicciò che aveva come spazzata via la vita ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "go. Dalie Alpi soffiava un vento dica ciò che aveva come spazzata via la vita fes",
+      "replace": "go. Dalie Alpi soffiava un vento dica ciato che aveva come spazzata via la vita fes",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lle rive e dalle pendici.\n\nTrovai sull'Amo gente imbaccaccata, dall'aria egoistic",
+      "replace": "lle rive e dalle pendici.\n\nTrovai sull'Arno gente imbaccaccata, dall'aria egoistic",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "le pendici.\n\nTrovai sull'Amo gente imbaccaccata, dall'aria egoisticamente pensosa;",
+      "replace": "le pendici.\n\nTrovai sull'Amo gente imbacuccata, dall'aria egoisticamente pensosa;",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ta, dall'aria egoisticamente pensosa; faoeie volgari che tradivano la preoccupazion",
+      "replace": "ta, dall'aria egoisticamente pensosa; facce volgari che tradivano la preoccupazion",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lettura di un giornale e gettava, solo dì quando in quando, uno sguardo alla rott",
+      "replace": "lettura di un giornale e gettava, solo di quando in quando, uno sguardo alla rott",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " quando, uno sguardo alla rotta. Chi erat quali sentimenti lo animavano? Potevano",
+      "replace": " quando, uno sguardo alla rotta. Chi era? quali sentimenti lo animavano? Potevano",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "Risposi a me stesso di sì e commisi un giave errore. Egli si era improvvisamente ",
+      "replace": "Risposi a me stesso di sì e commisi un grave errore. Egli si era improvvisamente ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "errore. Egli si era improvvisamente alzalo e, come seguendo l'impulso di un pensi",
+      "replace": "errore. Egli si era improvvisamente alzato e, come seguendo l'impulso di un pensi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " con due occhi che non ho più scordato. £ forse erano incastonati nella faccia de",
+      "replace": " con due occhi che non ho più scordato. Ed erano forse erano incastonati nella faccia de",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e occhi che non ho più scordato. £ forse erano incastonati nella faccia del più immaco",
+      "replace": "e occhi che non ho più scordato. £ forse incastonati nella faccia del più immaco",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "istide del Piemonte; ma a me parvero imbévuti, e quasi ubbriachi, di commiserazio",
+      "replace": "istide del Piemonte; ma a me parvero imbevuti, e quasi ubbriachi, di commiserazio",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "nte; ma a me parvero imbévuti, e quasi ubbriachi, di commiserazione cretina e di ",
+      "replace": "nte; ma a me parvero imbévuti, e quasi ubriachi, di commiserazione cretina e di ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "avrei voluto dirgli; quante altre, mi imagino, egli avrebbe voluto confidarmi! M",
+      "replace": "avrei voluto dirgli; quante altre, mi immagino, egli avrebbe voluto confidarmi! M",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o giunsi a svincolare le labbra, dissi: ''Sono le vedette al loro posto?\"\n\nAvutane",
+      "replace": "o giunsi a svincolare le labbra, dissi: \"Sono le vedette al loro posto?\"\n\nAvutane",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o sin là. Mi disse, con voce concitata: 'Scappa, scappa! I carabinieri sono al ca",
+      "replace": "o sin là. Mi disse, con voce concitata: \"Scappa, scappa! I carabinieri sono al ca",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ai su un albero e scavalcai il muro di cìnta. Quattro salti e sono al lago. Sul g",
+      "replace": "ai su un albero e scavalcai il muro di cinta. Quattro salti e sono al lago. Sul g",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "avevo spiccato il salto e cercavo, in messo a quel piccolo guscio, il mio equilibr",
+      "replace": "avevo spiccato il salto e cercavo, in mezzo a quel piccolo guscio, il mio equilibr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " Locarno!\" Compresero e fecero forza di mu-discutere più a seguiti Essi notificarono al Ma",
+      "replace": " Locarno!\" Compresero e fecero forza di re più a seguiti Essi notificarono al Ma",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ompresero e fecero forza di mu-discutere più a seguiti Essi notificarono al Mazzini d'aver deciso di agire, anche senza il suo aiuto e senza il suo consenso. Dovere imprescindibile del Mazzini divenne quell",
+      "replace": "ompresero e fecero forza di mu-discuteremprescindibile del Mazzini divenne quell",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "aiuto e senza il suo consenso. Dovere imprescindibile del Mazzini divenne quello di assecondare l'inevitabile, di adoperarsi perchè la generosa iniziativa, non rimanesse isolata e sterile.\n\nGli ultimi del Dicembre 1852, per incarico avuto direttamente saltò Conte Grillanzoni, io partivo per Milano e si affaccendò, ma indago! attorno alle baiche. Erano, credo, assicurate a lucchetto. Ij'altro\" agitando le braccia come un mulino olandese, vociava: \"Ferma, ferma!\" Stimai prudenza il non affidare la mìa del giorno in cui arrivai, dopo breve attesa sotto l'orologio di piazza Mercanti, consegnavo un plico di istruzioni ad un uomo che, sbucato dall'ombra, mi aveva fatto il segnale convenuto.\n\nIl piano definitivo e, perveniva così nelle mani dello stesso maggiore Drizzi incaricato di curarne l'esecuzione. Esso era dovuto nelle sue linee princitali, a Pietro Fortunato Calvi. Sua base fondamentale il principio che le armi dovevano essere tolte di sorpresa al nemico, disorganizzato dall 'uccisione dei suoi ufficiali.\n\nPer concessione regolamentare, quest",
+      "replace": "aiuto e senza il suo consenso. Dovere imi.\n\nPer concessione regolamentare, quest",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "to dall 'uccisione dei suoi ufficiali.\n\nPer concessione regolamentare, questi dormivano, generalmente, non in quartiere, ma in alloggi privati. Si era preso nota dei loro indirizzi e conosciuti, naturalmente, erano anche i ritrovi dove, di solito, si radunavano.\n\nLa compagine militare austriaca era, tra l'altro insediata, entre le mura di Milano, al Palazzo del Comando Generale, a quello della Gran Guardia ed al Castello.\n\nIl primo veniva guardato, più che difeso, da un picchetto di venticinque soldati. Le loro armi stavano allineate sulla fuciliera, sotto l'andito del portone, d'innanzi al quale passeggiava incessantemente una vigile sentinella. Gli altri soldati ingannavano l'ore stirando le membra nel cortile, o fumando nelle camerate. Alle cinque del pomeriggio, il Governatore, i Generali e lo Stato Maggiore pranzavano in quel palazzo. 186S, sto nel ritenere che l'affermuione di Fortananon fn mal detto né da lui, né da altri, per to Calvi non ammette eaulvoci. quanto io Mvpia. Ma li Conto di Rndio inai- C. C. scoli... Ed ecco, seguiti da tura torma di fanciu",
+      "replace": "to dall 'uccisione dei suoi ufficiali.\n\nEd ecco, seguiti da tura torma di fanciu",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "nai- C. C. scoli... Ed ecco, seguiti da tura torma di fanciulli, due gendarmi giu",
+      "replace": "nai- C. C. scoli... Ed ecco, seguiti da ura torma di fanciulli, due gendarmi giu",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "i- C. C. scoli... Ed ecco, seguiti da tura torma di fanciulli, due gendarmi giung",
+      "replace": "i- C. C. scoli... Ed ecco, seguiti da tuna torma di fanciulli, due gendarmi giung",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " impugnata la mia pistola a due canne: \"0 a Locamo, o all'altro mondo!\"\n\nSulla ri",
+      "replace": " impugnata la mia pistola a due canne: \"O a Locamo, o all'altro mondo!\"\n\nSulla ri",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ta la mia pistola a due canne: \"0 a Locamo, o all'altro mondo!\"\n\nSulla riva risuo",
+      "replace": "ta la mia pistola a due canne: \"0 a Locarno, o all'altro mondo!\"\n\nSulla riva risuo",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "se a Milano nel 1853, non fu mai detto ng da lui, nd da altri, per quanto io sapp",
+      "replace": "se a Milano nel 1853, non fu mai detto né da lui, nd da altri, per quanto io sapp",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " nel 1853, non fu mai detto ng da lui, nd da altri, per quanto io sappia. Ma 11 C",
+      "replace": " nel 1853, non fu mai detto ng da lui, né da altri, per quanto io sappia. Ma 11 C",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", nd da altri, per quanto io sappia. Ma 11 Conte di Rudio insiste nel ritenere che",
+      "replace": ", nd da altri, per quanto io sappia. Ma il Conte di Rudio insiste nel ritenere che",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "di Fortunato Calvi non ammette equivoci.",
+      "replace": "di Fortunato Calvi non ammette equivoci.\nC. C.",
+      "reason": "llm_correction",
+      "source": "llm"
     }
   ],
   "p1_ch14": [
@@ -9737,6 +10499,216 @@
       "find": "soc-ehiusi",
       "replace": "socchiusi",
       "reason": "llm_flag_fix:unresolved"
+    },
+    {
+      "find": "o che impallidivano, e quasi dileguavano-, i fantasmi dell'avvenire.\n\nQuando, dal",
+      "replace": "o che impallidivano, e quasi dileguavano, i fantasmi dell'avvenire.\n\nQuando, dal",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o così, che il trovare un guado mi riusci impossibile. Era un contrattempo! La ca",
+      "replace": "o così, che il trovare un guado mi riuscì impossibile. Era un contrattempo! La ca",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", uno spettro invisibile. Ma quando le cose diradarono ed ebbi lasciato arne spalle ogni fanale, un subitaneo pensiero venne al turbarmi: \"Se la Polizia, occhiuta e felina, mi avillò. teso un tranello proprio nell'abitazione masolitaria di don Bastiano t\"\n\nEntrai nel giardinetto che il'attornia, era tali precauzioni che neppure i mastini se ne accorsero. II pianterreno... buio; cbiuae tutte le griglie; chiuse quelle del piano superiore... una sola finestra sbadigliava uno sprazzo di luce che andava a perdersi tra le chiome di un doppio filare d'almentre con moto istintivo stringevo il calcio d'una pistola.\n\nEd ecco nereggiare, diretro i vetri, una figura di donna... la domestica di don Bastiano, bella cadorina dai fianchi procaci e dalle poppe impertinenti. Aperse le impennate e sussurrò nella notte: \"Sei tu, Morettot\"\n\nDon Bastiano mi accolse cron un abbraccio e singhiozzando. Le sue prime parole furono: \"Sìa lodato il cielo! lo già disperavo della tua salvezza.\"\n\n— Se le sevizie degli oppressori si possono dire novità, I Da qualche giorno gli arresti inaspettati si trono. La mia stessa casa è costantemente sorvegliata. Come hai ad capitarvi senza moIeatìeT Ho un vago sospetto che tu sia piovuto dal cielo!\n\n— Salvi... anno a poche ore or sono. Ma chi potrebbe garantire del presente! Il dormire nel proprio letto è diventato un problema arduo ai temperandovi che corrono!\n\nA sua richiesta, gli narrai quello che avevo visto e fatto nel mio rapido viaggio.\n\n\"La Provvidenza ti protegge. Tanto maggiore è il tuo obbligo di non abusarne. Ascolta, figlio mio: Se io ami la patria, Io sai. Per la sua libertà darei... tranne l'anima, tutto. Ma altro è sacrificare quello che ci appartiene altro è mettere a repentaglio la sicurezza altrui, la vita di coloro cui si vuol bene. E' una responsabilità tremenda di cui dovrei render conto, o tosto o tardi, a Tale che cont\" le goccie di sangue inutilmente versate e non si appaga di sillogismi. Dà retta: Queste imprese riescono... talvolta, se scoppiano improvvise, come folgore! Ma che il nemico, potentissimo, le intuisca... Carletto! Carletto! a che giovano i generosi propositi, l'ardire di quattro, di trenta, di cento giovanotti, contro un colosso che tiene in soggezione l'intera Europa? Vuoi tu porgere il collo al capestro, così a cuor leggero, per la sterile gloria che te ne potrebbe derivare? E non ha già l'Italia nostra troppi e troppi dei suoi migliori da piangere e da commiserare? Serba la tua energia a tempi più propizi. Come sia non so e non ti saprei dire; ma credo che la Polizia abbia sentore delle nostre trame. Non a casaccio si arresta. Tu non sei sicuro qui. tempi, o tempiL'amico ritrova l'amico e deve dolersene e deve scongiurarlo a partire. L'Austria ci fa peggiori dei barbari!\"\n\nIn imposte socchiuse, la prima luce del crepuscolo spiava appena e già la mamma, impaziente di informazioni, gli portava la consueta tazza di caffè. Lo vide e, indovinando la notte insonne ed angosciosa, invece di svegliarlo, si fece al letto intatto, ne tolse una coltre e glie la stese sulle ginocchia e sul petto. Proprio in quella, fuori a pochi passi, risonò ud colpo secco; i mastini ulularono... soffiai sulla candela.\n\nMomenti di terribile ansietà. per don Bastiano. Io mi ero fatto, in punta di piedi, all'uscio e apertone l'occhio, vi avevo piantato la canna delle mie due pistole. Poi, pensando che lo stare in gabbia mi precludeva ogni via di campo, soe-cimi ed vaeii... Una gtMtde ò\"<mrità, un gran silenzio. Feci, per maggior precazione, il giro della eaaa... il vento, una grìglia sbattuta... ecco tutto! Ma quando rientrai e riaceesi la candela, fai colpito dal pallore mortale di don Bastiano.\n\nEd io ripensai le belle passeggiate fatte, in sua compagnia, l'autunno, lungo\n\nTArdo, attraverso i pingui vigneti quando egli, per educarmi a sentimenti virili, mi narrava le gesta dei nostri maggiori; quando la sua sottana da sacerdote sparìva agli occhi miei e me lo figuravo grave di corazza e d 'elmo... tanto le sue parole erano fiere, intenso il suo entusiasmo!\n\nDon Bastiano, avvezzo a leggere i miei pensieri sin dai miei primi anni, disse: \"Non annoverarmi tra i codardi. H mio carattere di sacerdote e questa canizie mi impongono dei doveri. Ma tratto il dado... ritto e sereno sino alla fine!\"\n\nLa mattina per tempo, mentre io, stanco del lungo viaggio, dormivo ancora saporitamente, egli si recò ad avvertire papà del mio arrivo. Trovai il fiero vecchio ancora vegeto, benché sul suo nobile volto scorgessi rughe che m'erano ignote. Ma il nostro incontro fu diverso da quello che mi aspettavo. E' probabile che don Bastiano lo avesse indotto a gettare sulla Inlancia tutto il peso dell'autorità paterna per distogliermi da un'impresa tanto arrischiata. Non abbracci, non baci; una stretta di mano poderosa, ma solitaria e subito, rincrudite e fatte quasi sarcastiche, le stesse esortazioni che avevo udito la sera, dalla bocca del buon prete. La nostra discussione si animò a tal segno da riuscirmi penosissima. Decisi di tronearia. \"Quando mi venne in uggia — dissi — l'uniforme e il pane dei ladri, non mi aspettavo né feste, né <mori La eoitomissioae passiva non si addice all'animo di un Rudio. E poi che tu me la eoosigli... orbene, io continuerò a battere la mia via, solo. Da questo momento non ho più padre!\" n povero vecchio rimase per un momento con un gesto sospeso, come se si fosse improvvisamente cristallizzato; poi le sue ciglia si riempirono di lagrime. Si lanciò con impeto improvviso e mi abbracciò e mi tenne stretto con una forza di cui non l 'avrei creduto capace. Quando potè parlare: \"Sei tu, sei tu Carletto!... riconosco il sangue mio. Va! sinché le forze mi bastino, sarò con te!\"\n\nFu deciso di non disepellire le armi sinché l'animo degli ardimentosi, che dovevano maneggiarle, non fosse preparato e ben disposto. Papà e don Bastiano si incaricarono di abbordarli. Nel frattempo io avrei, per prudenza, cercato un rifugio meno vigilato dalla Polizia. Nei dintorni di Belluno, verso il settentrione, dove il piano confina colle alture, sorgeva un castagno secolare noto, e quasi famoso, nella città e nel contado per le straordinarie sue dimensioni. Si convenne che io mi sarei recato, col favore delle tenebre, sotto le sue fronde. Persona fidata sarebbe venuta, verso la mezzanotte, ad indicarmi dove avrei potuto posare il capo. Segnale di riconoscimento, tre fischi, ai quali avrei risposto fischiando quattro volte.\n\nAlle nove ero già disteso sull'erì)a e fantasticavo contemplando la luna attraverso il nero fogliame; poi la luna tramontò e il vento riprincipiò la sua corsa sfrenata Mi alzai per sgranchirmi e mi appostai dietro il tronco enorme.\n\nDalla torre di Belluno si incalzarono, nello spazio, dodici rintocchi e l'occhio, avvezzo ormai all'oscurità, corse indagando tra macchie e vigneti. Un'altra lunga ora trascorse... fui preso da tristi presentimenti.\n\nD'improvviso, sommessamente, timidamente, al di là di un gruppo di cespugli, si succedono i tre fischi... poi un bisbiglio... \"All'erta, Moretto! Sono parecchi!\"Guardai intensamente e scorsi, attraverso i ramoscelli, qualcosa... come il cappotto di uno sbirro. Se non feci fuoco lì per lì, fu per tema di sbagliare il bersaglio e di trovarmi, senza difesa, di fronte al nemico. Risposi al segnale e attesi con ambo le armi puntate...\n\nOh qual sangue e quanti rimorsi muirmiami da un istante d'esitazione! Un'osibra si fece innanzi a braccia tese... nida madre! quando le case diradarono ed ebbi lasciato alle spa",
+      "replace": ", uno spettro invisibile. Ma quando le case diradarono ed ebbi lasciato alle spa",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "bbi lasciato alle spalle ogni fanale, una subitaneo pensiero venne a turbarmi: \"S",
+      "replace": "bbi lasciato alle spalle ogni fanale, un subitaneo pensiero venne a turbarmi: \"S",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ubitaneo pensiero venne a turbarmi: \"Se sfelina, mi avesse teso un tranello propr",
+      "replace": "ubitaneo pensiero venne a turbarmi: \"Se la Polizia, occhiuta e felina, mi avesse teso un tranello propr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "elina, mi avesse teso un tranello propringere nell'abitazione solitaria di don Bastia",
+      "replace": "elina, mi avesse teso un tranello proprio nell'abitazione solitaria di don Bastia",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "abitazione solitaria di don Bastiano?\"\n\nCapìtolo nel giardinetto che l'attornia, ",
+      "replace": "abitazione solitaria di don Bastiano?\"\n\nEntrapìtolo nel giardinetto che l'attornia, ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "itazione solitaria di don Bastiano?\"\n\nCapìtolo nel giardinetto che l'attornia, con tal",
+      "replace": "itazione solitaria di don Bastiano?\"\n\nCai nel giardinetto che l'attornia, con tal",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "na pistola.\n\nEd ecco nereggiare, dietro squarcio oratorio ad incitare i vetri, una figura giungono al cuore di",
+      "replace": "na pistola.\n\nEd ecco nereggiare, dietro i vetri, una figura giungono al cuore di",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ratorio ad incitare i vetri, una figura giungono al cuore di donna figlio, la domestica di don Bas",
+      "replace": "ratorio ad incitare i vetri, una figura di donna figlio, la domestica di don Bas",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "i, una figura giungono al cuore di donna figlio, la domestica di don Bastiano, bella cad",
+      "replace": "i, una figura giungono al cuore di donna... la domestica di don Bastiano, bella cad",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " imposte e sussurrò nella notte:\" Sei tu. Moretto?\"\n\nDon Bastiano mi accolse con ",
+      "replace": " imposte e sussurrò nella notte:\" Sei tu, Moretto?\"\n\nDon Bastiano mi accolse con ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "hiozzando. Le sue prime paro le furono: la lodato il cielo! Io già disperavo dell",
+      "replace": "hiozzando. Le sue prime paro le furono: \"Sia lodato il cielo! Io già disperavo dell",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "to il cielo! Io già disperavo della tua volevo dire, ma la voce non venne e, vin",
+      "replace": "to il cielo! Io già disperavo della tua salvolevo dire, ma la voce non venne e, vin",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o il cielo! Io già disperavo della tua volevo dire, ma la voce non venne e, vinto da un impeto di tenerezza, io pure singhiozzai.\n\nIl Novità fo",
+      "replace": "o il cielo! Io già disperavo della tua vezza, io pure singhiozzai.\n\nIl Novità fo",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "venne e, vinto da un impeto di tenerezza, io pure singhiozzai.\n\nIl Novità forse? dir sillaba coerente",
+      "replace": "venne e, vinto da un impeto di tenerezza.\n\nIl Novità forse? dir sillaba coerente",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "mpeto di tenerezza, io pure singhiozzai.\n\nIl Novità forse? dir sillaba coerente fu mio fratello Giustiniano, rimasto in disparte, quasi inosservato. Disse: ''Tristi nuove. I nostri amici, i migliori... arrestati; don Bastiano... arrestato; il povero papà... arrestato\"\n\nE Se mi narrò i particolari della cat",
+      "replace": "mpeto di tenerezza, io pure singhiozzai.\"\n\nE Se mi narrò i particolari della cat",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "rrestato; il povero papà... arrestato\"\n\nE Se mi narrò i particolari della catastr",
+      "replace": "rrestato; il povero papà... arrestato\"\n\n— Se mi narrò i particolari della catastr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "stato; il povero papà... arrestato\"\n\nE Se mi narrò i particolari della catastrofe. Don Bastiano aveva steso serenamente i polsi alle manette \"felice di contribuire, col proprio sacrificio, a compiere la serie di patimenti richiesti dalla Provvidenza al riscatto del suo Paese.\" Ma il papà voleva rompere la sua canna di bambù sulle spalle degli sgherri e le sevizie degli oppressori si possono",
+      "replace": "stato; il povero papà... arrestato\"\n\nE Se le sevizie degli oppressori si possono",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "orno gli arresti inaspettati si succedoncata mia stessa casa è costantemente sorveg",
+      "replace": "orno gli arresti inaspettati si succedono. La mia stessa casa è costantemente sorveg",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "sospetto che tu sia piovuto dal cielo!\n\nMeditai E papà e ne conclusi: \"Adesso l'importante ò di condurre a casa la famiglia? Penseremo poi al resto.\"\n\nMa Salvi poverina, affranta dalla sino pro",
+      "replace": "sospetto che tu sia piovuto dal cielo!\n\n— Salvi poverina, affranta dalla sino pro",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "iglia? Penseremo poi al resto.\"\n\nMa Salvi poverina, affranta dalla sino prova, resa",
+      "replace": "iglia? Penseremo poi al resto.\"\n\nMa Salvoverina, affranta dalla sino prova, resa",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a? Penseremo poi al resto.\"\n\nMa Salvi poverina, affranta dalla sino prova, resa ancora più impotente d",
+      "replace": "a? Penseremo poi al resto.\"\n\nMa Salvi po... sino prova, resa ancora più impotente d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o.\"\n\nMa Salvi poverina, affranta dalla sino prova, resa ancora più impotente dall",
+      "replace": "o.\"\n\nMa Salvi poverina, affranta dalla sono prova, resa ancora più impotente dall",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "\n\nMa Salvi poverina, affranta dalla sino prova, resa ancora più impotente dall'oscurità, inciampava ad ogni passo. Consegnai una delle mie pistole a poche ore or sono. Ma \"Fa da battistr",
+      "replace": "\n\nMa Salvi poverina, affranta dalla sino a poche ore or sono. Ma \"Fa da battistr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "delle mie pistole a poche ore or sono. Ma \"Fa da battistrada. Pensa a chi potrebbe garantire del presente? I",
+      "replace": "delle mie pistole a poche ore or sono. Ma chi potrebbe garantire del presente? I",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "sa a chi potrebbe garantire del presente? Il dormire nel proprio letto è diventat",
+      "replace": "sa a chi potrebbe garantire del presente! Il dormire nel proprio letto è diventat",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " è diventato un problema arduo ai tempi buona dose corrono!\n\nA sua richiesta, gli narrai ",
+      "replace": " è diventato un problema arduo ai tempi che corrono!\n\nA sua richiesta, gli narrai ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "\nA sua richiesta, gli narrai quello che Mi hai compreso t\" avevo visto e, prima che la mamma avesse",
+      "replace": "\nA sua richiesta, gli narrai quello che avevo visto e, prima che la mamma avesse",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "llo che Mi hai compreso t\" avevo visto e, prima che la mamma avesse tempo di avvedercene e fatto reagire, l'avevo tolta sulle mie ",
+      "replace": "llo che Mi hai compreso t\" avevo visto e fatto reagire, l'avevo tolta sulle mie ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " mamma avesse tempo di avvedercene e fatto reagire, l'avevo tolta sulle mie braccia e procedetti, fiero di sostenere chi m 'aveva portato nel mio rapido viaggio. Ed egli: altr",
+      "replace": " mamma avesse tempo di avvedercene e fatto nel mio rapido viaggio. Ed egli: altr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "m 'aveva portato nel mio rapido viaggio. Ed egli: altro travaglio.\n\nAlla Provvidenza ti protegge. Tanto ma",
+      "replace": "m 'aveva portato nel mio rapido viaggio.\n\nAlla Provvidenza ti protegge. Tanto ma",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ido viaggio. Ed egli: altro travaglio.\n\nAlla Provvidenza ti protegge. Tanto maggior",
+      "replace": "ido viaggio. Ed egli: altro travaglio.\n\n\"La Provvidenza ti protegge. Tanto maggior",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "rotegge. Tanto maggiore è il tuo obbligo e abbracciatela le impressi sulla fronte un bacio lungo. Non presentivo che sarebbe l'ultimo!.. \"Arrivederci, mamma!\" E le promisi ehe, per quanto avversa si mostrasse la fortuna, sempre avrei agito in modo che, rivedendola, pensando all'amor suo, non mi avrebbe rimorso la coscienza di non abusarne. Ascolta, figlio mio: S",
+      "replace": "rotegge. Tanto maggiore è il tuo obbligo di non abusarne. Ascolta, figlio mio: S",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ". L'Austria ci fa peggiori dei barbari!\"",
+      "replace": ". L'Austria ci fa peggiori dei barbari!\"\n\nIn imposte socchiuse, la prima luce del crepuscolo spiava appena e già la mamma, impaziente di informazioni, gli portava la consueta tazza di caffè. Lo vide e, indovinando la notte insonne ed angosciosa, invece di svegliarlo, si fece al letto intatto, ne tolse una coltre e glie la stese sulle ginocchia e sul petto. Proprio in quella, fuori a pochi passi, risonò un colpo secco; i mastini ulularono... soffiai sulla candela.\n\nMomenti di terribile ansietà per don Bastiano. Io mi ero fatto, in punta di piedi, all'uscio e apertone l'occhio, vi avevo piantato la canna delle mie due pistole. Poi, pensando che lo stare in gabbia mi precludeva ogni via di scampo, uscii e vagai... Una grande oscurità, un gran silenzio. Feci, per maggior precauzione, il giro della casa... il vento, una griglia sbattuta... ecco tutto! Ma quando rientrai e riaccesi la candela, fui colpito dal pallore mortale di don Bastiano.\n\nEd io ripensai le belle passeggiate fatte, in sua compagnia, l'autunno, lungo l'Ardo, attraverso i pingui vigneti quando egli, per educarmi a sentimenti virili, mi narrava le gesta dei nostri maggiori; quando la sua sottana da sacerdote spariva agli occhi miei e me lo figuravo grave di corazza e d'elmo... tanto le sue parole erano fiere, intenso il suo entusiasmo!\n\nDon Bastiano, avvezzo a leggere i miei pensieri sin dai miei primi anni, disse: \"Non annoverarmi tra i codardi. Il mio carattere di sacerdote e questa canizie mi impongono dei doveri. Ma tratto il dado... ritto e sereno sino alla fine!\"\n\nLa mattina per tempo, mentre io, stanco del lungo viaggio, dormivo ancora saporitamente, egli si recò ad avvertire papà del mio arrivo. Trovai il fiero vecchio ancora vegeto, benché sul suo nobile volto scorgessi rughe che m'erano ignote. Ma il nostro incontro fu diverso da quello che mi aspettavo. E' probabile che don Bastiano lo avesse indotto a gettare sulla bilancia tutto il peso dell'autorità paterna per distogliermi da un'impresa tanto arrischiata. Non abbracci, non baci; una stretta di mano poderosa, ma solitaria e subito, rincrudite e fatte quasi sarcastiche, le stesse esortazioni che avevo udito la sera, dalla bocca del buon prete. La nostra discussione si animò a tal segno da riuscirmi penosissima. Decisi di troncarla. \"Quando mi venne in uggia — dissi — l'uniforme e il pane dei ladri, non mi aspettavo né feste, né onori. La sottomissione passiva non si addice all'animo di un Rudio. E poi che tu me la consigli... orbene, io continuerò a battere la mia via, solo. Da questo momento non ho più padre!\" Il povero vecchio rimase per un momento con un gesto sospeso, come se si fosse improvvisamente cristallizzato; poi le sue ciglia si riempirono di lagrime. Si lanciò con impeto improvviso e mi abbracciò e mi tenne stretto con una forza di cui non l'avrei creduto capace. Quando potè parlare: \"Sei tu, sei tu Carletto!... riconosco il sangue mio. Va! sinché le forze mi bastino, sarò con te!\"\n\nFu deciso di non disseppellire le armi sinché l'animo degli ardimentosi, che dovevano maneggiarle, non fosse preparato e ben disposto. Papà e don Bastiano si incaricarono di abbordarli. Nel frattempo io avrei, per prudenza, cercato un rifugio meno vigilato dalla Polizia. Nei dintorni di Belluno, verso il settentrione, dove il piano confina colle alture, sorgeva un castagno secolare noto, e quasi famoso, nella città e nel contado per le straordinarie sue dimensioni. Si convenne che io mi sarei recato, col favore delle tenebre, sotto le sue fronde. Persona fidata sarebbe venuta, verso la mezzanotte, ad indicarmi dove avrei potuto posare il capo. Segnale di riconoscimento, tre fischi, ai quali avrei risposto fischiando quattro volte.\n\nAlle nove ero già disteso sull'erba e fantasticavo contemplando la luna attraverso il nero fogliame; poi la luna tramontò e il vento riprincipiò la sua corsa sfrenata. Mi alzai per sgranchirmi e mi appostai dietro il tronco enorme.\n\nDalla torre di Belluno si incalzarono, nello spazio, dodici rintocchi e l'occhio, avvezzo ormai all'oscurità, corse indagando tra macchie e vigneti. Un'altra lunga ora trascorse... fui preso da tristi presentimenti.\n\nD'improvviso, sommessamente, timidamente, al di là di un gruppo di cespugli, si succedono i tre fischi... poi un bisbiglio... \"All'erta, Moretto! Sono parecchi!\" Guardai intensamente e scorsi, attraverso i ramoscelli, qualcosa... come il cappotto di uno sbirro. Se non feci fuoco lì per lì, fu per tema di sbagliare il bersaglio e di trovarmi, senza difesa, di fronte al nemico. Risposi al segnale e attesi con ambo le armi puntate...\n\nOh qual sangue e quanti rimorsi mormurai da un istante d'esitazione! Un'ombra si fece innanzi a braccia tese... mia madre!\n\nIl primo a dir sillaba coerente fu mio fratello Giustiniano, rimasto in disparte, quasi inosservato. Disse: \"Tristi nuove. I nostri amici, i migliori... arrestati; don Bastiano... arrestato; il povero papà... arrestato.\"\n\nE mi narrò i particolari della catastrofe. Don Bastiano aveva steso serenamente i polsi alle manette \"felice di contribuire, col proprio sacrificio, a compiere la serie di patimenti richiesti dalla Provvidenza al riscatto del suo Paese.\" Ma il papà voleva rompere la sua canna di bambù sulle spalle degli sgherri.\n\nMeditai e ne conclusi: \"Adesso l'importante è di condurre a casa la famiglia. Penseremo poi al resto.\"\n\nMa la poverina, affranta dalla dura prova, resa ancora più impotente dall'oscurità, inciampava ad ogni passo. Consegnai una delle mie pistole a Giustiniano: \"Fa da battistrada. Pensa a chi ci appartiene.\" Prima che la mamma avesse tempo di avvedercene e di reagire, l'avevo tolta sulle mie braccia e procedetti, fiero di sostenere chi m'aveva portato in altro travaglio.\n\nAlla fine, abbracciatala, le impressi sulla fronte un bacio lungo. Non presentivo che sarebbe l'ultimo!.. \"Arrivederci, mamma!\" E le promisi che, per quanto avversa si mostrasse la fortuna, sempre avrei agito in modo che, rivedendola, pensando all'amor suo, non mi avrebbe rimorso la coscienza.",
+      "reason": "llm_correction",
+      "source": "llm"
     }
   ],
   "p1_ch19": [
@@ -11765,6 +12737,222 @@
       "find": "Hti-viere",
       "replace": "Stiviere",
       "reason": "manual_context_fix"
+    },
+    {
+      "find": "AFFERMANO gli storici che la spia Felici",
+      "replace": "I'll carefully correct the OCR errors in this chapter while preserving the original 1913 Italian text:\n\nAFFERMANO gli storici che la spia Felici",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "no qualche sospetto. La Polizia si mette.sull'attenti e li trattiene e arresta, a",
+      "replace": "no qualche sospetto. La Polizia si mette sull'attenti e li trattiene e arresta, a",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", Luigi Moratti da Castiglione delle Stiviere, viere, un Roberto Morin, un Fontana. O h",
+      "replace": ", Luigi Moratti da Castiglione delle Stiviere, un Roberto Morin, un Fontana. O h",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ferma che costoro furono arrestati conteimporancamente al Cialvi, il quale passò ",
+      "replace": "ferma che costoro furono arrestati contemporancamente al Cialvi, il quale passò ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "he costoro furono arrestati conteimporancamente al Cialvi, il quale passò per que",
+      "replace": "he costoro furono arrestati conteimporaneamente al Cialvi, il quale passò per que",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "urono arrestati conteimporancamente al Cialvi, il quale passò per quei paraggi il",
+      "replace": "urono arrestati conteimporancamente al Calvi, il quale passò per quei paraggi il",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "in quel Cadore ove eran le sue Termopili Fu\n\nFu tratto a Mantova. Le tetre mura di ",
+      "replace": "in quel Cadore ove eran le sue Termopili?\n\nFu tratto a Mantova. Le tetre mura di ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "pensiero delle sofferenze paterne e dall'inaudite miserie che l'attorniavano; la ",
+      "replace": "pensiero delle sofferenze paterne e dalle inaudite miserie che l'attorniavano; la ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ogni ora dalle villane perquisizioni dei.secondini, insolenti e feroci... non una",
+      "replace": "ogni ora dalle villane perquisizioni dei secondini, insolenti e feroci... non una",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "olla propria eccellenza, tutta quanta l'obiezione della effimera superiorità che ",
+      "replace": "olla propria eccellenza, tutta quanta l'abiezione della effimera superiorità che ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "on cura meticolosa, ogni fase... non il Suo Tacito che lo eterni nella prosa di g",
+      "replace": "on cura meticolosa, ogni fase... non il suo Tacito che lo eterni nella prosa di g",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " l'eroe delle dieci giornate di\n\nBrescia giganti del dovere, eletto contingente ",
+      "replace": " l'eroe delle dieci giornate di\n\nBrescia, giganti del dovere, eletto contingente ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lasse sociale, già erano sottostati, coli del capestro, all'estremo insulto del d",
+      "replace": "lasse sociale, già erano sottostati, col nodo del capestro, all'estremo insulto del d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "Nel lungo, tedioso processo, mostrò la ipiperturbabile dell'uomo avvezzo, 9UÌ campi di battaglia, a guardare in faccia la morte e solo si accese di nobile sdegno, quando i suoi giudici, metolo al confronto con un abbietto delatore, non si vergognarono di preferire la compra parola di costui, alla sua di nemico leale, d'uomo d'onore.\n\nLa sua partecipazione nei moti intesi a rovesciare, colla violenza, una tirannide Qhe, colla violenza, si era imposta, ammise 9en2a reticenze; i compagni che furono arr^i^tati con lui, difese sino all'estremo, affermando che gli si erano uniti per partecipare ad un'escursione alpina, senza nulla conoscere dei suoi progetti sovversivi; il segreto della complicità degli altri congiurati rimase gelosamente custodito entro il suo petto adamantino e mio padre e la Luisa e don Bastiano Barozzi, trattenuti a lungo per semplice sospetto, usdqrono poi all'aperto in forza di un decreto di amnistia.\n\nE la triste previsione di Pietro Fortunato Calvi si avverò. Con sentenza del 17 Gennaio 1855, confermata a Vienna nel Giugno successivo, egli venne condannato a morire di capestro A trent'otto anni! per un'impresa, più che iniziata, pensata appena. Tanto l'Austria si mostrava ansiosa di sopprimere gli uomini che, al pensiero, avrebbero saputo accoppiare l'azione e farsi agitatori e duci di altri uomini!\n\nNe' suoi ultimi giorni, volle un abboccamento coi compagni di sventura e, più che chieder loro conforto, si adoperò a confortarli. Scrisse lettere affettuosissime al fratello Luigi e al padre che, fedele servitore dell'Austria, riprovava, come follia e peggio, quel suo patriottismo irruente, quel 9U0 irrefrenabile bisogno d'agire. E questo pensiero gli costò l'uni($a lagrima che di lui registri la Storia.\n\nE scrisse una lettera a Teresa Piio4ò 4^ Padova, la giovinetta i cui baci egli ai riprometteva come premio ineffabile, a Patria redenta. La quale giovinetta, af\" franta dal tragico distacco, visse in volontaria, perpetua vedovanza.\n\nL'Austria aveva ideato, a quei tempi, nuovo genere di pietà... accordare qualche grazia, purché il condannato ne facesse richiesta in termini umilianti e da peccatore pentito. Se la grazia non veniva domandata, essa poteva dire: ''La taccia di crudele'che mi viene lanciata da ogni par t^ del mondo, è ingiunta. Ero disposta a perdonare, ma non si volle.\" Ohe se la domanda di grazia le perveniva, i termini stessi in cui era redatta, toglievano ogni prestigio al patriota malcauto vivere fisiologicamente, ma a prezzo del proprio suicidio morale.\n\nSi affermava, ai miei tempi, che il Calvi venisse pregato a sollecitare quella strana clemenza. Egli avrebbe sdegnosamente risposto: \"I1 mio odio per l'Austria è più intenso del mio amore per la vita. Nulla chiederò e nulla voglio dagli oppressori del mio Paese!\" Se questa è leggenda, quanto armonizza con quella tempra forte ed integra!\n\nMa leggenda certo non è l'atteggiamento dignitoso col quale affrontò la morte. Mosse incontro al patibolo come a meta prevista sin dall 'inizio della sua eroina lotta coli 'oppressore e parve che, avvezzo da lunghi anni a meditare gli orrori, il suo animo ne fosse diventato refrattario.\n\nPassato il ponte di San Giorgio, sporse il capo dalla carrozza funebre e contemplò, con sguardo triste, la città e la campagna. Credo fermamente che egli. Armante ''più vero e maggiore\", si rammaricasse, in quel momento, di non aver potuto realizzare l'anelito della sua vita Su quelle terre non vide inalberati i colo-calma imperturbabile della avvezzo, sui campi d",
+      "replace": "Nel lungo, tedioso processo, mostrò la imperturbabile della avvezzo, sui campi d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " inalberati i colo-calma imperturbabile della avvezzo, sui campi di battaglia, a",
+      "replace": " inalberati i colo-calma imperturbabile calma della avvezzo, sui campi di battaglia, a",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lberati i colo-calma imperturbabile della avvezzo, sui campi di battaglia, a guar",
+      "replace": "lberati i colo-calma imperturbabile dell'uomo avvezzo, sui campi di battaglia, a guar",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "nobile sdegno, quando i suoi giudici, mesttendolo al confronto con un abbietto de",
+      "replace": "nobile sdegno, quando i suoi giudici, mettendolo al confronto con un abbietto de",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "uomo d'onore.\n\nLa sua partecipazione neitornò moti intesi a rovesciare, colla violenz",
+      "replace": "uomo d'onore.\n\nLa sua partecipazione nei moti intesi a rovesciare, colla violenz",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "uti a lungo per semplice sospetto, usciròno poi all'aperto in forza di un decreto",
+      "replace": "uti a lungo per semplice sospetto, uscirono poi all'aperto in forza di un decreto",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "to in forza di un decreto di amnistia.\n\nGiunto ai piedi del patibolo, sì tolse il sigaro di bocca e lo diede, acceso, ad una delle Bue guardie. Respìnse con ruvidezza \"legnosa, il braccio di tale che voleva aiutarlo a Balire la tavola disposta sotto la colonna da cui doveva penzolare. Di lassù guardò, sorridendo, gli ufficiali austriaci, parecchi dei quali sì erano levato il cappello in segno dì rispetto. E la triste onestà, colà Pietro Fortunat",
+      "replace": "to in forza di un decreto di amnistia.\n\nE la triste onestà, colà Pietro Fortunat",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "pello in segno dì rispetto. E la triste onestà, colà Pietro Fortunato Calvi si a",
+      "replace": "pello in segno dì rispetto. E la triste previsionestà, colà Pietro Fortunato Calvi si a",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lo in segno dì rispetto. E la triste onestà, colà Pietro Fortunato Calvi si avverò. ",
+      "replace": "lo in segno dì rispetto. E la triste one colà Pietro Fortunato Calvi si avverò. ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " segno dì rispetto. E la triste onestà, colà Pietro Fortunato Calvi si avverò. Con s",
+      "replace": " segno dì rispetto. E la triste onestà, di Pietro Fortunato Calvi si avverò. Con s",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " si avverò. Con sentenza del 17 Gennaio ferma: confermata a Vienna nel Giugnoia succes",
+      "replace": " si avverò. Con sentenza del 17 Gennaio 1855, confermata a Vienna nel Giugnoia succes",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "io ferma: confermata a Vienna nel Giugnoia successivo, egli venne condannato a mor",
+      "replace": "io ferma: confermata a Vienna nel Giugno successivo, egli venne condannato a mor",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "si agitatori e duci di altri uomini!\n\nNer suoi ultimi giorni, volle un abboccamen",
+      "replace": "si agitatori e duci di altri uomini!\n\nNe' suoi ultimi giorni, volle un abboccamen",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "isse lettere affettuosissime al fratellontanò, Luigi e al padre che, fedele servitore ",
+      "replace": "isse lettere affettuosissime al fratello Luigi e al padre che, fedele servitore ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "rché il condannato ne facesse richiesta spoglie in termini umilianti e da peccatore pent",
+      "replace": "rché il condannato ne facesse richiesta in termini umilianti e da peccatore pent",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ma a prezzo del proprio suicidio morale. ri santi della redenzione; non vide, sp",
+      "replace": "ma a prezzo del proprio suicidio morale.\n\nSi ri santi della redenzione; non vide, sp",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a a prezzo del proprio suicidio morale. ri santi della redenzione; non vide, spa",
+      "replace": "a a prezzo del proprio suicidio morale. affermava, ai miei tempi, che il Calvi venisse pregato a sollecitare quella strana clemenza. Egli avrebbe sdegnosamente risposto: \"Il mio odio per l'Austria è più intenso del mio amore per la vita. Nulla chiederò e nulla voglio dagli oppressori del mio Paese!\" Se questa è leggenda, quanto armonizza con quella tempra forte ed integra!\n\nMa leggenda certo non è l'atteggiamento dignitoso col quale affrontò la morte. Mosse incontro al patibolo come a meta prevista sin dall'inizio della sua eroica lotta coll'oppressore e parve che, avvezzo da lunghi anni a meditare gli orrori, il suo animo ne fosse diventato refrattario.\n\nPassato il ponte di San Giorgio, sporse il capo dalla carrozza funebre e contemplò, con sguardo triste, la città e la campagna. Credo fermamente che egli, amante \"più vero e maggiore\", si rammaricasse, in quel momento, di non aver potuto realizzare l'anelito della sua vita. Su quelle terre non vide inalberati i colori santi della redenzione; non vide, spa",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", uomini liberi.\n\nSi ritrasse e ritornò due profonde meditazioni dell 'oltre tomba",
+      "replace": ", uomini liberi.\n\nSi ritrasse e ritornò alle profonde meditazioni dell 'oltre tomba",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "che egli, malgrado lo strascico lasciatologli nell' animo da scuole sinistramente ",
+      "replace": "che egli, malgrado lo strascico lasciatogli nell' animo da scuole sinistramente ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "dove si dispensano le prebende, disse cooi voce ferma: \"Sono pronto!\" Allora il bo",
+      "replace": "dove si dispensano le prebende, disse con voce ferma: \"Sono pronto!\" Allora il bo",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ll'alta statura del Calvi, i cui piedi titillarono (la terra. La ^ua agonia fu lunga ",
+      "replace": "ll'alta statura del Calvi, i cui piedi toccarono (la terra. La ^ua agonia fu lunga ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "tura del Calvi, i cui piedi titillarono (la terra. La ^ua agonia fu lunga ed estr",
+      "replace": "tura del Calvi, i cui piedi titillarono la terra. La ^ua agonia fu lunga ed estr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", i cui piedi titillarono (la terra. La ^ua agonia fu lunga ed estremamente penos",
+      "replace": ", i cui piedi titillarono (la terra. La sua agonia fu lunga ed estremamente penos",
+      "reason": "llm_correction",
+      "source": "llm"
     }
   ],
   "p1_ch23": [
@@ -18168,6 +19356,384 @@
       "find": "su-ar",
       "replace": "su-ar",
       "reason": "accepted:structural_reconstruction_needed"
+    },
+    {
+      "find": "Ecco com\" e perchè, gli avvenimen ti precipitassero",
+      "replace": "Ecco com'è perchè, gli avvenimen ti precipitassero",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "Ecco com\" e perchè, gli avvenimen ti precipitassero. Innanz",
+      "replace": "Ecco com\" e perchè gli avvenimen ti precipitassero. Innanz",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "tutto, le confidenze avventate fatte da O Giuseppe Pieri alla Rosina Hart- ^^ mann",
+      "replace": "tutto, le confidenze avventate fatte da Giuseppe Pieri alla Rosina Hart- ^^ mann",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "tte da O Giuseppe Pieri alla Rosina Hart- ^^ mann a Bruxelles, ebbero, come avevo pav",
+      "replace": "tte da O Giuseppe Pieri alla Rosina Hartmann a Bruxelles, ebbero, come avevo pav",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " ti trovo finalmente! Tu sei in arresto!'\"\n\nQuando l'Orsini lo vide muovergli inc",
+      "replace": " ti trovo finalmente! Tu sei in arresto!\"\n\nQuando l'Orsini lo vide muovergli inc",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a piena libertà. Un po' per questo, un pò-' per la vena cicalone eh 'era nel suo c",
+      "replace": "a piena libertà. Un po' per questo, un po' per la vena cicalone eh 'era nel suo c",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "er questo, un pò-' per la vena cicalone eh 'era nel suo carattere, lungi dall'amm",
+      "replace": "er questo, un pò-' per la vena cicalone ch 'era nel suo carattere, lungi dall'amm",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " a non soverchia distanza dall'attentato. Io narro ìe cose così come le avvennero, ma sono ben lontano dall 'atteggiarmi a rigido censore. Se difficilissimo è il riscontrare l'inappuntabile correttezza di giudizio in un uomo chi> agisca in ambiente normale, colla calma perfetta nel cervello e nel cuore, come pretenderla in chi è turbato dalla straordinaria gravità delle circostanze, in chi 6 traviato dalle passioni! Test",
+      "replace": " a non soverchia distanza dall'attentato, in chi 6 traviato dalle passioni! Test",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "aordinaria gravità delle circostanze, in chi 6 traviato dalle passioni! Testimonio degli ultimi giorni, degli ultimi momenti Hi Gin.^eppc Pieri e dell'altezza a cui sapeva giungere, non esito un istante ad affermare che egli fu sventato, nudi 'altro che sventato, Se io, rome già ebbi ad ammettere, credetti per un momento il contrario tÌ fui trascinato non solo dall'amarezza inerente alla mia caduta che, a ragione, gli attribuivo; ma anche perchè il mio temporaneo [>pessimismo era rincrudito da un incidente spiacevole occorso in mia presenza, tra il Pieri e l'Orsini; il quale incidente aveva, a non soverchia distanza dall'attentato, inalato come una barriera irta di diffide",
+      "replace": "aordinaria gravità delle circostanze, innalato come una barriera irta di diffide",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " soverchia distanza dall'attentato, inalato come una barriera irta di diffidenze",
+      "replace": " soverchia distanza dall'attentato, inalzato come una barriera irta di diffidenze",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", scorgendo a terra un fazzoletto nero, -avvolgente qualcosa di voluminoso, l'ave",
+      "replace": ", scorgendo a terra un fazzoletto nero, avvolgente qualcosa di voluminoso, l'ave",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "tanza, esagerate dal suo stato d'animo, Io indusse a tentare un espediente che eq",
+      "replace": "tanza, esagerate dal suo stato d'animo, lo indusse a tentare un espediente che eq",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "i tasca e, furtivamente, la nascose sotta uno scaffale. Fu visto e la mossa incon",
+      "replace": "i tasca e, furtivamente, la nascose sotto uno scaffale. Fu visto e la mossa incon",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "alle guardie del sottobrigadiere Michat ehe, di piantone sui gradini del peristil",
+      "replace": "alle guardie del sottobrigadiere Michat che, di piantone sui gradini del peristil",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "sui gradini del peristilio, avendo visto', o meglio immaginandosi di aver visto, ",
+      "replace": "sui gradini del peristilio, avendo visto, o meglio immaginandosi di aver visto, ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "prova che si era, se non altro, trovato uetllte vicinanze dell'opera fel nitomien",
+      "replace": "prova che si era, se non altro, trovato netllte vicinanze dell'opera fel nitomien",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ova che si era, se non altro, trovato uetllte vicinanze dell'opera fel nitomiento",
+      "replace": "ova che si era, se non altro, trovato uellte vicinanze dell'opera fel nitomiento",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " che si era, se non altro, trovato uetllte vicinanze dell'opera fel nitomiento de",
+      "replace": " che si era, se non altro, trovato uetlle vicinanze dell'opera fel nitomiento de",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o, trovato uetllte vicinanze dell'opera fel nitomiento dell'attentato. E l'arrest",
+      "replace": "o, trovato uetllte vicinanze dell'opera nel nitomiento dell'attentato. E l'arrest",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "rovato uetllte vicinanze dell'opera fel nitomiento dell'attentato. E l'arresto del ",
+      "replace": "rovato uetllte vicinanze dell'opera fel momiento dell'attentato. E l'arresto del ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "o uetllte vicinanze dell'opera fel nitomiento dell'attentato. E l'arresto del cap",
+      "replace": "o uetllte vicinanze dell'opera fel nitomento dell'attentato. E l'arresto del cap",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "diniego? Il quale finisce per diventare su-ar e ridicolo di fronte alle prove ch",
+      "replace": "diniego? Il quale finisce per diventare assu-ar e ridicolo di fronte alle prove ch",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "niego? Il quale finisce per diventare su-ar e ridicolo di fronte alle prove che, t",
+      "replace": "niego? Il quale finisce per diventare sur e ridicolo di fronte alle prove che, t",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "go? Il quale finisce per diventare su-ar e ridicolo di fronte alle prove che, to",
+      "replace": "go? Il quale finisce per diventare su-ardo e ridicolo di fronte alle prove che, to",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " e ridicolo di fronte alle prove che, torto tardi, lo HolùacciBno. L'uomo i giunto &d accertare e quasi a emìnuzzare fatti che si Bvolsero stilla Terra prima ancora che egli vi facesse la sua comparsa; che nessun orecchio ha rilevato, che nessun occhio ha percepito, che nessuna creatura poteva denunciare. Figararsi se non dovrebbe giungere a ritessere la storia di avvenimenti eccezionali, di fresca data, svoltai sotto i mille e mille occhi di una società curiosa e ciarliera! La dura verita è questa: Guai all'indiziato che non sa rimanere uccel di bosco I\n\nVi fa nn uomo ohe rimase tale, benché il Uccio gli era si presso che, a quanti l 'osservavano ed avevano le cose conte, parve vi fosse incappato. La Polizia francese, scossa dall'inaspettata tragedia e dalla responsabilità inerente al fatto di non averla saputa prevenire, perfldo e ridicolo di fronte alle prove che, a tosto al tardi, lo schiacciano. L'uomo è g",
+      "replace": " e ridicolo di fronte alle prove che, tosto al tardi, lo schiacciano. L'uomo è g",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "icolo di fronte alle prove che, a tosto al tardi, lo schiacciano. L'uomo è giunto ",
+      "replace": "icolo di fronte alle prove che, a tosto o tardi, lo schiacciano. L'uomo è giunto ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ziato che non sa rimanere uccel di bosco Vi\n\nVi fu un uomo che rimase tale, benché ",
+      "replace": "ziato che non sa rimanere uccel di bosco!\n\nVi fu un uomo che rimase tale, benché ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": ", pronte a prorompere al minimo avvenime j to straordinario, anche impreveduto. Si ",
+      "replace": ", pronte a prorompere al minimo avvenimento straordinario, anche impreveduto. Si ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ltitudine parigina tanto facile ad innalar barricate; si temeva di qualche Reggi",
+      "replace": "ltitudine parigina tanto facile ad innalzar barricate; si temeva di qualche Reggi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "uesto pugnale è lo stesso che mi fu nascósto sotto la casacca dalla signora Olivi",
+      "replace": "uesto pugnale è lo stesso che mi fu nascosto sotto la casacca dalla signora Olivi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " tra il fondo e l'assicella dove l'avevo' nascita... Lama di Damasco... lama terr",
+      "replace": " tra il fondo e l'assicella dove l'avevo nascita... Lama di Damasco... lama terr",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "l fondo e l'assicella dove l'avevo' nascita... Lama di Damasco... lama terribile ",
+      "replace": "l fondo e l'assicella dove l'avevo' nascosta... Lama di Damasco... lama terribile ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "fondo e l'assicella dove l'avevo' nascita... Lama di Damasco... lama terribile Pa",
+      "replace": "fondo e l'assicella dove l'avevo' nascito... Lama di Damasco... lama terribile Pa",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ita... Lama di Damasco... lama terribile Pare\n\nPare che sulla faccia dello scrivente ",
+      "replace": "ita... Lama di Damasco... lama terribile!\n\nPare che sulla faccia dello scrivente ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e sulla faccia dello scrivente apparisse l'esaminò meraviglia, una tinta di leg-",
+      "replace": "e sulla faccia dello scrivente apparisse, l'esaminò meraviglia, una tinta di leg-",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " sulla faccia dello scrivente apparisse l'esaminò meraviglia, una tinta di leg-l",
+      "replace": " sulla faccia dello scrivente apparisse col'esaminò meraviglia, una tinta di leg-l",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "sulla faccia dello scrivente apparisse l'esaminò meraviglia, una tinta di leg-lama ",
+      "replace": "sulla faccia dello scrivente apparisse llaminò meraviglia, una tinta di leg-lama ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a faccia dello scrivente apparisse l'esaminò meraviglia, una tinta di leg-lama terri",
+      "replace": "a faccia dello scrivente apparisse l'esa meraviglia, una tinta di leg-lama terri",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "e l'esaminò meraviglia, una tinta di leg-lama terribile I\n\nPare che sulla faccia dello ecrìvente apparisse colla meravìglia, una tinta dì leggera ripugnaiuBa, perchè il conte sorris",
+      "replace": "e l'esaminò meraviglia, una tinta di leggera ripugnaiuBa, perchè il conte sorris",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "meravìglia, una tinta dì leggera ripugnaiuBa, perchè il conte sorrise amaramente e ",
+      "replace": "meravìglia, una tinta dì leggera ripugnanza, perchè il conte sorrise amaramente e ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "hè il conte sorrise amaramente e disse: ''Onesti i Governi e fortunati i Paesi dov",
+      "replace": "hè il conte sorrise amaramente e disse: \"Onesti i Governi e fortunati i Paesi dov",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "arono l'indipendenza alla Patria nostra.\n\nTacque per qualche secondo e la sua fi",
+      "replace": "arono l'indipendenza alla Patria nostra.\"\n\nTacque per qualche secondo e la sua fi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "are che prevenne il mio abboccamento coli 'Orsini alla stazione di Parigi; la rela",
+      "replace": "are che prevenne il mio abboccamento coll'Orsini alla stazione di Parigi; la rela",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " fantasia dei romanzieri.\n\nDimenticavo! Yì fu un'altra eauaa, secondaria forse, ma",
+      "replace": " fantasia dei romanzieri.\n\nDimenticavo! Vi fu un'altra eauaa, secondaria forse, ma",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "omanzieri.\n\nDimenticavo! Yì fu un'altra eauaa, secondaria forse, ma della quale b",
+      "replace": "omanzieri.\n\nDimenticavo! Yì fu un'altra cauaa, secondaria forse, ma della quale b",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "nzieri.\n\nDimenticavo! Yì fu un'altra eauaa, secondaria forse, ma della quale biso",
+      "replace": "nzieri.\n\nDimenticavo! Yì fu un'altra eausa, secondaria forse, ma della quale biso",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "fezione di Simon Bernard. Egli a Parigi mm venne. Mentre altri, per aver tentato d",
+      "replace": "fezione di Simon Bernard. Egli a Parigi non venne. Mentre altri, per aver tentato d",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "re altri, per aver tentato di giovare alU sua Francia, era sospinto a grandi pass",
+      "replace": "re altri, per aver tentato di giovare alla sua Francia, era sospinto a grandi pass",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "vetrina, stavano quattro persone di mia eonoscenza: La padrona dell'albergo '^Fra",
+      "replace": "vetrina, stavano quattro persone di mia conoscenza: La padrona dell'albergo '^Fra",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "mia eonoscenza: La padrona dell'albergo '^Franee et Champagne\"; il Maitre d'Hotel;",
+      "replace": "mia eonoscenza: La padrona dell'albergo \"Franee et Champagne\"; il Maitre d'Hotel;",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "noscenza: La padrona dell'albergo '^Franee et Champagne\"; il Maitre d'Hotel; mons",
+      "replace": "noscenza: La padrona dell'albergo '^France et Champagne\"; il Maitre d'Hotel; mons",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ella casa di Felice Orsini. Tutta gente ehianuu ta, senz 'alcun dubbio, per la mi",
+      "replace": "ella casa di Felice Orsini. Tutta gente chianuu ta, senz 'alcun dubbio, per la mi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " casa di Felice Orsini. Tutta gente ehianuu ta, senz 'alcun dubbio, per la mia ident",
+      "replace": " casa di Felice Orsini. Tutta gente ehiamata, senz 'alcun dubbio, per la mia ident",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "negato ogni conoscenza con Felice Orsini I coniugi Pipelet mi avrebbero smentito",
+      "replace": "negato ogni conoscenza con Felice Orsini: I coniugi Pipelet mi avrebbero smentito",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "egato ogni conoscenza con Felice Orsini I coniugi Pipelet mi avrebbero smentito..",
+      "replace": "egato ogni conoscenza con Felice Orsini i coniugi Pipelet mi avrebbero smentito..",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "entava insostenibile!\n\nMa il colpo più rade mi venne quando fui in presenza del g",
+      "replace": "entava insostenibile!\n\nMa il colpo più rude mi venne quando fui in presenza del g",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ermi gli procurasse un immenso piacere. ''Ah, ah! come sta, stamane, signor conte ",
+      "replace": "ermi gli procurasse un immenso piacere. \"Ah, ah! come sta, stamane, signor conte ",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "'Ah, ah! come sta, stamane, signor conte t Non più da l^lva, stamane; ma Carlo dei",
+      "replace": "'Ah, ah! come sta, stamane, signor conte? Non più da l^lva, stamane; ma Carlo dei",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "sta, stamane, signor conte t Non più da l^lva, stamane; ma Carlo dei conti di Budi",
+      "replace": "sta, stamane, signor conte t Non più da Sylva, stamane; ma Carlo dei conti di Budi",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "a l^lva, stamane; ma Carlo dei conti di Budio!\"\n\nNon restava più alcun dubbio: An",
+      "replace": "a l^lva, stamane; ma Carlo dei conti di Rudio!\"\n\nNon restava più alcun dubbio: An",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "nto il Pieri quanto l'Orsini, mi avevano gera ripugnanza, perchè il conte sorrise amaramente e disse:\" Onesti i Governi e fortunati i Paesi dove queste armi fanno orrore, o riescono semplice curiosità da Museo. Ma ai miei tempi e col Geverno austriaco era tutt 'altro affare. Nella sua lotta cogli oppressori, il Popolo non ha la scelta delle armi; esso si difende e offende, non come vorrebbe, ma come può. La colpa è di chi ve lo costringe. E del resto moto, forza, saggezza, morale... tutto è relativo. I chiodi conficcati nelle carni del Cristo erano infami. Ma nel 1853 i popolani milanesi, anelanti a libertà, accumularono per ferire, quelli delle loro barcaccia. Ogni ferro diventava santo nelle loro mani. Non sconfessiamo metodi tendenti con disperato probabilità, a che io avessi un disperato proposito. Essi formano parte della nostra gloria. Io sostengo che il pugnale ha spianato per due terzi la via alle guerre che fruttarono l'indipendenza alla Patria nostra.\"\n\nTacque buon viso a cattivo giuoco e risposi, non meno sorridendo: ''Carlo di Rodio, per qualche secondo e la sua fisionomia ridivenne calma. Poi riprese:\n\nEcco, percorsa a gradino a gradino, la scala conducente al baratro che doveva ingoiare e noi e ogni nostra speranza: La fanciullesca fiducia del Pieri nella Hartmann; la tempesta di mare che prevenne il mio abboccamento coli 'Orsini alla staziono di Parigi; la relazione annodata tra gli esecutori dell'attentato, contrariamente all'intesa; il mancato intervento del Pieri e la sua troppo facile loquel immediatamente dopo l'arresto; i nervi del Gomez. Aggiungasi (ne parlerò più tardi) il carattere di Felice Orsini poco o punto tagliato alla vita del cospiratore e la buona fede di una signorina inglese, cieca d'amore per lui. Se altre cause furono messe in campo, vennero inventate dalla malignità degli uomini o dalla fantasia dei romanzieri. sempre chiamato, in sua presenza, o Mor",
+      "replace": "nto il Pieri quanto l'Orsini, mi avevano sempre chiamato, in sua presenza, o Mor",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " verrete processato con loro!\n\nEd imparti l'ordine che mi conducessero a Mazas.!",
+      "replace": " verrete processato con loro!\n\nEd impartì l'ordine che mi conducessero a Mazas.!",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "ti l'ordine che mi conducessero a Mazas.!",
+      "replace": "ti l'ordine che mi conducessero a Mazas.",
+      "reason": "llm_correction",
+      "source": "llm"
     }
   ],
   "p2_ch14": [
@@ -20688,12 +22254,6 @@
       "source": "manual"
     },
     {
-      "find": "IL giorno seguente, alla Kioquette. Ci fec",
-      "replace": "Il giorno seguente, alla Kioquette. Ci fec",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
       "find": "IL giorno seguente, alla Kioquette. Ci fecero indossare il grigio u",
       "replace": "IL giorno seguente, alla Roquette. Ci fecero indossare il grigio u",
       "reason": "llm_correction",
@@ -20732,6 +22292,12 @@
     {
       "find": " Le mie guardie mi avevano seguito alla lioquette. Avrebbero dormito alternativame",
       "replace": " Le mie guardie mi avevano seguito alla Roquette. Avrebbero dormito alternativame",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "enzione alcuna di anticipare, suicidandosi, la mia fine.\n\nIl giorno stesso del no",
+      "replace": "enzione alcuna di anticipare, suicidandomi, la mia fine.\n\nIl giorno stesso del no",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -20934,6 +22500,12 @@
       "source": "llm"
     },
     {
+      "find": " pieno di melanconia. Paiiseggiava celeramenle ed io, allevato a disciplina milit",
+      "replace": " pieno di melanconia. Paiiseggiava celeremenle ed io, allevato a disciplina milit",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
       "find": "no di melanconia. Paiiseggiava celeramenle ed io, allevato a disciplina militare,",
       "replace": "no di melanconia. Paiiseggiava celeramente ed io, allevato a disciplina militare,",
       "reason": "llm_correction",
@@ -20970,14 +22542,14 @@
       "source": "llm"
     },
     {
-      "find": "visione d'altri mondi o, se rispondeva, te era\" parole tratte dal profondo, col c",
-      "replace": "visione d'altri mondi o, se rispondeva, le era\" parole tratte dal profondo, col c",
+      "find": "visione d'altri mondi o, se rispondeva, te era\" parole tratte dal profondo, col cav",
+      "replace": "visione d'altri mondi o, se rispondeva, era\" parole tratte dal profondo, col cav",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
       "find": "e d'altri mondi o, se rispondeva, te era\" parole tratte dal profondo, col cavatur",
-      "replace": "e d'altri mondi o, se rispondeva, te era parole tratte dal profondo, col cavatur",
+      "replace": "e d'altri mondi o, se rispondeva, te erano parole tratte dal profondo, col cavatur",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21012,8 +22584,8 @@
       "source": "llm"
     },
     {
-      "find": "ni. E' noto che nelle sue \"Memorie\" l'irawHido romagnolo tratteggiava il Mazzini come ",
-      "replace": "ni. E' noto che nelle sue \"Memorie\" l'irruente romagnolo tratteggiava il Mazzini come ",
+      "find": "i. E' noto che nelle sue \"Memorie\" l'irawHido romagnolo tratteggiava il Mazzini com",
+      "replace": "i. E' noto che nelle sue \"Memorie\" l'iracondo romagnolo tratteggiava il Mazzini com",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21084,20 +22656,26 @@
       "source": "llm"
     },
     {
-      "find": "o, calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl gior",
-      "replace": "o, calcoli bassi e venali,\n\nMa l'antico rantenso contro i| Maestro dilegua ìl gior",
+      "find": "o, calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl gio",
+      "replace": "o, calcoli bassi e venali,\n\nMa l'antico rintenso contro i| Maestro dilegua ìl gio",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": " calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno",
-      "replace": " calcoli bassi e venali,\n\nMa l'antico incorenso contro i| Maestro dilegua ìl giorno",
+      "find": ", calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl gior",
+      "replace": ", calcoli bassi e venali,\n\nMa l'antico isentenso contro i| Maestro dilegua ìl gior",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "alcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno che",
-      "replace": "alcoli bassi e venali,\n\nMa l'antico inte contro i| Maestro dilegua ìl giorno che",
+      "find": "calcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno",
+      "replace": "calcoli bassi e venali,\n\nMa l'antico intimenso contro i| Maestro dilegua ìl giorno",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": "lcoli bassi e venali,\n\nMa l'antico intenso contro i| Maestro dilegua ìl giorno ch",
+      "replace": "lcoli bassi e venali,\n\nMa l'antico intento contro i| Maestro dilegua ìl giorno ch",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21134,18 +22712,6 @@
     {
       "find": "ono l'Orsini della nobile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'atte",
       "replace": "ono l'Orsini della nobile diTesa di Ini fatta dal \"Profeta\" l'indo mani dell'atte",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "bile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'attentato, quando altri",
-      "replace": "bile diTesa di Ini l'atta dal \"Profeta\" il'indo mani dell'attentato, quando altri",
-      "reason": "llm_correction",
-      "source": "llm"
-    },
-    {
-      "find": "ile diTesa di Ini l'atta dal \"Profeta\" l'indo mani dell'attentato, quando altri pat",
-      "replace": "ile diTesa di Ini l'atta dal \"Profeta\" l do mani dell'attentato, quando altri pat",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21330,8 +22896,8 @@
       "source": "llm"
     },
     {
-      "find": " capelli n'erano rapidamente incanutiti più d 'una tenue fibra del suo cervello ",
-      "replace": " capelli n'erano rapidamente incanutiti e più d 'una tenue fibra del suo cervello ",
+      "find": "i capelli n'erano rapidamente incanutiti più d 'una tenue fibra del suo cervello",
+      "replace": "i capelli n'erano rapidamente incanutiti; più d 'una tenue fibra del suo cervello",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21426,14 +22992,14 @@
       "source": "llm"
     },
     {
-      "find": " rovina. innesta diffidenza era in me imuiprita da altre circostanze. A più ripres",
-      "replace": " rovina. innesta diffidenza era in me imprita da altre circostanze. A più ripres",
+      "find": "ua rovina. innesta diffidenza era in me imuiprita da altre circostanze. A più ri",
+      "replace": "ua rovina. innesta diffidenza era in me alimuiprita da altre circostanze. A più ri",
       "reason": "llm_correction",
       "source": "llm"
     },
     {
-      "find": "ina. innesta diffidenza era in me imuiprita da altre circostanze. A più riprese, ",
-      "replace": "ina. innesta diffidenza era in me imuiprontata da altre circostanze. A più riprese, ",
+      "find": " rovina. innesta diffidenza era in me imuiprita da altre circostanze. A più riprese, ",
+      "replace": " rovina. innesta diffidenza era in me imentata da altre circostanze. A più riprese, ",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21468,6 +23034,12 @@
       "source": "llm"
     },
     {
+      "find": "care, che so io forse se eran proprio contesti di carne e d'ossa coloro che avevano",
+      "replace": "care, che so io forse se eran proprio composti di carne e d'ossa coloro che avevano",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
       "find": "n mostra, come una belva in gabbia, pesala terribilmente.\n\nUn giorno mi trovai ne",
       "replace": "n mostra, come una belva in gabbia, pesava terribilmente.\n\nUn giorno mi trovai ne",
       "reason": "llm_correction",
@@ -21487,7 +23059,7 @@
     },
     {
       "find": " rammento bene se fos- He il generale Ma^an o il generale Roguel. Il Pietri me lo",
-      "replace": " rammento bene se fos- He il generale Macan o il generale Roguel. Il Pietri me lo",
+      "replace": " rammento bene se fos- He il generale Magan o il generale Roguel. Il Pietri me lo",
       "reason": "llm_correction",
       "source": "llm"
     },
@@ -21698,6 +23270,12 @@
     {
       "find": "iù tardi dalla bocca di Mathieu de la Dròme. L'opinione pubblica esercitava una f",
       "replace": "iù tardi dalla bocca di Mathieu de la Drôme. L'opinione pubblica esercitava una f",
+      "reason": "llm_correction",
+      "source": "llm"
+    },
+    {
+      "find": " non aveva la ragion di Stato dissimulate ben altre codardi?\n\nQuasi non bastasse,",
+      "replace": " non aveva la ragion di Stato dissimulato ben altre codardi?\n\nQuasi non bastasse,",
       "reason": "llm_correction",
       "source": "llm"
     },

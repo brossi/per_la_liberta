@@ -21,7 +21,7 @@
     {
       "name": "italian_char_coverage",
       "passed": true,
-      "foreign_char_ratio": 0.068,
+      "foreign_char_ratio": 0.067,
       "issues": []
     },
     {
@@ -33,8 +33,8 @@
       "name": "word_count_preservation",
       "passed": true,
       "reconciled_words": 136452,
-      "cleaned_words": 133462,
-      "retention_pct": 97.8,
+      "cleaned_words": 131887,
+      "retention_pct": 96.7,
       "issues": []
     }
   ]
