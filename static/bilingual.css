@@ -215,7 +215,7 @@ body {
 
 .spread p {
   margin: 0 0 0.8em;
-  text-align: justify;
+  text-align: left;
   text-indent: 1.5em;
   hyphens: none;
 }

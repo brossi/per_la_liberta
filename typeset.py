@@ -512,11 +512,10 @@ def generate_html(
                         f'<span class="revised" data-rev="{rev_id}">{escaped_new}</span>',
                         1,
                     )
-                    short_reason = reason[:150] + "..." if len(reason) > 150 else reason
                     para_marginalia.append(
                         f'<span class="marginalia" data-rev="{rev_id}">'
                         f'<span class="margin-old">{_escape_html(old_text)}</span>'
-                        f'<span class="margin-reason">{_escape_html(short_reason)}</span>'
+                        f'<span class="margin-reason">{_escape_html(reason)}</span>'
                         f'</span>'
                     )
 
@@ -848,6 +847,19 @@ def typeset(output_dir: Path, state_dir: Path | None = None, site_base: str | No
     scan_path = output_dir / "scan.html"
     _generate_scan_viewer(scan_path)
     print(f"  Scan viewer: {scan_path}")
+
+    # Sync to docs/ for GitHub Pages deployment
+    docs_dir = Path(__file__).parent / "docs"
+    if docs_dir.exists():
+        import shutil
+
+        # Copy HTML, fixing CSS path for docs/ structure
+        docs_html = (html_path.read_text(encoding="utf-8")
+                     .replace("../static/bilingual.css", "static/bilingual.css"))
+        (docs_dir / "index.html").write_text(docs_html, encoding="utf-8")
+        shutil.copy2(scan_path, docs_dir / "scan.html")
+        shutil.copy2(CSS_PATH, docs_dir / "static" / "bilingual.css")
+        print(f"  Synced to docs/")
 
     # PDF generation disabled — WeasyPrint requires DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
     # To re-enable, uncomment the block below.
