@@ -172,9 +172,21 @@ Four passages have garbled text from column-interleaving or paragraph alignment 
 4. Add a find/replace entry to `corrections.json` with reason `scan_verified:structural_reconstruction`
 5. Run `uv run python pipeline.py --step cleanup` to apply
 
-### Root cause: paragraph count mismatch in Copy 3
+### Root cause: Copy 3 role inversion in reconciliation
 
-The structural issues all stem from the same root cause: **Gemini OCR (Copy 3) produces far fewer paragraphs than the IA OCR copies (Copies 1/2)**, because Gemini doesn't insert blank lines at page boundaries.
+The structural issues stem from an architectural problem in `reconcile.py`: **Copy 3 (Gemini OCR) is treated as an equal third witness when it was designed to be an adjudicator** — a tiebreaker for word-level disagreements between Copies 1 and 2.
+
+#### The intended design (from OCR Strategy section above)
+- **Copies 1 & 2**: Two independent IA DJVU text extractions (different physical scans, likely different OCR engines) — the **primary witnesses** that define the text structure
+- **Copy 3**: Gemini Pro vision OCR on the LOC scan — a **quality adjudicator** to cast deciding votes when Copies 1 and 2 disagree on individual words
+
+#### What the code actually does (`align_paragraphs_3way`, lines 207-272)
+1. Uses Copy 1 as the paragraph **anchor** — aligns Copies 2 and 3 independently against Copy 1's paragraph structure
+2. Treats all three copies equally at word level — `reconcile_words_3way()` does majority voting with equal weight
+3. Appends **unmatched Copy 3 paragraphs as single-source additions** (lines 265-270) if they pass the dedup check — this is the core bug
+
+#### Why this breaks
+Gemini OCR doesn't insert blank lines at page boundaries, so it produces 5-16x fewer paragraphs than the IA copies:
 
 | Chapter | Copy 1 paras | Copy 2 paras | Copy 3 paras | Ratio |
 |---------|-------------|-------------|-------------|-------|
@@ -186,9 +198,25 @@ The structural issues all stem from the same root cause: **Gemini OCR (Copy 3) p
 | p2_ch13 | 65 | 61 | 8 | 8.1x |
 | p2_ch28 | 67 | 67 | 8 | 8.4x |
 
-When `align_paragraphs_3way()` tries to match 100 short paragraphs against 12 long ones, `SequenceMatcher` fails to align them — many short paragraphs go unmatched, and the long Copy 3 paragraphs that contain multiple short paragraphs' worth of content get included as "single-source" additions (or dropped entirely).
+When `SequenceMatcher` tries to align 100 short paragraphs against 12 giant ones:
+- Most Copy 1 paragraphs can't match anything in Copy 3 (200-char paragraphs don't match 5000-char ones)
+- Copy 3's unmatched giant paragraphs pass the dedup check and get **appended wholesale** — this was the source of duplicate content blocks
+- When a Copy 3 paragraph does match, word-level merge uses it with equal weight, potentially pulling in Gemini's different line-breaking choices over the two primary witnesses
+- Paragraph alignment failures cause content to be dropped or interleaved from wrong columns
 
-**Pipeline fix needed in `reconcile.py`:** Before 3-way alignment, detect when one copy has dramatically fewer paragraphs than the others (e.g. ratio > 3x). When this occurs, pre-split the long copy's paragraphs at points that align with paragraph breaks in the other copies. This is analogous to the existing `_split_merged_chapters()` function (which handles chapter-level merging) but applied at paragraph level within a chapter.
+#### Pipeline fix needed in `reconcile.py`
+
+**Change Copy 3's role from equal witness to word-level adjudicator:**
+
+1. **Paragraph structure must come from Copies 1 & 2 only.** Do 2-way paragraph alignment on Copies 1 and 2 (the existing `align_paragraphs()` function). Copy 3 should not contribute paragraphs or influence paragraph boundaries.
+
+2. **Copy 3 participates only at word level.** For each aligned paragraph pair from Copies 1 & 2, find the corresponding text in Copy 3 (by normalized substring matching against Copy 3's giant paragraphs) and use it as the third witness for `reconcile_words_3way()`.
+
+3. **Never append Copy 3 single-source paragraphs.** Lines 265-270 should be removed or guarded — Copy 3 content that doesn't match anything in Copies 1/2 should be discarded, not appended.
+
+4. **Handle the 2-copy case properly.** When Copies 1 and 2 both have a paragraph but Copy 3 has no matching text for it, fall back to 2-way word reconciliation (which already exists as `reconcile_words()`).
+
+This is a significant refactor of `align_paragraphs_3way()` and the per-chapter reconciliation loop. The existing `_is_near_duplicate()` improvements (rapidfuzz two-tier matching) should be retained as a safety net.
 
 ### Pipeline changes made during cleanup
 - `pipeline.py` loads `.env` via `python-dotenv` (added as dependency)
