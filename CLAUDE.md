@@ -146,15 +146,61 @@ static/
 - LLM cleanup (Sonnet 4.6) made 5,080 durable corrections across all 58 chapters (~3.8 corrections/1000 chars)
 - Corrections stored in `data/corrections.json` — persists across re-runs, no redundant API calls
 - One corrupted passage in p2_ch18 (pages 197-198) was fixed using page images sent to both Sonnet 4.6 and Gemini 3 Pro — both produced identical clean results
-- Flag reconciliation: 332 original flags → 85 remaining (mostly legitimate `lowercase_after_break` and hyphenated compounds/NER)
-- Remaining flags in `data/review_flags_remaining.json`; original pre-LLM flags preserved in `data/review_flags.json`
+- Review flags: 0 remaining (was 107 → fixed via dedup, paragraph joining, LLM+scan verification, and accepted tokens)
+- Accepted tokens stored in `corrections.json` with `find == replace` and reason `accepted:*`
 - Step 7 (translation) not yet run
 - Step 8 (typeset) generates HTML with Italian-only; English column pending translation
 - The PDF on disk is the LOC scan: `public-gdcmassbookdig-perlalibertdal00cres-perlalibertdal00cres.pdf` (82MB, gitignored)
 
+### Known structural issues requiring manual reconstruction
+
+Four passages have garbled text from column-interleaving or paragraph alignment failures during reconciliation. Each needs the source scan pages to reconstruct the correct text, then a find/replace entry in `corrections.json`.
+
+**After reconstructing these, investigate the root cause (below) and fix `reconcile.py` to prevent recurrence.**
+
+| Chapter | Token | Pages | Issue | Severity |
+|---------|-------|-------|-------|----------|
+| p1_ch13 | `rivo-scoli` | 69-72 | ~4,600 chars of narrative missing — alignment jumped from page 68 to page 73, dropping the Calvi/Locarno mission sequence | 18% of chapter missing |
+| p1_ch12 | `ave-SÌT` | 63-64 | Garbled sentence at page break, text from another passage merged in ("inseguito da una pattuglia" doesn't belong here) | ~1 sentence |
+| p2_ch13 | `su-ar` | ~175 | Garbled sentence with surrounding OCR noise (`HolùacciBno`, `&d`, `emìnuzzare`) | ~1 sentence |
+| p2_ch28 | `let-lungo` | ~242 | Garbled sentence with surrounding OCR noise (`•"ft""`, `T Bada`) | ~1 sentence |
+
+**Reconstruction workflow:**
+1. Read the source scan page images (`assets/page_images/page_NNNN.png`) for the affected pages
+2. Read copy3_raw.txt for the same pages (use `copy3_flash_page_map.json` to find character offsets)
+3. Reconstruct the correct text from the scans
+4. Add a find/replace entry to `corrections.json` with reason `scan_verified:structural_reconstruction`
+5. Run `uv run python pipeline.py --step cleanup` to apply
+
+### Root cause: paragraph count mismatch in Copy 3
+
+The structural issues all stem from the same root cause: **Gemini OCR (Copy 3) produces far fewer paragraphs than the IA OCR copies (Copies 1/2)**, because Gemini doesn't insert blank lines at page boundaries.
+
+| Chapter | Copy 1 paras | Copy 2 paras | Copy 3 paras | Ratio |
+|---------|-------------|-------------|-------------|-------|
+| p1_ch08 | 74 | 61 | 14 | 5.3x |
+| p1_ch09 | 74 | 146 | 9 | 16.2x |
+| p1_ch10 | 108 | N/A | 10 | 10.8x |
+| p1_ch12 | 60 | 54 | 5 | 12.0x |
+| p1_ch13 | 106 | 90 | 12 | 8.8x |
+| p2_ch13 | 65 | 61 | 8 | 8.1x |
+| p2_ch28 | 67 | 67 | 8 | 8.4x |
+
+When `align_paragraphs_3way()` tries to match 100 short paragraphs against 12 long ones, `SequenceMatcher` fails to align them — many short paragraphs go unmatched, and the long Copy 3 paragraphs that contain multiple short paragraphs' worth of content get included as "single-source" additions (or dropped entirely).
+
+**Pipeline fix needed in `reconcile.py`:** Before 3-way alignment, detect when one copy has dramatically fewer paragraphs than the others (e.g. ratio > 3x). When this occurs, pre-split the long copy's paragraphs at points that align with paragraph breaks in the other copies. This is analogous to the existing `_split_merged_chapters()` function (which handles chapter-level merging) but applied at paragraph level within a chapter.
+
 ### Pipeline changes made during cleanup
 - `pipeline.py` loads `.env` via `python-dotenv` (added as dependency)
-- `--chapter` flag added: run LLM cleanup on a single chapter (e.g. `--chapter p2_ch21`) — others use cached corrections
+- `--chapter` flag: run reconcile/cleanup on specific chapters, comma-separated (e.g. `--chapter p1_ch01,p1_ch02`)
+- Reconcile: per-chapter progress logging, incremental saves to `reconciled_chapters.json`
+- Reconcile: `_is_near_duplicate()` uses rapidfuzz two-tier matching (individual + concatenated window) instead of difflib
+- Cleanup: `join_broken_paragraphs()` joins paragraphs split at OCR page boundaries (lowercase continuation heuristic)
+- Cleanup: `is_noise_line()` strengthened with mixed-alphanumeric and special-character-density checks
+- Cleanup: auto-fixes OCR asterisks, missing spaces after punctuation
+- Cleanup: `llm_fix_flagged_tokens()` for targeted LLM review with optional dual-model verification (Claude + Gemini)
+- Cleanup: stale flag filter removes flags whose token no longer exists in cleaned text
+- Cleanup: accepted tokens in `corrections.json` (find == replace) suppress flags across re-runs
 - Cleanup skips LLM API calls for chapters that already have durable corrections in `corrections.json`
 - Flag reconciliation runs automatically after `--llm-cleanup`, writes `review_flags_remaining.json`
 - API client timeout increased to 600s (from 300s) for large chapters
