@@ -917,6 +917,10 @@ def apply_corrections(
             remaining.append(flag)
         review_flags = remaining
 
+    # Remove stale flags whose token no longer exists in the text
+    # (fixed by a prior run's corrections baked into reconciled data)
+    review_flags = [f for f in review_flags if f.get("token", "") in text]
+
     return text, review_flags, applied
 
 

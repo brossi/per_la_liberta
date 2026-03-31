@@ -1231,6 +1231,11 @@
       "find": "Lombardo-Veneto",
       "replace": "Lombardo-Veneto",
       "reason": "accepted"
+    },
+    {
+      "find": "ba-roso",
+      "replace": "ba-roso",
+      "reason": "accepted:needs_scan"
     }
   ],
   "p1_ch03": [
@@ -2075,6 +2080,11 @@
       "replace": "senso d'amarezza che ne provai; ma finì per consolarmi l'idea c",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "irapre-veduto",
+      "replace": "irapre-veduto",
+      "reason": "accepted:already_fixed"
     }
   ],
   "p1_ch05": [
@@ -2961,6 +2971,16 @@
       "find": "dove-gerlo",
       "replace": "doverlo",
       "reason": "manual_context_fix"
+    },
+    {
+      "find": "dedican-Ordine",
+      "replace": "dedican-Ordine",
+      "reason": "accepted:needs_scan"
+    },
+    {
+      "find": "allo-doli",
+      "replace": "allo-doli",
+      "reason": "accepted:needs_scan"
     }
   ],
   "p1_ch08": [
@@ -3496,6 +3516,16 @@
       "find": "Nazio-naie",
       "replace": "Nazionale",
       "reason": "llm_flag_fix:unresolved"
+    },
+    {
+      "find": "or-naie",
+      "replace": "or-naie",
+      "reason": "accepted:needs_scan"
+    },
+    {
+      "find": "accapar-ne",
+      "replace": "accapar-ne",
+      "reason": "accepted:already_fixed"
     }
   ],
   "p1_ch09": [
@@ -4230,6 +4260,16 @@
       "replace": "bili sono accatastati nella via; si leva il selciato, si lavora",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "atterrandolo",
+      "replace": "afferrandolo",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "peno-sicuro",
+      "replace": "peno-sicuro",
+      "reason": "accepted:needs_scan"
     }
   ],
   "p1_ch10": [
@@ -4568,6 +4608,21 @@
       "replace": "mente, tutti, tutti i miei conservi. Rhinnovai l'ispirato giuramento di Giuseppe ",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "af-ìTEXEZL",
+      "replace": "afferrato",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "dispo-ca",
+      "replace": "dispotismo",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "parsi-orticello",
+      "replace": "parsi-orticello",
+      "reason": "accepted:needs_scan"
     }
   ],
   "p1_ch11": [
@@ -5663,6 +5718,16 @@
       "replace": "osciuto, qualche contrabbandiere, o qualche \"testa calda\", inseguito da una pattuglia, si era gettato dal parapetto. Lo avevano colpito al volo con una schioppettata nella schiena ed ora si industriavano di pescarlo.\n\nGirai al largo e trovato, collo spacciarmi per disertore, il modo di farmi traghettare, giungevo sul far della mezzanotte a Stradella. Casa Winkler era tuttora illuminata. Vi entrai e mi trovai d'innanzi un gruppo di patrioti che mi accolsero come se piovessi dalle nuvole. Un messaggio segreto, giunto da Pavia, aveva recato la nuova che ero stato scoperto, inseguito, mortalmente ferito mentre cercavo scampo saltando nel Ticino. Fortunato Calvi già n'era telegraficamente informato.\n\nRipartii immediatamente e trovai il Calvi ancora a letto. Non appena si rimise dalla sorpresa, il suo primo pensiero fu per don Bastiano Barozzi, a cui aveva già dato appuntamento, per le nove, al caffé del Pantheon. Il buon prete vi entrò pallido e quasi stravolto. La sua miopia gli impedì di scorgermi e il Calvi gli mosse incontro. Vedendolo esclamò: \"Ah quale sciagura! Che dirà il mio benefattore quando saprà che l'ho ricompensato spingendo suo figlio alla perdizione?\"\n\n— E che diresti tu, se Carlo entrasse qui dentro, sano e sorridente?\n\nLa faccia del Barozzi ebbe moti convulsi. Ad un tratto, il groppo che lo strozzava si sciolse ed egli diede in uno scoppio di pianto.\n\nAllora l'ateo saltò al collo del sacerdote. Il che tende a dimostrare che l'ipotesi di Dio non è necessaria agli uomini per amarsi fraternamente!",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "ave-SÌT",
+      "replace": "ave-SÌT",
+      "reason": "accepted:needs_scan"
+    },
+    {
+      "find": "qual-Ripartii",
+      "replace": "qual-Ripartii",
+      "reason": "accepted:already_fixed"
     }
   ],
   "p1_ch13": [
@@ -6541,6 +6606,11 @@
       "replace": "chetto inerme, i capi della guarnigione.",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "rivo-scoli",
+      "replace": "rivo-scoli",
+      "reason": "accepted:needs_scan"
     }
   ],
   "p1_ch14": [
@@ -7048,6 +7118,16 @@
       "replace": "lar del sole, rivedevo Giuseppe Mazzini.",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "mera-mmmm 70:£E: vigliando",
+      "replace": "meravigliando",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "mera-mmmm",
+      "replace": "mera-mmmm",
+      "reason": "accepted:already_fixed"
     }
   ],
   "p1_ch16": [
@@ -7356,6 +7436,11 @@
       "replace": "Mazzini:\" Sconsigliare il moto; ma aiutarlo strenuamente quando",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "Oa-rolamo",
+      "replace": "Girolamo",
+      "reason": "manual_context_fix"
     }
   ],
   "p1_ch17": [
@@ -13678,6 +13763,11 @@
       "replace": "vevano più e più sempre ringagliardirla!",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "guar-Wl",
+      "replace": "guardò. Ella",
+      "reason": "manual_context_fix"
     }
   ],
   "p2_ch04": [
@@ -14799,6 +14889,11 @@
       "replace": "ll'imbarco. Si cenò in silenzio; la piena degli affetti scambiav",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "osser-vanni",
+      "replace": "osservarmi",
+      "reason": "manual_context_fix"
     }
   ],
   "p2_ch07": [
@@ -17186,6 +17281,11 @@
       "replace": "no fuori di Parigi e Parigi è vasta... né vi manco d'amici e di nascondigli... Er",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "scón-eva",
+      "replace": "scón-eva",
+      "reason": "accepted:already_fixed"
     }
   ],
   "p2_ch13": [
@@ -17997,6 +18097,16 @@
       "find": "Saxe-Coburg",
       "replace": "Saxe-Coburg",
       "reason": "accepted"
+    },
+    {
+      "find": "attenta-Io",
+      "replace": "attentato. Io",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "su-ar",
+      "replace": "su-ar",
+      "reason": "accepted:needs_scan"
     }
   ],
   "p2_ch14": [
@@ -24479,6 +24589,16 @@
       "find": "franco-piemontese",
       "replace": "franco-piemontese",
       "reason": "accepted"
+    },
+    {
+      "find": "-Il IIA-II- -d",
+      "replace": "-Il suo- d",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "IIA-II",
+      "replace": "IIA-II",
+      "reason": "accepted:already_fixed"
     }
   ],
   "p2_ch26": [
@@ -25690,6 +25810,11 @@
       "find": "lagri-mando",
       "replace": "lagrimando",
       "reason": "llm_flag_fix:unresolved"
+    },
+    {
+      "find": "let-lungo",
+      "replace": "let-lungo",
+      "reason": "accepted:needs_scan"
     }
   ],
   "p2_ch29": [
