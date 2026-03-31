@@ -43,7 +43,7 @@ def main():
     )
     parser.add_argument(
         "--chapter",
-        help="Run LLM cleanup on a single chapter only (e.g. p2_ch21)",
+        help="Run reconcile/cleanup on specific chapters, comma-separated (e.g. p1_ch01,p1_ch02)",
     )
     parser.add_argument(
         "--skip-ocr",
@@ -107,7 +107,8 @@ def main():
         print("Step 3: Reconciling OCR copies...")
         from reconcile import reconcile
 
-        reconcile(DATA_DIR)
+        ch_list = [c.strip() for c in args.chapter.split(",")] if args.chapter else None
+        reconcile(DATA_DIR, chapters=ch_list)
         print()
 
     if args.step in ("triage", "all"):

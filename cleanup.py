@@ -250,6 +250,19 @@ def is_noise_line(line: str) -> bool:
     # Fascicle/dispensa markers: "Disp. I", "Diip. 3", etc.
     if re.match(r"^Di[si]p\.?\s+[IVX0-9]+$", stripped, re.IGNORECASE):
         return True
+    # Short mixed alphanumeric fragments with digits but no real words
+    # (e.g. "3HE I98fflE;", "fi 27 n.", "3ìf 260 w:")
+    if len(stripped) < 30 and any(c.isdigit() for c in stripped):
+        words = stripped.split()
+        real_words = [w for w in words if re.match(r"^[a-zA-ZÀ-ÿ]{4,}$", w)]
+        if not real_words:
+            return True
+    # Short lines with high special-character density
+    # (e.g. "3? fi-\"k5P.,", "%^ >o 3DC.")
+    if 3 < len(stripped) < 20:
+        special = sum(1 for c in stripped if not c.isalnum() and not c.isspace())
+        if special / len(stripped) > 0.4:
+            return True
     return False
 
 
@@ -434,6 +447,49 @@ def apply_dictionary_correction(text: str) -> str:
     return "\n".join(result_lines)
 
 
+def join_broken_paragraphs(text: str) -> str:
+    """Join paragraphs that were falsely split at OCR page boundaries.
+
+    Heuristic: real Italian paragraphs never start with a lowercase letter.
+    If a paragraph starts lowercase, it's a continuation of the previous one.
+    Also joins when the previous paragraph ends with a hyphen (broken word).
+    """
+    paragraphs = text.split("\n\n")
+    if len(paragraphs) <= 1:
+        return text
+
+    result = [paragraphs[0]]
+    for i in range(1, len(paragraphs)):
+        prev = result[-1].rstrip()
+        curr = paragraphs[i]
+        curr_stripped = curr.lstrip()
+
+        if not curr_stripped:
+            result.append(curr)
+            continue
+
+        first_char = curr_stripped[0]
+        should_join = False
+
+        # Case 1: previous ends with hyphen — broken word across page boundary
+        if prev.endswith("-"):
+            should_join = True
+        # Case 2: current starts lowercase — continuation of previous sentence
+        elif first_char.islower() or first_char in "àèéìòù":
+            should_join = True
+
+        if should_join:
+            if prev.endswith("-"):
+                # Join hyphenated word (dehyphenation will handle later)
+                result[-1] = prev + curr_stripped
+            else:
+                result[-1] = prev + " " + curr_stripped
+        else:
+            result.append(curr)
+
+    return "\n\n".join(result)
+
+
 def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[dict], int]:
     """Apply OCR cleanup: noise removal, pre-filters, dehyphenation, dictionary correction.
 
@@ -441,13 +497,19 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
     lists tokens needing LLM review (unresolved hyphens, stray symbols)
     and punct_fixes is the number of punctuation normalizations applied.
     """
-    # Remove noise lines
+    # Remove noise lines (page numbers, OCR artifacts, separator patterns)
     lines = text.split("\n")
     cleaned_lines = []
     for line in lines:
         if not is_noise_line(line):
             cleaned_lines.append(line)
     text = "\n".join(cleaned_lines)
+
+    # Collapse multiple blank lines (noise removal may leave gaps)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+
+    # Join paragraphs falsely split at OCR page boundaries
+    text = join_broken_paragraphs(text)
 
     # Apply high-confidence regex pre-filters (più garbles, 5AN, etc.)
     text = apply_pre_filters(text)
@@ -468,16 +530,27 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
     text = re.sub(r"\s*[dD]?[EeIi]{1,3}\s+o?\s*[35][EI]\s*", " ", text)
     text = re.sub(r"\s*[35][EI]\d+[a-z]*[EI]\s+\d+\s+[35][EI]:?\s*", " ", text)
 
+    # Fix OCR asterisks: * replacing lost characters between word fragments
+    # e.g. "Liber* tà" → "Libertà", "complot* tato" → "complottato"
+    text = re.sub(r"(\w)\*\s+(\w)", r"\1\2", text)
+    # e.g. "scindei*si" → "scindesi" (no space variant)
+    text = re.sub(r"(\w)\*(\w)", r"\1\2", text)
+    # '* or "* replacing a quote mark: e.g. '*Mano → "Mano
+    text = re.sub(r"'\*\s*", '"', text)
+    text = re.sub(r'"\s*\*\s*', '"', text)
+    # Standalone * between words (lost text): e.g. "delle * delle" → "delle delle"
+    text = re.sub(r"\s\*\s", " ", text)
+
     # Fix spacing around punctuation
     text = re.sub(r"\s+([.,;:!?])", r"\1", text)
     text = re.sub(r"\.{4,}", "...", text)  # Normalize ellipsis
 
-    # Collapse multiple blank lines
+    # Collapse multiple blank lines again (inline noise removal may leave gaps)
     text = re.sub(r"\n{3,}", "\n\n", text)
 
-    # Flag stray OCR noise symbols between words (e.g. * ^ replacing lost text)
-    # for LLM review — these can't be fixed by regex since the original text is unknown.
-    _STRAY_SYMBOL_RE = re.compile(r"(?<=\w) ([*^]) (?=\w)")
+    # Flag stray OCR noise symbols between words (^ replacing lost text)
+    # for LLM review. Asterisks are handled above; carets may remain.
+    _STRAY_SYMBOL_RE = re.compile(r"(?<=\w) ([\^]) (?=\w)")
     for m in _STRAY_SYMBOL_RE.finditer(text):
         ctx_start = max(0, m.start() - 30)
         ctx_end = min(len(text), m.end() + 30)
@@ -530,21 +603,9 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
                     found = True
                 pos = idx + 1
 
-    # Flag missing space after punctuation (e.g. "Trattati,ogni") — likely
-    # OCR-collapsed spacing or apostrophe ambiguity. Too risky to auto-fix
-    # since some may be legitimate elisions or abbreviations.
-    _MISSING_SPACE_RE = re.compile(r"[a-zA-ZÀ-ÿ]([,;:])([a-zA-ZÀ-ÿ])")
-    for m in _MISSING_SPACE_RE.finditer(text):
-        ctx_start = max(0, m.start() - 30)
-        ctx_end = min(len(text), m.end() + 30)
-        review_flags.append({
-            "token": m.group(0),
-            "left": m.group(0)[0],
-            "right": m.group(2),
-            "offset": m.start(),
-            "reason": "missing_space",
-            "context": text[ctx_start:ctx_end],
-        })
+    # Fix missing space after punctuation (e.g. "Trattati,ogni" → "Trattati, ogni")
+    # OCR-collapsed spacing — in this text, letter+punct+letter always needs a space.
+    text = re.sub(r"([a-zA-ZÀ-ÿ][,;:])([a-zA-ZÀ-ÿ])", r"\1 \2", text)
 
     # Flag paragraph-initial lowercase — unlikely to be intentional in this text,
     # typically a broken sentence at a page boundary or OCR noise.
@@ -631,6 +692,185 @@ def llm_correct_italian(
         "", result, count=1, flags=re.IGNORECASE,
     )
     return result
+
+
+_FLAG_REVIEW_SYSTEM = (
+    "You are an expert in 19th/early 20th century Italian literature and OCR correction. "
+    "You are reviewing flagged tokens from a digitized 1913 Italian book titled "
+    "'Per la libertà!' by Cesare Crespi.\n\n"
+    "For each flagged token, respond with ONE of:\n"
+    "- FIX: original → corrected (when you can determine the right text)\n"
+    "- KEEP: original (when the token is correct as-is, e.g. a real hyphenated compound or proper name)\n"
+    "- UNCLEAR: original (when there isn't enough context to determine the fix)\n\n"
+    "Respond with one line per token, in the same order as the input. No other commentary."
+)
+
+
+def _build_flag_entries(
+    flags_by_chapter: dict[str, list[dict]],
+    cleaned_texts: dict[str, str],
+) -> tuple[str, list[tuple[str, dict]]]:
+    """Build prompt entries and flat flag list from flags_by_chapter."""
+    token_entries = []
+    flat_flags = []
+    for ch_id, ch_flags in flags_by_chapter.items():
+        text = cleaned_texts.get(ch_id, "")
+        for flag in ch_flags:
+            token = flag.get("token", "")
+            reason = flag.get("reason", "")
+            ctx = flag.get("context", "")
+            if not ctx and token in text:
+                idx = text.find(token)
+                start = max(0, idx - 60)
+                end = min(len(text), idx + len(token) + 60)
+                ctx = text[start:end]
+            token_entries.append(
+                f"[{ch_id}] ({reason}) \"{token}\" in: ...{ctx}..."
+            )
+            flat_flags.append((ch_id, flag))
+    return "\n".join(token_entries), flat_flags
+
+
+def _parse_flag_responses(result_text: str) -> dict[str, str]:
+    """Parse LLM response lines into {original_token: corrected} map.
+
+    Extracts the original token from the FIX line itself (before the →)
+    rather than relying on positional alignment with the input.
+    """
+    fixes: dict[str, str] = {}
+    lines = [l.strip() for l in result_text.strip().split("\n") if l.strip()]
+    for line in lines:
+        if line.startswith("FIX:"):
+            parts = line[4:].split("→")
+            if len(parts) == 2:
+                original = parts[0].strip().strip('"')
+                corrected = parts[1].strip().strip('"')
+                if original and corrected and original != corrected:
+                    fixes[original] = corrected
+    return fixes
+
+
+def _call_claude_flags(entries_text: str, api_key: str) -> str:
+    """Send flag review prompt to Claude Sonnet."""
+    import anthropic
+
+    from utils import retry_api_call
+
+    client = anthropic.Anthropic(api_key=api_key, timeout=120.0)
+
+    def _call():
+        return client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=4096,
+            system=_FLAG_REVIEW_SYSTEM,
+            messages=[{"role": "user", "content": (
+                "Review these flagged OCR tokens and provide corrections:\n\n"
+                + entries_text
+            )}],
+        )
+
+    print("  Claude reviewing...", end="", flush=True)
+    response = retry_api_call(_call)
+    print(f" done ({response.usage.input_tokens} in, {response.usage.output_tokens} out)")
+    return response.content[0].text
+
+
+def _call_gemini_flags(entries_text: str, api_key: str | None = None) -> str:
+    """Send flag review prompt to Gemini Pro."""
+    import os
+
+    from google import genai
+    from utils import retry_api_call
+
+    if not api_key:
+        api_key = os.environ.get("GEMINI_API_KEY")
+    client = genai.Client(api_key=api_key)
+
+    def _call():
+        return client.models.generate_content(
+            model="gemini-2.5-pro",
+            contents=(
+                _FLAG_REVIEW_SYSTEM + "\n\n"
+                "Review these flagged OCR tokens and provide corrections:\n\n"
+                + entries_text
+            ),
+        )
+
+    print("  Gemini reviewing...", end="", flush=True)
+    response = retry_api_call(_call)
+    print(" done")
+    return response.text
+
+
+def llm_fix_flagged_tokens(
+    flags_by_chapter: dict[str, list[dict]],
+    cleaned_texts: dict[str, str],
+    api_key: str | None = None,
+    verify: bool = False,
+) -> dict[str, list[dict]]:
+    """Fix flagged tokens using Claude, optionally verified by Gemini.
+
+    When verify=True, runs both Claude and Gemini and only keeps fixes
+    where both models agree on the correction.
+
+    Returns corrections dict: {chapter_id: [{find, replace, reason}, ...]}.
+    """
+    entries_text, flat_flags = _build_flag_entries(flags_by_chapter, cleaned_texts)
+    if not flat_flags:
+        return {}
+
+    print(f"  {len(flat_flags)} flagged tokens to review")
+
+    # Get Claude's fixes
+    claude_text = _call_claude_flags(entries_text, api_key)
+    claude_fixes = _parse_flag_responses(claude_text)
+    print(f"  Claude: {len(claude_fixes)} fixes proposed")
+
+    if verify:
+        # Get Gemini's fixes
+        gemini_text = _call_gemini_flags(entries_text)
+        gemini_fixes = _parse_flag_responses(gemini_text)
+        print(f"  Gemini: {len(gemini_fixes)} fixes proposed")
+
+        # Only keep fixes where both agree
+        agreed = {}
+        disagreed = []
+        for token, claude_fix in claude_fixes.items():
+            gemini_fix = gemini_fixes.get(token)
+            if gemini_fix and gemini_fix == claude_fix:
+                agreed[token] = claude_fix
+            else:
+                disagreed.append((token, claude_fix, gemini_fix))
+
+        # Also check Gemini-only fixes
+        for token, gemini_fix in gemini_fixes.items():
+            if token not in claude_fixes:
+                disagreed.append((token, None, gemini_fix))
+
+        print(f"  Agreed: {len(agreed)}, Disagreed: {len(disagreed)}")
+        if disagreed:
+            print("  Disagreements:")
+            for token, cf, gf in disagreed:
+                print(f"    {token}: Claude={cf}, Gemini={gf}")
+
+        final_fixes = agreed
+    else:
+        final_fixes = claude_fixes
+
+    # Build corrections dict keyed by chapter
+    corrections: dict[str, list[dict]] = {}
+    for ch_id, flag in flat_flags:
+        token = flag.get("token", "")
+        if token in final_fixes:
+            corrections.setdefault(ch_id, []).append({
+                "find": token,
+                "replace": final_fixes[token],
+                "reason": f"llm_flag_fix:{flag.get('reason', '')}",
+            })
+
+    total = sum(len(v) for v in corrections.values())
+    print(f"  Final: {total} corrections to apply")
+    return corrections
 
 
 def apply_corrections(

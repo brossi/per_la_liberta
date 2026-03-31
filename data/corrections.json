@@ -1221,6 +1221,16 @@
       "replace": "tesso, un comitato di cittadini, preceduto da bandiera bianca, v",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "Mastai-Ferretti",
+      "replace": "Mastai-Ferretti",
+      "reason": "accepted"
+    },
+    {
+      "find": "Lombardo-Veneto",
+      "replace": "Lombardo-Veneto",
+      "reason": "accepted"
     }
   ],
   "p1_ch03": [
@@ -2259,6 +2269,11 @@
       "replace": "il colpo di mano di Strasburgo, che fallì",
       "reason": "ocr_dehyphenation",
       "source": "manual"
+    },
+    {
+      "find": "Strasbiu-go",
+      "replace": "Strasburgo",
+      "reason": "llm_flag_fix:unresolved"
     }
   ],
   "p1_ch06": [
@@ -2941,6 +2956,11 @@
       "replace": "a, dalla grande e generosa madre latina!",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "dove-gerlo",
+      "replace": "doverlo",
+      "reason": "manual_context_fix"
     }
   ],
   "p1_ch08": [
@@ -3471,6 +3491,11 @@
       "replace": "titudine e, atteggiandosi a suo campione, accaparrarsene, in pari tempo, la neutr",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "Nazio-naie",
+      "replace": "Nazionale",
+      "reason": "llm_flag_fix:unresolved"
     }
   ],
   "p1_ch09": [
@@ -4995,6 +5020,11 @@
       "replace": "po e far meglio e vincere ad ogni costo.",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "Lombardo-Veneto",
+      "replace": "Lombardo-Veneto",
+      "reason": "accepted"
     }
   ],
   "p1_ch12": [
@@ -6621,6 +6651,11 @@
       "replace": "za una punta d'ironia... Poi me ne andai.",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "austro-ungariche",
+      "replace": "austro-ungariche",
+      "reason": "accepted"
     }
   ],
   "p1_ch15": [
@@ -9557,6 +9592,11 @@
       "replace": "ce innanzi a braccia tese... nida madre!",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "soc-ehiusi",
+      "replace": "socchiusi",
+      "reason": "llm_flag_fix:unresolved"
     }
   ],
   "p1_ch19": [
@@ -11111,6 +11151,11 @@
       "replace": "e il compenso di una gentilezza; la donna a ritrarsi, con mosse",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "solita-si",
+      "replace": "solitario",
+      "reason": "manual_context_fix"
     }
   ],
   "p1_ch22": [
@@ -11575,6 +11620,11 @@
       "replace": "vano la redenzione della Patria; ma in nessuna, come a Mantova,",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "Hti-viere",
+      "replace": "Stiviere",
+      "reason": "manual_context_fix"
     }
   ],
   "p1_ch23": [
@@ -12075,6 +12125,16 @@
       "replace": "i del sangue, l'animo rivoltato e preferì l'essere sottoposto ad un Consiglio di ",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "dice-appunto",
+      "replace": "dice appunto",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "franco-prussiana",
+      "replace": "franco-prussiana",
+      "reason": "accepted"
     }
   ],
   "p1_ch24": [
@@ -13009,6 +13069,11 @@
       "replace": "no cospicue per la loro assenza; quelle\" Situation wanted\" si mi",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "Recitia-IFmF",
+      "replace": "Recitiamo",
+      "reason": "manual_context_fix"
     }
   ],
   "p2_ch02": [
@@ -14427,6 +14492,11 @@
       "replace": "pondere: \"Sta bene. Non parliamone più!\"",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "Corna-tato",
+      "replace": "Comitato",
+      "reason": "manual_context_fix"
     }
   ],
   "p2_ch06": [
@@ -15687,6 +15757,11 @@
       "replace": " tavolo parecchie parte, poi proruppe: \"È troppo tardi, è troppo tardi! E, d'altr",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "semi-volontaria",
+      "replace": "semi-volontaria",
+      "reason": "accepted"
     }
   ],
   "p2_ch09": [
@@ -17917,6 +17992,11 @@
       "replace": "era a letto, col capo fasciato; prova che si era, se non altro,",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "Saxe-Coburg",
+      "replace": "Saxe-Coburg",
+      "reason": "accepted"
     }
   ],
   "p2_ch14": [
@@ -18789,6 +18869,11 @@
       "replace": "nendomi appresso, pareva m'inseguissero!",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "Hott",
+      "replace": "sott'",
+      "reason": "manual_context_fix"
     }
   ],
   "p2_ch15": [
@@ -20385,6 +20470,21 @@
       "replace": "non vollero piegarsi, non basta; bisogna esporle sanguinolenti a",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "meraA-iglia",
+      "replace": "meraviglia",
+      "reason": "llm_flag_fix:unresolved"
+    },
+    {
+      "find": "accor-Non",
+      "replace": "accorgermi. Non",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "Est-Ange",
+      "replace": "Est-Ange",
+      "reason": "accepted"
     }
   ],
   "p2_ch18": [
@@ -21083,6 +21183,16 @@
       "replace": "della vita, avrebbe potuto rassegnarsi al silenzio, ora che forti emozioni lo esaltavano?\n\nParlava e discuteva di tutto ostinatamente.... talora anche con vena comica abbondante, specie se gli capitava di confutare gli sproloqui dei nostri Giudici. Ma gira e rigira, ritornava di preferenza sulle sue idee politiche e filosofiche; come se una voragine lo trascinasse inesorabilmente nel cannoncino di quell'imbuto.\n\nStrano contrasto col contegno del nostro capo, dalla cui cella non usciva, per ore ed ore, il minimo indizio di vita; tanto che parecchie volte mi ero domandato se essa non fosse la tomba di Felice Orsini e se Felice Orsini non fosse diventato la tomba dell'anima sua..............\n\nUn'ora al giorno, ci era concesso di passeggiare nel gran cortile; ma non contemporaneamente. Il Pieri era tratto alla sua boccata d'aria, solo; al suo ritorno, io e l'Orsini uscivamo assieme. Portavamo la nostra camicia di forza anche passeggiando ed eravamo guardati, più che a vista, a punta di moschetto.\n\nIn quella breve ora, l'Orsini allargava i polmoni come uomo che rinasca; ma lo sguardo che rivolgeva all'azzurro era pieno di melanconia. Passeggiava celeramente ed io, allevato a disciplina militare, lo seguivo, istintivamente un po' in disparte. Avveniva questo: Se io ero di malumore e non parlavo, egli rivolgeva il capo e mi interrogava collo sguardo quasi dicesse: \"Tempesta!?\" Ma se parlavo, tirava via come assorto nella visione d'altri mondi o, se rispondeva, le eran parole tratte dal profondo, col cavaturaccioli.\n\nQuelle parole brevi, bastarono a rivelarmi l'uomo che subiva rapidamente una trasformazione radicale.\n\nFelice Orsini aveva portato in carcere due risentimenti; quello contro il Pieri e quello contro Giuseppe Mazzini. E' noto che nelle sue \"Memorie\" l'iracondo romagnolo tratteggiava il Mazzini come un moderno Maometto che presuma modellare i destini d'Europa sui capricci delle sue odalische — circostanza questa, di cui si servì a meraviglia il monarchico Cavour. Egli diffuse quelle Memorie a migliaia di copie, gettando così astutamente un ponte che offerse il destro di passare il Rubicone, di ripiegare la bandiera dal motto \"Dio e Popolo\" a troppi e troppi mazziniani, o titubanti per mollezza di fibra, o ansiosi di coonestare, con qualsiasi pretesto, calcoli bassi e venali.\n\nMa l'astio intenso contro il Maestro dileguò il giorno che le guardie e Giulio Favre informarono l'Orsini della nobile difesa di lui fatta dal \"Profeta\" l'indomani dell'attentato, quando altri patrioti, meticolosi sui mezzi di redimere la Patria, lo avevano quasi stigmatizzato come un assassino volgare.\n\nA questa trasformazione, che potrei chiamare rigenerante, un'altra più vasta e di tutt'altro genere fece riscontro. Meglio affrontar subito l'argomento. Felice Orsini fu l'unico dei tre morituri che ascoltasse, più che passivamente, con compiacente orecchio, le esortazioni del cappellano-dragone. E le nostre passeggiate giornaliere mi insinuarono il presentimento di quello che poi avvenne. Le convinzioni lentamente acquistate nella combattuta esistenza si andavano, nell'Orsini, disintegrando e lasciavano riapparire, anzi predominare, i sottostrati saturi di fole assorbite nella ignara fanciullezza. Nell'imminenza della sua fine, egli fece ritorno a quelle pratiche religiose a cui solo la cieca moltitudine dovrebbe attribuire ancora virtù essenziali.\n\nSi inganna perciò e mentisce, inconscia­mente, al vero, chi ammirando la stoica fortezza colla quale l'Orsini salì il patibolo, volle farne un modello di coerenza da contrapporre alla figura di Silvio Pellico e d'altri, rammollite, quasi, dai patimenti. Ma sbaglierebbe del pari chi presumesse di tutelarne la grandezza sorvolando sulla sua conversione. Il silenzio nulla attenua e nulla cancella.\n\nBen si può dire a sua difesa, che egli soccombette ad una causa tutt'altro che ignobile. Capace di ardimenti leonini sotto un impulso fugace, egli nulla poteva, grazie alla sua natura superlativamente sensitiva, contro un pensiero tormentoso, insistente, ostinato, fisso.... non quello della morte che gli sovrastava; ma l'altro derivante dalla coscienza della propria responsabilità nella rovina degli alti ideali; dalla visione della tragica morte altrui. I suoi capelli n'erano rapidamente incanutiti.... più d'una tenue fibra del suo cervello ne doveva essere rimasta scossa e quasi scalfita.",
       "reason": "image_ocr_correction",
       "source": "sonnet_with_page_image"
+    },
+    {
+      "find": "inconacia-mente",
+      "replace": "inconsciamente",
+      "reason": "llm_flag_fix:unresolved"
+    },
+    {
+      "find": "cappellano-dragone",
+      "replace": "cappellano-dragone",
+      "reason": "accepted"
     }
   ],
   "p2_ch19": [
@@ -21547,6 +21657,16 @@
       "replace": "de, intercettava la mia visuale; ma non tanto che non scorgessi",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "no-Avevo",
+      "replace": "no. Avevo",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "no-Un",
+      "replace": "no. Un",
+      "reason": "manual_context_fix"
     }
   ],
   "p2_ch20": [
@@ -21981,6 +22101,11 @@
       "replace": "giungevano assolutamente ignoti; la terza perchè, guardando in f",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "bam-ìe",
+      "replace": "bambine",
+      "reason": "manual_context_fix"
     }
   ],
   "p2_ch22": [
@@ -23231,6 +23356,11 @@
       "replace": "ravano i suoi misteriosi amoreggiamenti!",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "galeotto-guardiano",
+      "replace": "galeotto-guardiano",
+      "reason": "accepted"
     }
   ],
   "p2_ch23": [
@@ -23467,6 +23597,21 @@
       "replace": "ccorrendo, non tornerei daccapo: Un cane francese mi ha sedotta",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "capisi-iì",
+      "replace": "capisci",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "pensar-ei",
+      "replace": "pensarci",
+      "reason": "manual_context_fix"
+    },
+    {
+      "find": "battello-pilota",
+      "replace": "battello-pilota",
+      "reason": "accepted"
     }
   ],
   "p2_ch24": [
@@ -24329,6 +24474,11 @@
       "replace": "lli avevano fatto il dover loro; la cannoniera, grave d'onda, av",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "franco-piemontese",
+      "replace": "franco-piemontese",
+      "reason": "accepted"
     }
   ],
   "p2_ch26": [
@@ -25535,6 +25685,11 @@
       "replace": "o, mi sentii rispondere che, da\n\n2t236aEntriamo in questa. Ora sì che potremo parlare liberamente.\"\n\nMa la nostra conversazione fu ben diversa da quanto mi aspettavo. Il dottor Bernard, uomo astuto, guardingo, duplice, rifuggente dall'assumerne la responsabilità; incapace d'affrontare virilmente un avversario ed una situazione equivoca da lui stesso creata... virtù questa che pur fregia il petto persino ai briganti! oppose al mio impeto, tergiversazioni diplomatiche, attestazione di profonda simpatia, sperticate profferte di aiuto. Non prestassi fede a stolte dicerie di malevoli; mi recassi a Nottingham, mi affrettassi ad apportare una gioia insperata a mia moglie che, certo, ne aveva estremo bisogno. Egli si sarebbe abboccato cogli amici e mi avrebbe scritto per comunicarmi qualche piano definitivo a mio favore.\n\nE riuscì a sguisciarmi di sotto. Credo che quel mio secondo colloquio col Bernard, gettate appena le coltri, scorsi sul tappeto presso l'uscio, sotto il quale era stata insinuata, una lettera a me diretta. Era la risposta della suocera. La quale, dato sfogo alla propria felicità per la mia fuga, mi annunciava che l'Elisa era a Londra, in casa Mancherini. Le aveva inviato la mia lettera dandole, in pari tempo, il mio indirizzo.\n\nNe fui tanto commosso che nel vestirmi, le mie dita non riuscivano ad azzeccare un occhiello. Ed ecco che, mentre mi asciugo le mani, il martelletto dell'uscio di strada batte colpi ripetuti. Distinsi il passo della padrona che andava ad aprire; poi una voce di donna che domanda se, in quella casa, abiti un giovane così e così... Voce armoniosa... la sua!... Ma perchè non pronunciava il mio nome?\n\nForse dubita — pensai — che io, per prudenza, abbia declinato un nome non mio. D'un balzo sono sulla soglia... e seppi che la felicità eccessiva piglia il cuore con mano ruvida, tirannicamente, producendo sensazioni che assomigliano al dolore. La vedevo... ma annebbiata e come in sogno; volevo gridarle: \"Te l'ho promesso... eccomi!\" ma la voce non venne; faccio per lanciarmi a braccia tese; ma le braccia diventano di piombo e i piedi rimangono inchiodati al pavimento.\n\nElisa pure resta per qualche tempo immobile... un pallore mortale le scolorisce il viso. D'improvviso mi prevenne; ma, fatti pochi passi, la testa le cade sul petto e le ginocchia le si piegan di sotto... Mi precipitò tra le braccia priva di sensi. E quando rinvenne, baciandola e lacrimando: \"Elisa, Elisa! onesto o no; più glorioso... non si vorrà concederlo e poco importa. Ma sempre tuo; e in ogni fibra del cuore, un altare per te!\"\n\nIn quella, un pensiero mi balenò nella mente. Avrei ritrovato la mia Patria una, libera, grande, come avevo saputo ritrovare l'amor mio?",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "lagri-mando",
+      "replace": "lagrimando",
+      "reason": "llm_flag_fix:unresolved"
     }
   ],
   "p2_ch29": [
@@ -28349,6 +28504,16 @@
       "replace": "rinnovarle e, per esse, di sussistere. Né mancano mai, ad ogni turpe fatto, gli a",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "tramandar-ne",
+      "replace": "tramandarne",
+      "reason": "llm_flag_fix:unresolved"
+    },
+    {
+      "find": "Plon-plon",
+      "replace": "Plon-plon",
+      "reason": "accepted"
     }
   ],
   "p2_ch32": [
@@ -29733,6 +29898,11 @@
       "replace": "... la mia Patria non l'ho più riveduta!",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "ii-atricida",
+      "replace": "fratricida",
+      "reason": "llm_flag_fix:unresolved"
     }
   ],
   "p2_ch21": [
@@ -30521,6 +30691,16 @@
       "replace": "ficargli la morte di mio marito; la quale era del resto già conf",
       "reason": "missing_space_fix",
       "source": "targeted_flag"
+    },
+    {
+      "find": "trau-cesi",
+      "replace": "francesi",
+      "reason": "llm_flag_fix:unresolved"
+    },
+    {
+      "find": "galeotto-guardiano",
+      "replace": "galeotto-guardiano",
+      "reason": "accepted"
     }
   ]
 }

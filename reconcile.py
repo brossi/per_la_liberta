@@ -61,19 +61,40 @@ def split_paragraphs(text: str) -> list[str]:
 
 
 def _is_near_duplicate(
-    norm_text: str, included_norms: list[str], threshold: float = 0.7,
+    norm_text: str, included_norms: list[str], threshold: float = 75,
 ) -> bool:
-    """Check if normalized text is a near-duplicate of any already-included paragraph."""
+    """Check if normalized text is a near-duplicate of any already-included paragraph.
+
+    Uses rapidfuzz for better OCR-variant matching than difflib.SequenceMatcher,
+    plus a concatenated-window check for paragraphs whose content spans multiple
+    already-included paragraphs (e.g. when one OCR witness merges paragraphs that
+    others keep separate).
+    """
+    from rapidfuzz import fuzz
+
     if not norm_text or len(norm_text) < 20:
         return True  # Too short to be meaningful — skip
+
+    # Tier 1: individual paragraph comparison
     for inc in included_norms:
-        sm = SequenceMatcher(None, norm_text, inc)
-        if sm.ratio() > threshold:
+        if fuzz.ratio(norm_text, inc) > threshold:
             return True
-        # Containment check: is most of norm_text found within inc?
-        matching_chars = sum(block.size for block in sm.get_matching_blocks())
-        if matching_chars / len(norm_text) > 0.8:
+        # Containment: is candidate mostly found within a single included paragraph?
+        if len(norm_text) <= len(inc) and fuzz.partial_ratio(norm_text, inc) >= 90:
             return True
+
+    # Tier 2: concatenated-window check for long candidates whose content
+    # may be spread across multiple shorter included paragraphs
+    if len(norm_text) >= 200 and len(included_norms) >= 3:
+        window_size = max(3, len(norm_text) // 150)
+        window_size = min(window_size, len(included_norms))
+        for i in range(len(included_norms) - window_size + 1):
+            window = "".join(included_norms[i : i + window_size])
+            if len(window) < len(norm_text) // 2:
+                continue
+            if fuzz.partial_ratio(norm_text, window) >= 90:
+                return True
+
     return False
 
 
@@ -486,8 +507,15 @@ def _find_page_for_paragraph(para_start: int, page_breaks: dict[int, int]) -> li
     return pages
 
 
-def reconcile(data_dir: Path) -> None:
-    """Main reconciliation: align chapters, paragraphs, and words (2-way or 3-way)."""
+def reconcile(data_dir: Path, chapters: list[str] | None = None) -> None:
+    """Main reconciliation: align chapters, paragraphs, and words (2-way or 3-way).
+
+    Args:
+        data_dir: Path to data directory containing copy*_raw.txt files.
+        chapters: Optional list of chapter IDs to reconcile (e.g. ["p1_ch01", "p1_ch02"]).
+            When specified, only these chapters are re-reconciled and the rest
+            are preserved from the existing reconciled_chapters.json.
+    """
     copy1_text = (data_dir / "copy1_raw.txt").read_text(encoding="utf-8")
     copy2_text = (data_dir / "copy2_raw.txt").read_text(encoding="utf-8")
 
@@ -532,6 +560,18 @@ def reconcile(data_dir: Path) -> None:
 
     all_ids = sorted(set(ch_map1.keys()) | set(ch_map2.keys()) | set(ch_map3.keys()))
 
+    # When filtering by chapter, load existing results to preserve unmodified chapters
+    existing_by_id = {}
+    if chapters:
+        out_path = data_dir / "reconciled_chapters.json"
+        if out_path.exists():
+            for ch in json.loads(out_path.read_text(encoding="utf-8")):
+                existing_by_id[ch["id"]] = ch
+        chapter_set = set(chapters)
+        print(f"  Reconciling {len(chapter_set)} chapter(s): {', '.join(chapters)}")
+    else:
+        chapter_set = None
+
     reconciled_chapters = []
     all_flagged = []
     stats = {
@@ -539,7 +579,13 @@ def reconcile(data_dir: Path) -> None:
         "total_flagged": 0, "majority_resolved": 0, "all_differ": 0,
     }
 
-    for ch_id in all_ids:
+    for ch_idx, ch_id in enumerate(all_ids):
+        # If filtering and this chapter isn't targeted, use existing result
+        if chapter_set and ch_id not in chapter_set:
+            if ch_id in existing_by_id:
+                reconciled_chapters.append(existing_by_id[ch_id])
+            continue
+
         ch1 = ch_map1.get(ch_id)
         ch2 = ch_map2.get(ch_id)
         ch3 = ch_map3.get(ch_id)
@@ -551,6 +597,7 @@ def reconcile(data_dir: Path) -> None:
 
         # Use first available for metadata
         ref = available[0]
+        print(f"    {ch_id}:", end="", flush=True)
 
         if ch1 and ch2 and ch3:
             # 3-way reconciliation
@@ -584,6 +631,10 @@ def reconcile(data_dir: Path) -> None:
                         reconciled_paras.append(texts[0])
                         reconciled_norms.append(norm)
 
+            n_aligned = len(aligned)
+            n_kept = len(reconciled_paras)
+            ch_chars = sum(len(p) for p in reconciled_paras)
+            print(f" {n_aligned} aligned → {n_kept} kept ({ch_chars:,} chars)", flush=True)
             reconciled_chapters.append({
                 "id": ch_id,
                 "title": ch1["title"],
@@ -618,6 +669,10 @@ def reconcile(data_dir: Path) -> None:
                     reconciled_norms.append(normalize_for_comparison(merged))
                     all_flagged.extend(flagged)
 
+            n_aligned = len(aligned)
+            n_kept = len(reconciled_paras)
+            ch_chars = sum(len(p) for p in reconciled_paras)
+            print(f" {n_aligned} aligned → {n_kept} kept ({ch_chars:,} chars)", flush=True)
             reconciled_chapters.append({
                 "id": ch_id,
                 "title": ch1["title"],
@@ -630,12 +685,21 @@ def reconcile(data_dir: Path) -> None:
             key = "copy1_only" if ch1 else ("copy2_only" if ch2 else "copy3_only")
             stats[key] += 1
             paras = split_paragraphs(ref["text"])
+            ch_chars = sum(len(p) for p in paras)
+            print(f" single-source, {len(paras)} paras ({ch_chars:,} chars)", flush=True)
             reconciled_chapters.append({
                 "id": ch_id,
                 "title": ref["title"],
                 "part": ref["part"],
                 "text": "\n\n".join(paras),
             })
+
+        # Save progress after each chapter so work isn't lost on crash
+        chapters_path = data_dir / "reconciled_chapters.json"
+        chapters_path.write_text(
+            json.dumps(reconciled_chapters, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
 
     stats["total_flagged"] = len(all_flagged)
     stats["majority_resolved"] = stats["total_flagged"] - stats["all_differ"]
@@ -696,12 +760,6 @@ def reconcile(data_dir: Path) -> None:
     flagged_path = data_dir / "flagged_segments.json"
     flagged_path.write_text(
         json.dumps(all_flagged, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-
-    # Save structured chapters as JSON for cleanup step
-    chapters_path = data_dir / "reconciled_chapters.json"
-    chapters_path.write_text(
-        json.dumps(reconciled_chapters, indent=2, ensure_ascii=False), encoding="utf-8"
     )
 
     mode = "3-way" if has_copy3 else "2-way"
