@@ -3536,6 +3536,11 @@
       "find": "accapar-ne",
       "replace": "accapar-ne",
       "reason": "accepted:already_fixed"
+    },
+    {
+      "find": "Inaspettatamente, l'Assemblea Nazionale, lì il suffragio universale. Luigi Napoleo- e, atteggiandosi a suo campione accanar-ne aveva trovato! farsene, in pari tempo, la neutralità, f or-naie, sconfessando ormai scalzare il terreno di s 'anche la propria origine, abolì il suffragio universale. Luigi Napoleone aveva trovato!",
+      "replace": "Inaspettatamente, l'Assemblea Nazionale, sconfessando la propria origine, abolì il suffragio universale. Luigi Napoleone aveva trovato!",
+      "reason": "scan_verified:column_interleave_fix"
     }
   ],
   "p1_ch09": [
@@ -4280,6 +4285,11 @@
       "find": "peno-sicuro",
       "replace": "peno-sicuro",
       "reason": "accepted:needs_scan"
+    },
+    {
+      "find": "un olocausto di parecchie migliaia di peno-sicuro, il più sbrigativo, il meno crudele, per paralizzare il parricida, non passò per la mente ad alcuno o, per lo meno, nessuno osò parlarne. Luigi Napoleone aveva osò il Colpo cifre rivelatrici. Malfattore codardo, colpite a morte le vittime, diventa livido di Stato; quantità era il perno a",
+      "replace": "un olocausto di parecchie migliaia di persone! Ma Luigi Napoleone non osò mai pubblicare cifre rivelatrici. Malfattore codardo, colpite a morte le vittime, diventa livido di fronte all'enorme quantità dei cadaveri e pone ogni cura nel trafugarli ai propri occhi, non meno che agli altrui. Il mezzo più sicuro, il più sbrigativo, il meno crudele, per paralizzare il parricida, non passò per la mente ad alcuno o, per lo meno, nessuno osò parlarne. Luigi Napoleone aveva meditato il Colpo di Stato; egli era il perno a",
+      "reason": "scan_verified:column_interleave_fix"
     }
   ],
   "p1_ch10": [
@@ -4633,6 +4643,11 @@
       "find": "parsi-orticello",
       "replace": "parsi-orticello",
       "reason": "accepted:needs_scan"
+    },
+    {
+      "find": "il prodotto del proprio orticello e delle proprie fatiche. E ci mostrava le mani incallite. Le annate eran piuttosto magre; ma con un po' di parsi-orticello e delle proprie fatiche. E ci mostrava le mani incallite. Le annate eran piuttosto magre; ma con un po' di parsimonia",
+      "replace": "il prodotto del proprio orticello e delle proprie fatiche. E ci mostrava le mani incallite. Le annate eran piuttosto magre; ma con un po' di parsimonia",
+      "reason": "scan_verified:residual_duplicate"
     }
   ],
   "p1_ch11": [
@@ -5732,7 +5747,7 @@
     {
       "find": "ave-SÌT",
       "replace": "ave-SÌT",
-      "reason": "accepted:needs_scan"
+      "reason": "accepted:structural_reconstruction_needed"
     },
     {
       "find": "qual-Ripartii",
@@ -6620,7 +6635,7 @@
     {
       "find": "rivo-scoli",
       "replace": "rivo-scoli",
-      "reason": "accepted:needs_scan"
+      "reason": "accepted:pages_69-72_missing_from_reconciliation"
     }
   ],
   "p1_ch14": [
@@ -18116,7 +18131,7 @@
     {
       "find": "su-ar",
       "replace": "su-ar",
-      "reason": "accepted:needs_scan"
+      "reason": "accepted:structural_reconstruction_needed"
     }
   ],
   "p2_ch14": [
@@ -25824,7 +25839,7 @@
     {
       "find": "let-lungo",
       "replace": "let-lungo",
-      "reason": "accepted:needs_scan"
+      "reason": "accepted:structural_reconstruction_needed"
     }
   ],
   "p2_ch29": [
