@@ -36,7 +36,15 @@
   --color-body: #483826;
   --color-muted: #8b7b58;
   --color-accent: #8b0000;
-  --paper: #dfd1a9;
+  --color-accent-hover: #b00000;
+  --paper: #e5d9b6;
+  --paper-button-hover: #f2f2f2;
+  --border-light: #ddd;
+  --border-ui: #d0c9b8;
+  --border-ui-hover: #bbb;
+  --shadow-panel: 4px 0 24px rgba(0, 0, 0, 0.15);
+  --hover-bg: rgba(0, 0, 0, 0.04);
+  --backdrop-bg: rgba(0, 0, 0, 0.2);
   --gutter: 2.5em;
 }
 
@@ -169,7 +177,7 @@ body {
 }
 
 .page-citation:hover {
-  color: #b00000;
+  color: var(--color-accent-hover);
 }
 
 /* === Two-Column Spread === */
@@ -183,7 +191,7 @@ body {
 
 .verso {
   padding-right: calc(var(--gutter) / 2);
-  border-right: 0.5pt solid #ddd;
+  border-right: 0.5pt solid var(--border-light);
 }
 
 .recto {
@@ -228,8 +236,8 @@ body {
   left: 0;
   width: 45vw;
   height: 100vh;
-  background: #dfd1a9;
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  background: var(--paper);
+  box-shadow: var(--shadow-panel);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1000;
@@ -247,8 +255,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.8em 1.2em;
-  border-bottom: 1px solid #ddd;
-  font-family: 'Bodoni Moda', Georgia, serif;
+  border-bottom: 1px solid var(--border-light);
   font-size: 0.95em;
   color: var(--color-muted);
   flex-shrink: 0;
@@ -280,7 +287,7 @@ body {
 .page-overlay-body img {
   max-width: 100%;
   height: auto;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border-light);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
@@ -289,23 +296,22 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.6em 1.2em;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border-light);
   flex-shrink: 0;
 }
 
 .page-overlay-nav button {
   background: none;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-ui);
   border-radius: 3px;
   padding: 0.3em 0.8em;
   cursor: pointer;
-  font-family: 'Bodoni Moda', Georgia, serif;
   font-size: 0.85em;
   color: var(--color-body);
 }
 
 .page-overlay-nav button:hover:not(:disabled) {
-  background: #f0f0f0;
+  background: var(--paper-button-hover);
 }
 
 .page-overlay-nav button:disabled {
@@ -314,7 +320,6 @@ body {
 }
 
 .page-overlay-nav a {
-  font-family: 'Bodoni Moda', Georgia, serif;
   font-size: 0.8em;
   color: var(--color-accent);
   text-decoration: none;
@@ -335,14 +340,13 @@ body {
 }
 
 .font-size-controls button {
-  background: #dfd1a9;
-  border: 1px solid #d0c9b8;
+  background: var(--paper);
+  border: 1px solid var(--border-ui);
   padding: 0.3em 0.6em;
   font-size: 1em;
   cursor: pointer;
   color: var(--color-body);
   line-height: 1;
-  font-family: 'Bodoni Moda', Georgia, serif;
 }
 
 .font-size-controls button:first-child {
@@ -356,7 +360,7 @@ body {
 
 .font-size-controls button:hover {
   color: var(--color-body);
-  border-color: #bbb;
+  border-color: var(--border-ui-hover);
 }
 
 /* === Chapter Index Panel (slides from right) === */
@@ -365,8 +369,8 @@ body {
   top: 0.8em;
   left: 0.8em;
   z-index: 900;
-  background: #dfd1a9;
-  border: 1px solid #d0c9b8;
+  background: var(--paper);
+  border: 1px solid var(--border-ui);
   border-radius: 3px;
   padding: 0.3em 0.5em;
   font-size: 1.2em;
@@ -378,7 +382,7 @@ body {
 
 .toc-trigger:hover {
   color: var(--color-body);
-  border-color: #bbb;
+  border-color: var(--border-ui-hover);
 }
 
 .toc-panel {
@@ -388,8 +392,8 @@ body {
   width: 22em;
   max-width: 85vw;
   height: 100vh;
-  background: #dfd1a9;
-  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+  background: var(--paper);
+  box-shadow: var(--shadow-panel);
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1100;
@@ -407,7 +411,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.8em 1.2em;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-light);
   font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
   font-size: 1em;
   font-weight: 600;
@@ -454,21 +458,69 @@ body {
 }
 
 .toc-list a:hover {
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--hover-bg);
   border-left-color: var(--color-accent);
 }
 
+.toc-list .toc-standalone,
 .toc-list .toc-part {
   margin-top: 0.6em;
-  border-top: 1px solid #d0c9b8;
+  border-top: 1px solid var(--border-ui);
   padding-top: 0.3em;
 }
 
-.toc-list .toc-part a {
+.toc-list .toc-part details {
+  margin: 0;
+}
+
+.toc-list .toc-part summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  border-left: 3px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.toc-list .toc-part summary:hover {
+  background: var(--hover-bg);
+  border-left-color: var(--color-accent);
+}
+
+.toc-list .toc-part summary a:hover {
+  background: none;
+}
+
+.toc-list .toc-part summary::-webkit-details-marker {
+  display: none;
+}
+
+.toc-list .toc-part summary::after {
+  content: '▸';
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 1.2em;
+  transition: transform 0.15s ease;
+}
+
+.toc-list .toc-part details[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+.toc-list .toc-part details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc-list .toc-part summary a {
+  flex: 1;
+  border-left: none;
   font-weight: 700;
   letter-spacing: var(--heading-tracking);
   font-size: 0.95em;
   color: var(--color-body);
+  text-transform: uppercase;
 }
 
 .toc-list .toc-en {
@@ -482,7 +534,7 @@ body {
 .toc-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--backdrop-bg);
   z-index: 1050;
   opacity: 0;
   pointer-events: none;
@@ -505,7 +557,7 @@ body {
   .chapter-header {
     position: sticky;
     top: 0;
-    background: #dfd1a9;
+    background: var(--paper);
     z-index: 10;
     padding-top: 0.5em;
   }
