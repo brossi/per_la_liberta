@@ -1,5 +1,5 @@
 {
-  "overall": "fail",
+  "overall": "pass",
   "checks": [
     {
       "name": "chapter_count",
@@ -15,15 +15,13 @@
     },
     {
       "name": "quote_balance",
-      "passed": false,
-      "issues": [
-        "Smart double quote imbalance: 20 “ vs 23 ”"
-      ]
+      "passed": true,
+      "issues": []
     },
     {
       "name": "italian_char_coverage",
       "passed": true,
-      "foreign_char_ratio": 0.056,
+      "foreign_char_ratio": 0.07,
       "issues": []
     },
     {
@@ -34,9 +32,9 @@
     {
       "name": "word_count_preservation",
       "passed": true,
-      "reconciled_words": 175390,
-      "cleaned_words": 159875,
-      "retention_pct": 91.2,
+      "reconciled_words": 136452,
+      "cleaned_words": 133542,
+      "retention_pct": 97.9,
       "issues": []
     }
   ]

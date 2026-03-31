@@ -2,8 +2,10 @@
 
 import json
 import re
+import unicodedata
 from difflib import SequenceMatcher
 from pathlib import Path
+from statistics import median
 
 from utils import (
     collapse_spaces,
@@ -204,72 +206,143 @@ def align_paragraphs(
     return aligned
 
 
-def align_paragraphs_3way(
-    paras1: list[str], paras2: list[str], paras3: list[str]
-) -> list[tuple[str | None, str | None, str | None]]:
-    """Align paragraphs from three copies using Copy 1 as anchor.
+def _build_norm_map(text: str) -> tuple[str, list[int]]:
+    """Normalize text for searching while tracking original character positions.
 
-    Aligns Copy 2 and Copy 3 independently against Copy 1,
-    then merges into triples.
+    Mirrors normalize_for_comparison() (lowercase, strip accents, alpha-only)
+    but returns a mapping from each normalized character index back to its
+    position in the original text.
+
+    Returns (normalized_str, norm_to_orig) where norm_to_orig[i] is the
+    index in the original text of the i-th character in normalized_str.
     """
-    norm1 = [normalize_for_comparison(p) for p in paras1]
-    norm2 = [normalize_for_comparison(p) for p in paras2]
-    norm3 = [normalize_for_comparison(p) for p in paras3]
+    lowered = text.lower()
+    nfkd = unicodedata.normalize("NFKD", lowered)
 
-    # Build index maps: copy1_idx → copy2_idx, copy1_idx → copy3_idx
-    def _build_map(norm_a, norm_b, paras_b):
-        """Map indices from norm_a to norm_b."""
-        idx_map = {}
-        for tag, i1, i2, j1, j2 in SequenceMatcher(None, norm_a, norm_b).get_opcodes():
-            if tag == "equal":
-                for k in range(i2 - i1):
-                    idx_map[i1 + k] = j1 + k
-            elif tag == "replace":
-                len1 = i2 - i1
-                len2 = j2 - j1
-                for k in range(min(len1, len2)):
-                    idx_map[i1 + k] = j1 + k
-        return idx_map
+    # Map each NFKD character back to the original text position.
+    # NFKD decomposition can expand characters (e.g. 'à' → 'a' + combining accent),
+    # so we track which original index each NFKD character came from.
+    nfkd_to_orig = []
+    orig_idx = 0
+    nfkd_idx = 0
+    for orig_char in lowered:
+        decomposed = unicodedata.normalize("NFKD", orig_char)
+        for _ in decomposed:
+            nfkd_to_orig.append(orig_idx)
+            nfkd_idx += 1
+        orig_idx += 1
 
-    map_1_to_2 = _build_map(norm1, norm2, paras2)
-    map_1_to_3 = _build_map(norm1, norm3, paras3)
+    # Now filter to only a-z (non-combining, alphabetic ASCII)
+    norm_chars = []
+    norm_to_orig = []
+    for i, c in enumerate(nfkd):
+        if not unicodedata.combining(c) and "a" <= c <= "z":
+            norm_chars.append(c)
+            norm_to_orig.append(nfkd_to_orig[i])
 
-    triples = []
-    used_2 = set()
-    used_3 = set()
+    return "".join(norm_chars), norm_to_orig
 
-    for i, p1 in enumerate(paras1):
-        j = map_1_to_2.get(i)
-        k = map_1_to_3.get(i)
-        p2 = paras2[j] if j is not None else None
-        p3 = paras3[k] if k is not None else None
-        if j is not None:
-            used_2.add(j)
-        if k is not None:
-            used_3.add(k)
-        triples.append((p1, p2, p3))
 
-    # Add unmatched paragraphs only if they aren't near-duplicates of included text
-    included_norms = []
-    for (p1, p2, p3) in triples:
-        for p in (p1, p2, p3):
-            if p is not None:
-                included_norms.append(normalize_for_comparison(p))
+def _find_copy3_region(
+    para_norm: str, ch3_norm: str, search_start: int = 0,
+) -> tuple[int, int] | None:
+    """Find the region in Copy 3's normalized text that corresponds to a paragraph.
 
-    for j, p2 in enumerate(paras2):
-        if j not in used_2:
-            norm_p2 = normalize_for_comparison(p2)
-            if not _is_near_duplicate(norm_p2, included_norms):
-                triples.append((None, p2, None))
-                included_norms.append(norm_p2)
-    for k, p3 in enumerate(paras3):
-        if k not in used_3:
-            norm_p3 = normalize_for_comparison(p3)
-            if not _is_near_duplicate(norm_p3, included_norms):
-                triples.append((None, None, p3))
-                included_norms.append(norm_p3)
+    Uses chunk-anchor search: splits the paragraph into ~5 chunks, finds each
+    in Copy 3, and takes the median of estimated start positions.
 
-    return triples
+    Args:
+        para_norm: Normalized paragraph text to search for.
+        ch3_norm: Full normalized Copy 3 chapter text.
+        search_start: Minimum position to search from (advances monotonically).
+
+    Returns (norm_start, norm_end) or None if no reliable match found.
+    """
+    if len(para_norm) < 20:
+        return None
+
+    # Split into ~5 chunks, minimum 8 chars each
+    n_chunks = max(1, min(5, len(para_norm) // 8))
+    chunk_size = len(para_norm) // n_chunks
+    chunks = []
+    for i in range(n_chunks):
+        start = i * chunk_size
+        end = start + chunk_size if i < n_chunks - 1 else len(para_norm)
+        chunks.append((start, para_norm[start:end]))
+
+    # Allow some backward margin for OCR differences
+    margin = min(200, search_start)
+    scan_from = search_start - margin
+
+    # Find each chunk in ch3_norm and estimate the paragraph start
+    estimated_starts = []
+    for chunk_offset, chunk_text in chunks:
+        pos = ch3_norm.find(chunk_text, scan_from)
+        if pos >= 0:
+            est_start = pos - chunk_offset
+            estimated_starts.append(est_start)
+
+    # Require at least 2 anchors (or 1 if only 1 chunk)
+    min_required = 1 if n_chunks == 1 else 2
+    if len(estimated_starts) < min_required:
+        return None
+
+    med_start = int(median(estimated_starts))
+
+    # Reject if the match is before our search cursor (monotonicity)
+    if med_start < search_start - margin:
+        return None
+
+    # Pad the end slightly to account for OCR length differences
+    pad = max(20, len(para_norm) // 10)
+    norm_start = max(0, med_start)
+    norm_end = min(len(ch3_norm), med_start + len(para_norm) + pad)
+
+    return norm_start, norm_end
+
+
+def _find_copy3_text(
+    para_text: str,
+    ch3_norm: str,
+    ch3_orig: str,
+    norm_to_orig: list[int],
+    search_start: int = 0,
+) -> tuple[str | None, int]:
+    """Find Copy 3 text corresponding to a paragraph from Copies 1/2.
+
+    Returns (extracted_original_text or None, new_search_start).
+    """
+    para_norm = normalize_for_comparison(para_text)
+
+    region = _find_copy3_region(para_norm, ch3_norm, search_start)
+    if region is None:
+        return None, search_start
+
+    norm_start, norm_end = region
+
+    # Map normalized positions back to original text positions
+    orig_start = norm_to_orig[norm_start] if norm_start < len(norm_to_orig) else len(ch3_orig)
+    orig_end = norm_to_orig[min(norm_end, len(norm_to_orig) - 1)] if norm_end > 0 else 0
+
+    # Expand to word boundaries
+    while orig_start > 0 and ch3_orig[orig_start - 1] not in " \n\t":
+        orig_start -= 1
+    while orig_end < len(ch3_orig) and ch3_orig[orig_end] not in " \n\t":
+        orig_end += 1
+
+    extracted = ch3_orig[orig_start:orig_end].strip()
+    if not extracted:
+        return None, search_start
+
+    # Quality gate: reject poor matches
+    extracted_norm = normalize_for_comparison(extracted)
+    ratio = SequenceMatcher(None, para_norm, extracted_norm).ratio()
+    if ratio < 0.50:
+        return None, search_start
+
+    # Advance search cursor past this match
+    new_search_start = norm_end
+    return extracted, new_search_start
 
 
 def reconcile_words(
@@ -600,41 +673,56 @@ def reconcile(data_dir: Path, chapters: list[str] | None = None) -> None:
         print(f"    {ch_id}:", end="", flush=True)
 
         if ch1 and ch2 and ch3:
-            # 3-way reconciliation
+            # 3-way reconciliation: paragraph structure from Copies 1 & 2 only,
+            # Copy 3 participates only at word level as adjudicator
             stats["shared"] += 1
             paras1 = split_paragraphs(ch1["text"])
             paras2 = split_paragraphs(ch2["text"])
-            paras3 = split_paragraphs(ch3["text"])
 
-            aligned = align_paragraphs_3way(paras1, paras2, paras3)
+            # 2-way paragraph alignment (Copies 1 & 2)
+            aligned = align_paragraphs(paras1, paras2)
+
+            # Prepare Copy 3 for word-level lookup
+            ch3_orig = rejoin_lines(ch3["text"])
+            ch3_norm, norm_to_orig = _build_norm_map(ch3_orig)
+            c3_search_pos = 0
+            c3_matches = 0
+
             reconciled_paras = []
             reconciled_norms = []
 
-            for para_idx, (p1, p2, p3) in enumerate(aligned):
-                texts = [t for t in [p1, p2, p3] if t is not None]
-                if len(texts) == 3:
-                    merged, flagged = reconcile_words_3way(p1, p2, p3, ch_id, para_idx)
+            for para_idx, (p1, p2) in enumerate(aligned):
+                # Try to find Copy 3 text for this paragraph
+                ref_text = p1 or p2
+                p3 = None
+                if ref_text and len(normalize_for_comparison(ref_text)) >= 20:
+                    p3, c3_search_pos = _find_copy3_text(
+                        ref_text, ch3_norm, ch3_orig, norm_to_orig, c3_search_pos,
+                    )
+                    if p3:
+                        c3_matches += 1
+
+                if p1 is not None and p2 is not None:
+                    if p3 is not None:
+                        merged, flagged = reconcile_words_3way(p1, p2, p3, ch_id, para_idx)
+                    else:
+                        merged, flagged = reconcile_words(p1, p2, ch_id, para_idx)
                     reconciled_paras.append(merged)
                     reconciled_norms.append(normalize_for_comparison(merged))
                     all_flagged.extend(flagged)
-                    stats["all_differ"] += sum(1 for f in flagged if f["resolution_method"] == "all_differ")
-                elif len(texts) == 2:
-                    t1, t2 = texts[0], texts[1]
-                    merged, flagged = reconcile_words(t1, t2, ch_id, para_idx)
-                    reconciled_paras.append(merged)
-                    reconciled_norms.append(normalize_for_comparison(merged))
-                    all_flagged.extend(flagged)
-                else:
-                    # Single-source paragraph: skip if near-duplicate of already-included
-                    norm = normalize_for_comparison(texts[0])
+                    stats["all_differ"] += sum(1 for f in flagged if f.get("resolution_method") == "all_differ")
+                elif p1 is not None or p2 is not None:
+                    # Single-source paragraph: skip if near-duplicate
+                    text = p1 if p1 is not None else p2
+                    norm = normalize_for_comparison(text)
                     if not _is_near_duplicate(norm, reconciled_norms):
-                        reconciled_paras.append(texts[0])
+                        reconciled_paras.append(text)
                         reconciled_norms.append(norm)
 
             n_aligned = len(aligned)
             n_kept = len(reconciled_paras)
             ch_chars = sum(len(p) for p in reconciled_paras)
-            print(f" {n_aligned} aligned → {n_kept} kept ({ch_chars:,} chars)", flush=True)
+            print(f" {n_aligned} aligned → {n_kept} kept, {c3_matches} c3 matches ({ch_chars:,} chars)", flush=True)
             reconciled_chapters.append({
                 "id": ch_id,
                 "title": ch1["title"],
