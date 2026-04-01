@@ -903,9 +903,10 @@ def typeset(output_dir: Path, state_dir: Path | None = None, site_base: str | No
     if docs_dir.exists():
         import shutil
 
-        # Copy HTML, fixing CSS path for docs/ structure
+        # Copy HTML, fixing relative paths for docs/ structure
         docs_html = (html_path.read_text(encoding="utf-8")
-                     .replace("../static/bilingual.css", "static/bilingual.css"))
+                     .replace("../static/bilingual.css", "static/bilingual.css")
+                     .replace("../assets/page_images", "assets/page_images"))
         (docs_dir / "index.html").write_text(docs_html, encoding="utf-8")
         shutil.copy2(scan_path, docs_dir / "scan.html")
         shutil.copy2(CSS_PATH, docs_dir / "static" / "bilingual.css")
