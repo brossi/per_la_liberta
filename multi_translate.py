@@ -396,6 +396,12 @@ def _evaluate_drafts(
             try:
                 eval_result = json.loads(text)
                 eval_result["weighted_score"] = _compute_weighted_score(eval_result)
+                # Capture token usage from Gemini
+                usage = getattr(response, "usage_metadata", None)
+                eval_result["_tokens"] = {
+                    "input": getattr(usage, "prompt_token_count", 0) if usage else 0,
+                    "output": getattr(usage, "candidates_token_count", 0) if usage else 0,
+                }
                 return name, eval_result
             except json.JSONDecodeError as e:
                 last_error = e
@@ -489,7 +495,11 @@ def _synthesize_via_claude_code(
     if not output_path.exists():
         try:
             response = json.loads(result.stdout)
-            text = response.get("result", "")
+            if isinstance(response, list):
+                result_entry = next((e for e in response if e.get("type") == "result"), {})
+            else:
+                result_entry = response
+            text = result_entry.get("result", "")
             if text:
                 output_path.write_text(text, encoding="utf-8")
             else:
@@ -504,9 +514,28 @@ def _synthesize_via_claude_code(
 
     translation = output_path.read_text(encoding="utf-8")
 
+    # Parse synthesis token usage from Claude Code JSON response.
+    # Output is a JSON array; the last entry has type="result" with cost/usage.
+    synth_tokens = {"input": 0, "output": 0}
+    try:
+        response_data = json.loads(result.stdout)
+        if isinstance(response_data, list):
+            result_entry = next((e for e in response_data if e.get("type") == "result"), {})
+        else:
+            result_entry = response_data
+        synth_tokens["cost_usd"] = result_entry.get("total_cost_usd", 0)
+        synth_tokens["duration_ms"] = result_entry.get("duration_ms", 0)
+        synth_tokens["num_turns"] = result_entry.get("num_turns", 0)
+        usage = result_entry.get("usage", {})
+        synth_tokens["input"] = usage.get("input_tokens", 0)
+        synth_tokens["output"] = usage.get("output_tokens", 0)
+    except (json.JSONDecodeError, KeyError, TypeError):
+        pass
+
     # ── Step 2: Provenance (best-effort) ─────────────────────────────
 
     prov_prompt = _build_provenance_prompt(materials_dir, output_path)
+    prov_tokens = {"input": 0, "output": 0}
 
     try:
         prov_result = _run_claude_code(prov_prompt, synth_model, timeout=600, label=f"provenance:{chapter_id}")
@@ -518,10 +547,23 @@ def _synthesize_via_claude_code(
             print(f"      [{chapter_id}] Provenance file not written, skipping")
         else:
             print(f"      [{chapter_id}] Provenance log written")
+            try:
+                prov_data = json.loads(prov_result.stdout)
+                if isinstance(prov_data, list):
+                    prov_entry = next((e for e in prov_data if e.get("type") == "result"), {})
+                else:
+                    prov_entry = prov_data
+                prov_tokens["cost_usd"] = prov_entry.get("total_cost_usd", 0)
+                prov_tokens["duration_ms"] = prov_entry.get("duration_ms", 0)
+                prov_usage = prov_entry.get("usage", {})
+                prov_tokens["input"] = prov_usage.get("input_tokens", 0)
+                prov_tokens["output"] = prov_usage.get("output_tokens", 0)
+            except (json.JSONDecodeError, KeyError, TypeError):
+                pass
     except subprocess.TimeoutExpired:
         print(f"      [{chapter_id}] Provenance logging timed out, skipping")
 
-    return translation
+    return translation, {"synthesis": synth_tokens, "provenance": prov_tokens}
 
 
 # ── Main entry point ─────────────────────────────────────────────────
@@ -661,6 +703,12 @@ def multi_translate(
                     "phase": "drafted",
                     "page_marker": page_marker,
                     "draft_models": [name for name, _ in drafts],
+                    "tokens": {
+                        "drafts": {
+                            name: {"input": r.input_tokens, "output": r.output_tokens}
+                            for name, r in drafts
+                        },
+                    },
                 }
                 atomic_write_json(progress_path, progress)
         else:
@@ -697,12 +745,20 @@ def multi_translate(
                 json.dumps(eval_result, indent=2, ensure_ascii=False), encoding="utf-8"
             )
 
+        # Merge token data: keep draft tokens from prior phase, add eval tokens
+        existing_tokens = progress.get(ch_id, {}).get("tokens", {})
+        existing_tokens["evals"] = {
+            name: ev.get("_tokens", {"input": 0, "output": 0})
+            for name, ev in evaluations.items()
+        }
+
         with progress_lock:
             progress[ch_id] = {
                 "phase": "evaluated",
                 "page_marker": page_marker,
                 "draft_models": [name for name, _ in drafts],
                 "scores": {name: ev["weighted_score"] for name, ev in evaluations.items()},
+                "tokens": existing_tokens,
             }
             atomic_write_json(progress_path, progress)
 
@@ -780,7 +836,7 @@ def multi_translate(
 
             t0 = time.monotonic()
             try:
-                synthesized = _synthesize_via_claude_code(
+                synthesized, cc_tokens = _synthesize_via_claude_code(
                     ch_id, n_drafts, has_prev, state_dir, synth_model
                 )
                 elapsed = time.monotonic() - t0
@@ -791,11 +847,17 @@ def multi_translate(
                 output_path = state_dir / "translations" / f"{ch_id}.md"
                 output_path.write_text(synthesized, encoding="utf-8")
 
+                synth_cost = cc_tokens.get("synthesis", {}).get("cost_usd", 0)
+                prov_cost = cc_tokens.get("provenance", {}).get("cost_usd", 0)
+                cost_str = f" ${synth_cost + prov_cost:.3f}" if synth_cost else ""
                 print(f"    [{i+1}/{len(synth_todo)}] {ch['title']}: done "
-                      f"({len(synthesized):,} chars) [{elapsed:.1f}s]")
+                      f"({len(synthesized):,} chars) [{elapsed:.1f}s]{cost_str}")
 
                 with progress_lock:
+                    existing_tokens = progress[ch_id].get("tokens", {})
+                    existing_tokens["synthesis"] = cc_tokens
                     progress[ch_id]["phase"] = "done"
+                    progress[ch_id]["tokens"] = existing_tokens
                     atomic_write_json(progress_path, progress)
 
                 # This chapter becomes context for the next
@@ -824,7 +886,49 @@ def multi_translate(
     )
     assemble_translation(output_dir, state_dir, all_chapters)
 
-    # Summary
+    # ── Summary with token expenditure ────────────────────────────────
+
     done = sum(1 for v in progress.values() if v.get("phase") == "done")
     errors = sum(1 for v in progress.values() if v.get("phase") == "error")
     print(f"\n  Complete: {done} synthesised, {errors} errors")
+
+    # Token expenditure table
+    chapters_with_tokens = [
+        (ch_id, data) for ch_id, data in progress.items()
+        if data.get("tokens")
+    ]
+    if chapters_with_tokens:
+        print(f"\n  {'Chapter':<30} {'Draft In':>10} {'Draft Out':>10} {'Eval In':>10} {'Eval Out':>10} {'Synth $':>10}")
+        print(f"  {'-'*30} {'-'*10} {'-'*10} {'-'*10} {'-'*10} {'-'*10}")
+
+        totals = {"draft_in": 0, "draft_out": 0, "eval_in": 0, "eval_out": 0, "synth_cost": 0.0}
+
+        for ch_id, data in chapters_with_tokens:
+            tokens = data.get("tokens", {})
+
+            # Draft tokens (sum across models)
+            draft_in = sum(d.get("input", 0) for d in tokens.get("drafts", {}).values())
+            draft_out = sum(d.get("output", 0) for d in tokens.get("drafts", {}).values())
+
+            # Eval tokens (sum across models)
+            eval_in = sum(e.get("input", 0) for e in tokens.get("evals", {}).values())
+            eval_out = sum(e.get("output", 0) for e in tokens.get("evals", {}).values())
+
+            # Synthesis cost (from Claude Code)
+            synth_data = tokens.get("synthesis", {})
+            synth_cost = synth_data.get("synthesis", {}).get("cost_usd", 0)
+            prov_cost = synth_data.get("provenance", {}).get("cost_usd", 0)
+            total_cc_cost = synth_cost + prov_cost
+
+            totals["draft_in"] += draft_in
+            totals["draft_out"] += draft_out
+            totals["eval_in"] += eval_in
+            totals["eval_out"] += eval_out
+            totals["synth_cost"] += total_cc_cost
+
+            cost_str = f"${total_cc_cost:.3f}" if total_cc_cost else "—"
+            print(f"  {ch_id:<30} {draft_in:>10,} {draft_out:>10,} {eval_in:>10,} {eval_out:>10,} {cost_str:>10}")
+
+        print(f"  {'-'*30} {'-'*10} {'-'*10} {'-'*10} {'-'*10} {'-'*10}")
+        cost_str = f"${totals['synth_cost']:.3f}" if totals["synth_cost"] else "—"
+        print(f"  {'TOTAL':<30} {totals['draft_in']:>10,} {totals['draft_out']:>10,} {totals['eval_in']:>10,} {totals['eval_out']:>10,} {cost_str:>10}")
