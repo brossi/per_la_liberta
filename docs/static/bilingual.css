@@ -465,6 +465,40 @@ body {
   text-decoration: underline;
 }
 
+/* === Scan zoom controls === */
+.page-overlay-zoom-controls {
+  display: flex;
+  gap: 0.2em;
+  flex-shrink: 0;
+}
+.page-overlay-zoom-controls button {
+  font-size: 1.1em !important;
+  padding: 0 0.45em !important;
+  border: 1px solid var(--border-ui) !important;
+  border-radius: 3px;
+  background: transparent !important;
+  cursor: pointer;
+  color: var(--color-muted);
+  line-height: 1.4;
+}
+.page-overlay-zoom-controls button:hover {
+  color: var(--color-body);
+  background: var(--hover-bg, rgba(0,0,0,0.05)) !important;
+}
+.page-overlay-zoom-controls button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.page-overlay-body.zoomed {
+  overflow: auto;
+}
+.page-overlay-body.zoomed img {
+  max-width: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 /* === Font Size Controls === */
 .font-size-controls {
   position: fixed;
