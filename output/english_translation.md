@@ -1,10 +1,10 @@
 # For Freedom!
 
-*From my conversations with Count Carlo di Rudio, accomplice of Felice Orsini*
+From my conversations with Count Carlo di Rudio, accomplice of Felice Orsini
 
 **Cesare Crespi** (1913)
 
-*Translated from the Italian*
+Translated from the Italian
 
 ---
 
