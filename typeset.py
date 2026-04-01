@@ -429,9 +429,8 @@ def generate_html(
         # Chapter
         level_tag = "h2" if pair["level"] == 2 else "h3"
 
-        # Page citation with overlay trigger
-        ia_link = ""
-        page_label = ""
+        # Page citation (injected into first English paragraph as margin note)
+        page_cite_html = ""
         if pair["page_range"]:
             raw_start, end = pair["page_range"]
             # Chapter page ranges overlap: start page is shared with the
@@ -444,22 +443,38 @@ def generate_html(
                 ia_url = f"https://archive.org/details/{IA_ITEM_ID}/page/n{start - 1}/mode/1up"
             book_start = start - PDF_PAGE_OFFSET
             book_end = end - PDF_PAGE_OFFSET
-            page_label = f"pp. {book_start}\u2013{book_end}"
-            ia_link = (
+            page_label = f"Source pp. {book_start}\u2013{book_end}"
+            _base = site_base or SITE_BASE
+            qr_url = f"{_base}/scan.html#{start}-{end}"
+            qr_src = _qr_data_uri(qr_url, scale=10)
+            page_cite_html = (
+                f'<span class="page-cite">'
                 f'<a href="#" class="page-citation" '
                 f'data-page-start="{start}" data-page-end="{end}" '
                 f'data-page-offset="{PDF_PAGE_OFFSET}" '
                 f'data-ia-url="{ia_url}" '
                 f'data-img-dir="{page_img_rel}" '
                 f'title="View original scan">{page_label}</a>'
-            )
-            _base = site_base or SITE_BASE
-            qr_url = f"{_base}/scan.html#{start}-{end}"
-            qr_src = _qr_data_uri(qr_url)
-            ia_link += (
-                f' <img class="scan-qr" src="{qr_src}" '
-                f'alt="QR: {page_label}" '
-                f'title="Scan to view source pages on another device">'
+                f'<button class="qr-toggle" aria-label="Show QR code" '
+                f'title="Scan to view on another device">'
+                f'<svg viewBox="0 0 24 24" fill="currentColor">'
+                f'<rect x="1" y="1" width="9" height="9" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>'
+                f'<rect x="4" y="4" width="3" height="3"/>'
+                f'<rect x="1" y="14" width="9" height="9" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>'
+                f'<rect x="4" y="17" width="3" height="3"/>'
+                f'<rect x="14" y="1" width="9" height="9" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>'
+                f'<rect x="17" y="4" width="3" height="3"/>'
+                f'<rect x="14" y="14" width="3" height="3"/>'
+                f'<rect x="20" y="14" width="3" height="3"/>'
+                f'<rect x="14" y="20" width="3" height="3"/>'
+                f'<rect x="20" y="20" width="3" height="3"/>'
+                f'<rect x="17" y="17" width="3" height="3"/>'
+                f'</svg></button>'
+                f'<span class="qr-popover" role="dialog">'
+                f'<span class="qr-popover-inner">'
+                f'<img class="scan-qr" src="{qr_src}" alt="QR: {page_label}">'
+                f'<span class="qr-caption">Scan to view on another device</span>'
+                f'</span></span></span>'
             )
 
         part_prefix = re.sub(r"[^a-z0-9]", "-", current_part_it.lower()).strip("-") + "-" if current_part_it else ""
@@ -473,7 +488,7 @@ def generate_html(
             f'      <div class="chapter-title-col" lang="it">{part_label_it}<{level_tag} class="chapter-title">{_escape_html(pair["italian_title"])}</{level_tag}></div>',
             f'      <div class="chapter-title-col" lang="en">{part_label_en}<{level_tag} class="chapter-title">{_escape_html(pair["english_title"])}</{level_tag}></div>' if pair["english_title"] else '      <div class="chapter-title-col"></div>',
             '    </div>',
-            f'    <span class="page-ref">{ia_link}</span>' if ia_link else "",
+            "",
             "  </div>",
             '  <div class="spread">',
             '    <div class="verso" lang="it">',
@@ -493,6 +508,7 @@ def generate_html(
         _content_ch_idx += 1
         ch_changes = revision_changes.get(ch_id, [])
 
+        page_cite_injected = False
         for p in pair["english_paragraphs"]:
             para_html = _para_to_html(p)
 
@@ -519,11 +535,15 @@ def generate_html(
                         f'</span>'
                     )
 
-            # Inject marginalia inside the paragraph so it aligns vertically
+            # Inject page citation into first paragraph, marginalia into all
             # Uses <span> not <aside> — block elements inside <p> are invalid HTML
+            cite_html = ""
+            if not page_cite_injected and page_cite_html:
+                cite_html = page_cite_html
+                page_cite_injected = True
             margin_html = "".join(para_marginalia)
 
-            html_parts.append(f"      <p>{margin_html}{para_html}</p>")
+            html_parts.append(f"      <p>{cite_html}{margin_html}{para_html}</p>")
 
         html_parts.extend([
             "    </div>",
@@ -596,6 +616,29 @@ def generate_html(
         "  // Close when clicking outside the panel",
         "  overlay.addEventListener('click', e => {",
         "    if (e.target === overlay) overlay.classList.remove('open');",
+        "  });",
+        "})();",
+        "",
+        "// QR popover: click to toggle, close on outside click or Escape",
+        "(() => {",
+        "  document.addEventListener('click', e => {",
+        "    const btn = e.target.closest('.qr-toggle');",
+        "    if (btn) {",
+        "      e.stopPropagation();",
+        "      const popover = btn.nextElementSibling;",
+        "      const wasOpen = popover.classList.contains('open');",
+        "      document.querySelectorAll('.qr-popover.open').forEach(p => p.classList.remove('open'));",
+        "      if (!wasOpen) popover.classList.add('open');",
+        "      return;",
+        "    }",
+        "    if (!e.target.closest('.qr-popover-inner')) {",
+        "      document.querySelectorAll('.qr-popover.open').forEach(p => p.classList.remove('open'));",
+        "    }",
+        "  });",
+        "  document.addEventListener('keydown', e => {",
+        "    if (e.key === 'Escape') {",
+        "      document.querySelectorAll('.qr-popover.open').forEach(p => p.classList.remove('open'));",
+        "    }",
         "  });",
         "})();",
         "",
@@ -702,7 +745,14 @@ def generate_html(
         "      if (!revised) return;",
         "      const pRect = note.parentElement.getBoundingClientRect();",
         "      const rRect = revised.getBoundingClientRect();",
-        "      note.style.top = (rRect.top - pRect.top) + 'px';",
+        "      let top = rRect.top - pRect.top;",
+        "      // Ensure revision marginalia clears page citation if both in same paragraph",
+        "      const cite = note.parentElement.querySelector('.page-cite');",
+        "      if (cite) {",
+        "        const citeBottom = cite.getBoundingClientRect().bottom - pRect.top;",
+        "        if (top < citeBottom + 4) top = citeBottom + 4;",
+        "      }",
+        "      note.style.top = top + 'px';",
         "    });",
         "  }",
         "  alignMarginalia();",

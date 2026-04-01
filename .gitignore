@@ -25,5 +25,18 @@ data/ocr_*_pages/
 # Rendered page images (large, generated from PDF)
 assets/page_images/
 
+# Scratch / auto-generated
+main.py
+
+# Backups
+*.bak
+
+# Stray downloaded images in project root
+/*.jpg
+
+# LLM cleanup cache (transient, regenerable via --batch --llm-cleanup)
+state/llm_cleaned/
+state/llm_batch.json
+
 # Claude Code local settings
 .claude/

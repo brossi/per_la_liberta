@@ -42,6 +42,11 @@ def main():
         help="Use LLM to correct Italian text during cleanup (requires API key)",
     )
     parser.add_argument(
+        "--batch",
+        action="store_true",
+        help="Use Anthropic Batch API for LLM cleanup (50%% cost reduction, ~1hr turnaround)",
+    )
+    parser.add_argument(
         "--chapter",
         help="Run reconcile/cleanup on specific chapters, comma-separated (e.g. p1_ch01,p1_ch02)",
     )
@@ -153,7 +158,7 @@ def main():
         print("Step 5: Cleaning up OCR artifacts...")
         from cleanup import cleanup
 
-        cleanup(DATA_DIR, OUTPUT_DIR, use_llm=args.llm_cleanup, api_key=args.api_key, chapter=args.chapter)
+        cleanup(DATA_DIR, OUTPUT_DIR, use_llm=args.llm_cleanup, api_key=args.api_key, chapter=args.chapter, batch=args.batch)
         if args.llm_cleanup:
             from cleanup import reconcile_flags
 

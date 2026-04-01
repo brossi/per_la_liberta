@@ -368,8 +368,10 @@ def apply_dictionary_correction(text: str) -> str:
         inner = tok_text.strip(".,;:!?\"'""''«»—-")
         if not inner or not inner[0].isalpha():
             return tok_text
-        # Skip protected proper nouns
-        if is_proper:
+        # Skip protected proper nouns — BUT not ALL-CAPS words (≥4 chars)
+        # that aren't in the dictionary, since spaCy mis-tags garbled OCR
+        # as PROPN/ORG (e.g. "PRESBNTK" tagged as ORG).
+        if is_proper and not (inner.isupper() and len(inner) >= 4):
             return tok_text
         # Clitic prefixes ending in apostrophe (dell', l', d', etc.) —
         # these are functional words, not spell-checkable content
@@ -379,7 +381,13 @@ def apply_dictionary_correction(text: str) -> str:
         if len(inner) <= 2:
             return tok_text
 
-        suggestions = sym.lookup(inner.lower(), Verbosity.TOP, max_edit_distance=1, include_unknown=True)
+        # ALL-CAPS words (≥4 chars) get distance=2 — they tend to have more
+        # OCR damage (e.g. PRESBNTK→PRESENTE) and are rarer, so false
+        # positives are less likely.
+        is_allcaps = inner.isupper() and len(inner) >= 4
+        edit_dist = 2 if is_allcaps else 1
+
+        suggestions = sym.lookup(inner.lower(), Verbosity.TOP, max_edit_distance=edit_dist, include_unknown=True)
         if not suggestions:
             return tok_text
 
@@ -387,7 +395,7 @@ def apply_dictionary_correction(text: str) -> str:
         # Only correct words NOT already in the dictionary
         if best.distance == 0:
             return tok_text
-        if best.distance == 1:
+        if best.distance <= edit_dist:
             corrected = best.term
             # If the only difference is accent removal, skip — this could be
             # a legitimate 1913-era stress marking (accento facoltativo), e.g.,
@@ -490,6 +498,56 @@ def join_broken_paragraphs(text: str) -> str:
     return "\n\n".join(result)
 
 
+def deduplicate_sentences(text: str, min_len: int = 40) -> str:
+    """Remove duplicate sentence fragments within each paragraph.
+
+    OCR page-boundary merges sometimes produce the same sentence twice
+    with minor OCR variations.  For each paragraph, if a substring of
+    ≥min_len characters appears twice (normalized: lowercase, stripped
+    accents, collapsed whitespace), the second occurrence is removed.
+    """
+    paragraphs = text.split("\n\n")
+    result = []
+    for para in paragraphs:
+        if len(para) < min_len * 2:
+            result.append(para)
+            continue
+        # Split on sentence-ending punctuation keeping the delimiter
+        sentences = re.split(r'(?<=[.!?])\s+', para)
+        if len(sentences) < 2:
+            result.append(para)
+            continue
+        # Normalize for comparison
+        norm = lambda s: re.sub(r'\s+', ' ', _strip_accents(s.lower().strip()))
+        seen = []
+        kept = []
+        for sent in sentences:
+            n = norm(sent)
+            if len(n) < min_len:
+                kept.append(sent)
+                continue
+            # Check if this sentence is a near-duplicate of one already seen
+            is_dup = False
+            for prev_n in seen:
+                # Check if one contains most of the other
+                shorter, longer = (n, prev_n) if len(n) <= len(prev_n) else (prev_n, n)
+                if shorter in longer:
+                    is_dup = True
+                    break
+                # Or high similarity via ratio
+                if len(shorter) > min_len:
+                    ratio = difflib.SequenceMatcher(None, shorter, longer).ratio()
+                    if ratio > 0.75:
+                        is_dup = True
+                        break
+            if is_dup:
+                continue
+            seen.append(n)
+            kept.append(sent)
+        result.append(' '.join(kept))
+    return "\n\n".join(result)
+
+
 def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[dict], int]:
     """Apply OCR cleanup: noise removal, pre-filters, dehyphenation, dictionary correction.
 
@@ -505,11 +563,25 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
             cleaned_lines.append(line)
     text = "\n".join(cleaned_lines)
 
+    # Strip stray OCR symbols that never appear in Italian prose.
+    # These are scanner artifacts embedded in otherwise readable text.
+    # ■ • ^ | § ¶ ~ ` @ # % = + < > { } [ ] \
+    # ^ is removed only when freestanding or adjacent to non-alphanumeric
+    # (preserves legitimate use in rare contexts)
+    text = re.sub(r"[■•¶§|~`@#%=+<>{}\[\]\\]", "", text)
+    # ^ between/adjacent to spaces or punctuation (not inside words)
+    text = re.sub(r"(?<!\w)\^|\^(?!\w)", "", text)
+    # £ when not followed by a digit (not a currency amount)
+    text = re.sub(r"£(?!\d)", "E", text)  # £ is typically OCR for E
+
     # Collapse multiple blank lines (noise removal may leave gaps)
     text = re.sub(r"\n{3,}", "\n\n", text)
 
     # Join paragraphs falsely split at OCR page boundaries
     text = join_broken_paragraphs(text)
+
+    # Remove duplicate sentences within paragraphs (OCR page-boundary artifacts)
+    text = deduplicate_sentences(text)
 
     # Apply high-confidence regex pre-filters (più garbles, 5AN, etc.)
     text = apply_pre_filters(text)
@@ -625,6 +697,64 @@ def clean_text(text: str, word_set: set[str] | None = None) -> tuple[str, list[d
     return text.strip(), review_flags, punct_fixes
 
 
+# Shared LLM prompt and post-processing for OCR correction (used by both
+# the synchronous per-chapter path and the batch API path).
+
+_LLM_CORRECT_SYSTEM = (
+    "You are an expert in 19th/early 20th century Italian literature and OCR correction. "
+    "You are correcting OCR artifacts in a digitized 1913 Italian book titled "
+    "'Per la libertà!' by Cesare Crespi, about Count Carlo di Rudio and Felice Orsini.\n\n"
+    "Rules:\n"
+    "- Fix obvious OCR errors (garbled characters, wrong letters) while preserving the original Italian\n"
+    "- Do NOT modernize the language or spelling — keep 1913-era Italian conventions\n"
+    "- Preserve all paragraph breaks\n"
+    "- Do NOT translate — output must be in Italian\n"
+    "- Do NOT add or remove content — only fix OCR errors\n"
+    "- Common OCR errors: 'e' for 'c', 'ii' for 'u', 'im' for 'un', 'm-' artifacts, "
+    "parentheses inside words, mid-word capitals, r↔i confusion at line breaks\n"
+    "- If a REFERENCE section with Zingarelli 1922 dictionary evidence is provided, "
+    "use it to validate corrections for flagged tokens\n"
+    "- Return ONLY the corrected text, no commentary"
+)
+
+_LLM_CORRECT_MODEL = "claude-sonnet-4-6"
+_LLM_CORRECT_MAX_TOKENS = 128000
+
+_PREAMBLE_RE = re.compile(
+    r"^("
+    r"(?:Here is|Here's|Below is)[\s\S]*?:\s*\n+"        # English preambles
+    r"|(?:Ecco|Eil|E il|Ed ecco)[\s\S]*?:\s*\n+"         # Italian preambles
+    r"|I'll[\s\S]*?[.:]\s*\n+"                            # "I'll carefully correct..."
+    r"|I will[\s\S]*?[.:]\s*\n+"                          # "I will correct..."
+    r"|(?:The )?corrected[\s\S]*?:\s*\n+"                 # "Corrected text:"
+    r"|Il testo corretto[\s\S]*?:\s*\n+"                  # "Il testo corretto:"
+    r")",
+    re.IGNORECASE,
+)
+
+
+def _build_user_content(text: str, chapter_title: str, zingarelli_context: str = "") -> str:
+    """Build the user message for LLM OCR correction."""
+    content = (
+        f"Correct OCR errors in the following chapter ({chapter_title}). "
+        f"Return only the corrected Italian text:\n\n{text}"
+    )
+    if zingarelli_context:
+        content += (
+            "\n\n--- REFERENCE ---\n"
+            "The following tokens were flagged as potentially broken or garbled. "
+            "Use the Zingarelli 1922 dictionary evidence below to inform your corrections. "
+            "Tokens marked 'not found' may be proper nouns (keep as-is) or noise (remove).\n\n"
+            + zingarelli_context
+        )
+    return content
+
+
+def _strip_preamble(text: str) -> str:
+    """Strip LLM preamble that sometimes precedes the corrected text."""
+    return _PREAMBLE_RE.sub("", text, count=1)
+
+
 # TODO: Add Gemini 3 Pro as a fallback LLM for Italian correction when
 # the Anthropic API is unavailable or timing out on specific chapters.
 def llm_correct_italian(
@@ -633,65 +763,188 @@ def llm_correct_italian(
     api_key: str,
     zingarelli_context: str = "",
 ) -> str:
-    """Use Claude to correct remaining OCR errors in Italian text.
-
-    If zingarelli_context is provided, it is appended to the user message
-    to give the LLM period-appropriate dictionary evidence for flagged tokens.
-    """
+    """Use Claude to correct remaining OCR errors in Italian text (synchronous)."""
     import anthropic
 
     from utils import retry_api_call
 
     client = anthropic.Anthropic(api_key=api_key, timeout=600.0)
-
-    max_output = 128000
-
-    user_content = (
-        f"Correct OCR errors in the following chapter ({chapter_title}). "
-        f"Return only the corrected Italian text:\n\n{text}"
-    )
-    if zingarelli_context:
-        user_content += (
-            "\n\n--- REFERENCE ---\n"
-            "The following tokens were flagged as potentially broken or garbled. "
-            "Use the Zingarelli 1922 dictionary evidence below to inform your corrections. "
-            "Tokens marked 'not found' may be proper nouns (keep as-is) or noise (remove).\n\n"
-            + zingarelli_context
-        )
+    user_content = _build_user_content(text, chapter_title, zingarelli_context)
 
     def _call():
         return client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=max_output,
-            system=(
-                "You are an expert in 19th/early 20th century Italian literature and OCR correction. "
-                "You are correcting OCR artifacts in a digitized 1913 Italian book titled "
-                "'Per la libertà!' by Cesare Crespi, about Count Carlo di Rudio and Felice Orsini.\n\n"
-                "Rules:\n"
-                "- Fix obvious OCR errors (garbled characters, wrong letters) while preserving the original Italian\n"
-                "- Do NOT modernize the language or spelling — keep 1913-era Italian conventions\n"
-                "- Preserve all paragraph breaks\n"
-                "- Do NOT translate — output must be in Italian\n"
-                "- Do NOT add or remove content — only fix OCR errors\n"
-                "- Common OCR errors: 'e' for 'c', 'ii' for 'u', 'im' for 'un', 'm-' artifacts, "
-                "parentheses inside words, mid-word capitals, r↔i confusion at line breaks\n"
-                "- If a REFERENCE section with Zingarelli 1922 dictionary evidence is provided, "
-                "use it to validate corrections for flagged tokens\n"
-                "- Return ONLY the corrected text, no commentary"
-            ),
-            messages=[
-                {"role": "user", "content": user_content}
-            ],
+            model=_LLM_CORRECT_MODEL,
+            max_tokens=_LLM_CORRECT_MAX_TOKENS,
+            system=_LLM_CORRECT_SYSTEM,
+            messages=[{"role": "user", "content": user_content}],
         )
 
     response = retry_api_call(_call)
-    result = response.content[0].text
-    # Strip LLM preamble that sometimes precedes the corrected text
-    result = re.sub(
-        r"^(?:Here is the corrected.*?|Ecco il testo corretto.*?):\s*\n+",
-        "", result, count=1, flags=re.IGNORECASE,
-    )
-    return result
+    return _strip_preamble(response.content[0].text)
+
+
+# ---------------------------------------------------------------------------
+# Batch API support
+# ---------------------------------------------------------------------------
+
+def _build_batch_requests(
+    chapters: list[dict],
+    pre_texts: dict[str, str],
+    pre_flags: dict[str, list[dict]],
+    skip_ids: set[str],
+) -> list[dict]:
+    """Build batch API request list for LLM OCR correction.
+
+    Returns list of {"custom_id": ch_id, "params": {...}} dicts.
+    Skips chapters whose id is in skip_ids (already cached).
+    """
+    from adjudicate import zingarelli_context_for_flags
+
+    requests = []
+    for ch in chapters:
+        ch_id = ch["id"]
+        if ch_id in skip_ids:
+            continue
+        text = pre_texts.get(ch_id, "")
+        if not text:
+            continue
+        flags = pre_flags.get(ch_id, [])
+        zing_ctx = zingarelli_context_for_flags(flags) if flags else ""
+        user_content = _build_user_content(text, ch["title"], zing_ctx)
+        requests.append({
+            "custom_id": ch_id,
+            "params": {
+                "model": _LLM_CORRECT_MODEL,
+                "max_tokens": _LLM_CORRECT_MAX_TOKENS,
+                "system": _LLM_CORRECT_SYSTEM,
+                "messages": [{"role": "user", "content": user_content}],
+            },
+        })
+    return requests
+
+
+def submit_batch(
+    data_dir: Path,
+    chapters: list[dict],
+    pre_texts: dict[str, str],
+    pre_flags: dict[str, list[dict]],
+    api_key: str,
+) -> str | None:
+    """Submit a batch of LLM OCR correction requests.
+
+    Returns batch_id, or None if all chapters are already cached.
+    If an in-progress batch exists (from a prior interrupted run), returns
+    its batch_id without re-submitting.
+    """
+    import anthropic
+
+    from utils import atomic_write_json
+
+    state_dir = data_dir.parent / "state"
+    batch_state_path = state_dir / "llm_batch.json"
+    llm_cache_dir = state_dir / "llm_cleaned"
+    llm_cache_dir.mkdir(parents=True, exist_ok=True)
+
+    # Check for in-progress batch from a prior run
+    if batch_state_path.exists():
+        batch_state = json.loads(batch_state_path.read_text(encoding="utf-8"))
+        if batch_state.get("status") == "submitted":
+            batch_id = batch_state["batch_id"]
+            print(f"  Found in-progress batch {batch_id}, resuming polling...")
+            return batch_id
+
+    # Determine which chapters already have cached results
+    skip_ids = {p.stem for p in llm_cache_dir.glob("*.txt")}
+    requests = _build_batch_requests(chapters, pre_texts, pre_flags, skip_ids)
+
+    if not requests:
+        print("  All chapters already cached — nothing to submit.")
+        return None
+
+    print(f"  Submitting batch: {len(requests)} chapters ({len(skip_ids)} already cached)")
+    client = anthropic.Anthropic(api_key=api_key, timeout=120.0)
+    batch = client.messages.batches.create(requests=requests)
+
+    # Save batch state for resumption
+    atomic_write_json(batch_state_path, {
+        "batch_id": batch.id,
+        "created_at": batch.created_at.isoformat() if hasattr(batch.created_at, 'isoformat') else str(batch.created_at),
+        "chapter_ids": [r["custom_id"] for r in requests],
+        "status": "submitted",
+    })
+    print(f"  Batch submitted: {batch.id}")
+    return batch.id
+
+
+def poll_and_collect_batch(
+    data_dir: Path,
+    api_key: str,
+    batch_id: str,
+    poll_interval: int = 30,
+) -> dict:
+    """Poll a batch until complete, then save results to LLM cache.
+
+    Returns {"succeeded": N, "failed": N, "failed_ids": [...]}.
+    """
+    import anthropic
+
+    from utils import atomic_write_json
+
+    state_dir = data_dir.parent / "state"
+    batch_state_path = state_dir / "llm_batch.json"
+    llm_cache_dir = state_dir / "llm_cleaned"
+
+    client = anthropic.Anthropic(api_key=api_key, timeout=120.0)
+
+    # Poll until batch ends
+    print(f"  Polling batch {batch_id} (every {poll_interval}s)...")
+    try:
+        while True:
+            status = client.messages.batches.retrieve(batch_id)
+            counts = status.request_counts
+            total = counts.succeeded + counts.errored + counts.canceled + counts.expired + counts.processing
+            print(
+                f"\r  Batch: {counts.succeeded} succeeded, "
+                f"{counts.errored} errored, "
+                f"{counts.processing} processing "
+                f"[{status.processing_status}]   ",
+                end="", flush=True,
+            )
+            if status.processing_status == "ended":
+                break
+            time.sleep(poll_interval)
+    except KeyboardInterrupt:
+        print(f"\n  Interrupted. Resume later with: --batch --llm-cleanup")
+        print(f"  Batch ID: {batch_id}")
+        return {"succeeded": 0, "failed": 0, "failed_ids": []}
+
+    print()  # newline after progress
+
+    # Collect results
+    succeeded = 0
+    failed_ids = []
+    for result in client.messages.batches.results(batch_id):
+        ch_id = result.custom_id
+        if result.result.type == "succeeded":
+            text = result.result.message.content[0].text
+            text = _strip_preamble(text)
+            cache_path = llm_cache_dir / f"{ch_id}.txt"
+            cache_path.write_text(text, encoding="utf-8")
+            succeeded += 1
+        else:
+            failed_ids.append(ch_id)
+            print(f"  Warning: {ch_id} {result.result.type}")
+
+    # Update batch state
+    atomic_write_json(batch_state_path, {
+        "batch_id": batch_id,
+        "status": "completed",
+        "succeeded": succeeded,
+        "failed": len(failed_ids),
+        "failed_ids": failed_ids,
+    })
+
+    return {"succeeded": succeeded, "failed": len(failed_ids), "failed_ids": failed_ids}
 
 
 _FLAG_REVIEW_SYSTEM = (
@@ -967,7 +1220,7 @@ def extract_corrections_from_diff(
     return corrections
 
 
-def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: str | None = None, chapter: str | None = None) -> None:
+def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: str | None = None, chapter: str | None = None, batch: bool = False) -> None:
     """Clean reconciled text and produce final Italian markdown.
 
     If chapter is set (e.g. 'p2_ch21'), only that chapter gets the LLM pass;
@@ -1013,6 +1266,30 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
 
     chapters.sort(key=chapter_sort_key)
 
+    # --- Batch API path: submit all chapters at once, poll for results ---
+    if batch and use_llm:
+        if not api_key:
+            api_key = os.environ.get("ANTHROPIC_API_KEY")
+        if not api_key:
+            print("  Error: --batch requires ANTHROPIC_API_KEY")
+        else:
+            print("  Pre-computing cleaned text for batch submission...")
+            pre_texts: dict[str, str] = {}
+            pre_flags: dict[str, list[dict]] = {}
+            for ch in chapters:
+                text, flags, _ = clean_text(ch["text"], word_set)
+                pre_texts[ch["id"]] = text
+                if flags:
+                    pre_flags[ch["id"]] = flags
+
+            batch_id = submit_batch(data_dir, chapters, pre_texts, pre_flags, api_key)
+            if batch_id:
+                stats = poll_and_collect_batch(data_dir, api_key, batch_id)
+                print(f"  Batch complete: {stats['succeeded']} succeeded, {stats['failed']} failed")
+                if stats["failed_ids"]:
+                    print(f"  Failed: {', '.join(stats['failed_ids'])}")
+            # Fall through to existing loop — everything is now cached
+
     # Build markdown output
     md_lines = [
         "# Per la Libertà!",
@@ -1034,13 +1311,49 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
     total_corrections_applied = 0
     new_corrections: dict[str, list[dict]] = {}
 
+    # Full-text LLM cache: stores the complete corrected chapter text so
+    # we don't depend on fragile context-window matching in corrections.json.
+    llm_cache_dir = data_dir.parent / "state" / "llm_cleaned"
+    llm_cache_dir.mkdir(parents=True, exist_ok=True)
+
     for i, ch in enumerate(chapters):
         text, flags, punct_fixes = clean_text(ch["text"], word_set)
         total_punct_fixes += punct_fixes
 
-        # Apply durable corrections (LLM fixes from prior runs + manual overrides)
-        text, flags, n_applied = apply_corrections(text, ch["id"], corrections, flags)
-        total_corrections_applied += n_applied
+        # Check for full-text LLM cache (preferred over corrections.json)
+        llm_cache_path = llm_cache_dir / f"{ch['id']}.txt"
+        has_llm_cache = llm_cache_path.exists()
+
+        # Determine if this chapter is about to get a fresh LLM pass
+        will_run_llm = False
+        if use_llm:
+            if chapter is not None:
+                will_run_llm = ch["id"] == chapter
+            else:
+                will_run_llm = not has_llm_cache
+
+        if will_run_llm:
+            # Chapter is about to be LLM-corrected — use clean_text() output
+            # directly.  Don't apply stale corrections that would corrupt
+            # the LLM input.  Manual corrections are also skipped because
+            # the LLM will produce a complete corrected text.
+            pass
+        elif has_llm_cache:
+            # Load full cached LLM-corrected text directly — avoids the
+            # fragile context-window matching in corrections.json which
+            # breaks whenever clean_text() is modified.
+            text = llm_cache_path.read_text(encoding="utf-8")
+            # Still apply manual (non-LLM) corrections on top
+            manual_corrs = {
+                ch["id"]: [e for e in corrections.get(ch["id"], [])
+                           if e.get("source") != "llm"]
+            }
+            text, flags, n_applied = apply_corrections(text, ch["id"], manual_corrs, flags)
+            total_corrections_applied += n_applied
+        else:
+            # No LLM cache, no LLM pass — apply corrections.json as fallback
+            text, flags, n_applied = apply_corrections(text, ch["id"], corrections, flags)
+            total_corrections_applied += n_applied
 
         if flags:
             all_flags[ch["id"]] = flags
@@ -1050,12 +1363,7 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
             bar_width = 30
             filled = int(bar_width * (i / total))
             bar = "█" * filled + "░" * (bar_width - filled)
-            # Determine if this chapter should get the LLM pass
-            if chapter is not None:
-                run_llm = ch["id"] == chapter
-            else:
-                run_llm = not corrections.get(ch["id"])
-            if not run_llm:
+            if not will_run_llm:
                 print(f"\r  [{bar}] {i+1}/{total}  {ch['title']:<35s} (cached)", end="", flush=True)
             else:
                 print(f"\r  [{bar}] {i+1}/{total}  {ch['title']:<35s}", end="", flush=True)
@@ -1067,7 +1375,9 @@ def cleanup(data_dir: Path, output_dir: Path, use_llm: bool = False, api_key: st
                         zingarelli_ctx = zingarelli_context_for_flags(flags)
                     pre_llm_text = text
                     text = llm_correct_italian(text, ch["title"], api_key, zingarelli_ctx)
-                    # Extract individual corrections from the LLM diff
+                    # Save full corrected text to cache
+                    llm_cache_path.write_text(text, encoding="utf-8")
+                    # Also extract individual corrections for tracking/review
                     ch_corrections = extract_corrections_from_diff(
                         pre_llm_text, text, ch["id"]
                     )

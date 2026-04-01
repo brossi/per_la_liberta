@@ -1,10 +1,28 @@
 {
+  "p1_ch22": [
+    {
+      "token": "colo-calma",
+      "left": "colo",
+      "right": "calma",
+      "offset": 9986,
+      "reason": "unresolved"
+    }
+  ],
   "p2_ch13": [
     {
       "token": "leg-lama",
       "left": "leg",
       "right": "lama",
-      "offset": 11909,
+      "offset": 11623,
+      "reason": "unresolved"
+    }
+  ],
+  "p2_ch18": [
+    {
+      "token": "Ht-buudante",
+      "left": "Ht",
+      "right": "buudante",
+      "offset": 3061,
       "reason": "unresolved"
     }
   ]

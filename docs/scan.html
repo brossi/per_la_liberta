@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Per la Libertà! — Source Scan</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a1a; color: #ccc; font-family: system-ui, sans-serif;
+         display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
+  .header { padding: 0.5em 1em; font-size: 0.9em; color: #999;
+             border-bottom: 1px solid #333; flex-shrink: 0;
+             display: flex; justify-content: space-between; align-items: center; }
+  .header a { color: #c47; text-decoration: none; }
+  .viewer { flex: 1; overflow: auto; display: flex; align-items: flex-start;
+             justify-content: center; padding: 0.5em; }
+  .viewer img { max-width: 100%; max-height: 100%; height: auto;
+                 border: 1px solid #333; }
+  .nav { padding: 0.6em 1em; border-top: 1px solid #333; flex-shrink: 0;
+          display: flex; justify-content: space-between; align-items: center; }
+  .nav button { background: #333; border: 1px solid #555; color: #ccc;
+                 padding: 0.5em 1.2em; border-radius: 4px; font-size: 1em;
+                 cursor: pointer; }
+  .nav button:active { background: #555; }
+  .nav button:disabled { opacity: 0.3; }
+  .nav .page-info { font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="header">
+  <span id="title">Source Scan</span>
+  <a id="ia-link" href="#" target="_blank">Internet Archive</a>
+</div>
+<div class="viewer">
+  <img id="img" src="" alt="Source page scan">
+</div>
+<div class="nav">
+  <button id="prev">&lsaquo; Prev</button>
+  <span class="page-info" id="page-info"></span>
+  <button id="next">Next &rsaquo;</button>
+</div>
+<script>
+const OFFSET = 6;
+const IA_ITEM = 'perlalibertdal00cres';
+const m = location.hash.match(/^#(\d+)-(\d+)$/);
+if (!m) { document.body.innerHTML = '<p style="padding:2em;color:#999">No page range specified. URL should be scan.html#START-END</p>'; }
+else {
+  let cur = parseInt(m[1]), start = cur, end = parseInt(m[2]);
+  const img = document.getElementById('img');
+  const info = document.getElementById('page-info');
+  const iaLink = document.getElementById('ia-link');
+  const prevBtn = document.getElementById('prev');
+  const nextBtn = document.getElementById('next');
+  function show(n) {
+    cur = Math.max(start, Math.min(n, end));
+    const pad = String(cur).padStart(4, '0');
+    img.src = 'assets/page_images/page_' + pad + '.png';
+    info.textContent = 'p. ' + (cur - OFFSET) + ' of ' + (start - OFFSET) + '\u2013' + (end - OFFSET);
+    prevBtn.disabled = cur <= start;
+    nextBtn.disabled = cur >= end;
+    iaLink.href = 'https://archive.org/details/' + IA_ITEM + '/page/n' + (cur - 1) + '/mode/1up';
+    document.getElementById('title').textContent = 'p. ' + (cur - OFFSET);
+  }
+  prevBtn.addEventListener('click', () => show(cur - 1));
+  nextBtn.addEventListener('click', () => show(cur + 1));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') show(cur - 1);
+    if (e.key === 'ArrowRight') show(cur + 1);
+  });
+  // Swipe support for mobile
+  let touchX = 0;
+  document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; });
+  document.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  });
+  show(start);
+}
+</script>
+</body>
+</html>
