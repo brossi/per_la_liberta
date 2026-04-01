@@ -22,9 +22,6 @@ data/dictionaries/morph-it_048.txt
 # OCR per-page progress (resume state)
 data/ocr_*_pages/
 
-# Rendered page images (large, generated from PDF)
-assets/page_images/
-
 # Scratch / auto-generated
 main.py
 

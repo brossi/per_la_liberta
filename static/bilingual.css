@@ -5,7 +5,7 @@
 /* === Font === */
 @font-face {
   font-family: 'Bodoni Moda';
-  src: url('../assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('../docs/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 400 900;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: 'Bodoni Moda';
-  src: url('../assets/fonts/Bodoni_Moda/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('../docs/assets/fonts/Bodoni_Moda/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 400 900;
   font-style: italic;
   font-display: swap;
@@ -22,7 +22,7 @@
 /* Small Caps variant for headers */
 @font-face {
   font-family: 'Bodoni Moda SC';
-  src: url('../assets/fonts/Bodoni_Moda_SC/BodoniModaSC-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url('../docs/assets/fonts/Bodoni_Moda_SC/BodoniModaSC-VariableFont_opsz,wght.ttf') format('truetype');
   font-weight: 400 900;
   font-style: normal;
   font-display: swap;

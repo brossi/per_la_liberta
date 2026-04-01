@@ -331,8 +331,8 @@ def generate_html(
     except ValueError:
         css_rel = Path(os.path.relpath(CSS_PATH.resolve(), output_path.parent.resolve()))
 
-    # Path to page images relative to output HTML
-    page_img_dir = Path(__file__).parent / "assets" / "page_images"
+    # Path to page images relative to output HTML (canonical copy in docs/assets/)
+    page_img_dir = Path(__file__).parent / "docs" / "assets" / "page_images"
     try:
         page_img_rel = page_img_dir.resolve().relative_to(output_path.parent.resolve())
     except ValueError:
@@ -906,10 +906,12 @@ def typeset(output_dir: Path, state_dir: Path | None = None, site_base: str | No
         # Copy HTML, fixing relative paths for docs/ structure
         docs_html = (html_path.read_text(encoding="utf-8")
                      .replace("../static/bilingual.css", "static/bilingual.css")
-                     .replace("../assets/page_images", "assets/page_images"))
+                     .replace("../docs/assets/page_images", "assets/page_images"))
         (docs_dir / "index.html").write_text(docs_html, encoding="utf-8")
         shutil.copy2(scan_path, docs_dir / "scan.html")
-        shutil.copy2(CSS_PATH, docs_dir / "static" / "bilingual.css")
+        # Copy CSS, fixing font paths for docs/ structure
+        docs_css = CSS_PATH.read_text(encoding="utf-8").replace("../docs/assets/", "../assets/")
+        (docs_dir / "static" / "bilingual.css").write_text(docs_css, encoding="utf-8")
         print(f"  Synced to docs/")
 
     # PDF generation disabled — WeasyPrint requires DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
