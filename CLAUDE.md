@@ -4,6 +4,10 @@
 
 English translation of *"Per la libertà! (Dalle mie conversazioni col conte Carlo di Rudio, complice di Felice Orsini)"* by Cesare Crespi (1913). The book documents conversations with Count Carlo di Rudio about Italian unification, the Risorgimento, and the Orsini conspiracy against Napoleon III. Published by Canessa Printing Co., 708 Montgomery St., San Francisco.
 
+## Repository
+
+Single repo at `brossi/PER_LA_LIBERTA`. GitHub Pages serves from `/docs` on `main` branch.
+
 ## Pipeline Architecture
 
 **10-step pipeline** (`pipeline.py`): download → ocr → reconcile → triage → cleanup → adjudicate → validate → translate → refine → typeset
@@ -14,9 +18,9 @@ English translation of *"Per la libertà! (Dalle mie conversazioni col conte Car
 | 2. OCR | `ocr.py` | Gemini Flash (page mapping) + Gemini Pro (quality witness) on the LOC PDF scan |
 | 3. Reconcile | `reconcile.py` | 2-way paragraph alignment (Copies 1 & 2) with Copy 3 as word-level adjudicator |
 | 4. Triage | `triage.py` | LLM categorization + resolution of remaining disagreements |
-| 5. Cleanup | `cleanup.py` | Noise removal, regex pre-filters, dehyphenation, symspellpy correction, spaCy NER protection |
+| 5. Cleanup | `cleanup.py` | Noise removal, regex pre-filters, dehyphenation, symspellpy correction, spaCy NER protection, LLM correction |
 | 5b. Adjudicate | `adjudicate.py` | Classifies unresolved hyphens via Zingarelli 1922 dictionary: compound / NER / unknown |
-| 6. Validate | `validate.py` | 6 assertion checks on cleaned output |
+| 6. Validate | `validate.py` | 7 checks: structure, word count, quotes, char coverage, ASCII remnants, word quality (NER-aware), content preservation |
 | 7. Translate | `translate.py` | Claude Sonnet 4.6 with extended thinking (32K budget), per-chapter with resume |
 | 7b. Refine | `refine.py` | Post-hoc translation refinement with Edgren 1901 dictionary context + version tracking |
 | 8. Typeset | `typeset.py` | Bilingual HTML/PDF with Loeb-style facing pages, slide-in source scan overlay, revision marginalia |
@@ -37,7 +41,9 @@ uv run python pipeline.py --step ocr
 uv run python pipeline.py --step reconcile
 uv run python pipeline.py --step triage
 uv run python pipeline.py --step cleanup
-uv run python pipeline.py --step cleanup --llm-cleanup  # with LLM correction + Zingarelli context
+uv run python pipeline.py --step cleanup --llm-cleanup              # sync LLM correction (per-chapter)
+uv run python pipeline.py --step cleanup --llm-cleanup --batch      # batch API (all chapters, 50% cheaper)
+uv run python pipeline.py --step cleanup --llm-cleanup --chapter p1_ch18  # re-run specific chapter
 uv run python pipeline.py --step adjudicate
 uv run python pipeline.py --step validate
 uv run python pipeline.py --step translate
@@ -77,47 +83,75 @@ Three independent OCR witnesses:
 
 Copies 1 & 2 define paragraph structure via 2-way alignment. Copy 3 participates only at word level: for each aligned paragraph pair, the corresponding text is located in Copy 3 via chunk-anchor substring search, then used as a third witness for `reconcile_words_3way()` majority voting.
 
+### LLM Cleanup Architecture
+
+Two modes for LLM OCR correction:
+
+- **Synchronous** (`--llm-cleanup`): one `messages.create()` call per chapter, useful for re-running individual chapters with `--chapter`
+- **Batch API** (`--llm-cleanup --batch`): submits all uncached chapters as a single Anthropic Message Batch, 50% cost reduction, results in ~15-60 minutes
+
+**Full-text LLM cache** (`state/llm_cleaned/{chapter_id}.txt`): the authoritative corrected text per chapter. This replaces the earlier corrections.json context-window approach which was fragile — any change to `clean_text()` would invalidate the 40-char context strings, causing corrections to silently fail to apply.
+
+Cache behavior:
+- If cache exists for a chapter: loaded directly, skipping `clean_text()` output
+- Manual corrections (non-LLM, `source != "llm"` in corrections.json) still apply on top of cached text
+- To refresh a chapter: `--llm-cleanup --chapter X` regenerates its cache from current `clean_text()` + LLM
+- Batch mode skips chapters that already have cache files
+- Cache is gitignored (transient, regenerable)
+
+`corrections.json` is retained as an audit trail and for manual overrides, but is no longer the primary mechanism for applying LLM fixes.
+
 ### Italian Linguistic Handling
-- **Accent preservation**: symspellpy edit-distance-1 corrections skip accent-only changes (e.g., pàtria→patria) — defers to LLM which has sentence context. The 1913 text uses accento facoltativo liberally.
-- **NER protection**: spaCy `it_core_news_lg` protects proper nouns from false corrections. Only tokens that are BOTH entity-tagged AND capitalized/PROPN are protected.
+- **Accent preservation**: symspellpy corrections skip accent-only changes (e.g., pàtria→patria) — defers to LLM which has sentence context. The 1913 text uses accento facoltativo liberally.
+- **NER protection**: spaCy `it_core_news_lg` protects proper nouns from false corrections. Exception: ALL-CAPS words (≥4 chars) bypass NER protection since spaCy mis-tags garbled OCR as PROPN/ORG (e.g., "PRESBNTK" tagged as ORG).
+- **ALL-CAPS edit distance**: symspellpy uses `max_edit_distance=2` for uppercase words (≥4 chars) vs distance=1 for normal words, since ALL-CAPS text tends to have more OCR damage.
 - **Contraction-aware tokenization**: spaCy splits `dell'Italia` → `["dell'", "Italia"]` for independent correction.
 - **Dictionary**: ~708K-entry Italian dictionary (`data/dictionaries/it_combined.txt`) from FrequencyWords + Morph-it morphological lexicon.
+- **Stray symbol stripping**: `clean_text()` removes OCR noise characters (`■`, `•`, `^`, `|`, `§`, `¶`, `£→E`) that appear mid-prose.
+- **Sentence deduplication**: removes duplicate sentence fragments within paragraphs caused by OCR page-boundary merges.
+- **LLM preamble stripping**: regex removes "I'll carefully correct...", "Ecco il testo corretto:", and other meta-commentary the LLM sometimes emits before the corrected text.
 
 ### Dehyphenation
 Multi-pass strategy in `cleanup.py` to fix words broken across OCR line breaks. Runs before symspellpy to prevent false corrections on fragments.
 
 1. **Simple join** — remove hyphen, check dictionary
-2. **OCR boundary substitution** — try `i→r` and `i→e` at the 1-2 characters flanking the hyphen point, then check dictionary. These are the dominant Bodoni typeface confusions: lowercase `r` is a short vertical stroke whose top-right flag is lost at scan edges, reading as `i`; `e` and `i` differ only in the crossbar.
-3. **Drop spurious boundary character** — OCR sometimes reads `r` as `ri`, inserting an extra `i` (e.g., `assicuri-azioni` from `assicurazioni`)
+2. **OCR boundary substitution** — try `i→r` and `i→e` at the 1-2 characters flanking the hyphen point, then check dictionary. These are the dominant Bodoni typeface confusions.
+3. **Drop spurious boundary character** — OCR sometimes reads `r` as `ri`, inserting an extra `i`
 4. **Drop duplicated character at boundary** — e.g., `sottosta-ati` → `sottostati`
 
-All passes use accent-insensitive dictionary validation (`_in_word_set`). Minimum 2-char fragments to filter noise. Tokens that fail all passes are written to `data/dehyphenation_flags.json` with reason codes for adjudication.
+All passes use accent-insensitive dictionary validation (`_in_word_set`). Minimum 2-char fragments to filter noise.
+
+### Validation (Step 6)
+Seven assertion checks in `validate.py`:
+
+1. **chapter_count** — verifies 58 chapters (prefazione + 24 P1 + 33 P2)
+2. **no_empty_chapters** — flags chapters with < 50 chars of content
+3. **quote_balance** — checks guillemets and smart quotes
+4. **italian_char_coverage** — flags if > 0.5% non-Italian characters
+5. **no_ascii_remnants** — detects page marker artifacts and OCR noise runs
+6. **word_quality** — per-word dictionary lookup + pattern-based garble detection (mid-word noise, mid-word capitals, impossible consonant clusters, English words). Uses spaCy NER to filter proper noun false positives. Zero high-severity flags = PASS.
+7. **word_count_preservation** — cleaned text ≥ 60% of reconciled word count
 
 ### Zingarelli 1922 Reference Dictionary
-Chunked OCR text of the *Vocabolario della Lingua Italiana* by Nicola Zingarelli (2nd edition, 1922) — a period-appropriate authority for the 1913 source text. Public domain, sourced from Internet Archive (funded by Wikimedia Italia).
+Chunked OCR text of the *Vocabolario della Lingua Italiana* by Nicola Zingarelli (2nd edition, 1922) — a period-appropriate authority for the 1913 source text. Public domain, sourced from Internet Archive.
 
 - 22 letter chunks in `assets/dictionary/zingarelli_1922/` (A–Z, ~13MB total) + `index.json`
-- Used by `adjudicate.py` to classify unresolved hyphens: compound (both parts in dictionary), NER (proper noun), or unknown (needs LLM)
-- Used by `cleanup.py --llm-cleanup` to provide the LLM with dictionary context for flagged tokens in each chapter
+- Used by `adjudicate.py` to classify unresolved hyphens and by `cleanup.py --llm-cleanup` for Zingarelli context in LLM prompts
 - Lookup via `adjudicate.zingarelli_lookup(word)` and `adjudicate.zingarelli_context_for_flags(flags)`
 
 ### Edgren 1901 Italian-English Dictionary
-OCR text of the *Italian and English Dictionary* by Hjalmar Edgren (1901) — provides period-appropriate Italian→English translations. Complements Zingarelli (which validates Italian word existence) with English equivalents.
+OCR text of the *Italian and English Dictionary* by Hjalmar Edgren (1901) — provides period-appropriate Italian→English translations.
 
 - 22 letter chunks in `assets/dictionary/edgren_1901/` (A–Z) + `headwords.json` + `index.json`
-- Raw OCR from Internet Archive (`cu31924019173982_djvu.txt`, ~4.6MB)
-- Dictionary uses compressed entry format: sub-entries prefixed with `-` (e.g., `-tà` under `liber-` for `libertà`)
-- Lookup via `edgren.edgren_lookup(word)` — lemmatizes via spaCy, tries exact headword match, flexible text search (handles hyphens/accents), then fuzzy fallback
-- Batch lookup via `edgren.edgren_entries_for_words(words)` — ~64% hit rate on typical chapter vocabulary
-- Used by `translate.py --with-edgren` for prompt enrichment during translation
-- Used by `refine.py` for post-hoc translation refinement
+- Lookup via `edgren.edgren_lookup(word)` — lemmatizes via spaCy, tries exact headword match, flexible text search, then fuzzy fallback
+- Used by `translate.py --with-edgren` for prompt enrichment and `refine.py` for post-hoc refinement
 
 ### Translation
 - Claude Sonnet 4.6 with 128K max_tokens and 32K thinking budget
 - Page provenance markers (`<!-- pages:N-M -->`) extracted before translation, reinserted after
 - Truncation detection: flags `stop_reason == "max_tokens"` or output < 30% of input length
 - Resumable via `state/translation_progress.json`
-- Optional `--with-edgren` flag enriches prompts with Edgren 1901 dictionary context for period-appropriate word choices
+- Optional `--with-edgren` flag enriches prompts with Edgren 1901 dictionary context
 
 ### Translation Refinement
 - Post-hoc review of existing translations against Edgren 1901 dictionary evidence
@@ -125,16 +159,16 @@ OCR text of the *Italian and English Dictionary* by Hjalmar Edgren (1901) — pr
 - Configurable scope: all chapters, specific chapters via `--chapter`
 - Claude annotates changes with `<change old="..." reason="...">new text</change>` inline tags
 - Full snapshot of `state/translations/` before each refinement pass
-- Change metadata stored per-chapter in `state/translation_revisions/changes/`
 - Revert to any prior version via `--revert-to N`
 - Changes visualized as marginalia in the bilingual HTML (toggle via ✎ button)
 
 ### Typesetting
 - **Typeface**: Bodoni Moda (variable font with optical size axis) — matches 1913 Italian Didone aesthetic
 - **Layout**: Loeb Classical Library-style facing pages (Italian left, English right)
+- **Page citations**: Positioned in the right marginalia gutter (same column as revision annotations), aligned with first paragraph of each chapter. Clicking the label opens the source scan overlay. QR code icon reveals a centered viewport dialog for scanning to another device.
 - **Source scan overlay**: Slide-in panel from left showing original PDF page images, navigable with arrow keys
 - **TOC**: Slide-in chapter index with collapsible Part 1/Part 2 `<details>/<summary>` sections
-- **CSS variables**: All colors, borders, shadows, and backgrounds defined in `:root` (16 variables) — no hardcoded hex values outside `:root` and `@media print`
+- **CSS variables**: All colors, borders, shadows, and backgrounds defined in `:root` — no hardcoded hex values outside `:root` and `@media print`
 - **PDF**: WeasyPrint (HTML→PDF). Render per-chapter then merge for performance (not yet implemented — currently single-pass).
 
 ## File Structure
@@ -148,9 +182,9 @@ data/
   flagged_segments.json           # Word-level disagreements
   chapter_pages.json              # Chapter → PDF page mapping
   dictionaries/it_combined.txt    # Italian frequency dictionary
-  review_flags.json                # Tokens needing LLM review: unresolved hyphens, stray symbols (step 5 sidecar, pre-LLM)
-  review_flags_remaining.json     # Flags still present in output after LLM corrections (post-LLM)
-  corrections.json                # Durable corrections: LLM fixes + manual overrides + image-based fixes (persists across re-runs)
+  review_flags.json               # Tokens needing LLM review (step 5 sidecar)
+  review_flags_remaining.json     # Flags remaining after LLM corrections
+  corrections.json                # Audit trail: LLM diffs + manual overrides
   adjudication_results.json       # Zingarelli-classified tokens (step 5b)
   validation_report.json          # Validation results (step 6)
 output/
@@ -158,7 +192,7 @@ output/
   english_translation.md          # English translation (step 7)
   bilingual.html                  # Bilingual web edition (step 8)
   bilingual.pdf                   # Bilingual print edition (step 8)
-  source_pages.json               # Chapter → IA page URLs (generated during step 7)
+  source_pages.json               # Chapter → IA page URLs (step 7)
 state/
   translation_progress.json       # Per-chapter translation status
   translations/                   # Individual chapter .md files
@@ -166,57 +200,30 @@ state/
     revision_log.json             # Version history + snapshot references
     changes/                      # Per-version per-chapter change metadata
     snapshots/                    # Full chapter snapshots by timestamp
+  llm_cleaned/                    # Full-text LLM cache per chapter (gitignored)
+  llm_batch.json                  # Batch API state (gitignored)
 assets/
-  dictionary/zingarelli_1922/     # Chunked 1922 Italian dictionary (22 letter files + index.json)
-  dictionary/edgren_1901/         # Chunked 1901 Italian-English dictionary (22 letter files + headwords.json)
+  dictionary/zingarelli_1922/     # Chunked 1922 Italian dictionary
+  dictionary/edgren_1901/         # Chunked 1901 Italian-English dictionary
   fonts/Bodoni_Moda/              # Variable + static font files (SIL OFL)
   fonts/Bodoni_Moda_SC/           # Small caps variant
   page_images/                    # Rendered PDF pages as PNG (gitignored)
+docs/                             # GitHub Pages site (served from /docs on main)
+  index.html                      # Bilingual web edition (synced from output/)
+  scan.html                       # Standalone scan viewer for QR codes
+  static/bilingual.css            # Stylesheet (synced from static/)
+  assets/                         # Fonts + page images for web
 static/
-  bilingual.css                   # Typesetting stylesheet
+  bilingual.css                   # Typesetting stylesheet (canonical copy)
 ```
 
 ## Current Status
 
-- All pipeline steps (1-8) complete
-- LLM cleanup (Sonnet 4.6) made ~5,500 durable corrections across all 58 chapters, including targeted passes on p1_ch13, p1_ch18, p1_ch22, p2_ch13, p2_ch18
-- Corrections stored in `data/corrections.json` — persists across re-runs, no redundant API calls
-- Review flags: 0 remaining — all 13 flags from reconcile fix resolved via direct corrections + LLM cleanup
-- Accepted tokens stored in `corrections.json` with `find == replace` and reason `accepted:*`
-- Translation (step 7) and typesetting (step 8) complete — bilingual HTML generated
+- All pipeline steps (1-8) complete and validated
+- LLM cleanup via Batch API: all 58 chapters corrected, full-text cache populated in `state/llm_cleaned/`
+- Validation passes all 7 checks: zero high-severity garble patterns, zero stray symbols, zero LLM instruction leaks
+- Translation (step 7) and typesetting (step 8) complete — bilingual HTML deployed via GitHub Pages
 - The PDF on disk is the LOC scan: `public-gdcmassbookdig-perlalibertdal00cres-perlalibertdal00cres.pdf` (82MB, gitignored)
-
-### Reconcile fix: Copy 3 role inversion (resolved)
-
-The original `align_paragraphs_3way()` treated Copy 3 (Gemini OCR) as an equal paragraph-level witness. Gemini produces 5-16x fewer paragraphs than Copies 1/2 (no blank lines at page boundaries), so `SequenceMatcher` couldn't align them, causing content drops, interleaving, and wholesale appending of unmatched mega-paragraphs.
-
-**Fix applied**: `align_paragraphs_3way()` was replaced with:
-1. **2-way paragraph alignment** using existing `align_paragraphs()` on Copies 1 & 2 only
-2. **Per-paragraph Copy 3 lookup** via `_find_copy3_text()` — chunk-anchor substring search with quality gate (SequenceMatcher ratio >= 0.50)
-3. **Copy 3 never contributes paragraphs** — only used as third witness for `reconcile_words_3way()` when a match is found; falls back to 2-way `reconcile_words()` otherwise
-
-Key functions added to `reconcile.py`:
-- `_build_norm_map(text)` — accent-stripped normalization with original position tracking
-- `_find_copy3_region(para_norm, ch3_norm, search_start)` — chunk-anchor search with monotonic cursor
-- `_find_copy3_text(para_text, ch3_norm, ch3_orig, norm_to_orig, search_start)` — top-level lookup with quality gate
-
-Four previously garbled passages (p1_ch12, p1_ch13, p2_ch13, p2_ch28) were resolved by the reconcile fix. Residual OCR noise in p1_ch13, p1_ch18, p1_ch22, p2_ch13, and p2_ch18 was cleaned up via targeted LLM cleanup passes (Sonnet 4.6).
-
-### Pipeline changes made during cleanup
-- `pipeline.py` loads `.env` via `python-dotenv` (added as dependency)
-- `--chapter` flag: run reconcile/cleanup on specific chapters, comma-separated (e.g. `--chapter p1_ch01,p1_ch02`)
-- Reconcile: per-chapter progress logging, incremental saves to `reconciled_chapters.json`
-- Reconcile: `_is_near_duplicate()` uses rapidfuzz two-tier matching (individual + concatenated window) instead of difflib
-- Cleanup: `join_broken_paragraphs()` joins paragraphs split at OCR page boundaries (lowercase continuation heuristic)
-- Cleanup: `is_noise_line()` strengthened with mixed-alphanumeric and special-character-density checks
-- Cleanup: auto-fixes OCR asterisks, missing spaces after punctuation
-- Cleanup: `llm_fix_flagged_tokens()` for targeted LLM review with optional dual-model verification (Claude + Gemini)
-- Cleanup: stale flag filter removes flags whose token no longer exists in cleaned text
-- Cleanup: accepted tokens in `corrections.json` (find == replace) suppress flags across re-runs
-- Cleanup skips LLM API calls for chapters that already have durable corrections in `corrections.json`
-- Flag reconciliation runs automatically after `--llm-cleanup`, writes `review_flags_remaining.json`
-- API client timeout increased to 600s (from 300s) for large chapters
-- TODO in `cleanup.py`: add Gemini 3 Pro as fallback LLM when Anthropic API is unavailable
 
 ## Related Project
 
