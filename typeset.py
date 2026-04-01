@@ -287,6 +287,40 @@ def _load_revision_changes(state_dir: Path | None) -> dict[str, list[dict]]:
     return {ch_id: list(changes.values()) for ch_id, changes in accumulated.items()}
 
 
+def _build_overlay_nav(
+    sp_chapters: list[dict],
+    content_chapter_ids: list[str],
+    overlay_chapters: list[dict],
+) -> list[dict]:
+    """Build the CHAPTERS array for the overlay nav dropdown.
+
+    Merges non-content entries from the mapping file (front matter, cover,
+    index, back matter) with content chapter entries, preserving order.
+    """
+    content_set = set(content_chapter_ids)
+    # Index into overlay_chapters (content chapters in order)
+    oc_idx = 0
+    result = []
+    for entry in sp_chapters:
+        if entry["id"] in content_set:
+            # Insert the corresponding overlay chapter entry
+            if oc_idx < len(overlay_chapters):
+                result.append(overlay_chapters[oc_idx])
+                oc_idx += 1
+        else:
+            result.append({
+                "label": entry.get("label", entry["id"].replace("_", " ").title()),
+                "page": entry["start_scan"],
+                "chId": "",
+                "group": "",
+            })
+    # Append any remaining content chapters
+    while oc_idx < len(overlay_chapters):
+        result.append(overlay_chapters[oc_idx])
+        oc_idx += 1
+    return result
+
+
 def generate_html(
     italian_path: Path,
     english_path: Path,
@@ -314,6 +348,28 @@ def generate_html(
     italian_parsed = parse_italian_markdown(italian_text)
     _content_chapter_ids = [ch["id"] for ch in italian_parsed if not ch.get("is_structural")]
     _content_ch_idx = 0  # consumed in pair loop below
+
+    # Load chapter start pages mapping (authoritative, manually editable)
+    _start_pages_path = Path(__file__).parent / "data" / "chapter_start_pages.json"
+    _ch_page_ranges: dict[str, tuple[int, int]] = {}
+    if _start_pages_path.exists():
+        _sp_data = json.loads(_start_pages_path.read_text(encoding="utf-8"))
+        _sp_chapters = _sp_data.get("chapters", [])
+        _last_scan = _sp_data.get("_last_scan_page", 278)
+        for idx, entry in enumerate(_sp_chapters):
+            start = entry["start_scan"]
+            end = _sp_chapters[idx + 1]["start_scan"] - 1 if idx + 1 < len(_sp_chapters) else _last_scan
+            _ch_page_ranges[entry["id"]] = (start, end)
+
+    # Apply page ranges from mapping file
+    _content_ch_idx2 = 0
+    for pair in pairs:
+        if pair["level"] == 2 and pair["italian_title"] in ("Parte Prima", "Parte Seconda"):
+            continue
+        if _content_ch_idx2 < len(_content_chapter_ids):
+            ch_id = _content_chapter_ids[_content_ch_idx2]
+            pair["page_range"] = _ch_page_ranges.get(ch_id)
+            _content_ch_idx2 += 1
 
     # Load source pages for IA links
     source_pages = {}
@@ -354,7 +410,9 @@ def generate_html(
         "<!-- Slide-in overlay for source page images -->",
         '<div id="page-overlay" class="page-overlay">',
         '  <div class="page-overlay-header">',
-        '    <span id="page-overlay-title"></span>',
+        '    <label class="page-overlay-page-label">p.&thinsp;<input id="page-overlay-page-input" type="number" title="Jump to book page"></label>',
+        '    <select id="page-overlay-chapter-select" title="Jump to chapter"></select>',
+        '    <span id="page-overlay-scan-label" class="page-overlay-scan-label"></span>',
         '    <button id="page-overlay-close" aria-label="Close">&times;</button>',
         "  </div>",
         '  <div class="page-overlay-body">',
@@ -407,6 +465,8 @@ def generate_html(
     _rev_counter = [0]  # mutable counter for revision IDs
     current_part_it = ""
     current_part_en = ""
+    # Collect chapter entries for overlay navigation: [{label, page, chId}, ...]
+    _overlay_chapters: list[dict] = []
 
     for pair in pairs:
         # Detect part transitions
@@ -474,6 +534,11 @@ def generate_html(
 
         part_prefix = re.sub(r"[^a-z0-9]", "-", current_part_it.lower()).strip("-") + "-" if current_part_it else ""
         ch_id = part_prefix + re.sub(r"[^a-z0-9]", "-", pair["italian_title"].lower()).strip("-")
+        # Record chapter for overlay navigation
+        ch_label = pair["english_title"] or pair["italian_title"]
+        ch_start_page = pair["page_range"][0] if pair["page_range"] else None
+        if ch_start_page is not None:
+            _overlay_chapters.append({"label": ch_label, "page": ch_start_page, "chId": f"ch-{ch_id}", "group": current_part_en})
         part_label_it = f'<span class="part-label">{_escape_html(current_part_it)}</span>' if current_part_it else ""
         part_label_en = f'<span class="part-label">{_escape_html(current_part_en)}</span>' if current_part_en else ""
         html_parts.extend([
@@ -565,30 +630,76 @@ def generate_html(
         "(() => {",
         "  const overlay = document.getElementById('page-overlay');",
         "  const img = document.getElementById('page-overlay-img');",
-        "  const title = document.getElementById('page-overlay-title');",
+        "  const pageInput = document.getElementById('page-overlay-page-input');",
+        "  const scanLabel = document.getElementById('page-overlay-scan-label');",
+        "  const chapterSelect = document.getElementById('page-overlay-chapter-select');",
         "  const iaLink = document.getElementById('page-overlay-ia-link');",
         "  const closeBtn = document.getElementById('page-overlay-close');",
         "  const prevBtn = document.getElementById('page-overlay-prev');",
         "  const nextBtn = document.getElementById('page-overlay-next');",
         "  const FIRST_PAGE = 1, LAST_PAGE = " + str(max(int(p.stem.split('_')[1]) for p in (Path(__file__).parent / 'docs' / 'assets' / 'page_images').glob('page_*.png'))) + ";",
-        "  let currentPage = 0, imgDir = '', pageOffset = 0;",
+        "  const CHAPTERS = " + json.dumps(
+            _build_overlay_nav(_sp_chapters, _content_chapter_ids, _overlay_chapters)
+        ) + ";",
+        "  let currentPage = 0, imgDir = '', pageOffset = " + str(PDF_PAGE_OFFSET) + ";",
+        "",
+        "  // Populate chapter select with optgroup separators",
+        "  let curGroup = null;",
+        "  let groupEl = null;",
+        "  CHAPTERS.forEach((ch, i) => {",
+        "    if (ch.group !== curGroup) {",
+        "      curGroup = ch.group;",
+        "      groupEl = curGroup ? document.createElement('optgroup') : null;",
+        "      if (groupEl) { groupEl.label = curGroup; chapterSelect.appendChild(groupEl); }",
+        "    }",
+        "    const opt = document.createElement('option');",
+        "    opt.value = i;",
+        "    opt.textContent = ch.label;",
+        "    (groupEl || chapterSelect).appendChild(opt);",
+        "  });",
         "",
         "  function showPage(n) {",
         "    currentPage = Math.max(FIRST_PAGE, Math.min(n, LAST_PAGE));",
         "    const padded = String(currentPage).padStart(4, '0');",
         "    img.src = imgDir + '/page_' + padded + '.png';",
-        "    title.textContent = 'Page ' + (currentPage - pageOffset);",
+        "    pageInput.value = currentPage - pageOffset;",
+        "    scanLabel.textContent = 'scan ' + currentPage;",
+        "    // Highlight the chapter containing the current page",
+        "    let best = 0;",
+        "    for (let i = 0; i < CHAPTERS.length; i++) {",
+        "      if (CHAPTERS[i].page <= currentPage) best = i;",
+        "    }",
+        "    chapterSelect.value = best;",
         "    prevBtn.disabled = currentPage <= FIRST_PAGE;",
         "    nextBtn.disabled = currentPage >= LAST_PAGE;",
         "    const iaBase = 'https://archive.org/details/' + '" + IA_ITEM_ID + "' + '/page/n' + (currentPage - 1) + '/mode/1up';",
         "    iaLink.href = iaBase;",
         "  }",
         "",
+        "  // Page input: jump to typed page number",
+        "  pageInput.addEventListener('change', () => {",
+        "    const n = parseInt(pageInput.value);",
+        "    if (!isNaN(n)) showPage(n + pageOffset);",
+        "  });",
+        "",
+        "  // Chapter select: jump to chapter start and scroll main view",
+        "  chapterSelect.addEventListener('change', () => {",
+        "    const ch = CHAPTERS[parseInt(chapterSelect.value)];",
+        "    if (!ch) return;",
+        "    showPage(ch.page);",
+        "    if (ch.chId) {",
+        "      const el = document.getElementById(ch.chId);",
+        "      if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});",
+        "    }",
+        "  });",
+        "",
         "  document.querySelectorAll('.page-citation').forEach(a => {",
         "    a.addEventListener('click', e => {",
         "      e.preventDefault();",
         "      pageOffset = parseInt(a.dataset.pageOffset || '0');",
         "      imgDir = a.dataset.imgDir;",
+        "      pageInput.min = FIRST_PAGE - pageOffset;",
+        "      pageInput.max = LAST_PAGE - pageOffset;",
         "      showPage(parseInt(a.dataset.pageStart));",
         "      overlay.classList.add('open');",
         "    });",

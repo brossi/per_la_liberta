@@ -339,13 +339,61 @@ body {
 
 .page-overlay-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 0.5em;
   padding: 0.8em 1.2em;
   border-bottom: 1px solid var(--border-light);
   font-size: 0.95em;
   color: var(--color-muted);
   flex-shrink: 0;
+}
+
+.page-overlay-page-label {
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+#page-overlay-page-input {
+  width: 3.5em;
+  padding: 0.2em 0.3em;
+  border: 1px solid var(--border-ui);
+  border-radius: 3px;
+  font: inherit;
+  color: var(--color-body);
+  text-align: right;
+  background: transparent;
+  -moz-appearance: textfield;
+}
+#page-overlay-page-input::-webkit-inner-spin-button,
+#page-overlay-page-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.page-overlay-scan-label {
+  flex-shrink: 0;
+  color: var(--color-muted);
+}
+
+#page-overlay-chapter-select optgroup {
+  font-weight: 700;
+  color: var(--color-body);
+}
+#page-overlay-chapter-select option {
+  font-weight: 400;
+  color: var(--color-body);
+  padding-left: 0.5em;
+}
+
+#page-overlay-chapter-select {
+  flex: 1;
+  min-width: 0;
+  padding: 0.2em 0.3em;
+  border: 1px solid var(--border-ui);
+  border-radius: 3px;
+  font: inherit;
+  color: var(--color-body);
+  background: transparent;
 }
 
 .page-overlay-header button {
@@ -356,6 +404,7 @@ body {
   color: var(--color-muted);
   padding: 0 0.3em;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .page-overlay-header button:hover {
