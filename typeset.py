@@ -432,13 +432,8 @@ def generate_html(
         # Page citation (injected into first English paragraph as margin note)
         page_cite_html = ""
         if pair["page_range"]:
-            raw_start, end = pair["page_range"]
-            # Chapter page ranges overlap: start page is shared with the
-            # previous chapter's last page.  Bump by 1 so the link opens
-            # on this chapter's own first page (except for the very first
-            # chapter, where there is no prior overlap).
-            start = raw_start + 1 if raw_start > 7 else raw_start
-            ia_url = source_pages.get((raw_start, end), "")
+            start, end = pair["page_range"]
+            ia_url = source_pages.get((start, end), "")
             if not ia_url:
                 ia_url = f"https://archive.org/details/{IA_ITEM_ID}/page/n{start - 1}/mode/1up"
             book_start = start - PDF_PAGE_OFFSET
@@ -575,15 +570,16 @@ def generate_html(
         "  const closeBtn = document.getElementById('page-overlay-close');",
         "  const prevBtn = document.getElementById('page-overlay-prev');",
         "  const nextBtn = document.getElementById('page-overlay-next');",
-        "  let currentPage = 0, startPage = 0, endPage = 0, imgDir = '', pageOffset = 0;",
+        "  const FIRST_PAGE = 1, LAST_PAGE = " + str(max(int(p.stem.split('_')[1]) for p in (Path(__file__).parent / 'docs' / 'assets' / 'page_images').glob('page_*.png'))) + ";",
+        "  let currentPage = 0, imgDir = '', pageOffset = 0;",
         "",
         "  function showPage(n) {",
-        "    currentPage = Math.max(startPage, Math.min(n, endPage));",
+        "    currentPage = Math.max(FIRST_PAGE, Math.min(n, LAST_PAGE));",
         "    const padded = String(currentPage).padStart(4, '0');",
         "    img.src = imgDir + '/page_' + padded + '.png';",
         "    title.textContent = 'Page ' + (currentPage - pageOffset);",
-        "    prevBtn.disabled = currentPage <= startPage;",
-        "    nextBtn.disabled = currentPage >= endPage;",
+        "    prevBtn.disabled = currentPage <= FIRST_PAGE;",
+        "    nextBtn.disabled = currentPage >= LAST_PAGE;",
         "    const iaBase = 'https://archive.org/details/' + '" + IA_ITEM_ID + "' + '/page/n' + (currentPage - 1) + '/mode/1up';",
         "    iaLink.href = iaBase;",
         "  }",
@@ -591,11 +587,9 @@ def generate_html(
         "  document.querySelectorAll('.page-citation').forEach(a => {",
         "    a.addEventListener('click', e => {",
         "      e.preventDefault();",
-        "      startPage = parseInt(a.dataset.pageStart);",
-        "      endPage = parseInt(a.dataset.pageEnd);",
         "      pageOffset = parseInt(a.dataset.pageOffset || '0');",
         "      imgDir = a.dataset.imgDir;",
-        "      showPage(startPage);",
+        "      showPage(parseInt(a.dataset.pageStart));",
         "      overlay.classList.add('open');",
         "    });",
         "  });",
