@@ -19,3 +19,8 @@ dependencies = [
     "weasyprint>=68.1",
 ]
 
+[project.optional-dependencies]
+multi-translate = [
+    "openai>=1.40.0",
+]
+

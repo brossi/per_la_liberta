@@ -341,22 +341,27 @@ def atomic_write_json(path: Path, data: dict | list) -> None:
         raise
 
 
-def retry_api_call(fn, *args, max_attempts: int = 3, **kwargs):
-    """Retry an Anthropic API call with exponential backoff on transient errors."""
-    import anthropic
+def retry_api_call(fn, *args, max_attempts: int = 3, retryable_exceptions: tuple | None = None, **kwargs):
+    """Retry an API call with exponential backoff on transient errors.
 
-    retryable = (
-        anthropic.RateLimitError,
-        anthropic.InternalServerError,
-        anthropic.APITimeoutError,
-        anthropic.APIConnectionError,
-    )
+    If retryable_exceptions is provided, those exception types are caught.
+    Otherwise defaults to the standard Anthropic transient error set.
+    """
+    if retryable_exceptions is None:
+        import anthropic
+
+        retryable_exceptions = (
+            anthropic.RateLimitError,
+            anthropic.InternalServerError,
+            anthropic.APITimeoutError,
+            anthropic.APIConnectionError,
+        )
     delays = [2, 4, 8]
 
     for attempt in range(max_attempts):
         try:
             return fn(*args, **kwargs)
-        except retryable as e:
+        except retryable_exceptions as e:
             if attempt == max_attempts - 1:
                 raise
             delay = delays[attempt]

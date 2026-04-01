@@ -1,0 +1,830 @@
+"""Multi-witness translation: Draft → Evaluate → Synthesize.
+
+Generates independent translations from multiple models, evaluates each on
+literary quality dimensions (inspired by LiTransProQA, EMNLP 2025), then
+synthesises the best result using Claude Code Opus 4.6 via `claude -p`.
+
+Usage:
+    uv run python pipeline.py --step translate --multi-model
+    uv run python pipeline.py --step translate --multi-model --draft-models claude,gemini,gpt
+    uv run python pipeline.py --step translate --multi-model --chapter p1_ch01
+"""
+
+from __future__ import annotations
+
+import json
+import os
+import re
+import shutil
+import subprocess
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+
+from providers import (
+    TranslationProvider,
+    TranslationResult,
+    create_provider,
+)
+from translate import SYSTEM_PROMPT, assemble_translation, parse_italian_markdown
+
+
+# ── Evaluation ───────────────────────────────────────────────────────
+
+EVALUATION_DIMENSIONS = [
+    {
+        "name": "Tone & Authorial Voice",
+        "weight": 0.25,
+        "questions": [
+            "Does the translation preserve the early 20th century literary register of the original?",
+            "Does the translation maintain Crespi's conversational narrative voice?",
+            "Are formal/informal shifts in the original reflected appropriately in English?",
+        ],
+    },
+    {
+        "name": "Cultural Context & Adaptation",
+        "weight": 0.20,
+        "questions": [
+            "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+            "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+        ],
+    },
+    {
+        "name": "Accuracy & Faithfulness",
+        "weight": 0.20,
+        "questions": [
+            "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+            "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+        ],
+    },
+    {
+        "name": "Literary Quality",
+        "weight": 0.15,
+        "questions": [
+            "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+            "Are figurative expressions and imagery rendered effectively in English?",
+        ],
+    },
+    {
+        "name": "Grammar & Fluency",
+        "weight": 0.10,
+        "questions": [
+            "Is the English grammatically correct and free of awkward constructions?",
+            "Is the translation readable and clear without requiring re-reading?",
+        ],
+    },
+    {
+        "name": "Consistency",
+        "weight": 0.10,
+        "questions": [
+            "Are recurring terms and character names translated consistently throughout the passage?",
+            "Does the translation maintain a coherent style from paragraph to paragraph?",
+        ],
+    },
+]
+
+EVALUATION_PROMPT = """\
+You are evaluating an English translation of a passage from a 1913 Italian book \
+titled 'Per la Libertà!' by Cesare Crespi. The book documents conversations with \
+Count Carlo di Rudio about Italian unification and the Orsini conspiracy.
+
+Below you will find the Italian source text and one English translation to evaluate.
+
+## Italian Source
+{italian_text}
+
+## English Translation (by {model_name})
+{translation_text}
+
+## Evaluation Task
+
+Score this translation on each dimension below. For each question, answer:
+- "yes" (1.0) if the translation fully satisfies the criterion
+- "partial" (0.5) if it partially satisfies or is inconsistent
+- "no" (0.0) if it fails the criterion
+
+Respond ONLY with valid JSON in exactly this format:
+{{
+  "dimensions": [
+    {{
+      "name": "<dimension name>",
+      "questions": [
+        {{"question": "<question text>", "score": <1.0|0.5|0.0>, "note": "<brief rationale>"}}
+      ],
+      "strengths": "<what this translation does well on this dimension>",
+      "weaknesses": "<where it falls short>"
+    }}
+  ]
+}}
+
+Dimensions to evaluate:
+{dimensions_block}
+"""
+
+
+def _build_dimensions_block() -> str:
+    """Format the evaluation dimensions for the prompt."""
+    lines = []
+    for dim in EVALUATION_DIMENSIONS:
+        lines.append(f"\n### {dim['name']} (weight: {dim['weight']})")
+        for q in dim["questions"]:
+            lines.append(f"- {q}")
+    return "\n".join(lines)
+
+
+def _compute_weighted_score(eval_result: dict) -> float:
+    """Compute the overall weighted score from an evaluation JSON."""
+    weight_map = {d["name"]: d["weight"] for d in EVALUATION_DIMENSIONS}
+    total = 0.0
+    for dim in eval_result.get("dimensions", []):
+        weight = weight_map.get(dim["name"], 0.0)
+        questions = dim.get("questions", [])
+        if questions:
+            dim_score = sum(q.get("score", 0.0) for q in questions) / len(questions)
+        else:
+            dim_score = 0.0
+        total += weight * dim_score
+    return total
+
+
+# ── Synthesis ────────────────────────────────────────────────────────
+
+SYNTHESIS_PROMPT_TEMPLATE = """\
+You are synthesising the best possible English translation of an Italian chapter \
+from a 1913 book titled 'Per la Libertà!' by Cesare Crespi.
+
+You have been given:
+- The original Italian source text
+- {n_drafts} independent translations from different models
+- Structured quality evaluations scoring each translation on 6 literary dimensions
+- Period-appropriate dictionary definitions from the Edgren Italian-English Dictionary (1901)
+- A narrative context file with characters, historical events, locations, and terminology
+{prev_chapter_note}
+
+Your task:
+1. Read all materials in {materials_dir}/
+   - italian_source.txt — the source Italian text
+   - draft_*.md — independent translations (one per model)
+   - eval_*.json — per-dimension quality scores for each draft
+   - edgren_context.txt — period-appropriate dictionary entries
+   - narrative_context.json — character list, historical events, locations, and \
+terminology conventions for the book
+   {prev_chapter_read}
+2. Identify the strongest draft based on evaluation scores
+3. Start from that draft and incorporate superior phrasings from other drafts \
+WHERE evaluation evidence supports it
+4. Do NOT average styles or stitch together incompatible registers
+5. Maintain the early 20th century literary tone throughout
+6. Consult edgren_context.txt for period-appropriate word choices — prefer \
+1901 English renderings over modern equivalents where they differ
+7. Cross-check characters, historical references, dates, and events against \
+narrative_context.json. If a draft introduces details not present in the Italian \
+source, omit them. Use the terminology conventions specified (e.g. keep \
+"Risorgimento" in italics, keep prison names in their original form).
+{prev_chapter_instruction}
+
+Write ONLY the final English translation to {output_path}. No commentary, \
+no annotations, no explanation — just the translated text."""
+
+PROVENANCE_PROMPT_TEMPLATE = """\
+You just synthesised an English translation of an Italian chapter from \
+'Per la Libertà!' by Cesare Crespi. Now document what you did.
+
+Read these files in {materials_dir}/:
+- The draft translations: draft_*.md
+- The evaluation scores: eval_*.json
+- The Edgren dictionary context: edgren_context.txt
+- The final synthesis you produced: {output_path}
+
+Write a provenance log to {provenance_path} as a JSON file with this structure:
+{{
+  "primary_draft": "<filename of the draft used as the base>",
+  "incorporations": [
+    {{
+      "paragraph": <1-indexed paragraph number in the final translation>,
+      "from_draft": "<filename of the other draft>",
+      "original": "<phrase from the primary draft that was replaced>",
+      "replacement": "<phrase used in the final translation>",
+      "reason": "<why this phrasing is superior>"
+    }}
+  ],
+  "edgren_influences": [
+    {{
+      "italian_word": "<the Italian word looked up>",
+      "edgren_definition": "<the relevant Edgren entry or sense>",
+      "english_choice": "<the English word/phrase used in the final translation>",
+      "paragraph": <1-indexed paragraph number>,
+      "note": "<how the dictionary informed this choice vs a modern default>"
+    }}
+  ]
+}}
+
+Compare the final translation against each draft to identify specific differences. \
+For each difference, determine whether it came from another draft (incorporation) \
+or from Edgren dictionary influence. If the final translation matches the primary \
+draft exactly with no changes, set both lists to empty.
+
+Be honest — only log genuine influences, not post-hoc justifications."""
+
+
+def _build_synthesis_prompt(
+    chapter_id: str,
+    n_drafts: int,
+    materials_dir: Path,
+    output_path: Path,
+    has_prev_chapter: bool,
+) -> str:
+    """Build the prompt for the Claude Code Opus synthesis invocation."""
+    if has_prev_chapter:
+        prev_note = "- The previous chapter's translation (for voice and terminology continuity)"
+        prev_read = "- prev_chapter.md — the previous chapter's final translation"
+        prev_instr = (
+            "8. Maintain consistency with the previous chapter's translation choices, "
+            "register, and character voices"
+        )
+    else:
+        prev_note = ""
+        prev_read = ""
+        prev_instr = ""
+
+    return SYNTHESIS_PROMPT_TEMPLATE.format(
+        n_drafts=n_drafts,
+        materials_dir=materials_dir,
+        output_path=output_path,
+        prev_chapter_note=prev_note,
+        prev_chapter_read=prev_read,
+        prev_chapter_instruction=prev_instr,
+    )
+
+
+def _build_provenance_prompt(materials_dir: Path, output_path: Path) -> str:
+    """Build the prompt for the provenance logging invocation."""
+    provenance_path = materials_dir / "provenance.json"
+    return PROVENANCE_PROMPT_TEMPLATE.format(
+        materials_dir=materials_dir,
+        output_path=output_path,
+        provenance_path=provenance_path,
+    )
+
+
+# ── Core pipeline ────────────────────────────────────────────────────
+
+
+def _extract_page_marker(text: str) -> tuple[str, str]:
+    """Extract page marker comment and return (marker, clean_text)."""
+    marker = ""
+    match = re.search(r"<!-- pages:\d+-\d+ -->", text)
+    if match:
+        marker = match.group(0)
+    clean = re.sub(r"<!-- pages:\d+-\d+ -->\n?", "", text)
+    return marker, clean
+
+
+def _build_edgren_context(text: str) -> str | None:
+    """Build Edgren dictionary context for a chapter text."""
+    from edgren import (
+        chunk_edgren,
+        edgren_entries_for_words,
+        extract_content_words,
+        format_edgren_context,
+    )
+
+    chunk_edgren()  # ensure chunks exist
+    words = extract_content_words(text)
+    entries = edgren_entries_for_words(words)
+    return format_edgren_context(entries) if entries else None
+
+
+def _generate_drafts(
+    text: str,
+    title: str,
+    edgren_ctx: str | None,
+    providers: list[TranslationProvider],
+) -> list[tuple[str, TranslationResult]]:
+    """Generate translation drafts from all providers in parallel.
+
+    Returns list of (provider_name, TranslationResult) tuples.
+    """
+    results: list[tuple[str, TranslationResult]] = []
+
+    if len(providers) == 1:
+        p = providers[0]
+        result = p.translate(text, title, SYSTEM_PROMPT, edgren_ctx)
+        results.append((p.name, result))
+    else:
+        with ThreadPoolExecutor(max_workers=len(providers)) as pool:
+            futures = {
+                pool.submit(p.translate, text, title, SYSTEM_PROMPT, edgren_ctx): p
+                for p in providers
+            }
+            for future in as_completed(futures):
+                p = futures[future]
+                result = future.result()
+                results.append((p.name, result))
+
+    return results
+
+
+def _evaluate_drafts(
+    italian_text: str,
+    drafts: list[tuple[str, TranslationResult]],
+    gemini_api_key: str | None = None,
+) -> dict[str, dict]:
+    """Evaluate all drafts using Gemini Flash (cheap, fast).
+
+    Returns {provider_name: eval_result_dict} with scores and rationale.
+    """
+    from google import genai
+    from google.genai import types
+    from utils import retry_api_call
+
+    key = gemini_api_key or os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ValueError("No Gemini API key for evaluation. Set GEMINI_API_KEY.")
+    client = genai.Client(api_key=key)
+
+    dimensions_block = _build_dimensions_block()
+
+    try:
+        from google.api_core.exceptions import (
+            InternalServerError,
+            ResourceExhausted,
+            ServiceUnavailable,
+            TooManyRequests,
+        )
+        retryable = (ResourceExhausted, ServiceUnavailable,
+                     InternalServerError, TooManyRequests)
+    except ImportError:
+        retryable = (RuntimeError,)
+
+    def _eval_one(name: str, draft: TranslationResult) -> tuple[str, dict]:
+        prompt = EVALUATION_PROMPT.format(
+            italian_text=italian_text,
+            model_name=name,
+            translation_text=draft.text,
+            dimensions_block=dimensions_block,
+        )
+
+        config = types.GenerateContentConfig(
+            system_instruction="You are a literary translation quality evaluator. Respond only with valid JSON.",
+            max_output_tokens=16_384,
+            response_mime_type="application/json",
+        )
+
+        # Retry the full call (API + parse) up to 3 times on JSON errors
+        last_error = None
+        for attempt in range(3):
+            def _call():
+                return client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=types.Content(
+                        role="user",
+                        parts=[types.Part.from_text(text=prompt)],
+                    ),
+                    config=config,
+                )
+
+            response = retry_api_call(_call, retryable_exceptions=retryable)
+            text = response.text.strip()
+
+            # Strip markdown code fences if present
+            if text.startswith("```"):
+                text = re.sub(r"^```(?:json)?\s*", "", text)
+                text = re.sub(r"\s*```$", "", text)
+
+            try:
+                eval_result = json.loads(text)
+                eval_result["weighted_score"] = _compute_weighted_score(eval_result)
+                return name, eval_result
+            except json.JSONDecodeError as e:
+                last_error = e
+                print(f"      [{name}] JSON parse error on attempt {attempt + 1}: {e}")
+                if attempt < 2:
+                    time.sleep(2)
+
+        raise RuntimeError(
+            f"Evaluation of {name} failed after 3 attempts: {last_error}\n"
+            f"Last response (first 500 chars): {text[:500]}"
+        )
+
+    # Evaluate all drafts in parallel
+    results = {}
+    if len(drafts) == 1:
+        name, eval_result = _eval_one(drafts[0][0], drafts[0][1])
+        results[name] = eval_result
+    else:
+        with ThreadPoolExecutor(max_workers=len(drafts)) as pool:
+            futures = {
+                pool.submit(_eval_one, name, draft): name
+                for name, draft in drafts
+            }
+            for future in as_completed(futures):
+                name, eval_result = future.result()
+                results[name] = eval_result
+
+    return results
+
+
+
+def _run_claude_code(prompt: str, model: str, timeout: int, label: str) -> subprocess.CompletedProcess:
+    """Run a claude -p invocation and return the result."""
+    cmd = [
+        "claude",
+        "-p", prompt,
+        "--model", model,
+        "--output-format", "json",
+        "--allowedTools", "Read,Write,Bash(ls)",
+        "--bare",
+    ]
+    return subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        timeout=timeout,
+    )
+
+
+def _synthesize_via_claude_code(
+    chapter_id: str,
+    n_drafts: int,
+    has_prev_chapter: bool,
+    state_dir: Path,
+    synth_model: str = "opus",
+) -> str:
+    """Invoke Claude Code Opus to synthesise the best translation.
+
+    Two sequential calls:
+      1. Synthesis — produces the translation (critical, longer timeout)
+      2. Provenance — documents what was done (best-effort, shorter timeout)
+
+    Reads materials from state/multi_drafts/{chapter_id}/, writes result
+    to state/translations/{chapter_id}.md.
+
+    Returns the synthesised translation text.
+    """
+    materials_dir = state_dir / "multi_drafts" / chapter_id
+    output_path = state_dir / "translations" / f"{chapter_id}.md"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # ── Step 1: Synthesis (critical) ─────────────────────────────────
+
+    synth_prompt = _build_synthesis_prompt(
+        chapter_id=chapter_id,
+        n_drafts=n_drafts,
+        materials_dir=materials_dir,
+        output_path=output_path,
+        has_prev_chapter=has_prev_chapter,
+    )
+
+    result = _run_claude_code(synth_prompt, synth_model, timeout=1200, label=f"synthesis:{chapter_id}")
+
+    if result.returncode != 0:
+        raise RuntimeError(
+            f"Synthesis failed for {chapter_id} "
+            f"(exit {result.returncode}): {result.stderr[:500]}"
+        )
+
+    # Verify the output file was written
+    if not output_path.exists():
+        try:
+            response = json.loads(result.stdout)
+            text = response.get("result", "")
+            if text:
+                output_path.write_text(text, encoding="utf-8")
+            else:
+                raise RuntimeError(
+                    f"Synthesis for {chapter_id} produced no output file and no result text"
+                )
+        except (json.JSONDecodeError, KeyError):
+            raise RuntimeError(
+                f"Synthesis for {chapter_id} produced no output file "
+                f"and response was not parseable"
+            )
+
+    translation = output_path.read_text(encoding="utf-8")
+
+    # ── Step 2: Provenance (best-effort) ─────────────────────────────
+
+    prov_prompt = _build_provenance_prompt(materials_dir, output_path)
+
+    try:
+        prov_result = _run_claude_code(prov_prompt, synth_model, timeout=600, label=f"provenance:{chapter_id}")
+        provenance_path = materials_dir / "provenance.json"
+
+        if prov_result.returncode != 0:
+            print(f"      [{chapter_id}] Provenance logging failed (exit {prov_result.returncode}), skipping")
+        elif not provenance_path.exists():
+            print(f"      [{chapter_id}] Provenance file not written, skipping")
+        else:
+            print(f"      [{chapter_id}] Provenance log written")
+    except subprocess.TimeoutExpired:
+        print(f"      [{chapter_id}] Provenance logging timed out, skipping")
+
+    return translation
+
+
+# ── Main entry point ─────────────────────────────────────────────────
+
+
+def multi_translate(
+    output_dir: Path,
+    state_dir: Path,
+    *,
+    api_key: str | None = None,
+    gemini_api_key: str | None = None,
+    openai_api_key: str | None = None,
+    draft_models: tuple[str, ...] = ("claude", "gemini"),
+    workers: int = 1,
+    thinking_budget: int = 4096,
+    with_edgren: bool = True,
+    synth_model: str = "opus",
+    chapter_filter: list[str] | None = None,
+) -> None:
+    """Multi-witness translation: draft → evaluate → synthesise.
+
+    Args:
+        output_dir: Where italian_clean.md lives and english_translation.md is written.
+        state_dir: Working state directory (translations/, multi_drafts/, etc.).
+        api_key: Anthropic API key.
+        gemini_api_key: Gemini API key.
+        openai_api_key: OpenAI API key (optional, for GPT drafts).
+        draft_models: Tuple of model names to generate drafts from.
+        workers: Max concurrent chapters to process in parallel during draft phase.
+        thinking_budget: Extended thinking token budget for Anthropic draft provider.
+        with_edgren: Whether to enrich prompts with Edgren 1901 dictionary context.
+        synth_model: Model for Claude Code synthesis (default: opus).
+        chapter_filter: Optional list of chapter IDs to process (None = all).
+    """
+    from utils import atomic_write_json
+
+    italian_path = output_dir / "italian_clean.md"
+    italian_text = italian_path.read_text(encoding="utf-8")
+    chapters = parse_italian_markdown(italian_text)
+
+    # Filter chapters if requested
+    if chapter_filter:
+        filter_set = set(chapter_filter)
+        chapters = [ch for ch in chapters if ch["id"] in filter_set]
+
+    print(f"  Multi-witness translation: {len(chapters)} chapters")
+    print(f"  Draft models: {', '.join(draft_models)}")
+    print(f"  Synthesis: Claude Code ({synth_model})")
+    print(f"  Edgren context: {'yes' if with_edgren else 'no'}")
+
+    # ── Initialise providers ─────────────────────────────────────────
+
+    providers = []
+    for model_name in draft_models:
+        providers.append(create_provider(
+            model_name,
+            anthropic_api_key=api_key,
+            gemini_api_key=gemini_api_key,
+            openai_api_key=openai_api_key,
+            thinking_budget=thinking_budget,
+        ))
+    print(f"  Providers initialised: {[p.name for p in providers]}")
+
+    # ── Load progress ────────────────────────────────────────────────
+
+    translations_dir = state_dir / "translations"
+    translations_dir.mkdir(parents=True, exist_ok=True)
+
+    progress_path = state_dir / "multi_translate_progress.json"
+    if progress_path.exists():
+        progress = json.loads(progress_path.read_text(encoding="utf-8"))
+    else:
+        progress = {}
+
+    # ── Phase 1 & 2: Draft + Evaluate (parallelisable across chapters) ──
+
+    drafts_dir = state_dir / "multi_drafts"
+    drafts_dir.mkdir(parents=True, exist_ok=True)
+
+    progress_lock = threading.Lock()
+
+    def _draft_and_evaluate(ch: dict) -> None:
+        """Generate drafts and evaluate for a single chapter.
+
+        Each phase is durable: drafts are saved to disk immediately so that
+        a failure during evaluation does not lose the expensive draft work.
+        On resume, completed phases are skipped.
+        """
+        ch_id = ch["id"]
+        ch_progress = progress.get(ch_id, {})
+        current_phase = ch_progress.get("phase")
+
+        # Skip if already fully evaluated or beyond
+        if current_phase in ("evaluated", "synthesizing", "done"):
+            return
+
+        page_marker, clean_text = _extract_page_marker(ch["text"])
+        materials_dir = state_dir / "multi_drafts" / ch_id
+        materials_dir.mkdir(parents=True, exist_ok=True)
+
+        # Build Edgren context (needed by both draft and materials)
+        edgren_ctx = None
+        if with_edgren:
+            edgren_ctx = _build_edgren_context(clean_text)
+
+        # ── Draft phase (skip if already drafted) ────────────────────
+        if current_phase != "drafted":
+            print(f"    [{ch_id}] Drafting ({len(clean_text):,} chars)...")
+            with progress_lock:
+                progress[ch_id] = {"phase": "drafting", "page_marker": page_marker}
+                atomic_write_json(progress_path, progress)
+
+            t0 = time.monotonic()
+            drafts = _generate_drafts(clean_text, ch["title"], edgren_ctx, providers)
+            draft_elapsed = time.monotonic() - t0
+
+            draft_summary = ", ".join(
+                f"{name}: {r.elapsed:.0f}s/{r.output_tokens:,}tok"
+                for name, r in drafts
+            )
+            print(f"    [{ch_id}] Drafts done ({draft_elapsed:.0f}s) — {draft_summary}")
+
+            # Persist drafts + source + context immediately so they survive eval failures
+            (materials_dir / "italian_source.txt").write_text(clean_text, encoding="utf-8")
+            if edgren_ctx:
+                (materials_dir / "edgren_context.txt").write_text(edgren_ctx, encoding="utf-8")
+            # Copy narrative context (shared across all chapters)
+            narrative_ctx_src = Path(__file__).parent / "data" / "narrative_context.json"
+            if narrative_ctx_src.exists():
+                shutil.copy2(narrative_ctx_src, materials_dir / "narrative_context.json")
+            for name, draft in drafts:
+                safe_name = re.sub(r"[^a-z0-9]", "_", name.lower()).strip("_")
+                (materials_dir / f"draft_{safe_name}.md").write_text(draft.text, encoding="utf-8")
+
+            with progress_lock:
+                progress[ch_id] = {
+                    "phase": "drafted",
+                    "page_marker": page_marker,
+                    "draft_models": [name for name, _ in drafts],
+                }
+                atomic_write_json(progress_path, progress)
+        else:
+            # Resume: reload drafts from disk
+            print(f"    [{ch_id}] Drafts already on disk, resuming at evaluation...")
+            draft_names = ch_progress.get("draft_models", [])
+            drafts = []
+            for name in draft_names:
+                safe_name = re.sub(r"[^a-z0-9]", "_", name.lower()).strip("_")
+                draft_path = materials_dir / f"draft_{safe_name}.md"
+                if draft_path.exists():
+                    text = draft_path.read_text(encoding="utf-8")
+                    drafts.append((name, TranslationResult(
+                        text=text, model=name,
+                        input_tokens=0, output_tokens=0, elapsed=0, stop_reason="resumed",
+                    )))
+
+        # ── Evaluate phase ───────────────────────────────────────────
+        print(f"    [{ch_id}] Evaluating {len(drafts)} drafts...")
+        t0 = time.monotonic()
+        evaluations = _evaluate_drafts(clean_text, drafts, gemini_api_key)
+        eval_elapsed = time.monotonic() - t0
+
+        score_summary = ", ".join(
+            f"{name}: {ev['weighted_score']:.2f}"
+            for name, ev in evaluations.items()
+        )
+        print(f"    [{ch_id}] Evaluation done ({eval_elapsed:.0f}s) — {score_summary}")
+
+        # Persist evaluations
+        for name, eval_result in evaluations.items():
+            safe_name = re.sub(r"[^a-z0-9]", "_", name.lower()).strip("_")
+            (materials_dir / f"eval_{safe_name}.json").write_text(
+                json.dumps(eval_result, indent=2, ensure_ascii=False), encoding="utf-8"
+            )
+
+        with progress_lock:
+            progress[ch_id] = {
+                "phase": "evaluated",
+                "page_marker": page_marker,
+                "draft_models": [name for name, _ in drafts],
+                "scores": {name: ev["weighted_score"] for name, ev in evaluations.items()},
+            }
+            atomic_write_json(progress_path, progress)
+
+    # Run draft+evaluate in parallel across chapters
+    todo = [
+        ch for ch in chapters
+        if progress.get(ch["id"], {}).get("phase") not in ("evaluated", "synthesizing", "done")
+    ]
+
+    if todo:
+        print(f"\n  Phase 1-2: Drafting and evaluating {len(todo)} chapters...")
+        effective_workers = min(workers, len(todo))
+        if effective_workers <= 1:
+            for ch in todo:
+                _draft_and_evaluate(ch)
+        else:
+            with ThreadPoolExecutor(max_workers=effective_workers) as pool:
+                futures = {pool.submit(_draft_and_evaluate, ch): ch for ch in todo}
+                for future in as_completed(futures):
+                    exc = future.exception()
+                    if exc:
+                        ch = futures[future]
+                        print(f"    [{ch['id']}] ERROR in draft/eval: {exc}")
+                        with progress_lock:
+                            progress[ch["id"]] = {
+                                "phase": "error",
+                                "error": str(exc),
+                            }
+                            atomic_write_json(progress_path, progress)
+    else:
+        print("\n  Phase 1-2: All chapters already drafted and evaluated.")
+
+    # ── Phase 3: Synthesis (sequential for chapter continuity) ───────
+
+    synth_todo = [
+        ch for ch in chapters
+        if progress.get(ch["id"], {}).get("phase") in ("evaluated", "synthesizing")
+    ]
+
+    if synth_todo:
+        print(f"\n  Phase 3: Synthesising {len(synth_todo)} chapters (sequential)...")
+
+        # Seed prev_chapter_text from the last already-done chapter preceding
+        # the first synth_todo entry (needed for resume continuity).
+        prev_chapter_text = None
+        first_synth_id = synth_todo[0]["id"]
+        all_chapter_ids = [ch["id"] for ch in chapters]
+        first_synth_idx = all_chapter_ids.index(first_synth_id) if first_synth_id in all_chapter_ids else 0
+        if first_synth_idx > 0:
+            prev_id = all_chapter_ids[first_synth_idx - 1]
+            prev_path = state_dir / "translations" / f"{prev_id}.md"
+            if prev_path.exists():
+                prev_chapter_text = prev_path.read_text(encoding="utf-8")
+                print(f"    (seeded prev_chapter context from {prev_id})")
+
+        for i, ch in enumerate(synth_todo):
+            ch_id = ch["id"]
+            ch_progress = progress.get(ch_id, {})
+            page_marker = ch_progress.get("page_marker", "")
+
+            # Write prev_chapter.md if we have one
+            materials_dir = state_dir / "multi_drafts" / ch_id
+            if prev_chapter_text:
+                (materials_dir / "prev_chapter.md").write_text(
+                    prev_chapter_text, encoding="utf-8"
+                )
+
+            n_drafts = len(draft_models)
+            has_prev = prev_chapter_text is not None
+
+            print(f"    [{i+1}/{len(synth_todo)}] Synthesising: {ch['title']}...")
+            with progress_lock:
+                progress[ch_id]["phase"] = "synthesizing"
+                atomic_write_json(progress_path, progress)
+
+            t0 = time.monotonic()
+            try:
+                synthesized = _synthesize_via_claude_code(
+                    ch_id, n_drafts, has_prev, state_dir, synth_model
+                )
+                elapsed = time.monotonic() - t0
+
+                # Reinsert page marker and ensure file is up to date
+                if page_marker:
+                    synthesized = page_marker + "\n\n" + synthesized
+                output_path = state_dir / "translations" / f"{ch_id}.md"
+                output_path.write_text(synthesized, encoding="utf-8")
+
+                print(f"    [{i+1}/{len(synth_todo)}] {ch['title']}: done "
+                      f"({len(synthesized):,} chars) [{elapsed:.1f}s]")
+
+                with progress_lock:
+                    progress[ch_id]["phase"] = "done"
+                    atomic_write_json(progress_path, progress)
+
+                # This chapter becomes context for the next
+                prev_chapter_text = synthesized
+
+            except Exception as e:
+                elapsed = time.monotonic() - t0
+                print(f"    [{i+1}/{len(synth_todo)}] {ch['title']}: "
+                      f"SYNTHESIS ERROR [{elapsed:.1f}s] — {e}")
+                with progress_lock:
+                    progress[ch_id]["phase"] = "error"
+                    progress[ch_id]["error"] = str(e)
+                    atomic_write_json(progress_path, progress)
+                # Still pass whatever we have as prev context for subsequent chapters
+                existing = state_dir / "translations" / f"{ch_id}.md"
+                if existing.exists():
+                    prev_chapter_text = existing.read_text(encoding="utf-8")
+    else:
+        print("\n  Phase 3: All chapters already synthesised.")
+
+    # ── Assemble final English markdown ──────────────────────────────
+
+    # Re-parse full chapter list for assembly (not just filtered)
+    all_chapters = parse_italian_markdown(
+        (output_dir / "italian_clean.md").read_text(encoding="utf-8")
+    )
+    assemble_translation(output_dir, state_dir, all_chapters)
+
+    # Summary
+    done = sum(1 for v in progress.values() if v.get("phase") == "done")
+    errors = sum(1 for v in progress.values() if v.get("phase") == "error")
+    print(f"\n  Complete: {done} synthesised, {errors} errors")

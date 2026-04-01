@@ -81,6 +81,22 @@ def main():
         help="Revert translations to a prior snapshot version (use with --step refine)",
     )
     parser.add_argument(
+        "--multi-model", action="store_true",
+        help="Use multi-witness translation: draft from multiple models, evaluate, synthesise with Opus",
+    )
+    parser.add_argument(
+        "--draft-models", default="claude,gemini",
+        help="Comma-separated draft models for --multi-model (default: claude,gemini). Options: claude, gemini, gpt",
+    )
+    parser.add_argument(
+        "--synth-model", default="opus",
+        help="Synthesis model for --multi-model (default: opus). Options: opus, sonnet",
+    )
+    parser.add_argument(
+        "--openai-api-key",
+        help="OpenAI API key for GPT drafts (or set OPENAI_API_KEY env var)",
+    )
+    parser.add_argument(
         "--local", action="store_true",
         help="Generate QR codes pointing to localhost:8000 instead of GitHub Pages",
     )
@@ -184,15 +200,35 @@ def main():
         print()
 
     if args.step in ("translate", "all"):
-        print("Step 7: Translating to English...")
-        from translate import translate
+        if args.multi_model:
+            print("Step 7: Multi-witness translation (draft → evaluate → synthesise)...")
+            from multi_translate import multi_translate
 
-        translate(
-            OUTPUT_DIR, STATE_DIR, api_key=args.api_key,
-            workers=args.workers, thinking_budget=args.thinking_budget,
-            no_thinking=args.no_thinking,
-            with_edgren=args.with_edgren,
-        )
+            draft_model_list = tuple(
+                m.strip() for m in args.draft_models.split(",") if m.strip()
+            )
+            multi_translate(
+                OUTPUT_DIR, STATE_DIR,
+                api_key=args.api_key,
+                gemini_api_key=args.gemini_api_key,
+                openai_api_key=args.openai_api_key,
+                draft_models=draft_model_list,
+                workers=args.workers,
+                thinking_budget=args.thinking_budget,
+                with_edgren=args.with_edgren,
+                synth_model=args.synth_model,
+                chapter_filter=ch_list,
+            )
+        else:
+            print("Step 7: Translating to English...")
+            from translate import translate
+
+            translate(
+                OUTPUT_DIR, STATE_DIR, api_key=args.api_key,
+                workers=args.workers, thinking_budget=args.thinking_budget,
+                no_thinking=args.no_thinking,
+                with_edgren=args.with_edgren,
+            )
         print()
 
     # Refine is manual-only — never runs as part of "all"
