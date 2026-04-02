@@ -154,33 +154,21 @@ SYNTHESIS_PROMPT_TEMPLATE = """\
 You are synthesising the best possible English translation of an Italian chapter \
 from a 1913 book titled 'Per la Libertà!' by Cesare Crespi.
 
-You have been given:
-- The original Italian source text
-- {n_drafts} independent translations from different models
-- Structured quality evaluations scoring each translation on 6 literary dimensions
-- Period-appropriate dictionary definitions from the Edgren Italian-English Dictionary (1901)
-- A narrative context file with characters, historical events, locations, and terminology
-{prev_chapter_note}
+Read the synthesis brief at {brief_path} — it contains ALL materials in one file: \
+the Italian source, draft translations with evaluation scores, dictionary context, \
+narrative reference, and (if applicable) the previous chapter's translation.
 
 Your task:
-1. Read all materials in {materials_dir}/
-   - italian_source.txt — the source Italian text
-   - draft_*.md — independent translations (one per model)
-   - eval_*.json — per-dimension quality scores for each draft
-   - edgren_context.txt — period-appropriate dictionary entries
-   - narrative_context.json — character list, historical events, locations, and \
-terminology conventions for the book
-   {prev_chapter_read}
-2. Identify the strongest draft based on evaluation scores
-3. Start from that draft and incorporate superior phrasings from other drafts \
+1. Identify the strongest draft based on evaluation scores
+2. Start from that draft and incorporate superior phrasings from other drafts \
 WHERE evaluation evidence supports it
-4. Do NOT average styles or stitch together incompatible registers
-5. Maintain the early 20th century literary tone throughout
-6. Consult edgren_context.txt for period-appropriate word choices — prefer \
-1901 English renderings over modern equivalents where they differ
-7. Cross-check characters, historical references, dates, and events against \
-narrative_context.json. If a draft introduces details not present in the Italian \
-source, omit them. Use the terminology conventions specified (e.g. keep \
+3. Do NOT average styles or stitch together incompatible registers
+4. Maintain the early 20th century literary tone throughout
+5. Consult the Edgren dictionary section for period-appropriate word choices — \
+prefer 1901 English renderings over modern equivalents where they differ
+6. Cross-check characters, historical references, dates, and events against \
+the narrative context section. If a draft introduces details not present in the \
+Italian source, omit them. Use the terminology conventions specified (e.g. keep \
 "Risorgimento" in italics, keep prison names in their original form).
 {prev_chapter_instruction}
 
@@ -188,22 +176,18 @@ Write ONLY the final English translation to {output_path}. No commentary, \
 no annotations, no explanation — just the translated text."""
 
 PROVENANCE_PROMPT_TEMPLATE = """\
-You just synthesised an English translation of an Italian chapter from \
-'Per la Libertà!' by Cesare Crespi. Now document what you did.
+You synthesised an English translation from multiple drafts. Now document what you did.
 
-Read these files in {materials_dir}/:
-- The draft translations: draft_*.md
-- The evaluation scores: eval_*.json
-- The Edgren dictionary context: edgren_context.txt
-- The final synthesis you produced: {output_path}
+Read the synthesis brief at {brief_path} — it contains the drafts, evaluation \
+scores, and dictionary context. Then read the final translation at {output_path}.
 
 Write a provenance log to {provenance_path} as a JSON file with this structure:
 {{
-  "primary_draft": "<filename of the draft used as the base>",
+  "primary_draft": "<name of the draft used as the base>",
   "incorporations": [
     {{
       "paragraph": <1-indexed paragraph number in the final translation>,
-      "from_draft": "<filename of the other draft>",
+      "from_draft": "<name of the other draft>",
       "original": "<phrase from the primary draft that was replaced>",
       "replacement": "<phrase used in the final translation>",
       "reason": "<why this phrasing is superior>"
@@ -228,41 +212,128 @@ draft exactly with no changes, set both lists to empty.
 Be honest — only log genuine influences, not post-hoc justifications."""
 
 
-def _build_synthesis_prompt(
-    chapter_id: str,
-    n_drafts: int,
+def _assemble_synthesis_brief(
     materials_dir: Path,
+    prev_chapter_text: str | None = None,
+) -> Path:
+    """Assemble all synthesis materials into a single brief file.
+
+    This eliminates multi-turn file reads — Opus reads one file, thinks, writes.
+    Returns the path to the assembled brief.
+    """
+    sections = []
+
+    # Italian source
+    src_path = materials_dir / "italian_source.txt"
+    if src_path.exists():
+        sections.append("=" * 60)
+        sections.append("ITALIAN SOURCE TEXT")
+        sections.append("=" * 60)
+        sections.append(src_path.read_text(encoding="utf-8"))
+
+    # Drafts with their evaluation scores
+    for p in sorted(materials_dir.glob("draft_*.md")):
+        draft_name = p.stem  # e.g. draft_claude__sonnet
+        sections.append("")
+        sections.append("=" * 60)
+        sections.append(f"TRANSLATION DRAFT: {draft_name}")
+        sections.append("=" * 60)
+        sections.append(p.read_text(encoding="utf-8"))
+
+        # Inline the evaluation for this draft
+        eval_name = draft_name.replace("draft_", "eval_") + ".json"
+        eval_path = materials_dir / eval_name
+        if eval_path.exists():
+            eval_data = json.loads(eval_path.read_text(encoding="utf-8"))
+            score = eval_data.get("weighted_score", "?")
+            sections.append("")
+            sections.append(f"--- Evaluation for {draft_name} (weighted score: {score:.2f}) ---")
+            for dim in eval_data.get("dimensions", []):
+                qs = dim.get("questions", [])
+                dim_score = sum(q.get("score", 0) for q in qs) / len(qs) if qs else 0
+                sections.append(f"  {dim['name']}: {dim_score:.2f}")
+                if dim.get("strengths"):
+                    sections.append(f"    + {dim['strengths']}")
+                if dim.get("weaknesses"):
+                    sections.append(f"    - {dim['weaknesses']}")
+
+    # Edgren dictionary context
+    edgren_path = materials_dir / "edgren_context.txt"
+    if edgren_path.exists():
+        sections.append("")
+        sections.append("=" * 60)
+        sections.append("EDGREN ITALIAN-ENGLISH DICTIONARY (1901)")
+        sections.append("=" * 60)
+        sections.append(edgren_path.read_text(encoding="utf-8"))
+
+    # Narrative context (just terminology + characters, skip the full JSON bulk)
+    narrative_path = materials_dir / "narrative_context.json"
+    if narrative_path.exists():
+        nc = json.loads(narrative_path.read_text(encoding="utf-8"))
+        sections.append("")
+        sections.append("=" * 60)
+        sections.append("NARRATIVE CONTEXT (characters & terminology)")
+        sections.append("=" * 60)
+
+        # Characters — compact format
+        for group_name, group_key in [("Principal characters", "principals"),
+                                       ("Di Rudio family", "di_rudio_family"),
+                                       ("Orsini conspirators", "orsini_conspirators"),
+                                       ("Historical figures", "historical_figures")]:
+            chars = nc.get("characters", {}).get(group_key, [])
+            if chars:
+                sections.append(f"\n{group_name}:")
+                for c in chars:
+                    aliases = ", ".join(c.get("aliases", []))
+                    alias_str = f" (also: {aliases})" if aliases else ""
+                    sections.append(f"  - {c['name']}{alias_str}: {c.get('role', '')}")
+
+        # Terminology — compact format
+        for cat_name, cat_key in [("Political terms", "political"),
+                                   ("Military terms", "military"),
+                                   ("Legal terms", "legal"),
+                                   ("Forms of address", "forms_of_address")]:
+            terms = nc.get("terminology", {}).get(cat_key, {})
+            if terms:
+                sections.append(f"\n{cat_name}:")
+                for term, gloss in terms.items():
+                    sections.append(f"  - {term}: {gloss}")
+
+    # Previous chapter translation (for continuity)
+    if prev_chapter_text:
+        sections.append("")
+        sections.append("=" * 60)
+        sections.append("PREVIOUS CHAPTER TRANSLATION (for voice/terminology continuity)")
+        sections.append("=" * 60)
+        sections.append(prev_chapter_text)
+
+    brief_path = materials_dir / "synthesis_brief.md"
+    brief_path.write_text("\n".join(sections), encoding="utf-8")
+    return brief_path
+
+
+def _build_synthesis_prompt(
+    brief_path: Path,
     output_path: Path,
     has_prev_chapter: bool,
 ) -> str:
     """Build the prompt for the Claude Code Opus synthesis invocation."""
-    if has_prev_chapter:
-        prev_note = "- The previous chapter's translation (for voice and terminology continuity)"
-        prev_read = "- prev_chapter.md — the previous chapter's final translation"
-        prev_instr = (
-            "8. Maintain consistency with the previous chapter's translation choices, "
-            "register, and character voices"
-        )
-    else:
-        prev_note = ""
-        prev_read = ""
-        prev_instr = ""
+    prev_instr = (
+        "7. Maintain consistency with the previous chapter's translation choices, "
+        "register, and character voices"
+    ) if has_prev_chapter else ""
 
     return SYNTHESIS_PROMPT_TEMPLATE.format(
-        n_drafts=n_drafts,
-        materials_dir=materials_dir,
+        brief_path=brief_path,
         output_path=output_path,
-        prev_chapter_note=prev_note,
-        prev_chapter_read=prev_read,
         prev_chapter_instruction=prev_instr,
     )
 
 
-def _build_provenance_prompt(materials_dir: Path, output_path: Path) -> str:
+def _build_provenance_prompt(brief_path: Path, output_path: Path, provenance_path: Path) -> str:
     """Build the prompt for the provenance logging invocation."""
-    provenance_path = materials_dir / "provenance.json"
     return PROVENANCE_PROMPT_TEMPLATE.format(
-        materials_dir=materials_dir,
+        brief_path=brief_path,
         output_path=output_path,
         provenance_path=provenance_path,
     )
@@ -455,30 +526,32 @@ def _synthesize_via_claude_code(
     chapter_id: str,
     n_drafts: int,
     has_prev_chapter: bool,
+    prev_chapter_text: str | None,
     state_dir: Path,
     synth_model: str = "opus",
-) -> str:
+) -> tuple[str, dict]:
     """Invoke Claude Code Opus to synthesise the best translation.
 
     Two sequential calls:
       1. Synthesis — produces the translation (critical, longer timeout)
       2. Provenance — documents what was done (best-effort, shorter timeout)
 
-    Reads materials from state/multi_drafts/{chapter_id}/, writes result
-    to state/translations/{chapter_id}.md.
+    All materials are pre-assembled into a single synthesis_brief.md so Opus
+    needs only one Read call instead of 6-8 (dramatically reduces token usage).
 
-    Returns the synthesised translation text.
+    Returns (translated_text, token_data_dict).
     """
     materials_dir = state_dir / "multi_drafts" / chapter_id
     output_path = state_dir / "translations" / f"{chapter_id}.md"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
+    # Assemble all materials into a single brief file
+    brief_path = _assemble_synthesis_brief(materials_dir, prev_chapter_text)
+
     # ── Step 1: Synthesis (critical) ─────────────────────────────────
 
     synth_prompt = _build_synthesis_prompt(
-        chapter_id=chapter_id,
-        n_drafts=n_drafts,
-        materials_dir=materials_dir,
+        brief_path=brief_path,
         output_path=output_path,
         has_prev_chapter=has_prev_chapter,
     )
@@ -534,12 +607,12 @@ def _synthesize_via_claude_code(
 
     # ── Step 2: Provenance (best-effort) ─────────────────────────────
 
-    prov_prompt = _build_provenance_prompt(materials_dir, output_path)
+    provenance_path = materials_dir / "provenance.json"
+    prov_prompt = _build_provenance_prompt(brief_path, output_path, provenance_path)
     prov_tokens = {"input": 0, "output": 0}
 
     try:
         prov_result = _run_claude_code(prov_prompt, synth_model, timeout=600, label=f"provenance:{chapter_id}")
-        provenance_path = materials_dir / "provenance.json"
 
         if prov_result.returncode != 0:
             print(f"      [{chapter_id}] Provenance logging failed (exit {prov_result.returncode}), skipping")
@@ -819,13 +892,6 @@ def multi_translate(
             ch_progress = progress.get(ch_id, {})
             page_marker = ch_progress.get("page_marker", "")
 
-            # Write prev_chapter.md if we have one
-            materials_dir = state_dir / "multi_drafts" / ch_id
-            if prev_chapter_text:
-                (materials_dir / "prev_chapter.md").write_text(
-                    prev_chapter_text, encoding="utf-8"
-                )
-
             n_drafts = len(draft_models)
             has_prev = prev_chapter_text is not None
 
@@ -837,7 +903,8 @@ def multi_translate(
             t0 = time.monotonic()
             try:
                 synthesized, cc_tokens = _synthesize_via_claude_code(
-                    ch_id, n_drafts, has_prev, state_dir, synth_model
+                    ch_id, n_drafts, has_prev, prev_chapter_text,
+                    state_dir, synth_model,
                 )
                 elapsed = time.monotonic() - t0
 
