@@ -556,7 +556,7 @@ def _synthesize_via_claude_code(
         has_prev_chapter=has_prev_chapter,
     )
 
-    result = _run_claude_code(synth_prompt, synth_model, timeout=1200, label=f"synthesis:{chapter_id}")
+    result = _run_claude_code(synth_prompt, synth_model, timeout=1800, label=f"synthesis:{chapter_id}")
 
     if result.returncode != 0:
         raise RuntimeError(

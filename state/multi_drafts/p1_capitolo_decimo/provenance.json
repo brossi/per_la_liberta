@@ -1,0 +1,133 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "We found bodies scattered here and there.",
+      "replacement": "We found corpses here and there.",
+      "reason": "Italian 'cadaveri' means corpses specifically, not the vaguer 'bodies'; Gemini's choice is more precise."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a sound body of customs officers and soldiers",
+      "replacement": "a sound body of Finance guards and soldiers",
+      "reason": "'Guardie di Finanza' is a specific Italian institution; 'Finance guards' preserves the institutional name rather than silently modernising to 'customs officers'."
+    },
+    {
+      "paragraph": 23,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "to interrupt the pleasant process of digestion",
+      "replacement": "to delay the sweet preparation of the chyle",
+      "reason": "The Italian 'la dolce preparazione del chilo' uses the specific physiological term 'chilo' (chyle); Gemini's rendering preserves both the period-scientific vocabulary and the wry humour of the original, whereas Claude's paraphrase flattens it."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "bursting into unrestrained laughter",
+      "replacement": "bursting into uproarious laughter",
+      "reason": "Italian 'ridere sgangheratamente' conveys loud, unhinged laughter; 'uproarious' (adapted from Gemini's 'laughing uproariously') is more vivid and closer in register than 'unrestrained'."
+    },
+    {
+      "paragraph": 29,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "all our clandestine network failed us",
+      "replacement": "all secret influence failed us",
+      "reason": "Italian 'ogni influenza segreta ci venne a mancare' says 'every secret influence'; Gemini's rendering is a closer literal match than Claude's interpretive 'clandestine network'."
+    },
+    {
+      "paragraph": 33,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "whistling a little tune well known to Trolli",
+      "replacement": "whistling a cabaletta well known to Trolli",
+      "reason": "Italian 'cabaletta' is a specific operatic term (a fast concluding section of an aria); preserving it maintains the cultural colour and Crespi's milieu. The Claude eval flagged the loss of this term."
+    },
+    {
+      "paragraph": 34,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the stale air of a schoolroom",
+      "replacement": "the mephitic air of a schoolroom",
+      "reason": "Italian 'aria mefitica' means noxious/foul air, a specific period term; 'mephitic' preserves the literary register and precise meaning where 'stale' is too mild."
+    },
+    {
+      "paragraph": 47,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "I sprang up — four long strides —",
+      "replacement": "I sprang up — one bound, four bounds —",
+      "reason": "Italian 'Diedi un balzo, quattro balzi' says literally 'I gave one leap, four leaps'; Gemini's count and the word 'bounds' are faithful to the original's rhythmic enumeration, which Claude's 'four long strides' misses."
+    },
+    {
+      "paragraph": 48,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the double problem of feeding myself and pressing on",
+      "replacement": "the twofold problem of feeding myself and pressing on",
+      "reason": "Italian 'duplice problema' is better served by 'twofold' which has a more formal, period-appropriate register than 'double'."
+    },
+    {
+      "paragraph": 52,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the poisoned air of your neighbour",
+      "replacement": "the tainted atmosphere of your neighbour",
+      "reason": "Italian 'l'ambiente guasto' means 'the corrupted/spoiled environment'; 'tainted atmosphere' (drawing 'tainted' from Gemini) is more accurate than 'poisoned air', which over-specifies."
+    },
+    {
+      "paragraph": 52,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "at the price of a few baiocchi",
+      "replacement": "for a goodly sum of *baiocchi*",
+      "reason": "Italian 'a buon di baiocchi' implies a decent outlay of papal coins; Gemini's 'goodly sum' better captures this meaning, and italicising the foreign term is proper editorial practice."
+    },
+    {
+      "paragraph": 56,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a room of equivocal character",
+      "replacement": "a room of amphibious character",
+      "reason": "Italian 'carattere anfibio' literally means 'amphibious character' (belonging to two worlds); 'equivocal' is an interpretation, whereas 'amphibious' preserves Crespi's specific and witty metaphor."
+    },
+    {
+      "paragraph": 57,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "The bird was in its cage",
+      "replacement": "The blackbird was in his cage",
+      "reason": "Italian 'Il merlo' is specifically a blackbird; Gemini's translation preserves this, which also carries Italian slang connotations (a 'merlo' is a gullible person), adding a layer of irony Claude's generic 'bird' loses."
+    },
+    {
+      "paragraph": 60,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "seemed to enter into me and make my own soul greater",
+      "replacement": "seemed to permeate me and make my own soul greater",
+      "reason": "Italian 'mi compenetrasse' means to pervade or saturate thoroughly; 'permeate' from Gemini captures this sense of deep interpenetration better than the simpler 'enter into'."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "molestia",
+      "edgren_definition": "molestation (annoyance, vexation)",
+      "english_choice": "molestation",
+      "paragraph": 2,
+      "note": "Edgren confirms that 'molestation' in period English meant annoyance/vexation, not the narrower modern sexual sense. This supported retaining Claude's 'suffered no molestation' over Gemini's 'without any trouble'."
+    },
+    {
+      "italian_word": "intuire",
+      "edgren_definition": "know intuitively (know at a glance)",
+      "english_choice": "divined",
+      "paragraph": 2,
+      "note": "Edgren's gloss 'know at a glance' confirmed that 'divined' (used by both drafts) is apt — capturing the instantaneous, intuitive quality of Trolli's understanding rather than a more deliberate 'understood' or 'guessed'."
+    },
+    {
+      "italian_word": "campagna",
+      "edgren_definition": "open country or field, country",
+      "english_choice": "open country",
+      "paragraph": 3,
+      "note": "Edgren's primary sense 'open country or field' supported using 'open country' rather than the more modern default 'countryside', which would lose the spatial quality of emerging from the city into exposed terrain."
+    },
+    {
+      "italian_word": "fetta",
+      "edgren_definition": "cut, slice (us'ly of food)",
+      "english_choice": "slices of lemon",
+      "paragraph": 1,
+      "note": "Edgren's note '(us'ly of food)' confirmed 'slices' as the correct rendering for 'fette di limone', reinforcing the grotesque juxtaposition of food imagery with battlefield gore that Crespi intends."
+    }
+  ]
+}

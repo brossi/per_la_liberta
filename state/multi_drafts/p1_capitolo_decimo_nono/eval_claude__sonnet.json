@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains an elevated, formal yet accessible register appropriate for an early 20th-century literary work."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "Despite the formal register, the narrative voice feels personal and reflective, capturing the conversational tone of the original."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation handles shifts well, for instance, by preserving the untranslated Venetian dialect phrase in the sergeant's speech while glossing it, which effectively conveys his coarse language contrasting with the narrator's more formal prose."
+        }
+      ],
+      "strengths": "The translation excels in maintaining the authentic literary voice and register of the original Italian text, making it feel true to its historical period.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Polizia' (Police), 'sgherri' (ruffians/henchmen), 'gendarmi' (gendarmes), 'Patria' (Fatherland), and 'regie imperiali autorità' (royal imperial authorities) are all translated or adapted accurately and appropriately for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Proper nouns, place names, and specific cultural items like 'rosario' (rosary) are preserved or naturally integrated. The term 'viatico' is preserved and helpfully glossed, and 'mangiacandele' is effectively translated to 'candle-chewing foreigner' to convey the pejorative nuance."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding and respect for the cultural and historical context, choosing excellent equivalents for politically charged terms and preserving specific references.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "The translation is largely faithful, but there is one minor omission ('ribelli' from 'nobili impulsi ribelli') and it reproduces several repetitive or structurally odd paragraphs found in the original source, which, while faithful to the source as provided, could be seen as a reproduction of a flaw rather than an improvement of prose flow."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical figures are correctly preserved as in the source text."
+        }
+      ],
+      "strengths": "The translation excels in conveying the literal meaning and faithfully replicating the structure of the provided source text, including its unique repetitions.",
+      "weaknesses": "A minor omission of 'ribelli' (rebellious) slightly alters the nuance of 'noble impulses.' The reproduction of repetitive paragraphs (a structural feature of the source) can make the English text feel redundant to a reader."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "The prose style is generally excellent and literary, but the faithful reproduction of repetitive paragraphs from the source text significantly disrupts the natural flow and readability for a literary piece, even if the individual sentences are well-crafted."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, idioms, and vivid imagery are consistently and effectively translated, such as 'touched on the quick' for 'punta sul vivo' and 'wrong end of the stick' for 'preso un granchio'."
+        }
+      ],
+      "strengths": "The translation beautifully renders figurative expressions and imagery, maintaining the evocative nature of the original. Individual sentences and paragraphs are well-written and maintain a literary quality.",
+      "weaknesses": "The verbatim replication of repetitive passages and an odd conversational interruption in the source text hinders the overall literary flow and natural reading experience of the English text, despite the translator's skill with individual phrases."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English prose is consistently grammatically correct with natural-sounding constructions, avoiding any noticeable awkwardness."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 0.5,
+          "note": "While individual sentences are clear, the repetitions of paragraphs from the source text, particularly the descriptive passages and the soldier's boot scene, require re-reading to understand the narrative progression, thus impacting overall fluency."
+        }
+      ],
+      "strengths": "The translation maintains excellent grammatical accuracy and clarity at the sentence level.",
+      "weaknesses": "The verbatim repetition of entire paragraphs, inherent in the source text but reproduced faithfully, interrupts the reader's flow and may necessitate re-reading to connect the narrative."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names and key recurring terms like 'Polizia' and 'mangiacandele' are translated consistently throughout the passage."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a consistent stylistic approach, even when reproducing the structural peculiarities of the source text."
+        }
+      ],
+      "strengths": "High degree of consistency in terminology and stylistic choices, reinforcing the authorial voice throughout the text.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.8875000000000001,
+  "_tokens": {
+    "input": 14139,
+    "output": 1585
+  }
+}

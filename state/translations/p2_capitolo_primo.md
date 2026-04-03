@@ -1,5 +1,7 @@
 <!-- pages:127-134 -->
 
+<!-- pages:127-134 -->
+
 AS an introduction to this second part, a page essentially of love claims its rightful place. What I here relate I had, in part, from the Count di Rudio himself, and in part from his wife. Nor was I without the aid of certain intimate letters, yellowed by time, yet still exhaling, fresh as ever, the fragrance of the past.
 
 The little politics that peeps in through the doorway carries the soul of Giuseppe Mazzini. For what, after all, is di Rudio, if not a reflection of that great conspirator? Setting aside the disproportion of their genius, the only substantial difference between the two seems to me this: the one held that without faith in God neither a spirit of sacrifice nor an enduring honesty is possible; the other managed to sacrifice himself and to live honestly, having set aside that mighty hypothesis altogether.
@@ -14,7 +16,7 @@ The excessive distance of the workshop obliged him to forgo the cordial hospital
 
 We should encounter feet peering out between sole and upper, bearing witness to the long and fruitless hunt for employment; bellies pinched by the belt, betraying the enormous disproportion between appetite and the means of satisfying it. I should have to tell of nocturnal hunts across the rooftops and the mewing of innocent cats destined for the pot; to describe the cramped lairs shared between half a dozen human creatures, each instinctively reclaiming, in sleep, their portion of the blanket — a blanket sometimes pieced together with the art of a mosaicist, compounded of newspapers gathered from the benches in the public gardens.
 
-The drama would not fail to chill us with its cold breath... virile constitutions corroded by hunger; sensitive natures ruined beyond all hope of recovery; poems vanished silently amidst the clamour of a thieving, pleasure-seeking world; death rattles; corpses laid out in pieces upon the cold marble of the mortuary slab... acts of heroism without witnesses, unrecorded, yet no less worthy of history than those which unfolded in the light of great occasions.
+The drama would not fail to chill us with its cold breath... virile constitutions corroded by hunger; sensitive natures ruined beyond all hope of recovery; poems vanished silently amidst the clamour of a thieving, pleasure-seeking world; the death-rattles of the consumptive; corpses cut to pieces upon the cold marble of the mortuary slab... acts of heroism without witnesses, unrecorded, yet no less worthy of history than those which unfolded in the light of great occasions.
 
 Against this backdrop, rendered now in strokes of lamentation, now of comedy, now of the sublime, stands out the pensive figure of Giuseppe Mazzini who, to feed the generative flame of divine conceptions, of genius and of virtue, goes knocking at the moneylender's door and pledges... his own boots.
 
@@ -34,15 +36,15 @@ Tressoldi's comical despair, and the fact that he had caught the scent of the tr
 
 One evening Bonacina and four or five fellows of the same stamp were demanding to drink at no cost and threatening to turn everything upside down if they were not served instanter. Di Rudio stepped forward and ordered them to clear the room... and never to set foot in it again.
 
-"Methinks the young pup smells of good health!" replied Bonacina, making as if to deal him a backhanded blow. It was the signal for a furious brawl... Fumagalli had his head broken; but the ruffians, overwhelmed and badly mauled, ended by beating a retreat, leaving their leader to make the best of things as he could. Alone, with one eye closed and the other barely open, his mouth bloody, Bonacina backed away to the window and, swearing he would have his revenge, leaped out and vanished into the darkness of the street.
+"This beardless boy smells of good health!" replied Bonacina, making as if to deal him a backhanded blow. It was the signal for a furious brawl... Fumagalli had his head broken; but the ruffians, overwhelmed and badly mauled, ended by beating a retreat, leaving their leader to make the best of things as he could. Alone, with one eye closed and the other barely open, his mouth bloody, Bonacina backed away to the window and, swearing he would have his revenge, leaped out and vanished into the darkness of the street.
 
 Not a single grim face, that evening, at the sign of Tressoldi's! But the affair had, for di Rudio, an unexpected sequel. One foggy night, returning from the Opera, with his head full of trills and high notes, turning a corner into a deserted lane, he found himself face to face with Bonacina, heavily muffled, fist raised and in that fist a large knife.
 
 "Ah, ah!" said the scoundrel mockingly. "Now we shall see whether your liver is sound!" But instead of delivering the blow, he drew back... he had caught the gleam of a pistol barrel.
 
-Then di Rudio was seized by a singular whim: to add, to the silent eloquence of the weapon, that of a brief homily. He recalled to Bonacina the heroism and greatness of his fellow Milanese, in such striking contrast to his own conduct. And probing that heart, to rekindle beneath the ashes the gentle sentiments of childhood, he asked him, among other things, whether he did not believe that his mother was ashamed to have brought into the world, nursed and raised a son who was surely betraying her finest hopes; who mocked the sufferings of his fellow citizens; who spat upon her grey hairs; who renounced the Patria.
+Then di Rudio was seized by a singular impulse: to add, to the silent eloquence of the weapon, that of a brief homily. He recalled to Bonacina the heroism and greatness of his fellow Milanese, in such striking contrast to his own conduct. And probing that heart, to rekindle beneath the ashes the gentle sentiments of childhood, he asked him, among other things, whether he did not believe that his mother was ashamed to have brought into the world, nursed and raised a son who was surely betraying her finest hopes; who mocked the sufferings of his fellow citizens; who spat upon her grey hairs; who renounced the Fatherland.
 
-Bonacina, hard and contemptuous at first, ended by absorbing, head bowed, his dose of medicine. Then, flinging away the knife with a sudden movement, he fled headlong, sobbing like a child. The love of the Patria had known how to kindle some glimmer even in that base and debased soul!
+Bonacina, hard and contemptuous at first, ended by absorbing, head bowed, his dose of medicine. Then, flinging away the knife with a sudden movement, he fled headlong, sobbing like a child. The love of the Fatherland had known how to kindle some glimmer even in that base and debased soul!
 
 The Count di Rudio, from his lodging at Baldwin's Garden, went every evening to exchange a few words with Fumagalli and Leoni. After their customary long walk, they pooled what few coins they had and allowed themselves a bottle... of concentrated sunshine. Such was the name they gave to the product of the Lombard vineyards; the only available means by which they could warm themselves at the sun of Italy.
 
@@ -58,7 +60,7 @@ And Leoni, looking fixedly at Fumagalli and winking at him: "Let us recite the *
 
 The following evening and the next and many more besides, di Rudio was nowhere to be seen. His two friends grew anxious and resolved to go to Baldwin's Garden to investigate. They found the door ajar. To ring the bell, or to step boldly forward without asking leave? Whilst they stood in two minds, they heard a sweet, gentle voice saying: "In my garden there grows a pear..."
 
-A masculine voice, that of di Rudio, interrupted: "I have already told you that the names of trees are masculine, and the names of fruits feminine..."
+A masculine voice, that of di Rudio, interrupted: "I have already told you that the names of trees are masculine, and the names of fruits feminine. Excepting *dattero*, *limone*, *ananassa*..."
 
 — Except *dattero*, *limone*, *ananassa* and *fico*! — observed another woman's voice, more vibrant than the first.
 
@@ -72,7 +74,7 @@ This latter, meanwhile, as if to make it so deliberately, was endowed with a tem
 
 The Count di Rudio told me that, as a girl, she possessed a certain suppleness of character and intellect; but she could never have been brought, even had she wished it, to the point of self-negation. To love strong souls; to open to them, as a corolla to the kisses of the sun, the most hidden gradations of her heart; but in order to be stronger, greater together as two. To conclude a treaty of alliance — that yes, with all her ardour, and to remain faithful to it unto the last; to sign even an honourable surrender, never!
 
-Di Rudio had resolved to teach Italian to the two young women at the urging of Signora Mancherini. Why refuse? To study our language becomes fatally synonymous with loving our Patria, and our friends are always something of enemies to our enemies. The sympathy of the English was greatly prized by the Italians, and even the arts of peace may serve to win a battle. Besides, every small stone has its value in great undertakings!
+Di Rudio had resolved to teach Italian to the two young women at the urging of Signora Mancherini. Why refuse? To study our language becomes fatally synonymous with loving our Fatherland, and our friends are always something of enemies to our enemies. The sympathy of the English was greatly coveted by the Italians, and even the arts of peace may serve to win a battle. Besides, every small stone has its value in great undertakings!
 
 And so it came about that the Count di Rudio, every evening, after having laboured prosaically among rushes, applied himself to instilling the sweetest and the strongest of modern tongues into the charming heads of two young women born and raised upon the foggy banks of the Thames; and perhaps the Gods of Olympus, from the heights of their shelves, smiled down upon the scene.
 

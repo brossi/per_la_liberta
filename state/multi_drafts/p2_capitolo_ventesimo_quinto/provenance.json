@@ -1,0 +1,28 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "of craven equivocation",
+      "replacement": "of craven tergiversations",
+      "reason": "The Italian 'tergiversazioni' is a specific political term meaning deliberate evasions and shifts of position; 'equivocation' flattens this to mere ambiguity and also collides with 'equivoco' used distinctly later in the chapter. Gemini's 'tergiversations' is the direct English cognate and preserves the political register. 'Craven' was retained from the Claude draft as a stronger literary rendering of 'codarde' than Gemini's 'cowardly'."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "scorgere",
+      "edgren_definition": "discern (perceive, distinguish); discover; guide (escort)",
+      "english_choice": "discern",
+      "paragraph": 2,
+      "note": "Edgren's primary gloss 'discern' is more precise and period-appropriate than the modern default 'perceive' (used by Gemini) or 'see'. It captures the sense of intellectual perception—seeing through or into something—which fits the narrator's political analysis."
+    },
+    {
+      "italian_word": "freno",
+      "edgren_definition": "bit; restraint; brake",
+      "english_choice": "put a brake upon",
+      "paragraph": 2,
+      "note": "Edgren confirms 'brake' as a standard sense of 'freno', supporting the concrete mechanical metaphor in 'mettere un freno ai Francesi' rather than the more abstract 'put a check on' (Gemini) or 'restrain'."
+    }
+  ]
+}

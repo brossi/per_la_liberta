@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully employs a formal yet narrative English register consistent with an early 20th-century literary style."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrative flows naturally, maintaining a personal and direct conversational tone throughout the passage."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 0.5,
+          "note": "Informal expressions like 'pisellone' are well-handled ('you great blockhead'). However, the raw, dialectal imprecation 'murì... muri ammazzato!' is rendered as 'die... die cut down by a blade!', which, while conveying the meaning, slightly formalizes its delivery and loses some of the original's coarse spontaneity."
+        }
+      ],
+      "strengths": "The translation maintains a consistent and appropriate literary register, largely preserving the narrative voice and making judicious choices for period-appropriate vocabulary.",
+      "weaknesses": "A slight loss of the raw, informal impact in one highly dialectal phrase, leaning towards a more literary equivalent."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Orleanist arrabbiato' ('rabid Orleanist') are accurately translated, and 'prepotenza' is effectively glossed, demonstrating strong contextual awareness."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Key terms like 'prepotenza,' 'conquibus,' and 'trasteverino' are either kept in Italian with helpful glosses or translated contextually (e.g., 'farmacia' as 'dispensary'), preserving the cultural flavour."
+        }
+      ],
+      "strengths": "Excellent handling of cultural and political terms, ensuring clarity for the English reader while respecting the Italian source.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly faithful, accurately reproducing the meaning and nuances of the original text without any notable omissions or additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns and place names, including 'Corù,' 'Île du Diable,' 'Montagne d'Argent,' and character names, are correctly preserved."
+        }
+      ],
+      "strengths": "Exceptional accuracy and faithfulness to the source text, demonstrating a thorough understanding of the Italian.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant and reads very naturally, maintaining a compelling narrative flow that feels like original literature."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'raggi di una ruota sconnessa' ('spokes of a broken wheel') and 'fiutando la via come un topo' ('nosing out the way like a rat'), is translated vividly and effectively."
+        }
+      ],
+      "strengths": "The translation excels in literary quality, offering engaging and natural-sounding prose while skillfully rendering imagery and figurative expressions.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable, with no awkward phrasing or syntactical errors."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and easy to read, allowing for smooth comprehension without needing to re-read sentences."
+        }
+      ],
+      "strengths": "Flawless grammar and excellent readability contribute to a highly fluent and enjoyable reading experience.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names and key terms (e.g., the treatment of 'prepotenza') are consistently handled throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a consistent and coherent literary style from beginning to end."
+        }
+      ],
+      "strengths": "Strong consistency in terminology, names, and stylistic choices across the entire passage.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 0.9583333333333334,
+  "_tokens": {
+    "input": 4130,
+    "output": 1363
+  }
+}

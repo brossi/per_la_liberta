@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal, somewhat elevated literary register consistent with the early 20th century original, using vocabulary like 'exalting,' 'deplorable degradation,' 'arduous struggles,' and 'cortège.'"
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The personal reflections, direct addresses (e.g., 'oh, believe what is true...'), and immediacy of the narrative voice are well-preserved, conveying Crespi's presence and perspective."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original Italian maintains a largely formal tone throughout, and the English translation accurately reflects this consistent register without inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels at capturing and maintaining the original's formal, reflective, and dramatic tone, effectively conveying the authorial voice and literary register of the period.",
+      "weaknesses": "There are no significant weaknesses in this dimension; the tone and voice are consistently strong."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'municipal guards,' 'imperial procession/cortège,' and 'Lancers of the Imperial Guard' are accurately and appropriately translated for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "The proverb 'L'Italiano non paga il Sabato ma paga!' is literally translated, preserving its cultural flavor. 'Trattoria' is kept, and 'via Le Pelletier' is appropriately rendered as 'rue Le Pelletier' for the Parisian context."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong awareness of historical and cultural context, making excellent choices in rendering specific terms and references, including the subtle adaptation of 'via' to 'rue' for a Parisian street name.",
+      "weaknesses": "No notable weaknesses in this area. The cultural elements are handled skillfully."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, faithfully rendering the meaning of the source text with no discernible omissions or additions. Complex sentence structures and nuanced expressions are expertly conveyed."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical references (e.g., Broggi, Orsini, Gomez, Pieri, Napoleon III, 2nd of December, rue Le Pelletier) are preserved correctly, including the source text's specific spelling of 'Eugenia Moutijo'."
+        }
+      ],
+      "strengths": "The translation is exceptionally faithful to the source text, demonstrating a deep understanding of the Italian original's meaning, down to specific phrasing and proper noun retention.",
+      "weaknesses": "None observed. The accuracy is a major strength."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "While generally flowing well, some sentences, particularly longer ones, retain a slightly clunky or convoluted structure from the original, making them less natural in English prose (e.g., 'Nor, to compress that sentiment, was the idea sufficient that...')."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and imagery are consistently translated with vividness and impact, such as 'motionless as a statue,' 'drunkenness of blood,' 'nose of a vulture's beak,' and 'passed like lightning through my head.'"
+        }
+      ],
+      "strengths": "The translation excels at conveying the rich imagery and figurative expressions of the original, maintaining their emotional and descriptive power.",
+      "weaknesses": "Some of the longer and more grammatically intricate sentences from the Italian are translated quite literally, which occasionally results in prose that, while accurate, feels a bit less natural or fluid in English."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The English is grammatically correct, but a few constructions are somewhat awkward or overly literal, impacting fluency slightly (e.g., 'To praise to the heavens the man who has gunned them down...'; the repeated 'I lunged forward, bent low,' splitting the paragraph)."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 0.5,
+          "note": "Most of the text is clear and readable. However, the occasional convoluted sentence structure or very long sentence requires a momentary pause or re-reading to fully grasp, slightly impeding natural flow."
+        }
+      ],
+      "strengths": "The grammar is impeccable, and the translation largely conveys clarity despite the complexity of the original's sentence structures.",
+      "weaknesses": "The direct mapping of Italian sentence structures sometimes leads to English sentences that are grammatically correct but slightly less fluent or natural-sounding, occasionally necessitating a second read."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "Most recurring terms and names are consistent ('trattoria,' 'Lancers of the Imperial Guard'). However, 'corteggio imperiale' is rendered as 'imperial procession' once and 'imperial cortège' later, which is a minor stylistic inconsistency, though both are valid translations."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a consistent and coherent literary style throughout the entire passage, reflecting the tone and register established from the beginning."
+        }
+      ],
+      "strengths": "The overall literary style is consistently maintained across the passage, ensuring a unified reading experience.",
+      "weaknesses": "A very minor inconsistency in the translation of 'corteggio imperiale' is present, though it doesn't significantly detract from the overall quality."
+    }
+  ],
+  "weighted_score": 0.8875,
+  "_tokens": {
+    "input": 4105,
+    "output": 1666
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "I was brought once more before the Palais de Justice",
+      "replacement": "I was brought once more to the Palais de Justice",
+      "reason": "The Italian 'al Palazzo di Giustizia' uses the preposition 'al' (to the), not 'davanti al' (before). The Gemini draft correctly rendered 'to the Palace'; the final keeps the Claude draft's French form 'Palais de Justice' but adopts the more accurate preposition 'to'."
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro",
+      "original": "at the Governor's office",
+      "replacement": "at the Chancellery",
+      "reason": "The Italian 'Cancelleria' is a specific administrative office in the prison, best rendered as 'Chancellery' — a direct cognate that preserves the institutional register. 'Governor's office' is an interpretive substitution that loses the original term."
+    },
+    {
+      "paragraph": 19,
+      "from_draft": "draft_gemini__pro",
+      "original": "to the Governor's office",
+      "replacement": "to the Chancellery",
+      "reason": "Same correction as paragraph 10: consistent use of 'Chancellery' for Italian 'Cancelleria'."
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro",
+      "original": "London Times",
+      "replacement": "London *Times*",
+      "reason": "The Italian source puts 'Times' in quotation marks as a publication title. Italicising it follows standard English typographic convention for newspaper names, as the Gemini draft did."
+    }
+  ],
+  "edgren_influences": []
+}

@@ -1,0 +1,91 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "AND here we come to our chief",
+      "replacement": "AND so we come to our chief",
+      "reason": "\"so\" better renders the Italian \"eccoci\" (here we are / and so), signalling a rhetorical transition rather than spatial arrival"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "by the mysterious reactions of his spirit",
+      "replacement": "through the mysterious reactions of his soul",
+      "reason": "\"soul\" for \"animo\" is more natural in English literary register; \"through\" better conveys the causal sense of \"per\""
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro",
+      "original": "despite his pretension to being a positive man",
+      "replacement": "despite his pretension to being a practical man",
+      "reason": "Italian \"uomo positivo\" in this context means a man of practical, empirical temper, not a man who is \"positive\" in the modern English sense; Gemini's \"practical\" avoids the ambiguity"
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "With an irony that seemed cutting",
+      "replacement": "With an irony that seemed cruel",
+      "reason": "\"sanguinosa\" literally means blood-drawing / cruel; \"cutting\" is weaker and loses the visceral quality"
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "through the streets of the capital",
+      "replacement": "through the streets of the metropolis",
+      "reason": "\"metropoli\" is a direct cognate; \"capital\" flattens the grandiose connotation that Crespi intends — Orsini parading through a great world-city"
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "so as to wrest from him a full confession",
+      "replacement": "in order to wring from him a full confession",
+      "reason": "\"wring\" better conveys the forcible extraction implied by \"strappargli\" (to tear/wrench out)"
+    },
+    {
+      "paragraph": 19,
+      "from_draft": "draft_gemini__pro",
+      "original": "standing before a snarling mongrel without trembling",
+      "replacement": "standing without trembling before a snarling cur",
+      "reason": "\"cur\" is more period-appropriate and dismissive than \"mongrel\" for the contemptuous Italian \"botolo ringhioso\" (a snarling little mutt)"
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro",
+      "original": "Jules Favre was not the intellect to spoil",
+      "replacement": "Giulio Favre was not the manner of intellect to ruin",
+      "reason": "Retains the Italian form \"Giulio\" consistent with the source and the rest of the translation; \"ruin\" and the expanded phrasing better convey \"guastare\" (to spoil/wreck) with appropriate gravity"
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro",
+      "original": "He brought to it the powerful hand of the artist",
+      "replacement": "He laid upon it the powerful hand of the artist",
+      "reason": "\"laid upon it the hand\" mirrors the Italian \"vi pose la mano\" (placed his hand upon it), capturing the deliberate, artisanal gesture Crespi describes"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "ingegno",
+      "edgren_definition": "natural talent (genius); craftiness (subtility); spring",
+      "english_choice": "genius",
+      "paragraph": 3,
+      "note": "Claude's draft rendered \"ingegno destro\" as \"a talent adroit\"; Gemini used \"a mind adept\". Edgren explicitly lists \"genius\" as a primary sense of ingegno. The final uses \"a genius adroit\", selecting the Edgren sense that best matches the elevated register and the specific context of conspiratorial brilliance."
+    },
+    {
+      "italian_word": "malattia",
+      "edgren_definition": "sickness (disease, malady)",
+      "english_choice": "maladies",
+      "paragraph": 2,
+      "note": "Both drafts use \"maladies\" or \"illnesses\". The final keeps \"maladies\" (matching Claude), which aligns with Edgren's listed equivalent and preserves the clinical-yet-literary tone Crespi employs when diagnosing Orsini's temperamental deficiencies. \"Illnesses\" (Gemini) would have been too plain."
+    },
+    {
+      "italian_word": "somma",
+      "edgren_definition": "SUM (amount); height; summary (compendium); result",
+      "english_choice": "the sum of trifles",
+      "paragraph": 3,
+      "note": "Edgren confirms \"sum\" as the primary sense of \"somma\", supporting the retention of the mathematical metaphor (\"the sum of trifles patiently worked with a chisel\") rather than paraphrasing to \"total\" or \"aggregate\"."
+    }
+  ]
+}

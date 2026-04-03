@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively maintains a formal and slightly archaic literary register that matches the early 20th-century Italian source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The personal reflections, direct address, and narrative flow consistently reflect Crespi's engaging and conversational authorial voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a generally formal tone with emotional intensity in certain passages (e.g., the lawyer's speech), which the translation accurately mirrors."
+        }
+      ],
+      "strengths": "The translation excels at preserving the distinct literary register and the conversational, yet formal, authorial voice of the source text. It feels authentic to the period and character.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Monarchia Sabauda' (Savoyard Monarchy), 'Consiglio di guerra' (court-martial), and other political references are accurately and appropriately translated for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, historical figures, and specific Italian references (e.g., 'bergamasco' as 'Bergamask', 'il preteso procuratore del buon Dio') are perfectly preserved or translated with cultural sensitivity and accuracy."
+        }
+      ],
+      "strengths": "The translation demonstrates an excellent understanding of the historical and cultural context, faithfully preserving all specific references and rendering political terms with period-appropriate English.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably precise, conveying the full meaning of the Italian source without any discernible omissions or unfaithful additions. Complex sentence structures and nuanced expressions are handled with great care."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical figures are consistently preserved in their original Italian forms, ensuring faithfulness to the source."
+        }
+      ],
+      "strengths": "This translation is exceptionally accurate and faithful to the original text. It captures subtleties and maintains the integrity of the source's content and detail.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly polished, reads naturally, and flows beautifully, making it compelling as a literary piece rather than a mere transliteration. The rhythm and cadence are well-preserved."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "All figurative expressions, vivid imagery, and rhetorical devices (e.g., similes, metaphors, dramatic contrasts) are effectively translated, maintaining their original impact and poetic quality."
+        }
+      ],
+      "strengths": "The translation exhibits outstanding literary quality, producing English prose that is elegant, natural, and effectively conveys the evocative imagery and figurative language of the original.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable and completely free of awkward constructions. Complex sentences are structured clearly and precisely."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is highly readable and clear, flowing smoothly without any instances that require re-reading for comprehension."
+        }
+      ],
+      "strengths": "The translation is grammatically flawless and incredibly fluent, making it a pleasure to read. It achieves high clarity and readability even with sophisticated sentence structures.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All recurring terms, proper nouns, and character names are translated with perfect consistency throughout the entire text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a highly coherent and consistent literary style across all paragraphs, effectively mirroring the source's overall tone and register."
+        }
+      ],
+      "strengths": "The translation maintains exemplary consistency in terminology, naming conventions, and stylistic approach throughout the entire passage.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 6750,
+    "output": 1365
+  }
+}

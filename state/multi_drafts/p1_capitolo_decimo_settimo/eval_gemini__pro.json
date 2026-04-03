@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains the formal yet accessible literary register of the early 20th century Italian source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The conversational narrative voice, including rhetorical questions and personal reflections, is well-preserved."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "Any subtle shifts between formal narration and more direct or exclamatory passages are handled naturally and effectively."
+        }
+      ],
+      "strengths": "The translation excels at capturing the period's literary tone and Crespi's distinctive narrative voice, making the English text feel authentic to the era and the author.",
+      "weaknesses": "No notable weaknesses in this dimension; the tone and voice are consistently strong."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Political terms like 'friendly Power,' 'uprisings,' and 'Federal Delegate' are accurately and appropriately translated for the period."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Cultural references, literary allusions (e.g., 'Milanese Jean Valjean,' 'Venetian Catullus'), and place names are preserved or adapted with sensitivity to context."
+        }
+      ],
+      "strengths": "The translation demonstrates a deep understanding of the historical and cultural context, translating specialized terms and references accurately without losing their original meaning or impact.",
+      "weaknesses": "No weaknesses identified; the cultural context is handled with precision."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, conveying the precise meaning of the Italian source, including complex sentences and idiomatic expressions, without any omissions or additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, geographical locations, and historical event references are correctly preserved as in the original."
+        }
+      ],
+      "strengths": "This translation is exceptionally faithful to the source text, demonstrating a meticulous attention to detail in meaning, nuance, and factual accuracy. Idiomatic expressions are rendered with particular skill.",
+      "weaknesses": "No weaknesses whatsoever; the accuracy is outstanding."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads very naturally and flows beautifully, making it an engaging literary work in its own right, not merely a translation."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, metaphors, and vivid imagery are consistently translated effectively, enhancing the English text's descriptive power."
+        }
+      ],
+      "strengths": "The translation possesses high literary merit, with elegant prose, natural phrasing, and a skillful rendering of figurative language that enriches the reader's experience.",
+      "weaknesses": "No areas of weakness were found; the literary quality is excellent."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct and free from any awkward or unnatural constructions, even in complex sentences."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is highly readable and clear throughout, allowing for smooth comprehension without needing to re-read passages."
+        }
+      ],
+      "strengths": "The translation is grammatically flawless and remarkably fluent, contributing to a seamless and enjoyable reading experience.",
+      "weaknesses": "There are no weaknesses in grammar or fluency; the text is polished and professional."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Recurring terms (e.g., 'Master' for Mazzini, 'Fatherland' for Patria) and all character names are translated with perfect consistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a uniform and coherent style across the entire passage, ensuring a consistent reader experience."
+        }
+      ],
+      "strengths": "The consistency in terminology, character names, and overall style is impeccable, indicating thorough editing and careful attention to detail.",
+      "weaknesses": "No weaknesses detected; the consistency is exemplary."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 7783,
+    "output": 1350
+  }
+}

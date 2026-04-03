@@ -1,0 +1,31 @@
+WHAT I am about to relate I gathered from the letters Giustiniano wrote to me. I have impressed them upon my memory in indelible characters. To hearten our mother, Giustiniano sketched the situation for her, tempering it with a generous measure of optimism. Luisa would be subjected to some questioning, but would soon be set at liberty. Father was regarded as an old patriot, an irreducible man, and would not have been able to extricate himself so easily. But how were they to condemn him without proof? The judicial authorities were rigorous beyond all telling; yet they were anxious to appear above reproach and would not dare commit a manifest act of knavery. As for myself, he had himself accompanied me as far as the mines of Agordo. From that point, I had chosen paths that only I and the chamois knew how to tread. By now I must surely have crossed beyond the frontier, while the Police still believed me to be in Belluno and were searching for me there. Before long, they would receive letters from me bearing a Swiss postmark, or from some other country where the black and yellow did not fly. Everything, then, depended on not losing heart, so as to preserve one's health, so very necessary in that storm.
+
+But the confidence he laboured to instil into our mother's heart was far from dwelling in his own. The newspapers, subject to rigorous censorship, seemed in agreement in treating the latest conspiracy with the conspiracy of silence. Yet news knows how to travel a very great distance even without the aid of newspapers. Now from the lips of trusted friends he chanced to meet along the way; now at the café, gathered about a table, between one remark and another upon the fair weather or the price of agricultural produce — words that could not be openly uttered without danger slipped into his ear, and from these, as ever in such cases, the cheerful assurances seemed but faintly sketched; the sinister predictions laid on with a heavy brush.
+
+One evening, it seemed these had found a tragic fulfilment in the facts themselves. "Amidst the gorges of the Alps, a patrol had barred the path of the fugitive patriot… the order to surrender set at naught… the noble heart shattered by Austrian lead… the long succession of generous impulses cut off for ever. That very night, the body would arrive in Belluno for the legal formalities."
+
+Giustiniano hastened home, to prevent the sorrowful news from reaching our mother through some incautious mouth. He found her abed. To wake her? To what purpose? She would have more than enough time to weep. He paced the room up and down until a very late hour; then, overcome by weariness, he let himself fall into an armchair and fell asleep.
+
+Through the half-closed shutters, the first light of dawn was barely peering in when our mother, impatient for news, brought him his customary cup of coffee. She saw him, and divining the sleepless and anguished night he had passed, instead of waking him, she went to the untouched bed, took from it a coverlet, and spread it over his knees and chest. At that very moment, the bell rang furiously.
+
+Giustiniano started awake, saw, remembered, understood. He threw his arms about the poor woman's neck and said to her:
+
+"Mamma, my poor mamma, be strong and prepare yourself for the worst."
+
+They departed by carriage, a gendarme on the box, an inspector at their side. No fits of hysteria, no sobbing, no silent tears. Giustiniano held tight to the right hand of the stricken woman, who paid him no heed, who remained motionless, her eyes fixed upon some distant point visible to her alone.
+
+She was led into a large, cold room. From the facing wall a table projected, its far end resting upon a trestle; upon the table was laid out a sheet; beneath the sheet, with sinister ambiguity, were traced the forms of a man in the rigidity of death. A soldier, rifle at the order, stood erect and stiff-chested beside it. Another, in his shirtsleeves, his cuffs rolled back, his left hand plunged deep into a large boot upon which he kept his eyes intently fixed, was working the brush furiously and polishing away at it. Four officers, arranged in a circle, were conferring in low voices. A blazing brazier adulterated, with its ruddy glare, the clear light of morning.
+
+At the mother's entering, the officers broke off their conversation and turned their faces toward that austere apparition, which advanced to the foot of the corpse with a firm, almost resolute step.
+
+Someone spoke. He alluded to the painful necessity imposed upon him by duty, and lamented the untimely end of the misguided men who lay hands upon the sacred majesty of the Law… She seemed not to hear; her whole soul was concentrated in her eyes, which blazed beneath the black veil.
+
+There was one who drew back the sheet with a sudden gesture. A livid face appeared. Then a single sob resounded in the sepulchral silence — one only!… but it sufficed to break the tempest of a heart.
+
+Mamma lifted her veil, gazed intently upon the officers, and in a voice in which throbbed the muffled menace of an entire People, said: "No, this poor wretch is not my son! Carletto lives!… he lives, and he will avenge the anguish I have suffered, and he will avenge his Country!"
+
+In the general stupefaction, maternal majesty had its triumph. She moved toward the door with as firm a step as that with which she had come. The soldier in his shirtsleeves blew his warm breath upon the boot and laid on with the brush more furiously than ever… perhaps at that moment he wished that the barracks and the Empire were concentrated in that muddy upper leather. The stiff-chested soldier standing beside the corpse did not stir an eyelid… an automaton in uniform, he awaited an order that never came.
+
+The four officers, having turned suddenly pale, had their thoughts perhaps dragged by force to a far-off country, beyond the Alps, where other mothers were suffering.
+
+Into the cold surroundings of the barracks, into the breasts hardened by iron discipline, accustomed to the savage emotions of oppression and of blood, there insinuated themselves, plainly enough, the gentle memories of childhood, and stirred therein the dormant pity. For one moment, the despot's minions became once more men of the People. The austere apparition — unmolested, admired — disappeared!

@@ -1,0 +1,49 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "was a degenerate of the Bolognese breed",
+      "replacement": "was a discredit to the Bolognese breed",
+      "reason": "Italian 'sfalsava la razza bolognese' means 'falsified/discredited the Bolognese breed'. Gemini's 'discredit' is closer to 'sfalsava' than Claude's interpretive 'degenerate'; 'Bolognese breed' retained from Claude as a more literal rendering of 'razza bolognese' than Gemini's 'people of Bologna'."
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "the work and the shame of the Napoleonic betrayal of 1849",
+      "replacement": "the work and the shame of Napoleon's deed of 1849",
+      "reason": "Italian 'l'opera e l'onta napoleonica del 1849': 'opera' means work/deed and 'onta' means shame. Claude's 'betrayal' was flagged in evaluation as adding an interpretive layer. The final restructures to separate 'work' (opera) and 'shame' (onta) more faithfully, avoiding the addition of 'betrayal' which has no direct source word."
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro",
+      "original": "who makes a mockery of every noble aspiration of his own",
+      "replacement": "who tramples upon every noble aspiration of his own",
+      "reason": "Italian 'fa strame d'ogni nobile aspirazione' — 'far strame' literally means to make straw/litter of, i.e. to trample or lay waste. Gemini's 'tramples' is closer to this sense than Claude's 'makes a mockery of', which shifts toward ridicule rather than destruction. Note: Gemini included 'Fatherland' (for 'della Patria sua') which the final omits — an oversight that slightly truncates the original."
+    },
+    {
+      "paragraph": 19,
+      "from_draft": "draft_gemini__pro",
+      "original": "in Shoah Square",
+      "replacement": "on Shoah Square",
+      "reason": "English convention for public squares uses 'on' (cf. 'on Trafalgar Square'), not 'in'. Gemini had the correct preposition."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "cassetta",
+      "edgren_definition": "small box (casket); drawer; cash-drawer; letter-box; alms-box; coach-box",
+      "english_choice": "little cases",
+      "paragraph": 2,
+      "note": "Edgren's core sense 'small box' reinforced the diminutive 'little cases' for 'cassette' (plural), keeping the modest, personal scale of the luggage rather than a more generic modern rendering like 'bags' or 'suitcases'."
+    },
+    {
+      "italian_word": "patria",
+      "edgren_definition": "fatherland (native land)",
+      "english_choice": "fatherland",
+      "paragraph": 2,
+      "note": "Edgren's primary gloss 'fatherland' confirmed the period-appropriate choice over modern alternatives like 'homeland' or 'country'. Both drafts already used 'fatherland'; the dictionary entry validated consistency throughout."
+    }
+  ]
+}

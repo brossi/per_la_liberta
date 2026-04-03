@@ -1,0 +1,133 @@
+{
+  "primary_draft": "draft_gemini__pro",
+  "incorporations": [
+    {
+      "paragraph": 4,
+      "from_draft": "draft_claude__sonnet",
+      "original": "I had my sustenance from the spade and the flowers",
+      "replacement": "I drew my sustenance from the spade and the flowers",
+      "reason": "'Drew my sustenance' is more idiomatic and literary than the flat 'had my sustenance'; Italian 'ebbi... il mio sostentamento' implies deriving/drawing, not merely having."
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_claude__sonnet",
+      "original": "I would stare at his olive-hued, intellectual face",
+      "replacement": "I would fix my gaze upon that olive-hued, intellectual face",
+      "reason": "'Fix my gaze upon' is closer to the Italian 'fissavo la faccia' (fissare = to fix) and carries more intensity and deliberation than the blunt 'stare at'."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_claude__sonnet",
+      "original": "I felt my spirits sink",
+      "replacement": "I felt my arms fall to my sides",
+      "reason": "The Italian 'mi sentii cascare le braccia' literally means 'I felt my arms drop.' Gemini abstracted this into a generic 'spirits sink'; the Claude-derived phrasing preserves the vivid physical image of the original."
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_claude__sonnet",
+      "original": "lent its rump to so great a weight",
+      "replacement": "lent its back to so great a weight",
+      "reason": "'Rump' (for Italian 'groppa') is accurate but slightly comic in English; 'back' maintains the dignity of the passage's ironic tone without losing the meaning."
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_claude__sonnet",
+      "original": "was not what Count di Rudio, the Italian patriot, and the trusted envoy of Giuseppe Mazzini had expected",
+      "replacement": "was not what the Count di Rudio had expected — nor the Italian patriot, nor the trusted envoy of Giuseppe Mazzini",
+      "reason": "The Italian uses 'e il Conte di Rudio e il patriota italiano e l'inviato di fiducia' — three distinct roles, rhetorically separated. Claude's structure with repeated 'nor' preserves the tripartite rhetorical emphasis lost in Gemini's flat list."
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_claude__sonnet",
+      "original": "from my very demeanor",
+      "replacement": "from my very bearing",
+      "reason": "'Bearing' is more period-appropriate for mid-19th-century English and better renders Italian 'contegno' (composure, deportment) than the more modern 'demeanor'."
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_claude__sonnet",
+      "original": "we reasoned in low voices",
+      "replacement": "we conversed in low voices",
+      "reason": "Italian 'ragionammo' can mean 'reasoned' or 'conversed/talked'; in context (a private discussion, not a logical argument) 'conversed' is more natural and avoids the implication of formal syllogistic reasoning."
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_claude__sonnet",
+      "original": "not a corner of Italy where the action would not blaze forth",
+      "replacement": "not a corner of Italy where the flame of action would not blaze",
+      "reason": "Italian 'non lembo d'Italia ove non divampasse l'azione' — 'divampare' means to blaze up like a flame. 'The flame of action' makes the fire metaphor explicit, as the Italian verb already implies, rather than leaving 'action' as an abstraction that awkwardly 'blazes forth'."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_claude__sonnet",
+      "original": "self-denial of the Milanese",
+      "replacement": "self-abnegation of the Milanese",
+      "reason": "Italian 'abnegazione' directly cognates to 'abnegation'; preserving this Latinate form matches the elevated rhetorical register of Mazzini's quoted speech."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_claude__sonnet",
+      "original": "It will intervene, sooner or later, in our favor",
+      "replacement": "She will intervene, sooner or later, in our favour",
+      "reason": "Italian 'Essa interverrà' — 'Essa' is feminine, referring to 'L'Europa'. Personifying Europe as 'She' is faithful to the Italian and to the 19th-century convention of gendered personification of nations and continents."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_claude__sonnet",
+      "original": "this bath of blood",
+      "replacement": "this baptism of blood",
+      "reason": "Italian 'lavacro di sangue' — 'lavacro' literally means washing/bath but its primary connotation is sacramental (baptismal font). 'Baptism of blood' captures the sacrificial-religious register of Mazzini's rhetoric far better than the flat 'bath of blood'."
+    },
+    {
+      "paragraph": 25,
+      "from_draft": "draft_claude__sonnet",
+      "original": "that indefinable sense of serenity that emanates from honest souls",
+      "replacement": "that indefinable sense of serenity which breathes forth from honest souls",
+      "reason": "Italian 'che spira dagli animi onesti' — 'spirare' means to breathe/exhale, not merely to emanate. 'Breathes forth' preserves the organic, living metaphor of the original."
+    },
+    {
+      "paragraph": 27,
+      "from_draft": "draft_claude__sonnet",
+      "original": "who was the good genius of that defense, would have roused the slumbering enthusiasm in their breasts",
+      "replacement": "who had been the guiding genius of that defence, would have rekindled in their breasts the slumbering enthusiasm",
+      "reason": "'Guiding genius' better renders 'buon genio' in its military-leadership context (the genius who directed operations) than the vague 'good genius'. 'Rekindled' works better with the fire/enthusiasm metaphor than 'roused'."
+    },
+    {
+      "paragraph": 35,
+      "from_draft": "draft_claude__sonnet",
+      "original": "woe to anyone who assails it",
+      "replacement": "woe betide whoever assails it",
+      "reason": "'Woe betide' is the established English formulaic expression matching Italian 'guai a chi'; more period-appropriate and rhetorically forceful than the plain 'woe to anyone'."
+    },
+    {
+      "paragraph": 37,
+      "from_draft": "draft_claude__sonnet",
+      "original": "throwing himself into it completely",
+      "replacement": "throwing himself entirely into the breach",
+      "reason": "'Into the breach' is a vivid military metaphor befitting the context of insurrectionary planning; 'into it completely' is vague and deflates the rhetorical force of the closing question."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "albergo",
+      "edgren_definition": "albér-go [OGer. heri-berga, 'army-shelter'], inn; hotel",
+      "english_choice": "inn",
+      "paragraph": 3,
+      "note": "Edgren's first sense 'inn' (and its etymology from army-shelter) confirmed 'inn' as the right register for a modest lodging-house, rather than the more upscale 'hotel' which Edgren lists second."
+    },
+    {
+      "italian_word": "fatica",
+      "edgren_definition": "fati-ca, F.: FATIGUE (hardship); labourt; wages; reward",
+      "english_choice": "fatigues",
+      "paragraph": 4,
+      "note": "Edgren gives 'fatigue' as the primary sense with 'hardship' as gloss, and 'labour' as secondary. 'Fatigues of the intellect' follows Edgren's primary mapping rather than a modern default like 'labours of the mind' or 'toils'."
+    },
+    {
+      "italian_word": "virtù",
+      "edgren_definition": "vir-tù [L. -fus (vir, man)], F.: virtue",
+      "english_choice": "virtues",
+      "paragraph": 3,
+      "note": "Straightforward confirmation. Edgren's single-sense entry supported keeping 'virtues' for the humorous passage about Tressoldi's 'virtues' (including turning a blind eye), preserving the ironic register."
+    }
+  ]
+}

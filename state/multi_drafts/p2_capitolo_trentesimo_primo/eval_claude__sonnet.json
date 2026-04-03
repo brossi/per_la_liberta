@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently employs a formal, slightly elevated vocabulary and complex sentence structures that align well with early 20th-century literary prose."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation effectively conveys the author's passionate and direct narrative voice, including exclamations and rhetorical flourishes, making it feel like a personal recounting of history."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "Subtle shifts, such as the use of 'petty tyrants' for 'tirannelli' or 'great poppies of the Ministry' for 'alti papaveri', are handled well, maintaining the overall formal register while allowing for nuanced expressions."
+        }
+      ],
+      "strengths": "The translation excels at capturing and sustaining the sophisticated, historical, and passionate tone of the Italian source. The authorial voice, which is both academic and emotionally engaged, comes through clearly in English.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'King of Piedmont,' 'quadrilateral,' 'party of action,' 'red-shirts,' and 'Bersaglieri' are either translated accurately or kept in their original form where appropriate for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "References such as 'new Cincinnatus,' 'wood of Calvary,' and 'Maramaldo' are preserved, with 'Maramaldo' being effectively contextualized through an explanatory phrase, demonstrating sensitivity to cultural nuances."
+        }
+      ],
+      "strengths": "The translation adeptly navigates historical and cultural specificity, preserving key terms and allusions rather than diluting them. The decision to retain terms like 'Bersaglieri' and 'Galantuomo' helps ground the text in its original context.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, meticulously rendering the meaning of the source text with virtually no omissions or unwarranted additions. Complex sentences are untangled and reformulated precisely."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical figures are correctly identified and preserved in their original Italian form, with only a minor, acceptable transliteration variation for 'Popof' to 'Popov'."
+        }
+      ],
+      "strengths": "This translation is exemplary in its faithfulness to the source text. The semantic content, including intricate historical details and the author's precise commentary, is transferred with remarkable accuracy.",
+      "weaknesses": "No significant weaknesses were found regarding omissions or additions."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads very naturally and fluidly. It maintains the literary elegance and sophisticated rhythm of the original, utilizing English stylistic devices effectively."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and imagery, such as 'torn asunder in the very face,' 'leaden pall,' 'Gallic herds,' and 'struck the Fatherland to the heart,' are translated powerfully and evoke the same vividness as the Italian."
+        }
+      ],
+      "strengths": "The literary quality is very high. The translation is not just accurate but also aesthetically pleasing, preserving the original's poetic and rhetorical force. The choices in vocabulary and sentence construction contribute to a rich, engaging reading experience.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable, with no awkward constructions hindering comprehension. Even complex sentences are structured clearly and correctly."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite the inherent complexity of the historical narrative and the original's style, the translation is consistently clear and easy to follow, allowing for smooth reading without needing to re-read passages."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent command of English grammar and syntax, resulting in a text that is both sophisticated and effortlessly readable. The use of punctuation, especially the em dash, greatly enhances clarity.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All recurring names, titles, and key political terms are translated with perfect consistency, ensuring coherence and ease of understanding for the reader."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic approach, tone, and register are maintained coherently from the beginning to the end of the passage, indicating a consistent and unified translation effort."
+        }
+      ],
+      "strengths": "The translation maintains a high level of consistency in terminology and style across the entire document, which is crucial for a long, detailed historical narrative.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 9108,
+    "output": 1548
+  }
+}

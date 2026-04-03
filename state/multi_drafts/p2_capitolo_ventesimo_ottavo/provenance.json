@@ -1,0 +1,27 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "the regenerating influence of thrift",
+      "replacement": "the regenerating influence of parsimony",
+      "reason": "'Parsimonia' is a direct cognate of 'parsimony'; using it preserves the slightly formal, Latinate register of Crespi's prose, whereas 'thrift' is a plain Germanic word that lowers the diction."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "resupplied us with provisions",
+      "replacement": "resupplied us with victuals",
+      "reason": "'Vettovaglie' is a specifically military/nautical term for food supplies; 'victuals' carries the same period-appropriate, slightly archaic maritime register, whereas 'provisions' is more generic."
+    },
+    {
+      "paragraph": 34,
+      "from_draft": "draft_gemini__pro",
+      "original": "my second interview with Bernard",
+      "replacement": "my second colloquy with Bernard",
+      "reason": "The Italian 'colloquio' maps directly to 'colloquy', preserving the formal tone; 'interview' has acquired a modern journalistic connotation that is absent from the source."
+    }
+  ],
+  "edgren_influences": []
+}

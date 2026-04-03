@@ -1,0 +1,91 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro",
+      "original": "It should be added that he was, in effect, paid to listen to",
+      "replacement": "Let it be added that he was paid to listen to",
+      "reason": "Gemini's 'Let it be added' renders Italian 'Aggiungasi' (a formal impersonal imperative) more faithfully than Claude's 'It should be added'; dropping 'in effect' tightens the sentence"
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "the newspaper notices",
+      "replacement": "the newspaper advertisements",
+      "reason": "Italian 'annunci' means advertisements/announcements; Gemini's 'advertisements' is the standard modern English equivalent and more precise than Claude's 'notices'"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "waists compressed by the belt",
+      "replacement": "bellies pinched by the belt",
+      "reason": "Italian 'ventri compressi dalla cintola' — 'ventri' means bellies, not waists; Gemini correctly identified the body part. 'Pinched' was substituted for 'compressed' to sharpen the image"
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "the generating flame of divine conceptions",
+      "replacement": "the generative flame of divine conceptions",
+      "reason": "Italian 'fiamma genitrice' — 'genitrice' is adjectival (generative/generatrix); Gemini's 'generative' is the correct English adjective form, where Claude's 'generating' reads as a participle"
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro",
+      "original": "full liberty of flight to the birds of prey chained in their native gaols",
+      "replacement": "to the birds of prey chained in the prisons of their homelands full freedom of flight",
+      "reason": "Gemini's word order ('granted to the birds... full freedom of flight') better mirrors the Italian sentence structure; 'freedom' is more natural in the collocation 'freedom of flight' than 'liberty'"
+    },
+    {
+      "paragraph": 15,
+      "from_draft": "draft_gemini__pro",
+      "original": "a swaggering inciter who, backed by his associates",
+      "replacement": "a swaggering instigator who, backed by his confederates",
+      "reason": "Italian 'aizzatore' = instigator/agitator; Gemini's 'instigator' is more standard than Claude's 'inciter'. 'Confederates' was chosen independently for its period colouring"
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "turn everything topsy-turvy",
+      "replacement": "turn everything upside down",
+      "reason": "Italian 'mandar tutto a soqquadro'; 'upside down' is the more natural and less quaint collocation; 'topsy-turvy' risks sounding arch"
+    },
+    {
+      "paragraph": 23,
+      "from_draft": "draft_gemini__pro",
+      "original": "concentrated sunbeams",
+      "replacement": "concentrated sunshine",
+      "reason": "Italian 'raggi concentrati' literally = concentrated rays; 'sunshine' (closer to Gemini's 'sunbeams' family) captures the warmth metaphor better as a mass noun paralleling 'the sun of Italy' in the next clause"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "debito",
+      "edgren_definition": "DUE (proper); DEBT; DUTY",
+      "english_choice": "claims its rightful place",
+      "paragraph": 1,
+      "note": "Claude rendered 'ha il suo debito posto' as 'has its proper place'; Gemini as 'has its due place'. Edgren's primary gloss 'DUE' plus the secondary sense of DUTY/obligation prompted the more dynamic 'claims its rightful place', foregrounding the sense that this page is owed its position — not merely occupying it"
+    },
+    {
+      "italian_word": "ingegno",
+      "edgren_definition": "natural talent (genius); craftiness (subtility)",
+      "english_choice": "the disproportion of their genius",
+      "paragraph": 2,
+      "note": "Claude rendered 'A parte le proporzioni dell'ingegno' loosely as 'Setting aside all differences of genius'. Edgren confirms 'ingegno' = 'natural talent (genius)', and with 'proporzione' (proportion/scale) this licensed the more precise 'disproportion of their genius', preserving the author's point about unequal scale rather than mere difference"
+    },
+    {
+      "italian_word": "sentire",
+      "edgren_definition": "feel (perceive, be sensible of); smell; taste; judge (esteem); have",
+      "english_choice": "carries the soul of Giuseppe Mazzini",
+      "paragraph": 2,
+      "note": "Italian 'sente l'anima di Giuseppe Mazzini' — Claude chose 'breathes', Gemini 'bears'. Edgren's range (feel, perceive, sense, have) showed that 'sente' here means something closer to 'holds within itself' or 'conveys'. 'Carries' was chosen as more neutral and accurate than 'breathes' (too physiological) or 'bears' (too heavy)"
+    },
+    {
+      "italian_word": "capolino",
+      "edgren_definition": "(far capolino) peep in, peep through — diminutive of capo (head)",
+      "english_choice": "peeps in through the doorway",
+      "paragraph": 2,
+      "note": "Both drafts rendered 'fa capolino' as simply 'peeps in/through'. The Edgren context (diminutive of 'capo' = head) reinforced that 'far capolino' specifically evokes poking one's head through an opening, prompting the addition of 'through the doorway' to recover the spatial concreteness lost in a bare 'peeps in'"
+    }
+  ]
+}

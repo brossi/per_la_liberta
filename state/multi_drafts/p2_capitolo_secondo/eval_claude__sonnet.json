@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully employs an elevated and period-appropriate English register, using vocabulary like 'aught save,' 'on the wing,' 'passing well,' and sophisticated sentence structures."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrative voice is maintained, balancing descriptive prose with intimate observations of the characters' thoughts and feelings, reflecting the original's engaging style."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation accurately reflects the narrative's formal tone and the natural, slightly more conversational tone of the dialogue, such as 'Signor Carlo!'."
+        }
+      ],
+      "strengths": "The translation's primary strength lies in its excellent command of an appropriate early 20th-century literary English register, which beautifully mirrors the original Italian's voice and sophistication.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "The key term 'Patria' is accurately translated as 'Fatherland,' which is perfectly suitable for the Risorgimento context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "'Signor Carlo' is retained, and 'accappatoio' is glossed as 'a combing-cloth,' providing helpful context without disrupting the flow or modernizing."
+        }
+      ],
+      "strengths": "The translation effectively handles cultural references, either preserving Italian terms or providing clear, concise glosses that maintain the original flavor.",
+      "weaknesses": "No weaknesses identified; the choices made enhance understanding without sacrificing authenticity."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably faithful, conveying the exact meaning of the source text with precision and no discernible omissions or extraneous additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns and names (Elisa, Sara, Count di Rudio, Signor Carlo) are preserved correctly."
+        }
+      ],
+      "strengths": "This translation is highly accurate, meticulously rendering the meaning and details of the original text. Complex descriptive passages and nuanced emotional states are conveyed with fidelity.",
+      "weaknesses": "No weaknesses were identified; the translation is a model of faithfulness."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads exceptionally naturally and possesses a beautiful literary flow, making it a pleasure to read as an independent work."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'photographing with his eye the dark to-and-fro,' 'on the wing,' and the elaborate imagery in the final paragraph, is rendered with great skill and impact."
+        }
+      ],
+      "strengths": "The literary quality is outstanding. The English prose is elegant, evocative, and maintains the poetic and descriptive power of the original, particularly in rendering complex imagery and philosophical reflections.",
+      "weaknesses": "No weaknesses identified; this is a highly accomplished literary translation."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable, with no awkward constructions. Even archaic usages like 'were it to take' and 'passing well' are correctly applied for stylistic effect."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is perfectly clear and highly readable. Despite its elevated register, it never sacrifices clarity, allowing for effortless comprehension."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent grammatical control and fluency. The prose is polished, clear, and easy to follow, making for a smooth reading experience.",
+      "weaknesses": "No weaknesses identified in terms of grammar or fluency."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names (Count di Rudio, Miss Elisa, Miss Sara) and key terms are translated and used with complete consistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a remarkably coherent and consistent style throughout the entire passage, ensuring a unified reading experience."
+        }
+      ],
+      "strengths": "The consistency in terminology, character naming, and stylistic approach across the entire passage is flawless, contributing to a cohesive and professional translation.",
+      "weaknesses": "No weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 2823,
+    "output": 1428
+  }
+}

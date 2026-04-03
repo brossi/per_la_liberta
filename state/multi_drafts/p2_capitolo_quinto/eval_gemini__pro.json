@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal yet accessible register, consistent with the original's historical narrative and period."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct address, rhetorical questions, and reflective tone are well preserved, keeping the narrative engaging and true to the authorial voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation accurately reflects the slight formality of the main narrative and the more direct, conversational style of the dialogue."
+        }
+      ],
+      "strengths": "The translation excels at capturing the distinct voice and tone of the original, making it feel authentic to its period and author.",
+      "weaknesses": "No significant weaknesses were observed in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Monarchia Sabauda' (Savoyard Monarchy) and 'Repubblica Romana' (Roman Republic) are well handled, using appropriate historical English terminology."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.0,
+          "note": "The direct translation of 'sulla piazza dello Shoah' into 'on Shoah Square' is a significant oversight. Given the 1913 publication, 'Shoah' (the Holocaust) is an anachronistic and deeply problematic reference, likely a misinterpretation of 'Soho' or a similar place name in London due to a transcription error in the Italian source or a lack of cultural context for the translator."
+        }
+      ],
+      "strengths": "Most political and institutional terms are translated or adapted effectively, showing a general understanding of the historical context.",
+      "weaknesses": "The critical error in translating 'Piazza dello Shoah' instead of identifying a plausible historical London location (e.g., 'Soho Square') severely undermines the cultural and historical accuracy for this specific reference, introducing a profound anachronism."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate in conveying the narrative, the translation of 'sulla piazza dello Shoah' as 'on Shoah Square' instead of a historically plausible London street name (e.g., Soho Square) introduces a severe factual inaccuracy and unintended anachronism, changing the meaning and context significantly for that specific detail."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "Most proper nouns and place names are preserved correctly (e.g., Mazzini, Orsini, Nottingham, Charing Cross). However, the literal translation of 'Piazza dello Shoah' for a London location is a major error, failing to preserve the correct historical reference and implying a non-existent and anachronistic place."
+        }
+      ],
+      "strengths": "The translation accurately conveys the overarching narrative, dialogue, and historical figures' roles, with generally faithful rendering of complex political discussions and personal reflections.",
+      "weaknesses": "The specific error regarding 'Piazza dello Shoah' creates a significant historical anachronism and factual inaccuracy, suggesting a potential transcription error from the Italian source that was not cross-referenced against historical plausibility in London for a 1913 setting."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The prose is fluid and natural, avoiding stiffness often found in overly literal translations. It reads like an original piece of English literature, maintaining reader engagement."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Idioms and imagery are consistently translated effectively, maintaining their evocative power (e.g., 'disabused him of that notion,' 'stung to the quick,' 'giving vent to the thought')."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent literary craftsmanship, producing engaging and well-flowing English prose that captures the original's expressive qualities.",
+      "weaknesses": "No significant weaknesses in literary quality were observed."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English text is consistently grammatically correct with no noticeable awkward phrasing or syntactical errors, contributing to a smooth read."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is very clear and easy to follow, making for a smooth and uninterrupted reading experience without comprehension issues."
+        }
+      ],
+      "strengths": "The translation is highly fluent and grammatically sound, ensuring readability and clarity throughout the passage.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names, key political terms, and most place names are rendered consistently across the text, ensuring coherence."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic approach and tone remain uniform and coherent from beginning to end, contributing to a cohesive narrative."
+        }
+      ],
+      "strengths": "Excellent consistency in terminology and style contributes to the overall cohesion and professional quality of the translation.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 0.7999999999999999,
+  "_tokens": {
+    "input": 7726,
+    "output": 1537
+  }
+}

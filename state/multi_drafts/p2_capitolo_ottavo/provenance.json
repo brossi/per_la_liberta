@@ -1,0 +1,35 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "editorial",
+      "original": "Hotel France et Champagne",
+      "replacement": "Hôtel France et Champagne",
+      "reason": "Consistency with the previous chapter (Ch. 7), which already uses the accented 'Hôtel'. Neither draft included the accent; this was a continuity correction."
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro",
+      "original": "a cold countenance",
+      "replacement": "a hostile countenance",
+      "reason": "The Italian 'col viso dell'armi' (literally 'with the face of arms') is an idiom meaning a hostile or warlike reception. 'Hostile' captures the combative connotation of 'armi' that 'cold' misses, while retaining the singular 'countenance' from the primary draft's more formal register (vs. Gemini's 'hostile faces')."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "the location",
+      "replacement": "the locality",
+      "reason": "The Italian 'località' is a slightly formal, technical-sounding word. 'Locality' preserves that register and is closer as a cognate, whereas 'location' is more neutral/modern. Gemini's choice was more precise here."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "carbone",
+      "edgren_definition": "carbone — burning coal (from the entry under 'voce': 'carbone —, burning coal')",
+      "english_choice": "in full and burning measure",
+      "paragraph": 11,
+      "note": "The idiom 'a misura di carbone' is obscure even in Italian. Gemini translated it literally as 'with a measure of coal', which is opaque in English. Edgren's gloss of 'carbone' as 'burning coal' (not simply 'coal' or 'charcoal') confirmed the fiery connotation, supporting the interpretive rendering 'in full and burning measure' — which conveys both the sense of retaliation in kind and the heat/violence implied by the original."
+    }
+  ]
+}

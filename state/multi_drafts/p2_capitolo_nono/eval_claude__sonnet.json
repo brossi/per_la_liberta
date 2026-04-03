@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully employs vocabulary and phrasing (e.g., 'repaired immediately afterwards,' 'lodgings,' 'upon your punctuality,' 'vexed by it') that evoke an early 20th-century literary style in English, matching the original's register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrative voice remains consistently descriptive, reflective, and direct, mirroring Crespi's style of recounting events and inner thoughts. Phrases like 'And so we found ourselves' or 'Be that as it may' contribute to this."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation accurately captures the generally formal narration while conveying the directness or slight exclamations in dialogue (e.g., 'Confound it!' for 'Diamine!')."
+        }
+      ],
+      "strengths": "The translation excels at establishing and maintaining an appropriate literary register and narrative voice, making it feel authentic to the period and the author's style. The blend of formality with directness is well-managed.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "'Patria' is appropriately translated as 'Fatherland,' and 'Imperatore' as 'Emperor.' The general political vocabulary aligns well with the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "'Trattoria' is preserved, and Italian street names leading to French locations are correctly adapted to 'Rue Monthabor' and 'Rue Le Peletier.' 'Canterano' is translated functionally as 'chest' (of drawers), which is appropriate."
+        }
+      ],
+      "strengths": "The translation is sensitive to the cultural and historical context, preserving key Italian terms where appropriate and adapting others (like street names) to their common English/French forms for clarity without losing authenticity.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, conveying the precise meaning of the source text. Nuances like 'interezza dell'animo' as 'strength of soul' and 'tratta lì tratta una borsa' as 'drew out a purse' are well-handled interpretations that preserve the original's intent without literal awkwardness."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper names (Pieri, Orsini, Gomez, Crispi, Allsop) are preserved. Place names are either preserved ('Trattoria della galleria Montmartre' as 'trattoria in the Galerie Montmartre') or appropriately adapted for French street names ('via Monthabor' as 'Rue Monthabor')."
+        }
+      ],
+      "strengths": "This translation is exceptionally faithful to the source text's meaning, capturing both the explicit and implicit information without distortion. It demonstrates a strong understanding of the Italian.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The prose is fluid and natural, reading like an original English literary work rather than a translation. Sentence structure and rhythm are well-maintained, contributing to a smooth reading experience."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language is generally handled well. 'L'animo ne rimase come corazzato' becomes 'my soul was left, as it were, clad in armour,' and 'si fosse attaccato alle costole' becomes 'attached himself to the heels,' both strong idiomatic equivalents. The literal translation of 'vendere i sorci al gatto' ('sell the mice to the cat') preserves the imagery and its implication is clear in context."
+        }
+      ],
+      "strengths": "The literary quality is very high, with the translation excelling in naturalness of expression and effective rendering of imagery and figurative language. It successfully recreates the original's evocative power.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically flawless and entirely free of awkward or unnatural constructions. The syntax is sophisticated yet accessible."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and easy to read, with no passages requiring re-reading for comprehension. The flow is excellent."
+        }
+      ],
+      "strengths": "The translation demonstrates impeccable grammar, clarity, and fluency, making it a highly readable and enjoyable text.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names are consistently rendered, and recurring terms (e.g., 'soprabito' as 'overcoat,' 'danaro' as 'money') are translated with unwavering consistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a perfectly coherent and unified style throughout the entire passage, ensuring a consistent reader experience."
+        }
+      ],
+      "strengths": "The translation maintains exemplary consistency in terminology and stylistic choices, contributing to its overall professional and polished feel.",
+      "weaknesses": "None identified for this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 3727,
+    "output": 1616
+  }
+}

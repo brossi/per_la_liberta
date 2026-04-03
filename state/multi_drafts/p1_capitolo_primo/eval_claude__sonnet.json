@@ -1,0 +1,112 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently employs sophisticated vocabulary and sentence structures appropriate for an early 20th-century literary text, using terms like 'but a few hours since,' 'abed,' 'whilst,' 'countenance,' and 'vicissitudes'."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrator's reflective and observant voice, including personal musings and rhetorical questions, is faithfully preserved, making the English read like an engaging, thoughtful account."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation maintains the formal literary tone of the narrative and accurately conveys the slightly more direct yet still respectful tone of the dialogue."
+        }
+      ],
+      "strengths": "The translation excels at capturing the sophisticated and reflective tone of the original, creating an English text that feels authentic to the period and authorial style. The choice of vocabulary and syntax perfectly matches the early 20th-century literary register.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "General political terms and historical references (e.g., 'Homeland' for 'Patria', 'conspiracies', 'tyrants') are well-adapted. The reference to 'tragic moments' for di Rudio's son implicitly acknowledges the historical context without over-explanation, which aligns with the original."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Proper nouns, names (Mazzini, Calvi, di Rudio), and specific cultural references (e.g., 'Lombard cathedral', 'sequoie' in italics) are preserved or explained as needed, avoiding anachronistic modernization."
+        }
+      ],
+      "strengths": "The translation effectively navigates cultural and historical context, preserving key names and subtle references while making the text accessible to an English-speaking audience without losing its original flavor.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, conveying the precise meaning of the source text. Minor interpretive additions (e.g., 'deeply' for 'caldo, caldo') are minimal and serve to enhance clarity or flow rather than alter meaning."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical figures (e.g., Giuseppe Mazzini, Fortunato Calvi, Carlo di Rudio, Lourdes, San Francisco) are accurately preserved."
+        }
+      ],
+      "strengths": "The translation demonstrates exceptional faithfulness to the source text, delivering an accurate rendition of both explicit and implicit meanings without significant deviation.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly polished and reads as if originally conceived in English. The sentence construction, rhythm, and word choices create a natural and engaging literary experience."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and vivid imagery, such as 'gnaws at their hollow chests,' 'light as beings come from the realm of shadows,' 'library mouse,' and 'virtue bursts its banks,' are consistently translated with creativity and precision, maintaining their impact."
+        }
+      ],
+      "strengths": "The literary quality of this translation is outstanding. It effectively transforms the Italian text into elegant and flowing English prose, preserving the aesthetic appeal and emotional depth of the original.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The translation is grammatically flawless, exhibiting a mastery of English syntax and grammar. There are no awkward constructions or unidiomatic phrases."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite the sophisticated vocabulary and complex sentence structures, the text remains exceptionally clear and easy to understand on the first reading."
+        }
+      ],
+      "strengths": "The translation is a model of grammatical correctness and fluency, offering a smooth and effortless reading experience while maintaining a high level of literary expression.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names (e.g., Signora Elisa, Major di Rudio), familial references (e.g., Papa, Uncle Sam), and key concepts (e.g., 'burial ground' for 'sepolcreto') are translated with perfect consistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic register and narrative approach are consistent throughout the entire passage, contributing to a unified and professional translation."
+        }
+      ],
+      "strengths": "The translation maintains excellent consistency in terminology, character names, and overall style, which reinforces its high quality and reliability.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    }
+  ],
+  "weighted_score": 1.0
+}

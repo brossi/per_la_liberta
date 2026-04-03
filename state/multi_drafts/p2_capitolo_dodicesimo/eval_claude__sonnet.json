@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses formal, slightly archaic language ('I must needs,' 'nay,' 'forthwith') appropriate for a 1913 literary text."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrator's internal thoughts and direct observations are well-preserved, maintaining the intimate, reflective tone of the original."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation handles shifts between formal narration, dramatic exclamations, and dialogue effectively, such as 'nay, he cried' for a sudden outburst, and idiomatic expressions like 'shrewd is he who finds me!'"
+        }
+      ],
+      "strengths": "The translator has an excellent grasp of period-appropriate English, choosing vocabulary and sentence structures that beautifully match the literary register of the early 20th-century Italian source. The nuances of the narrator's voice, including his reflective and dramatic moments, are meticulously maintained.",
+      "weaknesses": "No significant weaknesses were found in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Examining Magistrate,' 'Prefect of Police,' and historical figures like 'Louis Napoleon' and 'Plon-Plon' are handled correctly and contextually."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "The translation excellently preserves or glosses cultural references, such as 'high papaveri — poppy-heads, men of consequence' and 'disdainful in the Roman manner,' enhancing reader understanding without losing the original flavor."
+        }
+      ],
+      "strengths": "The translation demonstrates strong cultural awareness, effectively translating or explaining terms specific to the historical and cultural context of the Risorgimento era and the Parisian setting of the narrative. The choice to retain certain French place names (Gare d'Orléans, rue Montmartre, Conciergerie) adds authenticity.",
+      "weaknesses": "No significant weaknesses were found in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate, there is a minor reinterpretation in 'Yet he who was off guard tonight' for 'chi stanotte potrebbe essere desto ed all'erta domani,' which slightly alters the speculative nature of the original."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Most proper nouns and place names are preserved (e.g., Felice Orsini, Mantova, Burton Ale), or rendered in standard English equivalents (e.g., London, Paris) or appropriate French forms for context (e.g., Gare d'Orléans)."
+        }
+      ],
+      "strengths": "The translation is highly faithful to the source text, conveying the meaning of each sentence with remarkable precision. The detailed descriptions, dialogues, and internal monologues are all accurately rendered.",
+      "weaknesses": "A very minor interpretive addition ('off guard') was noted in one instance, slightly deviating from a more direct translation of a speculative phrase."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads exceptionally well, with a natural flow and engaging rhythm that makes it feel like an original literary work rather than a translation."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and strong imagery, such as 'black beetles in civilian dress,' 'marmoreal nature,' 'poured his very soul,' and 'hand, heavy as fate,' are consistently rendered with impact and evocative power."
+        }
+      ],
+      "strengths": "This translation is of very high literary quality. The word choices are precise and rich, and the sentence construction is varied and sophisticated, perfectly capturing the dramatic and reflective tone of the original. The vivid imagery and figurative language are beautifully preserved and often enhanced.",
+      "weaknesses": "No significant weaknesses were found in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable throughout the entire passage, with no awkward constructions. The formal language is handled skillfully."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is highly readable and clear. Despite its formal register, the prose flows effortlessly, ensuring easy comprehension without the need for re-reading."
+        }
+      ],
+      "strengths": "The translation is grammatically flawless, exhibiting a high level of command over English syntax and usage. Its fluency ensures a smooth and enjoyable reading experience.",
+      "weaknesses": "No significant weaknesses were found in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Key terms like 'Giudice' (Magistrate), 'Prefetto' (Prefect), 'scrivania' (writing-desk), and all character names are consistently translated or transliterated."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The formal, literary style is maintained coherently across all paragraphs, ensuring a consistent voice and tone throughout the entire passage."
+        }
+      ],
+      "strengths": "The translation maintains exemplary consistency in terminology, character names, and overall style. This coherence significantly contributes to the professional and polished quality of the text.",
+      "weaknesses": "No significant weaknesses were found in this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 6692,
+    "output": 1609
+  }
+}

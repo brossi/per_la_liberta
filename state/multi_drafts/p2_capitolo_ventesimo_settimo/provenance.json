@@ -1,0 +1,98 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro",
+      "original": "ambulant *vase* [vessel, tub]",
+      "replacement": "ambulant *vase*",
+      "reason": "The inline gloss '[vessel, tub]' broke the narrative flow; the italicised foreign word is sufficient, as the meaning is clear from context"
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro",
+      "original": "spread itself out on either bank",
+      "replacement": "spread itself out upon either bank",
+      "reason": "'Upon' better matches the slightly elevated register used throughout the translation and echoes the Italian 'sull'una e sull'altra riva'"
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro",
+      "original": "drew the outlines of their yards against the sky",
+      "replacement": "drew against the sky the spars of their yards",
+      "reason": "Italian 'le aste dei loro pennoni' literally means the shafts/spars of their yards; 'outlines' (Claude) was vague, 'shafts' (Gemini) was closer but 'spars' is the precise English nautical term for 'aste'"
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_gemini__pro",
+      "original": "for once and for all",
+      "replacement": "once and for all",
+      "reason": "The standard English idiom is 'once and for all'; Claude's 'for once and for all' is a minor awkwardness"
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro",
+      "original": "the only one dressed in plain clothes",
+      "replacement": "the only one dressed in civilian clothes",
+      "reason": "'Civilian clothes' is the standard English rendering of Italian 'vestito in borghese' and makes the military-versus-civilian contrast explicit, which is the author's point"
+    },
+    {
+      "paragraph": 15,
+      "from_draft": "draft_gemini__pro",
+      "original": "contrary to their inclinations",
+      "replacement": "contrary to their wishes",
+      "reason": "Italian 'a ritroso della loro volontà' literally means 'against their will'; 'wishes' is closer to 'volontà' than 'inclinations' while remaining less blunt than 'will'"
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "My convict's dress",
+      "replacement": "My convict's garb",
+      "reason": "'Garb' better suits the slightly sardonic tone of the passage and the Italian 'abito da forzato', which denotes a distinctive uniform rather than ordinary clothing"
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro",
+      "original": "in a deep silence, to the amusement of the policemen",
+      "replacement": "in deep silence, amid the jests of the policemen",
+      "reason": "Italian 'tra le facezie dei poliziotti' means 'amid the jests/jokes'; Claude's 'to the amusement' inverts who is acting — the policemen are actively jesting, not merely amused"
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro",
+      "original": "a wife and a child",
+      "replacement": "a wife and a son",
+      "reason": "Italian 'un figlio' specifically means 'a son'; 'child' loses the gender, and the narrative context (the firstborn son) confirms the specificity"
+    },
+    {
+      "paragraph": 36,
+      "from_draft": "draft_gemini__pro",
+      "original": "the captain, disenchanted",
+      "replacement": "the captain, disillusioned",
+      "reason": "Italian 'disilluso' maps directly to 'disillusioned'; 'disenchanted' carries unwanted connotations of fairy-tale magic"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "aringa",
+      "edgren_definition": "aringa [OGer. harinc], F.: HERRING",
+      "english_choice": "herring",
+      "paragraph": 1,
+      "note": "Edgren confirms 'aringa' is literally 'herring' (not a general term for small fish), validating the direct translation 'the little herring moved to meet the shark' rather than a looser paraphrase"
+    },
+    {
+      "italian_word": "scafo",
+      "edgren_definition": "scafo [? Gr. -phos, basin], M.: hulk (carcass of a ship)",
+      "english_choice": "hull",
+      "paragraph": 1,
+      "note": "Edgren gives 'hulk' as the primary sense, but in modern English 'hulk' implies a derelict vessel; 'hull' was preferred as the standard term for a ship's body, the meaning clearly intended by the context of a cutter appearing on the horizon"
+    },
+    {
+      "italian_word": "ammonimento",
+      "edgren_definition": "ammonimento, M.: admonishment. -nîre [L. monere, teach], TR.: admonish; warn",
+      "english_choice": "warning",
+      "paragraph": 1,
+      "note": "Edgren gives both 'admonishment' and 'warn'; 'warning' was chosen over 'admonishment' as more natural for a cannon-shot — the shot warns rather than admonishes"
+    }
+  ]
+}

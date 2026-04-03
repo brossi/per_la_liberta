@@ -1,0 +1,23 @@
+CHAPTER THE SECOND
+
+THE WELCOME nocturnal surprise continued, with mathematical regularity... a well-tied and well-supplied packet, every twenty-four hours. Count di Rudio decided to get to the bottom of the matter, and, one fine morning, having tidied his room as usual, he crouched in the window recess, behind the curtains, resolved to remain posted and silent, if need be, the entire day. From up there he commanded a view, for a good stretch, of the pavement to the right and to the left, and he thought, rightly, that the meatballs could not reach him by flying through the air. He would discover his mysterious benefactor.
+
+A little before noon, while leaning on the sill and photographing with his eye the dark to-and-fro that stirred confusedly at his feet, a sudden awakening of the vital vibrations, a sweet warmth, a sense of penetrating light, shook him. He turned with a start... he was no longer alone!
+
+Wrapped in a white dressing-gown, with her hair partly knotted, partly flowing, Miss Elisa stood upright on this side of the threshold. The fingers of her right hand held, by its string, the regenerating packet, and her blue eyes wandered in an unspeakable turmoil.
+
+"Signor Carlo!..." she murmured. "I was not aware you were here!" She immediately regained her composure and added calmly: "They brought this packet for you!"
+
+— When? Not a living soul has entered by the door.
+
+— This morning, early. A well-dressed gentleman, Italian in appearance and accent. I asked him his name; but he answered me that, for reasons entirely his own, he did not wish to make himself known. I did not feel it was proper to insist. Besides, he spoke English so poorly, and I know so little Italian!...
+
+She added nothing more and remained with downcast eyes, awaiting some phrase, an allusive word, if only about the fine weather. And as the word absolutely did not come, she nervously arched her eyebrows and raised her eyes. The mild inquiry that shone in them was soon lost in an expression of painful wonder. Count di Rudio seemed absorbed in the thought of distant things... his mind was running to the well-dressed Italian who, without being a sorcerer, knew the secrets of his stomach so well. And he grew irritated by the mystery that, despite his tedious watch, he had not succeeded in solving. When he realized he was being observed... silently, with dignity, he dusted with his right hand the jacket whitened by long contact with the windowsill.
+
+The situation was becoming embarrassing when, in the corridor, the sound of hurried footsteps resounded, and then Miss Sara appeared. She was supporting, clasping it to her breast, a large vase of roses.
+
+She set it down near the window and after a few seconds of silent contemplation: "It looks wonderful here!" She turned to Elisa and added: "The idea is yours, and it is for you to give an explanation!" But she did not leave her the time and, fixing her gaze on the count: "One evening you said that the rose is the emblem of your family and that, for this reason as well, it is preferred by you above every other flower. Elisa had an inspiration. ‘Let us procure a bush of them, perhaps he will hold it dear.’ See how it flourishes! So as not to trouble you, we shall continue to water it ourselves. Elisa was pointing out to me that it will remind you of your mother and your Fatherland... because Italy is the country of roses. Is it not so?"
+
+Here it seemed to her, or she feigned, that someone was calling her, and she ran off. Miss Elisa bowed her head in farewell and, swift and light as a shadow, disappeared.
+
+Count di Rudio remained for a long time motionless, fixing his eye on the empty space, as if something of the two young ladies had remained there. From that day, they occupied the greater part of his fanciful hours. They insinuated themselves, unbidden, into his thoughts, and as soon as they appeared there, they were welcomed with an affection more than fraternal. The sad eyes, which had never seen anything but the torture of the innocent and the triumph of the rabble, took heart in that inner contemplation. And for the first time, the Count felt profoundly that, above the hateful world, above the men who gnaw at one another, above insatiable greed, pitiless arrogance, above the varied and nauseating mire in which our civil life sinks and becomes entangled, there hangs suspended in the blue sky, which is saturated with it, a serene force that transforms, that redeems, that creates, that can make us good and happy... Love

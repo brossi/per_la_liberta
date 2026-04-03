@@ -1,0 +1,21 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "through strength of soul",
+      "replacement": "through integrity of soul",
+      "reason": "The Italian 'interezza dell'animo' centres on wholeness/integrity rather than mere strength. Gemini's 'integrity' captures this better; the article 'the' was dropped to match the primary draft's leaner register."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "interezza",
+      "edgren_definition": "interézza [intero], F.: (strength); integrity.",
+      "english_choice": "integrity of soul",
+      "paragraph": 3,
+      "note": "The Edgren entry lists both 'strength' and 'integrity' for interezza. Claude's draft defaulted to 'strength', but the dictionary confirmed 'integrity' as the primary sense, aligning with the etymological root 'intero' (whole/entire). This supported adopting Gemini's 'integrity' over Claude's 'strength'."
+    }
+  ]
+}

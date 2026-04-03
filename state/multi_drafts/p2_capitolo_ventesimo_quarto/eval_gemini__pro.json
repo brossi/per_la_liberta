@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a literary, slightly formal register appropriate for the period."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct, personal, and engaging narrative voice is well-preserved throughout the passage."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation expertly handles shifts, particularly in dialogue, such as Morbioli's colloquial outburst and the Romanesco dialect."
+        }
+      ],
+      "strengths": "The translation excels at capturing the author's voice, maintaining a consistent yet adaptable tone that flows from reflective narration to lively dialogue. The handling of idiomatic and colloquial expressions, especially Morbioli's, is particularly strong.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'relegated' for 'relegati' and 'Orleanist' for 'orleanista' are accurately and appropriately translated for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Cultural nuances, such as 'Trasteverine flavor' for 'sapore prettamente transteverino,' 'big oaf' for 'pisellone,' and the dialectal curse, are skillfully preserved or adapted without losing their original meaning or impact."
+        }
+      ],
+      "strengths": "The translation demonstrates a keen understanding of the cultural and historical context, choosing excellent equivalents for culturally specific terms and expressions. This greatly enhances the reader's immersion in the original setting.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "The translation is largely accurate, but it adds a chapter title ('TWENTY-FOURTH CHAPTER') not present in the provided source text. There's also a minor tense shift ('trova' to 'found') and a slight embellishment ('perfect rules of the art' for 'perfetta regola d'arte')."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names (e.g., Tolone, Roma, Montagne d'Argent, Corù), and historical references are correctly preserved, with 'Isola del Diavolo' appropriately rendered as 'Devil's Island'."
+        }
+      ],
+      "strengths": "The core meaning of the passage is accurately conveyed, and proper nouns are handled with fidelity.",
+      "weaknesses": "The addition of a chapter title that is not in the source text is an unfaithful addition. Minor deviations in tense and phrasing are present but generally do not detract significantly from the meaning."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The prose is natural, fluent, and engaging, reading as original English literature rather than a translated text."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'spokes of a disjointed wheel,' 'like a bolt of lightning,' and 'groping and sniffing my way like a rat,' is translated with vividness and impact."
+        }
+      ],
+      "strengths": "The translation maintains a high literary quality, with strong narrative flow and effective rendering of imagery and metaphors. It is a pleasure to read.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct with no awkward phrasing or unnatural constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is highly readable and clear, allowing for easy comprehension on the first pass."
+        }
+      ],
+      "strengths": "The translation is grammatically impeccable and flows exceptionally well, making it very accessible and pleasant to read.",
+      "weaknesses": "None identified for this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names and key terms (e.g., 'gunboat,' 'storehouses') are consistently translated throughout."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic approach and tone remain coherent and consistent across the entire passage."
+        }
+      ],
+      "strengths": "The translation maintains strong consistency in terminology, character names, and overall style, contributing to a unified reading experience.",
+      "weaknesses": "None identified for this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 4085,
+    "output": 1427
+  }
+}

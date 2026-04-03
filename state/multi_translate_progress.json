@@ -1,0 +1,2757 @@
+{
+  "p1_capitolo_primo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:8-14 -->",
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.8625000000000002
+    }
+  },
+  "p1_capitolo_terzo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:23-26 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9250000000000002,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 0,
+          "output": 2080
+        },
+        "claude (sonnet)": {
+          "input": 0,
+          "output": 2422
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 5246,
+          "output": 1405
+        },
+        "claude (sonnet)": {
+          "input": 5312,
+          "output": 1521
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 19,
+          "output": 30068,
+          "cost_usd": 1.5130769999999998,
+          "duration_ms": 369748,
+          "num_turns": 24
+        },
+        "provenance": {
+          "input": 2571,
+          "output": 12142,
+          "cost_usd": 0.5785607500000001,
+          "duration_ms": 203090
+        }
+      }
+    },
+    "error": "'list' object has no attribute 'get'"
+  },
+  "p1_capitolo_secondo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:14-23 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.975,
+      "claude (sonnet)": 1.0
+    }
+  },
+  "prefazione": {
+    "phase": "done",
+    "page_marker": "<!-- pages:7-8 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 4583,
+          "output": 708
+        },
+        "gemini (pro)": {
+          "input": 4082,
+          "output": 571
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 1804,
+          "output": 1322
+        },
+        "claude (sonnet)": {
+          "input": 1841,
+          "output": 1396
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 20,
+          "output": 9062,
+          "cost_usd": 0.578775,
+          "duration_ms": 153126,
+          "num_turns": 24
+        },
+        "provenance": {
+          "input": 8,
+          "output": 8523,
+          "cost_usd": 0.4243255,
+          "duration_ms": 132972
+        }
+      }
+    }
+  },
+  "p1_capitolo_quinto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:31-34 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.875
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 5836,
+          "output": 1602
+        },
+        "gemini (pro)": {
+          "input": 5153,
+          "output": 1412
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 3751,
+          "output": 1463
+        },
+        "gemini (pro)": {
+          "input": 3732,
+          "output": 1450
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 16,
+          "output": 17093,
+          "cost_usd": 0.9108727499999999,
+          "duration_ms": 240028,
+          "num_turns": 21
+        },
+        "provenance": {
+          "input": 13,
+          "output": 6542,
+          "cost_usd": 0.41786650000000003,
+          "duration_ms": 119898
+        }
+      }
+    }
+  },
+  "p1_capitolo_quarto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:26-31 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 8671,
+          "output": 3919
+        },
+        "gemini (pro)": {
+          "input": 7552,
+          "output": 3353
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 7981,
+          "output": 1556
+        },
+        "claude (sonnet)": {
+          "input": 8114,
+          "output": 1649
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 53,
+          "output": 38527,
+          "cost_usd": 3.06662325,
+          "duration_ms": 667516,
+          "num_turns": 59
+        },
+        "provenance": {
+          "input": 0,
+          "output": 0
+        }
+      }
+    }
+  },
+  "p1_capitolo_sesto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:34-39 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9500000000000001,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7608,
+          "output": 3549
+        },
+        "claude (sonnet)": {
+          "input": 8773,
+          "output": 4101
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 8486,
+          "output": 1531
+        },
+        "claude (sonnet)": {
+          "input": 8559,
+          "output": 1383
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 24,
+          "output": 25975,
+          "cost_usd": 1.5362837500000002,
+          "duration_ms": 493676,
+          "num_turns": 29
+        },
+        "provenance": {
+          "input": 10,
+          "output": 13416,
+          "cost_usd": 0.707372,
+          "duration_ms": 250046
+        }
+      }
+    }
+  },
+  "p1_capitolo_settimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:39-43 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.9375
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6674,
+          "output": 2757
+        },
+        "claude (sonnet)": {
+          "input": 7663,
+          "output": 3142
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 6750,
+          "output": 1365
+        },
+        "gemini (pro)": {
+          "input": 6722,
+          "output": 1533
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 27,
+          "output": 20598,
+          "cost_usd": 1.4163102500000002,
+          "duration_ms": 357733,
+          "num_turns": 32
+        },
+        "provenance": {
+          "input": 9,
+          "output": 11254,
+          "cost_usd": 0.5566080000000001,
+          "duration_ms": 192959
+        }
+      }
+    }
+  },
+  "p1_capitolo_ottavo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:43-48 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.925,
+      "claude (sonnet)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7153,
+          "output": 2988
+        },
+        "claude (sonnet)": {
+          "input": 8217,
+          "output": 3390
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 7204,
+          "output": 1493
+        },
+        "claude (sonnet)": {
+          "input": 7230,
+          "output": 1545
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 3337,
+          "output": 17876,
+          "cost_usd": 1.4576622500000003,
+          "duration_ms": 336806,
+          "num_turns": 38
+        },
+        "provenance": {
+          "input": 9,
+          "output": 10376,
+          "cost_usd": 0.57022125,
+          "duration_ms": 181712
+        }
+      }
+    }
+  },
+  "p1_capitolo_nono": {
+    "phase": "done",
+    "page_marker": "<!-- pages:48-52 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9500000000000001,
+      "gemini (pro)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7641,
+          "output": 3605
+        },
+        "claude (sonnet)": {
+          "input": 8722,
+          "output": 4032
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 8688,
+          "output": 1501
+        },
+        "gemini (pro)": {
+          "input": 8718,
+          "output": 1752
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 42,
+          "output": 20736,
+          "cost_usd": 1.97272325,
+          "duration_ms": 477847,
+          "num_turns": 47
+        },
+        "provenance": {
+          "input": 12,
+          "output": 10946,
+          "cost_usd": 0.6807132499999999,
+          "duration_ms": 215724
+        }
+      }
+    }
+  },
+  "p1_capitolo_decimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:53-58 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9,
+      "gemini (pro)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 8250,
+          "output": 4044
+        },
+        "claude (sonnet)": {
+          "input": 9476,
+          "output": 4576
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 9662,
+          "output": 1563
+        },
+        "gemini (pro)": {
+          "input": 9570,
+          "output": 1674
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 43,
+          "output": 42357,
+          "cost_usd": 2.9501670000000004,
+          "duration_ms": 842863,
+          "num_turns": 49
+        },
+        "provenance": {
+          "input": 9,
+          "output": 11995,
+          "cost_usd": 0.6581224999999999,
+          "duration_ms": 211756
+        }
+      }
+    }
+  },
+  "p1_capitolo_undicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:58-62 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9500000000000001,
+      "claude (sonnet)": 0.8875000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6526,
+          "output": 2460
+        },
+        "claude (sonnet)": {
+          "input": 7510,
+          "output": 2874
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 5994,
+          "output": 1487
+        },
+        "claude (sonnet)": {
+          "input": 6085,
+          "output": 1649
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 39,
+          "output": 28299,
+          "cost_usd": 1.99123025,
+          "duration_ms": 481790,
+          "num_turns": 44
+        },
+        "provenance": {
+          "input": 0,
+          "output": 0
+        }
+      }
+    }
+  },
+  "p1_capitolo_dodicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:62-66 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9333333333333333,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6845,
+          "output": 2651
+        },
+        "claude (sonnet)": {
+          "input": 7814,
+          "output": 3055
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 6397,
+          "output": 1599
+        },
+        "claude (sonnet)": {
+          "input": 6505,
+          "output": 1550
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 25,
+          "output": 18192,
+          "cost_usd": 1.1945985000000001,
+          "duration_ms": 296175,
+          "num_turns": 30
+        },
+        "provenance": {
+          "input": 8,
+          "output": 8296,
+          "cost_usd": 0.44697050000000005,
+          "duration_ms": 146012
+        }
+      }
+    }
+  },
+  "p1_capitolo_tredicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:66-74 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9583333333333334,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 8839,
+          "output": 4547
+        },
+        "claude (sonnet)": {
+          "input": 10290,
+          "output": 5237
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 10655,
+          "output": 1648
+        },
+        "claude (sonnet)": {
+          "input": 10790,
+          "output": 1526
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 16,
+          "output": 19239,
+          "cost_usd": 0.9535405,
+          "duration_ms": 439521,
+          "num_turns": 14
+        },
+        "provenance": {
+          "input": 12,
+          "output": 6128,
+          "cost_usd": 0.48476474999999997,
+          "duration_ms": 127941
+        }
+      }
+    }
+  },
+  "p1_capitolo_quattordicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:74-76 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 5250,
+          "output": 1441
+        },
+        "claude (sonnet)": {
+          "input": 5912,
+          "output": 1642
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 3755,
+          "output": 1412
+        },
+        "claude (sonnet)": {
+          "input": 3775,
+          "output": 1457
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 15,
+          "output": 19582,
+          "cost_usd": 0.9604895000000002,
+          "duration_ms": 237213,
+          "num_turns": 20
+        },
+        "provenance": {
+          "input": 15,
+          "output": 17129,
+          "cost_usd": 0.73968575,
+          "duration_ms": 286160
+        }
+      }
+    }
+  },
+  "p1_capitolo_decimo_quinto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:76-79 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9500000000000001,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 6959,
+          "output": 2644
+        },
+        "gemini (pro)": {
+          "input": 6084,
+          "output": 2321
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 5712,
+          "output": 1512
+        },
+        "claude (sonnet)": {
+          "input": 5744,
+          "output": 1545
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 16,
+          "output": 14635,
+          "cost_usd": 0.8242960000000001,
+          "duration_ms": 274744,
+          "num_turns": 21
+        },
+        "provenance": {
+          "input": 10,
+          "output": 18087,
+          "cost_usd": 0.724199,
+          "duration_ms": 330234
+        }
+      }
+    }
+  },
+  "p1_capitolo_decimo_sesto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:79-83 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 5475,
+          "output": 1787
+        },
+        "claude (sonnet)": {
+          "input": 6295,
+          "output": 2135
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 4492,
+          "output": 1486
+        },
+        "claude (sonnet)": {
+          "input": 4562,
+          "output": 1376
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 15,
+          "output": 17992,
+          "cost_usd": 0.9007252499999999,
+          "duration_ms": 242479,
+          "num_turns": 20
+        },
+        "provenance": {
+          "input": 9,
+          "output": 7847,
+          "cost_usd": 0.41846949999999994,
+          "duration_ms": 145817
+        }
+      }
+    }
+  },
+  "p1_capitolo_decimo_settimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:83-88 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.8958333333333334,
+      "gemini (pro)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7221,
+          "output": 3251
+        },
+        "claude (sonnet)": {
+          "input": 8281,
+          "output": 3875
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 7988,
+          "output": 1501
+        },
+        "gemini (pro)": {
+          "input": 7783,
+          "output": 1350
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 36,
+          "output": 35664,
+          "cost_usd": 2.1448599999999995,
+          "duration_ms": 644348,
+          "num_turns": 34
+        },
+        "provenance": {
+          "input": 13,
+          "output": 13100,
+          "cost_usd": 0.73400675,
+          "duration_ms": 221156
+        }
+      }
+    }
+  },
+  "p1_capitolo_decimo_ottavo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:88-92 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9500000000000001,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6283,
+          "output": 2366
+        },
+        "claude (sonnet)": {
+          "input": 7178,
+          "output": 2673
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 5767,
+          "output": 1484
+        },
+        "claude (sonnet)": {
+          "input": 5799,
+          "output": 1567
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 19,
+          "output": 14108,
+          "cost_usd": 0.81686225,
+          "duration_ms": 247072,
+          "num_turns": 17
+        },
+        "provenance": {
+          "input": 11,
+          "output": 4912,
+          "cost_usd": 0.44142575,
+          "duration_ms": 110602
+        }
+      }
+    }
+  },
+  "p1_capitolo_decimo_nono": {
+    "phase": "done",
+    "page_marker": "<!-- pages:92-98 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.8875000000000001,
+      "gemini (pro)": 0.5041666666666667
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 10724,
+          "output": 6054
+        },
+        "claude (sonnet)": {
+          "input": 12418,
+          "output": 6916
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 14139,
+          "output": 1585
+        },
+        "gemini (pro)": {
+          "input": 14038,
+          "output": 1889
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 27,
+          "output": 27211,
+          "cost_usd": 1.6651899999999995,
+          "duration_ms": 734779,
+          "num_turns": 25
+        },
+        "provenance": {
+          "input": 14,
+          "output": 6277,
+          "cost_usd": 0.6253504999999999,
+          "duration_ms": 136437
+        }
+      }
+    }
+  },
+  "p1_capitolo_ventesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:98-100 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 5973,
+          "output": 1541
+        },
+        "gemini (pro)": {
+          "input": 5311,
+          "output": 1320
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 3540,
+          "output": 1321
+        },
+        "claude (sonnet)": {
+          "input": 3571,
+          "output": 1480
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 25,
+          "output": 19261,
+          "cost_usd": 1.174944,
+          "duration_ms": 258487,
+          "num_turns": 23
+        },
+        "provenance": {
+          "input": 11,
+          "output": 12091,
+          "cost_usd": 0.69931425,
+          "duration_ms": 207159
+        }
+      }
+    }
+  },
+  "p1_capitolo_ventesimo_primo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:100-108 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.8041666666666667,
+      "gemini (pro)": 0.9750000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 9567,
+          "output": 4909
+        },
+        "claude (sonnet)": {
+          "input": 10918,
+          "output": 5508
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 11583,
+          "output": 1668
+        },
+        "gemini (pro)": {
+          "input": 11460,
+          "output": 1459
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 22,
+          "output": 25743,
+          "cost_usd": 1.42144475,
+          "duration_ms": 717808,
+          "num_turns": 20
+        },
+        "provenance": {
+          "input": 0,
+          "output": 0
+        }
+      }
+    }
+  },
+  "p1_capitolo_ventesimo_secondo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:108-112 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6742,
+          "output": 2935
+        },
+        "claude (sonnet)": {
+          "input": 7765,
+          "output": 3432
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 7060,
+          "output": 1434
+        },
+        "claude (sonnet)": {
+          "input": 7131,
+          "output": 1559
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 36,
+          "output": 25527,
+          "cost_usd": 1.7232664999999996,
+          "duration_ms": 541549,
+          "num_turns": 34
+        },
+        "provenance": {
+          "input": 0,
+          "output": 0
+        }
+      }
+    }
+  },
+  "p1_capitolo_ventesimoterzo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:112-120 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.875,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 9922,
+          "output": 5378
+        },
+        "claude (sonnet)": {
+          "input": 11559,
+          "output": 6057
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 12452,
+          "output": 1491
+        },
+        "claude (sonnet)": {
+          "input": 12506,
+          "output": 1703
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 27,
+          "output": 22954,
+          "cost_usd": 1.4705917500000003,
+          "duration_ms": 607817,
+          "num_turns": 25
+        },
+        "provenance": {
+          "input": 6370,
+          "output": 4033,
+          "cost_usd": 0.54731475,
+          "duration_ms": 94908
+        }
+      }
+    }
+  },
+  "p1_capitolo_ventesimoquarto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:120-127 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.975,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7617,
+          "output": 3479
+        },
+        "claude (sonnet)": {
+          "input": 8808,
+          "output": 3939
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 8269,
+          "output": 1458
+        },
+        "claude (sonnet)": {
+          "input": 8310,
+          "output": 1476
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 25,
+          "output": 26092,
+          "cost_usd": 1.4728175,
+          "duration_ms": 438290,
+          "num_turns": 23
+        },
+        "provenance": {
+          "input": 10,
+          "output": 5298,
+          "cost_usd": 0.4691515,
+          "duration_ms": 115601
+        }
+      }
+    }
+  },
+  "p2_capitolo_secondo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:134-136 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9500000000000001,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 5379,
+          "output": 1180
+        },
+        "gemini (pro)": {
+          "input": 4799,
+          "output": 981
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 2772,
+          "output": 1381
+        },
+        "claude (sonnet)": {
+          "input": 2823,
+          "output": 1428
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 13,
+          "output": 8449,
+          "cost_usd": 0.49412049999999996,
+          "duration_ms": 172001,
+          "num_turns": 12
+        },
+        "provenance": {
+          "input": 1247,
+          "output": 4325,
+          "cost_usd": 0.30915475000000003,
+          "duration_ms": 103184
+        }
+      }
+    }
+  },
+  "p2_capitolo_quarto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:142-143 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9500000000000001,
+      "gemini (pro)": 0.9250000000000002
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 5948,
+          "output": 1649
+        },
+        "gemini (pro)": {
+          "input": 5254,
+          "output": 1404
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 3668,
+          "output": 1611
+        },
+        "gemini (pro)": {
+          "input": 3650,
+          "output": 1406
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 21,
+          "output": 18839,
+          "cost_usd": 1.0161245,
+          "duration_ms": 261049,
+          "num_turns": 19
+        },
+        "provenance": {
+          "input": 1758,
+          "output": 7094,
+          "cost_usd": 0.539433,
+          "duration_ms": 135907
+        }
+      }
+    }
+  },
+  "p2_capitolo_terzo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:136-141 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.875,
+      "gemini (pro)": 0.8666666666666667
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 8386,
+          "output": 3963
+        },
+        "claude (sonnet)": {
+          "input": 9647,
+          "output": 4568
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 9557,
+          "output": 1455
+        },
+        "gemini (pro)": {
+          "input": 9455,
+          "output": 1546
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 54,
+          "output": 37124,
+          "cost_usd": 2.7632220000000003,
+          "duration_ms": 881392,
+          "num_turns": 52
+        },
+        "provenance": {
+          "input": 15,
+          "output": 9229,
+          "cost_usd": 0.6623832500000001,
+          "duration_ms": 185903
+        }
+      }
+    }
+  },
+  "p2_capitolo_primo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:127-134 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.8125
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 9319,
+          "output": 4642
+        },
+        "claude (sonnet)": {
+          "input": 10692,
+          "output": 5237
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 10881,
+          "output": 2425
+        },
+        "gemini (pro)": {
+          "input": 10862,
+          "output": 1526
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 34,
+          "output": 17586,
+          "cost_usd": 1.5419577500000006,
+          "duration_ms": 426816,
+          "num_turns": 32
+        },
+        "provenance": {
+          "input": 15,
+          "output": 18673,
+          "cost_usd": 1.04847975,
+          "duration_ms": 379033
+        }
+      }
+    }
+  },
+  "p2_capitolo_quinto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:143-148 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.7999999999999999,
+      "claude (sonnet)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7401,
+          "output": 3277
+        },
+        "claude (sonnet)": {
+          "input": 8610,
+          "output": 3600
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 7726,
+          "output": 1537
+        },
+        "claude (sonnet)": {
+          "input": 7742,
+          "output": 1643
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 26,
+          "output": 20320,
+          "cost_usd": 1.1968314999999998,
+          "duration_ms": 400626,
+          "num_turns": 24
+        },
+        "provenance": {
+          "input": 12,
+          "output": 6596,
+          "cost_usd": 0.522505,
+          "duration_ms": 154943
+        }
+      }
+    }
+  },
+  "p2_capitolo_sesto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:148-152 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9500000000000001,
+      "gemini (pro)": 0.8833333333333334
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7045,
+          "output": 2936
+        },
+        "claude (sonnet)": {
+          "input": 8163,
+          "output": 3386
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 7169,
+          "output": 1580
+        },
+        "gemini (pro)": {
+          "input": 7060,
+          "output": 1680
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 38,
+          "output": 32973,
+          "cost_usd": 2.0835010000000005,
+          "duration_ms": 546796,
+          "num_turns": 36
+        },
+        "provenance": {
+          "input": 13,
+          "output": 7589,
+          "cost_usd": 0.5661965000000001,
+          "duration_ms": 146967
+        }
+      }
+    }
+  },
+  "p2_capitolo_settimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:154-156 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.8750000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 5975,
+          "output": 1654
+        },
+        "gemini (pro)": {
+          "input": 5242,
+          "output": 1452
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 3776,
+          "output": 1645
+        },
+        "gemini (pro)": {
+          "input": 3766,
+          "output": 1740
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 21,
+          "output": 18919,
+          "cost_usd": 1.00285025,
+          "duration_ms": 259403,
+          "num_turns": 19
+        },
+        "provenance": {
+          "input": 12,
+          "output": 6058,
+          "cost_usd": 0.418846,
+          "duration_ms": 117660
+        }
+      }
+    }
+  },
+  "p2_capitolo_ottavo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:156-160 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.8625
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6362,
+          "output": 2443
+        },
+        "claude (sonnet)": {
+          "input": 7328,
+          "output": 2750
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 5892,
+          "output": 1462
+        },
+        "gemini (pro)": {
+          "input": 5882,
+          "output": 1495
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 32,
+          "output": 24836,
+          "cost_usd": 1.4131862500000005,
+          "duration_ms": 370578,
+          "num_turns": 30
+        },
+        "provenance": {
+          "input": 2852,
+          "output": 4959,
+          "cost_usd": 0.533025,
+          "duration_ms": 115438
+        }
+      }
+    }
+  },
+  "p2_capitolo_nono": {
+    "phase": "done",
+    "page_marker": "<!-- pages:160-162 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.9125000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 6019,
+          "output": 1649
+        },
+        "gemini (pro)": {
+          "input": 5261,
+          "output": 1411
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 3727,
+          "output": 1616
+        },
+        "gemini (pro)": {
+          "input": 3687,
+          "output": 1479
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 23,
+          "output": 21501,
+          "cost_usd": 1.09036625,
+          "duration_ms": 271466,
+          "num_turns": 21
+        },
+        "provenance": {
+          "input": 12,
+          "output": 4870,
+          "cost_usd": 0.38179475,
+          "duration_ms": 115506
+        }
+      }
+    }
+  },
+  "p2_capitolo_decimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:162-165 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.8875,
+      "claude (sonnet)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 5319,
+          "output": 1584
+        },
+        "claude (sonnet)": {
+          "input": 6022,
+          "output": 1884
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 4105,
+          "output": 1666
+        },
+        "claude (sonnet)": {
+          "input": 4156,
+          "output": 1540
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 13,
+          "output": 11779,
+          "cost_usd": 0.57402925,
+          "duration_ms": 177137,
+          "num_turns": 11
+        },
+        "provenance": {
+          "input": 1977,
+          "output": 3752,
+          "cost_usd": 0.32322875,
+          "duration_ms": 97729
+        }
+      }
+    }
+  },
+  "p2_capitolo_undicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:165-168 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.925,
+      "gemini (pro)": 0.925
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6138,
+          "output": 2190
+        },
+        "claude (sonnet)": {
+          "input": 7068,
+          "output": 2483
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 5388,
+          "output": 1633
+        },
+        "gemini (pro)": {
+          "input": 5356,
+          "output": 1496
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 26,
+          "output": 15491,
+          "cost_usd": 0.96822425,
+          "duration_ms": 304447,
+          "num_turns": 24
+        },
+        "provenance": {
+          "input": 11,
+          "output": 6704,
+          "cost_usd": 0.47347425,
+          "duration_ms": 138544
+        }
+      }
+    }
+  },
+  "p2_capitolo_dodicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:168-172 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9374999999999999,
+      "claude (sonnet)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6832,
+          "output": 2786
+        },
+        "claude (sonnet)": {
+          "input": 7916,
+          "output": 3094
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 6663,
+          "output": 1607
+        },
+        "claude (sonnet)": {
+          "input": 6692,
+          "output": 1609
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 25,
+          "output": 14971,
+          "cost_usd": 0.98104525,
+          "duration_ms": 293124,
+          "num_turns": 23
+        },
+        "provenance": {
+          "input": 12,
+          "output": 6718,
+          "cost_usd": 0.49023025,
+          "duration_ms": 125180
+        }
+      }
+    }
+  },
+  "p2_capitolo_tredicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:172-177 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.8875000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 5024,
+          "output": 1125
+        },
+        "gemini (pro)": {
+          "input": 4453,
+          "output": 956
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 2682,
+          "output": 1399
+        },
+        "gemini (pro)": {
+          "input": 2648,
+          "output": 1405
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 10,
+          "output": 5089,
+          "cost_usd": 0.31493899999999997,
+          "duration_ms": 106963,
+          "num_turns": 8
+        },
+        "provenance": {
+          "input": 11,
+          "output": 4634,
+          "cost_usd": 0.3465965,
+          "duration_ms": 104609
+        }
+      }
+    }
+  },
+  "p2_capitolo_quattordicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:177-183 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.95,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 8310,
+          "output": 3820
+        },
+        "claude (sonnet)": {
+          "input": 9606,
+          "output": 4245
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 9082,
+          "output": 1371
+        },
+        "claude (sonnet)": {
+          "input": 9140,
+          "output": 1514
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 37,
+          "output": 30641,
+          "cost_usd": 1.9912747499999999,
+          "duration_ms": 618889,
+          "num_turns": 35
+        },
+        "provenance": {
+          "input": 17,
+          "output": 8953,
+          "cost_usd": 0.74906175,
+          "duration_ms": 195337
+        }
+      }
+    }
+  },
+  "p2_capitolo_quindicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:183-186 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 0.8375000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 5693,
+          "output": 1919
+        },
+        "claude (sonnet)": {
+          "input": 6594,
+          "output": 2226
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 4938,
+          "output": 1540
+        },
+        "gemini (pro)": {
+          "input": 4873,
+          "output": 1665
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 23,
+          "output": 20599,
+          "cost_usd": 1.1380612499999998,
+          "duration_ms": 307074,
+          "num_turns": 21
+        },
+        "provenance": {
+          "input": 2350,
+          "output": 6777,
+          "cost_usd": 0.441655,
+          "duration_ms": 158939
+        }
+      }
+    }
+  },
+  "p2_capitolo_sedicesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:186-190 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9374999999999999,
+      "gemini (pro)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6318,
+          "output": 2281
+        },
+        "claude (sonnet)": {
+          "input": 7250,
+          "output": 2603
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 5630,
+          "output": 1598
+        },
+        "gemini (pro)": {
+          "input": 5626,
+          "output": 1504
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 27,
+          "output": 25792,
+          "cost_usd": 1.3752680000000002,
+          "duration_ms": 380624,
+          "num_turns": 25
+        },
+        "provenance": {
+          "input": 13,
+          "output": 11868,
+          "cost_usd": 0.74397175,
+          "duration_ms": 228276
+        }
+      }
+    }
+  },
+  "p2_capitolo_decimosettimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:190-195 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9,
+      "gemini (pro)": 0.9125000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7280,
+          "output": 3116
+        },
+        "claude (sonnet)": {
+          "input": 8439,
+          "output": 3593
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 7567,
+          "output": 1515
+        },
+        "gemini (pro)": {
+          "input": 7516,
+          "output": 1607
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 33,
+          "output": 12907,
+          "cost_usd": 1.1029525,
+          "duration_ms": 294573,
+          "num_turns": 31
+        },
+        "provenance": {
+          "input": 12,
+          "output": 5362,
+          "cost_usd": 0.41846500000000003,
+          "duration_ms": 111910
+        }
+      }
+    }
+  },
+  "p2_capitolo_decimottavo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:195-200 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 1.0,
+      "gemini (pro)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 8157,
+          "output": 3803
+        },
+        "claude (sonnet)": {
+          "input": 9532,
+          "output": 4270
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 8927,
+          "output": 1660
+        },
+        "gemini (pro)": {
+          "input": 8907,
+          "output": 1462
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 21,
+          "output": 20434,
+          "cost_usd": 1.176567,
+          "duration_ms": 492090,
+          "num_turns": 19
+        },
+        "provenance": {
+          "input": 4463,
+          "output": 5475,
+          "cost_usd": 0.5392830000000001,
+          "duration_ms": 139050
+        }
+      }
+    }
+  },
+  "p2_capitolo_decimonono": {
+    "phase": "done",
+    "page_marker": "<!-- pages:200-206 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9500000000000001,
+      "gemini (pro)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7592,
+          "output": 3405
+        },
+        "claude (sonnet)": {
+          "input": 8760,
+          "output": 3844
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 8130,
+          "output": 1463
+        },
+        "gemini (pro)": {
+          "input": 8078,
+          "output": 1487
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 26,
+          "output": 14386,
+          "cost_usd": 1.11595875,
+          "duration_ms": 273746,
+          "num_turns": 24
+        },
+        "provenance": {
+          "input": 15,
+          "output": 8661,
+          "cost_usd": 0.6198477499999999,
+          "duration_ms": 182590
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:206-210 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.85,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7114,
+          "output": 2957
+        },
+        "claude (sonnet)": {
+          "input": 8210,
+          "output": 3325
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 7119,
+          "output": 1742
+        },
+        "claude (sonnet)": {
+          "input": 7167,
+          "output": 1423
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 29,
+          "output": 21503,
+          "cost_usd": 1.3338310000000004,
+          "duration_ms": 394104,
+          "num_turns": 27
+        },
+        "provenance": {
+          "input": 25,
+          "output": 6482,
+          "cost_usd": 0.7706095000000001,
+          "duration_ms": 155626
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_primo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:212-215 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.6791666666666667,
+      "claude (sonnet)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 12170,
+          "output": 7061
+        },
+        "claude (sonnet)": {
+          "input": 14251,
+          "output": 8144
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 16299,
+          "output": 1900
+        },
+        "claude (sonnet)": {
+          "input": 16593,
+          "output": 1557
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 38,
+          "output": 54320,
+          "cost_usd": 2.81756575,
+          "duration_ms": 1780178,
+          "num_turns": 33
+        },
+        "provenance": {
+          "input": 21,
+          "output": 10255,
+          "cost_usd": 1.0427265000000001,
+          "duration_ms": 229895
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_terzo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:222-225 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 6991,
+          "output": 2276
+        },
+        "gemini (pro)": {
+          "input": 6190,
+          "output": 2015
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 5058,
+          "output": 1395
+        },
+        "claude (sonnet)": {
+          "input": 5067,
+          "output": 1543
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 16,
+          "output": 16289,
+          "cost_usd": 0.82449275,
+          "duration_ms": 245502,
+          "num_turns": 14
+        },
+        "provenance": {
+          "input": 2462,
+          "output": 6835,
+          "cost_usd": 0.42812725000000007,
+          "duration_ms": 158209
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_secondo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:215-222 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.975,
+      "gemini (pro)": 0.9500000000000001
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 8806,
+          "output": 4155
+        },
+        "claude (sonnet)": {
+          "input": 10151,
+          "output": 4795
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 10056,
+          "output": 1738
+        },
+        "gemini (pro)": {
+          "input": 9913,
+          "output": 1517
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 57,
+          "output": 48771,
+          "cost_usd": 3.6348889999999994,
+          "duration_ms": 1181525,
+          "num_turns": 55
+        },
+        "provenance": {
+          "input": 5071,
+          "output": 16175,
+          "cost_usd": 0.922997,
+          "duration_ms": 270296
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_quarto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:225-228 -->",
+    "draft_models": [
+      "claude (sonnet)",
+      "gemini (pro)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9500000000000001,
+      "claude (sonnet)": 0.9583333333333334
+    },
+    "tokens": {
+      "drafts": {
+        "claude (sonnet)": {
+          "input": 6070,
+          "output": 1842
+        },
+        "gemini (pro)": {
+          "input": 5360,
+          "output": 1590
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 4085,
+          "output": 1427
+        },
+        "claude (sonnet)": {
+          "input": 4130,
+          "output": 1363
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 18,
+          "output": 17357,
+          "cost_usd": 0.8568842500000001,
+          "duration_ms": 234674,
+          "num_turns": 16
+        },
+        "provenance": {
+          "input": 0,
+          "output": 0
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_quinto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:228-232 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9,
+      "gemini (pro)": 0.85
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7058,
+          "output": 2791
+        },
+        "claude (sonnet)": {
+          "input": 8094,
+          "output": 3235
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 6805,
+          "output": 1602
+        },
+        "gemini (pro)": {
+          "input": 6733,
+          "output": 1528
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 20,
+          "output": 17870,
+          "cost_usd": 0.98475925,
+          "duration_ms": 323278,
+          "num_turns": 18
+        },
+        "provenance": {
+          "input": 20,
+          "output": 5684,
+          "cost_usd": 0.531014,
+          "duration_ms": 133241
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_sesto": {
+    "phase": "done",
+    "page_marker": "<!-- pages:232-235 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 5362,
+          "output": 1622
+        },
+        "claude (sonnet)": {
+          "input": 6081,
+          "output": 1864
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 4240,
+          "output": 1395
+        },
+        "claude (sonnet)": {
+          "input": 4262,
+          "output": 1526
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 21,
+          "output": 18803,
+          "cost_usd": 0.9699452500000001,
+          "duration_ms": 265563,
+          "num_turns": 19
+        },
+        "provenance": {
+          "input": 12,
+          "output": 5403,
+          "cost_usd": 0.37272324999999995,
+          "duration_ms": 116230
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_settimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:235-240 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.9,
+      "gemini (pro)": 0.9
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 8107,
+          "output": 3601
+        },
+        "claude (sonnet)": {
+          "input": 9330,
+          "output": 4075
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 8705,
+          "output": 1424
+        },
+        "gemini (pro)": {
+          "input": 8597,
+          "output": 1540
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 18,
+          "output": 20904,
+          "cost_usd": 1.09180025,
+          "duration_ms": 387822,
+          "num_turns": 16
+        },
+        "provenance": {
+          "input": 13,
+          "output": 9232,
+          "cost_usd": 0.6272439999999999,
+          "duration_ms": 214762
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_ottavo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:240-245 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9500000000000001,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7453,
+          "output": 3311
+        },
+        "claude (sonnet)": {
+          "input": 8568,
+          "output": 3721
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 7807,
+          "output": 1477
+        },
+        "claude (sonnet)": {
+          "input": 7855,
+          "output": 1404
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 17,
+          "output": 25349,
+          "cost_usd": 1.09572775,
+          "duration_ms": 523434,
+          "num_turns": 14
+        },
+        "provenance": {
+          "input": 13,
+          "output": 4926,
+          "cost_usd": 0.46382175000000003,
+          "duration_ms": 104955
+        }
+      }
+    }
+  },
+  "p2_capitolo_ventesimo_nono": {
+    "phase": "done",
+    "page_marker": "<!-- pages:245-249 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 1.0,
+      "claude (sonnet)": 0.9
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 6295,
+          "output": 2268
+        },
+        "claude (sonnet)": {
+          "input": 7243,
+          "output": 2566
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 5612,
+          "output": 1524
+        },
+        "claude (sonnet)": {
+          "input": 5627,
+          "output": 1536
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 53,
+          "output": 32291,
+          "cost_usd": 2.4484209999999993,
+          "duration_ms": 696502,
+          "num_turns": 51
+        },
+        "provenance": {
+          "input": 12,
+          "output": 13176,
+          "cost_usd": 0.7125082500000001,
+          "duration_ms": 256211
+        }
+      }
+    }
+  },
+  "p2_capitolo_trentesimo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:249-252 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.9500000000000001,
+      "claude (sonnet)": 0.9250000000000002
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 5954,
+          "output": 2319
+        },
+        "claude (sonnet)": {
+          "input": 6833,
+          "output": 2588
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 5652,
+          "output": 1511
+        },
+        "claude (sonnet)": {
+          "input": 5688,
+          "output": 1484
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 54,
+          "output": 29857,
+          "cost_usd": 2.2829265,
+          "duration_ms": 566569,
+          "num_turns": 52
+        },
+        "provenance": {
+          "input": 2754,
+          "output": 21174,
+          "cost_usd": 1.0598834999999998,
+          "duration_ms": 347137
+        }
+      }
+    }
+  },
+  "p2_capitolo_trentesimo_primo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:252-258 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.7750000000000001,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7915,
+          "output": 3863
+        },
+        "claude (sonnet)": {
+          "input": 9220,
+          "output": 4493
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 9071,
+          "output": 1578
+        },
+        "claude (sonnet)": {
+          "input": 9108,
+          "output": 1548
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 26,
+          "output": 22495,
+          "cost_usd": 1.2797759999999996,
+          "duration_ms": 575743,
+          "num_turns": 24
+        },
+        "provenance": {
+          "input": 15,
+          "output": 7128,
+          "cost_usd": 0.5967512500000001,
+          "duration_ms": 151266
+        }
+      }
+    }
+  },
+  "p2_capitolo_trentesimo_secondo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:258-263 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "gemini (pro)": 0.8625000000000002,
+      "claude (sonnet)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7631,
+          "output": 3447
+        },
+        "claude (sonnet)": {
+          "input": 8746,
+          "output": 4011
+        }
+      },
+      "evals": {
+        "gemini (pro)": {
+          "input": 8222,
+          "output": 1711
+        },
+        "claude (sonnet)": {
+          "input": 8337,
+          "output": 1679
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 18,
+          "output": 19824,
+          "cost_usd": 1.089731,
+          "duration_ms": 407631,
+          "num_turns": 16
+        },
+        "provenance": {
+          "input": 15,
+          "output": 6078,
+          "cost_usd": 0.5358790000000001,
+          "duration_ms": 144124
+        }
+      }
+    }
+  },
+  "p2_capitolo_trentesimo_terzo": {
+    "phase": "done",
+    "page_marker": "<!-- pages:263-268 -->",
+    "draft_models": [
+      "gemini (pro)",
+      "claude (sonnet)"
+    ],
+    "scores": {
+      "claude (sonnet)": 0.975,
+      "gemini (pro)": 1.0
+    },
+    "tokens": {
+      "drafts": {
+        "gemini (pro)": {
+          "input": 7496,
+          "output": 3565
+        },
+        "claude (sonnet)": {
+          "input": 8782,
+          "output": 4073
+        }
+      },
+      "evals": {
+        "claude (sonnet)": {
+          "input": 8432,
+          "output": 1454
+        },
+        "gemini (pro)": {
+          "input": 8313,
+          "output": 1498
+        }
+      },
+      "synthesis": {
+        "synthesis": {
+          "input": 28,
+          "output": 25342,
+          "cost_usd": 1.4114102499999999,
+          "duration_ms": 659740,
+          "num_turns": 26
+        },
+        "provenance": {
+          "input": 10,
+          "output": 18174,
+          "cost_usd": 0.7846102500000001,
+          "duration_ms": 363944
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "Its shelves were set so high",
+      "replacement": "Its supports were set so high",
+      "reason": "Italian 'staffe' means stirrups or brackets, not shelves; Gemini's 'supports' is more accurate to the desk hardware described"
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "various high *papaveri* — poppy-heads, men of consequence — of the military",
+      "replacement": "various high dignitaries of the military",
+      "reason": "The inline gloss interrupts the narrative flow; Gemini's clean 'dignitaries' conveys the sense of 'alti papaveri' without breaking the sentence"
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "there moved about in gloomy fashion several black beetles in civilian dress",
+      "replacement": "there darkened sadly several black beetles in civilian dress",
+      "reason": "'Nereggiavano tristemente' means literally 'darkened sadly' — a visual verb about colour, not movement; Gemini's 'gloomed sadly' pointed towards this more literal rendering"
+    },
+    {
+      "paragraph": 14,
+      "from_draft": "draft_gemini__pro",
+      "original": "I withdrew out of discretion",
+      "replacement": "I withdrew out of prudence",
+      "reason": "Italian 'per prudenza' means prudence, not discretion; Gemini's wording is the accurate translation"
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_gemini__pro",
+      "original": "To the water-closet at the end of the corridor",
+      "replacement": "To the cabinet at the end of the corridor",
+      "reason": "'Gabinetto' in period usage is a euphemistic 'cabinet'; 'water-closet' is too blunt and anachronistically specific for the register"
+    },
+    {
+      "paragraph": 32,
+      "from_draft": "draft_gemini__pro",
+      "original": "disdainful in the Roman manner",
+      "replacement": "with Roman disdain",
+      "reason": "More compact and forceful; matches the terse energy of 'romanamente sdegnoso'"
+    },
+    {
+      "paragraph": 41,
+      "from_draft": "draft_gemini__pro",
+      "original": "the landlady had not seen me enter",
+      "replacement": "the proprietress had not seen me enter",
+      "reason": "'Proprietress' is consistent with the term used for the same character in Chapter the Eleventh; 'landlady' implies a lodging-house keeper rather than a café owner"
+    },
+    {
+      "paragraph": 46,
+      "from_draft": "draft_gemini__pro",
+      "original": "Yet he who was off guard tonight, I thought, might be wide awake and watchful tomorrow",
+      "replacement": "Yet he who tonight — I thought — might be awake and on the alert tomorrow…",
+      "reason": "The primary draft inserted 'off guard' which has no basis in the Italian; the synthesis restores the structure of the original ('chi stanotte — pensai — potrebbe essere desto ed all'erta domani') using Gemini's 'awake and on the alert' for 'desto ed all'erta'"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "staffa",
+      "edgren_definition": "stirrup; cymbal; iron ring (mould)",
+      "english_choice": "supports",
+      "paragraph": 3,
+      "note": "Edgren's entry confirms 'staffa' denotes a structural support element (stirrup, iron ring), not a shelf; this ruled out the primary draft's 'shelves' and confirmed Gemini's 'supports' as the right semantic field"
+    },
+    {
+      "italian_word": "papavero",
+      "edgren_definition": "POPPY (plant); good-for-nothing fellow",
+      "english_choice": "dignitaries",
+      "paragraph": 3,
+      "note": "Edgren gives only the literal 'poppy' and pejorative 'good-for-nothing', confirming that 'alti papaveri' is an idiom (tall poppies = bigwigs) not a word with a ready English equivalent; this supported dropping the primary draft's inline gloss in favour of the idiomatic 'dignitaries'"
+    },
+    {
+      "italian_word": "scorgere",
+      "edgren_definition": "discern (perceive, distinguish); discover; guide (escort)",
+      "english_choice": "discern",
+      "paragraph": 3,
+      "note": "Edgren's first sense 'discern' was already used by both drafts; the dictionary confirmed this as the period-appropriate choice over a modern default like 'make out' or 'see'"
+    }
+  ]
+}

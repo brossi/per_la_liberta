@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively maintains a formal, somewhat archaic, and literary register appropriate for the period and genre of memoirs."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation captures the narrator's reflective interjections and rhetorical questions, preserving the conversational feel."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation successfully mirrors the slight variations in formality, particularly in dialogue and the narrator's personal observations."
+        }
+      ],
+      "strengths": "The translation excels at capturing the sophisticated yet engaging voice of the original text. It consistently uses vocabulary and sentence structures that evoke the early 20th-century literary style.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Political and institutional terms like 'Conciergerie', 'Court of Appeal', 'Court of Cassation', 'Council of State', 'Prophet', and 'Fatherland' are all appropriately translated or retained."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "References such as 'La Roquette', 'Romagnol', 'dragoon-chaplain', and specific names are handled correctly, maintaining the original cultural context."
+        }
+      ],
+      "strengths": "The translation shows a strong awareness of the historical and cultural background, making excellent choices for rendering specific terms and preserving the authentic flavour of the period.",
+      "weaknesses": "No weaknesses were observed in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably accurate, conveying the precise meaning of the source text with very few, if any, noticeable omissions or significant additions. Minor rephrasing enhances clarity without altering meaning."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical references are correctly retained or given standard, appropriate English equivalents (e.g., 'Mohammed' for 'Maometto')."
+        }
+      ],
+      "strengths": "The translation is highly faithful to the source text, demonstrating a deep understanding of the original's nuances and complex sentence structures. It consistently delivers the intended message with precision.",
+      "weaknesses": "A very minor stylistic choice, such as 'giving the air of having one's hand forced', is slightly less fluid than other parts, but does not detract from accuracy."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads very naturally and fluidly, effectively capturing the literary quality of the original despite its often complex sentence structures."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, idioms, and vivid imagery (e.g., 'lance-thrust to his very ribs', 'with a corkscrew', 'souls for sale') are consistently rendered with strength and impact."
+        }
+      ],
+      "strengths": "The translation excels in its literary execution, turning complex Italian phrasing into elegant and compelling English prose. The imagery is well-preserved and impactful, contributing significantly to the aesthetic appeal.",
+      "weaknesses": "No significant weaknesses were identified in terms of literary quality."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically correct throughout. While some sentences are long and intricate, they are constructed soundly and avoid awkwardness, maintaining good readability."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite the text's inherent complexity and reflective nature, the translation is consistently clear and easy to follow, requiring no re-reading for comprehension."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent command of English grammar and syntax, producing text that is both correct and highly readable. The fluency allows the reader to engage with the narrative without interruption.",
+      "weaknesses": "No weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Recurring terms (e.g., 'La Roquette', 'straitjacket', 'dragoon-chaplain') and character names are translated and used with complete consistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic choices are consistently applied across all paragraphs, ensuring a unified and coherent reading experience throughout the passage."
+        }
+      ],
+      "strengths": "The translation is highly consistent in its rendering of terms and style, contributing to a seamless and professional final product.",
+      "weaknesses": "No weaknesses were identified in this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 8907,
+    "output": 1462
+  }
+}

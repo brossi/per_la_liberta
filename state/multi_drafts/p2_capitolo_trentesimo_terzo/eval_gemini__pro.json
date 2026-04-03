@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully employs a formal and somewhat archaic vocabulary and phrasing that aligns well with the early 20th-century Italian literary register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The conversational and reflective aspects of Crespi's narrative, including direct address and philosophical musings, are well-preserved."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a largely formal tone, with subtle shifts handled appropriately to maintain the overall register."
+        }
+      ],
+      "strengths": "The translation excels at capturing the formal, slightly archaic, yet engaging tone of the original, using elevated vocabulary ('ergastolo,' 'camarilla tonsurata,' 'adonted,' 'welter,' 'viaticum,' 'irksome') that matches the period and literary style.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Temporal Power of the Popes,' 'tonsured camarilla,' 'party of action,' and 'Risorgimento' are rendered with appropriate and contextually rich English equivalents."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Place names (Londra, Italia, Roma, Genova, Polonia, Nuova York, Stati Uniti) are consistently kept in their Italian forms when used as proper nouns, which perfectly preserves the cultural context and period feel."
+        }
+      ],
+      "strengths": "The translation skillfully navigates the political and cultural landscape of the Risorgimento era, maintaining original Italian place names and specific terms where appropriate, enhancing authenticity.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably precise, conveying the full meaning and emotional nuances of the Italian source without notable omissions or unwarranted additions. Complex sentences and idiomatic expressions are accurately rendered."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Yes, proper nouns, place names, and historical references (e.g., 'Giuseppe Mazzini,' 'Felice Orsini,' 'Aspromonte,' 'Londra,' 'Italia,' 'Roma') are consistently preserved in their original Italian forms, which is commendable."
+        }
+      ],
+      "strengths": "The translation demonstrates exceptional accuracy and faithfulness, capturing both the literal meaning and the subtle implications of the source text. Vocabulary choices are consistently strong and precise.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly literary, reading naturally and flowing with a rhythm that reflects the original's elegance, rather than feeling like a literal, word-for-word rendition."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and vivid imagery ('consular mask darkened,' 'launched, with wings unfurled,' 'fattens the minority,' 'picklock for his enemies') are translated with creativity and impact, preserving their original force."
+        }
+      ],
+      "strengths": "The translation is a strong literary piece in its own right, maintaining the evocative imagery and rhetorical power of the Italian. The choice of sophisticated English vocabulary enriches the text.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable, with no awkward phrasing or syntactical errors, even when dealing with complex sentence structures that mirror the original."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The translation is exceptionally clear and easy to follow, making it highly readable without the need for re-reading to grasp meaning."
+        }
+      ],
+      "strengths": "The prose is fluent, grammatically perfect, and maintains clarity throughout, making for a smooth and enjoyable reading experience.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All recurring names, titles, and key concepts ('Fatherland,' 'Liberty,' 'Revolution,' 'Mazzini') are translated with admirable consistency, reinforcing the narrative's coherence."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic coherence is maintained throughout the entire passage, ensuring a consistent and polished reading experience from beginning to end."
+        }
+      ],
+      "strengths": "The translation is highly consistent in its rendering of terms, names, and overall style, which contributes significantly to its quality and readability.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 8313,
+    "output": 1498
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a sophisticated yet engaging early 20th-century literary register, using appropriate vocabulary and phrasing without sounding archaic."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct address to the reader ('Now see to what extent...') and the personal reflections consistently preserve the original's conversational and reflective narrative voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation skillfully navigates the shifts between descriptive narrative, internal monologue, and dialogue, maintaining the appropriate register for each."
+        }
+      ],
+      "strengths": "The translation excels in capturing the nuanced, elevated yet personal tone of the original, making it feel authentic to its period and author.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'constables,' 'gendarmes,' 'double-headed eagle,' and 'florins' are well-chosen to reflect the period and geopolitical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Italian place names, proper nouns, and cultural specifics (e.g., 'chellerina,' 'Tarot,' 'plenary indulgence,' 'Venetian-style lanterns') are either preserved or aptly adapted (e.g., 'frying pan and into the fire' for an idiom), showing excellent cultural sensitivity."
+        }
+      ],
+      "strengths": "The translator's deep understanding of both the linguistic and cultural contexts is evident in the precise and sensitive handling of period-specific and cultural references, making the text accessible without losing its original flavor.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is exceptionally accurate, conveying the full meaning, including subtle ironies and emotional nuances, without any discernible omissions or unjustified additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, geographical locations, and historical figures are correctly rendered and preserved, ensuring historical accuracy."
+        }
+      ],
+      "strengths": "This translation is a model of faithfulness, meticulously rendering the source text's content, emotional depth, and specific details, including complex idiomatic expressions.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads effortlessly and fluidly, showcasing a high literary quality that transcends mere literal rendering, making it a pleasure to read."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and vivid imagery are consistently and imaginatively translated, often using strong idiomatic equivalents that enhance the text's evocative power."
+        }
+      ],
+      "strengths": "The translation elevates the source material into compelling English literature, demonstrating a strong command of prose and poetic expression, and successfully re-creating the original's imaginative flair.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically flawless and uses natural, sophisticated sentence structures, avoiding any awkward phrasing."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and coherent, allowing the reader to follow the narrative smoothly without needing to pause or re-read for comprehension."
+        }
+      ],
+      "strengths": "The translation displays impeccable grammar and a natural flow, making the narrative highly accessible and enjoyable to read.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "While most terms are consistent, the use of 'carabiniers' in one section (Salzburg) after referring to police as 'constables' and 'gendarmes' elsewhere introduces a minor inconsistency in the naming of law enforcement, even if potentially contextually justifiable by the original author."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic tone and narrative approach remain consistent throughout the entire passage, ensuring a unified reading experience."
+        }
+      ],
+      "strengths": "The overall stylistic consistency of the translation is very strong, maintaining a coherent voice and register across the entire text.",
+      "weaknesses": "A slight inconsistency in the terminology used for police forces (mixing 'constables/gendarmes' with 'carabiniers') is present, though it does not severely detract from the overall quality."
+    }
+  ],
+  "weighted_score": 0.9750000000000001,
+  "_tokens": {
+    "input": 11460,
+    "output": 1459
+  }
+}

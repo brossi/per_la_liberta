@@ -1,0 +1,595 @@
+{
+  "chapter": "p1_capitolo_secondo",
+  "characters": [
+    {
+      "name": "Unnamed First-Person Narrator",
+      "aliases": [],
+      "role": "The author (Cesare Crespi, per book context) who initiates the conversation and listens to the Maggiore's story.",
+      "citation": "Mezz'ora di discussione nello studio, sotto l'effigie del Mazzini e di Fortunato Calvi che, pareva, ci ascoltassero. Ed ero già quasi disposto a rinunciare alla mia idea, quando, a scanso di futuri pentimenti, dissi vivacemente",
+      "_verified": true
+    },
+    {
+      "name": "Count Carlo di Rudio",
+      "aliases": [
+        "il Maggiore",
+        "il Moretto"
+      ],
+      "role": "The main narrator of the chapter's events and biographical details, recounting his personal history and historical context of the Risorgimento.",
+      "citation": "Ma non capisce, Maggiore, che si tratta di un dovere da compiere? Il fatto ebbe movente storico ed alla Storia appartiene.",
+      "_verified": true
+    },
+    {
+      "name": "Mazzini",
+      "aliases": [],
+      "role": "Historical figure whose effigy is present in the study where the conversation takes place.",
+      "citation": "sotto l'effigie del Mazzini e di Fortunato Calvi che, pareva, ci ascoltassero.",
+      "_verified": true
+    },
+    {
+      "name": "Fortunato Calvi",
+      "aliases": [],
+      "role": "Historical figure whose effigy is present in the study where the conversation takes place.",
+      "citation": "sotto l'effigie del Mazzini e di Fortunato Calvi che, pareva, ci ascoltassero.",
+      "_verified": true
+    },
+    {
+      "name": "Conte Ercole",
+      "aliases": [],
+      "role": "Father of Count Carlo di Rudio.",
+      "citation": "Nacqui a Belluno il 26 Agosto del 1832 dal Conte Ercole e dalla Contessa Elisabetta de Domini.",
+      "_verified": true
+    },
+    {
+      "name": "Contessa Elisabetta de Domini",
+      "aliases": [],
+      "role": "Mother of Count Carlo di Rudio.",
+      "citation": "Nacqui a Belluno il 26 Agosto del 1832 dal Conte Ercole e dalla Contessa Elisabetta de Domini.",
+      "_verified": true
+    },
+    {
+      "name": "Angelo Biave",
+      "aliases": [],
+      "role": "Writer who documented Count Carlo di Rudio's family history in Latin hexameters.",
+      "citation": "Su essa scrisse Angelo Biave e scrisse — buon'anima! — in esametri latini.",
+      "_verified": true
+    },
+    {
+      "name": "prozio (of Count Carlo di Rudio)",
+      "aliases": [],
+      "role": "Translated Angelo Biave's Latin hexameters into vernacular, creating a 'torture instrument' for his descendants.",
+      "citation": "Un mio prozio si diede la briga di tradurli in volgare, preparando così uno strumento di tortura pei suoi pronipoti.",
+      "_verified": true
+    },
+    {
+      "name": "Pio IX",
+      "aliases": [
+        "Pontefice liberatore",
+        "Mastai-Ferretti"
+      ],
+      "role": "Pope, initially lauded by Belluno citizens, but considered 'the greatest enemy of our homeland' by Count Carlo di Rudio's father.",
+      "citation": "i cittadini di Belluno organizzarono una dimostrazione in omaggio al \"Pontefice liberatore\".",
+      "_verified": true
+    },
+    {
+      "name": "Fortunato de Domini",
+      "aliases": [],
+      "role": "Count Carlo di Rudio's maternal grandfather, Colonel in the Austrian infantry, who attempted to shield him from liberal ideas.",
+      "citation": "Il mio nonno materno, Fortunato de Domini, Colonnello dell'infanteria austriaca, accecato dall'affetto intenso, credeva di scorgere in me stoffa da \"trarne qualcosa\"",
+      "_verified": true
+    },
+    {
+      "name": "Achille",
+      "aliases": [],
+      "role": "Brother of Count Carlo di Rudio, who studied with him at the Military Academy of San Luca.",
+      "citation": "E vi sarei rimasto, con mio fratello Achille, sino a studi compiuti",
+      "_verified": true
+    },
+    {
+      "name": "Metternich",
+      "aliases": [],
+      "role": "Austrian diplomat, described as 'insipienza' and 'triste incarnazione dell'arti subdole', who manipulated European politics and held Italy as a 'geographical expression'.",
+      "citation": "Chi aveva preparato di lunga mano il materiale per nutrire l'insurrezione fu lo stesso aggressore; fu l'insipienza del sapiente Metternich.",
+      "_verified": true
+    },
+    {
+      "name": "Napoleone il Grande",
+      "aliases": [],
+      "role": "French Emperor whose embarrassment Metternich exploited to hasten his downfall.",
+      "citation": "approfittando dell'imbarazzo di Napoleone il Grande, era riuscito a saltargli alla gola e ad affrettarne la rovina.",
+      "_verified": true
+    },
+    {
+      "name": "Napoleone I",
+      "aliases": [],
+      "role": "French Emperor, who treated peoples like sheep, and whose actions laid the groundwork for new ideas, ultimately undermining his own power.",
+      "citation": "Napoleone, dalla sua altezza, aveva trattato i popoli come un branco di pecore; perchè non avrebbe potuto fare altrettanto?",
+      "_verified": true
+    },
+    {
+      "name": "Murat",
+      "aliases": [],
+      "role": "Military general for whom Metternich had reserved the Kingdom of Naples, but lost the opportunity due to his 'impetuosity'.",
+      "citation": "Una mezza eccezione volle farla per Murat, a cui riserbava il reame di Napoli.",
+      "_verified": true
+    },
+    {
+      "name": "moglie del Murat",
+      "aliases": [],
+      "role": "Sister of Napoleon, who 'delighted' Metternich with kisses.",
+      "citation": "La moglie del Murat, sorella di Napoleone, lo aveva deliziato di baci che valevano un regno...",
+      "_verified": true
+    },
+    {
+      "name": "Ferdinando I",
+      "aliases": [],
+      "role": "King of Naples, who secured his kingdom by spending 9 million francs at the Congress of Vienna.",
+      "citation": "Il reame di Napoli toccava a Ferdinando I, che se n'era, del resto, preparata la via profondendo nove milioni di franchi nelle anticamere del Congresso di Vienna.",
+      "_verified": true
+    },
+    {
+      "name": "Pio VII",
+      "aliases": [],
+      "role": "Pope, 'restorer of the power of the Jesuits' and compiler of the Bull 'Ecclesiam Jesu Christo', which excommunicated those who didn't denounce Carbonari.",
+      "citation": "Roma e le Legazioni toccarono a Pio VII, il ristoratore della potenza dei Gesuiti",
+      "_verified": true
+    },
+    {
+      "name": "Ferdinando III",
+      "aliases": [],
+      "role": "Austrian archduke, who was granted the Grand Duchy of Tuscany and the Principality of Piombino.",
+      "citation": "Il granducato di Toscana ed il principato di Piombino toccarono a Ferdinando III, un arciduca austriaco",
+      "_verified": true
+    },
+    {
+      "name": "Francesco IV",
+      "aliases": [
+        "il boia"
+      ],
+      "role": "Duke of Modena, nicknamed 'the executioner' by his subjects.",
+      "citation": "il ducato di Modena a Francesco IV, dai suoi sudditi soprannominato il \"boia\".",
+      "_verified": true
+    },
+    {
+      "name": "Maria Luisa (daughter of Emperor of Austria)",
+      "aliases": [],
+      "role": "Daughter of the Emperor of Austria and wife of Napoleon I, who was content to rule Parma.",
+      "citation": "Maria Luisa, figlia dell'Imperatore d'Austria e moglie di Napoleone I, dovette accontentarsi di signoreggiare a Parma",
+      "_verified": true
+    },
+    {
+      "name": "Maria Luisa (Infanta of Spain)",
+      "aliases": [],
+      "role": "Infanta of Spain, who was placed in charge of the Principality of Lucca.",
+      "citation": "mentre l'altra Maria Luisa, Infanta di Spagna, venne preposta al principato di Lucca.",
+      "_verified": true
+    },
+    {
+      "name": "Marchese Brignole",
+      "aliases": [],
+      "role": "Eloquent advocate who unsuccessfully argued for Genoa's freedom at the Congress of Vienna.",
+      "citation": "l'eloquenza del Marchese Brignole, che tentò di far valere i lunghi secoli di libertà",
+      "_verified": true
+    },
+    {
+      "name": "Vittorio Emanuele I",
+      "aliases": [],
+      "role": "King of Piedmont, who returned from Sardinia to reclaim his throne.",
+      "citation": "sul cui trono, ritornando dal suo rifugio di Sardegna, si assise Vittorio Emanuele I.",
+      "_verified": true
+    },
+    {
+      "name": "Maresciallo Radetzky",
+      "aliases": [
+        "il ferreo Radetzky"
+      ],
+      "role": "Austrian Field Marshal, quoted as saying 'Three days of slaughter ensure thirty years of peace', who was forced to retreat from Milan.",
+      "citation": "\"Tre giorni di strage assicurano trent'anni di pace\" diceva il vecchio Maresciallo Radetzky.",
+      "_verified": true
+    }
+  ],
+  "events": [
+    {
+      "name": "Discussion in the studio",
+      "date": null,
+      "description": "A half-hour discussion between the narrator and the Maggiore, under the effigies of Mazzini and Fortunato Calvi.",
+      "citation": "Mezz'ora di discussione nello studio, sotto l'effigie del Mazzini e di Fortunato Calvi che, pareva, ci ascoltassero.",
+      "_verified": true
+    },
+    {
+      "name": "Belluno demonstration for Pio IX",
+      "date": "1848",
+      "description": "Citizens of Belluno organized a demonstration in homage to Pope Pius IX, carrying his bust in triumph. Count Carlo di Rudio's father smashed the bust, calling Pio IX 'the greatest enemy of our homeland'.",
+      "citation": "Sul principiare del 1848, quando gli sguardi e le speranze dei patrioti italiani convergevano a Roma e i canti popolari ripetevano le lodi di Mastai-Ferretti, i cittadini di Belluno organizzarono una dimostrazione in omaggio al \"Pontefice liberatore\".",
+      "_verified": true
+    },
+    {
+      "name": "Napoleon's downfall expedited by Metternich",
+      "date": null,
+      "description": "Metternich exploited Napoleon the Great's embarrassment to attack him and hasten his ruin.",
+      "citation": "approfittando dell'imbarazzo di Napoleone il Grande, era riuscito a saltargli alla gola e ad affrettarne la rovina.",
+      "_verified": true
+    },
+    {
+      "name": "Insurrection of Vienna",
+      "date": null,
+      "description": "News of the Vienna insurrection predisposed Milanese spirits to attempt new things, triggering the Milanese uprising.",
+      "citation": "La nuova dell'insurrezione di Vienna, predispose gli animi a tentare novità; un drappo giallo e nero spiegato in mal punto, sul proprio davanzale, da una donna di costumi leggeri, attizzò, quasi agitata dal destino, la fiamma che raffina gli uomini e li tramuta in eroi.",
+      "_verified": true
+    },
+    {
+      "name": "Milanese uprising (1848)",
+      "date": "18 Marzo 1848",
+      "description": "The first major outburst of Italian anger, starting on March 18, 1848, without a prepared plan, characterized by widespread civilian participation, barricades, and fierce combat against Austrian forces.",
+      "citation": "E tanto intensamente tale energia agitava il cuore dei Milanesi, che essi si trovarono il 18 Marzo 1848 affratellati da un supremo intento",
+      "_verified": true
+    },
+    {
+      "name": "Radetzky's retreat from Milan",
+      "date": null,
+      "description": "After five days of conflict, Radetzky was forced to a disguised but hasty retreat from Milan, during which Austrian soldiers committed atrocities against civilians.",
+      "citation": "Radetzky, il ferreo Radetzky, malgrado le risorse del proprio ingegno, si vedeva costretto a scongiurare l'estrema rovina con una ritirata, dissimulata ma precipitosa.",
+      "_verified": true
+    }
+  ],
+  "locations": [
+    {
+      "name": "studio",
+      "english": "study",
+      "context": "The place where the narrator and the Maggiore are having their discussion.",
+      "citation": "Mezz'ora di discussione nello studio, sotto l'effigie del Mazzini",
+      "_verified": true
+    },
+    {
+      "name": "Belluno",
+      "english": null,
+      "context": "Count Carlo di Rudio's birthplace and the location of his family's roots and an early demonstration for Pio IX.",
+      "citation": "Nacqui a Belluno il 26 Agosto del 1832 dal Conte Ercole e dalla Contessa Elisabetta de Domini.",
+      "_verified": true
+    },
+    {
+      "name": "Italia",
+      "english": "Italy",
+      "context": "The nation whose freedom and independence are the central theme of the narrative; Count Carlo di Rudio's family has old roots there.",
+      "citation": "La mia famiglia ha vecchie radici in quell'estremo lembo d'Italia.",
+      "_verified": true
+    },
+    {
+      "name": "Roma",
+      "english": "Rome",
+      "context": "The city towards which Italian patriots' hopes converged in early 1848.",
+      "citation": "quando gli sguardi e le speranze dei patrioti italiani convergevano a Roma e i canti popolari ripetevano le lodi di Mastai-Ferretti",
+      "_verified": true
+    },
+    {
+      "name": "caserma di Belluno",
+      "english": "Belluno barracks",
+      "context": "A military barracks where Count Carlo di Rudio's maternal grandfather first kept him.",
+      "citation": "Dapprima nella caserma di Belluno, un vecchio edificio che aveva ripercosso, ne' suoi bei tempi, le salmodie dei frati",
+      "_verified": true
+    },
+    {
+      "name": "forte di Palmanova",
+      "english": "Fortress of Palmanova",
+      "context": "A fortress where Count Carlo di Rudio was moved by his grandfather, who wanted to shield him from liberal ideas.",
+      "citation": "poi nel forte di Palmanova dove era stato traslocato.",
+      "_verified": true
+    },
+    {
+      "name": "Accademia Militare di San Luca in Milano",
+      "english": "Military Academy of San Luca in Milan",
+      "context": "The military academy in Milan where Count Carlo di Rudio and his brother Achille studied.",
+      "citation": "L'educazione semplice e rude che egli mi aveva impartito, venne poi continuata all'Accademia Militare di San Luca in Milano",
+      "_verified": true
+    },
+    {
+      "name": "Regno Lombardo-Veneto",
+      "english": "Lombardo-Venetian Kingdom",
+      "context": "The territory for whose cadets the Military Academy of San Luca was designated, under Austrian rule.",
+      "citation": "destinata allora ai cadetti del Regno Lombardo-Veneto. E vi sarei rimasto, con mio fratello Achille",
+      "_verified": true
+    },
+    {
+      "name": "Milano",
+      "english": "Milan",
+      "context": "The first center where Italian anger erupted, leading to a major insurrection in 1848.",
+      "citation": "Milano fu il primo centro dove l'ira nostra proruppe.",
+      "_verified": true
+    },
+    {
+      "name": "Vienna",
+      "english": null,
+      "context": "The city from which news of an insurrection predisposed Milanese spirits to rebellion, and where the affairs of Italians were decided by Metternich.",
+      "citation": "La nuova dell'insurrezione di Vienna, predispose gli animi a tentare novità",
+      "_verified": true
+    },
+    {
+      "name": "Alpi",
+      "english": "Alps",
+      "context": "The mountain range that the 'fierce tempest' (referring to the 1848 revolutions) crossed from the North into Italy.",
+      "citation": "la fiera tempesta che addensatasi nel Settentrione, passò l'Alpi e corse ed insanguinò l'Italia tutta quanta.",
+      "_verified": true
+    },
+    {
+      "name": "Settentrione",
+      "english": "North (of Italy)",
+      "context": "The region where the 'fierce tempest' of revolution gathered before spreading to all of Italy.",
+      "citation": "che addensatasi nel Settentrione, passò l'Alpi e corse ed insanguinò l'Italia tutta quanta.",
+      "_verified": true
+    },
+    {
+      "name": "baratro di Lipsia",
+      "english": "abyss of Leipzig",
+      "context": "Symbolic location of Napoleon I's downfall.",
+      "citation": "precipitarlo nel baratro di Lipsia.",
+      "_verified": true
+    },
+    {
+      "name": "Regno di Napoli",
+      "english": "Kingdom of Naples",
+      "context": "A kingdom in Italy, initially reserved for Murat by Metternich, then given to Ferdinando I.",
+      "citation": "Una mezza eccezione volle farla per Murat, a cui riserbava il reame di Napoli.",
+      "_verified": true
+    },
+    {
+      "name": "anticamere del Congresso di Vienna",
+      "english": "antechambers of the Congress of Vienna",
+      "context": "Where Ferdinando I spent 9 million francs to secure his claim to the Kingdom of Naples.",
+      "citation": "profondendo nove milioni di franchi nelle anticamere del Congresso di Vienna.",
+      "_verified": true
+    },
+    {
+      "name": "Legazioni",
+      "english": "Legations (Papal States)",
+      "context": "Territories that, along with Rome, were given to Pio VII.",
+      "citation": "Roma e le Legazioni toccarono a Pio VII, il ristoratore della potenza dei Gesuiti",
+      "_verified": true
+    },
+    {
+      "name": "granducato di Toscana",
+      "english": "Grand Duchy of Tuscany",
+      "context": "A territory given to Ferdinando III, an Austrian archduke.",
+      "citation": "Il granducato di Toscana ed il principato di Piombino toccarono a Ferdinando III, un arciduca austriaco",
+      "_verified": true
+    },
+    {
+      "name": "principato di Piombino",
+      "english": "Principality of Piombino",
+      "context": "A territory that, along with the Grand Duchy of Tuscany, was given to Ferdinando III.",
+      "citation": "Il granducato di Toscana ed il principato di Piombino toccarono a Ferdinando III, un arciduca austriaco",
+      "_verified": true
+    },
+    {
+      "name": "ducato di Modena",
+      "english": "Duchy of Modena",
+      "context": "A territory given to Francesco IV, nicknamed 'the executioner'.",
+      "citation": "il ducato di Modena a Francesco IV, dai suoi sudditi soprannominato il \"boia\".",
+      "_verified": true
+    },
+    {
+      "name": "Parma",
+      "english": null,
+      "context": "A duchy where Maria Luisa, daughter of the Emperor of Austria and wife of Napoleon I, was made to rule.",
+      "citation": "Maria Luisa, figlia dell'Imperatore d'Austria e moglie di Napoleone I, dovette accontentarsi di signoreggiare a Parma",
+      "_verified": true
+    },
+    {
+      "name": "principato di Lucca",
+      "english": "Principality of Lucca",
+      "context": "A territory where Maria Luisa, Infanta of Spain, was placed in charge.",
+      "citation": "mentre l'altra Maria Luisa, Infanta di Spagna, venne preposta al principato di Lucca.",
+      "_verified": true
+    },
+    {
+      "name": "Genova",
+      "english": "Genoa",
+      "context": "A city that, despite protests, was incorporated into Piedmont.",
+      "citation": "Genova, malgrado le sue proteste e l'eloquenza del Marchese Brignole, che tentò di far valere i lunghi secoli di libertà e la passata grandezza, venne incorporata al Piemonte",
+      "_verified": true
+    },
+    {
+      "name": "Piemonte",
+      "english": "Piedmont",
+      "context": "The kingdom that absorbed Genoa and whose king, Vittorio Emanuele I, returned from Sardinia.",
+      "citation": "venne incorporata al Piemonte; sul cui trono, ritornando dal suo rifugio di Sardegna, si assise Vittorio Emanuele I.",
+      "_verified": true
+    },
+    {
+      "name": "Sardegna",
+      "english": "Sardinia",
+      "context": "The refuge from which Vittorio Emanuele I returned to the throne of Piedmont.",
+      "citation": "dal suo rifugio di Sardegna, si assise Vittorio Emanuele I.",
+      "_verified": true
+    },
+    {
+      "name": "Lombardia",
+      "english": "Lombardy",
+      "context": "A region retained by Austria under its direct dominion.",
+      "citation": "L'Austria ritenne sotto il proprio dominio diretto la Lombardia, la Venezia, il Tirolo, l'Istria e la Dalmazia.",
+      "_verified": true
+    },
+    {
+      "name": "Venezia",
+      "english": "Venetia",
+      "context": "A region retained by Austria under its direct dominion.",
+      "citation": "la Venezia, il Tirolo, l'Istria e la Dalmazia.",
+      "_verified": true
+    },
+    {
+      "name": "Tirolo",
+      "english": "Tyrol",
+      "context": "A region retained by Austria under its direct dominion.",
+      "citation": "il Tirolo, l'Istria e la Dalmazia.",
+      "_verified": true
+    },
+    {
+      "name": "Istria",
+      "english": null,
+      "context": "A region retained by Austria under its direct dominion.",
+      "citation": "l'Istria e la Dalmazia.",
+      "_verified": true
+    },
+    {
+      "name": "Dalmazia",
+      "english": "Dalmatia",
+      "context": "A region retained by Austria under its direct dominion.",
+      "citation": "e la Dalmazia.",
+      "_verified": true
+    },
+    {
+      "name": "Spielberg",
+      "english": null,
+      "context": "A fortress in Moravia where many generous Italians, legally convicted by despotic laws, were imprisoned and suffered.",
+      "citation": "si popolava la fortezza dello Spielberg nella Moravia, che pei gemiti repressi dalle sue mura",
+      "_verified": true
+    },
+    {
+      "name": "Moravia",
+      "english": null,
+      "context": "The region where the Spielberg fortress is located.",
+      "citation": "si popolava la fortezza dello Spielberg nella Moravia, che pei gemiti repressi dalle sue mura",
+      "_verified": true
+    },
+    {
+      "name": "castello degli Sforza",
+      "english": "Sforza Castle",
+      "context": "A castle where Austrian forces committed atrocities during their retreat from Milan.",
+      "citation": "insanguinò il castello degli Sforza troncando, per divertimento, le estremità e il seno alle gentili e maestose donne lombarde.",
+      "_verified": true
+    },
+    {
+      "name": "Monte Tabor",
+      "english": null,
+      "context": "A location near Porta Romana where Milanese cadets were concentrated after the Austrian retreat.",
+      "citation": "Non passarono molte ore e fummo concentrati al Monte Tabor, presso Porta Romana.",
+      "_verified": true
+    },
+    {
+      "name": "Porta Romana",
+      "english": "Roman Gate",
+      "context": "A city gate near Monte Tabor, where cadets were concentrated to join the retreating imperial army.",
+      "citation": "fummo concentrati al Monte Tabor, presso Porta Romana.",
+      "_verified": true
+    },
+    {
+      "name": "Naviglio",
+      "english": "Naviglio (canal system)",
+      "context": "The area within Milan where Austrian garrisons had surrendered by the fourth day of the uprising.",
+      "citation": "noi sapevamo che i presidi entro la cerchia del Naviglio si erano arresi",
+      "_verified": true
+    }
+  ],
+  "relationships": [
+    {
+      "person_a": "Unnamed First-Person Narrator",
+      "person_b": "Count Carlo di Rudio",
+      "relationship": "Conversationalists, interviewer and subject",
+      "citation": "Mezz'ora di discussione nello studio, sotto l'effigie del Mazzini e di Fortunato Calvi che, pareva, ci ascoltassero.",
+      "_verified": true
+    },
+    {
+      "person_a": "Count Carlo di Rudio",
+      "person_b": "Conte Ercole",
+      "relationship": "Son and Father",
+      "citation": "Nacqui a Belluno il 26 Agosto del 1832 dal Conte Ercole e dalla Contessa Elisabetta de Domini.",
+      "_verified": true
+    },
+    {
+      "person_a": "Count Carlo di Rudio",
+      "person_b": "Contessa Elisabetta de Domini",
+      "relationship": "Son and Mother",
+      "citation": "Nacqui a Belluno il 26 Agosto del 1832 dal Conte Ercole e dalla Contessa Elisabetta de Domini.",
+      "_verified": true
+    },
+    {
+      "person_a": "Conte Ercole",
+      "person_b": "Contessa Elisabetta de Domini",
+      "relationship": "Spouses, parents of Count Carlo di Rudio",
+      "citation": "Nacqui a Belluno il 26 Agosto del 1832 dal Conte Ercole e dalla Contessa Elisabetta de Domini.",
+      "_verified": true
+    },
+    {
+      "person_a": "Count Carlo di Rudio",
+      "person_b": "Fortunato de Domini",
+      "relationship": "Grandson and maternal grandfather",
+      "citation": "Il mio nonno materno, Fortunato de Domini, Colonnello dell'infanteria austriaca",
+      "_verified": true
+    },
+    {
+      "person_a": "Count Carlo di Rudio",
+      "person_b": "Achille",
+      "relationship": "Brothers",
+      "citation": "E vi sarei rimasto, con mio fratello Achille, sino a studi compiuti",
+      "_verified": true
+    },
+    {
+      "person_a": "Maria Luisa (daughter of Emperor of Austria)",
+      "person_b": "Napoleone I",
+      "relationship": "Wife and Husband",
+      "citation": "Maria Luisa, figlia dell'Imperatore d'Austria e moglie di Napoleone I, dovette accontentarsi di signoreggiare a Parma",
+      "_verified": true
+    },
+    {
+      "person_a": "Maria Luisa (daughter of Emperor of Austria)",
+      "person_b": "Imperatore d'Austria",
+      "relationship": "Daughter and Father",
+      "citation": "Maria Luisa, figlia dell'Imperatore d'Austria e moglie di Napoleone I, dovette accontentarsi di signoreggiare a Parma",
+      "_verified": true
+    },
+    {
+      "person_a": "moglie del Murat",
+      "person_b": "Napoleone",
+      "relationship": "Sister and Brother",
+      "citation": "La moglie del Murat, sorella di Napoleone, lo aveva deliziato di baci che valevano un regno...",
+      "_verified": true
+    }
+  ],
+  "terminology": [
+    {
+      "italian_term": "Pontefice liberatore",
+      "meaning": "A title given to Pope Pius IX by citizens of Belluno in 1848, indicating their initial hopes for his role in Italian liberation.",
+      "citation": "i cittadini di Belluno organizzarono una dimostrazione in omaggio al \"Pontefice liberatore\".",
+      "_verified": true
+    },
+    {
+      "italian_term": "Santa Alleanza",
+      "meaning": "A political and military alliance of European monarchies, which Italians were urged to support to break the 'bloody yoke' of Napoleon, but which later suppressed liberal movements.",
+      "citation": "aiutando la Santa Alleanza a spezzare il giogo sanguinoso dell'avventuriere francese; stringendosi d'attorno ad una bandiera che significava la felicità, la rigenerazione del loro Paese.",
+      "_verified": true
+    },
+    {
+      "italian_term": "espressione geografica",
+      "meaning": "Metternich's dismissive definition of Italy, implying it lacked national unity or political identity.",
+      "citation": "L'Italia è un'espressione geografica.",
+      "_verified": true
+    },
+    {
+      "italian_term": "Carboneria",
+      "meaning": "A secret society whose affiliates were excommunicated by Pope Pio VII's Bull 'Ecclesiam Jesu Christo' if not denounced.",
+      "citation": "conoscendo un affiliato alla Carboneria, non si degradassero a denunciarlo, a fare la spia.",
+      "_verified": true
+    },
+    {
+      "italian_term": "boia",
+      "meaning": "Executioner; a nickname given by subjects to Francesco IV, Duke of Modena, due to his oppressive rule.",
+      "citation": "il ducato di Modena a Francesco IV, dai suoi sudditi soprannominato il \"boia\".",
+      "_verified": true
+    },
+    {
+      "italian_term": "Moretto",
+      "meaning": "A nickname given to Count Carlo di Rudio due to his dark skin color.",
+      "citation": "Mi chiamavano il \"Moretto\" dal colore della mia pelle.",
+      "_verified": true
+    },
+    {
+      "italian_term": "supplizio del Cristo giornalmente rinnovato",
+      "meaning": "A phrase used to describe the daily torture of innocents under the Bourbons of Naples, analogizing it to the suffering of Christ.",
+      "citation": "Era il supplizio del Cristo giornalmente rinnovato per opera di Re cristianissimi collegati, auspici il Pontefice, in santa alleanza!",
+      "_verified": true
+    }
+  ],
+  "_citation_stats": {
+    "total": 82,
+    "verified": 82,
+    "failed": []
+  }
+}

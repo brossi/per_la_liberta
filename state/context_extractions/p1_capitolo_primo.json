@@ -1,0 +1,336 @@
+{
+  "chapter": "p1_capitolo_primo",
+  "characters": [
+    {
+      "name": "The Reporter",
+      "aliases": [
+        "io",
+        "The Narrator"
+      ],
+      "role": "The individual writing the account, who arrived in Los Angeles and sought out Maggiore di Rudio for an interview.",
+      "citation": "Mi decisi a mettere in giuoco tutte le mie risorse di \"reporter\" raggrinzito nel mestiere.",
+      "_verified": true
+    },
+    {
+      "name": "Conte Carlo di Rudio",
+      "aliases": [
+        "il Maggiore di Rudio",
+        "il Maggiore",
+        "il Capitano di Rudio"
+      ],
+      "role": "An old man living in Los Angeles, representing \"gli ultimi, gloriosi avanzi di un'epoca\", who is the subject of the narrator's visit. He is described as a methodical man, a reader of the narrator's writings, and a former Captain/Major, husband of Signora Elisa and father to several children.",
+      "citation": "Io pensavo a quegli alberi, mentre il Conte Carlo di Rudio e la compagna di tante sue vicissitudini, ritti sul pianerottolo, non curanti della mia presenza, si imprimevano sulle guancie il bacio del mattino.",
+      "_verified": true
+    },
+    {
+      "name": "Signora Elisa",
+      "aliases": [],
+      "role": "A robust woman, wife of Maggiore di Rudio, mother of Italia Adair, Roma Scott, America Vickery, and a son. She is hospitable, raises chickens, and has strong memories of her husband's military career.",
+      "citation": "Mi trovai a faccia a faccia una signora robusta, con leggera tendenza alla pinguedine.",
+      "_verified": true
+    },
+    {
+      "name": "Italia Adair",
+      "aliases": [],
+      "role": "Daughter of Maggiore di Rudio and Signora Elisa, sister to Roma Scott and America Vickery, and mother of Samuele. She is described as having extreme pallor but also an energy that contrasts with her frail appearance. She previously suffered from appendicitis and expresses a strong affinity for military life.",
+      "citation": "\"Mia figlia... Italia Adair\", disse la moglie del Maggiore e quella si limitò ad un cenno del capo.",
+      "_verified": true
+    },
+    {
+      "name": "Samuele",
+      "aliases": [],
+      "role": "Son of Italia Adair, named in homage to Uncle Sam, whom his mother wishes to send to West Point for a military career.",
+      "citation": "Figli? Uno solo! In omaggio ad Uncle Sam, l'eterno e glorioso Uncle Sam, gli aveva imposto il nome di Samuele.",
+      "_verified": true
+    },
+    {
+      "name": "Roma Scott",
+      "aliases": [],
+      "role": "Daughter of Maggiore di Rudio and Signora Elisa, and sister to Italia Adair and America Vickery.",
+      "citation": "Niente affatto! ne abbiamo altre due: Roma Scott e America Vickery.",
+      "_verified": true
+    },
+    {
+      "name": "America Vickery",
+      "aliases": [],
+      "role": "Daughter of Maggiore di Rudio and Signora Elisa, and sister to Italia Adair and Roma Scott.",
+      "citation": "Niente affatto! ne abbiamo altre due: Roma Scott e America Vickery.",
+      "_verified": true
+    },
+    {
+      "name": "Son of Maggiore di Rudio and Elisa",
+      "aliases": [
+        "il primogenito"
+      ],
+      "role": "The firstborn son of Maggiore di Rudio and Signora Elisa, born in England during tragic times. He is currently in Arizona, described as having a \"mania for the unknown\" and spending his life exploring on horseback.",
+      "citation": "Ho anche un figlio, il primogenito, nato in Inghilterra e addestrato ai primi passi — non lo ignora, suppongo — in momenti tragici.",
+      "_verified": true
+    },
+    {
+      "name": "Giuseppe Mazzini",
+      "aliases": [],
+      "role": "A historical figure whose \"pensosa fisionomia\" (thoughtful face) is depicted on a wall in the di Rudio's home, described as \"un uomo noto al Popolo ed ai suoi tiranni in ogni parte del mondo incivilito\".",
+      "citation": "Da una parete mi arrise la pensosa fisionomia di un uomo noto al Popolo ed ai suoi tiranni in ogni parte del mondo incivilito, Giuseppe Mazzini.",
+      "_verified": true
+    },
+    {
+      "name": "Fortunato Calvi",
+      "aliases": [],
+      "role": "A historical figure, \"un martire meno universalmente noto, ma d'animo non meno grande\", whose effigy hangs on a wall in the di Rudio's home.",
+      "citation": "Dalla parete attigua, pendeva un quadro recante l'effigie di un martire meno universalmente noto, ma d'animo non meno grande, Fortunato Calvi.",
+      "_verified": true
+    },
+    {
+      "name": "Uncle Sam",
+      "aliases": [],
+      "role": "A personification of the United States, described as \"eterno e glorioso\". Associated with the military and the training of soldiers. Samuele is named in his honor.",
+      "citation": "Figli? Uno solo! In omaggio ad Uncle Sam, l'eterno e glorioso Uncle Sam, gli aveva imposto il nome di Samuele.",
+      "_verified": true
+    }
+  ],
+  "events": [
+    {
+      "name": "Narrator's arrival in Los Angeles",
+      "date": null,
+      "description": "The narrator arrived in Los Angeles in the early hours of a splendid summer morning, traveling by train.",
+      "citation": "LOS ANGELES, una splendida mattina d'estate. Vi ero giunto da poche ore, su un treno che mi aveva rammentato quelli che, da ogni parte della Francia, convergono al santuario di Lourdes.",
+      "_verified": true
+    },
+    {
+      "name": "Narrator meets Signora Elisa",
+      "date": null,
+      "description": "After a long walk, the narrator stopped at a wooden house where he was met by Signora Elisa, who, upon hearing his reason for visiting, invited him inside for coffee.",
+      "citation": "Mi trovai a faccia a faccia una signora robusta, con leggera tendenza alla pinguedine. Mi domandò severamente che cosa desiderassi.",
+      "_verified": "partial"
+    },
+    {
+      "name": "Captain di Rudio cuts dress sleeves",
+      "date": null,
+      "description": "On one occasion, Captain di Rudio cut off the sleeves of a magnificent dress that were protruding from a trunk with his saber, to avoid delaying a departure by a few seconds. Signora Elisa conserved these sleeves for many years.",
+      "citation": "In certa occasione, per non ritardare di pochi secondi la partenza, tagliò via nette, colla sciabola, le maniche di una magnifica veste rimaste sporgenti da un baule.",
+      "_verified": true
+    },
+    {
+      "name": "Indian skirmishes",
+      "date": null,
+      "description": "The regiment to which Italia Adair's father belonged was often called to repel Indians back to their 'reservation' when they carried out raids, resulting in absences of three, four, or eight months.",
+      "citation": "Il reggimento era spesso chiamato a respingere nella loro \"reservation\" gli Indiani, che commettevano qualche scorreria.",
+      "_verified": true
+    },
+    {
+      "name": "Regimental travels and exercises",
+      "date": null,
+      "description": "Uncle Sam keeps his army's weapons and spirits sharp through exercises and frequent relocation orders, with the last journey for Italia Adair covering over seven hundred miles on horseback.",
+      "citation": "Adesso Uncle Sam mantiene forbite le armi e gli animi colle esercitazioni e coi frequenti ordini di trasloco.",
+      "_verified": true
+    },
+    {
+      "name": "Birth of Samuele",
+      "date": null,
+      "description": "Italia Adair's only son, Samuele, was born and named in homage to Uncle Sam.",
+      "citation": "Figli? Uno solo! In omaggio ad Uncle Sam, l'eterno e glorioso Uncle Sam, gli aveva imposto il nome di Samuele.",
+      "_verified": true
+    },
+    {
+      "name": "Birth of Maggiore di Rudio's primogenito",
+      "date": null,
+      "description": "Maggiore di Rudio's firstborn son was born in England and took his first steps during tragic moments.",
+      "citation": "Ho anche un figlio, il primogenito, nato in Inghilterra e addestrato ai primi passi — non lo ignora, suppongo — in momenti tragici.",
+      "_verified": true
+    }
+  ],
+  "locations": [
+    {
+      "name": "Los Angeles",
+      "english": "Los Angeles",
+      "context": "The metropolis of Southern California, situated by the ocean, between the desert and orange groves, and a major center of attraction, especially for those suffering from consumption. It is where Maggiore di Rudio resides.",
+      "citation": "LOS ANGELES, una splendida mattina d'estate. Vi ero giunto da poche ore, su un treno che mi aveva rammentato quelli che, da ogni parte della Francia, convergono al santuario di Lourdes.",
+      "_verified": true
+    },
+    {
+      "name": "California",
+      "english": "California",
+      "context": "The state where Los Angeles is located, described as having a unique flora, and home to ancient \"sequoie\" trees.",
+      "citation": "Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose",
+      "_verified": true
+    },
+    {
+      "name": "Lourdes",
+      "english": "Lourdes",
+      "context": "A sanctuary in France, whose converging trains are compared to the influx of people to Los Angeles.",
+      "citation": "su un treno che mi aveva rammentato quelli che, da ogni parte della Francia, convergono al santuario di Lourdes.",
+      "_verified": true
+    },
+    {
+      "name": "Francia",
+      "english": "France",
+      "context": "The country from which trains converge to the sanctuary of Lourdes.",
+      "citation": "da ogni parte della Francia, convergono al santuario di Lourdes.",
+      "_verified": true
+    },
+    {
+      "name": "Rocciose",
+      "english": "Rocky Mountains",
+      "context": "A mountain range beyond which people suffer from extreme summer heat and winter cold, leading them to seek relief in Los Angeles.",
+      "citation": "al di là delle Rocciose: dove, l'estate, il sole prostra, come erbe appassite, uomini e mandrie",
+      "_verified": true
+    },
+    {
+      "name": "Arizona",
+      "english": "Arizona",
+      "context": "The state where Maggiore di Rudio's firstborn son lives, exploring on horseback.",
+      "citation": "Ma è lontano, nell'Arizona. Lo ha preso un po' la smania dell'ignoto e passa la sua vita a cavallo, nella solitudine, esplorando.",
+      "_verified": true
+    },
+    {
+      "name": "Inghilterra",
+      "english": "England",
+      "context": "The country where Maggiore di Rudio's firstborn son was born.",
+      "citation": "Ho anche un figlio, il primogenito, nato in Inghilterra e addestrato ai primi passi",
+      "_verified": true
+    },
+    {
+      "name": "West Point",
+      "english": "West Point",
+      "context": "A military academy where Italia Adair hopes to get her son, Samuele, admitted for one of the best educations in the world.",
+      "citation": "A West Point, ove sperava di farlo ammettere, avrebbe avuto il vantaggio d'una fra le migliori educazioni del mondo.",
+      "_verified": true
+    },
+    {
+      "name": "reservation",
+      "english": "reservation",
+      "context": "Areas where Native Americans ('gli Indiani') were confined or repelled to by the military regiment.",
+      "citation": "Il reggimento era spesso chiamato a respingere nella loro \"reservation\" gli Indiani, che commettevano qualche scorreria.",
+      "_verified": true
+    },
+    {
+      "name": "Sierra",
+      "english": "Sierra",
+      "context": "A mountain range, from which the wind blows, making the evergreen tops of the sequoias tremble.",
+      "citation": "Ma le alte cime, adorne di un ciuffo sempreverde, fremono al vento della Sierra e, forse, mormorano antiche storie al cielo.",
+      "_verified": true
+    }
+  ],
+  "relationships": [
+    {
+      "person_a": "The Reporter",
+      "person_b": "Conte Carlo di Rudio",
+      "relationship": "Interviewer-subject relationship; the reporter is visiting the Count for an interview.",
+      "citation": "Io pensavo a quegli alberi, mentre il Conte Carlo di Rudio e la compagna di tante sue vicissitudini, ritti sul pianerottolo, non curanti della mia presenza, si imprimevano sulle guancie il bacio del mattino.",
+      "_verified": true
+    },
+    {
+      "person_a": "Conte Carlo di Rudio",
+      "person_b": "Signora Elisa",
+      "relationship": "Husband-Wife and life companions, sharing many vicissitudes.",
+      "citation": "Io pensavo a quegli alberi, mentre il Conte Carlo di Rudio e la compagna di tante sue vicissitudini, ritti sul pianerottolo, non curanti della mia presenza, si imprimevano sulle guancie il bacio del mattino.",
+      "_verified": true
+    },
+    {
+      "person_a": "Conte Carlo di Rudio",
+      "person_b": "Italia Adair",
+      "relationship": "Father-Daughter.",
+      "citation": "\"Mia figlia... Italia Adair\", disse la moglie del Maggiore e quella si limitò ad un cenno del capo.",
+      "_verified": true
+    },
+    {
+      "person_a": "Conte Carlo di Rudio",
+      "person_b": "Roma Scott",
+      "relationship": "Father-Daughter.",
+      "citation": "Niente affatto! ne abbiamo altre due: Roma Scott e America Vickery.",
+      "_verified": true
+    },
+    {
+      "person_a": "Conte Carlo di Rudio",
+      "person_b": "America Vickery",
+      "relationship": "Father-Daughter.",
+      "citation": "Niente affatto! ne abbiamo altre due: Roma Scott e America Vickery.",
+      "_verified": true
+    },
+    {
+      "person_a": "Conte Carlo di Rudio",
+      "person_b": "Son of Maggiore di Rudio and Elisa",
+      "relationship": "Father-Son.",
+      "citation": "Ho anche un figlio, il primogenito, nato in Inghilterra e addestrato ai primi passi — non lo ignora, suppongo — in momenti tragici.",
+      "_verified": true
+    },
+    {
+      "person_a": "Signora Elisa",
+      "person_b": "Italia Adair",
+      "relationship": "Mother-Daughter.",
+      "citation": "\"Mia figlia... Italia Adair\", disse la moglie del Maggiore e quella si limitò ad un cenno del capo.",
+      "_verified": true
+    },
+    {
+      "person_a": "Signora Elisa",
+      "person_b": "Roma Scott",
+      "relationship": "Mother-Daughter.",
+      "citation": "Niente affatto! ne abbiamo altre due: Roma Scott e America Vickery.",
+      "_verified": true
+    },
+    {
+      "person_a": "Signora Elisa",
+      "person_b": "America Vickery",
+      "relationship": "Mother-Daughter.",
+      "citation": "Niente affatto! ne abbiamo altre due: Roma Scott e America Vickery.",
+      "_verified": true
+    },
+    {
+      "person_a": "Signora Elisa",
+      "person_b": "Son of Maggiore di Rudio and Elisa",
+      "relationship": "Mother-Son.",
+      "citation": "Ho anche un figlio, il primogenito, nato in Inghilterra e addestrato ai primi passi — non lo ignora, suppongo — in momenti tragici.",
+      "_verified": true
+    },
+    {
+      "person_a": "Italia Adair",
+      "person_b": "Samuele",
+      "relationship": "Mother-Son.",
+      "citation": "Figli? Uno solo! In omaggio ad Uncle Sam, l'eterno e glorioso Uncle Sam, gli aveva imposto il nome di Samuele.",
+      "_verified": true
+    }
+  ],
+  "terminology": [
+    {
+      "italian_term": "tisi",
+      "meaning": "A disease, consumption or tuberculosis, affecting the chest, for which Los Angeles's climate is sought as a remedy.",
+      "citation": "Gli infelici, a cui la tisi rode il cavo petto, trovano nella \"Città degli Angeli\" il cielo profondamente azzurro e l'aria balsamica che danno l'illusione e la speranza.",
+      "_verified": true
+    },
+    {
+      "italian_term": "Città degli Angeli",
+      "meaning": "Nickname for Los Angeles, signifying a place of hope and healing.",
+      "citation": "Gli infelici, a cui la tisi rode il cavo petto, trovano nella \"Città degli Angeli\" il cielo profondamente azzurro e l'aria balsamica",
+      "_verified": true
+    },
+    {
+      "italian_term": "congiure",
+      "meaning": "Conspiracies; referenced in the context of the compressed yearning for such activities, connected to a historical era.",
+      "citation": "sentivo l'anelito compresso delle congiure, la febbre delle battaglie... e, in quel pittoresco cantuccio dell'estremo Occidente, ritrovai improvvisamente le emozioni della mia giovinezza, indarno da tanti anni invocate...",
+      "_verified": true
+    },
+    {
+      "italian_term": "Settimo Cavalleria",
+      "meaning": "The Seventh Cavalry, a military regiment to which Italia Adair's father (Maggiore di Rudio) belonged, associated with confronting \"barbarism\" and protecting pioneers.",
+      "citation": "Papà apparteneva al Settimo Cavalleria. \"Quando penso — \"Quando la polvere, scintillante d'armi, l'annunciava da lontano",
+      "_verified": true
+    },
+    {
+      "italian_term": "reservation",
+      "meaning": "A designated territory, specifically for Native Americans (\"gli Indiani\"), into which they were pushed back by the military.",
+      "citation": "Il reggimento era spesso chiamato a respingere nella loro \"reservation\" gli Indiani, che commettevano qualche scorreria.",
+      "_verified": true
+    },
+    {
+      "italian_term": "sequoie",
+      "meaning": "Isolated groups of ancient, tall trees in California, also referred to by the people as \"grandi alberi\" (great trees), described as immense columns that have witnessed centuries of human history.",
+      "citation": "Esistono in California gruppi isolati di antica vegetazione che i botanici chiamano \"sequoie\", ma il popolo semplicemente \"grandi alberi\".",
+      "_verified": true
+    }
+  ],
+  "_citation_stats": {
+    "total": 45,
+    "verified": 45,
+    "failed": []
+  }
+}

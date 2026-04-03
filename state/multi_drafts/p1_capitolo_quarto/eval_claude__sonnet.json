@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully captures and maintains a formal, slightly elevated early 20th-century literary register through its vocabulary (e.g., 'accrued,' 'bethink you,' 'peremptory,' 'volte-face') and sentence structure."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The first-person narrative flows naturally and convincingly, maintaining the personal yet reflective tone of Crespi's recounting of events."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The Italian original maintains a consistently formal-literary register, and the translation accurately reflects this by not introducing undue informality."
+        }
+      ],
+      "strengths": "The translation excels at maintaining the dignified and reflective tone of the original, using a sophisticated vocabulary and sentence structure that aligns with the early 20th-century literary style. The narrative voice is consistently maintained, making the text read as an authentic memoir.",
+      "weaknesses": "No notable weaknesses in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'non-commissioned officers,' 'royal war,' 'war of the People,' 'Triumvirs' are accurately rendered, and Italian names for specific units (Cacciatori delle Alpi, Unione) are retained, fitting the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Place names, historical figures, and military unit names are preserved. Specific cultural references like 'Signoria' are retained, and 'trabiccoli' is helpfully glossed. The use of 'paria' italicized for emphasis is also effective."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong awareness of the cultural and historical context, choosing appropriate equivalents or retaining original terms with necessary clarity. The decision to retain and gloss certain Italian terms enhances the authenticity of the text.",
+      "weaknesses": "No notable weaknesses in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "The translation is largely faithful, but there's a minor addition in 'Scappa... scappa da quella finestra!' which becomes 'Run... run, there's someone at that window!', adding 'someone' not explicit in the Italian. Otherwise, meaning is well-preserved."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names (e.g., Cadore, Ticino, Portogruaro, Mestre, Piazza San Marco), and historical references (e.g., Cavour, Manin, Orsini, Pope Pio) are accurately preserved."
+        }
+      ],
+      "strengths": "The translation is remarkably accurate, conveying the precise meaning of the source text with very few deviations. Idiomatic expressions are well-handled, and military terminology is translated with precision.",
+      "weaknesses": "A very minor interpretative addition in one instance, 'there's someone at that window', slightly deviates from the literal Italian phrase 'from that window', though it doesn't significantly alter the narrative intent of distraction."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant, natural, and flows beautifully. It reads as a compelling literary work rather than a direct, mechanical rendering of the Italian."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language is rendered with great skill (e.g., 'tempestuous sea of humanity' for 'mare tempestoso', 'plied with questions' for 'tempestati di domande', 'squirrel-like bounds' for 'quattro salti da scoiattolo', 'blazed' for 'fiammeggiava', 'sullen idleness' for 'neghittosamente')."
+        }
+      ],
+      "strengths": "This translation is of exceptionally high literary quality. The vocabulary is rich, the phrasing is evocative, and the imagery is vividly transferred, ensuring the emotional and narrative impact of the original is fully realized in English.",
+      "weaknesses": "No notable weaknesses in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically flawless and entirely free of awkward or unnatural constructions, demonstrating expert command of the language."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and coherent, requiring no re-reading to understand the narrative or complex ideas."
+        }
+      ],
+      "strengths": "The translation is perfectly grammatical and highly fluent. The prose is clear, concise, and flows effortlessly, making for a very enjoyable reading experience.",
+      "weaknesses": "No notable weaknesses in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Recurring terms such as 'Cacciatori delle Alpi,' 'Unione,' 'Minister of War,' and 'non-commissioned officers' (for different forms of 'graduato'/'sotto Ufficiale') are translated consistently. Proper names are also consistently rendered."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a consistent and coherent literary style throughout the entire passage, ensuring a seamless reading experience."
+        }
+      ],
+      "strengths": "The translation maintains excellent consistency in terminology, character names, and overall stylistic choices, providing a unified and professional text.",
+      "weaknesses": "No notable weaknesses in this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 8114,
+    "output": 1649
+  }
+}

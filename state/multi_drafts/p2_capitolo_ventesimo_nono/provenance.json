@@ -1,0 +1,133 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "the machinations of Bernard",
+      "replacement": "the arts of Bernard",
+      "reason": "Italian 'le arti del Bernard' means 'the arts/wiles'; 'arts' preserves the period register and literal sense better than the interpretive 'machinations'"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "beneath the ground",
+      "replacement": "beneath the earth",
+      "reason": "Italian 'sotterra' literally means 'under the earth'; 'earth' is the closer cognate and carries a graver, more literary tone"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "boldly executed flight",
+      "replacement": "boldly accomplished escape",
+      "reason": "Italian 'fuga … arditamente compiuta': 'compiuta' = accomplished (not executed), and 'fuga' is rendered as 'escape' consistently elsewhere in the translation"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "to persist in the matter of the thousand and one hundred pounds",
+      "replacement": "to insist upon the question of the one thousand one hundred pounds",
+      "reason": "Italian 'l'insistere sulla questione delle mille e cento sterline' — Gemini's 'insist upon the question' is a more literal match for both verb and noun"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "I would summon the English public",
+      "replacement": "I would call upon the English public",
+      "reason": "Italian 'avrei chiamato il pubblico inglese': 'call upon' is closer to 'chiamare' and less juridically formal than 'summon'"
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "a concise account",
+      "replacement": "a succinct account",
+      "reason": "Italian 'scrisse succintamente': 'succinct' preserves the cognate"
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "not to earn money",
+      "replacement": "not to make money",
+      "reason": "Italian 'fare quattrini' = to make money; the idiom is a direct match"
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro",
+      "original": "not to lend him assistance",
+      "replacement": "not to lend him a strong hand",
+      "reason": "Italian 'prestargli man forte' is a vivid idiom meaning literally 'lend him a strong hand'; Gemini's rendering preserves the image where Sonnet flattened it to abstract 'assistance'"
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro",
+      "original": "the penitentiary at Cayrou",
+      "replacement": "the penitentiary of Corù",
+      "reason": "The source text reads 'penitenziario del Corù'; Sonnet silently corrected the place-name to 'Cayrou', but the translation should preserve the author's spelling as written"
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_gemini__pro",
+      "original": "\"What is bred in the bone will out.\"",
+      "replacement": "\"He who is born of a hen must needs scratch.\"",
+      "reason": "Italian 'Chi da gallina nasce, convien che raspi' — Sonnet substituted a different English proverb, losing the hen-and-scratching image; Gemini's literal rendering preserves the author's chosen figure"
+    },
+    {
+      "paragraph": 21,
+      "from_draft": "draft_gemini__pro",
+      "original": "branding with wrathful phrases",
+      "replacement": "stigmatising with wrathful phrases",
+      "reason": "Italian 'stigmatizzando' is a direct cognate of 'stigmatising'; 'branding' is an adequate synonym but loses the Latinate register of the original"
+    },
+    {
+      "paragraph": 23,
+      "from_draft": "draft_gemini__pro",
+      "original": "seemed rather to have been dissipated into vapour",
+      "replacement": "seemed rather to have evaporated",
+      "reason": "Italian 'parevano svaporate' = seemed to have evaporated; Sonnet's periphrasis ('dissipated into vapour') over-translates the single verb"
+    },
+    {
+      "paragraph": 24,
+      "from_draft": "draft_gemini__pro",
+      "original": "To go with the current",
+      "replacement": "To follow the current",
+      "reason": "Italian 'Seguire la corrente' — 'follow' is the direct translation of 'seguire'"
+    },
+    {
+      "paragraph": 24,
+      "from_draft": "draft_gemini__pro",
+      "original": "It seems inevitable!",
+      "replacement": "It seems fated!",
+      "reason": "Italian 'Sembra fatale!' — 'fated' is the cognate of 'fatale' and carries the note of cosmic doom the author intends; 'inevitable' is flatter"
+    },
+    {
+      "paragraph": 24,
+      "from_draft": "draft_gemini__pro",
+      "original": "not without penalty did the poor Baron enclose within his heart",
+      "replacement": "not with impunity did the poor Baron enclose within his heart",
+      "reason": "Italian 'non impunemente' = not with impunity; 'impunity' is the direct cognate and the standard English idiom"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "spalancare",
+      "edgren_definition": "open wide (throw open)",
+      "english_choice": "thrown wide",
+      "paragraph": 14,
+      "note": "In paragraph 14, 'porte spalancate' is rendered as 'the doors thrown wide' — combining 'thrown' (natural English) with Edgren's primary gloss 'open wide'. Sonnet had 'thrown open' in this paragraph; the Edgren entry confirmed that 'wide' (not just 'open') is the core sense of 'spalancare', matching the earlier usage in paragraph 2."
+    },
+    {
+      "italian_word": "integrità",
+      "edgren_definition": "integrity (entireness); honesty (uprightness); perfection (purity)",
+      "english_choice": "integrity",
+      "paragraph": 1,
+      "note": "The Italian plays on 'integrità italiana' (territorial wholeness) versus 'integrità mia personale' (moral uprightness). Edgren confirms both senses sit within the single Italian word. Both drafts preserved the double use of 'integrity' in English, and the Edgren entry validated that this wordplay is not a mistranslation but a genuine feature of the source."
+    },
+    {
+      "italian_word": "riacquistare",
+      "edgren_definition": "acquire, etc., again, recover",
+      "english_choice": "regained",
+      "paragraph": 2,
+      "note": "Edgren's 'acquire again, recover' supports the choice of 'regained' (from Gemini) over Sonnet's 'recovered'. Both are valid, but 'regained' foregrounds the re-acquisition sense that Edgren highlights, and avoids the medical overtone of 'recovered my liberty'."
+    }
+  ]
+}

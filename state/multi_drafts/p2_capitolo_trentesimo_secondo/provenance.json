@@ -1,0 +1,28 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro",
+      "original": "the pontificating sages of Italy, who looked on with arms folded at the fruitful labours",
+      "replacement": "the wiseacres of Italy, who looked on, with hands at their sides, at the fruitful labours",
+      "reason": "\"Wiseacres\" is a closer match for \"barbassori\" (greybeards who pontificate idly) than \"pontificating sages,\" which sounds too dignified. The Italian \"colle mani alla cintola\" (hands at the belt) is an idiom for standing idle; \"with arms folded\" shifts the image toward disapproval, while \"with hands at their sides\" better captures passive idleness. Gemini supplied \"wiseacres\"; the idle-hands phrasing was adjusted independently from Gemini's \"hands on their hips\" to avoid the connotation of impatience."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "serietà",
+      "edgren_definition": "seriousness (gravity)",
+      "english_choice": "gravity",
+      "paragraph": 2,
+      "note": "Edgren gives \"gravity\" as a parenthetical synonym for \"seriousness.\" The less common word was preferred because it better suits the elevated, slightly pompous register the author attributes to those who claimed the \"monopoly of genius and gravity.\" A modern default would be \"seriousness\" (as in the Gemini draft)."
+    },
+    {
+      "italian_word": "esoso",
+      "edgren_definition": "hateful, detestable",
+      "english_choice": "hateful",
+      "paragraph": 2,
+      "note": "Edgren confirms \"hateful\" as the primary sense. A modern dictionary might suggest \"exorbitant\" or \"odious\"; the Edgren entry steered the choice toward the plainer, stronger \"hateful,\" which both drafts independently adopted."
+    }
+  ]
+}

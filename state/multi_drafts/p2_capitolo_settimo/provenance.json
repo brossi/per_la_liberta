@@ -1,0 +1,70 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "during our last meeting",
+      "replacement": "during our last colloquy",
+      "reason": "The Italian 'colloquio' means a formal conversation or conference, not a casual meeting. 'Colloquy' preserves the register and formality of the original, and is confirmed by the Edgren dictionary entry."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "and, assisted, said",
+      "replacement": "and, helping things along, said",
+      "reason": "The Italian 'aiutata' here means Orsini was prompting the conversation forward. 'Helping things along' conveys this idiomatic sense more naturally than the bare participle 'assisted', which reads as awkwardly elliptical."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "Did she hand over the matter to you!",
+      "replacement": "Did she hand over the affair to you!",
+      "reason": "The Italian 'l'affare' is more precisely 'the affair' — a term that in this conspiratorial context carries the right connotation of a significant undertaking, whereas 'the matter' is too neutral."
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_gemini__pro",
+      "original": "as though to underline the ill-chosen turn of affairs",
+      "replacement": "as though to accentuate the unfortunate turn of affairs",
+      "reason": "The Italian 'accentuare la cattiva piega' uses 'accentuare' directly. 'Accentuate' is a closer calque and more precise than 'underline'. 'Unfortunate' for 'cattiva' is more natural than 'ill-chosen', which implies deliberate bad judgement rather than bad luck."
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_gemini__pro",
+      "original": "broke in upon the boisterous chatter of Pieri",
+      "replacement": "broke in upon the boisterous loquacity of Pieri",
+      "reason": "The Italian 'loquela' (loquacity, speech-flow) suggests a torrent of talk rather than idle 'chatter'. 'Loquacity' matches the Latinate register of the original and preserves the etymological link."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "colloquio",
+      "edgren_definition": "colloquy (conference)",
+      "english_choice": "colloquy",
+      "paragraph": 1,
+      "note": "Edgren gives 'colloquy (conference)' as the primary English equivalent. A modern default would be 'meeting' or 'conversation', but 'colloquy' preserves the formal, literary register and matches the Edgren entry precisely."
+    },
+    {
+      "italian_word": "valigia",
+      "edgren_definition": "VALISE (portmanteau; carpet-bag)",
+      "english_choice": "carpet-bag",
+      "paragraph": 1,
+      "note": "Edgren lists 'carpet-bag' among the equivalents for valigia. The choice of 'carpet-bag' over Gemini's 'valise' maintains consistency with the previous chapter, where the same bag (with its embroidered tiger) was introduced as a carpet-bag."
+    },
+    {
+      "italian_word": "esaltamento",
+      "edgren_definition": "exaltation",
+      "english_choice": "exaltation",
+      "paragraph": 2,
+      "note": "Edgren gives 'exaltation' as the direct equivalent. Both drafts used this word; the dictionary confirmed it as the period-appropriate choice rather than a modern alternative like 'elation' or 'excitement'."
+    },
+    {
+      "italian_word": "spavento",
+      "edgren_definition": "terror (fright, fear)",
+      "english_choice": "terror",
+      "paragraph": 2,
+      "note": "Edgren gives 'terror' as the first sense, with 'fright' and 'fear' as alternatives. The final translation uses 'terror', matching Edgren's primary gloss and maintaining the dramatic intensity of the storm passage."
+    }
+  ]
+}

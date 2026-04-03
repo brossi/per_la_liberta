@@ -1,0 +1,49 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "restaurant",
+      "replacement": "trattoria",
+      "reason": "The Italian 'trattoria' is a culturally specific term with no exact English equivalent; preserving it (as Gemini did) keeps the Parisian-Italian local colour intact, consistent with retaining 'rue Le Pelletier' and other foreign terms."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "the Broggi restaurant",
+      "replacement": "the trattoria of the Broggi",
+      "reason": "Same rationale as paragraph 1: 'trattoria' is retained as a loanword for consistency throughout the chapter."
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro",
+      "original": "an unsuspecting yet watchful eye",
+      "replacement": "a suspicious and watchful eye",
+      "reason": "The Italian 'insospettito' means 'made suspicious / mistrustful', not 'unsuspecting'. Claude's rendering inverted the meaning. Gemini's 'suspicious' is accurate."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "iron armour",
+      "replacement": "iron cuirasses",
+      "reason": "Italian 'corazze' specifically denotes cuirasses (body armour for the torso), not armour in general. 'Cuirasses' is more precise and period-appropriate. See also edgren_influences."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "through armour",
+      "replacement": "through cuirasses",
+      "reason": "Consistent with the choice made in paragraph 3 for the same Italian word 'corazze'."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "corazza",
+      "edgren_definition": "CUIRASS, armour; cuirassier",
+      "english_choice": "cuirasses",
+      "paragraph": 3,
+      "note": "Edgren's primary gloss is 'CUIRASS' (capitalised, indicating the core sense), with 'armour' as a secondary synonym. This supported choosing the specific 'cuirasses' over Claude's generic 'armour' or Gemini's 'breastplates'. A modern default might be 'body armour'; Edgren confirmed the period-appropriate technical term."
+    }
+  ]
+}

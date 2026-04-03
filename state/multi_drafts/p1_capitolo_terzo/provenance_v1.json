@@ -1,0 +1,91 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the impotent prayer",
+      "replacement": "the feeble prayer",
+      "reason": "Italian \"imbelle\" means cowardly/feeble rather than impotent. \"Feeble\" is closer to the source semantics and pairs better with the antithesis of \"the strong.\""
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "who will with strength",
+      "replacement": "who strongly will",
+      "reason": "More literal rendering of \"fortemente vogliono\" and reads more naturally in English; the adverb-verb order mirrors the Italian structure."
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "all discipline among them appeared a fragile thing",
+      "replacement": "all discipline among them appeared ephemeral",
+      "reason": "Direct translation of Italian \"effimera\" (ephemeral). The Sonnet draft paraphrased this as \"a fragile thing\" which loses the specific connotation of transience."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "reach the shelter of Verona",
+      "replacement": "reach the strong shelter of Verona",
+      "reason": "Italian \"forte riparo\" includes the adjective \"forte\" (strong). The Sonnet draft omitted it, losing the sense that Verona was a fortified refuge."
+    },
+    {
+      "paragraph": 20,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "behind several abandoned carts",
+      "replacement": "behind several abandoned carriages",
+      "reason": "Italian \"vetture\" means carriages or vehicles, not carts. \"Carriages\" is the more accurate and period-appropriate rendering."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the juice of our vineyards",
+      "replacement": "the juice of our grapes",
+      "reason": "Italian \"succo dei nostri grappoli\" literally means \"the juice of our grapes/clusters.\" The Sonnet draft substituted \"vineyards\" which shifts the image from fruit to land."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "my rising race",
+      "replacement": "my resurgent race",
+      "reason": "Italian \"risorgente\" directly evokes the Risorgimento. \"Resurgent\" preserves this etymological and historical resonance better than the plainer \"rising.\""
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "orto",
+      "edgren_definition": "orto, garden; pot-herbs; kitchen-garden (hortensial)",
+      "english_choice": "kitchen-gardens",
+      "paragraph": 3,
+      "note": "Edgren specifies \"orto\" as kitchen-garden with pot-herbs, confirming the choice of \"kitchen-gardens\" over the more generic modern \"gardens\" used by the Gemini draft."
+    },
+    {
+      "italian_word": "lembo",
+      "edgren_definition": "lembo: extremity, limit",
+      "english_choice": "strip",
+      "paragraph": 3,
+      "note": "Edgren defines \"lembo\" as extremity/limit, supporting \"strip\" (a narrow extent of land) over Gemini's \"patch\" which suggests a bounded area rather than an edge or margin."
+    },
+    {
+      "italian_word": "tenui",
+      "edgren_definition": "tenue: thin, slender; slight, poor, insignificant",
+      "english_choice": "slight",
+      "paragraph": 3,
+      "note": "Edgren lists \"slight\" as a primary sense of \"tenue.\" This captures the delicacy and smallness of a child's fingers better than the more neutral \"slender\" used by Gemini."
+    },
+    {
+      "italian_word": "bastione",
+      "edgren_definition": "bastione: bastion, fortress",
+      "english_choice": "bastions",
+      "paragraph": 2,
+      "note": "Edgren confirms \"bastion\" as the standard rendering, supporting the Sonnet draft over the existing translation's \"ramparts.\""
+    },
+    {
+      "italian_word": "epoca",
+      "edgren_definition": "epoca: epoch (culminating point); period; (pop.) time",
+      "english_choice": "at that time",
+      "paragraph": 3,
+      "note": "Edgren notes the popular sense of epoca as simply \"time,\" supporting \"at that time\" as a natural rendering of \"a quell'epoca\" rather than the more formal \"in that era.\""
+    }
+  ]
+}

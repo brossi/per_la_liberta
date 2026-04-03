@@ -1,0 +1,112 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the fatal aftermath of the Piedmontese cannon-fire!",
+      "replacement": "the fatal aftermath of the Piedmontese cannonades!",
+      "reason": "'Cannonades' translates 'cannonate' more precisely — it denotes repeated cannon-fire as discrete volleys, matching the Italian plural, whereas 'cannon-fire' is a mass noun that loses the percussive sense."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "It received its vivid colours from the sun, its trembling from the sea-breeze",
+      "replacement": "From the Sun it received its vivid colours, from the sea-breeze its trembling",
+      "reason": "Restores the Italian word order ('Ebbe dal Sole i vividi colori, i fremiti dalla brezza del mare'), which front-loads the sources of the banner's animation in a tricolon with the following clause. The rhetorical patterning is part of the prose music."
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "The spirit of Balilla, ever alive in Genoa",
+      "replacement": "Balilla, ever alive in Genoa",
+      "reason": "The Italian ('Balilla, sempre vivo a Genova') uses metonymy without an interpolated gloss. Adding 'the spirit of' is an editorial explanation the author did not write; dropping it preserves the directness of the original figure."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "seizing at a bound one of those opportunities that seem to fall from heaven",
+      "replacement": "seizing on the fly one of those opportunities that seem to fall from heaven",
+      "reason": "'Afferrata al volo' literally means 'seized in flight / on the fly'. 'On the fly' is the standard English idiom that mirrors this; 'at a bound' shifts the image from catching to leaping."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "for the defence of their city",
+      "replacement": "for the defence of their metropolis",
+      "reason": "The Italian is 'metropoli', a deliberate word choice by Crespi to convey Milan's stature as the chief Lombard city. 'City' under-translates it."
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "At the sight of the first church-steeple, Trolli would bring it summarily to an end by acting.",
+      "replacement": "At the sight of the first bell-tower, Trolli put an abrupt end to it by acting.",
+      "reason": "'Campanile' means bell-tower, not church-steeple (a steeple is a 'guglia' or 'pinnacolo'). And 'vi poneva bruscamente fine' is a completed past action, not a habitual 'would'; 'put an abrupt end' is more accurate on both the noun and the tense."
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "inexhaustible ready wit",
+      "replacement": "inexhaustible quickness of wit",
+      "reason": "'Prontezza d'ingegno' — 'prontezza' specifically denotes quickness/readiness of response. 'Quickness of wit' captures both the speed and the intelligence in a phrase that parallels the Italian compound more faithfully than the compressed 'ready wit'."
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "bathed in a seraphic candour",
+      "replacement": "steeped in a seraphic candour",
+      "reason": "'Intinto' means dipped or steeped (as in dye). 'Steeped' conveys being permeated through-and-through, which is closer to the dipping/dyeing metaphor than 'bathed', which suggests a surface wash."
+    },
+    {
+      "paragraph": 19,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "gathering contributions",
+      "replacement": "gathering oblations",
+      "reason": "The Italian is 'oblazioni', a word with liturgical overtones (offerings at Mass). 'Oblations' preserves this register and the ironic echo of church ritual in a secular collection, which 'contributions' flattens."
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "which we handled, counted, and recounted",
+      "replacement": "which we fingered, counted, and recounted",
+      "reason": "'Palpata' means touched/felt with the fingers, implying the sensuous, almost disbelieving handling of money by men who have been penniless. 'Fingered' captures this tactile specificity better than the generic 'handled'."
+    },
+    {
+      "paragraph": 30,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "borne, with affectionate insistence",
+      "replacement": "borne, with affectionate force",
+      "reason": "The Italian 'amorevole violenza' pairs affection with physical force — an oxymoron. 'Force' preserves the paradox; 'insistence' softens 'violenza' into mere persistence."
+    },
+    {
+      "paragraph": 34,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "affiliated myself with the Young Italy",
+      "replacement": "affiliated myself with the Giovane Italia",
+      "reason": "Retains the proper Italian name of the organisation as used in the source text ('Giovane Italia'), consistent with the project convention of preserving Italian proper nouns."
+    },
+    {
+      "paragraph": 37,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the honourable confusion",
+      "replacement": "the honourable hotchpotch",
+      "reason": "'Accozzaglia' means a jumble or motley assemblage, with a pejorative edge. 'Hotchpotch' (a period-appropriate word) conveys the disorderly mixture of factions more vividly and disparagingly than the neutral 'confusion'."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "cannonata",
+      "edgren_definition": "cannon-shot; idle story",
+      "english_choice": "cannonades",
+      "paragraph": 4,
+      "note": "Edgren's base sense 'cannon-shot' confirmed that 'cannonate' denotes discrete shots/volleys, supporting 'cannonades' (the Gemini draft's rendering) over the Claude draft's mass-noun 'cannon-fire'."
+    },
+    {
+      "italian_word": "strascico",
+      "edgren_definition": "drawing or dragging along; train of a gown",
+      "english_choice": "aftermath",
+      "paragraph": 4,
+      "note": "Edgren's 'drawing or dragging along' confirmed the trailing-consequence sense of 'strascico'. 'Aftermath' (what follows after) preserves this trailing image better than Gemini's 'legacy', reinforcing the decision to keep the Claude draft's noun while swapping the Gemini draft's 'cannonades'."
+    }
+  ]
+}

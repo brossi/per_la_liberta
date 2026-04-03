@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully captures the elevated, rhetorical, and passionate literary register typical of early 20th-century Italian polemical writing."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct address ('I say,' 'I ask myself'), rhetorical questions, and argumentative style effectively convey Crespi's polemical narrative voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original text is consistently formal and intense, and the translation maintains this consistent formality without inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels at preserving the original's passionate, polemical, and elevated early 20th-century literary tone. Crespi's strong authorial voice, including his use of rhetorical questions and direct statements, is well-maintained.",
+      "weaknesses": "While generally effective, a few constructions, particularly in their slight stiffness, might be perceived as a touch more labored than the Italian, even considering the original's formality."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms such as 'Casa Savoia,' 'Monarchy,' 'Risorgimento,' 'scapigliati,' and 'quarantottate' are either appropriately translated or preserved (with implicit context), maintaining period relevance."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and specific historical events (e.g., Aspromonte, Mentana) are preserved. The translation of 'scapigliati' as 'disheveled ones' and retaining 'quarantottate!' are excellent examples of preserving specific cultural references."
+        }
+      ],
+      "strengths": "The translation is highly successful in preserving historical and cultural context. Specific Risorgimento-era terms and references are handled with care, ensuring that key allusions are not lost or diluted. Proper nouns and event names are consistently retained.",
+      "weaknesses": "The rendering of 'cappa di piombo' as 'leaden cope' is a technically literal translation but may obscure the deeper allusive meaning (e.g., to Dante's Inferno, symbolizing hypocrisy or oppressive weight) for readers unfamiliar with the specific Italian idiom."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While highly accurate overall, some subtle nuances or idiomatic expressions are occasionally rendered too literally or slightly softened. For instance, 'cappa di piombo' as 'leaden cope' misses the full metaphorical weight, and 'serba compierla' translated as 'he appears to accomplish it' is a slight weakening of 'he succeeds in accomplishing it'."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, geographical locations, and historical events are correctly and consistently preserved as in the source text."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong commitment to literal accuracy, conveying the core meaning of complex Italian sentences and arguments. All specific historical and geographical details are faithfully preserved.",
+      "weaknesses": "A few instances of slightly too literal translation diminish the full impact or precise idiomatic meaning of the original, particularly with certain metaphors or nuanced verbs. This results in a minor loss of rhetorical force in some passages."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "While aiming for an elevated register, some phrasing feels stiff or slightly unnatural in English, which detracts from a completely fluid literary reading experience, even when considering the formal tone."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Most figurative language, such as 'fratricidal lead,' 'sparkles in the truth,' and 'sharpens her claws,' is effectively and vividly translated, retaining the original's imagery."
+        }
+      ],
+      "strengths": "The translation largely succeeds in conveying the dramatic and often vivid imagery of the source text. It attempts to maintain a sophisticated literary style appropriate for the period and subject matter.",
+      "weaknesses": "The occasional stiffness and slightly cumbersome phrasing, resulting from overly literal structural choices, sometimes impedes the natural flow of the English, making it feel less organic than ideal for literary prose."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "While grammatically correct, the translation contains several instances of slightly awkward or less natural phrasing (e.g., 'too much recall,' 'scarce gives it credence,' 'the fiber of him who holds,' 'One wears ill the crown on his head') that could be smoother."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 0.5,
+          "note": "The complex sentence structures, often directly mirroring the Italian syntax, combined with some stiff phrasing, occasionally require the reader to slow down and re-read for full comprehension."
+        }
+      ],
+      "strengths": "The translation maintains a high standard of grammatical correctness throughout, with no significant grammatical errors.",
+      "weaknesses": "Fluency is hindered by frequent adherence to Italian sentence structure and word order, which often results in English prose that, while correct, is somewhat stilted and less idiomatic. This can make the text less immediately accessible and require more effort from the reader."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Yes, key recurring terms like 'Monarchy,' 'Fatherland,' and the names of historical figures are consistently translated or preserved."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The formal, rhetorical, and polemical style is consistently applied across all paragraphs of the translation."
+        }
+      ],
+      "strengths": "The translation exhibits excellent consistency in its use of terminology and the maintenance of its chosen style from beginning to end, which is crucial for a lengthy and argumentative text.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 0.8625000000000002,
+  "_tokens": {
+    "input": 8222,
+    "output": 1711
+  }
+}

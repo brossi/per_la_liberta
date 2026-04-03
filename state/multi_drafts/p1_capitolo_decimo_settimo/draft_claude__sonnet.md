@@ -1,0 +1,80 @@
+CHAPTER THE SEVENTEENTH
+
+AT LOCARNO, whither I had returned to convey to Calvi a missive from Mazzini, I was arrested and released a few hours later, at liberty, on my word of honour to present myself to the Federal Delegate. I was subsequently tried for conspiracy against a friendly Power, expelled from Switzerland, and placed in the position of choosing between America and England.
+
+England was nearer to the field of probable future enterprises and was by me preferred. I settled in London, where I found no few who had been compromised in the movements of February, and who had escaped Austrian vengeance by means of adventurous flights — among others, a Milanese Jean Valjean who had been escorted beyond the city walls in a coffin, with solemn funeral rites.
+
+Bound together by a common ideal and by common sufferings, we lived for a time in community, in the quarter known as Baldwin's Garden, and more precisely in the modest inn kept by the Milanese Tressoldi, a good-natured soul who possessed, among his other virtues, the virtue of turning a blind eye when we were unable to settle our account.
+
+Giuseppe Mazzini arrived in London in April. From him we learnt that Pianciani, who was then dictating his "Storia dei Papi," was tempering the labours of the intellect by continually altering and re-altering the garden of his villa — a likely source of work for several of us. We were introduced to his amanuensis, one Bardini, a Paduan student of law, and he in turn presented us to Pianciani, who, on the spot, entrusted the manual work of those incessant modifications to the young Varisco, granting him full latitude to avail himself of the services of as many of us as he might deem necessary. I was immediately engaged as well, and thus drew my sustenance, for some months, from the spade and from flowers.
+
+That simple and laborious life was troubled by terrible images. Austria was raging in its fury, and every newspaper, every letter brought us the painful certainty that the phalanx of the generous was being inexorably thinned.
+
+I would speak of it to Giuseppe Mazzini during our long walks, and I would fix my gaze upon that olive-skinned, intellectual face, as if to say: "What has been decided? Shall we leave them to be slaughtered like dogs?" The Master would quicken his step. His expression was one of ineffable melancholy; but of the thoughts that surged through his mind — not a syllable!
+
+One day in August he sent for me urgently. Why ever should he? Certainly not to bid me good morning or good evening. What then?
+
+I planted my spade in the middle of a flower-bed: "Stay there! you are not the only noble instrument!" And off I ran.
+
+But when I stood before the Master, I felt my arms sink to my sides, so spare of words was the reception. I was requested to carry a letter to Kossuth and to wait for the reply. Not a syllable more!
+
+Kossuth kept at that time, near Regent's Circus, a kind of Court. At the door I found carriages and liveried servants; on the staircase, a coming and going of measured Englishmen in formal dress; Hungarians in their national costume, elegant and military in its bearing; men bearing broad scars; uncertain figures, petitioning under the pretext of the Fatherland. The honest and the dishonest, the wealthy and the poor, found it equally difficult to obtain access to the Dictator who, even in defeat and in exile, exercised, beyond the prestige of fame, that further prestige which comes from the habit of command.
+
+While I waited in the antechamber for his permission to enter, I attempted to beguile the time by examining the pictures hanging on the walls: Kossuth in the guise of the simple citizen; Kossuth in hunting dress; Kossuth in the uniform of a general — now in an armchair, now on horseback, now beside a shattered cannon; but always Kossuth, nothing but Kossuth!
+
+At last, amid so many likenesses, the great man appeared in flesh and blood. I must confess that art, in its endeavour to idealise him, had done him a disservice. The figure of the illustrious Magyar was more suggestive of paternal affections and the gentle emotions of the domestic hearth than of heroism in the conventional mode and of carnage. It is the privilege of artists to alter, at their caprice, the colours of History — it is for this reason that Napoleon I is handed down to posterity crossing the Saint Bernard on a rearing colt, in manifest injustice to the poor donkey that lent its back to so great a burden.
+
+The reception accorded to me was not such as the Count di Rudio had expected, nor the Italian patriot, nor the trusted envoy of Giuseppe Mazzini. Kossuth read the letter I presented to him while remaining standing on the threshold, and, having tossed it aside, drew a memorandum from his pocket, wrote a few lines, and ordered me, curtly and coldly, to deliver them to their destination. Not a word of greeting! And as I descended the staircase I found myself wondering whether the Cossacks of the Czar and the Croats of Jellacich, lending their strength to Austria, had not in substance spared the brave Hungarians the vexations attendant upon a change of dynasty.
+
+The few lines consigned to me by Kossuth were addressed to a high-ranking officer whose name I am now seeking in the recesses of memory. I received from him several rolls of sterling — "The very same," said he, "that we received from Mazzini for our participation in the movements of 1853. May they serve your great, unfortunate country!"
+
+Kossuth, on the morrow of that failure, had publicly denied all complicity in those movements!
+
+Upon my return, the Master opened his heart to me. He began by asking whether I felt disposed to risk my life once more for the cause of the Fatherland, and having received his answer from my bearing alone, he pointed to a chair, and we conversed in low voices, seated face to face, for upwards of an hour.
+
+He explained to me that, on the counsel of Fortunato Calvi, the future insurrectionary attempts were to unfold in the Alpine regions. The reasons he advanced were as follows: Our country is rich in latent forces, ready to burst forth; but whoever undertakes an initiative must be able to give assurance of serious resistance. The mountain is the natural bulwark of the weak and the oppressed. There it is possible for the few to hold their ground against the many; possible to escape pursuit; to swoop with the swiftness of the eagle down upon the plain; to surprise, to intercept. In place of the pitched battle, which was denied to us, it was necessary to substitute guerrilla warfare, which is necessarily the offspring of the mountains. If the banner of redemption could be kept upright and flying for three, for two months, there would not be a patriot without fever in his blood, nor a corner of Italy in which the flame of action would not blaze.
+
+This last thought seemed to draw him into another train of reflection. A shadow, as it were, passed across his face; then he said, almost in these very words: "I know it! Cowardice, masked as prudence, accuses me of driving spirited youth to the scaffold, of provoking desperate attempts which afford Austrian tyranny, and that which is home-bred, the opportunity to redouble their cruelties. But it is not considered that the audacity and the sacrifice of the few always end by shaking the torpid from their lethargy and driving the many to action. Nothing great without audacity! Napoleon III would in all probability never have smoothed his path to the Empire without the failures of Strasbourg and of Boulogne. No King of Italy will show spirit great enough to champion the redemption of our Fatherland, when Italians demonstrate that they wallow at their ease in the comfort of slavery. Would Carlo Alberto have crossed the Ticino but for the magnanimous self-abnegation of the Milanese? An imperative necessity it is, this keeping the great Italian question open and pressing. Europe cannot know peace so long as our agony endures. She will intervene, sooner or later, in our favour, and the sooner the more we show ourselves intolerant of the yoke and menacing. And what use are sound ideas, vigorous intentions, when want of initiative confines them within the realm of mere abstractions? Action purges away our centuries-old shortcomings. Between us and a free Italy lies this lavacro — this baptism of blood. Should we remain on this side of it for the slanders of cowards!"
+
+That very evening I procured a passport under an assumed name and set out for Switzerland. Fortunato Calvi was already awaiting me in Zurich. "The plan of the new movements is his own," Mazzini had told me. "It falls to him to attend to its execution. You will receive from his lips the necessary instructions."
+
+In Brussels, where I made a brief halt, I delivered a letter from the Master to dall'Ungaro, the Venetian Catullus. "Where is the Master, what is he doing?" he asked me, almost feverishly. And I, in his own verses:
+
+*"Mazzini è in sul loco ove si trema*
+*"Che giunga a' traditor l'ora suprema;*
+*"Mazzini è in ogni loco ove si opera*
+*"Versar il sangue per l'Italia intera!"*
+
+["Mazzini is in the place where men tremble / lest the last hour come to the traitors; / Mazzini is in every place where men labour / to shed their blood for all of Italy!"]
+
+Having arrived in Zurich, I wished, before going to Calvi, to have my hands free, and I hastened to pay a visit to de Boni, to whom I likewise delivered a missive; a third I carried to Caronti of Como. Giuseppe Mazzini had charged me to be very much on my guard with this man, who was highly suspect to him. He did, however, contribute sums of some considerable amount to the good cause, and this restrained Mazzini from being rid of him.
+
+The brazenly inquisitive questions that Caronti put to me came to me, already prejudiced as I was against him, as a sharp irritant, and when I once more set foot beyond the threshold of his villa, I experienced a relief as if I had suddenly freed myself from a nightmare.
+
+At last I could refresh myself in the embrace of an authentic patriot, of an untarnished conscience — Fortunato Calvi! What joy to see him again still handsome, still proud, still exhaling that indefinable sense of serenity which breathes forth from honest souls!
+
+The substance of our conversation had a beginning which I shall recount without false modesty.
+
+"You are not," he said to me, "and you must not be, an instrument for blindly carrying out orders you do not understand. I shall confide to you the plan I have conceived and which the European Revolutionary Committee has fully approved. You will thus be able to meet, with unity of purpose, the inevitable reverberations. If we succeed in achieving something concrete, you will be my aide-de-camp; if we do not succeed — we shall in all probability be made equal in our reward — martyrdom!" My preliminary charge was to proceed into the valley of Treviso and make contact with certain smugglers, surnamed the Burrasca brothers, so as to induce them to carry a large consignment of munitions into the Agordino. I then had to cross the border, enter Belluno clandestinely, and make contact with Don Bastiano Barozzi, who had returned thither and who was expecting me. Barozzi knew of certain weapons hidden away in 1848 upon the return of the oppressors. In the Cadore, there was no lack of rebellious spirits who had covered themselves with glory in its defence; the name and exhortation of Fortunato Calvi, who had been the guiding genius of that defence, would have rekindled in their breasts the smouldering enthusiasm. It was necessary to distribute among them the old arms. A band of exiles was waiting for the signal to descend from the Alps — Fortunato Calvi, leading them, was to direct their fortunes.
+
+The Austrian colossus was to be struck precisely at Belluno, and with a threefold surprise: at the Finance Office, at the Gendarmerie, and at the Barracks of the regular troops.
+
+The Finance Office, situated near the old church of Santo Stefano, a solid building erected to serve as a convent, encloses a broad arcaded courtyard. Between one column and the next there runs a parapet, so low that a man creeping along it close to the wall and on all fours cannot be seen by a sentry who, though keeping watch, is traversing the other parts of the arcade. The main gate had no doors and was left unguarded; the custodians of the building, a small body of militia quartered at the far end of the courtyard, to the right — three men in all and a corporal.
+
+In the dead of night, a handful of our men lying in ambush near the gate; one bold spirit to creep, barefoot, along the parapet and take the sentry from behind — a muffled signal — men come running — the three militiamen sleeping are rendered powerless. A bold enterprise, not an arduous one!
+
+It was autumn, the time of tax collection; the coffers of the Administration, according to reliable calculations, were expected to contain a million and a half florins. To seize them — the sinews of war!
+
+At the same time, another band of patriots was to conceal themselves near the Gendarmerie Barracks. They were to simulate a brawl and ring the bell of the Gendarmerie, as if to summon assistance. The guard who opens the door is to be shot. The lair is then to be stormed, and the thirty men-at-arms sleeping there compelled to pass, by force, into the category of the manacled.
+
+The garrison of Belluno at that time consisted of one hundred and fifty soldiers. Access to the barracks was to be had, to the right and to the left, by a winding ascending road — a *tourniquet*, as the engineers call it, flanked by trees and benches, a favourite resort of nursemaids and urchins. The general rule was that when the alarm sounded, the small garrison would emerge, in straggling fashion, from the main gate and draw up on the esplanade, awaiting orders. It was necessary to conceal a body of picked marksmen along the edges of the winding road, to give the alarm, and to shoot down as many militiamen as should come running.
+
+The threefold surprise accomplished, the insurgents were to take possession of the civil and ecclesiastical authorities — as hostages! Then we would seize the means of transport, put on Austrian uniforms, and proceed in military fashion to the fortress of Osoppo in Friuli, taking prisoners and compelling all whom we should encounter on the way to accompany us, so as to forestall any indiscretion.
+
+At this point Fortunato Calvi, who had been speaking throughout in a low voice, almost as though meditating upon his own phrases, grew animated and said with intensity: "We approach the fortress preceded by the Austrian flag and beating the drum, as friends. Once past the bridge, once the foot is set beneath the gateway arch, the scene changes, the Latin valour bursts forth. On the ramparts, twenty-two of our own, we raise our flag — and woe betide whoever threatens it! The hostages remain with us, with us the arms, the money, and the audacity. Osoppo becomes our base of operations, and it is an impregnable instrument. Through the winter we organise the guerrilla warfare in the Alps, we hold in check the troops that would descend into the Peninsula. In the spring, Lombardy, Venetia, Hungary, France perhaps as well, second the movement — the oppressed and the oppressors measure their forces. The errors of the past are our instruction; the secular vow is fulfilled; Italy rises again, never to fall again."
+
+I listened with bowed head, thinking what any other man would have thought: "To what extent could we count upon the ability of the European Revolutionary Committee to extend our initiative, to transform it into an international uprising?"
+
+Could I hold back when an entity such as Fortunato Calvi was throwing himself entirely into the breach?
+
+Three days, and I set out on my journey once more.

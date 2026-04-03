@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively uses vocabulary and sentence structures that mirror the formal, literary register of the early 20th-century Italian text."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The first-person narrative and reflective passages are consistently maintained, preserving the author's direct and personal voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation handles shifts between formal narration and direct speech, including exclamations like 'The devil!', very well, aligning with the original's tone."
+        }
+      ],
+      "strengths": "The translation excels in preserving the dignified yet engaging tone and distinct narrative voice of the original. The formality and period-appropriate language choices are consistently applied.",
+      "weaknesses": "No significant weaknesses in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Patria' (Fatherland) and 'Imperatore' (Emperor) are rendered with appropriate historical equivalents, fitting the Risorgimento context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "Most references like 'trattoria' and street names (adapted to 'rue' for Paris) are handled well. However, the idiom 'vendere i sorci al gatto' is literally translated as 'sell the mice to the cat,' which preserves the original phrasing but does not effectively convey its idiomatic meaning (e.g., to betray) for an English reader, without a gloss."
+        }
+      ],
+      "strengths": "The translation successfully preserves specific Italian and French place names and institutions, maintaining the geographical and historical setting.",
+      "weaknesses": "A literal translation of one specific Italian idiom reduces its immediate cultural and idiomatic impact for the target audience, suggesting a missed opportunity for appropriate glossing or adaptation."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably precise, accurately conveying every nuance and detail of the Italian text without any discernible omissions, additions, or misinterpretations."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All personal names, as well as place names like 'galleria Montmartre' and the appropriate adaptation of 'via' to 'rue' for Parisian streets, are consistently and correctly preserved."
+        }
+      ],
+      "strengths": "The translation demonstrates exceptional fidelity to the source text, ensuring that the original meaning and specific factual details are accurately carried over into English.",
+      "weaknesses": "No weaknesses identified in terms of accuracy or faithfulness."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is fluid and natural, exhibiting excellent literary rhythm and readability, which allows the narrative to unfold compellingly."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 0.5,
+          "note": "Most figurative language, such as 'silhouetted in black' and 'soul remained as if armoured,' is rendered effectively. However, the literal translation of 'vendere i sorci al gatto' hinders its full idiomatic effect in English, making that particular expression less impactful."
+        }
+      ],
+      "strengths": "The translation creates a highly readable and engaging narrative in English, with strong sentence construction and an overall natural literary flow.",
+      "weaknesses": "One specific idiom is translated literally, which, while maintaining the original's words, diminishes the effectiveness of the figurative expression for an English-speaking audience, making it less impactful than other well-rendered imagery."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The translation is grammatically impeccable throughout, with well-formed sentences and no awkward phrasing, even in complex constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The prose is consistently clear, coherent, and easy to follow, allowing for effortless reading without the need for re-evaluation of sentences."
+        }
+      ],
+      "strengths": "The translation is grammatically flawless and highly fluent, ensuring a smooth and uninterrupted reading experience.",
+      "weaknesses": "No weaknesses in grammar or fluency."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names and key recurring terms like 'overcoat,' 'money,' and 'Fatherland' are translated with perfect consistency across the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic register and narrative voice are uniformly maintained, providing a cohesive reading experience from beginning to end."
+        }
+      ],
+      "strengths": "The translation maintains exceptional consistency in terminology, character naming, and overall stylistic choices throughout the passage.",
+      "weaknesses": "No weaknesses regarding consistency."
+    }
+  ],
+  "weighted_score": 0.9125000000000001,
+  "_tokens": {
+    "input": 3687,
+    "output": 1479
+  }
+}

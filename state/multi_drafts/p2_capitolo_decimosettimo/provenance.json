@@ -1,0 +1,35 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro",
+      "original": "the police-craft machinations",
+      "replacement": "the police machinations",
+      "reason": "The Italian 'raggiri polizieschi' means 'police machinations/tricks'; the compound 'police-craft' is an unnecessary coinage where the simpler 'police machinations' is both more natural and equally faithful."
+    },
+    {
+      "paragraph": 14,
+      "from_draft": "draft_gemini__pro",
+      "original": "a students' prank, in which a group of young scapegraces had relieved another scapegrace of a watch worth a few *baiocchi* (small coins)",
+      "replacement": "a prank among bohemians, in which a group of young scapegraces had relieved another scapegrace of a watch worth a few *baiocchi*",
+      "reason": "The Italian 'burletta tra scapigliati' specifically means 'a prank among bohemians/scapegraces', not 'a students' prank'. The Gemini draft's 'prank among bohemians' is more accurate to 'tra scapigliati'. The parenthetical gloss '(small coins)' was also dropped, since *baiocchi* is italicised and context makes the meaning clear without editorial intrusion."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "aula",
+      "edgren_definition": "aula [L.], F.: assembly-hall",
+      "english_choice": "assembly-hall",
+      "paragraph": 2,
+      "note": "A modern default would be 'courtroom' or simply 'hall' (as in the Gemini draft's 'courtroom'). Edgren's period-appropriate 'assembly-hall' was adopted in the primary draft and retained in the final, giving the English a more formal, nineteenth-century register that suits the source."
+    },
+    {
+      "italian_word": "manipolo",
+      "edgren_definition": "manipolo [L. manus, hand, plere, fill], M.: handful; scarf; maniple (company of soldiers)",
+      "english_choice": "handful",
+      "paragraph": 2,
+      "note": "Edgren's primary sense 'handful' was preferred over Gemini's 'band'. The literal image of a 'handful of hired servants' preserves the contemptuous diminishment in 'il manipolo di stipendiati', where the author belittles the regime's supporters as a mere fistful."
+    }
+  ]
+}

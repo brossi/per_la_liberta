@@ -1,0 +1,13 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 45,
+      "from_draft": "draft_gemini__pro",
+      "original": "martyred at Mantua",
+      "replacement": "martyred at Mantova",
+      "reason": "Keeps the Italian place name as it appears in the source text ('martirizzato a Mantova'), consistent with the project convention of preserving Italian toponyms for Italian cities in historical context. The Gemini draft retained 'Mantova' while the Claude draft anglicised it to 'Mantua'."
+    }
+  ],
+  "edgren_influences": []
+}

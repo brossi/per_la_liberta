@@ -1,0 +1,91 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the shadow of the black and yellow",
+      "replacement": "the shadow of the yellow and black",
+      "reason": "Restores the Italian colour order 'giallo e nero'; the Habsburg flag is conventionally 'yellow and black' in English-language histories of the period."
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "it was a salvation of the moment",
+      "replacement": "it was a temporary salvation",
+      "reason": "Directly mirrors 'salvezza temporanea'; more concise and idiomatic than the circumlocution 'of the moment'."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "that lacerated it",
+      "replacement": "that lacerated the skin",
+      "reason": "Claude's pronoun 'it' has no clear antecedent; Gemini supplied the explicit noun 'the skin' (from 'la scalfivano', where 'la' refers to skin). The stronger verb 'lacerated' was retained from the primary draft."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "in that pool of small fish",
+      "replacement": "in that pond of shad",
+      "reason": "Italian 'agoni' are shad (Alosa agone), a specific Lake Maggiore fish. Gemini correctly identified the species; 'small fish' loses the local colour. 'Pond' for 'stagno' is also more accurate than 'pool'."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the nearest land of the Republic",
+      "replacement": "the nearest republican land",
+      "reason": "More compact adjective form; matches the cadence of 'terra repubblicana' as a simple modifier rather than a prepositional phrase."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the time had not been wasted — a delayed initiative, not a lost one",
+      "replacement": "the useful time had not yet passed — an initiative delayed, not lost",
+      "reason": "Italian 'il tempo utile non era trascorso' says the useful time had not yet elapsed, not that time was 'not wasted' — a meaningful difference (deadline vs. efficiency). Gemini's phrasing is more faithful. The inverted 'initiative delayed, not lost' also better mirrors the Italian appositive structure."
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the mountain and valley",
+      "replacement": "the mountain and the valley",
+      "reason": "Adds the second article to match 'il monte e la valle', giving each noun equal weight."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "their faces lit by the lamp",
+      "replacement": "their faces lit by the oil lamp",
+      "reason": "Italian 'lucerna' specifically denotes an oil lamp, not a generic lamp. Gemini supplied the period-accurate detail."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "in my belt",
+      "replacement": "in my money-belt",
+      "reason": "Italian 'cintola' in context of secreting gold clearly means a money-belt. Gemini's specificity avoids ambiguity."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "temporaneo",
+      "edgren_definition": "temporary (Eng. temporaneous)",
+      "english_choice": "temporary salvation",
+      "paragraph": 1,
+      "note": "Edgren's gloss confirmed 'temporary' as the period-appropriate equivalent, reinforcing the switch from Claude's periphrasis 'salvation of the moment' to the direct adjective."
+    },
+    {
+      "italian_word": "presentivano",
+      "edgren_definition": "presentire: forebode (presage); have a presentiment",
+      "english_choice": "presaged",
+      "paragraph": 2,
+      "note": "Edgren lists 'presage' and 'forebode' as primary senses. This confirmed the archaic-flavoured 'presaged' (from the Claude draft) over Gemini's blander 'foresaw', preserving a literary register consistent with the period."
+    },
+    {
+      "italian_word": "fatica",
+      "edgren_definition": "FATIGUE (hardship); labour; wages; reward",
+      "english_choice": "grievous hardship",
+      "paragraph": 1,
+      "note": "Edgren's first alternative sense is 'hardship', validating this over the modern default 'difficulty' or 'effort'. Both drafts already used 'hardship', so the dictionary served as confirmation rather than correction."
+    }
+  ]
+}

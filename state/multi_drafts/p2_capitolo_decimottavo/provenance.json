@@ -1,0 +1,56 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "not from any wanton cruelty",
+      "replacement": "not from any lust for torture",
+      "reason": "Italian 'libidine di tortura' literally means 'lust for torture'; Gemini's rendering preserves both the specific noun ('libidine') and the object ('tortura'), whereas Sonnet collapsed both into the looser 'wanton cruelty'."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "a great improvement upon the Conciergerie",
+      "replacement": "a great advantage over the Conciergerie",
+      "reason": "Italian 'vantaggio' means 'advantage', not 'improvement'. Gemini's wording is more accurate."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "to obtain his agreement",
+      "replacement": "to obtain his consent",
+      "reason": "Italian 'assenso' maps more precisely to 'consent' (formal assent) than the vaguer 'agreement'. Gemini's choice is more exact."
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "but not to do so without challenge",
+      "replacement": "but not to undergo it passively",
+      "reason": "Italian 'ma non per subirla passivamente' says literally 'but not to undergo it passively'. Sonnet's interpretive paraphrase lost the passive-suffering sense of 'subire'; Gemini's literal rendering is both more faithful and more vivid."
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "the only one of the three condemned men",
+      "replacement": "the only one of the three *morituri*",
+      "reason": "The Latin 'morituri' ('those about to die') is used deliberately by the author for its classical resonance. Translating it as 'condemned men' flattens the allusion. Gemini correctly preserved the Latin."
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro",
+      "original": "To me that being put on show, like a wild beast in a cage, weighed upon me terribly.",
+      "replacement": "To me, that being put on show, like a wild beast in a cage, weighed terribly.",
+      "reason": "Sonnet's 'To me … weighed upon me' is redundant. Gemini's version ('To me … was a terrible burden') avoided the problem differently. The final keeps Sonnet's structure but drops the redundant 'upon me', a fix prompted by noticing Gemini's cleaner syntax."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "libidine",
+      "edgren_definition": "libidi-ne [L. libido], F.: libidinousness (wantonness, licentiousness)",
+      "english_choice": "lust",
+      "paragraph": 1,
+      "note": "Edgren glosses 'libidine' as 'libidinousness, wantonness, licentiousness' — all pointing toward desire/appetite rather than mere cruelty. This confirmed that Gemini's 'lust for torture' was the better match over Sonnet's 'wanton cruelty', where 'wanton' had drifted into modifying 'cruelty' rather than rendering the noun 'libidine' directly."
+    }
+  ]
+}

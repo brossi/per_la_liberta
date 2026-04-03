@@ -1,5 +1,7 @@
 <!-- pages:186-190 -->
 
+<!-- pages:186-190 -->
+
 AND so we come to our chief. I shall call up old impressions; I shall express judgements which fifty years of meditation have not availed to alter.
 
 We find ourselves before a character capable, in the highest degree, of generous impulses. Yet, through the mysterious reactions of his soul, the frequent exaltations of feeling were followed, always or almost always, by profound depressions. A nature excessively nervous and sensitive, he oscillated fatally from one extreme to the other, laying bare strange deficiencies which I regarded, even in those days, as maladies — of what precise nature I could not then define, nor can I now.

@@ -1,0 +1,112 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "holding a lively conversation with a customer",
+      "replacement": "speaking in a frenzied manner with a customer",
+      "reason": "The Italian 'parlava in modo spiritato' means speaking in an agitated or frenzied way, not merely a lively conversation. Gemini's rendering is more faithful to the source."
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "for paper and ink",
+      "replacement": "for paper and inkwell",
+      "reason": "The Italian 'calamaio' specifically means inkwell, not ink in general. Gemini preserved this concrete detail."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "reached me in confusion",
+      "replacement": "reached me confusedly",
+      "reason": "The Italian 'confusamente' is an adverb modifying 'giungevano'; 'confusedly' mirrors this grammatical form more closely than the prepositional phrase 'in confusion'."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "the stubborn will to descry",
+      "replacement": "the pertinacity to descry",
+      "reason": "The Italian 'pertinacia' is a Latinate word; 'pertinacity' preserves the register and etymology that 'stubborn will' flattens. The English word 'descry' was retained from the Claude draft."
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro",
+      "original": "very pale yet beautiful still",
+      "replacement": "deathly pale yet beautiful still",
+      "reason": "The Italian 'pallidissima' is a superlative; 'deathly pale' conveys the intensity better than the understated 'very pale'."
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro",
+      "original": "the only air capable of breathing life into her",
+      "replacement": "the only atmosphere capable of breathing life into her",
+      "reason": "The Italian word is 'atmosfera', not 'aria'. 'Atmosphere' is both more accurate and carries a richer connotation of the theatrical setting."
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro",
+      "original": "two *limiers* — hounds — remaining on guard",
+      "replacement": "two hounds remaining on guard",
+      "reason": "The Italian source says 'segugi', not 'limiers'. The French gloss was an unnecessary interpolation not present in the original; Gemini's plain 'hounds' is cleaner."
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_gemini__pro",
+      "original": "I took advantage of it.",
+      "replacement": "And I took advantage of it.",
+      "reason": "The Italian opens with 'E ne approfittai'. The conjunction 'And' at the paragraph start is characteristic of Crespi's breathless narrative style and should be preserved."
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_gemini__pro",
+      "original": "without undressing at all",
+      "replacement": "without disrobing in the least",
+      "reason": "The Italian 'senza punto svestirmi' has a slightly formal, emphatic quality; 'disrobing in the least' matches this register better than the plain 'undressing at all'."
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_gemini__pro",
+      "original": "the night would bring counsel",
+      "replacement": "I would take good counsel from the night",
+      "reason": "The Italian 'trarre buon consiglio dalla notte' has the narrator as subject ('I would draw good counsel from the night'). Gemini's phrasing preserves the narrator's agency."
+    },
+    {
+      "paragraph": 21,
+      "from_draft": "draft_gemini__pro",
+      "original": "between the wooden lining and the false bottom",
+      "replacement": "between the small board and the bottom",
+      "reason": "The Italian 'l'assicella ed il fondo' means 'the small board and the bottom' — a literal physical description. Claude's 'wooden lining and false bottom' over-interprets; the simpler rendering is more faithful."
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro",
+      "original": "I make for the staircase",
+      "replacement": "I make for the grand staircase",
+      "reason": "The Italian 'lo scalone' is the augmentative of 'scala', denoting a grand or monumental staircase. 'Grand staircase' captures this, and suits the Prefecture setting."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "confusamente",
+      "edgren_definition": "confusedly",
+      "english_choice": "confusedly",
+      "paragraph": 2,
+      "note": "Edgren gives the single-word adverb 'confusedly' as the definition. This confirmed the choice of adverbial form over Claude's prepositional phrase 'in confusion', aligning the translation with period usage."
+    },
+    {
+      "italian_word": "ronzìo",
+      "edgren_definition": "humming (buzz, rumble)",
+      "english_choice": "humming",
+      "paragraph": 2,
+      "note": "Edgren lists 'humming' as the primary sense before 'buzz' and 'rumble'. Both drafts already used 'humming'/'buzzing'; the dictionary confirmed 'humming' as the best choice for the metaphor of the city-as-hive."
+    },
+    {
+      "italian_word": "inezia",
+      "edgren_definition": "worthless thing, trifle, nothing; platitude; stupidity (nonsense, folly)",
+      "english_choice": "trifles",
+      "paragraph": 1,
+      "note": "Edgren's primary sense 'worthless thing, trifle' supported the choice of 'trifles' over any modern alternative like 'trivial details'. Both drafts already used 'trifles'; the dictionary confirmed the period-appropriate rendering."
+    }
+  ]
+}

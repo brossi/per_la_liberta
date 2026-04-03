@@ -1,0 +1,77 @@
+CHAPTER THE TWENTY-EIGHTH
+
+IN the afternoon, I saw the old Governor once more. Inspired by the boundless democracy of the English, who are nevertheless so aristocratic in their bearing, he had thought it his duty to descend to my level, in order to congratulate in person the political prisoner reborn to civil life. And having gathered, from what the doctor himself had told him, that my departure for England by ordinary means was not without its dangers, he offered to secure me a place aboard a man-of-war which would make for the capital of the Empire no later than March.
+
+With this, he took his leave. But before departing he placed in my hands, without a word of comment, a large volume of his, bound in black morocco. It was... a Bible. The good old man did not feel he had done enough by contributing to my material liberation; he would also have wished to cast into my soul the seeds of a moral fermentation. Although I considered, and still consider, that his pious desire, had it taken root and flowered, would have, so to speak, unmanned me, I could not nevertheless refrain from feeling a sense of gratitude for the disinterested nobility of his intention. From the window I watched him until he disappeared. Many times I have wished to see him again, to prove to him that the good he did was not turned to ill. But he was already then some seventy years of age, and who can say how long since the virtues and follies of the world have ceased to move him! He left upon me an indelible impression, not only because with him begins a new period of my existence, but also because, in so brief a time, he knew how to reveal to me many facets of his character. His admiration for bold deeds performed at sea; the pride which led him, while not disowning the merits of others, to proclaim in our presence the superiority of his own race; his humane feelings; his conception of the nobility of labour and of the regenerating influence of thrift; his faith in the rehabilitation of the fallen; his abhorrence of falsehood; his spontaneous redress of an offence, however slight, given to one who stood in a social condition so far beneath his own; the respect he showed for the rights of the oppressed; even his tendency towards mysticism — all these were the synthesis of the virtues and faults of a People... of a great People.
+
+In my head, amid so great a kaleidoscope of men and things, a certain confusion of names has crept in. I may be mistaken; but I believe he was called Melville...
+
+To wait until March... a plan wholly irreconcilable with my impatience! A careful examination of circumstances led us to frame the following scheme: there was still lying in the Berbice an English brig, the *John Romelly*, Captain Kandel, which had been wishing to sail for London on Christmas Eve, but could not, for want of the prescribed complement of sailors. The doctor would go and parley with the captain, and would persuade him to enter me on the ship's roll. I was to remain, until the departure, shut in my room, feigning illness; and, the better to deceive the watchful eye of the French spy, the doctor would publish in his newspaper that I had joined a caravan of rubber-gatherers which was, on the morrow, to set out on an expedition into the interior.
+
+Events surpassed even the bounds of our desire. The caravan departed. Not many days had passed before there arrived the grim news that it had been annihilated by savages. The doctor seized upon this to publish that I too, bloodless and flayed, had passed into the number of the dead. The French spy vanished from New Amsterdam. But the *Times* of London reproduced the tragic little tale, and for the second time poor Elisa was compelled to make a terrible effort not to believe the plausible, if not the true.
+
+Christmas Eve arrived. At nightfall I embraced my courteous host and, craving her leave, kissed the hand of the gentle creature who, repeatedly, during those days of painful inaction, had soothed my fevers, stirring in my breast a broad wave of poetry. At dawn the *John Romelly* was far away, and around me I could see nothing but the sea.
+
+It was reckoned that the crossing would require from twenty-two to twenty-five days. Fierce storms drove us off our course. Our daily ration was cut by half, and it was good fortune to have been able to signal a steamship which resupplied us with provisions. We came in sight of the Thames after more than two months at sea.
+
+How many tragic events had come to pass since the day I had traversed those same waters in the opposite direction, summoned by the patriotic voice of Felice Orsini! Now, as then, the elements seemed to be seized with a nostalgia for chaos, and with such fury as to mark a memorable date in the history of maritime disasters. Death and destruction had preceded us, and we descried unmistakable traces thereof in the masts rising, in more than one spot, above the surface of the water; in the wreckage that drifted wildly around us.
+
+Towards ten o'clock in the evening of the 29th of February, 1860, I set foot at last upon the docks of that immense capital, where I knew not a single person who believed me yet alive. Of the tumultuous events crowding upon one another at that hour, above all in my own Fatherland, I knew nothing. In my pocket I had a couple of shillings borrowed from the mate of the *John Romelly*; my breeches, those of the convict prison, I had reinforced and adorned. From so humble a beginning was to unfold what I might call my second existence. And in my soul, alongside a confused impulse towards action and an imperious longing to fling myself into beloved arms, there was the bitterness of having arrived alone. My thoughts tore me from the infinite sweetness I cherished in imagination, to carry me back to that fatal land, where two martyrs with severed heads lay dishonoured beneath the earth, enduring the vicissitudes of matter.
+
+An hour later, the miseries of life and political hatreds had reclaimed me.
+
+My first steps were directed to the offices of the *Times*, to pay a debt of gratitude and to announce to friends, who might perhaps still take an interest in me, my resurrection. Elisa, as I supposed, must be at Nottingham, with her mother, and whether I resolved to go there myself, or to write bidding her come to London, a few pounds were indispensable to me. To procure them, I was counting on Doctor Simon Bernard. This thought induced me to enter a café in the West End which I knew to be frequented by Frenchmen.
+
+While I was consuming my refreshment, I perceived that my attire, more than threadbare, was provoking the smiles and unflattering comments of the other patrons. Whose astonishment must have reached its height when a young man, entering noisily, ran to my table, crying: "Oh, Moretto, you here? And I who wept for you as dead!" No sooner said than he was embracing me and kissing me.
+
+It was that Rossi against whom Foschini had aimed the thrust which had passed through my breast. From the pavement, glancing in through the glass panes, between the green curtains, out of simple curiosity, he had seen and recognised me. Pressing and tumultuous were the questions he put to me; but no less pressing those which I put to him. From him I learned that Simon Bernard had stood trial; that my wife had appeared in it as a witness; that the people and the press had protested in terms so energetic against that manifest subjugation of old England to the will of Napoleon III as to provoke not only the acquittal of the accused, but also the fall of the Palmerston Ministry.
+
+Since that time, Bernard had puffed himself up and was noisily posturing as a hero. He attributed to himself the principal rôle in the Orsini conspiracy, which, by his account, would not have failed if...
+
+At this point Rossi broke off, and then, resuming the thread of the discourse: "Bernard no longer frequents this café. If you wish to speak with him, I know where to find him. But I cannot for the life of me understand how he could be of use to you... In short, do you want me to speak plainly? He holds you to blame for having sold yourself to the French Police and for having denounced your accomplices."
+
+— You know where to find him? Take me to him at once.
+
+Doctor Simon Bernard had organised a small club which met in modest premises off Leicester Square. To reach it one had to pass through a tobacconist's shop. The proprietress, of whom I enquired, looked me up and down and refused me passage. She sent however to give notice to Bernard, who did not keep me long waiting. As he was descending the stairs, I noted from his surprise that he had recognised me, and I noted likewise that, in order to keep up, as the saying goes, with the times, he had suffered two enormous moustaches to grow in the style of Vittorio Emanuele II.
+
+— Good evening, Bernard.
+
+— With whom have I the honour of...
+
+— You know full well. At any rate I shall tell you...
+
+And seized by an impulse of indignation, I grasped him with both hands by his long whiskers, crying: "This will convince you that I am not a shadow of myself, but Carlo di Rudio in flesh and blood!"
+
+It is easy to understand that, after such methods of a somewhat unforensic eloquence, the discussion could not proceed in gentle tones. But the place and respect for the lady did not allow me to prolong a discussion which resembled far too closely a brawl. When he had menacingly warned me not to make a scene if I did not wish to run the risk of being expelled from England, and when I had answered him with a flourish of insults, that I had no need whatsoever to make a scene, since I had already charged the *Times* to make one on my behalf, we ended by establishing by mutual agreement that the following evening at eight o'clock we should meet at the corner of Leicester Square, to settle our affair thoroughly — and coward be he who failed to appear!
+
+I passed the night in Rossi's room, seething and writing. In the morning, resolved to seek out Giuseppe Mazzini, I went to Leather Lane to ask Massarenti for information about him.
+
+The latter was unloading a consignment of cheeses when I appeared before him. He had read the *Times* and already knew of my escape and arrival. He lavished great flatteries upon me; but when, cutting him short, I asked for the Maestro's address, I received the reply that he had not seen him for a long time, and did not know in what part of the world he had gone to ground.
+
+The great Italian revolution, which had cast upon London so many of my friends, so many patriots, had by now drawn almost all of them back again, as into a vortex.
+
+Evening came. At the appointed hour I turned the corner into Leicester Square and descried, through the fog, beneath a lamp-post, Simon Bernard in close conversation with two strangers. He saw me and invited me to follow him. "It is a beastly cold! In a public house," he said, "we shall not catch a chill and shall have ample opportunity to come to an understanding."
+
+After walking in silence for a couple of blocks, I suddenly turned round... the two strangers were following us. We walked another couple of blocks; I turned round again and the two were still following us. I stopped short, and the moment the two realised they had been observed, they planted themselves before a shop window and stood gazing at it. I resumed my walk, and the two resumed theirs.
+
+Then I flared up, and flashing a silent weapon which the provident Rossi had slipped into my pocket, I said to Bernard: "What game is this? Who are these gentlemen? Take care not to trifle with an Italian... If they come closer, I shall run you through."
+
+Not satisfied with this, I advanced with sudden resolution towards the two strangers, who had now stopped before a stationer's shop, and placing myself abruptly between them, I stared each of them in the face in turn.
+
+From that moment I was followed no longer, and at the first public house I said to Bernard: "Let us go in here. Now indeed we shall be able to speak freely."
+
+But our conversation turned out very differently from what I had expected. Doctor Bernard, a crafty, wary, double-dealing man, shrinking from acknowledging his own conduct and from assuming responsibility for it, incapable of confronting manfully an adversary and an equivocal situation of his own making — a virtue, this, which adorns the breast even of brigands! — opposed to my impetuosity diplomatic equivocations, protestations of the deepest sympathy, extravagant offers of assistance. I was not to give credence to the foolish tittle-tattle of ill-wishers; I was to go to Nottingham, to hasten to bring an unhoped-for joy to my wife, who certainly had great need of it. He would confer with friends and write to me to communicate some definitive plan in my favour.
+
+And he managed to slip from my grasp. I believe that, even as he extended his right hand to me, he was already meditating the intrigues which, in his design, were to hoodwink me and send me to my ruin.
+
+Oh, let me be permitted to pass for a moment beyond these miseries. There trembles in my soul now a remembrance of a wholly different nature... in the face of it, the baser passions find no room in the heart.
+
+I had written to my good mother-in-law at Nottingham to announce my arrival. In the envelope I had enclosed a letter for Elisa. The morning after my second interview with Bernard, scarcely had I thrown back the bedclothes when I descried upon the carpet near the door, where it had been slipped beneath, a letter addressed to me. It was the mother-in-law's reply. Having given vent to her own happiness at my escape, she informed me that Elisa was in London, at the Mancherinis' house. She had forwarded my letter to her, giving her at the same time my address.
+
+I was so moved by this that in dressing, my fingers could not find their way to a single buttonhole. And now, while I was drying my hands, the knocker on the street door beat repeated blows. I distinguished the step of the landlady going to open; then a woman's voice asking whether a young man of such-and-such description was lodging in that house... An harmonious voice... hers!... But why did she not pronounce my name?
+
+Perhaps she doubts, I thought, that I, out of prudence, have given a name not my own. With a single bound I was on the threshold... and I knew that excessive happiness seizes the heart with a rough hand, tyrannically, producing sensations that resemble pain. I saw her... but dimly, and as in a dream; I wished to cry to her: "I promised you... here I am!" but the voice would not come; I made to fling myself forward with outstretched arms, but my arms turned to lead and my feet remained nailed to the floor.
+
+Elisa too stood motionless for some moments... a mortal pallor drained the colour from her face. Suddenly she was before me; but, having taken a few steps, her head fell upon her breast and her knees gave way beneath her... She fell senseless into my arms. And when she came to herself, as I kissed her and wept: "Elisa, Elisa! Honest as I was; more glorious — that they will not grant, and little does it matter. But ever thine; and in every fibre of my heart, a shrine for thee!"
+
+At that moment a thought flashed through my mind. Should I find my Fatherland united, free, great, as I had known how to find again my love?

@@ -1,0 +1,53 @@
+CHAPTER THE EIGHTEENTH
+
+I reached Coirà, where from Clementi, who was then under trial as one implicated in the international movements, I received a letter for his younger brother. The latter would, in turn, see to putting me in communication with the Burrasca brothers.
+
+At San Maurizio, in the Engadina, at Muentzen, the point where Switzerland meets Wurtemberg and the Tirolo, at Salzburg, at Trento, no suspicious incident occurred. In this last locality I presented myself to the Austrian Authorities and signed my passport with the fictitious name... they did not give me a single inquisitive glance.
+
+And from Trento, deviating from the straight line, I go back up the valley carved by the Trevis torrent, I confer with the younger Clementi; I find myself that very evening face to face with the four smugglers.
+
+Of them, Clementi had told me that they were the despair of the manhunters and the pride of the valley. Jealous of their reputation, they left the easy undertakings to the lowliest and made it their point of honour to bring the most perilous to completion. Spirits impatient of any restraint, they also lent themselves nobly to righting wrongs, to fighting for the liberty of others. They had already rendered services of no small importance to the Italian cause.
+
+I needed no masterful phrases to bend them to my purpose, and when the eldest of the brothers, the captain of the small and courageous brigade, set down the glass from which he was sipping with a forceful gesture, extended his right hand and clasped mine, I understood that I had concluded, with that simple act, a pact for life and for death, far more binding than any notarized document.
+
+Early in the morning, refusing any guide, I set off on foot, along little-trodden paths that sketched themselves, one by one, vividly in my memory before they stretched out before my eyes. In the vast horizons, in the sudden precipices, in the solemn silences, in the alpine scents, I rediscovered my childhood and was so overcome by it that the phantoms of the future grew pale, and almost vanished.
+
+When, from the height, I caught sight of my Belluno, it was raining in large drops; but serenity was in my heart. I stood, under my wide umbrella, searching among the indistinct lines for my paternal home, and having found it, it seemed to me that my old father and mother and all my dear ones must feel me near and trembling, as I felt them.
+
+I reached the bank of the Ardo at dusk; but the autumn rains had swollen it so, that to find a ford proved impossible for me. It was an inconvenience! The house of Don Bastiano stood on the opposite side of the city. To arrive there I now saw myself forced to risk the main road, to cross the bridge, to traverse Belluno for its entire length. I waited patiently for night, hidden in a thicket.
+
+The clock was striking ten when, my umbrella lowered over my face, I entered the inhabited area. The wayfarers were few and hurried. I scrutinized them from afar, in the uncertain light of the streetlamps... not a constable, not an acquaintance, not a living soul who showed any care for me... I would have said I was, to my fellow citizens, an invisible spectre. But when the houses thinned out and I had left every streetlamp behind me, a sudden thought came to trouble me: "What if the Police, watchful and feline, had laid a trap for me precisely in the solitary dwelling of Don Bastiano?"
+
+I entered the little garden that surrounds it with such precautions that not even the mastiffs noticed. The ground floor... dark; all the grilles shut; those of the upper floor shut... only one window yawned a sliver of light that went to lose itself among the leaves of a double row of trees. I strained my ears... the voice of the Ardo, a distant rustling of leaves, nothing else! Then I picked up a small stone and threw it against the window, while with an instinctive motion I gripped the butt of a pistol.
+
+And then a woman's figure appeared in black behind the glass... Don Bastiano's domestic, beautiful and plump with provocative hips and impertinent breasts. She opened the shutters and whispered into the night: "Is that you, Moretto?"
+
+Don Bastiano received me with an embrace and with sobs. His first words were: "Heaven be praised! I was already despairing of your salvation."
+
+"If the torments of our oppressors can be called news! For some days now, unexpected arrests have followed one after another. My own house is constantly watched. How were you able to get here without being molested? I have a vague suspicion that you have fallen from the sky!"
+
+"Safe... until a few hours ago. But who could vouch for the present? To sleep in one's own bed has become an arduous problem in these times!"
+
+At his request, I recounted what I had seen and done on my rapid journey. And he:
+
+"Providence protects you. All the greater is your obligation not to abuse it. Listen, my son: You know whether I love my country. For its freedom I would give... everything, except my soul. But it is one thing to sacrifice what belongs to us, another to jeopardize the safety of others, the lives of those one holds dear. It is a tremendous responsibility for which I would have to answer, sooner or later, to One who counts the drops of blood shed in vain and is not satisfied with syllogisms. Heed my words: These undertakings succeed... sometimes, if they break out suddenly, like a thunderbolt! But for the enemy, most powerful, to sense them... Carletto! Carletto! what use are generous proposals, the daring of four, of thirty, of a hundred youths, against a colossus that holds all of Europe in subjection? Do you wish to offer your neck to the halter, so light-heartedly, for the sterile glory that might come to you from it? And does not our Italy already have too many, far too many of her best to mourn and to pity? Preserve your energy for more propitious times. How, I do not know and could not tell you; but I believe the Police has an inkling of our plots. They do not make arrests at random. You are not safe here. O times, o times! A friend finds his friend and must grieve for it and must implore him to depart. Austria makes us worse than barbarians!"
+
+At that moment, a few steps away outside, a sharp crack resounded; the mastiffs howled... I blew out the candle.
+
+Moments of terrible anxiety... for Don Bastiano. I had gone, on tiptoe, to the door and, opening its peephole, had planted the barrels of my two pistols there. Then, thinking that being in a cage precluded any way of escape, I went out and... A great darkness, a great silence. As a greater precaution, I made a circuit of the house... the wind, a slamming grille... that was all! But when I re-entered and relit the candle, I was struck by Don Bastiano's deathly pallor.
+
+And I thought back on the beautiful walks taken in his company, in autumn, along the Ardo, through the rich vineyards, when he, to educate me in virile sentiments, would narrate the deeds of our forefathers; when his priest's cassock would vanish from my eyes and I would picture him grave in cuirass and helm... so proud were his words, so intense his enthusiasm!
+
+Don Bastiano, accustomed to reading my thoughts since my earliest years, said: "Do not count me among the cowards. My character as a priest and these white hairs impose duties upon me. But once the die is cast... upright and serene until the end!"
+
+Early in the morning, while I, tired from the long journey, was still sleeping soundly, he went to inform my father of my arrival. I found the proud old man still vigorous, although on his noble face I discerned wrinkles that were unknown to me. But our meeting was different from what I had expected. It is probable that Don Bastiano had induced him to throw upon the scales the full weight of his paternal authority to dissuade me from so risky an undertaking. No embraces, no kisses; a powerful, but solitary handshake, and immediately, exacerbated and made almost sarcastic, the same exhortations I had heard the evening before from the mouth of the good priest. Our discussion became so animated as to be most painful to me. I decided to cut it short. "When the uniform and the bread of thieves became loathsome to me," I said, "I expected neither feasts nor flowers. Passive submission does not befit the soul of a Rudio. And since you advise it of me... very well, I shall continue to walk my path, alone. From this moment I have no longer a father!" The poor old man remained for a moment with a suspended gesture, as if he had suddenly been turned to crystal; then his eyelashes filled with tears. He lunged with sudden impetus and embraced me and held me tight with a strength of which I would not have thought him capable. When he was able to speak: "It is you, it is you Carletto!... I recognize my own blood. Go! So long as my strength suffices, I will be with you!"
+
+It was decided not to unearth the arms until the spirit of the daring ones who were to handle them was prepared and well-disposed. Papa and Don Bastiano took it upon themselves to approach them. In the meantime I would, for prudence, seek a refuge less watched by the Police. In the environs of Belluno, towards the north, where the plain borders the high ground, stood an ancient chestnut tree, known, and almost famous, in the city and the countryside for its extraordinary dimensions. It was agreed that I would go, under the cover of darkness, beneath its boughs. A trusted person would come, towards midnight, to show me where I could lay my head. The recognition signal: three whistles, to which I would respond by whistling four times.
+
+At nine o'clock I was already stretched out on the grass, fantasizing as I contemplated the moon through the black foliage; then the moon set and the wind began its unbridled race anew. I got up to stretch my legs and posted myself behind the enormous trunk.
+
+From the tower of Belluno, twelve chimes pursued one another through space, and my eye, by now accustomed to the darkness, ran searching among thickets and vineyards. Another long hour passed... I was seized by grim premonitions.
+
+Suddenly, softly, timidly, from beyond a group of bushes, the three whistles follow one another... then a whisper... "On your guard, Moretto! There are several of them!" I looked intently and made out, through the small branches, something... like the greatcoat of a constable. If I did not fire then and there, it was for fear of missing the target and finding myself, without defence, before the enemy. I answered the signal and waited with both weapons aimed...
+
+Oh, what blood and what remorse a moment's hesitation whispers! A shadow came forward with arms outstretched... my mother

@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains an elevated, formal, and somewhat archaic literary register appropriate for the period."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The passionate, opinionated, and narrative style of Crespi's voice is well-preserved throughout the text."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original Italian is consistently formal and passionate, and this consistency is maintained in the English translation."
+        }
+      ],
+      "strengths": "The translation excels at capturing the distinct literary tone and authorial voice of the original. The language is elevated and formal, mirroring the Italian source, and Crespi's impassioned narrative style is effectively conveyed.",
+      "weaknesses": "No significant weaknesses identified for this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Political terms like 'Quadrilateral,' 'Action Party,' 'red shirts,' and specific historical figures are handled appropriately, often preserving the Italian or using standard historical equivalents."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Cultural references such as 'Cincinnatus,' 'Maramaldo,' 'Plon-plon,' and 'Galantuomo' are either preserved or well-glossed ('The Honest King') without silent modernization."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the historical and cultural context, effectively rendering specific Risorgimento-era terminology and preserving Italian references.",
+      "weaknesses": "No significant weaknesses identified for this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "The meaning is largely conveyed accurately, but there's a minor ambiguity in 'considered by Garibaldi as an end' ('come fine') and one specific instruction regarding place names was not followed."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.0,
+          "note": "No, this is a significant point of inconsistency. While some are preserved (e.g., 'Italia,' 'Nizza,' 'Napoli,' 'Varsavia'), many are anglicized (e.g., 'Italy,' 'Rome,' 'Piedmontese' instead of 'Piemonte' consistently), or mixed within the text, failing to consistently preserve original Italian forms as requested."
+        }
+      ],
+      "strengths": "The translation is generally very accurate in conveying the semantic content and nuances of the Italian text, demonstrating a strong grasp of the original author's intent and arguments.",
+      "weaknesses": "A major weakness is the inconsistent rendering of proper nouns and place names. The prompt specifically asked for these to be preserved in their original Italian form, but the translation frequently mixes Italian and anglicized versions (e.g., 'Italia' and 'Italy,' 'Roma' and 'Rome,' 'Piemonte' and 'Piedmontese'), which detracts from its faithfulness to this specific instruction."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "Despite the formal register and long sentences, the prose reads naturally and maintains a good literary flow, avoiding a mechanical feel."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language such as 'leaden cloak,' 'lust for reaction,' and 'turned from devil to monk' are translated idiomatically and effectively, preserving the original's vivid imagery."
+        }
+      ],
+      "strengths": "The translation is well-crafted, exhibiting strong literary quality with natural-sounding prose and effective rendering of the original's figurative expressions.",
+      "weaknesses": "No significant weaknesses identified for this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "Mostly grammatically correct, but there are a few slightly awkward or less clear constructions, such as 'formative of character, but Italian—never' and 'considered by Garibaldi as an end.'"
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is generally clear and readable, despite its density, and does not typically require re-reading for comprehension."
+        }
+      ],
+      "strengths": "The translation is predominantly grammatically sound and maintains good readability, allowing for clear understanding of the complex historical narrative.",
+      "weaknesses": "A few instances of slightly awkward phrasing detract minimally from overall fluency."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.0,
+          "note": "No, there is significant inconsistency in the rendering of place names and some proper nouns (e.g., 'Italia'/'Italy,' 'Piemonte'/'Piedmontese,' 'Roma'/'Rome,' 'Napoli'/'Neapolitans')."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The overall style and register remain coherent throughout the translation, preserving the author's consistent voice and tone."
+        }
+      ],
+      "strengths": "The translation maintains a coherent and consistent literary style across paragraphs.",
+      "weaknesses": "The primary weakness is the lack of consistency in translating proper nouns and place names, frequently shifting between Italian and anglicized forms, which directly contradicts the evaluation instruction to preserve original Italian forms."
+    }
+  ],
+  "weighted_score": 0.7750000000000001,
+  "_tokens": {
+    "input": 9071,
+    "output": 1578
+  }
+}

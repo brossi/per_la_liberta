@@ -1,0 +1,63 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "synthesis",
+      "original": "The very year I settled down",
+      "replacement": "The very year I took a wife",
+      "reason": "The Italian 'mi accasai' idiomatically means 'I married'. The Claude draft's 'settled down' is too vague; the Gemini draft's 'I married' is accurate but flat. 'Took a wife' captures the period register while being precise about the meaning."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "establishing the truth.",
+      "replacement": "establishing the truth!",
+      "reason": "Restores the exclamation mark present in the Italian source ('verità!'), which the Gemini draft preserved and the Claude draft dropped."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "certain syllables muttered between his teeth",
+      "replacement": "certain monosyllables muttered between his teeth",
+      "reason": "The Italian 'monosillabi' specifically means monosyllables, not merely syllables. The Gemini draft correctly had 'monosyllables'."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "Foschini, stung to the face, turned furious",
+      "replacement": "Foschini, lashed across the face, turned furious",
+      "reason": "The Italian 'frustato sul viso' means whipped or lashed, not stung. The Gemini draft's 'lashed across the face' is more faithful to the physical image."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "made a lunge",
+      "replacement": "made a spring",
+      "reason": "The Italian 'diede un balzo' means gave a leap or spring, not a lunge. The Gemini draft had 'gave a leap'; the synthesis chose 'spring' as a slightly more literary synonym that retains the 'made a' structure of the Claude draft."
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro",
+      "original": "to raise the Kingdom of the Two Sicilies in revolt. To set against the monarchical agitation of the North the insurrection of the southernmost extremity of Italy, to impose from Palermo and Naples the unity of the Nation — such was the design. The brilliant conception",
+      "replacement": "to raise the Kingdom of the Two Sicilies in revolt: to set against the monarchical agitation of the North the insurrection of the southernmost extremity of Italy; to impose from Palermo and Naples the unity of the Nation. The brilliant conception",
+      "reason": "Removed the editorial addition '— such was the design' which was flagged by the evaluator as a deviation from strict faithfulness. The Italian source presents these as a continuous sequence of infinitive clauses; the restructured punctuation (colon, semicolon) preserves that flow without interpolation."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "dovizia",
+      "edgren_definition": "abundance (wealth)",
+      "english_choice": "abundance of coin",
+      "paragraph": 1,
+      "note": "Edgren glosses 'dovizia' as 'abundance (wealth)', confirming the archaic register of 'abundance' over a modern default like 'plenty'. Both drafts already used this word, so the dictionary served as confirmation rather than correction."
+    },
+    {
+      "italian_word": "soverchiamente",
+      "edgren_definition": "excessively (too much)",
+      "english_choice": "excessively",
+      "paragraph": 1,
+      "note": "Edgren confirms 'excessively' as the primary gloss. Both drafts used 'excessively', so the dictionary reinforced the choice rather than altering it."
+    }
+  ]
+}

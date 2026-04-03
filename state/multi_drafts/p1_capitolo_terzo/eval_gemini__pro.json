@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal yet evocative literary style fitting for a 1913 narrative, employing vocabulary and sentence structures appropriate for the period."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The first-person narration feels personal and engaging, consistent with a memoir-like account of experiences and reflections."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a consistent literary tone, and the translation accurately reflects this, without introducing inappropriate shifts in formality."
+        }
+      ],
+      "strengths": "The translation excels at capturing the period-appropriate literary register and the personal narrative voice of the author, making the text feel authentic to its origin.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'tricolour', 'Fatherland', 'Imperial' and historical designations are accurately and appropriately translated or preserved (e.g., Croats)."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Proper nouns and cultural concepts (e.g., 'aureola of martyrdom,' 'tormentors of Italy') are preserved or translated in a way that respects the original context without modernizing them."
+        }
+      ],
+      "strengths": "The translation effectively navigates cultural and historical specificities, ensuring the reader understands the context without losing the Italian essence of the Risorgimento era.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "One phrase, 'greve le riesciva il ventre nuovamente turgido e fecondo,' is rendered as 'the ascent was difficult for her, her belly again heavy and fecund,' which is an interpretive rephrasing that implicitly adds 'the ascent' as the subject of difficulty, whereas the original implies the heavy belly itself was the burden. Additionally, 'rigò' is translated as 'lined' which is less impactful than 'streaked' or 'marked' would have been."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names (e.g., Porta San Celso, Porta Romana, Milano, Verona, Peschiera, Castelnuovo), and historical figures (Radetzky, Carlo Alberto) are correctly preserved."
+        }
+      ],
+      "strengths": "The translation is largely faithful to the source text, accurately conveying most meanings and preserving key historical and geographical details.",
+      "weaknesses": "There are minor instances of interpretive rephrasing that slightly diverge from the most direct translation, particularly in conveying a specific physical sensation."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The translation maintains a strong narrative flow and literary quality, using evocative language and engaging sentence structures that read naturally in English."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language like 'first plunge into the intense life,' 'metropolis coursed and re-coursed,' and the vivid 'spitting a wild animal' are translated with skill and impact, preserving the original imagery."
+        }
+      ],
+      "strengths": "The translation consistently delivers high literary quality, with engaging prose and effective rendering of imagery and figurative language, making it a compelling read in English.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The phrasing 'the ascent was difficult for her, her belly again heavy and fecund' is grammatically correct but slightly less fluid than it could be. Otherwise, the grammar is excellent throughout the text."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is consistently clear and easy to follow, even with complex sentences that mirror the original, requiring no re-reading for comprehension."
+        }
+      ],
+      "strengths": "The translation is highly readable and clear, with strong grammatical correctness throughout, contributing to an effortless reading experience.",
+      "weaknesses": "One minor instance of slightly less fluid sentence construction was noted, though it does not impede comprehension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Terms like 'aguzzini' ('tormentors'), 'derelitti' ('derelict'), 'tricolore' ('tricolour'), and all proper names are consistently translated or preserved throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The narrative style, tone, and register are consistently maintained throughout the entire passage, contributing to a cohesive and unified reading experience."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent consistency in terminology, names, and overall style, which enhances its reliability and readability.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.9250000000000002,
+  "_tokens": {
+    "input": 5246,
+    "output": 1405
+  }
+}

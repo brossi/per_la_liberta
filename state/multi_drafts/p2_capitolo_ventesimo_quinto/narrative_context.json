@@ -1,0 +1,203 @@
+{
+  "_description": "Narrative reference for translation synthesis grounding. Curated from NER extraction + source text. The synthesizer uses this to verify characters, historical facts, and terminology are not fabricated or confused.",
+
+  "book": {
+    "title": "Per la Libertà!",
+    "subtitle": "Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini",
+    "author": "Cesare Crespi",
+    "published": "1913, Canessa Printing Co., San Francisco",
+    "structure": "Prefazione + Part 1 (24 chapters) + Part 2 (33 chapters)",
+    "narrative_frame": "Crespi, an Italian journalist in San Francisco, visits the elderly Count di Rudio in Los Angeles and records his life story through extended conversations. Part 1 covers di Rudio's youth, education, the Risorgimento, and the Orsini conspiracy. Part 2 covers the trial, imprisonment, escape, and military career in America.",
+    "language_note": "The 1913 Italian uses accento facoltativo liberally and formal literary register throughout. Crespi narrates in third person with frequent first-person interjections; di Rudio's direct speech is presented in extended quoted passages."
+  },
+
+  "characters": {
+    "principals": [
+      {
+        "name": "Conte Carlo di Rudio",
+        "aliases": ["conte di Rudio", "Conte di Rudio", "Rudio", "Carlo", "Major di Rudio", "Captain di Rudio", "Charles C. DeRudio"],
+        "role": "Subject of the book. Italian-born count, Risorgimento participant, co-conspirator with Felice Orsini in the 1858 assassination attempt on Napoleon III. Later served in the U.S. Army (7th Cavalry). Living in Los Angeles at time of interviews.",
+        "born": 1832,
+        "died": 1910,
+        "titles": ["Conte (Count)", "Captain / Major, U.S. Army"],
+        "key_facts": [
+          "Born in Belluno, Veneto",
+          "Educated at military academies in Austria",
+          "Participated in Risorgimento uprisings",
+          "Sentenced to death for Orsini conspiracy, commuted to life on Devil's Island",
+          "Escaped from French Guiana",
+          "Served in U.S. Civil War and Indian Wars",
+          "Present at Battle of Little Bighorn (1876) with 7th Cavalry",
+          "Retired in Los Angeles"
+        ]
+      },
+      {
+        "name": "Cesare Crespi",
+        "aliases": ["Crespi", "the author"],
+        "role": "Author and narrator. Italian journalist based in San Francisco. Visits di Rudio in Los Angeles to record his memoirs.",
+        "key_facts": [
+          "Published by Canessa Printing Co., 708 Montgomery St., San Francisco",
+          "Writes for the Italian-American community"
+        ]
+      },
+      {
+        "name": "Felice Orsini",
+        "aliases": ["Orsini"],
+        "role": "Italian revolutionary. Led the 1858 assassination attempt on Napoleon III. Central figure in the narrative.",
+        "born": 1819,
+        "died": "1858 (executed by guillotine)",
+        "key_facts": [
+          "Born in Meldola, Romagna",
+          "Follower of Mazzini, later broke with him",
+          "Planned bombing of Napoleon III's carriage at the Opéra, January 14, 1858",
+          "Three bombs thrown; Napoleon survived; 8 bystanders killed, ~150 wounded",
+          "Tried and executed March 13, 1858"
+        ]
+      }
+    ],
+
+    "di_rudio_family": [
+      {
+        "name": "Signora Elisa",
+        "aliases": ["Elisa", "the Major's wife"],
+        "role": "Di Rudio's wife. Appears in the framing narrative in Los Angeles.",
+        "notes": "Described as stout, fair hair fading to white, blue eyes, resolute manner"
+      },
+      {
+        "name": "Italia Adair",
+        "aliases": ["Italia"],
+        "role": "Daughter of di Rudio. Very pale, dark eyes, slender. Recovering from appendicitis surgery.",
+        "notes": "Named in tribute to Italy. Married name Adair."
+      },
+      {
+        "name": "Roma Scott",
+        "aliases": ["Roma"],
+        "role": "Daughter of di Rudio.",
+        "notes": "Named in tribute to Rome. Married name Scott."
+      },
+      {
+        "name": "America Vickery",
+        "aliases": ["America"],
+        "role": "Daughter of di Rudio.",
+        "notes": "Named in tribute to America. Married name Vickery."
+      },
+      {
+        "name": "Samuel",
+        "aliases": [],
+        "role": "Italia's son, named after Uncle Sam.",
+        "notes": "Italia wants him to attend West Point."
+      },
+      {
+        "name": "Firstborn son",
+        "aliases": [],
+        "role": "Di Rudio's firstborn, born in England. Lives in Arizona, explorer.",
+        "notes": "Born during 'tragic moments' (likely the Orsini affair aftermath)."
+      }
+    ],
+
+    "orsini_conspirators": [
+      {
+        "name": "Giuseppe Andrea Pieri",
+        "aliases": ["Pieri"],
+        "role": "Co-conspirator. Accompanied Orsini in the bombing.",
+        "died": "1858 (executed)"
+      },
+      {
+        "name": "Antonio Gomez",
+        "aliases": ["Gomez"],
+        "role": "Co-conspirator in the Orsini plot.",
+        "died": "1858 (executed)"
+      },
+      {
+        "name": "Simon Bernard",
+        "aliases": ["Bernard"],
+        "role": "Co-conspirator. Made the bombs in London. Tried in England and acquitted.",
+        "notes": "French-born doctor living in London"
+      }
+    ],
+
+    "historical_figures": [
+      {"name": "Giuseppe Mazzini", "aliases": ["Mazzini"], "role": "Italian revolutionary leader, founder of Giovine Italia. Ideological inspiration for the conspirators."},
+      {"name": "Giuseppe Garibaldi", "aliases": ["Garibaldi"], "role": "Italian general and patriot. Leader of the Expedition of the Thousand."},
+      {"name": "Napoleon III", "aliases": ["Napoleone III", "Luigi Napoleone", "l'Imperatore"], "role": "Emperor of France. Target of the Orsini assassination attempt."},
+      {"name": "Fortunato Calvi", "aliases": ["Calvi", "Pietro Fortunato Calvi"], "role": "Italian patriot and martyr. Portrait hangs in di Rudio's house. Executed by Austria in 1855."},
+      {"name": "Vittorio Emanuele II", "aliases": ["Vittorio Emanuele"], "role": "King of Sardinia, later first King of unified Italy."},
+      {"name": "Josef Radetzky", "aliases": ["Radetzky"], "role": "Austrian field marshal. Commanded Imperial forces in northern Italy."},
+      {"name": "Daniele Manin", "aliases": ["Manin"], "role": "Leader of the Venetian Republic of 1848-49."},
+      {"name": "Presidente Delangle", "aliases": ["Delangle"], "role": "Presiding judge at the Orsini trial."}
+    ],
+
+    "secondary_characters": [
+      {"name": "Fumagalli", "role": "Appears in di Rudio's narrative. Context TBD."},
+      {"name": "Rossi", "role": "Appears in di Rudio's narrative. Context TBD."},
+      {"name": "Morbioli", "role": "Appears in di Rudio's narrative. Context TBD."},
+      {"name": "Giustiniano", "role": "Appears in di Rudio's narrative. Context TBD."},
+      {"name": "Domenico", "role": "Appears in di Rudio's narrative. Context TBD."},
+      {"name": "Trolli", "role": "Appears in di Rudio's narrative. Context TBD."},
+      {"name": "Egassy", "role": "Appears in di Rudio's narrative. Context TBD."}
+    ]
+  },
+
+  "historical_events": [
+    {
+      "name": "Orsini assassination attempt",
+      "date": "January 14, 1858",
+      "location": "Rue Le Peletier, Paris (outside the Opéra)",
+      "description": "Three bombs thrown at Napoleon III's carriage. Emperor survived. 8 killed, ~150 wounded. Led to trial and execution of Orsini, Pieri, and Gomez. Di Rudio sentenced to death, commuted to Devil's Island."
+    },
+    {
+      "name": "Five Days of Milan",
+      "date": "March 18-22, 1848",
+      "description": "Popular uprising against Austrian rule in Milan."
+    },
+    {
+      "name": "Venetian Republic (1848-49)",
+      "date": "1848-1849",
+      "description": "Short-lived republic under Manin, ended by Austrian siege."
+    },
+    {
+      "name": "Coup d'état of Louis-Napoléon",
+      "date": "December 2, 1851",
+      "description": "Louis-Napoléon Bonaparte seized power, becoming Napoleon III. Motivated Italian revolutionaries' hostility toward him."
+    },
+    {
+      "name": "Battle of Little Bighorn",
+      "date": "June 25-26, 1876",
+      "description": "Di Rudio served with 7th Cavalry under Custer. Survived the battle."
+    }
+  ],
+
+  "key_locations": {
+    "italy": ["Belluno", "Milano (Milan)", "Venezia (Venice)", "Roma (Rome)", "Mantova (Mantua)", "Piemonte (Piedmont)", "Genova (Genoa)"],
+    "france": ["Parigi (Paris)", "La Roquette (prison)", "La Conciergerie (prison)", "Île du Diable (Devil's Island, French Guiana)", "Cayenne"],
+    "england": ["Londra (London)"],
+    "america": ["Los Angeles", "San Francisco", "Arizona"],
+    "austria": ["Radonitz (cadet school)", "Torocfalda"],
+    "other": ["Maloggia"]
+  },
+
+  "terminology": {
+    "political": {
+      "Risorgimento": "The Italian unification movement (1815-1871). Do NOT translate — keep as 'Risorgimento' in italics.",
+      "Giovine Italia": "Young Italy, Mazzini's revolutionary society. Keep in Italian with gloss on first use.",
+      "colpo di Stato": "Coup d'état. Use the French term as standard English.",
+      "Carboneria / Carbonari": "Secret revolutionary society. Keep as 'Carbonari'."
+    },
+    "military": {
+      "Bersaglieri": "Elite Italian infantry corps. Keep in Italian.",
+      "Reggimento": "Regiment",
+      "Settimo Cavalleggeri": "7th Cavalry (U.S. Army)"
+    },
+    "legal": {
+      "Giudice d'Istruzione": "Examining magistrate / investigating judge",
+      "Consiglio di guerra": "Court-martial / military tribunal",
+      "Conciergerie": "Paris prison where Orsini conspirators were held. Keep as 'Conciergerie'.",
+      "La Roquette": "Paris prison for those awaiting execution. Keep as 'La Roquette'."
+    },
+    "forms_of_address": {
+      "Conte / Contessa": "Count / Countess",
+      "Signora": "Keep as 'Signora' in dialogue, or use 'Mrs.' in narration as appropriate to context",
+      "Maestro": "Context-dependent: teacher, master, maestro"
+    }
+  }
+}

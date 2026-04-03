@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses sophisticated vocabulary and complex sentence structures, perfectly aligning with the formal, literary register of the early 20th century Italian source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct addresses, rhetorical questions, and personal interjections from the original ('I say that...', 'I ask myself:', 'Nor shall I go down...') are all faithfully and effectively rendered, preserving the author's direct and passionate voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation navigates the blend of formal critique and occasional colloquial-yet-critical terms (e.g., 'pontificating sages,' 'hot-headed,' 'quarantottate!') with skill, maintaining the original's nuanced tone without disruption."
+        }
+      ],
+      "strengths": "The translation masterfully preserves the elevated and polemical literary register, capturing the impassioned and critical voice of the author without sounding anachronistic or stilted. The rhetorical questions and personal interjections are translated effectively, maintaining the direct engagement with the reader.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Key political terms like 'House of Savoy,' 'hateful yoke,' 'Risorgimento,' 'Monarchy,' and 'Counsellors of the Crown' are consistently translated or preserved with accurate and period-appropriate English equivalents."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Italian cultural and historical references, such as 'Capitol,' 'Brutus and the Gracchi,' 'land of carnival,' 'The Hamlet of Italy,' and 'Calvary of suffering,' are either preserved or given culturally equivalent translations. The term 'quarantottate!' is effectively preserved and explained."
+        }
+      ],
+      "strengths": "The translation excels in handling Risorgimento-era terminology and cultural references, maintaining the historical integrity of the text. The choice to preserve and gloss terms like '*quarantottate!*' and '*praticismo*' is particularly effective in providing clarity without diluting the original flavor.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is exceptionally accurate, conveying the full meaning, nuance, and rhetorical force of the Italian source without any discernible omissions or unprompted additions. Complex idioms and metaphors are skillfully rendered."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical references (e.g., Aspromonte, Novara, Mentana, Mazzini, Crispi, Libya) are either directly preserved or translated using standard, widely accepted English equivalents (e.g., Venetia for Veneto, Tyrol for Tirolo)."
+        }
+      ],
+      "strengths": "The translation is exceptionally accurate and faithful, conveying the precise meaning and rhetorical impact of the source text. There are no noticeable omissions or unprompted additions, and the translation effectively handles subtle idiomatic expressions and complex sentence structures.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is consistently sophisticated, articulate, and flows very naturally. It reads as an original piece of literature, maintaining the author's passionate, polemical, and dramatic style without sounding stilted or unnatural."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "The translation masterfully renders the rich figurative language and vivid imagery of the original (e.g., 'fratricidal lead,' 'leaden cloak,' 'Ideality set below the horizon,' 'bastard pragmatism distilled from all that smacks of the most vulgar,' 'sanctuary of Italian identity,' 'iron hand,' 'waves are daily undermining and swallowing'), making them resonate strongly in English."
+        }
+      ],
+      "strengths": "The translation reads as a polished, original piece of English literature. It masterfully conveys the dramatic and rhetorical power of the source text, with particular strength in rendering complex metaphors, vivid imagery, and idiomatic expressions authentically and effectively.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct with sophisticated syntax that reflects the original while remaining perfectly natural and free of awkward constructions for English readers."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite the inherent complexity of the source material and its high literary register, the translation is remarkably clear, cohesive, and easy to follow, requiring no re-reading for comprehension."
+        }
+      ],
+      "strengths": "The English prose is impeccable, demonstrating excellent command of grammar, syntax, and vocabulary. The translation is highly readable, flowing smoothly and clearly, even when conveying intricate ideas and complex sentence structures.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Recurring terms like 'Fatherland,' 'Monarchy,' 'yoke,' and specific historical names are translated or preserved with complete consistency throughout the passage."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a uniform and coherent literary style, tone, and register from beginning to end, ensuring a consistent authorial voice and reading experience."
+        }
+      ],
+      "strengths": "The translation maintains an impressive level of consistency in terminology, character names, and stylistic choices across the entire text. This coherence ensures a unified reading experience that faithfully reflects the author's voice and message throughout the passage.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 8337,
+    "output": 1679
+  }
+}

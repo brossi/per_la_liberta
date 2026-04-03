@@ -1,0 +1,77 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "my full name was hurled squarely at my chest",
+      "replacement": "I felt my full name hurled squarely at my chest",
+      "reason": "The Italian 'mi sentii lanciare' is reflexive — 'I felt [it] hurled at me' — not a passive 'was hurled'. Gemini's 'I felt' restores the first-person sensation of the original."
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "saluted with military honours",
+      "replacement": "receiving a military salute",
+      "reason": "The Italian 'salutato militarmente' means he received a salute; 'military honours' inflates the sense beyond what 'militarmente' conveys."
+    },
+    {
+      "paragraph": 15,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "his great belly wrapped in a white apron",
+      "replacement": "his great paunch wrapped in a white apron",
+      "reason": "'Epa' specifically means paunch (a protruding gut), not just belly. Gemini's 'paunch' is the more precise anatomical register."
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "Several customs officers attended her table",
+      "replacement": "Several finance guards attended her table",
+      "reason": "'Guardie di finanza' are finance guards (fiscal police), not customs officers. They are a distinct corps; Gemini's literal rendering is historically accurate."
+    },
+    {
+      "paragraph": 20,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the façade of the magnificent church gleaming white before me",
+      "replacement": "the façade of the magnificent temple gleaming white before me",
+      "reason": "The Italian is 'magnifico tempio'. Crespi deliberately chose the classicising 'tempio' over 'chiesa'; 'temple' preserves that rhetorical elevation."
+    },
+    {
+      "paragraph": 25,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "I was once again in order",
+      "replacement": "I was once again in fine fettle",
+      "reason": "'Di bel nuovo in assetto' has a colloquial jauntiness that 'in order' misses. Gemini's 'in fine fettle' captures the idiomatic tone better."
+    },
+    {
+      "paragraph": 19,
+      "from_draft": null,
+      "original": "he was a decorator, like the poor Antonio Sciesa",
+      "replacement": "he was an upholsterer, like the poor Antonio Sciesa",
+      "reason": "Neither draft was used. Claude had 'decorator', Gemini had 'tapestry-maker'. The Italian 'tappezziere' most accurately means upholsterer — and Antonio Sciesa is historically documented as an upholsterer. Both drafts were imprecise."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "dazio",
+      "edgren_definition": "custom (duty; toll); custom-place",
+      "english_choice": "customs-post",
+      "paragraph": 2,
+      "note": "Edgren's 'custom-place' confirmed that 'dazio' denotes the physical checkpoint, not just the duty owed. This supported 'customs-post' (a period-appropriate compound) over the Gemini draft's 'custom-house' or a modern 'toll-booth'."
+    },
+    {
+      "italian_word": "mite",
+      "edgren_definition": "mild (clement, merciful, gentle)",
+      "english_choice": "gentle",
+      "paragraph": 5,
+      "note": "A modern default for 'mite' might be 'mild' or 'meek'. Edgren's gloss includes 'gentle', which fits the collocation 'gentle figure' more naturally than 'mild figure' and avoids the connotation of passivity in 'meek'."
+    },
+    {
+      "italian_word": "colpo",
+      "edgren_definition": "blow (stroke): colpo di fucile, gunshot",
+      "english_choice": "gunshot in the back",
+      "paragraph": 26,
+      "note": "The Italian 'schioppettata' (from 'schioppo', musket) needed a period-appropriate English equivalent. Edgren's entry for the related 'colpo di fucile' = 'gunshot' confirmed this as the natural 1900-era English, avoiding a modern 'rifle shot' or 'bullet'."
+    }
+  ]
+}

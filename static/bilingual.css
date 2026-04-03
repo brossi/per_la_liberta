@@ -42,6 +42,7 @@
   --border-light: #ddd;
   --border-ui: #a89a7e;
   --border-ui-hover: #8b7b58;
+  --color-provenance: #2b5797;
   --shadow-panel: 4px 0 24px rgba(0, 0, 0, 0.15);
   --hover-bg: rgba(0, 0, 0, 0.04);
   --backdrop-bg: rgba(0, 0, 0, 0.2);
@@ -779,9 +780,18 @@ body {
 }
 
 .marginalia:hover,
-.marginalia.active {
+.marginalia.active,
+.marginalia.highlight {
   color: var(--color-body);
+  background: rgba(139, 0, 0, 0.08);
+  border-left-width: 2.5px;
   cursor: pointer;
+}
+
+.marginalia.prov:hover,
+.marginalia.prov.active,
+.marginalia.prov.highlight {
+  background: rgba(43, 87, 151, 0.10);
 }
 
 .revised.highlight {
@@ -799,6 +809,48 @@ body {
 
 .no-marginalia .spread {
   justify-content: center;
+}
+
+/* === Provenance Marginalia === */
+.provenance-mark {
+  border-bottom: 1px dotted var(--color-provenance);
+}
+
+.provenance-mark.highlight {
+  background: rgba(43, 87, 151, 0.12);
+  border-bottom-style: solid;
+}
+
+.marginalia.prov {
+  border-left-color: var(--color-provenance);
+}
+
+.margin-source {
+  display: block;
+  font-size: 0.85em;
+  font-variant: small-caps;
+  color: var(--color-provenance);
+  margin-bottom: 0.15em;
+}
+
+.margin-edgren {
+  display: block;
+  font-size: 0.85em;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.no-provenance .marginalia.prov {
+  display: none;
+}
+
+.no-provenance .provenance-mark {
+  border-bottom: none;
+}
+
+.italian-linked.highlight {
+  background: rgba(43, 87, 151, 0.15);
+  border-radius: 2px;
 }
 
 /* === Print / PDF (WeasyPrint paged media) === */

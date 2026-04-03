@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively uses vocabulary and sentence structures appropriate for a literary work from the early 20th century, closely mirroring the original's formal yet dramatic style."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The first-person narrative and dialogue consistently reflect a direct, engaging, and reflective authorial voice throughout the passage."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 0.0,
+          "note": "The original Italian utilizes both informal (\"tu\") and formal (\"Lei\") address, indicating social relationships and respect. The English translation uses a universal \"you\" and does not employ any linguistic device to convey these important shifts."
+        }
+      ],
+      "strengths": "The translation largely captures the dramatic and reflective tone of the original, using appropriate literary vocabulary and maintaining the first-person narrative voice consistently.",
+      "weaknesses": "The inability to reflect the formal/informal distinctions of address in Italian (tu/Lei) is a notable limitation, though common when translating into English."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like \"Providence,\" \"Fatherland,\" \"Police,\" \"ruffians,\" and \"imperial royal authorities\" are well-translated. The derogatory \"mangiacandele\" is correctly identified and glossed."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "Many cultural references, such as \"Don Bastiano,\" \"left his bones in Venezia,\" \"great plucker of the strings,\" and \"rosary,\" are preserved effectively. However, the figurative \"incrostato di sali croati\" is literally translated as \"encrusted with Croatian salt,\" which is misleading as \"sali\" here refers to accents or inflections. Additionally, a dialect phrase in the sergeant's speech is left untranslated without a gloss (\"el garon o un falò de la tua casa e di to straèsi\")."
+        }
+      ],
+      "strengths": "The translation is effective in preserving most Italian cultural references and rendering political terms appropriately for the historical period, including the helpful gloss for 'mangiacandele'.",
+      "weaknesses": "A literal translation of a figurative phrase ('sali croati') misrepresents its meaning, and an untranslated dialect phrase reduces accessibility for the English reader."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.0,
+          "note": "There are significant deviations. A pronoun error attributes \"her triumph\" to Caterina instead of Giustiniano (\"soggiunsi per dire il suo trionfo\"). The \"sali croati\" misinterpretation changes meaning. Most critically, an entire paragraph describing the soldier polishing a boot (lines 200-204 and lines 212-215 of the English) is repeated in the English text, but only appears once in the Italian source, constituting an unfaithful addition."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names (Venezia, Belluno, Padova, Agordo, Cadore, Boemia), and historical figures (Cesare Crespi, Carlo di Rudio, Orsini, Fortunato Calvi, Giuseppe Mazzini) are correctly preserved."
+        }
+      ],
+      "strengths": "Proper nouns, place names, and historical references are accurately preserved.",
+      "weaknesses": "A major flaw is the unfaithful addition of a repeated paragraph not present in the source. There are also semantic errors, such as the misinterpretation of 'sali croati' and an incorrect pronoun reference."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.0,
+          "note": "While many passages read naturally, the awkward translation of \"incrostato di sali croati,\" the semantic and grammatical error of \"I added to pronounce her triumph,\" and especially the unfaithful repetition of a full paragraph significantly disrupt the natural flow and literary quality, making it feel less like polished literature."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 0.5,
+          "note": "Many figurative expressions, such as \"tread on the toes,\" \"tickled the roof,\" \"clings tenaciously,\" and \"mirror the picturesque majesty,\" are well-rendered. However, the literal translation of \"sali croati\" as \"Croatian salt\" and the untranslated dialect phrase reduce the effectiveness of imagery, and \"farla bella\" is translated somewhat generically as \"finish this.\""
+        }
+      ],
+      "strengths": "The translation successfully renders many evocative figurative expressions and maintains a generally descriptive narrative style.",
+      "weaknesses": "The flow is severely hampered by a repeated paragraph that does not exist in the original. Misinterpretations of certain figurative phrases and untranslated dialect also detract from the overall literary quality."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.0,
+          "note": "The most significant issue is the repetition of an entire paragraph (lines 200-204 and lines 212-215 of the English translation), which is not present in the Italian source at that specific point. This is a severe structural and grammatical error. Other minor issues include the awkward phrasing of \"I added to pronounce her triumph.\""
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 0.0,
+          "note": "The repeated paragraph and the other noted errors (pronoun error, misleading figurative language) disrupt readability and clarity, forcing the reader to re-read and puzzle over meaning and narrative progression."
+        }
+      ],
+      "strengths": "Individual sentences are often grammatically correct and readable.",
+      "weaknesses": "The unfaithful repetition of a paragraph not in the source text is a critical error, severely impacting the overall structural coherence, grammar, and fluency. This causes significant confusion and necessitates re-reading."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names (Mamma, Papa, Giustiniano, Domenico, Caterina, Luisa, Carletto) and key terms (\"Police,\" \"ruffians,\" \"mangiacandele\") are consistently translated or retained."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 0.0,
+          "note": "The unfaithful repetition of a paragraph, which is not present in the original Italian source at that point, creates a severe break in narrative coherence and overall textual structure, despite consistent lexical and syntactical choices."
+        }
+      ],
+      "strengths": "Character names and key recurring terms are translated and used consistently throughout the passage.",
+      "weaknesses": "The translation fails to maintain narrative coherence due to the unfaithful repetition of a large paragraph, which disrupts the logical flow and introduces a jarring inconsistency in the text's structure."
+    }
+  ],
+  "weighted_score": 0.5041666666666667,
+  "_tokens": {
+    "input": 14038,
+    "output": 1889
+  }
+}

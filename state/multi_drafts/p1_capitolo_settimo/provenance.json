@@ -1,0 +1,63 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "prolonged the agony of the Republic by a full month",
+      "replacement": "prolonged the agony of the Republic by a month",
+      "reason": "The Italian 'di un mese' means simply 'by a month'; the primary draft's 'full' was an unjustified addition"
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "which will shortly witness the fall of Luciano Manara, gasping his last breath",
+      "replacement": "which will shortly witness Luciano Manara fall gasping",
+      "reason": "The Italian 'vedrà cadere boccheggiante Luciano Manara' places the verb and participle together; the Gemini draft's more direct syntax ('Manara fall, gasping') better reflects this, and the final tightens it further by dropping the comma"
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "Courage is the final proof!",
+      "replacement": "Courage — it is the final trial!",
+      "reason": "The Gemini draft's structure 'Courage, it is the final test' better conveys the Italian exclamatory rhythm 'Coraggio è l'ultima prova!'; the word 'trial' (neither draft's choice) was preferred as it captures both the sense of ordeal and of testing, fitting the battlefield context more precisely than 'proof' or 'test'"
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "The self-styled agent of the good Lord",
+      "replacement": "The self-styled procurator of the good Lord",
+      "reason": "The Italian 'procuratore' specifically means procurator (one who acts on another's authority), not the vaguer 'agent'; Gemini's 'procurator' is the precise and period-appropriate term"
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the final sigh of Anita",
+      "replacement": "the last moan of Anita",
+      "reason": "The Italian 'gemito estremo' means 'last moan/groan', not 'sigh'; the primary draft's 'sigh' softened the original's anguish. 'Moan' (from neither draft — Gemini had 'groan') was chosen as closer to the Italian 'gemito' while less guttural than 'groan'; 'last' for 'estremo' follows Gemini"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "feretro",
+      "edgren_definition": "bier",
+      "english_choice": "bier",
+      "paragraph": 2,
+      "note": "Edgren defines feretro strictly as 'bier' (the frame on which a corpse is carried), confirming this over Gemini's 'casket'. A modern translator might default to 'coffin' or 'casket', but 'bier' is both more precise and more period-appropriate."
+    },
+    {
+      "italian_word": "palpebra",
+      "edgren_definition": "eyelid",
+      "english_choice": "let fall an eyelid",
+      "paragraph": 2,
+      "note": "Edgren confirms palpebra as 'eyelid'. The Italian 'batter palpebra' (beat an eyelid) is an idiom for blinking; the literal rendering 'let fall an eyelid' preserves the physical image that Crespi chose, whereas Gemini's 'blink' loses the bodily concreteness."
+    },
+    {
+      "italian_word": "parola",
+      "edgren_definition": "word (term); parole; permission",
+      "english_choice": "parole",
+      "paragraph": 17,
+      "note": "Edgren lists 'parole' as a distinct sense of parola. In the court-martial context ('non avendo io ancora data la mia parola'), the military meaning — a prisoner's formal pledge not to escape — is exactly right. Gemini's 'word' is technically accurate but misses the precise military-legal term that the context demands."
+    }
+  ]
+}

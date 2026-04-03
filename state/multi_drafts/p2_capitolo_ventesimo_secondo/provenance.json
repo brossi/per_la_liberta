@@ -1,0 +1,154 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "fifty strokes of the rope",
+      "replacement": "fifty lashes of the rope",
+      "reason": "Italian 'colpi di corda' is closer to 'lashes' (blows delivered by a rope) than 'strokes', which sounds more like caning"
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "That villainy was so entirely out of place",
+      "replacement": "That piece of coarseness was so entirely uncalled for",
+      "reason": "Italian 'villania' means coarseness or rudeness, not villainy in the English sense of evil scheming; 'uncalled for' better renders 'fuor di proposito' than 'out of place'"
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro",
+      "original": "resolved to suppress every impulse",
+      "replacement": "resolved to repress every impulse",
+      "reason": "Italian 'reprimere' maps directly to 'repress'; Gemini used this verb"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "some fifty convicts who formed my gang",
+      "replacement": "some fifty convicts who formed my squad",
+      "reason": "'Squad' better renders 'squadra' and avoids the criminal connotation of 'gang', which would colour the narrator's tone inappropriately"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "our bones broken",
+      "replacement": "our bones aching",
+      "reason": "Italian 'le ossa rotte' is idiomatic for exhaustion, not literal fracture; 'aching' conveys the intended sense more naturally in English"
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "A pile of tree-trunks",
+      "replacement": "A pile of logs",
+      "reason": "'Tronchi' in context (pieces to be carried on shoulders) are logs, not whole tree-trunks; 'logs' is more concise and fits the labour described"
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "five consecutive journeys",
+      "replacement": "five consecutive trips",
+      "reason": "'Trips' is more colloquial and appropriate for repeated back-and-forth portage than 'journeys', which implies greater distance"
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro",
+      "original": "your skull will no longer see the sun from the top of your shoulders",
+      "replacement": "your pumpkin will see the sun no more from atop your shoulders",
+      "reason": "Italian 'zucca' literally means pumpkin/gourd; keeping the vegetable metaphor preserves the overseer's mocking register"
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_gemini__pro",
+      "original": "the clerk of the superintending Engineer",
+      "replacement": "the clerk of the supervising Engineer",
+      "reason": "'Soprintendente' is closer to 'supervising' than to the more formal 'superintending'"
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_gemini__pro",
+      "original": "sooner or later you are done for!",
+      "replacement": "sooner or later, you are a dead man!",
+      "reason": "Italian 'sei spacciato' is blunter than 'done for'; 'you are a dead man' preserves the direct menace of the clerk's warning"
+    },
+    {
+      "paragraph": 14,
+      "from_draft": "draft_gemini__pro",
+      "original": "the Sun gazed peacefully, lordly",
+      "replacement": "the Sun gazed placidly, lordly",
+      "reason": "Italian 'placidamente' maps to 'placidly' more precisely than 'peacefully'; retains the Latinate register"
+    },
+    {
+      "paragraph": 19,
+      "from_draft": "draft_gemini__pro",
+      "original": "Each convict ran to his own and ate",
+      "replacement": "Each convict ran to his own and devoured it",
+      "reason": "Italian 'divorava' means devoured, not merely ate; preserving the stronger verb conveys the hunger of the convicts"
+    },
+    {
+      "paragraph": 20,
+      "from_draft": "draft_gemini__pro",
+      "original": "had become fierce",
+      "replacement": "had become ferocious",
+      "reason": "Italian 'feroce' is 'ferocious'; the stronger adjective suits the extremity of the narrator's hunger after forced labour"
+    },
+    {
+      "paragraph": 25,
+      "from_draft": "draft_gemini__pro",
+      "original": "to deceive any eyes that might still be open",
+      "replacement": "to deceive any eyes that might still be awake",
+      "reason": "Italian 'desti' means awake, not open; eyes being 'awake' implies alert watchfulness rather than merely open lids"
+    },
+    {
+      "paragraph": 28,
+      "from_draft": "draft_gemini__pro",
+      "original": "threw the entire penal colony into confusion",
+      "replacement": "threw the entire penal colony into turmoil",
+      "reason": "Italian 'sconvolse' conveys violent upheaval; 'turmoil' is stronger than 'confusion' and closer to the original force"
+    },
+    {
+      "paragraph": 31,
+      "from_draft": "draft_gemini__pro",
+      "original": "The catastrophe was rapid beyond all telling",
+      "replacement": "The catastrophe was swift beyond all telling",
+      "reason": "Italian 'rapida' can be either, but 'swift' has a more literary register that suits the passage's tone"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "soverchio",
+      "edgren_definition": "excessive (SUPERabundant)",
+      "english_choice": "excessive",
+      "paragraph": 1,
+      "note": "Edgren confirms 'soverchio' means 'excessive' rather than the weaker 'undue' or 'particular'; both drafts had this right, and the final retains it"
+    },
+    {
+      "italian_word": "anzi",
+      "edgren_definition": "instead; on the contrary; rather, nay; before",
+      "english_choice": "Indeed",
+      "paragraph": 1,
+      "note": "Edgren lists 'nay' (used by Claude draft) and 'rather/on the contrary'. The final chose 'Indeed' to avoid the archaic 'Nay' while preserving the intensifying force Edgren documents; a compromise between the drafts"
+    },
+    {
+      "italian_word": "derelitto",
+      "edgren_definition": "derelict (abandoned)",
+      "english_choice": "wretches",
+      "paragraph": 3,
+      "note": "Edgren gives 'derelict (abandoned)' as the core sense. Gemini used 'derelicts' literally; the final preferred 'wretches' (from the Claude draft) because the Italian usage here emphasises pitiable condition more than abandonment"
+    },
+    {
+      "italian_word": "confluente",
+      "edgren_definition": "flowing together; confluence",
+      "english_choice": "confluence",
+      "paragraph": 3,
+      "note": "Edgren confirms the geographical sense directly; both drafts and the final use it"
+    },
+    {
+      "italian_word": "reale",
+      "edgren_definition": "royally, regally; really; royalty",
+      "english_choice": "Royale",
+      "paragraph": 2,
+      "note": "Edgren's entry for 'reale' confirms the primary sense is 'royal'; retained in the French place-name rather than translating to English"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "so many afflictions",
+      "replacement": "so much bitterness",
+      "reason": "Italian 'tante amarezze' derives from 'amaro' (bitter); 'bitterness' is the literal and more precise rendering, whereas 'afflictions' broadens the sense away from the original metaphor"
+    },
+    {
+      "paragraph": 15,
+      "from_draft": "draft_gemini__pro",
+      "original": "at the Castle",
+      "replacement": "at the Castello",
+      "reason": "The Castello Sforzesco is a specific Milanese landmark; retaining the Italian proper noun preserves the cultural-historical referent, consistent with keeping other Italian place names (Piazza Mercanti, Belfiore) untranslated"
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro",
+      "original": "at the Castle",
+      "replacement": "at the Castello",
+      "reason": "Same rationale as paragraph 15 — consistency in retaining the Castello as a proper noun throughout the chapter"
+    }
+  ],
+  "edgren_influences": []
+}

@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal, reflective, and slightly archaic literary register consistent with the original's early 20th-century style."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation effectively conveys the narrative's conversational intimacy, particularly in asides and personal reflections, without losing its literary quality."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation handles shifts in formality well, from descriptive passages to impassioned political commentary, mirroring the original's tone."
+        }
+      ],
+      "strengths": "The translation excels at capturing the original's elegant yet direct narrative voice, preserving the period-appropriate literary register and the author's passionate, reflective tone. Phrases like 'To cry up to heaven' and 'but moments before ringing with cheers' perfectly align with the source's stylistic nuances.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'imperial cortège,' 'municipal guards,' 'Lanciers of the Imperial Guard,' and capitalized 'Peoples' and 'Liberty' are well-translated, reflecting the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "The crucial idiom 'l'Italiano non paga il Sabato ma paga!' is preserved and translated effectively as 'The Italian does not pay on Saturday — but he does pay!', maintaining its cultural impact."
+        }
+      ],
+      "strengths": "The translation is highly successful in adapting cultural and historical references. The rendition of 'via Le Pelletier' as 'rue Le Pelletier' is a particularly good example of context-aware adaptation. The handling of the Italian proverb demonstrates a deep understanding of its significance.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation accurately conveys the full meaning of the source text, with no notable omissions or unmerited additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "While most proper nouns and place names are preserved or appropriately adapted ('rue Le Pelletier'), the translation reproduces 'Eugenia Moutijo' as written in the source, rather than correcting it to the historically accurate 'Montijo' (Empress Eugénie de Montijo)."
+        }
+      ],
+      "strengths": "The translation is remarkably faithful to the source's content and nuance. Complex sentences and emotionally charged passages are rendered with precision, ensuring the author's intended message and imagery are fully conveyed.",
+      "weaknesses": "The main weakness is the uncorrected spelling of Empress Eugénie's surname ('Moutijo' instead of 'Montijo'), which, while faithful to the literal source text provided, introduces a factual inaccuracy for a historical figure."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant, reads very naturally, and flows beautifully, making it an engaging literary piece in its own right."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'drunkenness of blood,' 'nose like a vulture's beak,' 'eternal feminine,' and 'horses that seemed to pour forth in swarms from the night,' is translated with impressive vividness and impact."
+        }
+      ],
+      "strengths": "The literary quality of this translation is outstanding. It avoids stiffness and reads as if originally conceived in English, with strong command of imagery and evocative phrasing. The dramatic moments and philosophical reflections are particularly well-executed.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct and free of any awkward phrasing, contributing to its high readability."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and fluent, allowing for effortless reading and comprehension without any need for re-reading."
+        }
+      ],
+      "strengths": "The translation is grammatically impeccable and flows with natural ease. It demonstrates excellent command of English syntax and vocabulary, resulting in a highly accessible and pleasant reading experience.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Recurring terms and character names (Orsini, Gomez, Pieri, Napoleon III, Lancers of the Imperial Guard, imperial cortège) are translated consistently."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a uniform and coherent style throughout the entire passage, ensuring a consistent reading experience."
+        }
+      ],
+      "strengths": "The translation exhibits strong consistency in terminology, names, and overall style, which reinforces its professional quality and readability.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 4156,
+    "output": 1540
+  }
+}

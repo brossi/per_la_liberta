@@ -1,0 +1,70 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "We watched the brutally compliant workers employed in the manufacture of cartridges emerge from the gateway",
+      "replacement": "We watched the workers employed in the manufacture of cartridges emerge from the gateway",
+      "reason": "Both evaluations flagged 'brutalmente paghi' as mistranslated — Claude rendered it 'brutally compliant', Gemini as 'brutally satisfied'. Neither is right ('paghi' here likely means 'paid'). Rather than pick either wrong reading, the phrase was dropped entirely to avoid introducing a false nuance."
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "convoked the Comizi",
+      "replacement": "convoked the electoral assemblies",
+      "reason": "Gemini translated 'Comizi' as 'electoral colleges'; Claude retained the untranslated Italian. The final translates the term (as Gemini did) but uses 'electoral assemblies' as a more accurate rendering of the Italian sense — 'comizi elettorali' are public assemblies for voting, not the specialised American institution of an 'electoral college'."
+    },
+    {
+      "paragraph": 19,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "*fanciullaggine senile* — a second childhood of the aged!",
+      "replacement": "senile childishness!",
+      "reason": "Gemini's terse 'senile childishness' matches the blunt rhetorical punch of the Italian ('fanciullaggine senile!') better than Claude's explanatory gloss. The original is an aphoristic exclamation; padding it with an italicised Italian phrase plus an English paraphrase weakens the impact."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "hero Gilliat",
+      "replacement": "hero Gilliatt",
+      "reason": "The character in Hugo's 'Les Travailleurs de la mer' is spelled Gilliatt (double-t). Gemini had the correct spelling."
+    },
+    {
+      "paragraph": 27,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "also skillfully brought to bear",
+      "replacement": "also skilfully brought to bear",
+      "reason": "Minor normalisation to British spelling ('skilfully'), consistent with the rest of the translation's orthographic register (e.g. 'honour', 'colour', 'terrorise')."
+    },
+    {
+      "paragraph": 28,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "Nor is the not being there a sufficient defence",
+      "replacement": "Nor is not being there a sufficient defence",
+      "reason": "Gemini's version without the extra 'the' reads more naturally. The Italian 'Né il non esservi è sufficiente difesa' uses the article with the infinitive (standard Italian nominalisation), but the English article before 'not being' is awkward and unnecessary."
+    },
+    {
+      "paragraph": 34,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the bloodless guillotine of Cayenne",
+      "replacement": "the dry guillotine of Cayenne",
+      "reason": "'Ghigliottina arida' is the Italian calque of the French 'guillotine sèche' — the established historical term for deportation to the penal colonies (death by slow attrition rather than the blade). 'Dry guillotine' is the standard English rendering of this idiom; 'bloodless' is an interpretation that loses the fixed phrase."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "rapporto",
+      "edgren_definition": "rapport (relation, connection)",
+      "english_choice": "connections",
+      "paragraph": 1,
+      "note": "Gemini defaulted to 'relations'; the Edgren entry's explicit listing of 'connection' alongside 'relation' confirmed 'connections' (from the Claude draft) as an equally valid and slightly more natural English choice for 'rapporti' in the sense of established ties with a political club."
+    },
+    {
+      "italian_word": "ricambiare",
+      "edgren_definition": "change again; exchange; requite (repay, return)",
+      "english_choice": "return love for love",
+      "paragraph": 3,
+      "note": "The Edgren sense 'requite (repay, return)' supported the Claude draft's fuller 'return love for love' over Gemini's compressed 'return love for pure love'. The period-appropriate 'requite' sense emphasises reciprocity, which 'love for love' captures."
+    }
+  ]
+}

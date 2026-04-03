@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses vocabulary and sentence structures appropriate for a literary work from the early 20th century, mirroring the Italian's register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation effectively conveys Crespi's engaging, conversational tone, including rhetorical questions and direct interjections (e.g., 'let us be clear!')."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The Italian original maintains a largely consistent, slightly formal tone, which is accurately reflected in the English translation without noticeable inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels at capturing the author's distinctive voice and the literary register of the period, making it feel authentic to the source text's era.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Risorgimento,' 'petty tyrants,' and 'holy cause' are translated or retained appropriately, fitting the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Cultural references such as 'Moretto,' 'concentrated sunbeams,' and 'via crucis' are either retained or translated in a way that preserves their original meaning and nuance."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the cultural and historical context, effectively adapting or retaining specific Italian references.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate, there's a potential misinterpretation of 'rantoli di elisia' as 'death-rattles of Elysium,' which clashes with the usual meaning of Elysium and the context of suffering. Also, 'Whapping Docks' is a misspelling of 'Wapping Docks'."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "The capitalization of 'Di Rudio' versus 'di Rudio' is inconsistent throughout the text (the original Italian uses lowercase 'di'). There is also a factual error in the spelling of 'Whapping Docks' instead of 'Wapping Docks'."
+        }
+      ],
+      "strengths": "The translation successfully renders many idiomatic expressions and complex phrases, maintaining the original meaning and specific details.",
+      "weaknesses": "The primary weakness lies in a potentially inaccurate interpretation of a specific literary phrase and minor inconsistencies/errors in proper noun rendering and spelling."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "While generally good, some phrases, such as 'as well as a seasoned chorister' or 'that her broadly drawn chin,' feel slightly stiff or overly literal, occasionally disrupting the natural flow of the English prose."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Most figurative expressions and vivid imagery are translated effectively, preserving their poetic quality and impact (e.g., 'like a peppercorn,' 'embroidered upon the fibrils of those souls')."
+        }
+      ],
+      "strengths": "The translation largely maintains the evocative imagery and literary flair of the original, making many passages enjoyable to read.",
+      "weaknesses": "A few instances of slightly unnatural or clunky phrasing prevent the prose from consistently achieving a completely seamless literary flow, and the 'Elysium' interpretation affects one specific image's effectiveness."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "While grammatically correct, there are a few awkward constructions (e.g., 'as well as a seasoned chorister,' 'that her broadly drawn chin') that could be rephrased for better fluency and naturalness in English."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite minor phrasing issues, the text is clear and easy to follow, allowing for smooth reading without the need for re-reading to grasp meaning."
+        }
+      ],
+      "strengths": "The translation is highly readable and clear, ensuring that the narrative is easily understood by the reader.",
+      "weaknesses": "Some sentences exhibit minor awkwardness that, while not impeding comprehension, could be polished for enhanced stylistic grace."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "The capitalization of 'di Rudio' (used lowercase in the Italian) is inconsistent, appearing as 'Di Rudio' in some instances and 'di Rudio' in others."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a consistent stylistic register throughout the entire passage, ensuring a cohesive reading experience."
+        }
+      ],
+      "strengths": "The overall style and tone are maintained consistently across the entire text.",
+      "weaknesses": "Inconsistent capitalization of a key character's name detracts from perfect consistency."
+    }
+  ],
+  "weighted_score": 0.8125,
+  "_tokens": {
+    "input": 10862,
+    "output": 1526
+  }
+}

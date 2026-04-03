@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently employs formal and slightly archaic language, fitting the early 20th-century Italian source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct address, rhetorical questions, and the natural flow of argument are well preserved, capturing the engaged and reflective voice of the narrator."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation accurately reflects the narrator's impassioned, sometimes colloquial interjections, while maintaining a formal address where appropriate (e.g., to the priest)."
+        }
+      ],
+      "strengths": "The translation excels at capturing the distinct literary register and the dynamic, conversational yet polemical tone of the original. The English prose feels authentic to the period.",
+      "weaknesses": "None observed."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Political terms like 'French Police,' 'Government of Napoleon III,' and 'General Staff' are appropriately rendered, maintaining historical accuracy."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Cultural references like 'Moloch,' 'onions' (as a pagan worship object), and 'Occident' are preserved. The inclusion of `*istigazione* — instigation —` serves as an appropriate gloss."
+        }
+      ],
+      "strengths": "The translation successfully navigates cultural references, either preserving them directly or offering clear, period-appropriate equivalents/glosses.",
+      "weaknesses": "None observed."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "The meaning is conveyed accurately throughout. However, the addition of 'CHAPTER THE THIRTIETH' is not present in the source text provided, and the gloss `*istigazione* — instigation —` is a minor textual addition, though it clarifies rather than alters meaning."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Proper nouns (Allsop, Elisa, Le Houx), place names (London, Rome), and historical figures (Napoleon III, Apollo, Bacchus, Mithras) are all handled correctly, with standard Anglicization where appropriate."
+        }
+      ],
+      "strengths": "The translation is remarkably faithful to the original text, accurately conveying complex arguments, imagery, and emotional depth.",
+      "weaknesses": "The insertion of a chapter heading and a glossary-like note for 'istigazione' are minor additions not present in the original source text itself, though they do not distort meaning."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly natural and engaging, reading as a polished piece of literature rather than a literal rendition. Sentence structures and vocabulary choices contribute to excellent flow."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and vivid imagery are consistently translated with skill, employing strong English idioms and evocative phrasing (e.g., 'cards on the table,' 'cared not a jot,' 'seized the opportunity on the wing,' 'noose of need')."
+        }
+      ],
+      "strengths": "The literary quality is a major strength, with the translation successfully re-creating the stylistic richness and narrative power of the original.",
+      "weaknesses": "None observed."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The grammar is largely correct. However, 'But my inexperience wore thin my wages' is a somewhat awkward, literal phrasing for 'assottigliava la mercede' (reduced my wages), though understandable."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The translation is exceptionally clear and easy to read, even with its formal register and complex arguments. It flows smoothly without requiring the reader to pause or re-read."
+        }
+      ],
+      "strengths": "The translation maintains high readability and clarity, making the complex philosophical and emotional arguments easily accessible.",
+      "weaknesses": "One minor instance of slightly awkward phrasing was noted, indicating a rare lapse from otherwise flawless grammar and natural expression."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names (Elisa, Le Houx) and key terms (e.g., 'obstacles' for 'inciampi') are translated consistently."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The formal and literary style of the translation is coherent and well-maintained throughout the entire passage, contributing to a unified reading experience."
+        }
+      ],
+      "strengths": "Consistency in terminology, character names, and overall stylistic approach is excellent, ensuring a cohesive and professional translation.",
+      "weaknesses": "None observed."
+    }
+  ],
+  "weighted_score": 0.9250000000000002,
+  "_tokens": {
+    "input": 5688,
+    "output": 1484
+  }
+}

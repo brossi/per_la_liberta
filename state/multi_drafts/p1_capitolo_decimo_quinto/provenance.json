@@ -1,0 +1,48 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "no less easy was it to prove gaining an audience with the man",
+      "replacement": "being presented to the man was not to prove so easy for me",
+      "reason": "Gemini's sentence structure is clearer and more natural. 'Presented' also matches the Italian 'l'essere presentato all'uomo' more faithfully than Claude's 'gaining an audience', while Gemini's own 'introduced' was less literal."
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "saved from miserly selfishness",
+      "replacement": "wrested from avaricious selfishness",
+      "reason": "'Wrested' renders Italian 'sottratto' (taken away, wrested) more accurately than 'saved'. 'Avaricious' is closer to Italian 'avaro' than 'miserly'. 'Selfishness' was retained from Claude over Gemini's 'egoism' as it reads more naturally in English."
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "replaced it",
+      "replacement": "put it away",
+      "reason": "Italian 'ripose' means 'put away / stored'; Gemini's 'put it away' is more accurate than Claude's 'replaced it', which wrongly implies returning it to a previous location."
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "breathed new life into the Motherland",
+      "replacement": "breathed new life into the Fatherland",
+      "reason": "'Fatherland' is the established English convention for Italian 'Patria' in Risorgimento literature. 'Motherland' skews toward Russian or German associations."
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the hopes of the Motherland",
+      "replacement": "the hopes of the Fatherland",
+      "reason": "Consistency with the Fatherland/Patria convention adopted in paragraph 8."
+    },
+    {
+      "paragraph": 27,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "several images moulded into the wall",
+      "replacement": "several pictures pasted upon the wall",
+      "reason": "Italian 'immagini impastate alla parete' means images pasted/plastered onto the wall. Claude's 'moulded into' misreads 'impastate' (pasted) as a sculpting term; Gemini's 'pictures pasted on the wall' is accurate."
+    }
+  ],
+  "edgren_influences": []
+}

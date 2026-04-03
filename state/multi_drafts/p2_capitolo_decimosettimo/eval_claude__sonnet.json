@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses elevated and formal vocabulary and sentence structures that successfully evoke the early 20th-century literary register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrative voice is well-maintained, blending reflective, slightly rhetorical passages with direct address, mirroring the original's engaging style."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "Subtle shifts in formality, such as in dialogue or strong figurative language, are handled adeptly, translating directness while preserving the overall elevated tone."
+        }
+      ],
+      "strengths": "The translation perfectly captures the elevated, reflective, and slightly rhetorical tone of the original, immersing the reader in the early 20th-century literary style. The narrative voice is consistently maintained, and subtle shifts in formality are handled adeptly.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Political and institutional terms like 'Palais de Justice,' 'Imperial Procurator,' and 'papal penitentiary' are accurately and appropriately translated for the historical and French context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "Most cultural references, such as 'baiocchi (small coins)' and newspaper titles, are well-preserved or glossed. The translation of 'Saturno' to 'Saturn' and 'Senna' to 'Seine' are minor deviations from preserving proper nouns, although 'Seine' is a common and acceptable translation for the river."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong grasp of the historical and political context, accurately rendering institutional and political terms. It also handles specific cultural references like 'baiocchi' very well, providing necessary context without over-explanation.",
+      "weaknesses": "The translation of the proper name 'Saturno' to 'Saturn' is a minor deviation, and 'Senna' to 'Seine' is standard but still a translation of a proper noun."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation consistently conveys the precise meaning of the Italian source text, with no discernible omissions or additions of content."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "Most proper nouns and historical references are preserved. The translation of 'Saturno' to 'Saturn' and 'Senna' to 'Seine' are minor departures, though the latter is a common practice for well-known geographical features."
+        }
+      ],
+      "strengths": "The translation demonstrates high fidelity to the source text, accurately capturing its meaning, nuances, and powerful imagery without adding or omitting information. Key historical figures and terms are rendered precisely.",
+      "weaknesses": "The translation of the name 'Saturno' to 'Saturn' is a minor deviation, and 'Senna' to 'Seine' is standard but still a translation of a proper noun."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is sophisticated, articulate, and flows very naturally, reading as a polished piece of literature rather than a literal translation."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "All figurative expressions and vivid imagery from the source text are translated with remarkable effectiveness, preserving their impact and nuance."
+        }
+      ],
+      "strengths": "The English prose is exceptionally well-crafted, reading like original literature rather than a translation. It maintains a sophisticated and flowing style, and all figurative language and vivid imagery from the source text are rendered with striking effectiveness.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The translation is grammatically impeccable, with complex sentences constructed clearly and elegantly, free of any awkward phrasing."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite its sophisticated vocabulary and sentence structure, the translation is highly readable and clear, allowing for a smooth and uninterrupted reading experience."
+        }
+      ],
+      "strengths": "The translation exhibits flawless grammar and is remarkably fluent, reading as native and natural English prose. It is highly readable and clear, even with its complex sentence structures and elevated vocabulary.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All recurring terms, character names, and key concepts are translated with perfect consistency throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The style, tone, and register remain coherent and uniform across all paragraphs, contributing to a seamless reading experience."
+        }
+      ],
+      "strengths": "The translation maintains exceptional consistency in its rendering of recurring terms, proper names, and stylistic choices throughout the entire passage, contributing to a cohesive and unified reading experience.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 0.9,
+  "_tokens": {
+    "input": 7567,
+    "output": 1515
+  }
+}

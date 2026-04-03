@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses a formal and eloquent vocabulary, matching the early 20th-century Italian literary style."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrative remains personal, reflective, and engaging, capturing the speaker's direct address and emotional states effectively."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The tone remains consistently formal and literary, mirroring the original's sustained register even during direct speech."
+        }
+      ],
+      "strengths": "The translation excels at preserving the elevated, descriptive, and slightly dramatic tone of the original. It successfully conveys the author's voice as both a chronicler and an emotional participant in the events.",
+      "weaknesses": "No significant weaknesses observed in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'condannato politico' (political convict), 'Popolo' (People, capitalized when referring to the nation), and references to unification efforts are accurately translated with appropriate historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "References such as 'mustacchi, alla Vittorio Emanuele II' (moustaches, in the style of Vittorio Emanuele II) are handled well, providing the necessary cultural specificities without over-explanation or modernization."
+        }
+      ],
+      "strengths": "The translation maintains key cultural and historical references, enriching the reader's understanding of the original context without alienating them. Capitalization of 'Popolo' and 'Fatherland' is particularly effective.",
+      "weaknesses": "None noted."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "The translation is highly accurate, though a few phrases like 'rinforzato ornato i calzoni dell'ergastolo' ('reinforced and adorned my prison trousers') could be slightly less literal to better convey 'made presentable' rather than 'decorated'. Also, 'a belati' as 'with bleating' is very literal and might miss some nuance of 'amicably' or 'meekly' in context."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical figures (e.g., Orsini, Mazzini, Palmerston, Vittorio Emanuele II) are correctly preserved."
+        }
+      ],
+      "strengths": "The translation is remarkably faithful to the source text, maintaining the narrative's details, events, and emotional arc with high precision. It avoids significant omissions or additions.",
+      "weaknesses": "A few instances of slightly overly literal translation, such as 'adorned my prison trousers' and 'proceed with bleating,' could be refined for greater idiomatic naturalness in English without losing the original meaning."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant, fluid, and reads as a polished literary work, successfully avoiding the stiffness of a word-for-word translation."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'germi d'una fermentazione morale' (seeds of a moral fermentation) and 'braccia diventano di piombo' (arms turned to lead), is vividly and effectively translated, preserving the original's evocative power."
+        }
+      ],
+      "strengths": "The translation's literary quality is outstanding. It captures the poetic and dramatic elements of Crespi's writing, using rich vocabulary and flowing sentence structures to create a compelling narrative.",
+      "weaknesses": "No notable weaknesses."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct with no awkward or unidiomatic constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is highly readable and clear, allowing for a smooth and uninterrupted reading experience."
+        }
+      ],
+      "strengths": "The translation demonstrates impeccable English grammar and a natural flow that makes it easy to read and understand.",
+      "weaknesses": "No weaknesses identified in this area."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Key terms like 'dottore' (doctor) and character names are translated with perfect consistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic register and narrative voice are maintained cohesively throughout the entire passage."
+        }
+      ],
+      "strengths": "The translation exhibits strong consistency in terminology, names, and overall style, which contributes significantly to its coherence and professional quality.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 7807,
+    "output": 1477
+  }
+}

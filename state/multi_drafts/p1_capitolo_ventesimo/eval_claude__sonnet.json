@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively uses elevated vocabulary and sentence structures, maintaining a period-appropriate literary register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrative flows naturally, capturing the storytelling quality and direct address of the original, as seen in rhetorical questions like 'To what purpose?'"
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a largely formal tone, with the intimate 'Mamma' being preserved. The translation accurately reflects this consistent formality."
+        }
+      ],
+      "strengths": "The translation excels in preserving the sophisticated, slightly formal, yet engaging literary tone of the early 20th-century Italian text. The narrative voice feels authentic and natural in English.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'old patriot,' 'black and yellow,' 'gendarme on the box,' 'despot's minions,' and 'sacred majesty of the Law' are all excellently chosen and period-appropriate."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "'Mamma' and 'Carletto' are preserved, maintaining the specific cultural nuance. Other references are translated without modernization."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the historical and cultural context, selecting accurate and appropriate English equivalents for political and cultural references.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "The translation is largely accurate, but includes a few minor additions or elaborations, such as 'our' mother (for 'la mamma'), 'long succession' (for 'serie'), and 'bearing a Swiss postmark' (for 'dalla Svizzera'). These don't distort meaning but are not strictly 'without additions'."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Proper names (Giustiniano, Luisa, Carletto) and key place names (Agordo, Belluno) are preserved. 'Popolo,' 'Paese,' and 'Leggi' are appropriately translated with initial capitalization reflecting their specific usage in the source."
+        }
+      ],
+      "strengths": "The translation is remarkably faithful to the original's meaning and nuance, accurately conveying complex sentences and idiomatic expressions. It handles specialized military and legal terms with precision.",
+      "weaknesses": "There are a few instances of minor interpretative additions (e.g., 'our' mother, 'long' succession, 'bearing a Swiss postmark') that, while often improving English flow, deviate slightly from a strictly literal interpretation of 'without additions'."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant, natural, and flows beautifully, reading as an accomplished piece of literature rather than a direct, mechanical rendering."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and imagery, such as 'laid on with a heavy brush,' 'shattered by Austrian lead,' 'muffled menace,' and 'stirred therein the dormant pity,' are translated with skill and poetic force."
+        }
+      ],
+      "strengths": "This translation is of very high literary quality. It captures the emotional depth and descriptive power of the original, transforming Italian imagery into compelling English prose.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically flawless and free from any awkward phrasing or unidiomatic constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and highly readable, even for complex sentences. It requires no re-reading to grasp meaning."
+        }
+      ],
+      "strengths": "The translation is grammatically perfect and exhibits excellent fluency, making it a smooth and enjoyable read.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names (Giustiniano, Luisa, Carletto) are consistent. 'Mamma' is consistently retained. Capitalized political terms are handled uniformly."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic register and narrative voice are maintained seamlessly throughout the entire passage, ensuring a cohesive reading experience."
+        }
+      ],
+      "strengths": "The translation maintains strong consistency in terminology, character names, and overall stylistic choices from beginning to end.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 3571,
+    "output": 1480
+  }
+}

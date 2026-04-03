@@ -287,6 +287,181 @@ def _load_revision_changes(state_dir: Path | None) -> dict[str, list[dict]]:
     return {ch_id: list(changes.values()) for ch_id, changes in accumulated.items()}
 
 
+def _load_provenance_data(state_dir: Path | None) -> dict[str, dict]:
+    """Load provenance logs indexed by chapter_id.
+
+    Returns {chapter_id: {primary_draft, incorporations, edgren_influences}}.
+    """
+    if not state_dir:
+        return {}
+    drafts_dir = state_dir / "multi_drafts"
+    if not drafts_dir.exists():
+        return {}
+    result = {}
+    for prov_path in drafts_dir.glob("*/provenance.json"):
+        try:
+            data = json.loads(prov_path.read_text(encoding="utf-8"))
+            ch_id = prov_path.parent.name
+            result[ch_id] = data
+        except (json.JSONDecodeError, KeyError):
+            continue
+    return result
+
+
+def _draft_label(from_draft: str | None) -> str:
+    """Convert draft filename to a readable label.
+
+    e.g. 'draft_gemini__pro.md' -> 'Gemini Pro'
+    """
+    if not from_draft:
+        return "Alternative draft"
+    name = from_draft.replace("draft_", "").replace(".md", "")
+    name = name.replace("__", " ").replace("_", " ")
+    return name.title()
+
+
+def _find_italian_word(word: str, para_text: str) -> str | None:
+    """Find an Italian word (or its conjugated form) in a paragraph.
+
+    Tries exact match first, then 4-char and 3-char stem prefix matching.
+    Returns the actual matched word from the paragraph, or None.
+    """
+    lower = para_text.lower()
+    word_lower = word.lower()
+    # Exact substring
+    if word_lower in lower:
+        # Find the original-case version
+        idx = lower.index(word_lower)
+        return para_text[idx : idx + len(word_lower)]
+    # Stem matching (4-char then 3-char)
+    for stem_len in (4, 3):
+        if len(word_lower) < stem_len:
+            continue
+        stem = re.escape(word_lower[:stem_len])
+        m = re.search(r"\b(\w*" + stem + r"\w*)", para_text, re.IGNORECASE)
+        if m:
+            return m.group(1)
+    return None
+
+
+def _extract_italian_from_reason(reason: str) -> list[str]:
+    """Extract Italian words/phrases quoted in a provenance reason string.
+
+    Looks for patterns like: Italian 'cadaveri', Italian "la dolce preparazione"
+    """
+    matches = re.findall(r"""[Ii]talian[oe]?\s+['"]([^'"]+)['"]""", reason)
+    return matches
+
+
+def _precompute_provenance(
+    provenance_data: dict[str, dict],
+    pairs: list[dict],
+    content_chapter_ids: list[str],
+) -> dict[str, dict]:
+    """Pre-compute provenance annotations for both Italian and English columns.
+
+    Returns {chapter_id: {
+        'english': {para_num: [(prov_id, target_text, margin_html)]},
+        'italian': {para_num: [(prov_id, italian_word)]},
+    }}
+
+    prov IDs are globally unique across the entire book.
+    """
+    result: dict[str, dict] = {}
+    counter = 0
+    ch_idx = 0
+
+    for pair in pairs:
+        # Skip structural entries (part headers)
+        if not pair.get("english_paragraphs"):
+            continue
+        if ch_idx >= len(content_chapter_ids):
+            break
+        ch_id = content_chapter_ids[ch_idx]
+        ch_idx += 1
+
+        ch_prov = provenance_data.get(ch_id, {})
+        incorporations = ch_prov.get("incorporations", [])
+        edgren = ch_prov.get("edgren_influences", [])
+        if not incorporations and not edgren:
+            continue
+
+        it_paras = pair["italian_paragraphs"]
+        en_paras = pair["english_paragraphs"]
+        en_annot: dict[int, list] = {}
+        it_annot: dict[int, list] = {}
+
+        # Incorporations
+        for inc in incorporations:
+            para_num = inc.get("paragraph", 0)
+            replacement = inc.get("replacement", "")
+            if not replacement or para_num < 1 or para_num > len(en_paras):
+                continue
+            if replacement not in en_paras[para_num - 1]:
+                continue
+
+            prov_id = f"prov-{counter}"
+            counter += 1
+
+            source_label = _draft_label(inc.get("from_draft"))
+            original = inc.get("original", "")
+            reason = inc.get("reason", "")
+            margin_html = (
+                f'<span class="marginalia prov" data-prov="{prov_id}">'
+                f'<span class="margin-source">{_escape_html(source_label)}</span>'
+                f'<span class="margin-old">{_escape_html(original)}</span>'
+                f'<span class="margin-reason">{_escape_html(reason)}</span>'
+                f'</span>'
+            )
+            en_annot.setdefault(para_num, []).append((prov_id, replacement, margin_html))
+
+            # Try to find Italian word for cross-column linking
+            italian_phrases = _extract_italian_from_reason(reason)
+            if italian_phrases and para_num <= len(it_paras):
+                it_para = it_paras[para_num - 1]
+                for phrase in italian_phrases:
+                    found = _find_italian_word(phrase, it_para)
+                    if found:
+                        it_annot.setdefault(para_num, []).append((prov_id, found))
+                        break
+
+        # Edgren influences
+        for edg in edgren:
+            para_num = edg.get("paragraph", 0)
+            choice = edg.get("english_choice", "")
+            if not choice or para_num < 1 or para_num > len(en_paras):
+                continue
+            if choice not in en_paras[para_num - 1]:
+                continue
+
+            prov_id = f"prov-{counter}"
+            counter += 1
+
+            italian_word = edg.get("italian_word", "")
+            definition = edg.get("edgren_definition", "")
+            note = edg.get("note", "")
+            margin_html = (
+                f'<span class="marginalia prov" data-prov="{prov_id}">'
+                f'<span class="margin-source">Edgren 1901</span>'
+                f'<span class="margin-edgren">{_escape_html(italian_word)} \u2014 {_escape_html(definition)}</span>'
+                f'<span class="margin-reason">{_escape_html(note)}</span>'
+                f'</span>'
+            )
+            en_annot.setdefault(para_num, []).append((prov_id, choice, margin_html))
+
+            # Find Italian word for cross-column linking
+            if italian_word and para_num <= len(it_paras):
+                it_para = it_paras[para_num - 1]
+                found = _find_italian_word(italian_word, it_para)
+                if found:
+                    it_annot.setdefault(para_num, []).append((prov_id, found))
+
+        if en_annot or it_annot:
+            result[ch_id] = {"english": en_annot, "italian": it_annot}
+
+    return result
+
+
 def _build_overlay_nav(
     sp_chapters: list[dict],
     content_chapter_ids: list[str],
@@ -340,6 +515,7 @@ def generate_html(
 
     # Load revision change data for marginalia
     revision_changes = _load_revision_changes(state_dir)
+    provenance_data = _load_provenance_data(state_dir)
 
     # Build ordered list of content chapter IDs from Italian source.
     # Can't use title-based dict: Part 1 and Part 2 share chapter names
@@ -348,6 +524,9 @@ def generate_html(
     italian_parsed = parse_italian_markdown(italian_text)
     _content_chapter_ids = [ch["id"] for ch in italian_parsed if not ch.get("is_structural")]
     _content_ch_idx = 0  # consumed in pair loop below
+
+    # Pre-compute provenance annotations for both columns (IDs assigned here)
+    prov_annotations = _precompute_provenance(provenance_data, pairs, _content_chapter_ids)
 
     # Load chapter start pages mapping (authoritative, manually editable)
     _start_pages_path = Path(__file__).parent / "data" / "chapter_start_pages.json"
@@ -438,6 +617,7 @@ def generate_html(
         '  <button id="font-smaller" aria-label="Decrease font size">&minus;</button>',
         '  <button id="font-larger" aria-label="Increase font size">&plus;</button>',
         '  <button id="toggle-marginalia" aria-label="Toggle revision notes" title="Toggle revision notes">&#9998;</button>',
+        '  <button id="toggle-provenance" aria-label="Toggle provenance notes" title="Toggle provenance notes">&#9878;</button>',
         '</div>',
         "",
         "<!-- Slide-in chapter index -->",
@@ -559,32 +739,47 @@ def generate_html(
             '    <div class="verso" lang="it">',
         ])
 
-        # Italian paragraphs
-        for p in pair["italian_paragraphs"]:
-            html_parts.append(f"      <p>{_para_to_html(p)}</p>")
+        # Resolve chapter ID for annotations
+        ch_id = _content_chapter_ids[_content_ch_idx] if _content_ch_idx < len(_content_chapter_ids) else ""
+        _content_ch_idx += 1
+        ch_annot = prov_annotations.get(ch_id, {})
+        ch_it_annot = ch_annot.get("italian", {})
+        ch_en_annot = ch_annot.get("english", {})
+
+        # Italian paragraphs (with cross-column provenance links)
+        for para_idx, p in enumerate(pair["italian_paragraphs"]):
+            para_html = _para_to_html(p)
+            para_num = para_idx + 1
+            for prov_id, it_word in ch_it_annot.get(para_num, []):
+                escaped_word = _escape_html(it_word)
+                if escaped_word in para_html:
+                    para_html = para_html.replace(
+                        escaped_word,
+                        f'<span class="italian-linked" data-prov="{prov_id}">{escaped_word}</span>',
+                        1,
+                    )
+            html_parts.append(f"      <p>{para_html}</p>")
 
         html_parts.extend([
             "    </div>",
             '    <div class="recto" lang="en">',
         ])
 
-        # English paragraphs (with marginalia for revision changes)
-        ch_id = _content_chapter_ids[_content_ch_idx] if _content_ch_idx < len(_content_chapter_ids) else ""
-        _content_ch_idx += 1
+        # English paragraphs (with marginalia for revision + provenance changes)
         ch_changes = revision_changes.get(ch_id, [])
 
         page_cite_injected = False
-        for p in pair["english_paragraphs"]:
+        for para_idx, p in enumerate(pair["english_paragraphs"]):
             para_html = _para_to_html(p)
+            para_num = para_idx + 1
 
-            # Check if any revision changes apply to this paragraph
+            # Revision changes
             para_marginalia = []
             for change in ch_changes:
                 old_text = change.get("old", "")
                 new_text = change.get("new", "")
                 reason = change.get("reason", "")
                 if old_text and new_text and new_text in p:
-                    # Link revised text and marginalia via shared data-rev-id
                     rev_id = f"rev-{_rev_counter[0]}"
                     _rev_counter[0] += 1
                     escaped_new = _escape_html(new_text)
@@ -600,8 +795,18 @@ def generate_html(
                         f'</span>'
                     )
 
+            # Provenance annotations (pre-computed with IDs)
+            for prov_id, target_text, margin_html in ch_en_annot.get(para_num, []):
+                escaped_target = _escape_html(target_text)
+                if escaped_target in para_html:
+                    para_html = para_html.replace(
+                        escaped_target,
+                        f'<span class="provenance-mark" data-prov="{prov_id}">{escaped_target}</span>',
+                        1,
+                    )
+                    para_marginalia.append(margin_html)
+
             # Inject page citation into first paragraph, marginalia into all
-            # Uses <span> not <aside> — block elements inside <p> are invalid HTML
             cite_html = ""
             if not page_cite_injected and page_cite_html:
                 cite_html = page_cite_html
@@ -889,25 +1094,56 @@ def generate_html(
         "",
         "// Marginalia: alignment, hover linking, click-to-activate, keyboard nav",
         "(() => {",
-        "  const notes = () => Array.from(document.querySelectorAll('.marginalia'));",
-        "  let activeRev = null;",
+        "  const allNotes = () => Array.from(document.querySelectorAll('.marginalia'));",
+        "  const revNotes = () => Array.from(document.querySelectorAll('.marginalia:not(.prov)'));",
+        "  const provNotes = () => Array.from(document.querySelectorAll('.marginalia.prov'));",
+        "  let activeId = null;",
         "",
-        "  // Align each marginalia vertically with its .revised span",
+        "  // Find the linked text span for any marginalia note (revision or provenance)",
+        "  function getLinked(note) {",
+        "    const rev = note.dataset.rev;",
+        "    if (rev) return document.querySelector('.revised[data-rev=\"' + rev + '\"]');",
+        "    const prov = note.dataset.prov;",
+        "    if (prov) return document.querySelector('.provenance-mark[data-prov=\"' + prov + '\"]');",
+        "    return null;",
+        "  }",
+        "",
+        "  // Get the unique ID of a note (either data-rev or data-prov)",
+        "  function noteId(note) { return note.dataset.rev || note.dataset.prov || null; }",
+        "",
+        "  // Align marginalia vertically, stacking globally across paragraphs within each recto column",
         "  function alignMarginalia() {",
-        "    document.querySelectorAll('p > .marginalia').forEach(note => {",
-        "      const rev = note.dataset.rev;",
-        "      const revised = rev && document.querySelector('.revised[data-rev=\"' + rev + '\"]');",
-        "      if (!revised) return;",
-        "      const pRect = note.parentElement.getBoundingClientRect();",
-        "      const rRect = revised.getBoundingClientRect();",
-        "      let top = rRect.top - pRect.top;",
-        "      // Ensure revision marginalia clears page citation if both in same paragraph",
-        "      const cite = note.parentElement.querySelector('.page-cite');",
-        "      if (cite) {",
-        "        const citeBottom = cite.getBoundingClientRect().bottom - pRect.top;",
-        "        if (top < citeBottom + 4) top = citeBottom + 4;",
+        "    document.querySelectorAll('.recto').forEach(recto => {",
+        "      const notes = Array.from(recto.querySelectorAll('p > .marginalia'));",
+        "      if (!notes.length) return;",
+        "      // Build array of {note, linkedAbsTop, parentEl} for visible notes",
+        "      const items = [];",
+        "      for (const note of notes) {",
+        "        if (note.offsetParent === null) continue;",
+        "        const linked = getLinked(note);",
+        "        const absTop = linked ? linked.getBoundingClientRect().top + window.scrollY : 0;",
+        "        items.push({ note, absTop, parent: note.parentElement });",
         "      }",
-        "      note.style.top = top + 'px';",
+        "      // Sort by the absolute vertical position of their linked text",
+        "      items.sort((a, b) => a.absTop - b.absTop);",
+        "      // Stack: track the next available absolute Y, clearing page citations",
+        "      let nextAbsBottom = 0;",
+        "      for (const item of items) {",
+        "        const pRect = item.parent.getBoundingClientRect();",
+        "        const pAbsTop = pRect.top + window.scrollY;",
+        "        // Clear page citation if present in this paragraph",
+        "        const cite = item.parent.querySelector('.page-cite');",
+        "        if (cite) {",
+        "          const citeAbsBottom = cite.getBoundingClientRect().bottom + window.scrollY + 4;",
+        "          if (nextAbsBottom < citeAbsBottom) nextAbsBottom = citeAbsBottom;",
+        "        }",
+        "        // Ideal: align with linked text; actual: at least nextAbsBottom",
+        "        const idealAbs = item.absTop;",
+        "        const actualAbs = Math.max(idealAbs, nextAbsBottom);",
+        "        // Convert absolute position to parent-relative top",
+        "        item.note.style.top = (actualAbs - pAbsTop) + 'px';",
+        "        nextAbsBottom = actualAbs + item.note.getBoundingClientRect().height + 4;",
+        "      }",
         "    });",
         "  }",
         "  alignMarginalia();",
@@ -915,75 +1151,138 @@ def generate_html(
         "  new MutationObserver(alignMarginalia).observe(document.documentElement,",
         "    { attributes: true, attributeFilter: ['style'] });",
         "",
-        "  // Helper: find the .revised span paired with a marginalia note",
-        "  function getRevised(note) {",
-        "    const rev = note.dataset.rev;",
-        "    return rev ? document.querySelector('.revised[data-rev=\"' + rev + '\"]') : null;",
+        "  // Reverse lookup: find the marginalia note linked to a text span",
+        "  function getNote(span) {",
+        "    const rev = span.dataset && span.dataset.rev;",
+        "    if (rev) return document.querySelector('.marginalia[data-rev=\"' + rev + '\"]');",
+        "    const prov = span.dataset && span.dataset.prov;",
+        "    if (prov) return document.querySelector('.marginalia[data-prov=\"' + prov + '\"]');",
+        "    return null;",
         "  }",
         "",
-        "  // Hover: highlight the revised text when hovering its marginalia",
+        "  // Cross-column: find the Italian-linked span for a prov ID",
+        "  function getItalian(provId) {",
+        "    return provId ? document.querySelector('.italian-linked[data-prov=\"' + provId + '\"]') : null;",
+        "  }",
+        "",
+        "  // Highlight/unhighlight a provenance group (English span + marginalia + Italian span)",
+        "  function highlightProv(provId, on) {",
+        "    const it = getItalian(provId);",
+        "    if (it) it.classList.toggle('highlight', on);",
+        "  }",
+        "",
+        "  // Hover: bidirectional highlight between text, marginalia, and Italian source",
         "  document.addEventListener('mouseover', e => {",
         "    const note = e.target.closest('.marginalia');",
-        "    if (!note) return;",
-        "    const revised = getRevised(note);",
-        "    if (revised) revised.classList.add('highlight');",
+        "    if (note) {",
+        "      const linked = getLinked(note);",
+        "      if (linked) linked.classList.add('highlight');",
+        "      note.classList.add('highlight');",
+        "      highlightProv(note.dataset.prov, true);",
+        "      return;",
+        "    }",
+        "    const span = e.target.closest('.revised, .provenance-mark');",
+        "    if (span) {",
+        "      const linked = getNote(span);",
+        "      if (linked) linked.classList.add('highlight');",
+        "      span.classList.add('highlight');",
+        "      highlightProv(span.dataset && span.dataset.prov, true);",
+        "      return;",
+        "    }",
+        "    const itSpan = e.target.closest('.italian-linked');",
+        "    if (itSpan) {",
+        "      itSpan.classList.add('highlight');",
+        "      const provId = itSpan.dataset.prov;",
+        "      const en = provId && document.querySelector('.provenance-mark[data-prov=\"' + provId + '\"]');",
+        "      const mn = provId && document.querySelector('.marginalia[data-prov=\"' + provId + '\"]');",
+        "      if (en) en.classList.add('highlight');",
+        "      if (mn) mn.classList.add('highlight');",
+        "    }",
         "  });",
         "  document.addEventListener('mouseout', e => {",
         "    const note = e.target.closest('.marginalia');",
-        "    if (!note) return;",
-        "    const revised = getRevised(note);",
-        "    if (revised) revised.classList.remove('highlight');",
+        "    if (note) {",
+        "      const linked = getLinked(note);",
+        "      if (linked) linked.classList.remove('highlight');",
+        "      note.classList.remove('highlight');",
+        "      highlightProv(note.dataset.prov, false);",
+        "      return;",
+        "    }",
+        "    const span = e.target.closest('.revised, .provenance-mark');",
+        "    if (span) {",
+        "      const linked = getNote(span);",
+        "      if (linked) linked.classList.remove('highlight');",
+        "      span.classList.remove('highlight');",
+        "      highlightProv(span.dataset && span.dataset.prov, false);",
+        "      return;",
+        "    }",
+        "    const itSpan = e.target.closest('.italian-linked');",
+        "    if (itSpan) {",
+        "      itSpan.classList.remove('highlight');",
+        "      const provId = itSpan.dataset.prov;",
+        "      const en = provId && document.querySelector('.provenance-mark[data-prov=\"' + provId + '\"]');",
+        "      const mn = provId && document.querySelector('.marginalia[data-prov=\"' + provId + '\"]');",
+        "      if (en) en.classList.remove('highlight');",
+        "      if (mn) mn.classList.remove('highlight');",
+        "    }",
         "  });",
         "",
         "  // Click: set active marginalia for keyboard navigation",
         "  function setActive(note) {",
         "    document.querySelectorAll('.marginalia.active').forEach(n => n.classList.remove('active'));",
-        "    document.querySelectorAll('.revised.highlight').forEach(r => r.classList.remove('highlight'));",
+        "    document.querySelectorAll('.revised.highlight, .provenance-mark.highlight, .italian-linked.highlight').forEach(r => r.classList.remove('highlight'));",
         "    if (note) {",
         "      note.classList.add('active');",
-        "      const revised = getRevised(note);",
-        "      if (revised) revised.classList.add('highlight');",
-        "      activeRev = note.dataset.rev;",
+        "      const linked = getLinked(note);",
+        "      if (linked) linked.classList.add('highlight');",
+        "      highlightProv(note.dataset.prov, true);",
+        "      activeId = noteId(note);",
         "    } else {",
-        "      activeRev = null;",
+        "      activeId = null;",
         "    }",
         "  }",
         "",
         "  document.addEventListener('click', e => {",
         "    const note = e.target.closest('.marginalia');",
         "    if (note) { setActive(note); return; }",
-        "    if (!e.target.closest('.marginalia, .revised')) setActive(null);",
+        "    if (!e.target.closest('.marginalia, .revised, .provenance-mark')) setActive(null);",
         "  });",
         "",
-        "  // Toggle visibility",
-        "  const btn = document.getElementById('toggle-marginalia');",
-        "  const saved = localStorage.getItem('hideMarginalia');",
-        "  if (saved === 'true') document.body.classList.add('no-marginalia');",
-        "  btn.addEventListener('click', () => {",
+        "  // Toggle revision visibility",
+        "  const revBtn = document.getElementById('toggle-marginalia');",
+        "  const savedRev = localStorage.getItem('hideMarginalia');",
+        "  if (savedRev === 'true') document.body.classList.add('no-marginalia');",
+        "  revBtn.addEventListener('click', () => {",
         "    const hidden = document.body.classList.toggle('no-marginalia');",
         "    localStorage.setItem('hideMarginalia', hidden);",
         "    if (hidden) setActive(null);",
+        "    alignMarginalia();",
         "  });",
         "",
-        "  // Keyboard: m/Shift+m navigates from active note, or by scroll position",
-        "  document.addEventListener('keydown', e => {",
-        "    if (e.key !== 'm' && e.key !== 'M') return;",
-        "    if (document.body.classList.contains('no-marginalia')) return;",
-        "    const all = notes();",
+        "  // Toggle provenance visibility",
+        "  const provBtn = document.getElementById('toggle-provenance');",
+        "  const savedProv = localStorage.getItem('hideProvenance');",
+        "  if (savedProv === 'true') document.body.classList.add('no-provenance');",
+        "  provBtn.addEventListener('click', () => {",
+        "    const hidden = document.body.classList.toggle('no-provenance');",
+        "    localStorage.setItem('hideProvenance', hidden);",
+        "    if (hidden) setActive(null);",
+        "    alignMarginalia();",
+        "  });",
+        "",
+        "  // Keyboard navigation helper",
+        "  function navigateNotes(notesFn, e) {",
+        "    const all = notesFn();",
         "    if (!all.length) return;",
-        "",
         "    let idx = -1;",
-        "    if (activeRev) {",
-        "      idx = all.findIndex(n => n.dataset.rev === activeRev);",
+        "    if (activeId) {",
+        "      idx = all.findIndex(n => noteId(n) === activeId);",
         "    }",
-        "",
         "    let target;",
         "    if (idx >= 0) {",
-        "      // Navigate relative to active note",
         "      const next = e.shiftKey ? idx - 1 : idx + 1;",
         "      target = all[Math.max(0, Math.min(next, all.length - 1))];",
         "    } else {",
-        "      // Navigate by scroll position",
         "      const scrollY = window.scrollY + window.innerHeight / 3;",
         "      if (e.shiftKey) {",
         "        for (let i = all.length - 1; i >= 0; i--) {",
@@ -998,6 +1297,15 @@ def generate_html(
         "    if (target) {",
         "      setActive(target);",
         "      target.scrollIntoView({ behavior: 'smooth', block: 'center' });",
+        "    }",
+        "  }",
+        "",
+        "  // m/M: navigate revision notes; p/P: navigate provenance notes",
+        "  document.addEventListener('keydown', e => {",
+        "    if (e.key === 'm' || e.key === 'M') {",
+        "      if (!document.body.classList.contains('no-marginalia')) navigateNotes(revNotes, e);",
+        "    } else if (e.key === 'p' || e.key === 'P') {",
+        "      if (!document.body.classList.contains('no-provenance')) navigateNotes(provNotes, e);",
         "    }",
         "  });",
         "})();",

@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively maintains a formal yet engaging literary register, consistent with the source's era."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The personal and reflective narrative style of Crespi is well-preserved, making it feel like a direct recount."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a consistent, slightly formal tone, and the translation accurately mirrors this without inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels in capturing the historical and literary tone of the original, using appropriate vocabulary and sentence structures that evoke the early 20th century. The narrative voice feels authentic and engaging.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Prefecture' and 'Empire' are rendered appropriately, fitting the political context of the Risorgimento era."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "Italian monetary unit 'soldi' and French place names given in Italian ('Piazza della Concorde', 'Stazione d'Orleans', 'Senna') are preserved as they appear in the source, adhering to the instruction, but are not glossed for an English-speaking reader."
+        }
+      ],
+      "strengths": "The translation preserves specific terms like 'soldi' and the Italianized French place names, which is faithful to the source text's presentation.",
+      "weaknesses": "While preserving the Italian forms of French place names ('Piazza della Concorde' instead of 'Place de la Concorde', 'Senna' instead of 'Seine', 'Stazione d'Orleans' instead of 'Gare d'Orléans') adheres to the 'preserve original Italian form' instruction, it might occasionally impede an English reader's immediate recognition of these well-known locations without a gloss."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, conveying the precise meaning of the original text with no discernible omissions or unjustified additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names (including Italianized French ones), and historical references are meticulously preserved as they appear in the Italian source."
+        }
+      ],
+      "strengths": "The translation is exceptionally faithful to the source text, maintaining the exact meaning, narrative details, and all specific references, including character names, locations, and historical figures.",
+      "weaknesses": "No weaknesses in accuracy or faithfulness were identified."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads very naturally and fluidly, maintaining a high literary standard that transcends a mere word-for-word rendition."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and imagery, such as 'tempest's blow', 'sliver of blue sky', and 'flay the hide from his nag', are translated with creativity and impact."
+        }
+      ],
+      "strengths": "The translation excels in literary quality, employing vivid and natural English that effectively captures the expressive power and imagery of the original Italian. Idiomatic expressions are rendered thoughtfully.",
+      "weaknesses": "No weaknesses were identified; the translation reads as a polished piece of English literature."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable, with no awkward phrasing or structural errors."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is consistently clear and easy to understand on the first reading, contributing to a smooth reading experience."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent command of English grammar and syntax, resulting in highly fluent and clear prose. It is a pleasure to read without any linguistic stumbles.",
+      "weaknesses": "No weaknesses were identified in terms of grammar or fluency."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "While most terms are consistent, 'padrona' or 'signora' for the hotel owner is rendered as 'proprietress' and 'lady' at different points, a minor inconsistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The style remains consistent throughout the entire passage, ensuring a cohesive and uninterrupted narrative voice."
+        }
+      ],
+      "strengths": "The overall style and tone are maintained consistently across the passage, providing a unified reading experience.",
+      "weaknesses": "A minor inconsistency in rendering the term for the hotel owner ('proprietress' vs. 'lady') was noted, though it does not significantly detract from the overall quality."
+    }
+  ],
+  "weighted_score": 0.925,
+  "_tokens": {
+    "input": 5356,
+    "output": 1496
+  }
+}

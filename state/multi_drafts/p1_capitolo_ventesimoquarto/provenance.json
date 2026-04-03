@@ -1,0 +1,27 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "bed of straw",
+      "replacement": "pallet of grass",
+      "reason": "Italian 'giaciglio di erbe' means a rough pallet (giaciglio) of grass/herbs (erbe), not straw. Gemini's 'pallet of grass' is more faithful to both words."
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "wall hung with branches",
+      "replacement": "wall interwoven with fronds",
+      "reason": "Italian 'contesta di fronde' means woven/interwoven (contesta) with fronds (fronde). 'Hung with branches' loses the sense of weaving and mistranslates fronde as branches."
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "delicate objects",
+      "replacement": "delicate trinkets",
+      "reason": "Italian 'gingillo' specifically means a trinket or bauble — a small precious ornament. 'Objects' is too vague and loses the affectionate diminutive quality of the original."
+    }
+  ],
+  "edgren_influences": []
+}

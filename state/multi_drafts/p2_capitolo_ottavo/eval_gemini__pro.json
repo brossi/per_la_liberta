@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses vocabulary and sentence structures that evoke an early 20th-century literary English register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The personal reflections, anecdotes, and integration of direct speech effectively preserve Crespi's conversational narrative style."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The nuances between Crespi's more formal narration and Pieri's direct, slightly exclamatory speech are well-maintained."
+        }
+      ],
+      "strengths": "The translation excels in capturing and maintaining the distinct literary tone and authorial voice of the original, preserving both its formality and its narrative intimacy.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Popolo' (People) and 'reazione francese' (French reaction) are handled with appropriate contextual understanding. 'Mitragliati' is excellently adapted to 'victims of the grapeshot of December 2nd'."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "Most Italian references ('trattoria', 'lucchese') and French place names ('rue Le Pelletier') are well-preserved. However, 'a misura di carbone' is translated literally, which, while accurate, loses some idiomatic force for an English reader without gloss. Also, 'sargent de ville' is misspelled from 'sergent de ville'."
+        }
+      ],
+      "strengths": "The translation demonstrates strong awareness of the historical and political context, providing excellent adaptations for specific terms like 'mitragliati'.",
+      "weaknesses": "A minor misspelling of a French term ('sargent' instead of 'sergent de ville') and a slightly literal translation of an Italian idiom ('a misura di carbone') are small detractions."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably faithful to the source text, conveying the original meaning accurately and completely without adding or omitting information."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "Most proper nouns and place names are preserved correctly, or anglicized appropriately (e.g., Napoleon). However, there is a minor misspelling of 'sergent de ville' as 'sargent de ville'."
+        }
+      ],
+      "strengths": "The translation is highly accurate and adheres closely to the original content, ensuring that the reader receives the full message of the source text.",
+      "weaknesses": "The minor misspelling of 'sergent de ville' is the only notable lapse in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads very naturally and fluidly, maintaining an engaging narrative flow that is clearly literary rather than stiff or literal."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 0.5,
+          "note": "Many figurative expressions are rendered exceptionally well (e.g., 'rotten core', 'jumping into the subject with both feet'). However, 'rigidezza eccezionale della giornata' as 'exceptional bitterness of the day' is slightly less effective, and 'a misura di carbone' is literal."
+        }
+      ],
+      "strengths": "The overall literary quality is high, with compelling and natural-sounding prose. Many idiomatic and figurative expressions are skillfully translated.",
+      "weaknesses": "A few instances of imagery or idioms could have been rendered more powerfully or naturally in English, such as 'exceptional bitterness of the day' or the literal translation of 'a misura di carbone'."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English translation is grammatically impeccable and avoids awkward or unnatural phrasing, contributing to a smooth reading experience."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is consistently clear and easy to understand, requiring no re-reading for comprehension."
+        }
+      ],
+      "strengths": "Excellent command of English grammar and syntax ensures high fluency and readability throughout the passage.",
+      "weaknesses": "No weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names, key political terms like 'Popolo' (People), and the overall tone are maintained consistently throughout the translation."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The literary and slightly formal style is coherently maintained across all paragraphs, contributing to the translation's overall quality."
+        }
+      ],
+      "strengths": "The translation exhibits strong consistency in both terminology and stylistic choices, creating a unified and polished text.",
+      "weaknesses": "No weaknesses were identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.8625,
+  "_tokens": {
+    "input": 5882,
+    "output": 1495
+  }
+}

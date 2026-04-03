@@ -1,0 +1,112 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal, somewhat elevated and archaic literary register that reflects the early 20th-century Italian source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation effectively captures Crespi's narrative style, including his descriptive passages, internal reflections, and direct reporting of dialogue, preserving a conversational yet formal tone."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original consistently uses a formal tone, even in dialogue, which is appropriately mirrored in the English translation, avoiding any inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels at recreating a period-appropriate literary register and maintaining the author's distinct narrative voice throughout the passage, including the careful handling of direct and indirect speech.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "General political terms like 'Fatherland,' 'conspiracies,' and 'the People' are accurately and appropriately translated, and no specific institutions require complex adaptation here."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Italian proper nouns like 'Signora Elisa,' 'Mazzini,' and 'Calvi,' as well as references like 'Lombard cathedral,' are preserved or directly translated without modernization."
+        }
+      ],
+      "strengths": "The translation is very faithful to the cultural context, accurately preserving proper nouns and historical references and making appropriate translation choices for culturally relevant terms.",
+      "weaknesses": "No weaknesses were found in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate at the sentence level, there is a significant reordering of the daughter's quoted speech regarding the regiment's life and the return of the soldiers, which alters the narrative flow and the original sequence of her thoughts. This constitutes a structural deviation."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical figures (e.g., Mazzini, Calvi, Los Angeles, West Point) are correctly identified and preserved."
+        }
+      ],
+      "strengths": "The translation demonstrates high fidelity in rendering individual sentences and conveying the literal meaning of most phrases. It successfully translates complex descriptions and idiomatic expressions.",
+      "weaknesses": "A major weakness is the reordering of the daughter's lengthy monologue, which disrupts the original narrative sequence and creates a logical inconsistency in the flow of her reported speech."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "Much of the prose reads naturally within its chosen archaic literary style, but the structural reordering of the daughter's speech significantly interrupts the narrative flow in that section, making it less natural and coherent."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative expressions and imagery, such as 'prostrates men and herds like withered grass,' 'hollow chests are consumed by consumption,' and the vivid description of the sequoias, are consistently rendered with effectiveness and poetic force."
+        }
+      ],
+      "strengths": "The translation excels in preserving and recreating the rich imagery, metaphors, and evocative descriptions of the Italian source. Many challenging figurative expressions are translated skillfully.",
+      "weaknesses": "The reordering of a major portion of dialogue negatively impacts the overall narrative flow and literary coherence, detracting from the reading experience in that specific segment."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The grammar is largely correct, but some constructions are intentionally archaic (e.g., 'And she to insist'), and the reordered speech segment creates an awkward and difficult-to-follow sequence, even if individual sentences are grammatical."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 0.5,
+          "note": "While generally clear, the reordering of the daughter's speech forces the reader to re-read and re-interpret the sequence of events and thoughts, thus hindering overall readability in that section."
+        }
+      ],
+      "strengths": "The translation generally maintains correct English grammar and syntax, delivering clear renditions of complex sentences and contributing to the chosen formal tone.",
+      "weaknesses": "The structural issue in the quoted speech creates significant fluency problems, making a substantial portion of the text difficult to follow without re-reading and leading to an unnatural presentation of the dialogue."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All recurring terms, such as 'Major,' 'Signora Elisa,' 'Regiment,' and character names are translated with perfect consistency throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The formal and slightly archaic literary style is consistently maintained across all paragraphs, ensuring a cohesive reading experience."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent consistency in terminology, character names, and overall stylistic choices, maintaining a unified voice and register throughout the passage.",
+      "weaknesses": "No weaknesses were identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.8625000000000002
+}

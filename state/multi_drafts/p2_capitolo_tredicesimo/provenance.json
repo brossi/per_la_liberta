@@ -1,0 +1,49 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "his all-too-ready tongue immediately after his arrest",
+      "replacement": "his all-too-ready loquacity immediately after his arrest",
+      "reason": "The Italian 'loquela' means speech/loquacity, not tongue. 'Loquacity' preserves the Latinate register of the original and is more precise — it refers to his readiness to talk, not to the organ itself."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "the desertion of Simon Bernard",
+      "replacement": "the defection of Simon Bernard",
+      "reason": "'Defezione' maps more precisely to 'defection' (abandoning a cause or allegiance) than to 'desertion', which carries a stronger military connotation of fleeing. Bernard did not desert in a military sense — he simply failed to show up."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "babbling of his own heroism",
+      "replacement": "prating of his own heroism",
+      "reason": "'Prating' better captures the self-important, pompous quality of 'blaterando'. 'Babbling' suggests incoherence, whereas 'prating' suggests foolish or empty boasting, which fits the narrator's contemptuous tone."
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "Tell me frankly, like a man, how you passed yesterday.",
+      "replacement": "Tell me with manly frankness how you passed yesterday.",
+      "reason": "The Italian 'con franchezza virile' is a prepositional phrase ('with manly frankness'), not an adverb-plus-simile construction. 'With manly frankness' is both closer to the syntax and more idiomatic in period English."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "blaterare",
+      "edgren_definition": "babble (prate continuously)",
+      "english_choice": "prating",
+      "paragraph": 2,
+      "note": "Edgren gives 'prate continuously' as the primary gloss for 'blaterare'. This supported choosing Gemini's 'prating' over Claude's 'babbling', since Edgren treats 'prate' as the core sense rather than 'babble'."
+    },
+    {
+      "italian_word": "abboccamento",
+      "edgren_definition": "interview",
+      "english_choice": "interview",
+      "paragraph": 1,
+      "note": "Edgren defines 'abboccamento' as 'interview' (a formal meeting), confirming that both drafts' choice of 'interview' over a modern default like 'meeting' or 'encounter' is period-appropriate. No change was needed — both drafts already used this word."
+    }
+  ]
+}

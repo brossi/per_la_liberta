@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively uses vocabulary and phrasing ('ill-starred affair,' 'no abundance of coin,' 'imperious,' 'morrow's sun,' 'supremely inopportune,' 'six-and-thirty dagger-thrusts') that evoke an early 20th-century literary register, mirroring the original's style."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation successfully captures the conversational, storytelling flow of the original, making it feel like a spoken account ('I myself had gone there more than once,' 'in part, also, from that instinct')."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a consistent literary yet narrative tone without stark shifts between formal and informal, and the translation accurately reflects this consistency."
+        }
+      ],
+      "strengths": "The translation excels at capturing the nuanced tone and authorial voice of the original. It masterfully conveys the early 20th-century literary register and maintains a consistent, engaging conversational narrative.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'exiles,' 'emigrant community' (for 'immigrazione'), 'petty princes' (for 'principotti'), and 'foist upon' (for 'accollare') are excellently adapted to convey the political and social context of the Risorgimento era in period-appropriate English."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Italian references such as 'trattoria' rendered as 'eating-house' and 'Mantovano' as 'Mantuan' are handled appropriately, preserving the cultural flavor without being unfamiliar or anachronistic."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the cultural and historical context, choosing excellent equivalents and adaptations for specific Italian terms and political nuances.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate, the phrase 'Contrapporre all'agitazione monarchica del Settentrione, l'insurrezione dell'estremità meridionale d'Italia, imporre da Palermo e da Napoli l'unità della Nazione' is translated with the addition of '— such was the design,' which is an interpretive clarification rather than a direct translation or omission."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Proper nouns, place names, and historical references (e.g., 'Count di Rudio,' 'Rossi,' 'Foschini,' 'Mantua,' 'Cavour,' 'Napoleone III,' 'Cernaia,' 'Sapri') are consistently preserved or rendered with standard, acceptable anglicizations."
+        }
+      ],
+      "strengths": "The translation is overwhelmingly accurate, capturing the precise meaning of the source text, including complex idioms and descriptive passages. Proper nouns and historical details are meticulously maintained.",
+      "weaknesses": "A minor interpretive addition ('— such was the design') slightly deviates from strict faithfulness, although it doesn't distort the original meaning."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly polished, reads naturally, and flows with a sophisticated narrative rhythm, showcasing excellent literary craftsmanship that transcends mere mechanical translation."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative expressions and imagery, such as 'ill-starred affair,' 'ugly customer,' 'sailing in troubled waters,' 'stung to the face,' and 'within a hair's breadth of leaving my bones,' are consistently translated with vivid and effective English equivalents."
+        }
+      ],
+      "strengths": "The translation's literary quality is outstanding. The prose is elegant and fluid, making the text a pleasure to read in English, and all figurative language is rendered with impressive skill.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically flawless, exhibiting well-formed sentences and no awkward constructions throughout the passage."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The translation is exceptionally clear and readable, allowing for smooth comprehension without any need for re-reading to grasp meaning."
+        }
+      ],
+      "strengths": "The translation is grammatically perfect and highly fluent, ensuring an effortless reading experience. Sentences are clear, concise, and beautifully structured.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Recurring terms and character names, such as 'Rossi,' 'Foschini,' 'ugly customer,' and 'emigrant community,' are translated with remarkable consistency throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a uniform and coherent style, tone, and register across all paragraphs, contributing to a seamless reading experience."
+        }
+      ],
+      "strengths": "The translation demonstrates strong consistency in terminology, character names, and overall stylistic approach, providing a cohesive and unified text.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 3668,
+    "output": 1611
+  }
+}

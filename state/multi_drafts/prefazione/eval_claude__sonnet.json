@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal, literary register appropriate for an early 20th-century preface, using vocabulary and sentence structures that mirror the original's era."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "Crespi's reflective, slightly passionate, and direct voice, including rhetorical questions and personal addresses (e.g., 'Consider:'), is well preserved."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original text maintains a consistent formal tone, which the translation accurately reflects. 'Pensate:' is translated as 'Consider:', which is appropriately direct yet formal."
+        }
+      ],
+      "strengths": "The translation excels at capturing the specific literary register and the distinctive authorial voice of Cesare Crespi, making it feel authentic to the period and the author's personality.",
+      "weaknesses": "No significant weaknesses observed in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'the third Italy' and 'Minister of Public Instruction' are accurately and appropriately rendered for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "The translation effectively preserves key Italian terms ('Minos' with Dante quote, 'affarismo') and provides helpful glosses where necessary, enriching the reader's understanding without over-translating."
+        }
+      ],
+      "strengths": "Excellent handling of cultural specificities, preserving Italian terms and providing context where beneficial, such as the Dante quote and 'affarismo' gloss.",
+      "weaknesses": "No weaknesses observed; the approach to cultural context is highly effective."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation meticulously conveys the full meaning of the source text, demonstrating a high degree of fidelity without any noticeable omissions or unwarranted additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns and historical figures (Crespi, di Rudio, Minos) are correctly preserved, and 'Italia' is appropriately translated as 'Italy'."
+        }
+      ],
+      "strengths": "Exceptional accuracy and faithfulness to the original text's meaning and details, including nuanced expressions and complex sentences.",
+      "weaknesses": "No weaknesses observed; the translation is highly accurate."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads very naturally and fluidly, maintaining a high literary quality. Sentence constructions are graceful and engaging, avoiding any sense of being a forced translation."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'soul of the times,' 'distilling a potent poetry,' and 'lips silenced for ever,' is beautifully and effectively translated, preserving the original's evocative power."
+        }
+      ],
+      "strengths": "The translation stands out for its literary elegance, with natural-sounding prose and effective rendering of imagery that contributes to its overall aesthetic appeal.",
+      "weaknesses": "No weaknesses; the literary quality is a major strength."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable, with no errors or awkward constructions that hinder comprehension or flow."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and easy to read, allowing for immediate comprehension without any need for re-reading."
+        }
+      ],
+      "strengths": "The translation is grammatically flawless and highly fluent, ensuring a smooth and effortless reading experience.",
+      "weaknesses": "No weaknesses observed in terms of grammar or fluency."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names and key concepts are consistently translated or maintained throughout the passage, reinforcing clarity and coherence."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The formal, literary, and slightly reflective style is consistently applied across all paragraphs, contributing to a unified and professional presentation."
+        }
+      ],
+      "strengths": "The translation exhibits strong consistency in terminology, character names, and overall stylistic choices from beginning to end.",
+      "weaknesses": "No weaknesses observed."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 1841,
+    "output": 1396
+  }
+}

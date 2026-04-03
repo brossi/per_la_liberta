@@ -1,0 +1,41 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "there is nothing that reaches the heart of a son like a mother's sobbing",
+      "replacement": "a mother's sobs reach the heart of a son",
+      "reason": "Gemini's more direct syntax mirrors the Italian 'giungono al cuore di un figlio, i singhiozzi della madre' — a simple declarative statement rather than Claude's circumlocution with 'there is nothing that...like'. The Italian sentence presents the sobs as subject acting on the heart, and the final preserves that."
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "noble impulses",
+      "replacement": "noble rebellious impulses",
+      "reason": "The Claude draft omitted 'ribelli' from 'nobili impulsi ribelli', a gap flagged in the evaluation. Gemini included the sense as 'impulses of rebellion'. The final restores it as the adjective 'rebellious' directly modifying 'impulses', which is the closest calque of the Italian adjectival structure."
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "My mother's sobs, in the silence of the night, resounded with terrible force.",
+      "replacement": "My mother's, in the silence of the night, resounded with terrible force.",
+      "reason": "The Italian 'Quelli della mia' uses a pronoun ('those of my [mother]'), not repeating 'singhiozzi'. Dropping the noun 'sobs' and letting context supply it, as in the Italian, avoids redundancy. Neither draft did this exactly — Claude repeated 'sobs', Gemini used 'Hers' — but the final's approach ('My mother's,') preserves the elliptical elegance of the original while remaining clear in English."
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro",
+      "original": "hunted like a criminal through the streets of the night",
+      "replacement": "hunted like a malefactor through the streets of the night",
+      "reason": "'Malfattore' is etymologically and tonally closer to 'malefactor' than to 'criminal'. 'Criminal' is a modern, legalistic word; 'malefactor' carries the archaic, morally charged register appropriate to the narrator's rhetoric and the 19th-century setting."
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro",
+      "original": "This thought pressed itself deep into my mind",
+      "replacement": "This insinuated itself deep into my thoughts",
+      "reason": "The Italian 'Questo si insinuava profondamente nei miei pensieri' uses the verb 'insinuarsi' (to insinuate itself) and the noun 'pensieri' (thoughts). Claude's 'pressed itself...into my mind' loses both: 'insinuarsi' implies a gradual, almost sly penetration, not forceful pressing, and 'pensieri' is 'thoughts' not 'mind'. Gemini's rendering was accurate and was adopted nearly verbatim."
+    }
+  ],
+  "edgren_influences": []
+}

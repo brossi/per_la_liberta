@@ -1,0 +1,56 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro",
+      "original": "Jealous of their own *nomea* — their reputation — they left to lesser men",
+      "replacement": "Jealous of their own reputation, they left to lesser men",
+      "reason": "Removes the inline Italian gloss, which interrupts the narrative flow. The Gemini draft simply used 'reputation' without the gloss; the Edgren dictionary confirms 'nomea' = 'name (reputation)', so no Italian retention is needed."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "the house of my father",
+      "replacement": "the paternal house",
+      "reason": "The Italian 'la casa paterna' is a single adjectival phrase; 'the paternal house' preserves this compact form. Gemini had 'my paternal home'; the final keeps 'house' (closer to 'casa') but adopts the adjective 'paternal' from Gemini's direction."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "an invisible ghost",
+      "replacement": "an invisible spectre",
+      "reason": "'Spettro' is a direct cognate of 'spectre'; Gemini used this more faithful and period-appropriate word. 'Ghost' is too plain and domestic for the literary register."
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_gemini__pro",
+      "original": "to educate me in manly sentiments",
+      "replacement": "to educate me in virile sentiments",
+      "reason": "'Sentimenti virili' translates most naturally as 'virile sentiments'. The Latinate 'virile' preserves the elevated register of the original and is the direct cognate; 'manly' is too colloquial."
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_gemini__pro",
+      "original": "breastplate and helmet",
+      "replacement": "breastplate and helm",
+      "reason": "Gemini used 'helm' (though paired with 'cuirass'). 'Helm' is the more archaic, literary English form and suits the chivalric imagery of the passage better than the modern 'helmet'."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro",
+      "original": "as though he had been suddenly turned to stone",
+      "replacement": "as though he had been suddenly crystallised",
+      "reason": "The Italian is 'cristallizzato' — literally 'crystallised'. Claude's draft freely substituted 'turned to stone', losing the author's specific metaphor. Gemini had 'turned to crystal', pointing toward the literal sense. The final uses 'crystallised' as the most faithful rendering of the original verb."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "nomea",
+      "edgren_definition": "F.: name (reputation)",
+      "english_choice": "reputation",
+      "paragraph": 4,
+      "note": "Edgren confirms 'nomea' simply means 'reputation', which justified dropping the Claude draft's inline Italian gloss (*nomea* — their reputation —) in favour of the unadorned English word. No special or archaic sense required retention of the Italian."
+    }
+  ]
+}

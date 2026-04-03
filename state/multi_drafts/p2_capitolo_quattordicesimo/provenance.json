@@ -1,0 +1,42 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 45,
+      "from_draft": "draft_gemini__pro",
+      "original": "the tiger-skin travelling bag",
+      "replacement": "the travelling bag with the embroidered tiger",
+      "reason": "The Italian 'la valigia dalla tigre trapunta' means a bag with an embroidered tiger, not a bag made of tiger skin. 'Trapunta' means embroidered/quilted. The Gemini draft correctly rendered 'the valise with the embroidered tiger'; the final adopted this reading while keeping 'travelling bag' from the primary draft."
+    },
+    {
+      "paragraph": 48,
+      "from_draft": "draft_gemini__pro",
+      "original": "ringing through the room",
+      "replacement": "vibrating through the room",
+      "reason": "The Italian 'vibrando per la sala' is more faithfully rendered as 'vibrating' than 'ringing'. 'Vibrando' shares a root with English 'vibrating' and conveys the physical resonance of the voice propagating through the space, which suits the moment — the voice literally penetrates another person's heart."
+    },
+    {
+      "paragraph": 62,
+      "from_draft": "draft_gemini__pro",
+      "original": "her head thrown back against the rail",
+      "replacement": "her head thrown back against the back of it",
+      "reason": "The Italian 'sullo schienale' means the back of the chair, not a rail. The Gemini draft translated this as 'against the chair', correctly identifying the referent. The final uses 'the back of it' to render 'schienale' precisely while avoiding repetition of 'chair'."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "baratro",
+      "edgren_definition": "deep, dark place; abyss (hell)",
+      "english_choice": "abyss",
+      "paragraph": 1,
+      "note": "Edgren confirms 'abyss' as the primary English equivalent. A modern translator might also reach for 'chasm' or 'pit'; the Edgren entry reinforced the choice of 'abyss', which matches the hell-adjacent register of the original."
+    },
+    {
+      "italian_word": "orbita",
+      "edgren_definition": "orbit (of a planet); cart-rut; hollow of the eye",
+      "english_choice": "socket",
+      "paragraph": 5,
+      "note": "Edgren's 'hollow of the eye' for 'orbita' guided the anatomical reading. The final uses 'empty socket' for 'orbita vuota', which is the natural English anatomical term corresponding to Edgren's 'hollow of the eye'. Without the dictionary, a translator might default to 'orbit' (the modern medical term), which sounds clinical rather than visceral."
+    }
+  ]
+}

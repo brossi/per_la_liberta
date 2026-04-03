@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully employs vocabulary and sentence structures appropriate for an early 20th-century literary work."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The personal and recounting style of the original is well-preserved, especially in the direct speech and reflections."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The subtle shifts between formal narration and more direct, conversational dialogue are well-managed."
+        }
+      ],
+      "strengths": "The translation excels at capturing the period-appropriate literary register and maintaining the intimate, conversational tone of the narrator, Crespi, throughout the passage. The voice feels authentic to a historical memoir.",
+      "weaknesses": "None observed on this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Monarchia Sabauda' (Savoyard Monarchy), 'colpo di Stato' (coup d'état), 'potere temporale' (temporal power) are accurately and appropriately translated."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Specific historical figures (Mazzini, Orsini, Louis Bonaparte) and places (Campidoglio, Castel Sant'Angelo) are correctly rendered or preserved. The translation of 'piazza dello Shoah' to 'Shoah Square' is a literal rendering of the source text's proper noun, maintaining its original form as requested, despite the anachronistic nature of 'Shoah' itself for a 1913 text (this is a feature of the source, not a fault of the translation)."
+        }
+      ],
+      "strengths": "The translation effectively handles historical and cultural specificities, providing clear and accurate equivalents for political concepts and preserving proper nouns. It successfully immerses the reader in the historical period.",
+      "weaknesses": "The literal translation of 'piazza dello Shoah' might be confusing to modern readers, but this is a faithful rendering of the provided source text's unusual nomenclature for a 1913 setting, rather than a failing of the translation itself."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate, there are minor instances of interpretive additions: 'onta napoleonica' (Napoleonic shame/disgrace) is translated as 'Napoleonic betrayal', which adds a specific interpretation. Similarly, 'far strame d'ogni nobile aspirazione' (make havoc of/treat with contempt) is rendered as 'makes a mockery of', which is a strong but specific interpretation."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, including names of people, places (e.g., Campidoglio, Castel Sant'Angelo), and historical references are accurately preserved or appropriately translated where an English equivalent is standard (e.g., Louis Bonaparte for Luigi Bonaparte)."
+        }
+      ],
+      "strengths": "The translation demonstrates a high degree of precision in conveying the narrative and factual information. Complex sentences and nuanced expressions are handled with care, often finding excellent English equivalents for Italian idioms.",
+      "weaknesses": "There are a couple of instances where the translation adds a slight interpretive layer (e.g., 'betrayal' for 'shame', 'makes a mockery of' for 'lays waste/treats with contempt') rather than sticking to the most literal meaning, though these interpretations are contextually plausible."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is fluent, natural, and engaging. It reads like an original piece of literature, maintaining sophisticated sentence structures and effective pacing."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Idiomatic expressions such as 'making shift to live,' 'stung to the quick,' 'with cold steel,' and 'giving rein to the thought' are translated with skill, preserving their original impact and flavor."
+        }
+      ],
+      "strengths": "The literary quality is very high. The translator has successfully transformed the Italian into elegant, flowing English that is a pleasure to read, with excellent use of idiomatic expressions and varied sentence structures.",
+      "weaknesses": "No significant weaknesses were identified on this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The translation is grammatically flawless and avoids any awkward or unnatural phrasing, even in complex sentences."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is consistently clear and easy to follow, allowing the reader to grasp the meaning without needing to reread sentences."
+        }
+      ],
+      "strengths": "The grammar is impeccable, and the translation maintains a high level of fluency throughout. It is consistently clear and easy to understand.",
+      "weaknesses": "None observed on this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names, key political terms (e.g., 'Fatherland,' 'conspiracy,' 'Republic'), and stylistic choices are maintained consistently across the entire text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translator maintains a coherent and consistent literary style and tone from beginning to end, ensuring a unified reading experience."
+        }
+      ],
+      "strengths": "Excellent consistency is demonstrated in the translation of recurring terms, character names, and the overall stylistic approach, which contributes to a seamless reading experience.",
+      "weaknesses": "None observed on this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 7742,
+    "output": 1643
+  }
+}

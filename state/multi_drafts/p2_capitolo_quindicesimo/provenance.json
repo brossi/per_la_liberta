@@ -1,0 +1,49 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro",
+      "original": "sufficient to be used to the full letter of the Law",
+      "replacement": "sufficient to secure a conviction in perfect accordance with the Law",
+      "reason": "The Italian 'conficcarsi a perfetto tenore di Legge' means to nail down a conviction in full accordance with the law. Claude's 'used to the full letter' lost the sense of securing a conviction; Gemini's rendering captures both the legal outcome and the standard of compliance."
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro",
+      "original": "who was making his way through Brussels",
+      "replacement": "who was making his dash to Brussels",
+      "reason": "The Italian 'faceva la sua punta a Bruxelles' means making a quick foray/dash to Brussels as a destination. Claude's 'making his way through' wrongly implied transit rather than a purposeful trip. Gemini's 'dash' correctly renders 'punta'. The city name was anglicised to 'Brussels' per Claude's convention."
+    },
+    {
+      "paragraph": 19,
+      "from_draft": "draft_gemini__pro",
+      "original": "the inquisitor's manner of the Examining Magistrate",
+      "replacement": "the inquisitorial manner of the Examining Magistrate",
+      "reason": "The Italian 'i modi da inquisitore' is better served by the adjective 'inquisitorial' (from Gemini) than the noun construction 'inquisitor's manner' (Claude), which reads awkwardly in English. The singular 'manner' was an editorial normalisation."
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "I have never felt, and have never felt, towards Mathieu de la Drôme anything other than movements of filial gratitude",
+      "replacement": "I have never harboured towards Mathieu de la Drôme anything other than sentiments of filial gratitude",
+      "reason": "Claude's draft contained a flagged error — the tautological repetition 'I have never felt, and have never felt'. The rewrite fixes this; 'sentiments' (closer to Gemini's 'feelings') replaces the overly literal 'movements' for 'moti', and 'harboured' better conveys the sustained, private nature of the feeling."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "patto",
+      "edgren_definition": "pact (agreement; compact): di bel —, agreed; con — che, on condition that",
+      "english_choice": "compact",
+      "paragraph": 2,
+      "note": "Edgren lists 'compact' as a synonym for 'patto'. The final translation uses 'sealed the compact' rather than the more modern default 'pact' or 'agreement', giving the passage a period-appropriate formality. Both drafts already used 'compact'/'pact', so this is confirmatory rather than corrective."
+    },
+    {
+      "italian_word": "scommessa",
+      "edgren_definition": "wager: fare una —, lay a wager",
+      "english_choice": "wager",
+      "paragraph": 2,
+      "note": "Edgren's entry with the exact collocation 'fare una scommessa — lay a wager' confirms 'wager' as the period-appropriate choice over 'bet'. Both drafts already used 'wager', so the dictionary served as validation."
+    }
+  ]
+}

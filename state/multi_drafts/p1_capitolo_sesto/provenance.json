@@ -1,0 +1,146 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "my own person",
+      "replacement": "my own personality",
+      "reason": "Italian 'personalità' means personality, not person; Gemini is more literal"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "to curb our ardour",
+      "replacement": "to blunt our élan",
+      "reason": "Italian 'rintuzzare il nostro slancio' — 'rintuzzare' means to blunt/rebuff and 'slancio' means élan/dash; both words are more precise than Claude's paraphrase"
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "plants himself squarely across the road to bar their flight",
+      "replacement": "plants himself across the road to bar their way",
+      "reason": "Italian 'per sbarrarla' means to bar it (the road/their way), not to bar their flight; 'squarely' is an addition not in the source"
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "In that moment of heroism, he had forgotten that motion has its own laws",
+      "replacement": "Heroism forgot that motion has its laws",
+      "reason": "Italian 'L'eroismo dimenticava che il moto ha le sue leggi' — the subject is 'heroism' (abstract personification), not 'he'; Gemini preserves the rhetorical figure"
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "pinched my cheek with good-natured familiarity",
+      "replacement": "pinched my cheek good-naturedly",
+      "reason": "Italian 'mi strinse bonariamente la guancia' — 'bonariamente' is a simple adverb; Claude's 'with good-natured familiarity' over-expands it"
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "postscript",
+      "replacement": "codicil",
+      "reason": "Italian 'codicillo' is a legal term meaning codicil (an addendum to a will); 'postscript' loses the legalistic flavour Crespi intended"
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "which dominates all",
+      "replacement": "which dominates the entire city",
+      "reason": "Italian 'che tutta la domina' — 'la' refers to Rome; 'all' is vague, while 'the entire city' makes the antecedent explicit as Gemini does"
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a gleam of red — the trousers of a Frenchman",
+      "replacement": "the red trousers of a Frenchman",
+      "reason": "Italian 'vidi rosseggiare... i calzoni di un francese' — the object is the trousers; Claude's 'a gleam of red' adds a dramatic elaboration not in the source"
+    },
+    {
+      "paragraph": 15,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "some members of the Guardia Nazionale",
+      "replacement": "some militiamen of the Guardia Nazionale",
+      "reason": "Italian 'militi della Guardia Nazionale' — 'militi' specifically means militiamen/soldiers, not generic 'members'"
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "extolling our valour, and giving voice to the wish",
+      "replacement": "extolling our valour and the wish",
+      "reason": "Italian 'esaltare il nostro valore e l'augurio' — the verb 'esaltare' governs both objects; Claude's 'giving voice to' adds a verb not in the source"
+    },
+    {
+      "paragraph": 20,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "at such an extreme hour",
+      "replacement": "at such an extremity",
+      "reason": "Italian 'in tale estremo' — 'estremo' as a noun means extremity/dire strait, not 'extreme hour'"
+    },
+    {
+      "paragraph": 21,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "what a massacre!",
+      "replacement": "what carnage!",
+      "reason": "Italian 'quale scempio!' — 'scempio' means carnage/havoc/outrage, carrying a sense of desecration that 'massacre' lacks"
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "steeping",
+      "replacement": "saturating",
+      "reason": "Italian 'saturando' directly means saturating; 'steeping' is an interpretive substitution"
+    },
+    {
+      "paragraph": 23,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "ceased to breathe",
+      "replacement": "ceased to throb",
+      "reason": "Italian 'cessò di palpitare' — 'palpitare' means to throb/beat (of the heart), not to breathe; the image is of a heart stopping"
+    },
+    {
+      "paragraph": 28,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "above all else",
+      "replacement": "if nothing else",
+      "reason": "Italian 'su non altro' means 'if nothing else' — the opposite meaning from 'above all else'; Claude's version inverts the rhetorical point"
+    },
+    {
+      "paragraph": 30,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "favourably disposed toward",
+      "replacement": "propitious to",
+      "reason": "Italian 'propizie' means propitious; Claude's three-word paraphrase is unnecessarily wordy"
+    },
+    {
+      "paragraph": 30,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "superior weapons",
+      "replacement": "superior arms",
+      "reason": "Italian 'armi superiori' — 'armi' means arms (the period-appropriate English term); 'weapons' is modern and less literary"
+    },
+    {
+      "paragraph": 32,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "fresh reinforcements",
+      "replacement": "fresh contingents",
+      "reason": "Italian 'contingenti freschi' — 'contingenti' means contingents (units of troops), not generic reinforcements"
+    },
+    {
+      "paragraph": 36,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "like a warrior descended",
+      "replacement": "a knight descended",
+      "reason": "Italian 'un cavaliere sceso' — 'cavaliere' means knight/cavalier; as Masina was a lancer, 'knight' preserves the mounted-warrior connotation that 'warrior' loses"
+    },
+    {
+      "paragraph": 38,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "God in Heaven... what a stench!",
+      "replacement": "Jesus... what a stench!",
+      "reason": "Italian 'Gesù... che puzza!' — 'Gesù' is Jesus, not 'God in Heaven'; the exclamation should be translated literally"
+    }
+  ],
+  "edgren_influences": []
+}

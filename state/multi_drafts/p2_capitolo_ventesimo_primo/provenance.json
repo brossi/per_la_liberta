@@ -1,0 +1,56 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "at the Roquette",
+      "replacement": "at La Roquette",
+      "reason": "The narrative context style guide mandates 'La Roquette' as the standard form for this prison name; Gemini's draft already followed this convention while the primary draft anglicised the article"
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "Once out of the Roquette",
+      "replacement": "Once out of La Roquette",
+      "reason": "Consistency with the style-guide form 'La Roquette' as used in the Gemini draft"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "As at the Roquette",
+      "replacement": "As at La Roquette",
+      "reason": "Consistency with the style-guide form 'La Roquette' as used in the Gemini draft"
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "before leaving the Roquette",
+      "replacement": "before leaving La Roquette",
+      "reason": "Consistency with the style-guide form 'La Roquette' as used in the Gemini draft"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "arguire",
+      "edgren_definition": "argu-ire [L. -ere], INTR.: argue (infer, conclude); reprimand",
+      "english_choice": "infer",
+      "paragraph": 1,
+      "note": "Edgren lists 'infer, conclude' as the primary senses of arguire, confirming the choice of 'so far as I could infer' over a modern default of 'argue' or 'gather'"
+    },
+    {
+      "italian_word": "consorte",
+      "edgren_definition": "con-sòrte [L. -sors (sors, fate)], M., F.: consort; partner",
+      "english_choice": "consort",
+      "paragraph": 1,
+      "note": "Edgren's period-appropriate primary gloss 'consort' supported retaining this slightly archaic term in 'widowed consort' rather than modernising to 'wife' or 'spouse'; both drafts agreed on this rendering"
+    },
+    {
+      "italian_word": "bastevole",
+      "edgren_definition": "ba-stévole [-stare], ADJ.: sufficient",
+      "english_choice": "sufficient",
+      "paragraph": 1,
+      "note": "Edgren confirms 'sufficient' as the direct equivalent of bastevole, supporting 'means more than sufficient' as the natural period rendering of 'mezzi più che bastevoli'"
+    }
+  ]
+}

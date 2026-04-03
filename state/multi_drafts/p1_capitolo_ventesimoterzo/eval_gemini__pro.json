@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively uses a vocabulary and syntax that evokes the early 20th-century literary style of the source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The personal reflections, rhetorical questions, and direct speech are well-preserved, maintaining the author's conversational yet contemplative voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The shift from formal to familiar address ('mi davano del tu' rendered as 'they addressed me familiarly') is handled well."
+        }
+      ],
+      "strengths": "The translation successfully captures and sustains the formal yet personal literary register and conversational tone of the original Italian text, making it feel authentic to the period.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'coup d'état,' 'Dictatorship,' 'Disciplinary Council,' and 'Risorgimento' (retained) are translated or preserved appropriately for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "Most Italian place names like 'Zurigo,' 'Parigi,' 'Roma,' 'Venezia' are preserved, but others like 'Danimarca' (Denmark), 'Inghilterra' (England), 'Reno' (Rhine), and 'Francesco Giuseppe' (Franz Joseph) are anglicized, creating an inconsistency."
+        }
+      ],
+      "strengths": "The translation handles complex political and historical terms with accuracy, ensuring the reader grasps the specific context of the Risorgimento era.",
+      "weaknesses": "Inconsistent treatment of proper nouns, with some Italian place names preserved while others are anglicized. This choice breaks the consistency for cultural references."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation accurately reflects the meaning, including subtle ironies, strong condemnations, and emotional nuances, without significant omissions or additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "While many Italian place names are preserved (e.g., Zurigo, Parigi, Roma), others are anglicized (e.g., Denmark, England, Rhine, Franz Joseph). There is also a typo 'Locamo' instead of 'Locarno'."
+        }
+      ],
+      "strengths": "The translation is highly faithful to the original text's meaning, capturing its complexities, emotional depth, and critical perspectives without distorting the content.",
+      "weaknesses": "Inconsistent preservation of Italian proper nouns and place names, and a typo ('Locamo' for 'Locarno'), which slightly detracts from perfect faithfulness."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The prose is natural, flows smoothly, and is engaging, demonstrating strong literary qualities that transcend a mere word-for-word rendering."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Many idiomatic phrases and vivid metaphors are skillfully translated, retaining their impact and imagery, such as 'sniffing the air' and 'a hand of iron had gagged every mouth.'"
+        }
+      ],
+      "strengths": "The translation is highly readable and literary, with excellent flow and a strong command of English expression. It successfully conveys the author's evocative language and imagery.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The translation exhibits excellent grammar and natural English sentence structures throughout, with no awkward constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is consistently clear and easy to understand, allowing for smooth reading without needing to re-read for comprehension."
+        }
+      ],
+      "strengths": "The English prose is grammatically flawless and remarkably fluent, contributing to a highly accessible and enjoyable reading experience.",
+      "weaknesses": "None in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "Character names are consistent. However, the inconsistent approach to place names (some anglicized, some retained Italian) and the typo 'Locamo' detract from full consistency in nomenclature."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a consistent stylistic approach and authorial voice across all paragraphs."
+        }
+      ],
+      "strengths": "The overall style, tone, and narrative voice are consistently maintained throughout the entire passage, providing a cohesive reading experience.",
+      "weaknesses": "The inconsistent treatment of place names (alternating between Italian and anglicized forms) and the presence of a typo in a place name lead to a lack of complete consistency in factual details."
+    }
+  ],
+  "weighted_score": 0.875,
+  "_tokens": {
+    "input": 12452,
+    "output": 1491
+  }
+}

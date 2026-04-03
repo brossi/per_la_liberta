@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully employs archaic and formal vocabulary (e.g., 'dwelt,' 'benighted,' 'prevaricator,' 'deprecate') and complex sentence structures that accurately reflect the early 20th-century literary register of the Italian source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation captures the directness and passionate, slightly rhetorical quality of Crespi's narrative, especially in the first-person accounts, making it feel like a compelling personal testimony."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original text maintains a consistent formal and literary tone throughout, and the translation accurately mirrors this consistency, with no inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels at recreating the specific early 20th-century literary register and the direct, passionate narrative voice of the author. The choice of vocabulary and sentence structure consistently contributes to this effect.",
+      "weaknesses": "None identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Political terms like 'Coup d'État,' 'National Assembly,' 'universal suffrage,' 'Council of State,' and 'city toll' ('dazio murato') are translated accurately and appropriately for the historical period and French context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Italian cultural references, such as 'cappellaio torinese' (hatter from Torino), are preserved. Place names (e.g., Circolo del Paradiso, Batignolle, Rue de la Paix) and historical figures are also correctly maintained or translated to standard English equivalents."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the historical and cultural context, correctly rendering political and geographical terms without anachronism or unnecessary modernization.",
+      "weaknesses": "None identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate, there is one significant mistranslation: 'brutalmente paghi addetti' is rendered as 'brutally satisfied men assigned to the manufacture of cartridges.' 'Paghi' in this context means 'paid' or refers to being 'handled/treated,' not 'satisfied.' This changes the meaning from workers being brutalized to workers being brutal (or brutally content), which is incorrect. However, the translation impressively corrects a likely typo 'vetri al guinzaglio' to 'greyhounds on a leash,' demonstrating a deep understanding of authorial intent."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical references (e.g., Louis-Napoléon, Victor Hugo, Proudhon, Pio IX, Bastille, Montmartre, Mazas) are either kept in their original form or translated to their widely accepted historical English equivalents, ensuring faithfulness to the source."
+        }
+      ],
+      "strengths": "The translation is generally very faithful to the source, capturing the nuances of historical events and characters. Its ability to identify and correct a probable typo ('vetri' to 'greyhounds') is particularly noteworthy, indicating a strong commitment to the author's likely meaning.",
+      "weaknesses": "The misinterpretation of 'brutalmente paghi' as 'brutally satisfied' is a notable lapse in accuracy, altering the description of the workers' situation."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads naturally and maintains a strong literary flow. The translation skillfully navigates complex sentence structures, creating engaging and impactful descriptions that elevate it beyond a mere mechanical transfer of words."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative expressions and imagery, such as 'silence that savoured of a storm,' 'blaze of heroism,' 'nightmare of legality,' 'spectre of the Constitution,' 'senile childishness,' and 'dark abyss of Sedan,' are all rendered with evocative and effective English equivalents, preserving the vividness of the original."
+        }
+      ],
+      "strengths": "The literary quality of the translation is high, with strong prose that flows well and effectively conveys the original's vivid imagery and figurative language. The translator maintains the power and emotional resonance of Crespi's descriptions.",
+      "weaknesses": "None identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct. While some constructions are formal or slightly archaic, they are deliberate choices that contribute to the period tone and are not awkward in the context of the literary register."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite the original's complex sentences and the translation's formal register, the text is remarkably clear and readable, rarely requiring re-reading to grasp the meaning. The choices in phrasing and punctuation aid comprehension."
+        }
+      ],
+      "strengths": "The translation is grammatically impeccable and highly fluent. It achieves clarity and readability while preserving the intricate style of the source.",
+      "weaknesses": "None identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Key terms such as 'Popolo' (People), 'Assemblea Nazionale' (National Assembly), 'Club,' and 'Colpo di Stato' (Coup d'État), as well as character names like Louis-Napoléon, are translated with complete consistency throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a highly coherent and consistent formal, literary, and historical style from the beginning to the end of the passage, reflecting the unity of the original text."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent consistency in terminology, character names, and overall style, which greatly contributes to its professional quality and readability.",
+      "weaknesses": "None identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 8718,
+    "output": 1752
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains the sophisticated and somewhat formal literary register of the original Italian, using period-appropriate vocabulary and sentence structures."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "Despite the formal register, the translation retains a natural, storytelling quality that captures the original narrative voice effectively."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original text consistently maintains a formal tone, which is perfectly mirrored in the English translation, without any inappropriate shifts to informality."
+        }
+      ],
+      "strengths": "The translation excels at preserving the original's elevated literary tone and narrative style, making it feel authentic to the period.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'old patriot,' 'yellow and black' (for Austrian flag), 'Austrian lead,' 'People' (capitalized), and 'henchmen of the despot' are accurately and appropriately translated for the Risorgimento context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "The few specific cultural mentions (e.g., 'chamois,' 'café') are preserved or rendered in standard English equivalents, fitting the context without modernization or loss of meaning."
+        }
+      ],
+      "strengths": "The historical and cultural context is well-maintained, ensuring that key terms and references resonate correctly with the period.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably faithful to the source, capturing the full meaning, nuances, and intent of each sentence without any perceptible omissions or unnecessary additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Proper nouns and key place names are either preserved (Giustiniano, Agordo) or rendered with their common, accurate English equivalents (Switzerland, Alps), which is appropriate for readability without losing the original reference."
+        }
+      ],
+      "strengths": "The translation demonstrates exceptional accuracy, preserving the precise meaning and intricate details of the source text.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly natural, fluent, and compelling. It reads as an accomplished piece of literature in its own right, not merely a translated text."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "All figurative language, metaphors, and vivid imagery from the original are skillfully and powerfully translated, maintaining their emotional impact and evocative quality."
+        }
+      ],
+      "strengths": "The literary quality of the translation is outstanding, marked by elegant prose, rich vocabulary, and effective rendering of the original's expressive power.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically flawless and stylistically sophisticated, with no awkward phrasing or unnatural sentence structures."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and flows smoothly, allowing for effortless comprehension despite its literary complexity."
+        }
+      ],
+      "strengths": "Impeccable grammar and clear, flowing English contribute to a highly readable and enjoyable translation.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names and key recurring terms are translated consistently throughout the text, including the thoughtful rendering of 'Mamma' and the capitalization of 'People' and 'Country'."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a uniform and coherent stylistic approach across all paragraphs, ensuring a consistent tone and voice throughout the passage."
+        }
+      ],
+      "strengths": "The translation exhibits excellent consistency in terminology and style, creating a unified and professional reading experience.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 3540,
+    "output": 1321
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "primary_draft": "draft_gemini__pro",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_claude__sonnet",
+      "original": "he had induced his principal to employ me to polish slabs",
+      "replacement": "he had induced his employer to take me on for polishing slabs",
+      "reason": "'Employer' is more natural than 'principal' for a sawmill owner; 'take me on for polishing' better captures the casual, piecework nature of the arrangement."
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_claude__sonnet",
+      "original": "He insisted on my isolation, on the ingratitude",
+      "replacement": "He dwelt upon my isolation, upon the ingratitude",
+      "reason": "'Dwelt upon' renders 'insistette' with the connotation of lingering emphasis; the formal preposition 'upon' suits the elevated register."
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_claude__sonnet",
+      "original": "the indigence revealed by my home and my appearance",
+      "replacement": "the indigence revealed by my lodgings and my appearance",
+      "reason": "'Lodgings' better conveys the temporary, rented quality of an exile's dwelling than the warmer 'home'; it matches the Italian 'abitazione' in its neutral formality."
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_claude__sonnet",
+      "original": "the comfortable environment she deserved",
+      "replacement": "the comfortable station she deserved",
+      "reason": "'Station' captures the social rank implied by 'ambiente agiato' more precisely than the spatially-oriented 'environment'."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_claude__sonnet",
+      "original": "a subtle and powerful coefficient: the honest conscience that changes the nature of sufferings",
+      "replacement": "one subtle and imperious coefficient: the honest conscience that transforms the sufferings",
+      "reason": "'Imperious' renders 'prepotente' (overbearing, commanding) more precisely than 'powerful'. Claude's parallel 'transforms...converts' structure is more rhythmically effective than Gemini's 'changes the nature of...transforms'."
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_claude__sonnet",
+      "original": "at the price of my honesty",
+      "replacement": "at the price of my honour",
+      "reason": "The Italian 'onesta' can mean either honesty or honour; in context the Inspector is asking di Rudio to betray his comrades, making 'honour' the better sense."
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_claude__sonnet",
+      "original": "see his reflection in the serene eye",
+      "replacement": "see himself mirrored in the serene eye",
+      "reason": "'See himself mirrored' preserves the reflexive force of 'specchiarsi' better than 'see his reflection', which externalises the image."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_claude__sonnet",
+      "original": "a master at dissembling his state of mind with a smile",
+      "replacement": "a master at dissembling the state of his soul beneath a smile",
+      "reason": "The Italian 'animo' means soul or spirit, not merely mind. 'Beneath a smile' better conveys concealment than the neutral 'with a smile'."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_claude__sonnet",
+      "original": "with a liberty not of the best taste, he could have compared me",
+      "replacement": "with a comparison of no very distinguished kind, he might have seen fit to liken me",
+      "reason": "The Italian 'con licenza non soverchiamente di buon genere' has an ironic, elaborate circumlocution that Claude's rendering preserves better than Gemini's flatter paraphrase."
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_claude__sonnet",
+      "original": "Charity — he said — let us not quibble over mere words",
+      "replacement": "Come now, — he said — let us not quarrel over mere words",
+      "reason": "Gemini mistranslated the Italian 'Carita' as the noun 'Charity'. Here it is an interjection meaning 'For pity's sake' or 'Come now' — an appeal for patience, not the theological virtue."
+    },
+    {
+      "paragraph": 20,
+      "from_draft": "draft_claude__sonnet",
+      "original": "seemed to want to stretch so as to touch his ears with their corners",
+      "replacement": "seemed on the point of stretching, at their very corners, as far as his ears",
+      "reason": "Claude's phrasing captures the grotesque, frozen quality of the Italian 'parve volessero spingersi' — the lips seemed about to stretch but did not; Gemini's 'wanted to stretch' over-personalises the lips."
+    },
+    {
+      "paragraph": 23,
+      "from_draft": "draft_claude__sonnet",
+      "original": "a long series of deceptions and violations, a Catholic coalition of superstitions and greed that would take morality for its banner or, rather, in the guise of a picklock",
+      "replacement": "a long succession of intrigues and outrages, a Catholic coalition of superstitions and cupidity which would take morality for its signboard or, more precisely, for a kind of skeleton-key",
+      "reason": "'Raggiri' means intrigues rather than mere deceptions. 'Cupidigia' is best rendered by the Latinate 'cupidity'. 'Insegna' is literally a signboard, not a banner. 'Grimaldello' is a skeleton-key — Claude's phrasing is also syntactically clearer."
+    },
+    {
+      "paragraph": 25,
+      "from_draft": "draft_claude__sonnet",
+      "original": "two gentlemen might come to an understanding, despite the disparity of their ideas",
+      "replacement": "two men of honour might reach an understanding, despite the disparity of their views",
+      "reason": "'Galantuomini' means men of honour, not merely gentlemen. The priest is making a moral appeal, not a social one."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_claude__sonnet",
+      "original": "as a man of heart who could, by age, be your father",
+      "replacement": "as a man of feeling who might, by his age, be your father",
+      "reason": "'Uomo di cuore' is idiomatically 'a man of feeling' in period English — 'man of heart' is a calque."
+    },
+    {
+      "paragraph": 27,
+      "from_draft": "draft_claude__sonnet",
+      "original": "It was the halter of need thrown around my neck!",
+      "replacement": "It was the noose of need cast about my neck!",
+      "reason": "While 'capestro' can mean halter, 'noose' better conveys the metaphorical strangling. 'Cast about' is more literary than 'thrown around'."
+    },
+    {
+      "paragraph": 28,
+      "from_draft": "draft_claude__sonnet",
+      "original": "I rose with a start",
+      "replacement": "I sprang to my feet",
+      "reason": "'Mi alzai di scatto' implies explosive, angry motion — 'sprang to my feet' is more physical than 'rose with a start', which implies surprise."
+    },
+    {
+      "paragraph": 28,
+      "from_draft": "draft_claude__sonnet",
+      "original": "a legacy of virile examples",
+      "replacement": "an inheritance of manly example",
+      "reason": "'Virile' in modern English carries sexual overtones absent from the Italian 'virili' (courageous, resolute); 'manly' is the better period equivalent. 'Eredita' is literally inheritance."
+    },
+    {
+      "paragraph": 29,
+      "from_draft": "draft_claude__sonnet",
+      "original": "It was Christmas Eve",
+      "replacement": "It was the eve of Christmas",
+      "reason": "The Italian 'la vigilia del Natale' foregrounds 'vigilia' (eve, vigil) — 'the eve of Christmas' preserves this slightly formal, liturgical phrasing, fitting the bitter irony of the passage."
+    },
+    {
+      "paragraph": 29,
+      "from_draft": "draft_claude__sonnet",
+      "original": "I observed with dry eyes his little face, as white as the pillow on which it lay",
+      "replacement": "I gazed with dry eyes upon his little face, white as the pillow on which it rested",
+      "reason": "'Gazed' carries the sustained, grief-stricken quality of the imperfect 'osservavo' better than the cooler 'observed'. 'Rested' is gentler than 'lay' for a dead child."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "segheria",
+      "edgren_definition": "se-gheria [-gare], F.: saw-mill",
+      "english_choice": "saw-mill",
+      "paragraph": 1,
+      "note": "Edgren hyphenates 'saw-mill'. The final translation follows this period-appropriate hyphenated form rather than the modern closed compound 'sawmill' used in the Gemini draft."
+    },
+    {
+      "italian_word": "procinto",
+      "edgren_definition": "in essere (or mettersi) in —, be on the point of",
+      "english_choice": "on the point of",
+      "paragraph": 1,
+      "note": "Edgren gives the exact idiom 'be on the point of' for 'in procinto'. Both drafts already used this phrasing, so the dictionary confirmed rather than redirected the choice."
+    },
+    {
+      "italian_word": "levigar",
+      "edgren_definition": "make smooth (even); polish (levigate)",
+      "english_choice": "polishing",
+      "paragraph": 1,
+      "note": "Edgren confirms 'polish' as the primary sense of 'levigare'. Both drafts used 'polish'; the dictionary ruled out alternatives like 'smoothing' or 'finishing'."
+    }
+  ]
+}

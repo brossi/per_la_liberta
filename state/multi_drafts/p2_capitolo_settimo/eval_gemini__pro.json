@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively uses vocabulary and syntax ('naught else but,' 'nay, a veritable tempest,' 'sonorous laughter') that convey an early 20th-century literary register, mirroring the original's style."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a direct, conversational yet reflective narrative voice, particularly in moments of internal reflection and dramatic pronouncements, characteristic of Crespi's style."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original Italian maintains a consistently formal and literary tone, with no significant shifts to informality. The translation appropriately maintains this consistent formality throughout."
+        }
+      ],
+      "strengths": "The translation excels at capturing the specific literary register and dramatic, reflective tone of the original. The choice of elevated vocabulary and slightly archaic phrasing contributes significantly to this strength.",
+      "weaknesses": "There are no notable weaknesses in preserving the tone and authorial voice; it is a strong point of the translation."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'insurrectionary attempts,' 'twelve apostles' (referring to bombs), 'the blade' for 'arma bianca,' and 'redemption' are all rendered appropriately for the historical and political context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Place names like 'Parigi,' 'via Monthabor,' and 'via Montmartre' are preserved. 'Trattoria' is appropriately glossed as 'eating-house,' which is a period-sensitive adaptation rather than a modernization. Regional terms like 'Venetian, Tuscan, Neapolitan, Romagnol' are well-handled."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of cultural and historical context, choosing to preserve Italian proper nouns and adapting specific cultural references (like 'trattoria') in a way that respects the source material's era.",
+      "weaknesses": "No significant weaknesses were identified in this dimension. The choices made enhance the sense of the original context."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While highly accurate overall, there are minor omissions (e.g., 'valigia a sacco' rendered simply as 'valise' instead of a 'bag-like valise' or 'carpetbag') and very minor additions ('thus' in 'I was thus awaiting his instructions'). However, the core meaning is consistently conveyed."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "Many proper nouns and place names are preserved (Orsini, Pieri, Monthabor, Parigi). However, common titles like 'dott. Bernard' become 'Dr. Bernard' and 'Signorina Cheney' becomes 'Miss Cheney,' which are standard practice but a slight departure from the 'original Italian form' criterion. The preservation of 'Parigi' while translating titles is a stylistic choice."
+        }
+      ],
+      "strengths": "The translation is remarkably faithful to the original's meaning, capturing complex phrases and nuances accurately. The dramatic and philosophical undertones are precisely rendered.",
+      "weaknesses": "Very minor omissions of descriptive detail (e.g., 'a sacco') and the translation of some titles, while conventional, slightly detract from full preservation of original Italian forms or complete literalness."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads exceptionally well, with a natural flow and engaging rhythm. It avoids stiffness and reads like original literary work rather than a translation."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative expressions and imagery, such as 'known the beating of my heart,' 'overlay my nature,' 'burst into sonorous laughter,' 'melted down twelve apostles,' 'unfortunate turn,' and the concluding prophetic passage, are all translated with vividness and impact, preserving their original power."
+        }
+      ],
+      "strengths": "This is a major strength of the translation. The translator demonstrates excellent literary sensibility, crafting prose that is both accurate and beautifully rendered. Imagery and dramatic tension are particularly well-handled.",
+      "weaknesses": "There are no notable weaknesses in the literary quality; the translation consistently delivers high-quality prose."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The English is almost entirely grammatically correct. 'In Parigi' is technically correct but an awkward construction in standard English, and 'leaned his person backward' is a bit stiff, although grammatically sound."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The translation is highly readable and clear. The sentence structures are well-managed, allowing for easy comprehension without the need for re-reading."
+        }
+      ],
+      "strengths": "The translation is largely free of grammatical errors and maintains high readability. The prose flows smoothly, making it easy to follow the narrative.",
+      "weaknesses": "Minor points of awkwardness, such as 'in Parigi,' slightly detract from perfect fluency, though they do not impede understanding."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names (Orsini, Pieri, Gomez, Cheney), key items (fulminate of mercury, valise, thin board), and important concepts are translated consistently throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a coherent and consistent literary style, including the use of specific tense shifts for vivid narration (e.g., present tense for the porter's actions), across all paragraphs."
+        }
+      ],
+      "strengths": "Consistency is a strong point. The translator maintains a uniform approach to terminology, names, and overall stylistic choices, ensuring a cohesive reading experience.",
+      "weaknesses": "No weaknesses were observed in terms of consistency. The translation is very uniform."
+    }
+  ],
+  "weighted_score": 0.8750000000000001,
+  "_tokens": {
+    "input": 3766,
+    "output": 1740
+  }
+}

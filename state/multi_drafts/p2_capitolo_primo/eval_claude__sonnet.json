@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The vocabulary and sentence structure consistently maintain a formal, literary register appropriate for the early 20th century, using phrases like 'setting aside that formidable hypothesis', 'at length', 'relinquish', 'manifold threads', 'worthily', 'generating flame', 'pledges', 'hearty laughter flung', 'threadbare elbows', 'take no account of poverty', 'characterising', 'blaze', 'vehemence', 'subdued tones', 'adorns herself', 'unjust reputation', 'glided over the spirit', 'occupied and almost saturated', 'musty smell', 'subtle intoxication', 'probing the matter more deeply', 'employer, a Frenchman', 'destitute', 'stripped bare', 'turned out his pockets and pockets within pockets in vain', 'dismay', 'listless', 'pressing obligations', 'festival of pink and blue', 'via crucis', 'pariah', 'salt and fire', 'contrived to slip along the corridor', 'unpleasant encounters', 'temper', 'face the mouth of a cannon', 'creditor', 'inconvenient burden', 'superfluous possessions', 'seek them out again', 'invite a rebuff deliberately', 'any work whatsoever', 'times of crisis', 'unemployed formed an army', 'conspicuous by their absence', 'measured by the yard', 'soliciting here and there', 'gentlemanly air', 'more human among them contented themselves with answering him with some pleasantry', 'grunt the laconic 'Go on!', 'saturated with so much contempt', 'legs would carry him', 'resource of those without resources', 'painful of rests', 'unexpectedly', 'mysterious means', 'not tasted a morsel for eight-and-forty hours', 'customary precautions', 'force of habit', 'turned back the bedclothes', 'something heavy rolled across the bed', 'presently he was unwrapping a parcel bound with great care', 'delicious fragrance was tickling his nostrils', 'marvel of well-cooked viands', 'bit into them with the force of a dog', 'without reflecting, without thinking', 'wiped his mouth', 'wondering that he had waited so long', 'Whence has all this abundance rained down upon me? Who in the world has taken care of me?', 'suspicion fell upon', 'gentle creatures', 'sheltered, after the manner of Providence, beneath her large wings', 'reflected, not without logic', 'laid the table in the proper fashion', 'must have come from a distance', 'critical circumstances', 'mystery was this, then?', 'To be brief', 'stretched himself under the bedclothes', 'outer world was already fading', 'consciousness of his own being had grown dim', 'small part of his brain was still working mechanically', 'boundless and tenebrous void', 'Now and again there flashed through it, unresolved', 'in practical terms', 'save in so far as they are reflected in our own minds', 'infer to what minimal proportions they may be reduced inside the skull — be it even the skull of a hero!'"
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The 'I' pronoun is consistently used, and interjections or direct addresses to the reader (e.g., 'as it seems to me', 'it is understood', 'mind you!', 'To be brief') effectively convey the original's engaging and conversational tone."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The Italian original maintains a largely consistent formal register, with some shifts in reported dialogue. The English translation accurately mirrors this consistency and nuance, avoiding inappropriate shifts in formality."
+        }
+      ],
+      "strengths": "The translation excels at preserving the sophisticated, slightly ornate, and engaging narrative voice of the original. The choice of vocabulary and sentence structure perfectly aligns with an early 20th-century literary text, making it feel authentic to the period.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "'Risorgimento' is correctly kept as a proper noun. 'Tirannelli d'Italia' is aptly translated as 'petty tyrants of Italy,' fitting the political context. Other relevant terms are handled well."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Cultural references like 'Moretto' and 'Moro' (referencing Othello) are maintained and contextualized. The Italian terms for fruits ('dattero, limone, ananassa, fico') are preserved within the dialogue about Italian grammar, which is a good choice. 'Via Crucis' is italicized, acknowledging its cultural origin while integrating it into the English text. The metaphorical 'raggi concentrati' is gracefully glossed as 'concentrated sunbeams'."
+        }
+      ],
+      "strengths": "The translation thoughtfully handles cultural and political references, preserving key Italian terms while providing context or direct, accurate equivalents where necessary, ensuring the reader understands the nuances without losing the original flavor.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably accurate. Challenging phrases like 'rantoli di elisia' (interpreted as 'death-rattles of the consumptive') and 'a capo basso, la sua tisana' ('head bowed, his dose of medicine') are rendered with plausible and contextually fitting interpretations rather than literal, potentially confusing, translations. The meaning is consistently conveyed without significant omissions or distorting additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, including personal names (Mazzini, Di Rudio, Fumagalli, Tressoldi, Bonacina, Mancherini, Elisa, Sara, Glassier, Armandi), and place names (London, Drury Lane, Wapping Docks, Baldwin's Garden, Surrey, Thames, Belluno, Venice, Lucca, Bologna) are correctly preserved, maintaining the integrity of the original text."
+        }
+      ],
+      "strengths": "The translation demonstrates a high degree of fidelity to the source text, capturing both explicit and implicit meanings. The translator expertly navigates idiomatic expressions and potentially ambiguous phrases, ensuring clarity and accuracy.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant, fluid, and reads like an original literary work. It maintains a sophisticated rhythm and varied sentence structure, making it a pleasure to read without any sense of being a 'translationese' product."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language is consistently translated with skill and sensitivity. Examples include 'perfume of the past', 'peeps in', 'leaden skies', 'icy breath', 'embroidered upon the fibres of those souls', 'growing vast in the eyes', 'festival of pink and blue', 'via crucis of the hero reduced to the level of a pariah', 'face the mouth of a cannon to the face of a creditor', 'marvel of well-cooked viands', 'abundance rained down upon me', 'sheltered, after the manner of Providence, beneath her large wings', and 'boundless and tenebrous void'. These choices effectively convey the original's rich imagery and emotional impact."
+        }
+      ],
+      "strengths": "The literary quality is outstanding. The translation masterfully renders the original's figurative language and emotional depth, creating a captivating and natural-sounding English text that stands on its own as a work of literature.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English translation is grammatically flawless and completely free of awkward constructions. Complex sentences are handled with clarity and precision, reflecting expert command of the English language."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is highly readable and clear. Even intricate passages are presented in a way that is easily comprehensible, requiring no re-reading for understanding."
+        }
+      ],
+      "strengths": "The translation is grammatically impeccable and exceptionally fluent. It reads smoothly and effortlessly, ensuring a clear and enjoyable experience for the reader.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Character names, place names, and key recurring terms are consistently rendered throughout the text. Minor variations in translating 'Patria' (Fatherland/country) are acceptable and do not detract from overall consistency, as the meaning is retained."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a uniform, high-quality literary style from beginning to end, ensuring a cohesive reading experience. There are no abrupt shifts in tone or register."
+        }
+      ],
+      "strengths": "The translation is highly consistent in its terminology and stylistic choices, contributing to a seamless and professional final product.",
+      "weaknesses": "No discernible weaknesses in this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 10881,
+    "output": 2425
+  }
+}

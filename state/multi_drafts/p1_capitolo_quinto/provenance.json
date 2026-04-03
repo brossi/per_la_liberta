@@ -1,0 +1,28 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the beautiful and most accomplished gentlewoman",
+      "replacement": "the comely and most cultivated gentlewoman",
+      "reason": "'avvenente' specifically denotes physical attractiveness or comeliness, not beauty in the broad sense — 'comely' is more precise. 'coltissima' (superlative of 'colto') means cultivated/learned, not accomplished in the broader English sense — 'cultivated' is the closer equivalent."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "grembo",
+      "edgren_definition": "lap (bosom); middle; uterus (womb); apron",
+      "english_choice": "bosom",
+      "paragraph": 1,
+      "note": "Edgren lists 'bosom' as a primary sense of 'grembo', supporting the Claude draft's 'received him into their bosom' over the Gemini draft's 'welcomed him into their fold'. 'Fold' is an English idiom without dictionary backing for this Italian word."
+    },
+    {
+      "italian_word": "propizio",
+      "edgren_definition": "propitious (kind, favorable)",
+      "english_choice": "propitious",
+      "paragraph": 2,
+      "note": "Edgren confirms 'propitious' as the standard rendering. Both drafts already used it, so this was a validation rather than a tiebreaker."
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "that innocent soul who",
+      "replacement": "that innocent who",
+      "reason": "The Italian 'quell'innocente' is a substantivised adjective, not a noun phrase; dropping 'soul' is more faithful and avoids sentimentality the original does not have."
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the cry, cut off by death",
+      "replacement": "the cry, intercepted by death",
+      "reason": "'Intercettato' literally means 'intercepted'; 'cut off' is a looser paraphrase. 'Intercepted' preserves the striking personification of death catching the cry mid-flight."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "her belly, heavy and swollen with new life, made it hard going",
+      "replacement": "heavy upon her was the belly, swollen anew and fecund",
+      "reason": "Gemini supplied 'fecund' for 'fecondo', which is more exact than Claude's explanatory 'with new life'. The final reworks the syntax into an inverted construction closer to the Italian word order 'greve le riesciva il ventre'."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the impotent prayer",
+      "replacement": "the feeble prayer",
+      "reason": "'Imbelle' means 'unwarlike, weak' — 'feeble' is closer to this passive weakness than 'impotent', which carries connotations of frustrated desire not present in the Italian."
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "to the strong who will with strength",
+      "replacement": "to the strong who strongly will",
+      "reason": "Mirrors the Italian adverb-verb construction 'fortemente vogliono' more closely and has better rhetorical rhythm."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a fragile thing",
+      "replacement": "ephemeral",
+      "reason": "Direct cognate of the Italian 'effimera'. 'Fragile' shifts the meaning from transience to breakability."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "would never have recovered",
+      "replacement": "would never have risen again",
+      "reason": "'Più non si rialzava' literally means 'would no longer rise again'; 'recovered' is too clinical and loses the physical metaphor of standing back up."
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "The old military man",
+      "replacement": "The old soldier",
+      "reason": "'Il vecchio militare' is more naturally rendered as 'the old soldier' in English; 'military man' is a stiff calque."
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "He left in a fury",
+      "replacement": "He departed fuming",
+      "reason": "'Partì sbuffando' — 'sbuffando' means puffing or snorting with irritation. 'Departed' from Gemini is closer to 'partì' than 'left'; 'fuming' (novel synthesis) captures the huffing physicality of 'sbuffando' better than either draft's attempt."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the shelter of Verona",
+      "replacement": "the strong shelter of Verona",
+      "reason": "The Italian has 'il forte riparo di Verona'; 'forte' (strong) was omitted by Claude. Gemini correctly preserved it."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "their own bodies to armed force",
+      "replacement": "their breasts to armed force",
+      "reason": "'Il petto' means 'the breast/chest', not 'bodies'. 'Oppose their breasts' is the correct idiom and preserves the heroic physicality of the Italian."
+    },
+    {
+      "paragraph": 20,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "watched that devastation",
+      "replacement": "watched that carnage",
+      "reason": "'Scempio' means slaughter or carnage, not devastation. Gemini's 'carnage' is semantically accurate."
+    },
+    {
+      "paragraph": 20,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "several abandoned carts",
+      "replacement": "several abandoned carriages",
+      "reason": "'Vetture' means carriages or vehicles, not carts. 'Carriages' is the correct translation."
+    },
+    {
+      "paragraph": 23,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "A curse, a leap",
+      "replacement": "An imprecation, a leap",
+      "reason": "'Imprecazione' is a cognate best rendered as 'imprecation'; 'curse' is too colloquial for Crespi's elevated register."
+    },
+    {
+      "paragraph": 24,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "I moved my hands over her to find the wound",
+      "replacement": "I touched her flesh to find the wound",
+      "reason": "The Italian 'le toccavo le carni' specifically says 'I touched her flesh'; Claude's paraphrase loses the raw physicality of 'carni' (flesh)."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the juice of our vineyards",
+      "replacement": "the juice of our grapes",
+      "reason": "'Il succo dei nostri grappoli' — 'grappoli' means grape-clusters, not vineyards. Gemini's 'grapes' is literal and correct."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "my rising race",
+      "replacement": "my resurgent race",
+      "reason": "'Risorgente' is best rendered as 'resurgent', which carries the specific resonance of the Risorgimento. 'Rising' is too generic."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "orto",
+      "edgren_definition": "ortense: of a kitchen-garden (Eng. hortensial)",
+      "english_choice": "kitchen-gardens",
+      "paragraph": 3,
+      "note": "Edgren confirms the period-specific compound 'kitchen-garden' for 'orto', which was preferred over the modern 'vegetable garden' or Gemini's plain 'gardens'. This preserves the 19th-century English horticultural register."
+    },
+    {
+      "italian_word": "tenui",
+      "edgren_definition": "ténue: THIN (slender); slight (poor, insignificant)",
+      "english_choice": "slight fingers",
+      "paragraph": 3,
+      "note": "Edgren lists 'slight' as a sense of 'tenue'. This was preferred over Gemini's 'slender' because 'slight' better conveys the child's smallness and fragility rather than mere thinness, matching the pathos of the scene."
+    },
+    {
+      "italian_word": "distesa",
+      "edgren_definition": "distésa: extent; expansion",
+      "english_choice": "an expanse of kitchen-gardens",
+      "paragraph": 3,
+      "note": "Edgren's 'extent, expansion' for 'distesa' supported the noun 'expanse' (deriving from 'expansion') over a vaguer rendering like 'stretch' (used by Gemini). 'Expanse' has a period-appropriate register."
+    }
+  ]
+}

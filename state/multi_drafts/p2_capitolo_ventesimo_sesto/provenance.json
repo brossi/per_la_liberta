@@ -1,0 +1,41 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "a persistence that almost betrayed some deliberate intent",
+      "replacement": "a pertinacity that almost betrayed some deliberate intent",
+      "reason": "'Pertinacity' is a closer cognate to the Italian 'pertinacia' and carries a stronger connotation of obstinate, almost malicious persistence — fitting the personification of sea and sky as conspirators."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "the wretched souls condemned to labour",
+      "replacement": "the wretched convicts condemned to labour",
+      "reason": "The Italian 'condannati' means convicted prisoners, not abstract 'souls'. 'Convicts' is more precise and maintains the penal register of the passage."
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "Hoisting the sail once more",
+      "replacement": "Hoisting the sail anew",
+      "reason": "'Anew' renders Italian 'di bel nuovo' more faithfully than 'once more', preserving the sense of starting afresh rather than mere repetition."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "The horrors of cannibalism then cast their grim shadow across our imaginations",
+      "replacement": "The horrors of cannibalism then flashed grimly through our imagination",
+      "reason": "Italian 'balenarono' means 'flashed' — a sudden, lightning-like image. 'Cast their grim shadow' is evocative but loses the brevity and violence of the original verb."
+    },
+    {
+      "paragraph": 19,
+      "from_draft": "draft_gemini__pro",
+      "original": "we had become fast in a *vase* [mudbank]",
+      "replacement": "we had become fast in a *vase*",
+      "reason": "The bracketed gloss '[mudbank]' is editorially intrusive. The context (stuck keel, rising tide, tenacious mud) makes the meaning self-evident without a parenthetical explanation."
+    }
+  ],
+  "edgren_influences": []
+}

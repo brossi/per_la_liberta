@@ -1,0 +1,126 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "The sufferings of the prison hulk",
+      "replacement": "The sufferings of the *ergastolo*",
+      "reason": "Gemini retained the Italian term; 'prison hulk' is inaccurate (ergastolo is a life-sentence penal institution, not a decommissioned ship). Keeping the Italian, as done throughout earlier chapters, preserves the specific institutional term."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro",
+      "original": "it fell upon us furiously",
+      "replacement": "they fell upon us furiously",
+      "reason": "English 'they' is more natural for a collective human agent ('the Irish element') than the pronoun 'it', which reads as though referring to an inanimate force."
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro",
+      "original": "concluded by requiring me to return the following morning",
+      "replacement": "concluded by enjoining me to return the following morning",
+      "reason": "'Enjoining' captures the peremptory, official tone of 'ingiungermi' better than 'requiring', which is blander. Edgren's nearby entry for 'imponente' also lists 'enjoiner' under the imponere family, confirming the authoritative register."
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro",
+      "original": "the Revolution and the wind blows no longer favourably for certain methods and certain persons",
+      "replacement": "the Revolution and the wind no longer blow propitiously for certain methods and for certain persons",
+      "reason": "Claude's draft had a subject-verb agreement error ('the Revolution and the wind blows' — compound subject needs plural verb). Gemini's phrasing fixes this and 'propitiously' is closer to the Italian 'propizio'."
+    },
+    {
+      "paragraph": 16,
+      "from_draft": "draft_gemini__pro",
+      "original": "deformed by a fatal materialism",
+      "replacement": "disfigured by a fatal materialism",
+      "reason": "'Disfigured' better renders 'deturpata', which implies marring or defacing something that was once whole, rather than merely changing its shape."
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro",
+      "original": "he plunged headlong into a wholly different subject",
+      "replacement": "he launched at full flight into a wholly different subject",
+      "reason": "The Italian 'entrò a volo spiegato' literally means 'entered at unfolded/full flight'. Gemini's 'launched, with wings unfurled' captured the aerial metaphor; the final synthesises this into 'launched at full flight', preserving the flight image that 'plunged headlong' loses."
+    },
+    {
+      "paragraph": 23,
+      "from_draft": "draft_gemini__pro",
+      "original": "by ceaseless labour, produce its wealth",
+      "replacement": "by ceaseless toil, produce its wealth",
+      "reason": "'Toil' (from Gemini's 'incessant toil') carries a stronger connotation of grinding physical work than 'labour', better suiting the context of agricultural workers and the Italian 'incessante fatica'."
+    },
+    {
+      "paragraph": 28,
+      "from_draft": "draft_gemini__pro",
+      "original": "that slight frame, which with a small effort of my arm I could have dominated",
+      "replacement": "that slender frame, which with a slight effort of my arm I could have overpowered",
+      "reason": "Gemini's 'slender' is closer to 'esile' (thin, slight-bodied) than Claude's 'slight', which can imply insignificance. 'Overpowered' renders 'dominare' more physically and concretely than 'dominated', which has abstract overtones."
+    },
+    {
+      "paragraph": 32,
+      "from_draft": "draft_gemini__pro",
+      "original": "the very facts with which it stumbles",
+      "replacement": "the very facts upon which it stumbles",
+      "reason": "The Italian 'i fatti stessi in cui inciampa' uses 'in cui' (in/upon which). 'Upon which it stumbles' is idiomatically correct; 'with which it stumbles' is not standard English."
+    },
+    {
+      "paragraph": 36,
+      "from_draft": "draft_gemini__pro",
+      "original": "a rebuke which, being silent, proves no less irksome on that account",
+      "replacement": "a rebuke which, for being silent, proves no less irksome on that account",
+      "reason": "Adding 'for' (from Gemini's 'for being tacit') gives the concessive force of 'per esser tacita' — it is irksome precisely for/despite being silent. Without 'for', the causal link is weaker."
+    },
+    {
+      "paragraph": 37,
+      "from_draft": "draft_gemini__pro",
+      "original": "murmuring a few instructions",
+      "replacement": "doling out a few instructions",
+      "reason": "'Sbocconcellandomi' means literally 'parcelling out in morsels'; 'doling out' captures this sense of dispensing bit by bit, whereas 'murmuring' misreads the verb entirely."
+    },
+    {
+      "paragraph": 37,
+      "from_draft": "draft_gemini__pro",
+      "original": "a good *viatico*",
+      "replacement": "a good viaticum",
+      "reason": "Gemini used the established English loanword 'viaticum' (from Latin, meaning provision for a journey). This is preferable to Claude's italicised Italian form with an appended gloss, since 'viaticum' is a standard English word that needs no explanation."
+    },
+    {
+      "paragraph": 39,
+      "from_draft": "draft_gemini__pro",
+      "original": "all those American citizens who sympathise with my cause",
+      "replacement": "all those American citizens who sympathise with me",
+      "reason": "The Italian 'che simpatizzano con me' says 'with me', not 'with my cause'. Claude's addition of 'my cause' is an interpretive liberty; Gemini's literal rendering is more faithful to Mazzini's personal appeal."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "ergastolo",
+      "edgren_definition": "ergastolo [L. -tulum, workhouse], M.:",
+      "english_choice": "*ergastolo* (retained in Italian)",
+      "paragraph": 1,
+      "note": "Edgren's entry is truncated and offers no standard English equivalent — only the Latin etymology 'workhouse', which is misleading for a life-imprisonment institution. This absence of a good English gloss reinforced the decision to retain the Italian term rather than accept Claude's 'prison hulk'."
+    },
+    {
+      "italian_word": "riconsacrare",
+      "edgren_definition": "ri-consacrare, TR.: reconsecrate",
+      "english_choice": "reconsecrate",
+      "paragraph": 5,
+      "note": "Edgren gives 'reconsecrate' directly, confirming this as the period-appropriate English equivalent. This supported Claude's 'reconsecrate' over Gemini's 'rededicate', which loses the quasi-religious register of the original."
+    },
+    {
+      "italian_word": "bastare",
+      "edgren_definition": "bastare [?], INTR.: suffice; last; subsist",
+      "english_choice": "sufficed",
+      "paragraph": 4,
+      "note": "Edgren's primary gloss is 'suffice', supporting the final's 'its menacing flash had sufficed' over Gemini's flatter 'had been enough'. The slightly elevated register of 'suffice' matches the narrative tone."
+    },
+    {
+      "italian_word": "fiammeggiare",
+      "edgren_definition": "-meggiare, INTR.: flame, shine",
+      "english_choice": "blazed",
+      "paragraph": 3,
+      "note": "Edgren gives 'flame, shine' for fiammeggiare. Both drafts used 'blazed', but the dictionary's emphasis on active flaming confirmed this dynamic verb over tamer alternatives like 'was inscribed' or 'glowed'."
+    }
+  ]
+}

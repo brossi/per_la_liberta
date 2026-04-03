@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses formal, elevated vocabulary and complex sentence structures appropriate for a literary work of the early 20th century."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "Phrases like 'AND here we come to our chief' and 'It grieves me to say it, but say it I must' effectively capture the direct, reflective narrative voice of the author."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a consistently formal literary register, and the translation accurately reflects this, without introducing inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels at capturing and maintaining the sophisticated, somewhat archaic, and direct literary tone of the original Italian. The author's reflective and analytical voice is clearly present throughout.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "'The Master' for Mazzini, 'executioner' and 'scaffold' for 'carnefice' and 'patibolo' are all well-chosen and contextually appropriate. The broader political context is accurately conveyed."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Place names like 'Lunigiana' are preserved. 'via Monthabor' is appropriately adapted to 'Rue Monthabor' for its Parisian context, and 'Giulio Favre' to 'Jules Favre', a standard anglicization for the French figure."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong awareness of the historical and cultural context, making appropriate linguistic and naming adaptations where necessary while preserving the essence of the original references.",
+      "weaknesses": "None."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably accurate and faithful to the source text, conveying the exact meaning of complex sentences and nuanced expressions without any identifiable omissions or additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Proper nouns (Orsini, Mazzini, Napoleon III) and geographical references (Lunigiana) are preserved or, in the case of 'Rue Monthabor' and 'Jules Favre', adapted correctly for English historical context."
+        }
+      ],
+      "strengths": "The translation is exceptionally precise, capturing the intricate details and exact semantic content of the original. It successfully navigates long, complex sentences while maintaining accuracy.",
+      "weaknesses": "A few phrases are rendered very literally (e.g., 'worked to the chisel,' 'conspicuous in him by their complete absence,' 'a single granite side'), which, while accurate, could be slightly more idiomatic in English."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "While generally reading very well, some passages exhibit minor awkwardness or literal phrasing (e.g., 'he suffered words full of acrimony to escape him,' 'overcome then, always,' 'anticipating in advance') that slightly detract from a completely natural literary flow."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Most figurative expressions and vivid imagery are translated effectively, preserving their impact and meaning (e.g., 'overflowing imagination,' 'dark reaction was already fermenting in his soul,' 'caresses the lion who exercises his claws in our flesh')."
+        }
+      ],
+      "strengths": "The translation demonstrates strong literary quality, particularly in its evocative rendering of imagery and its ability to convey the emotional weight and rhetorical force of the original. It largely maintains a compelling narrative rhythm.",
+      "weaknesses": "Minor instances of literal translation occasionally create slightly less natural phrasing, which, while grammatically correct, can briefly interrupt the otherwise smooth literary flow."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The English is grammatically correct throughout. However, a few constructions are somewhat verbose or less idiomatic (e.g., 'conspicuous in him by their complete absence,' 'worked to the chisel'), leading to slight awkwardness, though never incorrectness."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite the formality and occasional complexity, the translation is consistently clear and easy to understand, allowing for smooth comprehension without the need for re-reading."
+        }
+      ],
+      "strengths": "The translation is grammatically impeccable and highly readable. It manages to present complex ideas and sentence structures in a clear and coherent manner.",
+      "weaknesses": "A few literal renderings make certain phrases feel slightly less fluid or natural in English, although they remain grammatically sound and comprehensible."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All recurring names (Orsini, Mazzini, Gomez, Pieri, Favre) and key terms ('The Master,' 'Police') are translated with perfect consistency throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The formal, literary, and slightly archaic style is rigorously maintained across all paragraphs, ensuring a unified and consistent reading experience."
+        }
+      ],
+      "strengths": "The translation exhibits exemplary consistency in terminology, character naming, and stylistic choices, contributing significantly to its overall coherence and professional quality.",
+      "weaknesses": "None."
+    }
+  ],
+  "weighted_score": 0.9374999999999999,
+  "_tokens": {
+    "input": 5630,
+    "output": 1598
+  }
+}

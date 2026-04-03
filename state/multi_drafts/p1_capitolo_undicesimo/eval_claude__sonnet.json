@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses vocabulary and phrasing that evokes an early 20th-century literary style, such as 'Fatherland', 'smacked of the modernist', 'avail', and 'cryptogam of the soul'."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct, personal, and sometimes exclamatory nature of the original's narration is well-preserved, including asides like 'on foot, so as not to lose the habit' and rhetorical questions."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation successfully captures the varying degrees of formality, from direct dialogue ('There — this one is from me;') to the more formal descriptive passages."
+        }
+      ],
+      "strengths": "The translation excels at capturing the specific literary register and the engaging narrative voice of the original. The flow between descriptive and conversational elements is seamless.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Fatherland', 'Decretals', 'Mazzinian national loan', and 'Cacciatori delle Alpi' are handled well, either with appropriate English equivalents or by retaining the original Italian with an effective gloss for 'ragion di Stato'."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Proper names, places, and specific cultural terms like 'Don Bastiano' and 'Caffè Nazionale' are preserved. The translation of 'preti d'acqua torbida' as 'priests of muddy water' is literal but retains the original's indirect cultural jab rather than modernizing it."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong awareness of the historical and cultural context, making appropriate choices that maintain the authenticity of the period.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate, the translation misinterprets 'apoteosi' as 'apostrophe' in a key rhetorical passage, significantly altering the original's sarcastic intent of an 'ironic deification' to a 'direct address'. There is also a slight weakening of the idiom 'in quattro salti' to 'in four steps'."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names (e.g., Ardo, Ticino, Volturno), and historical figures are accurately preserved in their original or commonly accepted English forms (e.g., Lombardy-Venetia)."
+        }
+      ],
+      "strengths": "The translation is generally very faithful to the source, capturing complex sentence structures and subtle meanings, particularly in historical and political descriptions.",
+      "weaknesses": "The misinterpretation of 'apoteosi' as 'apostrophe' represents a significant fidelity issue for a key rhetorical moment. Some minor idiomatic expressions are slightly softened."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly readable and flows naturally, with varied sentence structures and a rich vocabulary that prevents it from sounding like a literal, word-for-word rendering."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 0.5,
+          "note": "Most figurative expressions (e.g., 'stifle the love of the Fatherland,' 'vortex of action,' 'flood of feeling,' 'sharpened his sluggish wits,' 'glacial distrust') are translated with impressive skill. However, the misrendering of 'apoteosi' to 'apostrophe' weakens the specific rhetorical force of that particular image."
+        }
+      ],
+      "strengths": "The translation generally maintains a high literary standard, employing vivid imagery and appropriate diction that enhances the reading experience. Many idioms and metaphors are handled skillfully.",
+      "weaknesses": "The error in rendering 'apoteosi' diminishes the impact of a specific, powerful rhetorical device, which is a notable blemish on an otherwise strong literary translation."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The translation is overwhelmingly grammatically correct. There are two very minor instances: 'the death itself' could be 'death itself' and one sentence structure ('Italians who were organising... I found in abundance') is slightly less direct, but still understandable."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and easy to follow. Complex sentences are well-structured in English, ensuring smooth comprehension without the need for re-reading."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent command of English grammar and sentence structure, resulting in a text that is highly fluent and accessible.",
+      "weaknesses": "Only very minor grammatical points and a slightly less direct sentence construction, which do not significantly impede fluency or clarity."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names, place names, and key recurring terms like 'Fatherland' and 'Liberty' are translated and presented consistently throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The chosen literary register and narrative voice are impeccably maintained across all paragraphs, contributing to a unified and professional translation."
+        }
+      ],
+      "strengths": "The translation is highly consistent in its terminology and stylistic choices, creating a cohesive and well-integrated piece of writing.",
+      "weaknesses": "No weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.8875000000000001,
+  "_tokens": {
+    "input": 6085,
+    "output": 1649
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 0.5,
+          "note": "Mostly, but there are some slips. 'Raise him up' for 'inalarlo' is slightly less formal than 'exalt' or 'elevate'. 'Annoyed to death' for 'Uggiato a morte' is a bit too colloquial. 'Trifle of fifty lashes' for 'bagarella di cinquanta colpi di corda' is problematic in meaning and tone."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 0.5,
+          "note": "Generally, yes, with direct address and rhetorical questions preserved. However, a significant error where the narrator switches from 'I' to 'He' ('He pressed the button... He asked her to retell') breaks the narrative voice and creates confusion."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "Yes, the shifts between general narrative, direct speech, and internal monologue are handled well, including the rendering of expletives or curses."
+        }
+      ],
+      "strengths": "The translation largely captures the reflective and engaging quality of the narrator's voice, particularly in the longer descriptive passages and emotional reflections. Idiomatic expressions are often rendered effectively.",
+      "weaknesses": "Inconsistencies in formality for certain phrases and a critical error in narrative perspective (switching from 'I' to 'He') detract from the overall authorial voice."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Orleanist,' 'Second Empire,' 'penitentiary,' and 'Phrygian cap' are accurately and appropriately rendered for the historical period."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Proverbs like 'In church with the saints...' are preserved, and cultural references like 'ultimate Thule' and 'Cambronne's word' are well-adapted or explained implicitly. Place names are mostly preserved or given their French equivalents where appropriate (e.g., Île Royale du Salut)."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the historical and cultural context, ensuring that specific terms and references are either directly translated, appropriately adapted, or clearly indicated.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "There are some notable inaccuracies. 'La bagarella di cinquanta colpi di corda' is mistranslated as 'the trifle of fifty lashes,' implying the punishment itself is trifling, rather than the transgression or the issuing of the punishment. 'Il nostro canotto' is rendered as 'my canoe,' changing the ownership from collective to singular. The narrator's switch from 'I' to 'He' during Elisa's recounting is a significant error."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "Proper nouns and most place names are preserved (e.g., La Roquette, Tolone, Elisa, Gomez). However, 'Isola reale del Saluto' is rendered as 'Île Royale du Salut', which is an adaptation to French (though historically accurate for the location), and the ship 'Abeille' is not italicized, unlike 'La Durance', indicating a minor formatting inconsistency."
+        }
+      ],
+      "strengths": "Many complex phrases and figurative expressions are translated with high accuracy, capturing nuanced meanings and vivid imagery. Descriptions of locations, events, and character actions are generally faithful.",
+      "weaknesses": "Several key phrases are mistranslated or misunderstood, particularly the idiomatic 'bagarella,' and a critical grammatical error affects the narrator's voice. Minor inconsistencies in proper noun rendering and formatting also occur."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "The prose often reads naturally and flows well, especially in descriptive passages and the narrator's reflections. However, some awkward constructions ('I spent waging'), the confusing narrator switch, and the run-on sentence ('Although the misfortune was irreparable... he could assure me') disrupt the flow and naturalness."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Yes, many figurative expressions and vivid images are translated effectively, such as 'ultimate Thule,' 'shadows of their former selves,' 'charnel house,' and the descriptions of the forest and its creatures."
+        }
+      ],
+      "strengths": "The translation excels at conveying the rich imagery and poetic language of the original, creating a compelling atmosphere and engaging the reader's imagination. Many literary devices are handled with skill.",
+      "weaknesses": "Some grammatical and syntactical issues occasionally hinder the natural flow and readability, making certain passages feel less polished than others. The narrator consistency problem is particularly disruptive to literary quality."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "While generally correct, there are grammatical errors (narrator 'He' instead of 'I'; a run-on sentence in Elisa's recounting) and awkward phrasing ('I spent waging,' 'you will not at least refuse')."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 0.5,
+          "note": "Most of the text is clear, but the errors mentioned above, particularly the narrator shift and the run-on sentence, require re-reading to disambiguate or correct the meaning."
+        }
+      ],
+      "strengths": "The translation generally presents clear and comprehensible English, effectively conveying complex ideas and narrative details. Sentence structure, while sometimes elaborate, is mostly sound.",
+      "weaknesses": "Specific grammatical errors and awkward phrasing, alongside a significant point-of-view error, detract from the overall fluency and readability, forcing the reader to pause and re-interpret."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "Most recurring terms like 'penitentiary,' 'casemate,' 'convicts,' and character names are consistent. However, the ship 'Abeille' is not italicized while 'La Durance' is, and the shift from 'our canoe' to 'my canoe' for 'il nostro canotto' is inconsistent."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 0.5,
+          "note": "The style is mostly coherent, but the issues with tone, occasional shifts in formality, and the critical narrative voice error (from 'I' to 'He') create noticeable breaks in stylistic consistency in specific sections."
+        }
+      ],
+      "strengths": "The translator maintains consistency for many key terms, characters, and settings, providing a stable foundation for the narrative.",
+      "weaknesses": "Inconsistencies in formatting, subtle changes in word choice for recurring objects, and, most significantly, the critical error in narrative voice in the Elisa's story section, disrupt the overall stylistic coherence and consistency."
+    }
+  ],
+  "weighted_score": 0.6791666666666667,
+  "_tokens": {
+    "input": 16299,
+    "output": 1900
+  }
+}

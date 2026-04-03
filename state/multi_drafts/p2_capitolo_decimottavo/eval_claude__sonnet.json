@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal and slightly archaic literary register (e.g., 'wanton cruelty', 'well-nigh', 'erect the scaffold', 'ineluctable demands') that perfectly matches the 1913 source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "Phrases like 'who knows,' 'I was about to say,' and 'as it were' subtly reflect the conversational nuances and directness of the original, integrating them naturally into the literary prose."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a generally formal but reflective tone, with occasional more direct phrases. The translation mirrors this by using sophisticated vocabulary and sentence structures while allowing for moments of direct expression without jarring shifts."
+        }
+      ],
+      "strengths": "The translation's greatest strength in this dimension is its consistent and effective preservation of the source text's dignified, reflective, and slightly formal literary voice, which accurately conveys the historical context and author's persona.",
+      "weaknesses": "There are no significant weaknesses in how the translation handles tone and authorial voice; it is consistently excellent."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Court of Cassation,' 'Council of State,' 'reason of State,' and 'imperial pardon' are accurately and appropriately translated for the period. The term 'liberticida' is preserved in italics and 'affarismo' is effectively glossed."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Key phrases and names like 'Dio e Popolo,' 'Corso' (translated as 'a Corsican'), and the references to Mazzini, Orsini, and Cavour are handled with sensitivity, ensuring their cultural and historical significance is retained."
+        }
+      ],
+      "strengths": "The translation excels at conveying the specific cultural and political context of the Risorgimento era without relying on anachronisms or losing the original meaning. Glosses and direct preservation of terms are used judiciously.",
+      "weaknesses": "No noticeable weaknesses; the cultural and political context is handled with precision and care."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably faithful, accurately rendering complex sentences, idiomatic expressions, and subtle nuances. There are no significant omissions or distorting additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns (e.g., Felice Orsini, Giuseppe Pieri, Giulio Favre, La Roquette, Conciergerie, Giuseppe Mazzini, Cavour, Silvio Pellico, Elisa, Pietri, Macan, Roguet, Eugenia Montijo, Mathieu de la Drôme) are correctly preserved or adapted as needed (e.g., La Roquette)."
+        }
+      ],
+      "strengths": "The translation demonstrates exceptional accuracy and faithfulness to the source text, capturing its full meaning, including intricate details and emotional depth. It's clear that great care was taken to avoid misinterpretations.",
+      "weaknesses": "This dimension is a major strength with no discernible weaknesses. The translation is a reliable representation of the original."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant and fluid, reading like an original literary work. Sentence structures are varied and sophisticated, maintaining the gravitas and rhythm of the original without feeling forced."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'muzzle of that funnel' ('cannoncino di quell'imbuto'), 'drawn out as with a corkscrew' ('col cavaturaccioli'), 'weakness of fibre' ('mollezza di fibra'), and 'sound characters' ('scandagliare i caratteri'), is rendered not only accurately but also creatively, preserving its impact."
+        }
+      ],
+      "strengths": "The translation truly shines as a piece of literature itself. It successfully transforms the Italian text into compelling English prose, maintaining its poetic qualities and evocative imagery.",
+      "weaknesses": "No weaknesses; the literary quality is consistently high throughout the passage."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is impeccably grammatically correct. There are no awkward constructions, even with complex sentences, which is a testament to the translator's skill."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite the sophisticated vocabulary and nuanced sentence structures, the translation is highly readable and clear, allowing for smooth comprehension without needing to re-read passages for clarity."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent command of English grammar and syntax, resulting in a fluent and accessible text that maintains intellectual depth without sacrificing clarity.",
+      "weaknesses": "No weaknesses detected; the grammar and fluency are flawless."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names, place names (e.g., La Roquette), and key concepts are translated or presented consistently throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The sophisticated and period-appropriate style is maintained uniformly across all paragraphs, contributing to a cohesive and polished reading experience."
+        }
+      ],
+      "strengths": "The translation exhibits strong internal consistency in terminology, names, and stylistic choices, reinforcing its overall high quality and reliability.",
+      "weaknesses": "None. Consistency is a strong point of this translation."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 8927,
+    "output": 1660
+  }
+}

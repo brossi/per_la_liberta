@@ -1,0 +1,98 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "I waited for the return of Saturno who, of the two guards, struck me as the more straightforward",
+      "replacement": "I awaited the return of Saturno who, of the two guards, seemed to me the more candid",
+      "reason": "\"Awaited\" better captures the formal register of the original \"Aspettai\"; \"candid\" is closer to Italian \"schietta\" (frank, sincere) than \"straightforward,\" which has a modern, colloquial feel."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro",
+      "original": "to die like a man, as you have lived",
+      "replacement": "to die manfully, as you have lived",
+      "reason": "\"Manfully\" renders the adverb \"virilmente\" more precisely and concisely than the periphrasis \"like a man.\""
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro",
+      "original": "life still asserted itself powerfully through an instinct that impelled me to yearn for something darker still, more silent",
+      "replacement": "life still manifested itself powerfully through an instinct that drove me to crave something yet darker, yet more silent",
+      "reason": "\"Manifested itself\" is a closer calque of \"si manifestava\" than \"asserted itself.\" The final also independently revised \"impelled me to yearn\" to \"drove me to crave\" and added the repeated \"yet\" for rhythmic emphasis matching the Italian \"di più... di più.\""
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro",
+      "original": "The miseries of men touch him no more!",
+      "replacement": "Human miseries touch him no more!",
+      "reason": "\"Human miseries\" is a more compact and dignified rendering of \"Le miserie umane\" and avoids the slightly awkward genitive \"of men.\""
+    },
+    {
+      "paragraph": 8,
+      "from_draft": "draft_gemini__pro",
+      "original": "the extreme pallor of his countenance",
+      "replacement": "the extreme pallor of his face",
+      "reason": "\"Face\" is the plain equivalent of \"volto\"; \"countenance\" introduces an archaism not present in the Italian, which uses the ordinary word."
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro",
+      "original": "He added that he intended to hurl himself into eternity singing.",
+      "replacement": "He added that he intended to plunge into eternity singing.",
+      "reason": "\"Plunge\" better matches \"precipitare\" (to plummet, fall headlong); \"hurl\" implies a voluntary throwing motion that distorts the image."
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro",
+      "original": "My executioners too will die...",
+      "replacement": "My executioners too shall die...",
+      "reason": "\"Shall\" carries the prophetic, almost biblical register of \"morranno\" in this context, where Pieri is pronouncing a kind of curse."
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "the loquacious man from Lucca became almost merry at them... such are the vagaries of the nerves!",
+      "replacement": "the voluble man from Lucca grew almost cheerful from it all... the strangeness of nerves!",
+      "reason": "\"Voluble\" better renders \"facondo\" (eloquent, fluent in speech) than \"loquacious\" (merely talkative). \"The strangeness of nerves\" is closer to the Italian exclamation \"stranezza dei nervi!\" than the interpretive \"such are the vagaries.\""
+    },
+    {
+      "paragraph": 20,
+      "from_draft": "draft_gemini__pro",
+      "original": "feels himself lightened of all his transient and common parts and almost sublimated by martyrdom",
+      "replacement": "feels himself lightened of every perishable and vulgar part of himself, and almost sublimated by martyrdom",
+      "reason": "\"Perishable and vulgar\" directly renders \"caduca e volgare\"; \"transient\" weakens \"caduca\" (destined to fall/perish) and \"common\" loses the moral charge of \"volgare.\""
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "schietto",
+      "edgren_definition": "clear (up, brighten)",
+      "english_choice": "candid",
+      "paragraph": 2,
+      "note": "The Edgren sense of 'clear, bright' supports 'candid' (etymologically: white, clear) over the modern default 'straightforward' or 'frank.' This aligned with the Gemini draft's choice and was preferred over Sonnet's 'straightforward.'"
+    },
+    {
+      "italian_word": "ingenuo",
+      "edgren_definition": "ingenuous (sincere, candid); free fr[om guile]",
+      "english_choice": "the ingenuous",
+      "paragraph": 1,
+      "note": "Edgren confirms 'ingenuous' as the period-appropriate translation. The final uses the substantive 'the ingenuous' (without 'man') following the Italian 'l'aria dell'ingenuo,' treating it as an archaic substantive adjective rather than modernising to 'the innocent' or 'the naive.'"
+    },
+    {
+      "italian_word": "inattaccabile",
+      "edgren_definition": "unassailable (inexpugnable)",
+      "english_choice": "unassailable",
+      "paragraph": 1,
+      "note": "Edgren gives 'unassailable' as the primary gloss. Both drafts used this word; the dictionary confirmed it as the historically attested equivalent rather than a modern alternative like 'unimpeachable.'"
+    },
+    {
+      "italian_word": "supplizio",
+      "edgren_definition": "punishment; penalty; torment (torture)",
+      "english_choice": "scaffold",
+      "paragraph": 2,
+      "note": "Edgren's primary sense is 'punishment/penalty,' not a specific instrument. The final chose 'scaffold' as a metonym for execution, departing from the dictionary's literal gloss to match English idiom ('led to the scaffold'). The Edgren entry's emphasis on 'punishment' over 'torture' supported a rendering focused on the judicial act rather than physical suffering."
+    }
+  ]
+}

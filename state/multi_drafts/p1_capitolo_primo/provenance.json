@@ -1,0 +1,77 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a balmy air",
+      "replacement": "a balsamic air",
+      "reason": "Italian \"balsamica\" specifically connotes healing/medicinal qualities essential to the passage about consumptives seeking curative air; \"balsamic\" preserves this period-appropriate meaning confirmed by Edgren, whereas \"balmy\" (mild/pleasant) loses the therapeutic connotation."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "in arranging some ornament or other",
+      "replacement": "in arranging some knick-knack",
+      "reason": "Italian \"ninnolo\" specifically means a small decorative trinket/knick-knack, not a general ornament. Gemini's rendering is more precise."
+    },
+    {
+      "paragraph": 27,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "as a seasoned reporter",
+      "replacement": "as a reporter wizened in the trade",
+      "reason": "Italian \"raggrinzito nel mestiere\" literally means wrinkled/wizened in the trade — a wry, self-deprecating image that \"seasoned\" flattens into a cliché. Gemini preserves the author's ironic self-portrait."
+    },
+    {
+      "paragraph": 38,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "as mute witnesses to an unheard-of crime",
+      "replacement": "as mute accusers of an unheard-of crime",
+      "reason": "Italian \"denunciatrici\" means accusers/denouncers, not witnesses. The sleeves are personified as bringing a charge against the Major, not merely observing."
+    },
+    {
+      "paragraph": 39,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "all the while chatting, ended by leading me",
+      "replacement": "dissembling all the while, ended by leading me",
+      "reason": "Italian \"celando\" means concealing/dissembling (from celare). The primary draft mistranslated this as \"chatting\" (which would be \"cicalando\" or \"chiacchierando\"). Signora Elisa was hiding her intention of leading Crespi to the courtyard, not chattering."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "balsamica",
+      "edgren_definition": "aria — listed under aria entry; \"balsamic\" retains sense of healing/soothing properties",
+      "english_choice": "balsamic air",
+      "paragraph": 3,
+      "note": "Edgren-era English \"balsamic\" meant having curative/soothing properties, precisely the connotation for consumptives seeking healing air. Modern English would default to \"balmy\" (mild/pleasant), losing the medicinal sense central to the passage."
+    },
+    {
+      "italian_word": "appassito",
+      "edgren_definition": "appassire: wither (fade); become stale or old. appassito: withered; stale (old)",
+      "english_choice": "withered grass",
+      "paragraph": 2,
+      "note": "Edgren confirms \"withered\" as the primary sense of \"appassito\", supporting the translation over a modern alternative like \"wilted\"."
+    },
+    {
+      "italian_word": "rammentare",
+      "edgren_definition": "put in mind (remind); mention",
+      "english_choice": "put me in mind of",
+      "paragraph": 1,
+      "note": "Edgren gives \"put in mind\" as the primary sense of rammentare, which is the exact phrasing used. A modern translator might default to \"reminded me of\"."
+    },
+    {
+      "italian_word": "immense",
+      "edgren_definition": "immenso: immense (immeasurable)",
+      "english_choice": "immense valleys",
+      "paragraph": 2,
+      "note": "Edgren confirms \"immense\" as the direct equivalent, supporting retention over alternatives like \"vast\"."
+    },
+    {
+      "italian_word": "rigido",
+      "edgren_definition": "rigido: rigid (stiff; severe); rigorous",
+      "english_choice": "rigid and impenetrable",
+      "paragraph": 2,
+      "note": "Edgren confirms \"rigid\" as the primary sense, matching the translation."
+    }
+  ]
+}

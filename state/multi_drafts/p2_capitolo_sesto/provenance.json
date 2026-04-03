@@ -1,0 +1,56 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "turning the corner into the square of Shoah",
+      "replacement": "turning the corner into Shoah Square",
+      "reason": "Neither draft was ideal ('the square of Shoah' is awkward English; gemini kept the untranslated 'piazza dello Shoah'). Normalised to 'Shoah Square' following standard English place-name order, partly prompted by the gemini evaluation noting the anachronism issue."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "formerly a *capobanda* (band-leader) of the Zambeccari Legion",
+      "replacement": "formerly a band-leader of the Zambeccari Legion",
+      "reason": "The inline Italian gloss (*capobanda*) interrupts the narrative flow. Gemini used 'commander' without an Italian parenthetical; the final keeps claude's more precise 'band-leader' but drops the parenthetical apparatus, following gemini's cleaner approach."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro",
+      "original": "of Mazzini arm in arm with an unknown gentleman",
+      "replacement": "of Mazzini arm in arm with a stranger",
+      "reason": "'Sconosciuto' means simply 'unknown person / stranger'. Claude's 'unknown gentleman' adds a social register ('gentleman') not present in the Italian. Gemini's 'a stranger' is more faithful and more concise."
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_gemini__pro",
+      "original": "the comely *protégée*",
+      "replacement": "the comely ward",
+      "reason": "The Italian 'protetta' means a woman under someone's protection/care. Claude used the French loanword *protégée* in italics, which introduces an unnecessary foreignism and implies mentorship rather than guardianship. Gemini's 'ward' is plain English and captures the custodial relationship more precisely."
+    },
+    {
+      "paragraph": 28,
+      "from_draft": "draft_gemini__pro",
+      "original": "nervously tormenting my beard",
+      "replacement": "nervously tormenting my goatee",
+      "reason": "'Pizzo' specifically denotes a goatee (pointed chin-beard), not a full beard ('barba'). Gemini correctly rendered this; claude's generic 'beard' loses the visual specificity of the original."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "prova",
+      "edgren_definition": "proof (test); … a tutta —, [at full proof / of proven quality]",
+      "english_choice": "nerves of the most proven temper",
+      "paragraph": 23,
+      "note": "The Edgren entry for 'prova' lists the idiomatic construction 'a tutta —', confirming that 'nervi a tutta prova' carries the sense of nerves tested to the utmost. This supported claude's rendering 'of the most proven temper' over gemini's modernised 'nerves of steel', preserving the period feel of the idiom."
+    },
+    {
+      "italian_word": "trama",
+      "edgren_definition": "woof, weft; conspiracy",
+      "english_choice": "conspiracy",
+      "paragraph": 5,
+      "note": "Edgren gives 'conspiracy' as the figurative sense of 'trama' (alongside the literal textile meaning 'woof, weft'). This confirmed 'conspiracy' (claude) as the apt period translation over 'plot' (gemini), which is accurate but less formal and loses the sense of interwoven threads that the Italian carries."
+    }
+  ]
+}

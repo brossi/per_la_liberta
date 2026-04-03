@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively maintains a slightly formal, reflective, and passionate tone through vocabulary and sentence structure, fitting the early 20th-century literary style."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct, personal, and emotionally charged voice of the narrator, including rhetorical questions and exclamations, is consistently preserved."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original largely maintains a consistent formal literary register, which the translation mirrors without inappropriate shifts in formality."
+        }
+      ],
+      "strengths": "The translation excels at capturing the specific literary register and the intimate, yet impassioned, narrative voice of the author, making it feel authentic to the period and character.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Political terms like 'King of Piedmont,' 'Monarchy,' and historical figures are accurately translated and placed within the correct historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "References like 'Trasteverino' and 'De profundis' are preserved. However, 'isola del bagnato baciato' is literally translated as 'island of the bathed and kissed,' which, while poetic, might obscure its identity as Devil's Island for some readers without further context. Similarly, 'calmi' (plugs for gunboats) is directly translated but might be technically obscure."
+        }
+      ],
+      "strengths": "The translation successfully renders political and historical terms, providing a clear understanding of the Risorgimento-era context. It also maintains specific Italian cultural expressions directly.",
+      "weaknesses": "A few direct translations of culturally or technically specific terms, while accurate, could benefit from minimal explanatory glossing for an English-speaking audience to fully grasp their significance, such as 'island of the bathed and kissed' or 'plugs' in the naval context."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.0,
+          "note": "A critical error occurs in the line 'io deplorai di non aver saputo colpire se' (I deplored not having known how to strike *oneself*), which is translated as 'did I deplore not having known how to strike *him*.' This fundamentally alters the narrator's internal struggle from regret over not committing suicide to regret over not attacking another person."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical references are correctly preserved or accurately translated throughout the passage."
+        }
+      ],
+      "strengths": "The translation is highly accurate with respect to proper nouns, place names, and most factual and thematic content, demonstrating a strong understanding of the source text.",
+      "weaknesses": "The single significant error regarding 'colpire se' (strike oneself) fundamentally misrepresents a key aspect of the narrator's emotional state and meaning, which is a major flaw in faithfulness."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly readable, flowing naturally and maintaining a sophisticated literary quality throughout the complex narrative."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Many vivid images and figurative expressions are beautifully and effectively translated, preserving the evocative nature of the original (e.g., 'shimmering and blood-red characters,' 'unexpected dew,' 'ploughing the deep azure')."
+        }
+      ],
+      "strengths": "The translation maintains a high literary standard, with prose that is engaging and evocative. It successfully captures the poetic and descriptive language of the source.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically sound, with correct syntax and appropriate word choices, avoiding awkward or stilted phrasing."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is consistently clear and easy to understand, allowing for a smooth and uninterrupted reading experience."
+        }
+      ],
+      "strengths": "The translation is grammatically impeccable and fluent, making the text accessible and enjoyable to read.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Key names and terms (e.g., 'Amazzone,' 'Abeille,' 'arciprete,' 'gunboat') are translated consistently throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The literary and slightly formal tone is consistently applied across all paragraphs, ensuring stylistic coherence."
+        }
+      ],
+      "strengths": "The translation maintains strong consistency in terminology and style, which is crucial for a longer narrative passage.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.85,
+  "_tokens": {
+    "input": 6733,
+    "output": 1528
+  }
+}

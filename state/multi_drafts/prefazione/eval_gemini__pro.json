@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal and somewhat archaic literary register, consistent with the original Italian from 1913."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "Crespi's reflective and direct address to the reader, including rhetorical questions, is well-preserved, making the English feel like a personal preface."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original maintains a consistently formal tone, which the translation accurately mirrors without inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels at capturing the specific blend of formality, reflectiveness, and direct address that characterizes Crespi's authorial voice and the period's literary style.",
+      "weaknesses": "None apparent in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'the third Italy' and 'Minister of Public Instruction' are accurately and appropriately translated for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "References such as 'Minos' (from Dante) and the specific historical context of 'terza Italia' are preserved without being modernized or over-glossed, which is suitable for this type of literary translation."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong awareness of the source's cultural and historical background, accurately conveying relevant terms and references.",
+      "weaknesses": "None apparent in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably faithful to the original text, conveying the precise meaning of each sentence and phrase without noticeable omissions or extraneous additions."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Proper nouns and historical references ('Cesare Crespi', 'Count di Rudio', 'Minos', 'third Italy') are correctly preserved."
+        }
+      ],
+      "strengths": "The translation is highly accurate and demonstrates exceptional fidelity to the source text's meaning and content.",
+      "weaknesses": "None apparent in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant, natural, and flows very well, making it a pleasure to read as a literary piece rather than a direct word-for-word rendering."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language such as 'soul of the times,' 'exuding a potent poetry,' 'great outpouring,' and 'jarring notes' are all translated powerfully and evocatively."
+        }
+      ],
+      "strengths": "The translation achieves high literary quality, effectively translating imagery and maintaining a sophisticated, flowing style that enhances the reading experience.",
+      "weaknesses": "None apparent in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically impeccable, with complex sentences structured clearly and without any awkward phrasing."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite its sophisticated vocabulary and sentence structures, the translation is consistently clear and easy to understand on the first reading."
+        }
+      ],
+      "strengths": "The translation is grammatically flawless and remarkably fluent, contributing to its high readability and professional finish.",
+      "weaknesses": "None apparent in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Recurring terms like 'di Rudio' and contextual uses of 'History'/'history' are handled with consistent accuracy throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a uniform, coherent, and appropriate literary style across all paragraphs."
+        }
+      ],
+      "strengths": "The translation is highly consistent in its terminology, styling, and overall tone, ensuring a cohesive reading experience.",
+      "weaknesses": "None apparent in this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 1804,
+    "output": 1322
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "canvas pack",
+      "replacement": "canvas sack",
+      "reason": "Italian 'sacco' means sack, not pack; 'sack' is the literal and period-appropriate cognate confirmed by Edgren"
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "upon the quay",
+      "replacement": "upon the mole",
+      "reason": "Italian 'molo' translates directly as 'mole' (a harbour breakwater/pier); 'quay' is a near-synonym but 'mole' preserves the cognate and the colonial-maritime register"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "which was also the higher",
+      "replacement": "which was also the more elevated",
+      "reason": "Italian 'più elevato' is better served by 'more elevated' than the flatter 'higher'; Edgren glosses elevato as 'elevated, lofty, sublime'"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "became sadly notorious as the scene of the murky drama of which",
+      "replacement": "became sadly notorious for the murky drama of which",
+      "reason": "The Italian 'pel losco dramma di cui' says 'for the murky drama of which'; 'as the scene of' is an interpolation absent from the source. Gemini's construction ('for the ... drama') is more faithful; Sonnet's vocabulary ('notorious', 'murky') is retained"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "leaping from one exposed crag to another",
+      "replacement": "leaping upon the jagged rocks left exposed",
+      "reason": "Italian 'saltando sugli scheggioni rimasti scoperti' says 'leaping upon the jagged rocks left exposed'; Sonnet's 'from one exposed crag to another' is a free paraphrase that loses 'scheggioni' (jagged fragments) and 'rimasti scoperti' (left uncovered)"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "with dry feet",
+      "replacement": "dry-shod",
+      "reason": "'Dry-shod' is a single English idiom that neatly matches 'a piedi asciutti' and carries a period flavour absent from the literal 'with dry feet'"
+    },
+    {
+      "paragraph": 29,
+      "from_draft": "draft_gemini__pro",
+      "original": "carboys of water and of rum",
+      "replacement": "demijohns of water and of rum",
+      "reason": "Italian 'damigiana' is the direct etymological source of English 'demijohn'; a carboy is a different vessel (typically glass in a wicker frame for chemicals). 'Demijohn' is the correct translation"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "sacco",
+      "edgren_definition": "sacco — SACK; sacchetto, dim.: small sack, bag",
+      "english_choice": "sack",
+      "paragraph": 1,
+      "note": "Edgren confirms 'sack' as the primary English equivalent of 'sacco'. A modern translator might default to 'bag' or 'pack'; the dictionary steered the choice toward the direct cognate, which also suits the rough, military context."
+    },
+    {
+      "italian_word": "elevato",
+      "edgren_definition": "elevato, PART.: elevated, etc.; lofty, sublime",
+      "english_choice": "more elevated",
+      "paragraph": 2,
+      "note": "Edgren lists 'elevated' as the primary participle-adjective, with 'lofty' and 'sublime' as further senses. This supported retaining the Latinate 'elevated' over the plainer 'higher', keeping the slightly formal register of the source."
+    },
+    {
+      "italian_word": "scorrente",
+      "edgren_definition": "scorrente, ADJ.: running (flowing); scorrere, INTR.: run away (slip away); glide",
+      "english_choice": "gliding",
+      "paragraph": 5,
+      "note": "Both drafts independently chose 'gliding', but Edgren's entry explicitly pairs scorrere with 'glide', confirming this was the right word rather than 'running' or 'flowing', which would mischaracterise a small boat's motion."
+    }
+  ]
+}

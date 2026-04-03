@@ -1,0 +1,35 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro",
+      "original": "he tucked himself into the window recess behind the curtain",
+      "replacement": "he crouched in the window recess behind the curtain",
+      "reason": "'Crouched' more precisely renders 'si rannicchiò' (to curl up, huddle) and better conveys the physical posture of someone hiding in a window recess to spy on the street below."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "the dark to-and-fro that stirred in confused motion at his feet",
+      "replacement": "the dark to-and-fro that stirred confusedly at his feet",
+      "reason": "'Confusedly' is more concise and idiomatic than the periphrastic 'in confused motion', and directly mirrors the Italian adverb 'confusamente'."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro",
+      "original": "He turned with a jerk",
+      "replacement": "He turned with a start",
+      "reason": "'With a start' better captures the involuntary, surprise-driven nature of 'di scatto' in this context; 'with a jerk' sounds too mechanical and physical."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "accappatoio",
+      "edgren_definition": "accappatoio [cappa], M.: mantle; combing-cloth.",
+      "english_choice": "combing-cloth",
+      "paragraph": 3,
+      "note": "The primary draft retained the Italian word in italics with a gloss ('a white *accappatoio* — a combing-cloth'); the Gemini draft used the modern default 'dressing-gown'. The final translation dropped the Italian word and used 'combing-cloth' directly, following Edgren's period-appropriate definition rather than the anachronistic modern equivalent. This keeps the register consistent with the 1901 setting."
+    }
+  ]
+}

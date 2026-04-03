@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently employs a formal, somewhat archaic vocabulary and syntax that effectively mirrors the early 20th-century literary style of the source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The direct, first-person narrative, including personal observations and exclamations, is well-preserved, giving the English the same recounting, engaging feel as the Italian."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The Italian maintains a generally formal register even when quoting coarse language; the translation successfully replicates this by rendering such phrases with an elevated, period-appropriate formality (e.g., 'obscenity fit for a pigsty')."
+        }
+      ],
+      "strengths": "The translation excels at capturing and maintaining the distinct literary register and personal, reflective narrative voice of the original. The word choices consistently convey the gravity and formality expected of a historical memoir from this period.",
+      "weaknesses": "There are no significant weaknesses in this dimension; the translator has a strong grasp of period-appropriate English."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Orleanist,' 'Republic,' and 'Emperor' are correctly translated and fit the historical context without needing further explanation."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Specific terms like 'boia fer' and 'sabre d'abattis' are preserved and glossed or contextually understood. Idiomatic expressions such as 'pirating the trade of Solomon' and 'the word of Cambronne' are kept, respecting the original's cultural allusions."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong awareness of the cultural and historical nuances, handling specific terms and allusions with care and precision, either by direct translation, contextualization, or effective glossing.",
+      "weaknesses": "No noticeable weaknesses; the cultural context is handled adeptly."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably accurate, conveying the precise meaning of the source text. No significant omissions or additions were found; minor adaptations (e.g., 'portholes' for 'finestre' on a ship, 'shelved gradually' for 'moriva gradatamente' for a beach) enhance contextual clarity."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, including names of individuals, ships, and geographical locations (e.g., Montagne d'Argent, Saint-Georges, Oyapock, Île Royale du Salut), are preserved, with appropriate French forms used for French place names, which is excellent."
+        }
+      ],
+      "strengths": "The translation's primary strength lies in its meticulous accuracy. It faithfully renders the content, ensuring that all factual details, descriptions, and historical references are correctly conveyed.",
+      "weaknesses": "None identified. The translation is highly faithful to the source."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "Despite its formal register, the English prose reads naturally and maintains a compelling flow, making it an engaging piece of literature in its own right."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and vivid imagery (e.g., 'ploughed the waters, bearing in her ample belly,' 'the baptism of the penal settlement,' 'sun capable of hard-boiling ostrich eggs') are consistently translated with poetic skill, preserving their impact and beauty."
+        }
+      ],
+      "strengths": "The literary quality is exceptional. The translator demonstrates a profound ability to transfer not just the meaning but also the evocative power and descriptive richness of the original Italian, particularly in the longer, more poetic passages.",
+      "weaknesses": "There are no significant weaknesses in the literary quality; the translation is a pleasure to read."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The translation is overwhelmingly grammatically correct. A very minor instance like 'Gomez, myself, and another hundred wretches' uses 'myself' as a subject, which is often considered informal or technically incorrect in prescriptive grammar, though common in certain narrative styles. 'I chew on emptiness' is a literal translation of an idiom that could be rendered more idiomatically in English, but it is not grammatically incorrect."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is highly readable and clear. Complex sentences are well-structured and punctuated, allowing for smooth comprehension even with the elevated vocabulary."
+        }
+      ],
+      "strengths": "The translation is highly fluent and largely grammatically impeccable, making for an effortless reading experience despite the intricate sentence structures and formal language.",
+      "weaknesses": "The use of 'myself' as a subject is a minor grammatical point, and a few literal idiomatic translations, while not incorrect, could be slightly smoother for a native English speaker."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Key terms like 'condannati'/'forzati'/'galeotti' (as 'condemned men'/'convicts'), 'Comandante' (as 'Commander' then 'Commandant' based on context), and 'guardiano' (as 'convict-overseer' then 'overseer'/'chief overseer' reflecting role progression) are handled consistently and appropriately. Place names are also consistent."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The elevated, formal style is maintained uniformly throughout the entire passage, ensuring stylistic coherence from beginning to end."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent consistency in terminology and style, which greatly contributes to its professional and polished feel. The nuanced handling of recurring roles and titles is particularly effective.",
+      "weaknesses": "No weaknesses in consistency were observed."
+    }
+  ],
+  "weighted_score": 0.975,
+  "_tokens": {
+    "input": 10056,
+    "output": 1738
+  }
+}

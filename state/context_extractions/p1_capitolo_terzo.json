@@ -1,0 +1,307 @@
+{
+  "chapter": "p1_capitolo_terzo",
+  "characters": [
+    {
+      "name": "Achille",
+      "aliases": [],
+      "role": "The narrator's brother, who restrains him from acting impulsively.",
+      "citation": "sentii la mano ferrea di mio fratello Achille che mi tratteneva.",
+      "_verified": true
+    },
+    {
+      "name": "Radetzky",
+      "aliases": [],
+      "role": "A military commander who gave orders for garrisons to contract and for the evacuation of territories.",
+      "citation": "Radetzky aveva dato ordine alle guarnigioni stanziate qua e là nelle varie parti del Regno",
+      "_verified": true
+    },
+    {
+      "name": "de Domini",
+      "aliases": [],
+      "role": "The narrator's maternal uncle, an 'austriacante arrabbiato' (enraged pro-Austrian).",
+      "citation": "La guarnigione di Brescia, capitanata da un de Domini, mio zio materno",
+      "_verified": true
+    },
+    {
+      "name": "Carlo Alberto",
+      "aliases": [],
+      "role": "A figure whose delay is criticized, and who incited resistance against Radetzky's retreat.",
+      "citation": "Se Carlo Alberto, invece di perdere un tempo prezioso brigando per soddisfare le esigenze della Diplomazia",
+      "_verified": true
+    }
+  ],
+  "events": [
+    {
+      "name": "Primo tuffo nella vita intensa",
+      "date": null,
+      "description": "The narrator's first decisive immersion into an intense life, coinciding with the retreat of German troops from bastions.",
+      "citation": "Il giorno stesso della nostra fuga, ebbi il primo tuffo nella vita intensa... e doveva essere decisivo.",
+      "_verified": true
+    },
+    {
+      "name": "Sgombro forzato dei tedeschi",
+      "date": null,
+      "description": "The forced evacuation of German (Austrian) troops from bastions, observed by the narrator.",
+      "citation": "assistevamo, a piè fermo, a quel loro sgombro forzato.",
+      "_verified": true
+    },
+    {
+      "name": "Uccisione del bambino",
+      "date": null,
+      "description": "A Croatian soldier bayonets a serene child playing near the bastions.",
+      "citation": "La baionetta penetrò nel fianco e uscì dalla schiena di quell'innocente",
+      "_verified": true
+    },
+    {
+      "name": "Uccisione della madre incinta",
+      "date": null,
+      "description": "The child's pregnant mother, witnessing her son's death, is also bayonetted and dies, falling with her unborn child.",
+      "citation": "gli aguzzini d'Italia vibrarono un'altra baionettata ed ella precipitava riversa, cadavere con un cadavere in seno.",
+      "_verified": true
+    },
+    {
+      "name": "Formazione della persuasione ribelle",
+      "date": null,
+      "description": "After witnessing atrocities, the narrator develops the conviction that salvation for the wretched lies only in awakening their rebellious energies, advocating action over prayer.",
+      "citation": "nel mio cuore incominciò a farsi strada la persuasione che nessuna salvezza hanno i derelitti fuorché nel risveglio delle proprie energie ribelli.",
+      "_verified": true
+    },
+    {
+      "name": "Ritirata di Radetzky",
+      "date": null,
+      "description": "Radetzky ordered his garrisons to converge with the main army and evacuate all towns on his path, threatening resistance with artillery and plunder.",
+      "citation": "La nostra ritirata da Milano a Verona non fu di tal natura da affievolire quella terribile impressione.",
+      "_verified": true
+    },
+    {
+      "name": "Saccheggio di Melegnano",
+      "date": null,
+      "description": "Melegnano, attempting to block the enemy, was subdued by fifty pieces of artillery and subsequently plundered by drunken and savage Croatian soldiers.",
+      "citation": "Melegnano, che si era lusingata d'intercettare la strada al nemico, fu tosto ridotta in soggezione da cinquanta pezzi d'artiglieria.",
+      "_verified": true
+    },
+    {
+      "name": "Discussione con de Domini",
+      "date": null,
+      "description": "The narrator had a heated political argument with his pro-Austrian uncle, de Domini, in Desenzano, expressing strong anti-Austrian sentiments.",
+      "citation": "Mi espressi con linguaggio vibrato e libero. Il vecchio militare impallidì e mi interruppe.",
+      "_verified": true
+    },
+    {
+      "name": "Saccheggio di Castelnuovo",
+      "date": null,
+      "description": "The small town of Castelnuovo attempted to barricade itself against Radetzky's retreat but was quickly overcome by imperial artillery, then abandoned to the soldiers' lust.",
+      "citation": "L'artiglieria imperiale ebbe presto ragione del patriottismo italiano. Castelnuovo crivellata, in fiamme, venne abbandonata alla libidine della soldatesca.",
+      "_verified": true
+    },
+    {
+      "name": "Uccisione della giovinetta a Castelnuovo",
+      "date": null,
+      "description": "A young, sick girl fleeing a burning house in Castelnuovo was shot by a soldier while the narrator attempted to rescue her.",
+      "citation": "Un altro soldataccio... spianò la carabina e fece fuoco. La giovinetta cadde e una striscia scarlatta rigò la candida tela che l'avvolgeva.",
+      "_verified": false
+    },
+    {
+      "name": "Giuramento di vendetta",
+      "date": null,
+      "description": "Deeply affected by the girl's death, the narrator felt a powerful surge of new resolve, viewing her martyrdom as symbolic of the Homeland's suffering and reinforcing his commitment to Liberty.",
+      "citation": "Io ne soffersi come se accogliessi nell'animo tutti quanti i dolori della Patria e un impeto di propositi nuovi si sprigionò improvvisamente dal profondo.",
+      "_verified": true
+    },
+    {
+      "name": "Primo sangue versato dal narratore e Achille",
+      "date": null,
+      "description": "That night, the narrator and Achille shed blood in an act they considered justice and defense of their rising race, avenging the murdered Lombard mother and the girl from Castelnuovo.",
+      "citation": "Fu quella notte che le mie mani e quelle d'Achille conobbero il primo sangue. Atto in difesa della mia razza risorgente, atto di Giustizia!",
+      "_verified": true
+    }
+  ],
+  "locations": [
+    {
+      "name": "Porta San Celso",
+      "english": null,
+      "context": "One of the bastions where German troops were retreating from.",
+      "citation": "bastioni che corrono da Porta San Celso a Porta Romana",
+      "_verified": true
+    },
+    {
+      "name": "Porta Romana",
+      "english": null,
+      "context": "One of the bastions where German troops were retreating towards.",
+      "citation": "bastioni che corrono da Porta San Celso a Porta Romana",
+      "_verified": true
+    },
+    {
+      "name": "Milano",
+      "english": "Milan",
+      "context": "The starting point of the narrator's retreat with Achille.",
+      "citation": "La nostra ritirata da Milano a Verona",
+      "_verified": true
+    },
+    {
+      "name": "Verona",
+      "english": null,
+      "context": "The destination of the narrator's retreat; also a strong refuge for Radetzky's forces.",
+      "citation": "La nostra ritirata da Milano a Verona",
+      "_verified": true
+    },
+    {
+      "name": "Regno",
+      "english": "Kingdom",
+      "context": "Refers to the Lombardy-Venetia Kingdom, where Radetzky's garrisons were stationed.",
+      "citation": "nelle varie parti del Regno",
+      "_verified": true
+    },
+    {
+      "name": "Lodi",
+      "english": null,
+      "context": "A location where the Imperial forces arrived, showing signs of confusion and panic.",
+      "citation": "giunti a mala pena a Lodi",
+      "_verified": true
+    },
+    {
+      "name": "Ticino",
+      "english": "Ticino River",
+      "context": "A river that, if Carlo Alberto had crossed quickly, could have led to Austria's defeat.",
+      "citation": "passato il Ticino",
+      "_verified": true
+    },
+    {
+      "name": "Melegnano",
+      "english": null,
+      "context": "A town that attempted to intercept the enemy but was besieged and plundered.",
+      "citation": "Melegnano, che si era lusingata d'intercettare la strada al nemico",
+      "_verified": true
+    },
+    {
+      "name": "Desenzano",
+      "english": null,
+      "context": "The place where the narrator met his uncle de Domini and had a political dispute.",
+      "citation": "Esso ebbe un primo scoppio a Desenzano.",
+      "_verified": true
+    },
+    {
+      "name": "Brescia",
+      "english": null,
+      "context": "The location from which de Domini's garrison came.",
+      "citation": "La guarnigione di Brescia",
+      "_verified": true
+    },
+    {
+      "name": "Peschiera",
+      "english": null,
+      "context": "A location the army had passed before hearing about Castelnuovo's resistance.",
+      "citation": "L'esercito aveva lasciato alle spalle Peschiera",
+      "_verified": true
+    },
+    {
+      "name": "Castelnuovo",
+      "english": null,
+      "context": "A small town that bravely attempted to barricade itself against Radetzky, resulting in its destruction and the death of a young girl.",
+      "citation": "la piccola Castelnuovo osava barricarsi.",
+      "_verified": true
+    }
+  ],
+  "relationships": [
+    {
+      "person_a": "Achille",
+      "person_b": "Narrator",
+      "relationship": "Brother",
+      "citation": "sentii la mano ferrea di mio fratello Achille che mi tratteneva.",
+      "_verified": true
+    },
+    {
+      "person_a": "Narrator",
+      "person_b": "de Domini",
+      "relationship": "Maternal Uncle (Narrator is nephew)",
+      "citation": "capitanata da un de Domini, mio zio materno",
+      "_verified": true
+    },
+    {
+      "person_a": "Achille",
+      "person_b": "de Domini",
+      "relationship": "Maternal Uncle (Achille is nephew)",
+      "citation": "Saputo della presenza dei due nipoti, volle vederli.",
+      "_verified": true
+    }
+  ],
+  "terminology": [
+    {
+      "italian_term": "tedeschi",
+      "meaning": "Germans, used here to refer to the Austrian troops.",
+      "citation": "Sfilavano i tedeschi sui bastioni che corrono da Porta San Celso a Porta Romana",
+      "_verified": true
+    },
+    {
+      "italian_term": "tricolore",
+      "meaning": "The Italian national flag, a symbol of rebellion against Austrian rule.",
+      "citation": "i tedeschi mostravano il pugno al tricolore che sventolava sul suo pinnacolo maggiore.",
+      "_verified": true
+    },
+    {
+      "italian_term": "suonare a stormo",
+      "meaning": "To ring bells in a loud, continuous, and irregular manner, typically as an alarm or signal of danger/uprising.",
+      "citation": "Le campane continuavano a suonare a stormo.",
+      "_verified": true
+    },
+    {
+      "italian_term": "Croati",
+      "meaning": "Croatians, soldiers serving in the Austrian imperial army, often depicted as brutal.",
+      "citation": "ogni Compagnia preceduta da tre Croati che facevano da battistrada.",
+      "_verified": true
+    },
+    {
+      "italian_term": "aguzzini d'Italia",
+      "meaning": "Executioners or tormentors of Italy, a strong derogatory term for the oppressors.",
+      "citation": "gli aguzzini d'Italia vibrarono un'altra baionettata ed ella precipitava riversa",
+      "_verified": true
+    },
+    {
+      "italian_term": "Patria",
+      "meaning": "Homeland, nation, used with strong patriotic connotation.",
+      "citation": "Io ne soffersi come se accogliessi nell'animo tutti quanti i dolori della Patria",
+      "_verified": true
+    },
+    {
+      "italian_term": "imperiali",
+      "meaning": "Relating to the Austrian Empire or its forces.",
+      "citation": "La confusione, il panico degli Imperiali erano tali che, giunti a mala pena a Lodi",
+      "_verified": true
+    },
+    {
+      "italian_term": "austriacante",
+      "meaning": "Pro-Austrian, someone who supports or favors the Austrian side.",
+      "citation": "Era lo zio un austriacante arrabbiato ed io non lo ignoravo.",
+      "_verified": true
+    },
+    {
+      "italian_term": "carnefice",
+      "meaning": "Executioner, hangman; used here to represent the ultimate penalty or danger.",
+      "citation": "o tosto o tardi lascerai la testa tra le mani del carnefice!",
+      "_verified": true
+    },
+    {
+      "italian_term": "cadetti dell'Accademia",
+      "meaning": "Military cadets from an academy; refers to the narrator and his companions.",
+      "citation": "Noi, cadetti dell'Accademia, si assisteva a quello scempio schierati presso la porta delle vecchie mura",
+      "_verified": true
+    },
+    {
+      "italian_term": "razza risorgente",
+      "meaning": "Rising, re-emerging race or people; referring to the Italian nation/people in the process of achieving independence and unity (Risorgimento).",
+      "citation": "Atto in difesa della mia razza risorgente, atto di Giustizia!",
+      "_verified": true
+    }
+  ],
+  "_citation_stats": {
+    "total": 42,
+    "verified": 41,
+    "failed": [
+      {
+        "section": "events",
+        "name": "Uccisione della giovinetta a Castelnuovo",
+        "citation_preview": "Un altro soldataccio... spianò la carabina e fece fuoco. La giovinetta cadde e u"
+      }
+    ]
+  }
+}

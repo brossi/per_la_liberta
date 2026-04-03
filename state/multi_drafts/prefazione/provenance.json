@@ -1,0 +1,140 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "should aim to grasp",
+      "replacement": "might seek to grasp",
+      "reason": "Italian 'mirasse' is an imperfect subjunctive expressing hypothetical intent; 'might seek' conveys that tentativeness better than the more prescriptive 'should aim'"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "so distant, in time and in space, from the events he recounts",
+      "replacement": "so far removed, in time and in space, from the events he narrates",
+      "reason": "'Far removed' better renders 'tanto lontano' as a compound intensifier; 'narrates' is a closer match for 'narra' than 'recounts'"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a value entirely relative",
+      "replacement": "a value altogether relative",
+      "reason": "Edgren gives 'affatto' as 'perfectly; entirely; quite'; 'altogether' captures the emphatic totality of 'affatto' more idiomatically in this construction"
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "In this extreme West",
+      "replacement": "In this farthest West",
+      "reason": "'Farthest' better captures the spatial sense of 'estremo' (Edgren: 'extreme, utmost') when referring to geographic remoteness, and avoids the modern connotation of 'extreme' as radical"
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "this land of vulgar affarismo [money-grubbing]",
+      "replacement": "this land of vulgar commercialism...",
+      "reason": "A clean English rendering is preferable in running prose; the bracketed gloss interrupted the rhetorical flow of this impassioned passage"
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "to find a specimen of that epoch",
+      "replacement": "to find an exemplar of that epoch",
+      "reason": "'Exemplar' more faithfully renders 'esemplare', which implies a representative or model, not a clinical 'specimen'"
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "my existence was thereby enriched with edifying and pleasurable sensations",
+      "replacement": "my existence was thereby intensified by edifying and pleasurable sensations",
+      "reason": "Italian 'intensificata' literally means 'intensified'; 'enriched' is an interpretive softening that loses Crespi's precise word"
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "In the surge of men and events that welled forth from the European revolution",
+      "replacement": "In the great outpouring of men and events that sprang from the European revolution",
+      "reason": "'Rigurgito' literally means a surging back up or disgorging; 'great outpouring' conveys the overwhelming volume and force while remaining natural English"
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "My sympathies are with those who succumb with virility.",
+      "replacement": "My sympathies are for those who manfully succumb.",
+      "reason": "'Virilmente soccombe' places the adverb before the verb; 'manfully succumb' mirrors this word order and is more concise than the prepositional 'succumb with virility'"
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "I surmised that this book would see the light",
+      "replacement": "I sensed that this book would see the light",
+      "reason": "'Intuivo' denotes intuition or sensing, not logical inference; 'sensed' is a more accurate rendering than 'surmised'"
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "I not only sought and obtained written approval of each individual chapter; but I asked as well, and obtained",
+      "replacement": "not only did I procure the approval, in writing, of every single chapter, but I also requested and obtained",
+      "reason": "Gemini's inverted construction ('not only did I') better mirrors the emphatic Italian 'non solo provocai' and reads more naturally in English literary prose; 'procure' is a closer match for 'provocai' in this legal-documentary sense"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "I might have softened a certain dissonance, rendered the more jarring",
+      "replacement": "I might have softened certain jarring notes, rendered the more strident",
+      "reason": "Italian 'qualche stonatura, fatta più stridente' — 'stonatura' means a wrong note or jarring note, not an abstract 'dissonance'; 'strident' is the direct cognate of 'stridente'"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "certain heterogeneous marks that insinuated themselves",
+      "replacement": "certain heterogeneous imprints that insinuated themselves",
+      "reason": "'Impronta' means imprint or stamp, not merely a mark; 'imprints' is the direct cognate and preserves the metaphor of an author's impression left on the text"
+    },
+    {
+      "paragraph": 7,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "whom di Rudio held most dear",
+      "replacement": "whom di Rudio most cherished",
+      "reason": "'Dilesse' (passato remoto of 'diligere') means to cherish or hold in special esteem; 'most cherished' is more concise and closer to the Italian verb form"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "rovistare",
+      "edgren_definition": "rummage (ransack, search)",
+      "english_choice": "rummaging",
+      "paragraph": 1,
+      "note": "Edgren confirms 'rummage' as the period-standard translation of 'rovistando'; this supported retaining the Claude draft's 'rummaging' over Gemini's 'delving into', which loses the physical, searching quality of the original"
+    },
+    {
+      "italian_word": "affatto",
+      "edgren_definition": "perfectly; entirely; quite; at all",
+      "english_choice": "altogether",
+      "paragraph": 2,
+      "note": "Edgren lists 'perfectly; entirely; quite' for 'affatto', confirming it as an intensifier meaning 'completely' (not the modern Italian false-friend sense of 'not at all'); 'altogether' was chosen from the Gemini draft as a strong English intensifier in this adjectival position"
+    },
+    {
+      "italian_word": "estremo",
+      "edgren_definition": "extreme, utmost; extremity",
+      "english_choice": "farthest",
+      "paragraph": 4,
+      "note": "Edgren gives 'extreme, utmost' — in a geographic context ('estremo Occidente'), 'farthest' captures the spatial superlative sense of 'utmost' and avoids the modern connotation of 'extreme' as radical or excessive"
+    },
+    {
+      "italian_word": "stillante",
+      "edgren_definition": "still (until)",
+      "english_choice": "distilling",
+      "paragraph": 4,
+      "note": "The Edgren entry for 'stillante' is fragmentary, but the root 'stillare' means to distil or drip; this confirmed 'distilling' (from the Claude draft) as period-appropriate over Gemini's 'exuding', preserving the image of poetry being slowly extracted drop by drop"
+    },
+    {
+      "italian_word": "miseria",
+      "edgren_definition": "misery (wretchedness, extreme poverty, stinginess)",
+      "english_choice": "miseries",
+      "paragraph": 2,
+      "note": "Edgren gives 'misery (wretchedness, extreme poverty, stinginess)' — this confirmed the literal 'miseries' as appropriate for 'miserie della politica', rather than softening to 'woes' or 'troubles'; both drafts agreed here"
+    }
+  ]
+}

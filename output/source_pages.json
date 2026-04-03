@@ -115,12 +115,12 @@
   "chapter_eleven": {
     "title": "Chapter Eleven",
     "pages": [
-      183,
-      184,
-      185,
-      186
+      165,
+      166,
+      167,
+      168
     ],
-    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n182/mode/1up"
+    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n164/mode/1up"
   },
   "chapter_twelve": {
     "title": "Chapter Twelve",
@@ -161,12 +161,12 @@
   "chapter_fifteen": {
     "title": "Chapter Fifteen",
     "pages": [
-      76,
-      77,
-      78,
-      79
+      183,
+      184,
+      185,
+      186
     ],
-    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n75/mode/1up"
+    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n182/mode/1up"
   },
   "chapter_sixteen": {
     "title": "Chapter Sixteen",
@@ -182,26 +182,25 @@
   "chapter_seventeen": {
     "title": "Chapter Seventeen",
     "pages": [
-      190,
-      191,
-      192,
-      193,
-      194,
-      195
+      83,
+      84,
+      85,
+      86,
+      87,
+      88
     ],
-    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n189/mode/1up"
+    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n82/mode/1up"
   },
   "chapter_eighteen": {
     "title": "Chapter Eighteen",
     "pages": [
-      195,
-      196,
-      197,
-      198,
-      199,
-      200
+      88,
+      89,
+      90,
+      91,
+      92
     ],
-    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n194/mode/1up"
+    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n87/mode/1up"
   },
   "chapter_nineteen": {
     "title": "Chapter Nineteen",
@@ -270,6 +269,30 @@
       228
     ],
     "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n224/mode/1up"
+  },
+  "chapter_decimosettimo": {
+    "title": "Chapter Decimosettimo",
+    "pages": [
+      190,
+      191,
+      192,
+      193,
+      194,
+      195
+    ],
+    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n189/mode/1up"
+  },
+  "chapter_decimottavo": {
+    "title": "Chapter Decimottavo",
+    "pages": [
+      195,
+      196,
+      197,
+      198,
+      199,
+      200
+    ],
+    "ia_url": "https://archive.org/details/perlalibertdal00cres/page/n194/mode/1up"
   },
   "chapter_twenty_five": {
     "title": "Chapter Twenty-Five",

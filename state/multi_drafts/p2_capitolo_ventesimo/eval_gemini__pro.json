@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully employs a formal and literary register ('august consort,' 'profuse in his congratulations,' 'chivalrous France,' 'perspicacity,' 'dominion of a noble heart') that aligns well with the early 20th-century original."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The first-person narrative is consistently maintained, and rhetorical questions and direct addresses effectively convey Crespi's engaging and contemplative conversational style."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The Italian original is consistently formal, even in moments of high emotion, and the English translation accurately mirrors this without introducing inappropriate informalities."
+        }
+      ],
+      "strengths": "The translation excels at capturing the sophisticated and earnest tone of the original, employing a rich vocabulary and sentence structure that feels appropriate for a literary work from the early 20th century. The narrator's reflective and engaging voice is well preserved.",
+      "weaknesses": "No significant weaknesses observed in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Palace of Justice,' 'imperial letters patent,' 'imprisonment for life,' 'turnkey,' and 'Chancellery' are accurately and appropriately translated for the historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "Most cultural references, such as 'Madonna in a Flemish painting' and 'Encyclopedists,' are handled well. However, 'Tolosa' for Toulouse is a direct transcription rather than the more common English equivalent, which could be slightly jarring for some readers, though not strictly incorrect for a proper noun."
+        }
+      ],
+      "strengths": "The translation generally shows good awareness of the historical and cultural context, providing accurate equivalents for institutional terms and preserving the flavor of the original setting.",
+      "weaknesses": "The retention of 'Tolosa' instead of 'Toulouse' is a minor point that slightly deviates from common practice in translating place names for English readers, although it is not an error."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "The translation is highly accurate in conveying meaning. However, it *adds* 'TWENTIETH CHAPTER' at the very beginning, which is not present in the Italian source. This is an insertion not requested."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "Most proper nouns and place names are either correctly preserved (e.g., De Collet, Delangle, Roquette, Conciergerie) or given their standard English equivalents (e.g., Paris, London). 'Tolosa' is retained as-is, which is not an error but is a direct transcription rather than localization. 'Empress Eugénie' is given the French spelling, which is appropriate, but the Italian source uses 'Eugenia'. This is a minor adaptation, not preservation."
+        }
+      ],
+      "strengths": "The translation is remarkably faithful to the meaning of the source text, demonstrating a deep understanding of the Italian. Figurative language, idiomatic expressions ('one thing leads to another,' 'pulled the strings'), and emotional nuances are all accurately conveyed.",
+      "weaknesses": "The explicit addition of 'TWENTIETH CHAPTER' is an unfaithful insertion. While minor, the decision to use 'Eugénie' (French) instead of 'Eugenia' (Italian) is an adaptation of a proper noun, not a preservation, and 'Tolosa' is a direct transcription rather than a localized name."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant, natural, and flows beautifully. It avoids awkward literalisms and maintains a strong narrative voice, making it a compelling read."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative expressions and imagery, such as 'returned in torrents,' 'instilled so much of his venom,' 'oozed from every pore of his skin,' and 'more trembling for me than for herself,' are all rendered with evocative and effective English equivalents."
+        }
+      ],
+      "strengths": "This translation is of high literary quality. It reads as an original work, with a natural cadence and powerful imagery. The choices of idiom and vocabulary consistently enhance the emotional and descriptive impact of the narrative.",
+      "weaknesses": "The phrase 'returning on his steps' for 'ritornando sui suoi passi' is a slightly literal translation that could have been smoother ('turning back' or 'retracing his steps'), but it does not significantly detract from the overall quality."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct, with sophisticated sentence structures that enhance readability rather than hinder it. There are no awkward constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The translation is exceptionally clear and flows smoothly, making it easy to comprehend without needing to re-read sentences or passages for clarity."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent command of English grammar and syntax, resulting in highly fluent and clear prose. It is a pleasure to read, requiring no effort to follow the narrative.",
+      "weaknesses": "No weaknesses identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All character names, official titles ('turnkey,' 'superintendent,' 'chancellery'), and key thematic terms are translated consistently throughout the text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The formal and literary style of the translation is uniformly maintained across all paragraphs, contributing to a cohesive and immersive reading experience."
+        }
+      ],
+      "strengths": "The translation exhibits strong consistency in terminology and style, ensuring a unified and polished text from beginning to end.",
+      "weaknesses": "No weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 0.85,
+  "_tokens": {
+    "input": 7119,
+    "output": 1742
+  }
+}

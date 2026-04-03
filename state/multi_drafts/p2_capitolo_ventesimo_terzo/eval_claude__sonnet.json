@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses a sophisticated and formal vocabulary and sentence structure, effectively conveying the early 20th-century literary register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The first-person narrative, direct addresses in dialogue, and rhetorical questions ('Do you know what a vase is?') are all preserved, maintaining the conversational yet literary voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The narrator's voice is consistently literary, while Morbioli's dialogue effectively captures a more colloquial, passionate tone, mirroring the original's shifts."
+        }
+      ],
+      "strengths": "The translation masterfully captures the nuanced tone of the original, from the narrator's reflective prose to the direct, spirited dialogue of Morbioli. The vocabulary and syntax evoke the historical period without feeling archaic or forced.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "References to historical figures like Pianori and Orsini, and the context of French penal colonies, are handled accurately. No explicit Risorgimento political terms are present in this specific passage beyond names."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Italian terms like 'Romano di Roma' and 'transteverino' are retained or explained, and idioms such as 'zucca vuota' (empty gourd) and 'dice corna' (speak ill of) are expertly translated to their English idiomatic equivalents, maintaining the cultural flavor."
+        }
+      ],
+      "strengths": "The translation skillfully navigates cultural specificities, preserving Italian references and idioms while ensuring their meaning is clear to an English-speaking audience. The French place names are correctly rendered in their original French forms, appropriate for the colonial setting.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is remarkably faithful to the original, conveying the exact meaning, narrative details, and emotional resonance without omissions or substantive additions. The chapter heading is a standard formatting addition."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Italian personal names (di Rudio, Morbioli, Pianori, Orsini) are preserved. French place names (Île du Salut, Île Mère, Montagne d'Argent, Cayenne, Oyapock) are correctly rendered in French, reflecting the historical context of the penal colony."
+        }
+      ],
+      "strengths": "The translation is highly accurate, meticulously reflecting the source text's details, descriptions, and dialogue. The idiomatic expressions are translated with great precision, capturing their intent without literalism that would compromise clarity.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is elegant, natural, and flows beautifully, reading as an original literary work. The pacing and rhythm are well-maintained."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'guscio di noce' (nutshell of a boat) and 'barbe col fegataccio sano' (bold fellows with the stomach to risk it), is consistently rendered with creative and effective English equivalents that retain the original's vividness."
+        }
+      ],
+      "strengths": "The translation stands as a high-quality piece of literature in its own right, characterized by graceful prose, vivid imagery, and compelling dialogue. It successfully avoids the pitfalls of literal translation, opting for natural and impactful English expressions.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically flawless and entirely free of awkward or unnatural constructions, contributing to a smooth reading experience."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and highly readable, requiring no re-reading to comprehend. The complex sentences are well-structured in English."
+        }
+      ],
+      "strengths": "The translation demonstrates impeccable grammar and excellent fluency, making it effortlessly readable. The phrasing is consistently clear and concise.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "All recurring terms, place names, and character names are translated with perfect consistency, ensuring coherence throughout the text. Ship names are consistently italicized."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a consistent and coherent literary style from beginning to end, ensuring a uniform reading experience."
+        }
+      ],
+      "strengths": "The translation exhibits exemplary consistency in terminology, character names, and overall style, which greatly contributes to its high quality and readability.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 5067,
+    "output": 1543
+  }
+}

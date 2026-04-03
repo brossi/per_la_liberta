@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal and slightly elevated register appropriate for the period and literary context, using words like 'thither,' 'perforce,' and 'manfully'."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrative feels like a recounted personal experience, effectively balancing direct speech, internal monologues, and observational notes. Informal interjections like 'eh, eh!' are well preserved."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translator skillfully handles the shifts in formality, such as Rudio's personal address to Saturno versus his more formal interactions with authorities."
+        }
+      ],
+      "strengths": "The translation excels at capturing the historical and literary tone of the original, making it feel authentic to its early 20th-century origins. The narrative voice is consistently maintained, engaging the reader effectively.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "'Fatherland' for 'Patria' and specific institutional translations like 'House for Urchins' for 'Casa dei Discoli' are excellent choices that convey the cultural context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Proper names, salutations ('Signor,' 'Signora'), and even specific foreign words ('cocotte') are preserved or well-contextualized, avoiding modernization that would diminish authenticity."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the cultural and historical context, choosing appropriate equivalents and preserving key references without making them feel alien to the English reader.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "Meaning is largely accurate, but there are a few minor instances of slight expansion ('from the depths of my heart' for 'dal profondo') or nuanced interpretation ('punishment of heroes' for 'supplizio d'eroi,' 'act of arrogance' for 'prepotenza') that could be debated, though they don't fundamentally alter the narrative."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns and key historical references (people, places, organizations) are correctly preserved or translated appropriately (e.g., 'Conciergerie,' 'Girondins')."
+        }
+      ],
+      "strengths": "The translation is highly faithful to the source text, ensuring that the core narrative and factual details are conveyed accurately.",
+      "weaknesses": "While mostly accurate, some subtle nuances in specific phrases might be interpreted slightly differently, though these instances are few and do not detract significantly from the overall meaning."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The prose is elegant, fluid, and engaging, reading as a piece of literature rather than a word-for-word rendering. Sentence structures are varied and sophisticated."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Many idiomatic expressions, vivid descriptions, and rhetorical devices are translated skillfully, maintaining their evocative power and poetic impact in English."
+        }
+      ],
+      "strengths": "The translation is of high literary quality, showcasing excellent prose and a strong command of English expression. It successfully captures the emotional depth and imagery of the original.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct with natural-sounding syntax throughout the passage."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is very clear and easy to follow, even when describing complex emotional states or intricate events. It flows well and does not require re-reading for comprehension."
+        }
+      ],
+      "strengths": "The translation is impeccably fluent and grammatically sound, contributing to a smooth and enjoyable reading experience.",
+      "weaknesses": "None significant in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Recurring character names (Saturno, Orsini, Pieri, Hughon, Elisa), titles ('Prison Director,' 'executioner'), and key nouns ('large room,' 'Fatherland') are translated with impressive consistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The narrative style, tone, and level of formality are consistently maintained throughout the entire passage, creating a unified and coherent reading experience."
+        }
+      ],
+      "strengths": "The translation maintains a high degree of consistency in terminology, character names, and stylistic choices, reinforcing its quality and reliability.",
+      "weaknesses": "None significant in this dimension."
+    }
+  ],
+  "weighted_score": 0.9500000000000001,
+  "_tokens": {
+    "input": 8078,
+    "output": 1487
+  }
+}

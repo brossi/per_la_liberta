@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a sophisticated, slightly formal, early 20th-century literary register with appropriate vocabulary choices (e.g., 'scarcely had I,' 'descry,' 'halters,' 'valise,' 'limiers')."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "Despite the literary register, the translation retains a personal and reflective tone, making the narrative feel like a direct account of experiences and thoughts, true to Crespi's conversational style."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The translation deftly handles shifts between narrative, internal monologue, and direct speech, maintaining the appropriate level of formality for each context, without jarring changes."
+        }
+      ],
+      "strengths": "The translation excels in capturing the nuanced tone and authorial voice of the original. It successfully conveys the blend of urgency, reflection, and literary elegance that characterizes Crespi's writing, using vocabulary and sentence structures that align with the period.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Empire,' 'revolution,' and 'Prefecture' are rendered accurately and with period appropriateness. The handling of 'otto soldi' as 'eight-sou stamp' is an excellent adaptation for the French context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "Place names like 'Boulevard des Italiens,' 'Place de la Concorde,' and 'Gare d'Orléans' are either preserved in their common English forms or italicized (e.g., 'maître d'hôtel,' 'limiers'), ensuring cultural elements are not lost. The historical figure 'Felice Orsini' is correctly maintained."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the historical and cultural context, effectively adapting or preserving references without losing their original meaning or impact. The choice of 'sou' for 'soldi' is a particularly good example of context-aware adaptation.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, conveying the precise meaning of the source text. No significant omissions or additions were found; every detail and nuance appears to be faithfully rendered."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "While most proper nouns and place names are correctly preserved or adapted (e.g., 'Place de la Concorde' for 'Piazza della Concorde'), there is a minor inconsistency where 'Pieri' is translated as 'Pierey' once, which is likely a typo."
+        }
+      ],
+      "strengths": "The translation is exceptionally faithful to the source text, capturing both the explicit meaning and the underlying implications of the narrative. Complex sentences and intricate details are translated with precision.",
+      "weaknesses": "The single inconsistency in a proper noun ('Pieri' vs. 'Pierey') is a minor oversight in an otherwise highly accurate translation."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads exceptionally well, maintaining a natural flow and elegance. It reads as an original literary piece, rather than a translated work, demonstrating high stylistic quality."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and vivid imagery (e.g., 'humming of an immense hive,' 'pulsing cadaver,' 'clinging... like a vampire,' 'limiers — hounds,' 'guardian angels') are rendered with remarkable effectiveness, preserving their evocative power and poetic impact."
+        }
+      ],
+      "strengths": "The literary quality is a major strength. The translation transforms the Italian into compelling English prose, retaining its dramatic tension, emotional depth, and rich imagery. The choice of words and phrasing consistently elevates the text.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically flawless, with sophisticated sentence structures that are both correct and natural-sounding. There are no awkward constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The translation is highly readable and clear. The narrative flows effortlessly, allowing the reader to fully absorb the story without needing to pause or re-read sentences for comprehension."
+        }
+      ],
+      "strengths": "The translation exhibits impeccable grammar and excellent fluency, making it a smooth and engaging read. The clarity and naturalness of the English contribute significantly to the overall high quality.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "While most terms and names are consistent, the character 'Pieri' is once rendered as 'Pierey', which is a minor but noticeable inconsistency."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation maintains a consistently coherent and appropriate literary style throughout the entire passage, ensuring a unified reading experience."
+        }
+      ],
+      "strengths": "The translation maintains a strong stylistic coherence, providing a consistent and unified reading experience from beginning to end.",
+      "weaknesses": "The slight inconsistency in the spelling of 'Pieri' is the only notable lapse in consistency."
+    }
+  ],
+  "weighted_score": 0.925,
+  "_tokens": {
+    "input": 5388,
+    "output": 1633
+  }
+}

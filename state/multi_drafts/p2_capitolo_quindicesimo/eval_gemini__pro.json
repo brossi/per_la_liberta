@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation effectively uses vocabulary and sentence structures appropriate for a 1913 literary text, maintaining a formal yet evocative register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The first-person perspective, direct quotes, and occasional reflective asides successfully convey a conversational yet documentary narrative voice."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The tone remains consistently appropriate, balancing personal reflection with formal address, mirroring the original's shifts."
+        }
+      ],
+      "strengths": "The translation excels in capturing the sophisticated and period-appropriate literary register, making the text feel authentic to its early 20th-century origin. The narrative voice, combining personal reflection with a more formal recounting, is well-preserved.",
+      "weaknesses": "There are no significant weaknesses in this dimension; the tone and voice are consistently well-handled."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Giudice Istruttore' (Examining Magistrate), 'Tribunale' (Tribunal), and 'Patria' (Fatherland/Country) are translated with appropriate historical equivalents."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 0.5,
+          "note": "The idiom 'cartoccio della dabbenaggine ed a spalmarsene il viso' is preserved literally, which is faithful. However, there is an inconsistency in the anglicization of place names (e.g., 'Londra' to 'London' but 'Parigi' and 'Italia' remain in Italian), which detracts from full contextual adaptation."
+        }
+      ],
+      "strengths": "The translation accurately renders specialized legal and political terminology pertinent to the Risorgimento era into suitable English equivalents, preserving the historical context.",
+      "weaknesses": "The inconsistent approach to anglicizing major city names ('London' vs. 'Parigi', 'Italia') creates a minor jarring effect, failing to fully adapt the cultural references consistently."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly faithful to the source, conveying the same meaning without significant omissions or uncalled-for additions. A minor interpretive addition ('given to him by Pieri') for 'rilasciatagli' is very subtle and doesn't alter core meaning."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "Personal names are consistently preserved. However, place names are inconsistently handled, with 'Londra' anglicized to 'London' but 'Parigi' and 'Italia' remaining in Italian."
+        }
+      ],
+      "strengths": "The translation is extremely accurate, meticulously transferring the meaning and nuance of the Italian text. Complex sentences and idiomatic expressions are carefully rendered.",
+      "weaknesses": "The inconsistency in translating or preserving major place names, anglicizing some while leaving others in their Italian form, is the primary weakness in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "While generally good, some phrases are translated very literally ('We, I said', 'all of one piece', 'in their great heart'), which can make the prose slightly less natural and fluent in English, although not to a severe degree."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and imagery are exceptionally well-preserved and conveyed, such as 'turbid passions,' 'claws tight at my throat,' 'identical vise, plunged up to their throats in the identical quicksand,' and 'cheat the executioner'."
+        }
+      ],
+      "strengths": "The translation beautifully conveys the rich imagery and figurative language of the original, contributing significantly to its literary appeal. The evocative descriptions are a strong point.",
+      "weaknesses": "A tendency towards very literal translation in certain phrases occasionally hinders the natural flow and idiomatic quality of the English prose, making it feel somewhat stiff compared to fully natural English literature."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically correct throughout. While some literal translations may be less idiomatic, they do not result in awkward or incorrect grammatical constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is consistently clear and easy to understand on a first read, even with slightly less idiomatic phrasing in a few instances."
+        }
+      ],
+      "strengths": "The translation maintains high grammatical accuracy and clarity, ensuring that the text is easily readable and comprehensible without ambiguity.",
+      "weaknesses": "The primary weakness here aligns with the literary quality's slight stiffness: a few literal renderings, while grammatically sound, could be more idiomatic for improved fluency."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "Character names are consistent. However, the translation of 'Patria' varies between 'Country' and 'Fatherland', and place names like 'Parigi' and 'Italia' are inconsistently left in Italian while 'Londra' is anglicized."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The literary and reflective style is maintained consistently across all paragraphs, contributing to a unified reading experience."
+        }
+      ],
+      "strengths": "The translation maintains a coherent and consistent literary style throughout the passage, ensuring a unified authorial voice.",
+      "weaknesses": "Inconsistencies in the anglicization of geographical names and the translation of the term 'Patria' are minor but present issues that could be easily resolved for greater uniformity."
+    }
+  ],
+  "weighted_score": 0.8375000000000001,
+  "_tokens": {
+    "input": 4873,
+    "output": 1665
+  }
+}

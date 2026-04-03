@@ -1,0 +1,13 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro",
+      "original": "Vittorio Emanuele II was regarded by Garibaldi at that time as a statesman of shrewdness, but was identified by Dante as the Prince schooled by the powerful mind of Machiavelli.",
+      "replacement": "A true statesman, Vittorio Emanuele II was regarded by Garibaldi at that time as shrewd, yet foreshadowed by Dante as the Prince schooled by the powerful mind of Machiavelli.",
+      "reason": "The Claude draft absorbed 'Vero statista' into the predicate ('a statesman of shrewdness'), losing the appositive structure of the Italian. The Gemini draft preserved the opening 'A true statesman' as a separate phrase, matching the source's 'Vero statista, …'. Additionally, Gemini's 'foreshadowed' is a more accurate rendering of 'preconizzato' (to foretell, prophesy) than Claude's 'identified'. The Gemini draft's mistranslation of 'come fine' as 'as an end' (rather than 'as shrewd/subtle') was not carried over; the final corrects this to 'as shrewd'. Claude's 'schooled' was retained over Gemini's 'instructed' as a stronger match for 'ammaestrato'."
+    }
+  ],
+  "edgren_influences": []
+}

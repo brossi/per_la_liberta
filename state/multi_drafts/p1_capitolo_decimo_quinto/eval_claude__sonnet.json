@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal, slightly elevated literary register consistent with the early 20th-century Italian source."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The first-person narrative voice, reflective and descriptive, is well-preserved, conveying Crespi's engaging style."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original text is predominantly formal, and the translation accurately reflects this, particularly in the dialogue and address to 'Maestro' (Master)."
+        }
+      ],
+      "strengths": "The translation excels at capturing the sophisticated, slightly archaic yet engaging tone of the original. The choice of vocabulary and sentence structure consistently reflects a literary register appropriate for the period. The narrator's voice, which is both descriptive and introspective, comes through clearly.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Key terms like 'Gran Guardia,' 'Giovine Italia,' 'Lombardo-Venetia' are handled well. 'Radetzky' (correcting a source typo) and 'heroes of the five days' (correcting 'sesta giornata' to the historically accurate 'Cinque Giornate') are excellent, context-aware adaptations. 'Sounds the tocsin' for 'suona a stormo' is a brilliant choice."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "The symbolic meaning of the pine branch and myrtle is explained. The Latin quote is retained and translated. Phrases like 'positioned astride two states' (a cavaliere tra due stati) and 'defrauded the customs' (frodavano le gabelle) are well-rendered."
+        }
+      ],
+      "strengths": "The translator demonstrates a strong understanding of the historical and cultural context, making appropriate adaptations and explanations that enrich the English reading experience without compromising authenticity. The choice of 'tocsin' is particularly notable for its historical precision.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The meaning is conveyed accurately throughout. Minor adjustments like 'Radetzky' (from 'Kadetzky') and 'heroes of the five days' (from 'sesta giornata') are intelligent corrections/clarifications that improve historical accuracy without altering narrative intent."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names, and historical references (e.g., Mazzini, Calvi, Varese, Lombardy-Venetia) are correctly preserved or clearly referenced."
+        }
+      ],
+      "strengths": "The translation is highly faithful to the source text's meaning, demonstrating careful attention to detail. The judicious corrections of historical references are a testament to quality, enhancing accuracy for the English reader.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads exceptionally well, maintaining a natural flow and elegant style. It does not feel like a translation but rather a well-crafted piece of English literature."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and imagery, such as 'busy silence,' 'soul enveloped,' 'little great man,' and 'pen dipped in blood,' are effectively translated, preserving their impact and nuance."
+        }
+      ],
+      "strengths": "The translation demonstrates excellent literary quality, with strong command of English idiom and style. The imagery is vivid, and the narrative maintains a captivating flow, making for a compelling read.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is grammatically perfect and free from any awkward phrasing or constructions."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is consistently clear and highly readable; sentences are easy to follow and comprehend on first reading."
+        }
+      ],
+      "strengths": "The translation is impeccable in terms of grammar and fluency. It is a pleasure to read, with clear and well-structured sentences throughout.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Key terms like 'Maestro' (Master), 'domestico' (manservant), and 'piccolo grand'uomo' (little great man) are consistently translated, maintaining cohesion."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The literary and formal style is consistently maintained across all paragraphs, ensuring a unified reading experience."
+        }
+      ],
+      "strengths": "The translation exhibits strong consistency in terminology and style, which contributes significantly to its high quality and readability.",
+      "weaknesses": "No significant weaknesses identified in this dimension."
+    }
+  ],
+  "weighted_score": 1.0,
+  "_tokens": {
+    "input": 5744,
+    "output": 1545
+  }
+}

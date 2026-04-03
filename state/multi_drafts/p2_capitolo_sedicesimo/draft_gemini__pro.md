@@ -1,0 +1,55 @@
+AND so we come to our chief. I shall re-evoke old impressions; I shall express judgments that fifty years of meditation have not availed to change.
+
+We find ourselves before a character capable, in the highest degree, of generous impulses. And yet, through the mysterious reactions of his soul, the frequent exaltations of sentiment were followed, always or almost always, by profound depressions. A nature excessively nervous and sensitive, he oscillated fatally from one extreme to the other, laying bare strange deficiencies that I held, even in those times, to be illnesses... of what precise nature I knew not and know not how to define.
+
+The conspiracy against Napoleon III reveals in him a mind adept at conceiving a design in broad strokes. But the success of such enterprises, when analyzed, reveals itself to be constituted by the sum of trifles patiently chiseled. Felice Orsini, in the practical act, showed so little regard for the most elementary precautions, that I do not hesitate to affirm that the essential gifts of the conspirator were conspicuous, in him, for their complete absence.
+
+Giuseppe Mazzini, censured by Orsini to the point of denigration, to the point of recognizing in him no genius other than that of the word, certainly would not have committed the foolishness of leaving England, of plunging into an enterprise of such caliber, forgetting behind him, intact, findable, almost in plain sight, the correspondence that revealed all the preliminaries of the plot.
+
+This imprudence will appear all the more monumental, when one knows that he himself, in writing to me, often recommended that I destroy his letters, that I leave not the slightest trace of them subsisting.
+
+It pains me to say it but I must say it in honor of the truth: the trouble with Felice Orsini's mind consisted in his overflowing fantasy, which prevented him from perceiving the exact contour of things, despite his claim to be a practical man.
+
+Having taken upon himself a difficult enterprise, he would construct, with his fantasy, the events that were supposed, in a long chain, to lead to triumph and, dwelling on this, he became so exalted by it, as to deem it inevitable, to savor it before it came to be.
+
+With an irony that seemed cruel, it was observed how Felice Orsini, on the eve of one of his desperate attempts in the Lunigiana, had pushed his faith in success to the point of procuring a general's uniform. It is repugnant, before the majesty of martyrdom, to be forced to recall how, on his way to Paris to attempt the life of an Emperor, to initiate a revolution, he, who so needed obscurity and silence, acquired a saddle horse and frequently traversed, on horseback, the streets of the metropolis, almost anticipating the emotions of the epic moments...
+
+This explains so many other things. The excessive development of one mental tendency is accomplished at the expense of other faculties, which remain all the more deficient the more that one manifests itself as swollen and overbearing. The excessive faith in success, which depends, in essence, on an exaggerated concept of one's own strengths, is too often matched by a scant esteem for the strength and character of others. Should catastrophe abruptly truncate the fanciful dreams, the proud and superb soul, overflowing with bitterness, will strive, in complete good faith, to demonstrate that this catastrophe is principally due to the worthlessness of his own companions in action.
+
+What reason induced Felice Orsini to detach himself so irascibly from the Master? Let the historians seek it in this or that incident and, from their point of view, that is well and good. But the primary cause is entirely psychological. The historical incidents are not, in reality, but the expression taken, in that environment, by the deplorable defect of a soul otherwise noble and great.
+
+In a different field and to a different degree, but with the identical humors, Felice Orsini was to treat us also, his companions in peril and misfortune. The bitter words pronounced during the brief absence of Gomez, in the house on via Monthabor, on the evening of January 14th; the no less pungent phrase hurled, shortly thereafter, in the direction of Pieri, while we were on our way to the Opera, demonstrate that a dark reaction was already fermenting in his soul, even before the catastrophe.
+
+An unfortunate incident, provoked by Gomez, served to lend some consistency to the phantoms that disturbed him. Before deciding upon a full confession, Gomez had attempted to make the Examining Judge believe that, irritated by his hesitation, Felice Orsini, upon the arrival of the imperial carriage, had brusquely snatched the bomb from his hands and that he himself, Orsini, had hurled it at the Emperor. When confronted, he immediately recanted, and the matter, from a legal point of view, had no consequence. But it certainly did not serve to recall Orsini to a just perception of reality.
+
+He was undoubtedly in this state when he was circumvented and duped by the arts of the police. The insinuation contrived against the integrity of his companions made a wide breach in his soul, already so open to suspicion. And while, before then, following his generous impulses, he had shown he wished to assume all responsibility for what had occurred, now he repented of it and dictated a detailed account, in which he, while assigning to each the paternity of the acts already known to the Police, let slip, in our regard, words full of acrimony.
+
+He then repented of having repented and attempted again, with an energetic counter-declaration, to take all responsibility back upon himself; but deep down the doubt remained with him, and the acrimony found, from time to time, a way to burst forth impetuously, only to be overcome always, and with equal impetuosity, by sentiments more befitting his greatness.
+
+A seesaw that disoriented us in a heart-rending way!
+
+Even today, I would not know how to interpret with sure judgment certain of his negations, certain of his denials. Which could be inspired as much by the fleeting determination to split from us and to act on his own part, as by the ardent desire to open for us a path to safety, to offer us the means of attenuating the rigidity of the fate that was about to strike us.
+
+Here, to avoid any misunderstanding, I must insist on one point: The insinuations of the Police were undoubtedly intended to irritate Orsini, in order to wring from him a full confession. Orsini had his defects, but he was no coward. He did indeed admit to everything the Police showed that it knew with certain knowledge; but he took good care not to reveal unknown particulars, unless they concerned him exclusively.
+
+I will also say: No human soul could be, in all the multiple faces of its prism, polished and perfect. To constitute greatness, a single granitic side is, at times, enough. Felice Orsini had more than one.
+
+It is easy, for example, to show oneself courageous in the light of day, on a field of battle. So easy, that I know of men transformed into heroes by a simple ricocheted lead ball, who were incapable of standing, without trembling, before a snarling cur. The disciplined multitude carries along even the most timid and unwarlike individual... to keep him standing straight he has, or supposes he has, fixed upon him, by the thousands, the eyes of his fellow citizens.
+
+But Felice Orsini who, alone in his room, spreads the fulminate of mercury before the fireplace and dries it by the fire; who with a watch in one hand, a thermometer in the other, watches for the spark that could blow him to bits, without casting forth, from his work, a single atom that might earn him the applause of men; nothing, not even the memory of his generous intentions... Felice Orsini, I say, gives proof of a courage whose temper obscures any clamorous and warlike heroism.
+
+There is, moreover, a trait that has escaped, as far as I know, those who have written of him until now, which reveals a courage still more refined and sublime. The seizure of his correspondence had, among other things, revealed him as the center from which all the clandestine labor radiated; to which, in turn, were to lead the dissimulated hatreds, the subterranean forces, working to undermine the Empire.
+
+To eliminate Napoleon for the sake of eliminating him would have been the work of madmen. The French political Police had well understood that the blow must, by diligent preparation, impart the impulse to large forces, ready to gather its fruit. To possess itself of secrets that it intuited to be of vital importance was a matter to which it attached career, riches, power, glory—everything!
+
+Felice Orsini found himself, therefore, in a position not to submit, but to impose. A single thread of the vast plot, secretly sacrificed, would have led him to safety, to opulence perhaps...
+
+He would have seen again the white mountain ridges, the fragrant green plains, the incomparable sky of Italia; he would have conspired and fought for her again; he could have flattered himself that he would witness her third renaissance. Nor was his heart mute to more modest affections, no less intense... he was a father; on the banks of the Thames, a woman hoped and trembled for him!... but between the tragic present hour and that jubilation, there was the blood of generous men, there were the tears of orphans. He preferred to set forth, pale and silent, towards the scaffold. An austere greatness, worthy of an ancient Roman!
+
+Felice Orsini's defense sprang spontaneously from the circumstances, and Giulio Favre was not a mind to spoil, out of pusillanimous considerations, the splendid material that they offered him.
+
+He laid upon it the mighty hand of an artist who knows the mastery of effects; of a man of heart who makes his own the tremor of a glorious and unhappy People.
+
+His masterstroke was the letter addressed by Felice Orsini to Napoleon III. Without revealing anything, without compromising anyone, it allows him to flash the loftiness of our aim before the Judges, the jurors, the civilized world; it coaxes the lion that exercises its claws in our flesh; but amidst the flatteries was prudently inserted the muffled threat. A simple phrase honestly expressed is enough to pierce a wicked heart. In the silent hours, in the hours of remorse, it will reproach him for his broken oaths, it will exude the perennial wrath of a sacredly vengeful race, which was his, which he has betrayed!
+
+Giulio Favre stood above the petty legal stratagems and paltry things. Ranging among great things, he was able to accomplish a great defense. He did not snatch a man from the executioner, but he did better... he restored his character. He handed down to posterity a soul, already in itself so virile, transfigured, almost, by traits of fascinating beauty

@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation consistently uses sophisticated vocabulary and sentence structures appropriate for the period, such as 'strove,' 'tumultuously filled,' 'endeavoured,' and 'hauberk.'"
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The narrative voice, including direct speech and reflective asides, is well-maintained throughout, feeling personal yet formal, mirroring the original's style."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 0.5,
+          "note": "Mostly yes, though 'the very fellow we found so repugnant!' for 'proprio il pesce che ci ripugnava!' slightly softens the original's strong, almost disgusted tone, making 'fellow' a touch too informal for the implied contempt."
+        }
+      ],
+      "strengths": "The translation excels at capturing and maintaining the high literary register and the distinctive narrative voice of the original Italian. The emotional gravity and reflective nature of the prose are also very well-preserved, lending an authentic feel to the historical narrative.",
+      "weaknesses": "A very minor softening of tone in a few idiomatic expressions, such as the rendering of 'pesce,' which could have conveyed a stronger sense of disdain."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms and references like 'Risorgimento,' 'coup d'état,' 'Law of Suspects,' 'Zambeccari legion,' and 'detonator cap' (for 'capsula') are accurately preserved or translated with appropriate period terminology."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "The translation preserves Italian place names and specific historical terms (e.g., 'Romagnoli') without modernization. The term 'piazza dello Shoah,' although anachronistic for a 1913 book, is faithfully reproduced from the provided source text, aligning with the instruction to evaluate against the source."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong grasp of the historical and cultural context, accurately rendering specific terms and names relevant to the Italian Risorgimento period. It avoids introducing anachronisms and faithfully reproduces all elements found in the source text.",
+      "weaknesses": "No significant weaknesses were observed in adapting or preserving cultural context; the translation appropriately handles all such references."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate, there's a slight loss of nuance in the connection between 'suppress thoughts' and 'by rekindling old acquaintances.' The idiomatic 'il pesce che ci ripugnava!' is softened, and the clarity of 'dissimulated by the other, quilted and innocuous one' is somewhat reduced compared to the original."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "Yes, all proper nouns, place names, and historical references are preserved accurately, including reflecting the original source text's own internal variations in names (e.g., for Baron Torocfalda)."
+        }
+      ],
+      "strengths": "The translation generally maintains high fidelity to the original meaning and content, handling complex sentences and idiomatic expressions effectively. Historical events, motivations, and dialogues are accurately conveyed, and place/character names are faithfully rendered as they appear in the source.",
+      "weaknesses": "Some subtle nuances of the original Italian are occasionally diminished, particularly in idiomatic phrases, and a complex sentence construction describing the hidden bomb is slightly less clear than it could be, leading to minor ambiguities."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose is highly readable, flowing naturally and maintaining a compelling narrative drive. It clearly reads as a polished literary text."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language, such as 'threads of his plot,' 'fashioned like a sea urchin,' 'where logic makes its home,' 'virtue dangling from a gallows,' and 'touching a certain key,' are all translated with creativity and impact, preserving the original's vividness."
+        }
+      ],
+      "strengths": "This is a very strong aspect of the translation. The language is rich, evocative, and sophisticated, making the English text a pleasure to read. The translator successfully conveys the dramatic tension, emotional depth, and vivid imagery of the original through skillful word choice and sentence construction.",
+      "weaknesses": "There is only one minor instance of slightly clunky phrasing ('dissimulated by the other, quilted and innocuous one') that briefly disrupts the otherwise excellent flow."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "The translation is grammatically correct throughout. However, there are a few slightly awkward constructions, such as 'by rekindling old acquaintances' which could be rephrased for tighter connection, and the previously noted phrase about the 'quilted and innocuous one'."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is exceptionally clear and easily understandable, requiring no re-reading to grasp meaning or narrative progression."
+        }
+      ],
+      "strengths": "The English is grammatically impeccable and highly fluent, allowing for a smooth and uninterrupted reading experience. The clarity of expression ensures that the complex narrative and arguments are easily followed.",
+      "weaknesses": "A couple of minor phrasing choices lead to slight awkwardness, though they do not impede understanding or introduce grammatical errors."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 1.0,
+          "note": "Yes, all recurring character names and key terms (e.g., 'Maestro' as 'Master') are translated consistently, faithfully reflecting the naming patterns and stylistic choices present in the original Italian source text."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The stylistic approach and tone remain consistent across all paragraphs, contributing to a cohesive and unified literary work."
+        }
+      ],
+      "strengths": "The translation maintains a consistent stylistic approach and tone throughout the passage, which contributes significantly to its literary quality and readability. All character names and key terms are handled with fidelity to the source's usage.",
+      "weaknesses": "No significant weaknesses were identified; the translation maintains a high level of consistency in its rendering of names and style."
+    }
+  ],
+  "weighted_score": 0.8833333333333334,
+  "_tokens": {
+    "input": 7060,
+    "output": 1680
+  }
+}

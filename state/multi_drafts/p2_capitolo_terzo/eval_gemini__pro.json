@@ -1,0 +1,121 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The vocabulary and sentence structure effectively maintain a formal, slightly elevated early 20th-century literary register."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The translation successfully balances formal narration with a direct, engaging tone, preserving the author's voice, including the direct address to 'my readers'."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The distinction between narrative prose and direct speech (e.g., Leoni's informal address, Pianciani's directness) is well-handled."
+        }
+      ],
+      "strengths": "The translation excels at capturing the formal yet engaging tone and period-specific register of the original Italian text, making it feel authentic to its time.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'coup d'état,' 'London Cabinet,' 'Muscovite Empire,' 'House of Savoia,' and 'soldiers of fortune' are well-translated and contextually appropriate."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "References such as 'Storia dei Papi,' 'I Sepolcri,' and the use of 'Moretto' as a nickname are preserved or adapted thoughtfully."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "Most proper nouns and place names are preserved correctly (e.g., Vittor Hugo, Pianciani, Italia, Torino). However, 'Londra' is inconsistently translated as 'London' in one instance ('London Cabinet') and kept as 'Londra' in another ('take refuge once more in Londra')."
+        }
+      ],
+      "strengths": "The translation effectively conveys the historical and cultural context, using appropriate terminology and preserving specific Italian references.",
+      "weaknesses": "The inconsistency in translating 'Londra' (London) detracts slightly from full preservation of original Italian place names."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, capturing nuances and even complex sentence structures without significant omissions or interpretive errors."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 0.5,
+          "note": "As noted previously, the inconsistency in rendering 'Londra' (sometimes 'London,' sometimes 'Londra') is a minor deviation from strict preservation."
+        }
+      ],
+      "strengths": "The translation is remarkably faithful to the source text, conveying its full meaning, including idiomatic expressions and the author's specific phrasing, with precision.",
+      "weaknesses": "The minor inconsistency with 'Londra' prevents a perfect score on the preservation of proper nouns, as mentioned in the cultural context dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 1.0,
+          "note": "The English prose reads smoothly and engagingly, demonstrating a good command of literary style that avoids sounding like a literal, word-for-word rendering."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language ('long drought in Count di Rudio's purse,' 'prejudice has taken root,' 'hornet's nest of Italia') and vivid imagery are consistently translated effectively."
+        }
+      ],
+      "strengths": "The translation's literary quality is high, providing an immersive reading experience with strong narrative flow and evocative language that mirrors the original's artistry.",
+      "weaknesses": "No notable weaknesses were found; the translation maintains a consistently high literary standard."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 0.5,
+          "note": "While largely correct, a few constructions are slightly awkward or incomplete (e.g., 'imposed itself as an act of wise diplomacy,' 'fat, cordial adjectives,' 'a heart-wrenching, perhaps:')."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "Despite minor stylistic quirks, the text is generally clear and easy to follow, requiring no re-reading for comprehension."
+        }
+      ],
+      "strengths": "The translation is highly readable and clear, facilitating comprehension without effort.",
+      "weaknesses": "A handful of phrases are a bit stiff or grammatically incomplete, which occasionally disrupts the otherwise smooth flow."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "Character names and most recurring terms are consistent. However, 'Londra' is translated inconsistently (sometimes 'London,' sometimes 'Londra'), affecting this criterion."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The overall literary style and tone are maintained consistently across the entire passage."
+        }
+      ],
+      "strengths": "The translation maintains a coherent and consistent literary style throughout the text.",
+      "weaknesses": "The inconsistent translation of the place name 'Londra' is the primary area where consistency falters."
+    }
+  ],
+  "weighted_score": 0.8666666666666667,
+  "_tokens": {
+    "input": 9455,
+    "output": 1546
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "primary_draft": "draft_claude__sonnet",
+  "incorporations": [
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro",
+      "original": "the foolishness of his Patria",
+      "replacement": "the foolishness of his Fatherland",
+      "reason": "Standardises the translation of 'Patria' to 'Fatherland' throughout, fixing the inconsistency flagged in the Claude evaluation"
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro",
+      "original": "the brigands who trafficked in their Patria",
+      "replacement": "the brigands who trafficked in their Fatherland",
+      "reason": "Same Patria/Fatherland consistency fix as above"
+    },
+    {
+      "paragraph": 14,
+      "from_draft": "draft_gemini__pro",
+      "original": "Miss Elisa contrived once more to invoke the mysterious stranger",
+      "replacement": "Miss Elisa brought up once more the mysterious stranger",
+      "reason": "'brought up' is a more natural rendering of 'tirò ancora in ballo' (literally 'dragged into the dance again'); 'contrived to invoke' over-translates"
+    },
+    {
+      "paragraph": 25,
+      "from_draft": "draft_gemini__pro",
+      "original": "The mysterious stranger was herself. It was Elisa who provided out of her own savings",
+      "replacement": "The mysterious stranger is there, in despair. It was Elisa who provided out of her own savings",
+      "reason": "Corrects a factual mistranslation. Italian 'Lo straniero misterioso è là che si dispera' means 'The mysterious stranger is there, despairing' — Sara is pointing toward Elisa in the other room. Claude's 'was herself' invents an identification not in the source text."
+    },
+    {
+      "paragraph": 26,
+      "from_draft": "draft_gemini__pro",
+      "original": "The Count di Rudio turned the great poet over and over in his hands",
+      "replacement": "The Count di Rudio gripped the great poet, turned him over and over in his hands",
+      "reason": "Restores the verb 'strinse' (gripped/squeezed) which Claude omitted. The Italian has four actions — strinse, girò e rigirò e capovolse — and the grip conveys di Rudio's emotional agitation. Gemini had 'squeezed'; 'gripped' better suits the physical gesture with a book."
+    },
+    {
+      "paragraph": 27,
+      "from_draft": "draft_gemini__pro",
+      "original": "Making his way home toward midnight",
+      "replacement": "Making his way home toward one o'clock",
+      "reason": "Corrects a factual error. Italian 'verso il tocco' means toward one o'clock (the single bell-stroke marking the first hour), not midnight."
+    },
+    {
+      "paragraph": 32,
+      "from_draft": "draft_gemini__pro",
+      "original": "like the ancient Roman women of old",
+      "replacement": "like his ancient Roman women",
+      "reason": "Italian 'come le sue antiche romane' — 'sue' (his) is significant: Elisa means the Roman women of his heritage. Claude's 'of old' is redundant with 'ancient' and loses the possessive."
+    },
+    {
+      "paragraph": 32,
+      "from_draft": "draft_gemini__pro",
+      "original": "The love he bore his Patria did not make her jealous",
+      "replacement": "The love he bore his Fatherland did not make her jealous",
+      "reason": "Same Patria/Fatherland consistency fix applied throughout Elisa's speech"
+    }
+  ],
+  "edgren_influences": []
+}

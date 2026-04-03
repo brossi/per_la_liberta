@@ -1,0 +1,91 @@
+LOS ANGELES, a splendid summer morning. I had arrived there but a few hours before, on a train that had reminded me of those which, from every part of France, converge upon the sanctuary of Lourdes.
+
+For the metropolis of southern California, situated near the ocean, between the desert and the orange groves, is a great centre of attraction for all those who have the misfortune to live beyond the Rockies: where, in summer, the sun prostrates men and herds like withered grass; where the frost of the long winter makes the earth rigid and impenetrable even to the blows of the pickaxe; where cyclones sweep through the immense valleys, uprooting the trees and smashing the houses.
+
+The unfortunate, whose hollow chests are consumed by consumption, find in the "City of Angels" the deeply blue sky and the balsamic air that give the illusion and the hope.
+
+How many I had met upon the streets in those few hours! They pass quietly, light as beings come from the kingdom of shadows, and they smile at the children and smile at the flowers. In their optimism, which here becomes extraordinarily tenacious, they accept as an indisputable truth the pitiful lie that their loved ones murmur in their ear at every fit of coughing.
+
+They go to sit in the shade of the orange trees in bloom and at times, while they cling, fantasizing, to the sweetness of life; while the waxy corollas, unconsciously, exhale over their heads the invisible, sharpest perfume... the waxy flesh exhales, unconsciously, the invisible final breath... The breeze blows from the sea and, mingling that breath and that perfume, carries them away over the green countryside, away over the arid desert, away into the infinite mystery!..
+
+But I was not in Los Angeles to prolong an agony, and when, after a long walk, I deemed the opportune hour had come, I stopped before one of those little wooden houses that cannot be conceived of, in California, without associating with them the idea of a flora altogether special, altogether domestic... the flora that embraces and almost possesses the house!
+
+A rubber tube coiled upon the green grass pushed into the air, from its metal end, a fan of the minutest droplets, which the sun painted with the colours of the rainbow. A hummingbird, with emerald reflections, was attacking a scarlet flower with lightning-swift, persistent flights...
+
+Beyond the climbing plants, between the walls of that little house, swept up by the social vortex, a man who represented the last, glorious remnants of an era had sought refuge. Through the profound peace adorned with green, I felt the compressed yearning of conspiracies, the fever of battles... and, in that picturesque little corner of the far West, I suddenly rediscovered the emotions of my youth, for so many years invoked in vain... Then I breathed, warm, warm, like a breath of the Fatherland, and the fibres of my heart exhaled a thank you.
+
+But a subtle thought followed. Three quarters of a century; an incessant sequence of struggles, of dangers, of sufferings... what could have survived? Was I to consider that asylum as a temple enclosing a living flame; or as the final stopping-place of a long pilgrimage, the sorrowful threshold of a sepulchre? Resolutely... Before raising my hand to the electric button, a figure took shape in the penumbra of the hallway, beyond the glass-paned door.
+
+I found myself face to face with a robust lady, with a slight tendency towards corpulence. Her hair was of a blond that was fading into white and already showing signs of succumbing; but her face was still fresh and rosy and, beneath her protruding forehead, shone blue eyes, gentle and sure. Her mouth and chin revealed to me a creature accustomed to facing obstacles resolutely.
+
+She asked me severely what I desired.
+
+"Excuse me... Major di Rudio?" And I offered her my visiting card.
+
+Her physiognomy brightened. "Ah! ah! that name is familiar to us. The Major will be happy to see you. But he is still in bed!"
+
+I thought: "The aches of old age... the threshold of the sepulchre!" And I was about to tell her that I would return; but she forestalled me. "Come in! Come in, come in! This is precisely the hour when the Major rises; he is methodical... he cannot be late. Really? From San Francisco? Well then, a cup of coffee can do no harm. Precisely! I am the Major's wife!"
+
+— Signora Elisa!
+
+And I offered her my right hand with the familiarity of one who, though never having seen a person, holds her dear because, for a long time, she has occupied his thoughts. Then a whim took me and, as I followed her along the hallway, I asked her why my name was familiar to her.
+
+"What can I tell you? The Major reads all that you write and becomes impassioned and bangs his fist on the table. Make yourself comfortable. The water is boiling and in four seconds... "
+
+She left me alone. I was in the dining room. The boughs that trembled before the single, wide window moderated its light. A green tint was in the atmosphere, and the crockery on the sideboard reflected it; on the table, a bouquet of amaryllis glowed red in a vessel of blue glass.
+
+The room opened onto a study, from which it was distinguished, more than divided, by a simple cornice. Through the opening, almost as wide as the entire wall, I could discern in the background another large, solitary window, likewise encumbered by an arabesque of trembling boughs. In the air, the identical green tint, restful and tranquil. I ended by clearly discerning some simple and massive furniture, "Mission" style. I thought that, amidst those artistic antiquities, I too might have found a place; all the more so since a bookcase crammed with volumes had suddenly caused the old instinct of the bookworm to prevail in me. I found myself with my hands on my hips, before those volumes, intent on scanning the gold lettering stamped upon their brown leather spines. History, philosophy... works imprinted with freedom of thought.
+
+I looked around me... From one wall, the pensive physiognomy of a man known to the People and to their tyrants in every part of the civilized world, Giuseppe Mazzini, smiled upon me. From the adjoining wall hung a picture bearing the effigy of a martyr less universally known, but of a spirit no less great, Fortunato Calvi. And I exclaimed: The house reveals the man!
+
+"Beg your pardon?"... It was Signora Elisa, just then returned. She had thought that I was speaking to her. She had unfolded a napkin and, in arranging the place setting, she was lent a hand by another lady who struck me for her extreme pallor, for her jet-black eyes, for her slender and delicate figure.
+
+"My daughter... Italia Adair," said the Major's wife, and the former limited herself to a nod of the head.
+
+— An only daughter?
+
+— Not at all! We have two others: Roma Scott and America Vickery. I am expecting them today, and you shall meet them. For you will be, I hope, one of us today. I also have a son, the first-born, born in England and trained in his first steps—you are not unaware of it, I suppose—in tragic times. But he is far away, in Arizona. He has been somewhat taken by the craving for the unknown and spends his life on horseback, in solitude, exploring.
+
+The repast was ready. The courteous lady had added to the coffee some 'toast' and a plate of fresh figs. I protested. I was not accustomed to taking food before midday, and such kindness was proving superfluous. And she to insist. The eggs had been taken that very morning from the henhouse... she raised many chickens; her special care. As for the figs, Italia had picked them with her own hands, right on that spot. They were ripe and delicious.
+
+She excused herself and went about her business... I remained alone with the other lady. I was sipping the coffee and I felt somewhat embarrassed. That suffering look... perhaps my words would have seemed importune to her. I took advantage of the brief moments in which she was busy arranging some knick-knack to observe her minutely, without seeming to do so, without committing an incivility. She had a mass of shining black hair, too voluminous, perhaps, for her graceful head; thin, stupendously arched eyebrows, an aristocratic profile, a little ethereal person. But I did not fail to notice a certain energy of movement that contrasted, in a strange way, with her sickly appearance.
+
+I decided to bring into play all my resources as a 'reporter' wizened in the trade. She, little by little, became animated, and from her lips came forth concepts such as I had not expected.
+
+I learned that she had been brought to the brink by appendicitis and that the doctors had saved her by resorting to the knife... a few hours' delay would have proved fatal to her. Children? Only one! In homage to Uncle Sam, the eternal and glorious Uncle Sam, she had given him the name of Samuel. She wished to start him on a military career. At West Point, where she hoped to have him admitted, he would have the advantage of one of the best educations in the world. She had passed a good part of her youth with her father, in the Regiment. A fine, a superb life, the military life! Discipline, servitude?.. Are you joking? Liberty as boundless as the prairies over which one rode, as the desert! Papa belonged to the Seventh Cavalry. "When I think," she added, "of the life of the Regiment, I feel a thrill of energy reawaken. Not a moment of inertia, not a moment of boredom! True, there was no lack of days of painful apprehension. The regiment was often called to drive the Indians, who were committing some raid, back into their 'reservation'. It would remain absent three, four, eight months. But when the courier, white with dust, burst into the camp and announced its return in a loud voice, joy was in the air and insinuated itself into one's whole being. In a flash, life redoubled in intensity. The ladies hurried to communicate the good news to one another; the children redoubled their leaping on the grass; the rose bushes were stripped; a coming and going of orderlies putting everything in order, making everything new. And from that noisy agitation, we would launch ourselves at a full gallop, away as if in a race... ten, fifteen miles, to be the first to greet the phalanx of the returning soldiers.
+
+"When the dust, glittering with arms, announced it from afar, on both sides there were shouts that would disgrace a horde of Bedouins. What moments, what embraces! On their faces, with the joy of return, the serene pride of having suppressed barbarism, of having saved our bold pioneers from torture, from destruction. On ours, with the joy of seeing them again, the serene pride of being the daughters and wives of those strong men. Wherever Uncle Sam's horses proceed, they leave behind them the way smoothed for honest work and for civil life!..
+
+"You are mistaken, you are mistaken! Few bonds are as cordial as those which bind soldiers and officers. The roughness is all apparent. When the subordinate receives a dressing-down, he looks his superior in the eyes and can always read there a phrase quite different from the one his lips pronounced. Severity is reserved solely for one who shows signs of being a coward. But have you ever heard of cowards in the army of Uncle Sam?
+
+"Intemperate? I will tell you; there are birds whose natural state is flight. To set foot on the ground and not rise again on their wings is all one and the same for them, and, what is worse, they walk with a clumsiness that moves one to compassion. The natural state of the Anglo-American race is motion, incessant, intense work. The exuberance of life that does not confront arduous and glorious undertakings vanishes in the taverns and on the street corners. And the American never does things by halves; not even evil. But at the rise of a difficulty, at the simple idea of danger, in trials... what a transformation! Where can one find an agglomeration of men of greater dash, quicker to expedients, more spontaneous in sacrifice, more metallic? And what enemy, with equal numbers, has ever known how to resist him?"
+
+I listened, full of wonder and almost disconcerted. That harmonious voice, which a residue of weakness rendered more caressing, expressed concepts that I had until that point believed to be the exclusive province of virile minds, of people born to face the dangers of battle, whole and happy only amidst wrath and blood. But if strength bends to grace and at times adores it, why should grace not admire strength?
+
+She bent her slender little person over the table and busied her white hand in arranging the bouquet of amaryllis that glowed red in the blue vase. Then, answering a new question of mine:
+
+"No, the raids of the Indians are now, save for the rarest of exceptions, a memory of the past. Now Uncle Sam keeps weapons and spirits polished with drills and with frequent orders of relocation. One never leaves a place where one has lived happily without feeling a sense of sadness; but it is a sadness that vanishes, in a short while, in the wholesome emotions of the journey. For the ladies, the journey is a celebration and, I am about to say, a regeneration. In the last one in which I took part, we covered, riding, more than seven hundred miles, through a marvellous country. It is a most strange sensation. The being, its own individuality forgotten, feels itself transformed and almost a part of the elements. The force, the infinite motion is us. One goes on and on, in an atmosphere of sun, and we ran with the wind."
+
+She fell silent, lowered her eyes, then resumed. "No, the true life is not in the great cities. The great city makes us small. An elegant prison, the visits of convenience; an infantile babbling of dresses and little hats. If this is civilization... I hate it."
+
+I was no longer surprised. The impetuous nature, the need for action of the grandfather had passed into the father, and, from the father, into that slender lady, so ethereal that, in walking, she seemed to barely graze the carpet. What would she have become in one of those compressed environments, in which virtue breaks its banks and runs impetuously to victory or to martyrdom?
+
+The mother returned. She had grasped the thread of the conversation and added much of her own to it. She concluded the series of lively recollections with this melancholy regret: "Happy days, happy days... set, alas. For us they will not return!"
+
+Among the episodes narrated by her was the following: Captain di Rudio (he was a captain then) showed himself, in executing orders, to be of a meticulous precision. On a certain occasion, so as not to delay the departure by a few seconds, he cut clean off, with his sabre, the sleeves of a magnificent dress that were left protruding from a trunk. For several years, Signora Elisa had kept them, like mute accusers of an unheard-of crime.
+
+The good lady, dissembling, finally led me into the courtyard. She proceeded by throwing handfuls of grain to a flock of squawking chickens, and I followed her step by step, listening, now and then, to a learned lesson on poultry farming. My readers, I imagine, are not interested in cocks and hens that are not cooked and with a great fork in their flesh. But an incident that, in due time, I shall narrate, forces me to bring into this preamble even those poor bipeds dressed in feathers... a pure breed, for that matter!
+
+We came to a little corner, in whose shelter a white brooding hen was sitting on her eggs in a basket. And the lady: "Today or tomorrow the brood will emerge from the shell. How much maternal love beneath that handful of feathers! Is it not strange that the great affections, of which we are so proud, are enclosed and powerful even in hearts so minuscule? I am fond of animals that have not the power of speech."
+
+At this point, she set down the container of grain and moved away with a swift step.
+
+Planted on the landing, standing out against the dark background of the kitchen, almost framed by the doorjambs, I discerned an old man dressed in a grey suit, a tuft of white hair on his forehead, moustaches pointed at the ends, the goatee of other countries and other times. The sun, which struck him full in the face, gave great relief to his angular features, as if sculpted in bronze. He was nervously tapping the floor with his heel; while his sunken, but very lively, eyes scrutinized beyond the bushes, beyond the plants that shaded the courtyard.
+
+There exist in California isolated groups of ancient vegetation that botanists call "sequoias," but the people simply "great trees." They rise up straight, without fronds, like immense columns of a temple raised, in the night of centuries, by some race of giants. The highest among the pinnacles of the Lombard cathedral would seem, by comparison, a slender reed. They already resisted the wind when the Most High was creating, according to the Scriptures, the Sun and the Stars. Prehistoric man, who danced his bestial round-dance, devouring man, has disappeared; the patriarchs who, wandering through the solitudes, traced the first paths for young humanity... have disappeared; the Brahmins passed the lighted torch of civilization to the Egyptian... and disappeared; the Egyptians transmitted it to the Greeks... and disappeared; the Greeks to the Romans... and disappeared. What remains of the mighty Roman Empire? Races pursued races; States cast States into nothingness, with such long vicissitudes that men have lost therein even the memory of their own origin... And they stand.
+
+It is affirmed that, with invisible eyes, they discern the pygmies of ephemeral life who hasten to their feet from every part of the world and there babble their own wonder. If it is so... how much disdain in their austere rigidity!
+
+But the high peaks, adorned with an evergreen tuft, tremble in the wind of the Sierra and, perhaps, murmur ancient stories to the sky.
+
+I was thinking of those trees, while Count Carlo di Rudio and the companion of his many vicissitudes, standing erect on the landing, heedless of my presence, impressed upon each other's cheeks the morning kiss.

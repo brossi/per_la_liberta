@@ -1,0 +1,168 @@
+{
+  "primary_draft": "draft_gemini__pro",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_claude__sonnet",
+      "original": "would not dare commit a blatant piece of knavery",
+      "replacement": "would not dare commit a manifest piece of knavery",
+      "reason": "'Manifest' translates 'palese' more precisely than 'blatant', which adds a connotation of brazenness not in the original"
+    },
+    {
+      "paragraph": 1,
+      "from_draft": "draft_claude__sonnet",
+      "original": "beyond the borders",
+      "replacement": "beyond the frontier",
+      "reason": "'Frontier' better renders 'confini' in the singular political sense of the Habsburg border, matching the previous chapter's usage"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_claude__sonnet",
+      "original": "the confidence he strove to instill in our mother's soul",
+      "replacement": "the confidence he laboured to instil in mother's heart",
+      "reason": "'Laboured to instil' better captures the effortful, painstaking quality of 'si industriava di istillare'; 'heart' for 'animo' follows Edgren; 'our' removed as an addition not in the Italian"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_claude__sonnet",
+      "original": "far from being in his own",
+      "replacement": "far from dwelling in his own",
+      "reason": "'Dwelling' is more literary and captures the sustained absence implied by 'era ben lungi dall'essere nel suo'"
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_claude__sonnet",
+      "original": "a long way even without the help of newspapers",
+      "replacement": "a great distance even without the aid of newspapers",
+      "reason": "'A great distance' and 'aid' are closer to the slightly elevated register of 'di molto cammino' and 'l'aiuto'"
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_claude__sonnet",
+      "original": "a tragic conclusion",
+      "replacement": "a tragic fulfilment",
+      "reason": "'Fulfilment' better captures the ironic sense of 'scioglimento' — the predictions appearing to come true — whereas 'conclusion' is flatter"
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_claude__sonnet",
+      "original": "the summons to surrender was disregarded",
+      "replacement": "the order to surrender set at naught",
+      "reason": "'Set at naught' renders the literary idiom 'messa in non cale' with equivalent period flavour; 'disregarded' is too plain"
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_claude__sonnet",
+      "original": "Giustiniano hurried home to prevent the sad news",
+      "replacement": "Giustiniano hastened home to prevent the sorrowful news",
+      "reason": "'Hastened' and 'sorrowful' preserve the elevated register of 'si affrettò' and 'triste nuova'"
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_claude__sonnet",
+      "original": "the first light of dawn was barely peeking",
+      "replacement": "the first light of dawn was barely peering in",
+      "reason": "'Peering in' better renders 'spiava appena', which implies a furtive, watchful quality rather than casual 'peeking'"
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_claude__sonnet",
+      "original": "guessing the sleepless and anguished night",
+      "replacement": "divining the sleepless and anguished night",
+      "reason": "'Divining' captures the intuitive, almost clairvoyant quality of 'indovinando' better than the prosaic 'guessing'"
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_claude__sonnet",
+      "original": "A soldier, with his rifle at rest, stood erect and puffed-chested",
+      "replacement": "A soldier, rifle at the order, stood erect and stiff-chested",
+      "reason": "'Rifle at the order' is the correct English military term for 'fucile a pied'arm'; 'stiff-chested' better renders 'impettito' (chest thrust out rigidly) than 'puffed-chested'"
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_claude__sonnet",
+      "original": "was furiously plying his brush and scrubbing it",
+      "replacement": "was furiously working the brush and polishing away at it",
+      "reason": "'Polishing away at it' better captures the iterative futility of 'lo spillaccherava' (removing mud-spots) than the generic 'scrubbing'"
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_claude__sonnet",
+      "original": "A burning brazier adulterated the clearness of the morning with its glare",
+      "replacement": "A blazing brazier adulterated, with its ruddy glare, the limpid light of morning",
+      "reason": "Preserves the parenthetical rhythm of 'coi suoi bagliori' and 'limpidezza del mattino'; 'ruddy glare' adds the warmth implicit in a brazier's light"
+    },
+    {
+      "paragraph": 12,
+      "from_draft": "draft_claude__sonnet",
+      "original": "the ill-advised who attempt to subvert the sacred majesty of the Laws",
+      "replacement": "the misguided who lay hands upon the sacred majesty of the Law",
+      "reason": "'Lay hands upon' more faithfully renders 'attentano a' (commit an outrage against) than 'attempt to subvert'; 'misguided' better matches 'sconsigliati'"
+    },
+    {
+      "paragraph": 13,
+      "from_draft": "draft_claude__sonnet",
+      "original": "Someone removed the sheet with a sudden gesture",
+      "replacement": "There was one who drew back the sheet with a sudden gesture",
+      "reason": "'There was one who' mirrors the impersonal construction 'Fu chi rimosse', preserving the narrator's deliberate vagueness"
+    },
+    {
+      "paragraph": 15,
+      "from_draft": "draft_claude__sonnet",
+      "original": "In the general stupor",
+      "replacement": "In the general stupefaction",
+      "reason": "'Stupefaction' captures 'stupore' more fully — an active state of being stunned — whereas 'stupor' implies torpid dullness"
+    },
+    {
+      "paragraph": 15,
+      "from_draft": "draft_claude__sonnet",
+      "original": "She started toward the exit",
+      "replacement": "She moved toward the door",
+      "reason": "'Moved toward the door' better renders 'si avviò verso l'uscita' — a deliberate, dignified motion rather than the abrupt 'started'"
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_claude__sonnet",
+      "original": "into the chests hardened by iron discipline",
+      "replacement": "into breasts hardened by iron discipline",
+      "reason": "'Breasts' is the traditional literary English for 'petti' when denoting the seat of feeling, as opposed to anatomical 'chests'"
+    },
+    {
+      "paragraph": 17,
+      "from_draft": "draft_claude__sonnet",
+      "original": "the henchmen of the despot became men of the People again",
+      "replacement": "the despot's minions became once more men of the People",
+      "reason": "'Minions' better renders 'sgherri' (hired thugs) than 'henchmen'; 'once more' is more literary than 'again'"
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "animo",
+      "edgren_definition": "HEART (as in: accord, make agree, reconcile)",
+      "english_choice": "heart",
+      "paragraph": 2,
+      "note": "Gemini translated 'nell'animo della mamma' as 'in our mother's soul'. Edgren gives HEART as the primary gloss for animo. The final uses 'mother's heart', preferring the period dictionary's first sense over the modern default 'soul' or 'spirit'."
+    },
+    {
+      "italian_word": "furfanteria",
+      "edgren_definition": "knavery",
+      "english_choice": "knavery",
+      "paragraph": 1,
+      "note": "Both drafts used 'knavery', confirmed by Edgren as the standard equivalent. This validated keeping the archaic-sounding word rather than modernising to 'villainy' or 'fraud'."
+    },
+    {
+      "italian_word": "palese",
+      "edgren_definition": "known (manifest, plain)",
+      "english_choice": "manifest",
+      "paragraph": 1,
+      "note": "Gemini used 'blatant' for 'furfanteria palese'; Edgren gives 'manifest' and 'plain' for palese. The final adopts 'manifest' — a closer, less evaluative rendering than 'blatant', which adds connotations of shamelessness not present in the Italian."
+    },
+    {
+      "italian_word": "burrasca",
+      "edgren_definition": "hurricane; storm; misfortune",
+      "english_choice": "storm",
+      "paragraph": 1,
+      "note": "Gemini used 'tempest' for 'burrasca'. Edgren gives 'hurricane; storm; misfortune' — no 'tempest'. The final uses 'storm', the dictionary's core sense, reserving 'tempest' for 'tempesta' which appears later in the chapter (paragraph 13: 'la tempesta di un cuore')."
+    }
+  ]
+}

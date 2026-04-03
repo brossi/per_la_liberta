@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 0.5,
+          "note": "While aiming for an early 20th-century register, the translation sometimes leans too heavily into archaic phrasing, making it feel less natural or slightly over-stylized compared to the original's engaging literary but not overtly archaic tone."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The personal, reflective, and direct nature of Crespi's narrative voice is well-preserved throughout the passage."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 0.5,
+          "note": "Direct speech and exclamations are handled well. However, the translation inconsistently renders terms for police/officers (sbirri, birri, gendarmeria, carabinieri) using 'sbirri', 'constables', and 'gendarmes', which slightly shifts the original's formal/informal register for these specific terms."
+        }
+      ],
+      "strengths": "The translation effectively captures the reflective and personal tone of the narrator. Direct speech, exclamations, and interjections are rendered with appropriate impact.",
+      "weaknesses": "The use of overly archaic phrasing in some instances can make the prose feel less fluid or natural than the original. Inconsistent translation of police terms ('sbirri', 'birri', 'gendarmeria') slightly blurs the original's tonal distinctions."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'fiorino', 'gendarmerie', 'Jäger', and 'carabineers' are either retained or given appropriate historical equivalents, maintaining the period context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "References such as 'gnocchi al burro', 'alla veneziana', 'tarocco', and 'sagrato' are preserved, enriching the cultural authenticity of the translation."
+        }
+      ],
+      "strengths": "The translation excels at preserving Italian cultural and historical specificities, retaining key terms and references that enrich the reader's understanding of the setting and period without requiring external glossing.",
+      "weaknesses": "None noted; this dimension is very well handled."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 0.5,
+          "note": "While largely accurate, there are minor additions or shifts in nuance. For example, 'vertigine del sublime' becomes 'vertiginous ecstasy of the sublime' (adding 'ecstasy'), and 'uno scempio!' is translated as 'and it was done!' which significantly lessens the original's exclamation of shock/havoc. 'Ficcai il viso nel profondo...' becoming 'plunged my face deep into it all...' adds 'it all'."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names (Agordo, Bolzano, Neumark, etc.), and historical figures (Ferdinand, Franz Joseph, Carlo Camillo di Rudio) are correctly preserved."
+        }
+      ],
+      "strengths": "The translation is highly faithful to the source text regarding specific details, names, and many idiomatic expressions. Proper nouns and geographical locations are meticulously preserved.",
+      "weaknesses": "A few instances where the emotional impact, precise meaning, or tone of an expression is slightly altered or an unnecessary word is added, impacting full accuracy."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "The prose largely reads well, but occasional overly archaic constructions or slightly forced literary flourishes can make it feel less natural and more like a translation attempting a specific style, rather than effortlessly flowing English literature."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Most figurative expressions, such as 'dalla padella nelle braghe' (from the frying-pan into the fire) and 'sale in zucca' (wit), are skillfully and effectively rendered."
+        }
+      ],
+      "strengths": "The translation successfully renders most figurative language and imagery, often finding strong English equivalents. It generally maintains an elevated literary tone appropriate for the period.",
+      "weaknesses": "The prose can sometimes feel a bit stiff or self-consciously literary, which occasionally detracts from a completely natural and flowing reading experience."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English is consistently grammatically correct with no noticeable errors. While some constructions might feel dated, they are grammatically sound."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is very clear and comprehensible, allowing for a smooth reading experience without the need to re-read sentences for understanding."
+        }
+      ],
+      "strengths": "The translation is grammatically impeccable and highly readable, ensuring clarity and ease of comprehension throughout the passage.",
+      "weaknesses": "None significant. Some phrasing is older, but not awkward or incorrect."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "While most names and specific references are consistent, the terms for police/officers vary ('sbirri', 'constables', 'gendarmes', 'carabineers') for what appear to be similar entities, creating a minor inconsistency. The use of 'chellerina' followed by 'little waitress' is good adaptation, however."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The chosen literary and somewhat archaic style is consistently applied throughout the entire translated passage."
+        }
+      ],
+      "strengths": "The overall stylistic approach is coherent and maintained from beginning to end.",
+      "weaknesses": "Inconsistent rendering of police terminology slightly undermines the overall consistency of recurring terms."
+    }
+  ],
+  "weighted_score": 0.8041666666666667,
+  "_tokens": {
+    "input": 11583,
+    "output": 1668
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "primary_draft": "draft_claude__sonnet.md",
+  "incorporations": [
+    {
+      "paragraph": 1,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "dispersed and revelling",
+      "replacement": "dispersed and carousing",
+      "reason": "'Carousing' better captures the boisterous, drunken sense of 'in baldoria' than the gentler 'revelling'."
+    },
+    {
+      "paragraph": 2,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the Assi and several other chiefs",
+      "replacement": "Assi and several other chiefs",
+      "reason": "Dropping the English article before the surname is more faithful to Italian convention where 'l'Assi' uses the article idiomatically; in English, the bare surname is standard."
+    },
+    {
+      "paragraph": 3,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a very different issue",
+      "replacement": "a very different outcome",
+      "reason": "'Outcome' is clearer for the modern reader than the archaic sense of 'issue' (meaning result), while 'esito' is straightforwardly 'outcome'."
+    },
+    {
+      "paragraph": 4,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a simple coalman",
+      "replacement": "a simple charcoal-burner",
+      "reason": "'Carbonaio' specifically denotes a charcoal-burner, not a coal merchant; 'charcoal-burner' is historically precise and more evocative of the humble trade."
+    },
+    {
+      "paragraph": 5,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "a handful of common people",
+      "replacement": "a handful of common folk",
+      "reason": "'Common folk' has a warmer, more period-appropriate register for 'popolani' than the flatter 'common people'."
+    },
+    {
+      "paragraph": 6,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "the sharpness of their wit",
+      "replacement": "the keenness of their wit",
+      "reason": "'Keenness' better renders 'acutezza' (from 'acuto', sharp/keen) and pairs more naturally with 'wit' in English literary usage."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "had no motive beyond these underhand equivocations",
+      "replacement": "had no other motive than these underhand equivocations",
+      "reason": "Closer to the Italian structure 'non ebbe altro movente se non che' — the 'no other… than' construction preserves the emphatic limitation."
+    },
+    {
+      "paragraph": 9,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "The first disillusions are always the most bitter",
+      "replacement": "The first doubts are always the most bitter",
+      "reason": "The Italian 'dubbi' means 'doubts', not 'disillusions'; the Gemini draft was simply more accurate here."
+    },
+    {
+      "paragraph": 10,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "his own errors",
+      "replacement": "his own error",
+      "reason": "The Italian 'l'errore proprio' is singular; Assi's personal error was one act (the flight), while the plural 'quelli' refers to others' errors attributed to him."
+    },
+    {
+      "paragraph": 11,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "A deplorable logic",
+      "replacement": "Deplorable logic",
+      "reason": "Dropping the indefinite article matches the Italian 'Logica deplorevole' and gives the exclamation a more clipped, indignant force."
+    },
+    {
+      "paragraph": 18,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "asserted as certain",
+      "replacement": "given for certain",
+      "reason": "'Si diede per certo' is the idiom 'dare per certo' (to give as certain); 'given for certain' is the literal and idiomatic English calque."
+    },
+    {
+      "paragraph": 22,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "greater and irremediable",
+      "replacement": "greater and irreparable",
+      "reason": "'Irreparabili' translates directly as 'irreparable'; 'irremediable' is a near-synonym but less precise."
+    },
+    {
+      "paragraph": 23,
+      "from_draft": "draft_gemini__pro.md",
+      "original": "between the oppressed and the oppressor",
+      "replacement": "between the oppressed and the oppressors",
+      "reason": "The Italian 'oppressori' is plural; the Gemini draft correctly matched the number."
+    }
+  ],
+  "edgren_influences": [
+    {
+      "italian_word": "meditato",
+      "edgren_definition": "meditato, ADJ.: meditated (planned)",
+      "english_choice": "meditated assault",
+      "paragraph": 1,
+      "note": "Edgren lists 'meditated' as the primary adjective form, with 'planned' as a parenthetical synonym. The final retains the more literary 'meditated' rather than modernising to 'planned' (as the Gemini draft did), consistent with Edgren's period preference."
+    },
+    {
+      "italian_word": "fremere",
+      "edgren_definition": "freménte, ADJ.: raging, fuming, chafing; frèmere, INTR.: chafe, fret; tremble with rage",
+      "english_choice": "chafing with rage",
+      "paragraph": 2,
+      "note": "Edgren gives 'chafing' and 'tremble with rage' as core senses of fremere/fremente. The phrase 'chafing with rage' fuses these two Edgren senses into a compact English phrase, preferred over the Gemini draft's vaguer 'seething'."
+    },
+    {
+      "italian_word": "casta",
+      "edgren_definition": "casta [Sp., pure race (L. castus, 'chaste')], F.: caste, class",
+      "english_choice": "caste",
+      "paragraph": 3,
+      "note": "Edgren confirms 'caste' as the primary English equivalent (with 'class' as secondary). Both drafts used 'caste'; the Edgren entry reinforced this as the correct period rendering rather than the more neutral 'class'."
+    },
+    {
+      "italian_word": "cortile",
+      "edgren_definition": "cortile, M.: large inner court (courtyard)",
+      "english_choice": "inner courtyard",
+      "paragraph": 1,
+      "note": "Edgren's definition specifies 'large inner court', supporting the choice of 'inner courtyard' to translate 'cortile interno' — the adjective 'inner' is not redundant but part of the compound in the source, and Edgren's gloss confirms the spatial sense."
+    },
+    {
+      "italian_word": "colore",
+      "edgren_definition": "colorare: colour, tinge; disguise",
+      "english_choice": "under the colour of prudence",
+      "paragraph": 3,
+      "note": "Edgren's entry includes 'disguise' as a sense of colorare, supporting the archaic English idiom 'under the colour of' (meaning: under the pretext of) for 'sotto colore di prudenza', rather than modernising to 'under the guise of'."
+    }
+  ]
+}

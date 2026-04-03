@@ -1,0 +1,116 @@
+{
+  "dimensions": [
+    {
+      "name": "Tone & Authorial Voice",
+      "questions": [
+        {
+          "question": "Does the translation preserve the early 20th century literary register of the original?",
+          "score": 1.0,
+          "note": "The translation successfully maintains a formal, somewhat archaic literary register, consistent with the source text's era."
+        },
+        {
+          "question": "Does the translation maintain Crespi's conversational narrative voice?",
+          "score": 1.0,
+          "note": "The 'I' voice, direct address, and reflective quality of the narration are well-preserved, conveying a personal account."
+        },
+        {
+          "question": "Are formal/informal shifts in the original reflected appropriately in English?",
+          "score": 1.0,
+          "note": "The original text maintains a generally formal tone, which is accurately reflected in the translation without inappropriate shifts."
+        }
+      ],
+      "strengths": "The translation excels at preserving the dignified and reflective tone of the original, maintaining a consistent literary register and authorial voice throughout the passage.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Cultural Context & Adaptation",
+      "questions": [
+        {
+          "question": "Are Risorgimento-era political terms and institutions rendered with period-appropriate English equivalents?",
+          "score": 1.0,
+          "note": "Terms like 'Monarchia Sabauda' (Savoy Monarchy), 'Comune parigina' (Paris Commune), and 'garibaldino' (Garibaldian) are well-adapted for the English-speaking reader while retaining their historical context."
+        },
+        {
+          "question": "Are Italian cultural references preserved or glossed appropriately rather than silently modernised?",
+          "score": 1.0,
+          "note": "References such as 'Giuda' (Judas), 'Bergamasque', and place names are either directly preserved or given clear, appropriate English equivalents. The nuances of terms like 'preteso procuratore del buon Dio' are also well-handled."
+        }
+      ],
+      "strengths": "The translation demonstrates a strong understanding of the cultural and historical context, providing accurate and appropriate renderings of political terms and references without losing the original flavor.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Accuracy & Faithfulness",
+      "questions": [
+        {
+          "question": "Does the translation convey the same meaning as the Italian source without omissions or additions?",
+          "score": 1.0,
+          "note": "The translation is highly accurate, faithfully conveying the full meaning of the source text. There are no notable omissions or additions that alter the original content."
+        },
+        {
+          "question": "Are proper nouns, place names, and historical references preserved in their original Italian form?",
+          "score": 1.0,
+          "note": "All proper nouns, place names (e.g., Gianicolo, Vascello, Ciceruacchio, Milano, Roma, Venezia, Gaeta, Tivoli, San Marino), and historical figures are correctly preserved."
+        }
+      ],
+      "strengths": "The translation is exceptionally faithful to the source text, ensuring that the meaning, factual details, and specific terminology are accurately transferred.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Literary Quality",
+      "questions": [
+        {
+          "question": "Does the English prose read naturally and flow well as literature, not as a mechanical translation?",
+          "score": 0.5,
+          "note": "While largely natural and well-flowing, a few phrases (e.g., 'elect but morbidly sensitive nature', 'intellect full of resource', 'deluded the three armies') are slightly literal or less idiomatic than they could be, occasionally making the prose feel a touch stiff rather than fully effortless."
+        },
+        {
+          "question": "Are figurative expressions and imagery rendered effectively in English?",
+          "score": 1.0,
+          "note": "Figurative language and vivid imagery are consistently translated effectively, such as 'dead of night' for 'nel cuore della notte', 'gasping for breath' for 'boccheggiante', and 'shapeless handful of ash' for 'informe pugno di cenere'."
+        }
+      ],
+      "strengths": "The translation generally maintains a high literary quality, especially in its rendering of evocative imagery and rhetorical passages. It captures the solemnity and passion of the original.",
+      "weaknesses": "A few instances of slightly literal phrasing prevent the English prose from always achieving optimal idiomatic naturalness and fluidity, occasionally feeling a bit stiff."
+    },
+    {
+      "name": "Grammar & Fluency",
+      "questions": [
+        {
+          "question": "Is the English grammatically correct and free of awkward constructions?",
+          "score": 1.0,
+          "note": "The English translation is grammatically sound, with correct sentence structure and syntax throughout. There are no grammatical errors."
+        },
+        {
+          "question": "Is the translation readable and clear without requiring re-reading?",
+          "score": 1.0,
+          "note": "The text is clear and easily understandable, allowing for smooth reading without the need to re-read sentences for comprehension."
+        }
+      ],
+      "strengths": "The translation is highly readable and grammatically impeccable, ensuring a clear and coherent reading experience.",
+      "weaknesses": "No significant weaknesses were identified in this dimension."
+    },
+    {
+      "name": "Consistency",
+      "questions": [
+        {
+          "question": "Are recurring terms and character names translated consistently throughout the passage?",
+          "score": 0.5,
+          "note": "While most terms are consistent, 'Patria' is translated as 'Fatherland' in one instance (Paragraph 17) and then as 'country' in another (Paragraph 25). Given the political significance of 'Patria' in this context, consistent use of 'Fatherland' would have been preferable."
+        },
+        {
+          "question": "Does the translation maintain a coherent style from paragraph to paragraph?",
+          "score": 1.0,
+          "note": "The translation consistently employs a formal and literary style throughout, ensuring stylistic coherence across the entire passage."
+        }
+      ],
+      "strengths": "The translation maintains a coherent and consistent style, contributing to the overall quality and flow.",
+      "weaknesses": "A minor inconsistency in the translation of the term 'Patria' was noted, which could have been maintained for stronger thematic resonance."
+    }
+  ],
+  "weighted_score": 0.9375,
+  "_tokens": {
+    "input": 6722,
+    "output": 1533
+  }
+}
