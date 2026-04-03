@@ -537,6 +537,11 @@ body {
   border-color: var(--border-ui-hover);
 }
 
+.font-size-controls button.active {
+  background: var(--color-body);
+  color: var(--paper);
+}
+
 /* === Chapter Index Panel (slides from right) === */
 .toc-trigger {
   position: fixed;
