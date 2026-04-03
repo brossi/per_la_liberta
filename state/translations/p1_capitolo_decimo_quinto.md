@@ -32,11 +32,7 @@ I summarise and piece together the various parts of his discourse:
 
 He remained a moment in thought, and his lean fingers tormented his smooth brow, as though to wrest from it, by main force, an inspiration. "How to provide," he murmured, "in such straits of time?" Then suddenly, with great emphasis:
 
-"Varese is the point! Access to reinforcements is easy there; the garrison small; the citizens patriotic and impetuous, the *Giovine Italia* well rooted, the assurances I have received serious and almost tangible. The thing is to cast a spark —
-
-*'Parva favilla gran fiamma seconda.'*"
-
-"A thorny undertaking, not a hopeless one. Let a man depart from Lugano this very day, and tomorrow he is on the spot; he meets with the leaders, distributes manifestos, spreads the news of the Milanese insurrection, revives men's spirits, calls them to arms, takes the enemy in detail, organises the barricades, sounds the tocsin, rouses the countryside.
+"Varese is the point! Access to reinforcements is easy there; the garrison small; the citizens patriotic and impetuous, the *Giovine Italia* well rooted, the assurances I have received serious and almost tangible. The thing is to cast a spark — a small spark, a great flame! A thorny undertaking, not a hopeless one. Let a man depart from Lugano this very day, and tomorrow he is on the spot; he meets with the leaders, distributes manifestos, spreads the news of the Milanese insurrection, revives men's spirits, calls them to arms, takes the enemy in detail, organises the barricades, sounds the tocsin, rouses the countryside.
 
 "For this, a legion is not needed — one man suffices, but a man who has the cunning and the audacity of the feline, the sacred enthusiasm of heroes; a man who would prefer, if need be, to die with arms in hand rather than live a slave. Where is he to be found?"
 
