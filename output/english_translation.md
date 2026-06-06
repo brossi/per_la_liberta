@@ -20,7 +20,7 @@ THE PRESENT volume might make some contribution to History; but it is not histor
 
 The Count di Rudio, so far removed, in time and in space, from the events he narrates, frequently protests that the miseries of politics no longer move him... Doubtless he deceives himself. Like a Minos who
 
-*“Giudica e manda secondo che avvinghia”*
+“Judges and sentences according to how he coils”
 
 he might have, in the estimation of many of my countrymen, a value altogether relative; but he acquires a great one as a “human document,” and it is precisely as such that he is especially to be considered.
 
@@ -1257,11 +1257,7 @@ I summarise and piece together the various parts of his discourse:
 
 He remained a moment in thought, and his lean fingers tormented his smooth brow, as though to wrest from it, by main force, an inspiration. "How to provide," he murmured, "in such straits of time?" Then suddenly, with great emphasis:
 
-"Varese is the point! Access to reinforcements is easy there; the garrison small; the citizens patriotic and impetuous, the *Giovine Italia* well rooted, the assurances I have received serious and almost tangible. The thing is to cast a spark —
-
-*'Parva favilla gran fiamma seconda.'*"
-
-"A thorny undertaking, not a hopeless one. Let a man depart from Lugano this very day, and tomorrow he is on the spot; he meets with the leaders, distributes manifestos, spreads the news of the Milanese insurrection, revives men's spirits, calls them to arms, takes the enemy in detail, organises the barricades, sounds the tocsin, rouses the countryside.
+"Varese is the point! Access to reinforcements is easy there; the garrison small; the citizens patriotic and impetuous, the *Giovine Italia* well rooted, the assurances I have received serious and almost tangible. The thing is to cast a spark — a small spark, a great flame! A thorny undertaking, not a hopeless one. Let a man depart from Lugano this very day, and tomorrow he is on the spot; he meets with the leaders, distributes manifestos, spreads the news of the Milanese insurrection, revives men's spirits, calls them to arms, takes the enemy in detail, organises the barricades, sounds the tocsin, rouses the countryside.
 
 "For this, a legion is not needed — one man suffices, but a man who has the cunning and the audacity of the feline, the sacred enthusiasm of heroes; a man who would prefer, if need be, to die with arms in hand rather than live a slave. Where is he to be found?"
 
@@ -1393,12 +1389,10 @@ That very evening I procured a passport under an assumed name and set out for Sw
 
 In Brussels, where I made a brief halt, I delivered a letter from the Master to dall'Ungaro, the Venetian Catullus. "Where is the Master, what is he doing?" he asked me, almost feverishly. And I, in his own verses:
 
-*"Mazzini è in sul loco ove si trema*
-*"Che giunga a' traditor l'ora suprema;*
-*"Mazzini è in ogni loco ove si opera*
-*"Versar il sangue per l'Italia intera!"*
-
-["Mazzini is in the place where men tremble / lest the supreme hour come upon the traitors; / Mazzini is in every place where men labour / to shed their blood for all of Italy!"]
+*"Mazzini is in every place where men tremble*
+*That the hour supreme may reach the traitor's ear;*
+*Mazzini is in every place where men hope*
+*To shed their blood for Italy entire!"*
 
 Having arrived in Zurich, I wished, before going to Calvi, to have my hands free and hastened to pay a visit to de Boni, to whom I likewise delivered a missive; a third I carried to Caronti of Como. Giuseppe Mazzini had charged me to be very much on my guard with this man, of whom he was highly suspicious. He did, however, contribute sums of some considerable amount to the good cause, and this restrained Mazzini from being rid of him.
 
