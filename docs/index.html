@@ -3,9 +3,24 @@
 <head>
 <meta charset="utf-8">
 <title>Per la Libertà! / For Freedom!</title>
-<link rel="stylesheet" href="static/bilingual.css?v=7e5a0e15">
+<link rel="stylesheet" href="static/bilingual.css?v=467c658d">
 </head>
 <body>
+
+<!-- Restore the viewer's last configuration before first paint (avoids flash) -->
+<script>
+(function () { try {
+  var b = document.body, d = document.documentElement;
+  var fs = localStorage.getItem('fontSize');
+  if (fs) d.style.fontSize = parseInt(fs, 10) + 'px';
+  var lf = localStorage.getItem('langFocus');
+  if (lf === 'it') b.classList.add('lang-it-only');
+  else if (lf === 'en') b.classList.add('lang-en-only');
+  if (localStorage.getItem('hideMarginalia') !== 'false') {
+    b.classList.add('no-marginalia'); b.classList.add('no-provenance');
+  }
+} catch (e) {} })();
+</script>
 
 <!-- Slide-in overlay for source page images -->
 <div id="page-overlay" class="page-overlay">
@@ -33,11 +48,18 @@
 <!-- Fixed TOC trigger -->
 <button id="toc-trigger" class="toc-trigger" aria-label="Table of contents">&#9776;</button>
 
-<!-- Font size controls -->
-<div class="font-size-controls">
-  <button id="font-smaller" aria-label="Decrease font size">&minus;</button>
-  <button id="font-larger" aria-label="Increase font size">&plus;</button>
-  <button id="toggle-marginalia" aria-label="Toggle marginalia" title="Toggle marginalia">&#9998;</button>
+<!-- Top-right controls -->
+<div class="top-right-controls">
+  <div class="lang-focus-controls" role="group" aria-label="Language display">
+    <button id="lang-it" aria-label="Show Italian only" title="Italian only">IT</button>
+    <button id="lang-both" aria-label="Show both languages" title="Both languages">Both</button>
+    <button id="lang-en" aria-label="Show English only" title="English only">EN</button>
+  </div>
+  <div class="font-size-controls">
+    <button id="font-smaller" aria-label="Decrease font size">&minus;</button>
+    <button id="font-larger" aria-label="Increase font size">&plus;</button>
+    <button id="toggle-marginalia" aria-label="Toggle marginalia" title="Toggle marginalia">&#9998;</button>
+  </div>
 </div>
 
 <!-- Slide-in chapter index -->
@@ -5266,6 +5288,23 @@ Then he rose and came toward me, smiling a smile that revealed all the melanchol
   });
 })();
 
+// Language focus: segmented radio — Italian only / both / English only
+(() => {
+  const body = document.body;
+  const btns = { it: document.getElementById('lang-it'),
+                 '': document.getElementById('lang-both'),
+                 en: document.getElementById('lang-en') };
+  function apply(focus) {
+    body.classList.toggle('lang-it-only', focus === 'it');
+    body.classList.toggle('lang-en-only', focus === 'en');
+    for (const k in btns) btns[k].classList.toggle('active', k === focus);
+    if (focus) localStorage.setItem('langFocus', focus); else localStorage.removeItem('langFocus');
+    window.dispatchEvent(new Event('resize'));
+  }
+  apply(localStorage.getItem('langFocus') || '');
+  for (const k in btns) btns[k].addEventListener('click', () => apply(k));
+})();
+
 // Marginalia: alignment, hover linking, click-to-activate, keyboard nav
 (() => {
   const allNotes = () => Array.from(document.querySelectorAll('.marginalia'));
@@ -5424,8 +5463,9 @@ Then he rose and came toward me, smiling a smile that revealed all the melanchol
 
   // Toggle all marginalia (revision + provenance) visibility
   const revBtn = document.getElementById('toggle-marginalia');
+  // Marginalia default to OFF; shown only if the viewer explicitly enabled them.
   const savedHide = localStorage.getItem('hideMarginalia');
-  if (savedHide === 'true') { document.body.classList.add('no-marginalia'); document.body.classList.add('no-provenance'); }
+  if (savedHide !== 'false') { document.body.classList.add('no-marginalia'); document.body.classList.add('no-provenance'); }
   else { revBtn.classList.add('active'); }
   revBtn.addEventListener('click', () => {
     const hidden = document.body.classList.toggle('no-marginalia');
