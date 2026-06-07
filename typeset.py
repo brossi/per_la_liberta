@@ -817,21 +817,29 @@ def generate_html(
                 old_text = change.get("old", "")
                 new_text = change.get("new", "")
                 reason = change.get("reason", "")
-                if old_text and new_text and new_text in p:
-                    rev_id = f"rev-{_rev_counter[0]}"
-                    _rev_counter[0] += 1
-                    escaped_new = _escape_html(new_text)
-                    para_html = para_html.replace(
-                        escaped_new,
-                        f'<span class="revised" data-rev="{rev_id}">{escaped_new}</span>',
-                        1,
-                    )
-                    para_marginalia.append(
-                        f'<span class="marginalia" data-rev="{rev_id}">'
-                        f'<span class="margin-old">{_escape_html(old_text)}</span>'
-                        f'<span class="margin-reason">{_escape_html(reason)}</span>'
-                        f'</span>'
-                    )
+                if not (old_text and new_text and new_text in p):
+                    continue
+                # Match against the *rendered* paragraph, not the raw-escaped text:
+                # _para_to_html turns markdown *italics* into <em>, so anchoring on
+                # _escape_html(new_text) silently fails whenever new_text contains
+                # markdown. A note with no .revised anchor can't be positioned and
+                # piles up at the top of the page, so only emit it once the anchor lands.
+                rendered_new = _para_to_html(new_text)
+                if rendered_new not in para_html:
+                    continue
+                rev_id = f"rev-{_rev_counter[0]}"
+                _rev_counter[0] += 1
+                para_html = para_html.replace(
+                    rendered_new,
+                    f'<span class="revised" data-rev="{rev_id}">{rendered_new}</span>',
+                    1,
+                )
+                para_marginalia.append(
+                    f'<span class="marginalia" data-rev="{rev_id}">'
+                    f'<span class="margin-old">{_escape_html(old_text)}</span>'
+                    f'<span class="margin-reason">{_escape_html(reason)}</span>'
+                    f'</span>'
+                )
 
             # Provenance annotations (pre-computed with IDs)
             for prov_id, target_text, margin_html in ch_en_annot.get(para_num, []):
@@ -1226,7 +1234,11 @@ def generate_html(
         "      for (const note of notes) {",
         "        if (note.offsetParent === null) continue;",
         "        const linked = getLinked(note);",
-        "        const absTop = linked ? linked.getBoundingClientRect().top + window.scrollY : 0;",
+        "        // No anchor span => nothing to align to; hide it rather than let it",
+        "        // fall back to absTop 0 and pile up at the top of the column.",
+        "        if (!linked) { note.style.display = 'none'; continue; }",
+        "        note.style.display = '';",
+        "        const absTop = linked.getBoundingClientRect().top + window.scrollY;",
         "        items.push({ note, absTop, parent: note.parentElement });",
         "      }",
         "      // Sort by the absolute vertical position of their linked text",
