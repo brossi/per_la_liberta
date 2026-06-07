@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_quattordicesimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "He ought to be left well alone.",
+      "new": "He had to be set aside.",
+      "reason": "Restores Gemini's “He had to be set aside”; lasciare da parte = to set aside/exclude him from the conspiracy, not the English idiom “leave well alone”, which contradicts the following clause about getting rid of him.",
+      "context_sentence": "f the French Government. He had to be set aside. If he already knew too m"
+    }
+  ]
+}

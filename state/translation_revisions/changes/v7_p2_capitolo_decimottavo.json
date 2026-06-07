@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_decimottavo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "death was in prospect, yet it was pleased to be preceded by some measure of relief",
+      "new": "death was in prospect, yet it was preceded by some measure of relief",
+      "reason": "Removes Claude's invented note of contentment ('pleased to be'); 'si faceva precedere' is reflexive 'let itself be preceded', matching Gemini's plain 'it was preceded'.",
+      "context_sentence": "e over the Conciergerie; death was in prospect, yet it was preceded by some measure of relief.  Another circumstance c"
+    }
+  ]
+}

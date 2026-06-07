@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_secondo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "took it upon himself to confirm that popularity",
+      "new": "took it upon himself to reinforce that popularity",
+      "reason": "Italian \"rafforzare\" means to strengthen/reinforce, not confirm; adopts Gemini's \"reinforce\" which preserves the sense of increasing the popularity rather than merely proving it correct.",
+      "context_sentence": "the foreigner, presently took it upon himself to reinforce that popularity and to demonstrate the p"
+    }
+  ]
+}

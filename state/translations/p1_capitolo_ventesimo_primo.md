@@ -2,7 +2,7 @@
 
 ## Chapter Twenty-One
 
-From the heights overlooking the mines of Agordo, I cast a final glance at my brother, who was shrinking into the plain below. Then I resolutely took the path up into the mountains, beginning a flight that was to prove full of thrills and truly singular. Upon reaching the zone of perpetual snows, I slowed my pace, both from exhaustion and from the growing difficulties, but also because I felt hidden and made safe by the space and the solitude. I peered into the depths... a great many of what, on the ascent, had seemed to be heights, now appeared level with the plain. The hatred of the powerful, I thought, could not reach so far as to disturb that virgin silence.
+From the heights overlooking the mines of Agordo, I cast a final glance at my brother, who was shrinking into the plain below. Then I resolutely took the path up into the mountains, beginning a flight that was to prove full of thrills and truly singular. Upon reaching the zone of perpetual snows, I slowed my pace, both from exhaustion and from the growing difficulties, but also because I felt hidden and made safe by the space and the solitude. I plunged my face deep into it all... a great many of what, on the ascent, had seemed to be heights, now appeared level with the plain. The hatred of the powerful, I thought, could not reach so far as to disturb that virgin silence.
 
 But having escaped the snares of men, I nearly fell victim to those of nature. It had been forty-eight hours since I had closed my eyes, and I felt terribly predisposed to that morbid slumber which the frost and the altitude can render mortal. At a certain point, I was seized as by a vertigo of the sublime; my legs would no longer hold me, and I fell prostrate upon the snow.
 

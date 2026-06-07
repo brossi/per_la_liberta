@@ -6,7 +6,7 @@ IN THE very year of my arrival in London, the French Police made, as far as I wa
 
 And he lent greater weight to his words by drawing from his pocket a handful of pounds sterling, which would — he said — be periodically renewed.
 
-But cunning had failed to reckon into its calculations one subtle and imperious coefficient: the honest conscience that transforms the sufferings endured for a worthy cause and converts them into profound satisfactions; that transforms the satisfactions born of wicked deeds and converts them into unspeakable torments.
+But cunning had failed to reckon into its calculations one subtle and imperious coefficient: the honest conscience that changes the nature of the sufferings endured for a worthy cause and converts them into profound satisfactions; that changes the nature of the satisfactions born of wicked deeds and converts them into unspeakable torments.
 
 My Elisa? She would without question have disdained the comfort offered at the price of my honour. What was a fistful of gold, set against her love? Fortunate the man who can, in difficult moments, see himself mirrored in the serene eye of a woman worthy of that name! He passes over the social mire as the Christ of legend upon the waters, with feet uncontaminated and dry!
 

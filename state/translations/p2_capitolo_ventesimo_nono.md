@@ -10,7 +10,7 @@ The calumnies of which I had received, from Rossi, the first inkling, were at on
 
 Elisa informed me furthermore that the gentlemen of the Times and others — the very same who had initiated the petition for my pardon — had crowned their work by collecting, in her favour, a small capital of one thousand one hundred pounds sterling. From such generosity, and from the sort of allowance settled upon her on the eve of my departure for Paris, she had drawn no relief whatsoever. During my long absence, Bernard had delivered to her a single, solitary pound sterling.
 
-Upon whom was the blame to be laid? Was I to consider Bernard's conduct towards me as inspired by the terror of the guilty? Did he slander me because he found himself incapable of defending himself honestly? To what end did his cowardly manoeuvres tend?
+Upon whom was the blame to be laid? Was I to consider Bernard's conduct towards me as inspired by the terror of a wicked man? Did he slander me because he found himself incapable of defending himself honestly? To what end did his cowardly manoeuvres tend?
 
 I wrote, on this matter, to several conspirators of the English Committee; but not one deigned to answer me — whether because Bernard had forestalled me; or because secret ties induced them to treat the question exclusively in secret assembly; or because human selfishness counselled them to imitate the worthy Pilate, of traditional memory.
 
@@ -48,7 +48,7 @@ One day, stigmatising with wrathful phrases the sheepishness of those petty poli
 
 Uttered in a moment of expansive agitation, I attached no great weight to that promise. A few days later we parted, and I thought no more of it. To my surprise, in 1862 I received a letter from him. He begged me to hasten without delay to the Hospital at Birmingham. He lay there in a grave condition and wished to keep his promise — to confide to me “the secret.” I departed by the first train; but scarcely had I entered that house of sorrow when my eagerness was unexpectedly arrested by an attendant. “Baron di Torocfalda? He died this morning.”
 
-I wished to see him. The vigour, the portentous strength, more than extinguished and destroyed by the onset of an overpowering malady, seemed rather to have evaporated — the yellowish skin clung to the bones as though glued fast. Observing him, I could discern the slow work of hunger; though the physicians, taking their pretext from the final collapse, had attributed it to an entirely different cause, distinguished by some name drawn from the Greek which I no longer recall.
+I wished to see him. His floridness, his portentous strength, more than extinguished and destroyed by the onset of an overpowering malady, seemed rather to have evaporated — the yellowish skin clung to the bones as though glued fast. Observing him, I could discern the slow work of hunger; though the physicians, taking their pretext from the final collapse, had attributed it to an entirely different cause, distinguished by some name drawn from the Greek which I no longer recall.
 
 And yet that man possessed the secret of a formula which might have restored him to his former wealth. To follow the current, to confide — who could have blamed him? For centuries, every great invention has been turned, principally, to profit and to subjugation. Progress the exclusive possession of a few; science a prostitute, like religion, like human Justice. It seems fated!... But not with impunity did the poor Baron enclose within his heart a spark of greatness!
 

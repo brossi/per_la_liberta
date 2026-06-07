@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_decimo_nono",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "She has to prepare the calf-feed for the cow that is still with calf anyway.",
+      "new": "She has to prepare the mash for the cow that is about to calf anyway.",
+      "reason": "Restores Gemini's 'mash for the cow that is about to calf'; beverone is the warm bran-mash/swill fed to the cow herself, not 'calf-feed'.",
+      "context_sentence": "ss, what does it matter? She has to prepare the mash for the cow that is about to calf anyway. For this once, you must"
+    }
+  ]
+}

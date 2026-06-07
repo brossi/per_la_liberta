@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_trentesimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "the honest conscience that transforms the sufferings endured for a worthy cause and converts them into profound satisfactions; that transforms the satisfactions born of wicked deeds and converts them into unspeakable torments.",
+      "new": "the honest conscience that changes the nature of the sufferings endured for a worthy cause and converts them into profound satisfactions; that changes the nature of the satisfactions born of wicked deeds and converts them into unspeakable torments.",
+      "reason": "Restores the Italian's two distinct verbs by rendering snatura as 'changes the nature of' (per Draft B Gemini) instead of collapsing it into 'transforms'.",
+      "context_sentence": "d imperious coefficient: the honest conscience that changes the nature of the sufferings endured for a worthy cause and converts them into profound satisfactions; that changes the nature of the satisfactions born of wicked deeds and converts them into unspeakable torments.  My Elisa? She would wit"
+    }
+  ]
+}

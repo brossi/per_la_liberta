@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_primo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "we were those things. One went on and on, in an atmosphere of sunshine",
+      "new": "we are those things. One goes on and on, in an atmosphere of sunshine",
+      "reason": "Restores the deliberate present tense (siamo noi / si va, si va) that Gemini preserved (\"is us\"/\"goes on and on\"); the synthesis flattened both verbs to the past, erasing the intended immediacy.",
+      "context_sentence": "ength, infinite motion — we are those things. One goes on and on, in an atmosphere of sunshine, and we ran with the win"
+    }
+  ]
+}

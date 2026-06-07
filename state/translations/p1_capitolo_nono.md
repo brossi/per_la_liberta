@@ -14,7 +14,7 @@ Quickening our step on the second of December 1851, as we made our way to our us
 
 Hastening our step and working upon our conjectures, we soon arrived at the mouth of the Rue de la Paix. Here we stopped short.
 
-Opposite the seat of the Club stood a hedge of Guards. We watched the workers employed in the manufacture of cartridges emerge from the gateway two by two, four by four, brutally shoved along by the gendarmes.
+Opposite the seat of the Club stood a hedge of Guards. We watched the brutally satisfied workers employed in the manufacture of cartridges emerge from the gateway two by two, four by four, brutally shoved along by the gendarmes.
 
 The affiliated Clubs had to be warned. In retracing our route, we were compelled to satisfy ourselves that the soldiers were not posted merely for a show of force. Singly, but with an ill-omened frequency, shots rang out. We were making for the Club of Saint-Denis. Before reaching it, we very nearly stumbled over several corpses... workers in their blouses, unarmed, who had gone out without suspicion and been treacherously launched into eternity!
 

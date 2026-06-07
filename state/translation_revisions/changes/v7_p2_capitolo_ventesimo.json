@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_ventesimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "in place of that first, strange reluctance at the unexpected return to the sensations of the living",
+      "new": "in place of that first, strange regret at the unexpected return to the sensations of the living",
+      "reason": "Restores Gemini's faithful rendering; rincrescimento = regret/sorrow, not reluctance, since the return to life has already occurred.",
+      "context_sentence": "n at work within me and, in place of that first, strange regret at the unexpected return to the sensations of the living, a desperate yearning to"
+    }
+  ]
+}

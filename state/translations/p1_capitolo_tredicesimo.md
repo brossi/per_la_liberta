@@ -92,7 +92,7 @@ I found aboard the *Arno* muffled-up passengers with an air of self-absorbed pre
 
 I answered myself with yes, and committed a grave error. He had suddenly risen and, as if following the impulse of a fleeting thought, walked with hurried steps to another part of the deck. He had left his newspaper on a seat. I drew forth a revolutionary proclamation, concealed it within the folds of that newspaper, and returned at a run to my place.
 
-I did not wait long! A face painfully surprised, a knitting of brows, a swaying of that heavy head. He fixed me with a pair of eyes I have never since forgotten. Perhaps they were set in the face of the most immaculate Aristides that Piedmont had ever produced; but to me they seemed steeped, and all but drunk, with idiotic commiseration and bestial menace. I dissembled by whistling a Verdi tune into the wind that roared about me.
+I did not wait long! A face painfully surprised, a knitting of brows, a swaying of that heavy head. He fixed me with a pair of eyes I have never since forgotten. Perhaps they were set in the face of the most immaculate Aristides that Piedmont had ever produced; but to me they seemed steeped, and all but drunk, with idiotic commiseration and bestial menace. I dissembled by whistling a cabaletta by Verdi into the wind that roared about me.
 
 I am at Intra. Among the knot of curious idlers gathered to see the steamship arrive, I catch — as one might snatch something from the air — a well-known signal. I followed at a distance the person who had given it and was led to a solitary villa. The unknown brother remained outside and I went in. I found myself face to face with Fortunato Calvi.
 

@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_dodicesimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "To the cabinet at the end of the corridor.",
+      "new": "To the water-closet at the end of the corridor.",
+      "reason": "Restores Claude's 'water-closet'; gabinetto here is the period euphemism for the lavatory, not the English false-friend 'cabinet' (cupboard).",
+      "context_sentence": "\"  \"Where did you go?\"  \"To the water-closet at the end of the corridor. When I returned, the gen"
+    }
+  ]
+}

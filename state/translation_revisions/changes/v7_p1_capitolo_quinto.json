@@ -1,0 +1,21 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_quinto",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "Napoleone demanded permission to return to his country",
+      "new": "Napoleone asked permission to return to his country",
+      "reason": "Restores Gemini's 'asked'; domanda = asks/requests, not demands, keeping the deferential register of a returning exile.",
+      "context_sentence": "ven from the throne, and Napoleone asked permission to return to his country. To overcome the parliam"
+    },
+    {
+      "old": "stood in his path to the heights of power",
+      "new": "barred his path to sublime heights",
+      "reason": "Restores Gemini's 'barred his path to sublime heights'; sbarrava = barred/blocked and sublime is in the source, not the gloss 'power'.",
+      "context_sentence": "n four years before him, barred his path to sublime heights.  Our revolutionary move"
+    }
+  ]
+}

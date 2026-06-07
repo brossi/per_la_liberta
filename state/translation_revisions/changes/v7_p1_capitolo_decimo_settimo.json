@@ -1,0 +1,21 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_decimo_settimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "every place where men hope",
+      "new": "every place where men labour",
+      "reason": "Restores Claude's 'labour' for 'si opera' (one works/acts); the final's 'hope' reverses the action sense and breaks the trembling-vs-acting antithesis.",
+      "context_sentence": "r's ear;* *Mazzini is in every place where men labour* *To shed their blood fo"
+    },
+    {
+      "old": "every place where men tremble",
+      "new": "the place where men tremble",
+      "reason": "Restores Claude's singular 'the place' for 'in sul loco', preserving the deliberate contrast with 'in ogni loco' ('every place') in the later line.",
+      "context_sentence": "verses:  *\"Mazzini is in the place where men tremble* *That the hour supreme"
+    }
+  ]
+}

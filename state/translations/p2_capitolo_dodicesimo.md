@@ -32,7 +32,7 @@ I had already committed my answer to memory, which, moreover, differed but littl
 
 "Where did you go?"
 
-"To the cabinet at the end of the corridor. When I returned, the gentleman had departed."
+"To the water-closet at the end of the corridor. When I returned, the gentleman had departed."
 
 "But do you not recall his appearance?"
 
