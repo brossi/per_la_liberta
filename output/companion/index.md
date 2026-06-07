@@ -11,7 +11,7 @@ This companion gathers reader's aids for the English translation of Crespi's 191
 | [Layered Summary](summary.md) | The book in five tiers: one-line logline → synopsis → extended summary → part summaries → a chapter-by-chapter outline of all 58 chapters. **Start here for *what happens*.** | ✅ done |
 | [Timeline](timeline.md) | A dated spine of di Rudio's life, cross-referenced to chapters and source pages. **The factual backbone.** | ✅ done |
 | [Dramatis Personae](personae.md) | A profile of each key figure — role in the book, personality as the book draws it, and real-world significance. | ✅ done |
-| [Event Context](events.md) | Framing notes on the historical episodes the book dramatizes, from the Five Days of Milan to Aspromonte. | ⏳ planned |
+| [Event Context](events.md) | Framing notes on the historical episodes the book dramatizes, from the Five Days of Milan to Aspromonte. | ✅ done |
 | [Themes](themes.md) | Short interpretive essays: testimony as method, republic vs. monarchy, exile, martyrdom, anticlericalism. | ⏳ planned |
 | [Glossary](glossary.md) | One-line entries for the places, organizations, and terms the book names in passing. | ⏳ planned |
 
@@ -27,7 +27,11 @@ Where these companions add **external historical context** — dates, outcomes, 
 
 > **Historical note** — External, independently verifiable context. Everything inside such a callout is checked against outside sources before it is stated; where the record is uncertain, the note says so.
 
-This keeps the memoir's slanted, first-person account visibly distinct from the historical record. It is also where this companion can say what the book itself cannot — most importantly, that di Rudio's story did not end where the book does, in 1864.
+The [Event Context](events.md) companion adds a third, related voice, similarly set off in a callout:
+
+> **Scholarship** — What the standard academic literature on an episode contributes: interpretation, scale, and the points where historians confirm, complicate, or contradict the memoir's partisan telling. Each such callout names the scholarly work it draws on, with full details gathered in that file's *Sources & further reading*.
+
+This keeps the memoir's slanted, first-person account visibly distinct from the historical record and from modern scholarship. It is also where this companion can say what the book itself cannot — most importantly, that di Rudio's story did not end where the book does, in 1864.
 
 > **Historical note** — The book closes with di Rudio sailing for New York in 1864 and never returning to Italy. In fact, "Charles DeRudio" went on to a long career as a U.S. Army officer: commissioned into the 7th Cavalry in 1869, he survived the Battle of the Little Bighorn (25–26 June 1876) under Reno and Benteen, and died at Pasadena, California, on 1 November 1910 — three years before Crespi published this book. The memoir is, in effect, posthumous testimony, exactly as Crespi foresaw: in the preface he writes, "I sensed that this book would see the light when di Rudio would be no more." *(Source: Wikipedia, "Charles DeRudio"; the preface quotation is from the book itself.)*
 
