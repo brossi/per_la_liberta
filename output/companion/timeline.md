@@ -32,7 +32,7 @@ Chapter references use the form *P1 Ch. 2 (pp. 15–23)*; pages are the source s
 
 ## Intelligence missions and the 1853 risings (1852–1853)
 
-- **April 1852** — Working as a tailor in Genoa, then to Turin; reunited with the patriot priest Don Bastiano Barozzi and with Calvi, who commissions him a secret envoy to Lombardy-Venetia. *(P1 Ch. 11, pp. 59–62)*
+- **April 1852** — Working for a merchant tailor in Genoa, then on foot to Turin; reunited with the patriot priest Don Bastiano Barozzi and with Calvi, who commissions him a secret envoy to Lombardy-Venetia. *(P1 Ch. 11, pp. 59–62)*
 - **1852** — Two intelligence missions into Austrian territory under the alias "Carlo Moretti," coding troop strengths as bales of silk. *(P1 Ch. 12, pp. 63–66)*
 - **6 February 1853** — The Mazzinian Milan rising; di Rudio, carrying gold for Calvi's Lake Maggiore scheme, is diverted toward a parallel rising at Varese, then recalled — "In Milan all is lost." He meets Giuseppe Mazzini in person near Lugano. *(P1 Ch. 13–16, pp. 67–83)*
   > **Historical note** — The 6 February 1853 Milan insurrection followed the Austrian executions of the Belfiore martyrs (1852–53) and was suppressed within a day. *(Source: Wikipedia, "Belfiore martyrs".)*
@@ -50,14 +50,14 @@ Chapter references use the form *P1 Ch. 2 (pp. 15–23)*; pages are the source s
 ## London, marriage, and the road to the conspiracy (1855–1857)
 
 - **mid-1850s** — Destitute in London's émigré world: the Drury Lane chorus, bottle-covering at the Wapping docks; teaches Italian to Sara Mancherini and her cousin Elisa, who secretly sustains him. *(P2 Ch. 1–2, pp. 127–136)*
-- **9 December 1855** — Marries Elisa Mancherini. *(P2 Ch. 3, pp. 136–141)*
+- **9 December 1855** — Marries Elisa Cheney. *(P2 Ch. 3, pp. 136–141)*
 - **1855–56** — Nearly killed intervening in the Rossi–Foschini affair; by the book's account Foschini later died with Carlo Pisacane in the failed Sapri expedition, which di Rudio reads as a sign of Mazzini's new southern strategy. *(P2 Ch. 4, pp. 142–143)*
-- **September 1857** — Felice Orsini seeks di Rudio out at Nottingham and revives the plan to assassinate Napoleon III. *(P2 Ch. 5, pp. 144–148)*
+- **September 1857** — In Nottingham, di Rudio aids a passing Italian exile who in turn mentions him to Felice Orsini at Birmingham; Orsini ("The very man I am looking for!") summons di Rudio to London by letter and revives the plan to kill Napoleon III. *(P2 Ch. 5, pp. 144–148)*
 
 ## The Orsini conspiracy (January 1858)
 
 - **8 January 1858** — Leaves London, bidding a wrenching farewell to Elisa and their child. *(P2 Ch. 6, pp. 149–152)*
-- **9 January 1858** — Reaches Paris a day late on a forged Portuguese passport as "Giovanni da Sylva." *(P2 Ch. 7, pp. 154–156)*
+- **9 January 1858** — The steamer makes Calais twelve hours late (5 a.m.); he goes on by train to Paris on a Portuguese passport as "Giovanni da Sylva" (supplied by Simon Bernard), to find Orsini absent from the platform. *(P2 Ch. 7, pp. 154–156)*
 - **12 January 1858** — Orsini walks the conspirators through the plan at the piazza of the Opéra. *(P2 Ch. 8, pp. 157–160)*
 - **14 January 1858** — Outside the Opéra in the Rue Le Peletier, the bombs are thrown; Gomez throws the first prematurely, di Rudio the second. *(P2 Ch. 9–10, pp. 161–165)*
   > **Historical note** — Three bombs were thrown at the imperial carriage outside the Salle Le Peletier on the evening of **14 January 1858**; the Emperor and Empress were unhurt, but roughly eight bystanders were killed and some 150 wounded. *(Source: Wikipedia, "Orsini affair".)*
@@ -70,7 +70,7 @@ Chapter references use the form *P1 Ch. 2 (pp. 15–23)*; pages are the source s
 - **13 March 1858** — Led barefoot toward the guillotine, di Rudio is halted at the last moment by the Empress's major-domo: his sentence is commuted. *(P2 Ch. 19–20, pp. 202–210)*
   > **Historical note** — Felice Orsini and Giuseppe Pieri were guillotined in Paris on **13 March 1858**; di Rudio's sentence was commuted to hard labor for life through petitions reaching the Empress Eugénie. *(Sources: Wikipedia, "Felice Orsini"; ExecutedToday.)*
 - **April 1858** — Transferred to Toulon, in convict garb. *(P2 Ch. 21, pp. 212–215)*
-- **11 December 1858** — Reaches the penal colony at the Montagne d'Argent, French Guiana; a yellow-fever epidemic soon annihilates his fellow escape-plotters and hundreds more. *(P2 Ch. 22, pp. 216–222)*
+- **11 December 1858** — Reaches the penal colony at the Montagne d'Argent, French Guiana. He prepares a canoe escape with eight accomplices, but a yellow-fever epidemic devastates the colony — of more than six hundred souls, sixty-three survive — and his eight fellow escape-plotters are among the dead he helps bury. *(P2 Ch. 22, pp. 216–222)*
 
 ## Escape and vindication (1859–1862)
 
