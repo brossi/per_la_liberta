@@ -10,7 +10,7 @@ This companion gathers reader's aids for the English translation of Crespi's 191
 |-------|-------------------|--------|
 | [Layered Summary](summary.md) | The book in five tiers: one-line logline → synopsis → extended summary → part summaries → a chapter-by-chapter outline of all 58 chapters. **Start here for *what happens*.** | ✅ done |
 | [Timeline](timeline.md) | A dated spine of di Rudio's life, cross-referenced to chapters and source pages. **The factual backbone.** | ✅ done |
-| [Dramatis Personae](personae.md) | A profile of each key figure — role in the book, personality as the book draws it, and real-world significance. | ⏳ planned |
+| [Dramatis Personae](personae.md) | A profile of each key figure — role in the book, personality as the book draws it, and real-world significance. | ✅ done |
 | [Event Context](events.md) | Framing notes on the historical episodes the book dramatizes, from the Five Days of Milan to Aspromonte. | ⏳ planned |
 | [Themes](themes.md) | Short interpretive essays: testimony as method, republic vs. monarchy, exile, martyrdom, anticlericalism. | ⏳ planned |
 | [Glossary](glossary.md) | One-line entries for the places, organizations, and terms the book names in passing. | ⏳ planned |
