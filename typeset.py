@@ -1168,7 +1168,16 @@ def generate_html(
         "  trigger.addEventListener('click', e => { e.stopPropagation(); open(!menu.classList.contains('open')); });",
         "  opts.forEach(o => o.addEventListener('click', () => { apply(o.dataset.setTheme); open(false); }));",
         "  document.addEventListener('click', e => { if (!menu.contains(e.target) && e.target !== trigger) open(false); });",
-        "  document.addEventListener('keydown', e => { if (e.key === 'Escape') open(false); });",
+        "  document.addEventListener('keydown', e => {",
+        "    if (e.key === 'Escape') { open(false); return; }",
+        "    if (!menu.classList.contains('open')) return;",  # arrows only act while the menu is open
+        "    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;",
+        "    e.preventDefault();",  # don't scroll the page
+        "    const cur = opts.findIndex(o => o.dataset.setTheme === (root.getAttribute('data-theme') || 'mid'));",
+        "    const next = (cur + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length;",
+        "    apply(opts[next].dataset.setTheme);",  # swap + persist live, same as a click
+        "    opts[next].focus();",
+        "  });",
         "})();",
         "",
         "// Language focus: segmented radio — Italian only / both / English only",
