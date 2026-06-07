@@ -359,3 +359,19 @@ Source-aware audit of the multi-witness translation pipeline: for every chapter,
   - _Refuted:_ Refuted: the final loses no meaning, register, or content — "boia fer" is the heavy tropical ironwood (the whole point of the anecdote in a French penal colony), and the synthesis correctly renders the French term *bois de fer* in italics and glosses it as "ironwood," which is more informative, not less; "boia fer" is almost certainly an OCR/phonetic garble of "bois de fer" (note "boia" is itself an Italian word), so normalizing it is a legitimate translation choice, and on a facing-page edition the original spelling already appears on the Italian side.
 - **P2·ventesimo terzo** (Medium): "E quand'anche" is concessive-hypothetical ("and even supposing that were so"), but "Even so" treats the solidarity as a…
   - _Refuted:_ "Even so!" is an idiomatic English concessive carrying the same dismissive "even granting that, it changes nothing" force as "E quand'anche!"; it does not assert the solidarity as an established fact, so the difference versus "And even if there were!" is a marginal shade of explicit conditional mood, not a genuine loss of meaning, register, or content.
+
+
+---
+
+## Prevention & lessons learned
+
+**Root cause — the synthesis layer logs swaps, not omissions.** The multi-witness pipeline records synthesis provenance in `provenance.json`, but that log only captures *cross-draft incorporations* (text pulled from one draft into the primary base, with a reason). It does **not** record (a) wordings the synthesizer invents that are in no draft, or (b) content the synthesizer drops. Because omissions leave no trace, a dropped Dante quotation (`p1_ch15`) and a dropped thesis sentence (`p2_ch16`) reached publication and were found only by this after-the-fact source-aware audit.
+
+**Corrective final pass.** Revision pass **v7 (`source: drift_correction`)** restored fidelity across 29 chapters (6 High, 31 Medium); every edit was drawn from an existing draft or the source, and contested single words were verified against Edgren 1901 / Zingarelli 1922 (single words only — never idioms; see the confirmed-findings tables above). Recorded with per-chapter change records (rendered as marginalia) and a pre-change snapshot for `--revert-to`.
+
+**Standing safeguard — `multi_translate._check_synthesis_integrity()`.** Runs automatically after every synthesis and writes a deterministic `synthesis_integrity.json` per chapter — the logging the synthesis layer never had. It flags:
+- **Dropped carry-overs** — a ≥5-word run appearing verbatim in the source *and in every draft* but missing from the synthesis (Latin tags, verse, names). Consensus-across-drafts is what keeps this clean: 0 false positives across all 58 corrected chapters, while still catching the `p1_ch15` Dante drop.
+- **Dropped ALL-CAPS names** (e.g. the ship `DURR`) by the same source+all-drafts logic.
+- **Gross shrinkage** — synthesis body below 85% of the median draft, signalling a dropped paragraph.
+
+**Known limit.** A single dropped *sentence* in a long chapter (the `p2_ch16` class) falls below the shrinkage floor and is not a verbatim carry-over, so the deterministic guard cannot see it. That failure mode still requires the periodic source-aware audit. The guard narrows the gap; it does not close it — treat the two as complementary.

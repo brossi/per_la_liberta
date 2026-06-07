@@ -522,6 +522,109 @@ def _run_claude_code(prompt: str, model: str, timeout: int, label: str) -> subpr
     )
 
 
+# Quotations, foreign/Latin citations, and proper names must survive synthesis
+# verbatim, and the body must not shrink. The synthesis layer has been observed to
+# silently drop both (a Dante quotation, whole thesis sentences) without trace:
+# provenance.json logs only cross-draft *swaps*, never *omissions*. This guard
+# re-derives what should have carried over from the drafts and logs anything
+# missing at synthesis time, instead of leaving it for a later source-aware audit.
+def _norm_words(text: str) -> list[str]:
+    """Lowercased word tokens with punctuation stripped — for language-agnostic
+    verbatim matching across source, drafts and synthesis (so differing quote
+    styles or trailing punctuation can't hide a real carry-over)."""
+    return re.sub(r"[^\w\s]", " ", text, flags=re.UNICODE).lower().split()
+
+
+def _dropped_carryovers(source: str, drafts: list[str], synthesis: str, w: int = 5) -> list[str]:
+    """Verbatim multi-word runs shared by the source and a draft but missing here.
+
+    A run of >=w words appearing unchanged in the Italian source and in EVERY
+    draft is untranslated material that the editorial convention keeps verbatim —
+    a Latin tag, a line of verse, a multi-word name. Requiring consensus across
+    all drafts is what separates these from a source quote that some drafts simply
+    translate (which the synthesis is right to render in English, not a drop).
+    Adjacent flagged runs are merged into the maximal dropped span.
+    """
+    sw = _norm_words(source)
+    norm_drafts = [" ".join(_norm_words(d)) for d in drafts]
+    norm_syn = " ".join(_norm_words(synthesis))
+    flagged = [False] * len(sw)
+    for i in range(len(sw) - w + 1):
+        phrase = " ".join(sw[i:i + w])
+        if all(phrase in nd for nd in norm_drafts) and phrase not in norm_syn:
+            for j in range(i, i + w):
+                flagged[j] = True
+    spans, i = [], 0
+    while i < len(sw):
+        if flagged[i]:
+            j = i
+            while j < len(sw) and flagged[j]:
+                j += 1
+            spans.append(" ".join(sw[i:j]))
+            i = j
+        else:
+            i += 1
+    return spans
+
+
+def _check_synthesis_integrity(
+    chapter_id: str, translation: str, materials_dir: Path
+) -> list[str]:
+    """Flag content the synthesis dropped relative to its drafts (deterministic log).
+
+    Catches the two failure modes provenance.json cannot record — dropped
+    quotations/citations and dropped paragraphs/sentences — by comparing the
+    synthesis against its own drafts. Writes synthesis_integrity.json and returns
+    the warnings (empty list = clean).
+    """
+    draft_paths = sorted(materials_dir.glob("draft_*.md"))
+    drafts = [p.read_text(encoding="utf-8") for p in draft_paths]
+    source = ""
+    src_path = materials_dir / "italian_source.txt"
+    if src_path.exists():
+        source = src_path.read_text(encoding="utf-8")
+    warnings: list[str] = []
+
+    if drafts and source:
+        # A. Untranslatable carry-overs the synthesis dropped: multi-word verbatim
+        #    runs shared by the source and a draft, plus ALL-CAPS names by the same
+        #    "in source + a draft, missing here" logic (the draft filter excludes
+        #    ordinary quotes that get translated, keeping false positives low).
+        for span in _dropped_carryovers(source, drafts, translation):
+            warnings.append(f"dropped carry-over (source + a draft, missing here): {span!r}")
+        caps = {t for t in re.findall(r"\b[A-ZÀ-Ý][A-ZÀ-Ý]{2,}\b", source)}
+        for name in sorted(caps):
+            if all(name in d for d in drafts) and name not in translation:
+                warnings.append(f"dropped ALL-CAPS name (source + all drafts, missing here): {name!r}")
+
+        # B. Gross shrinkage — body far shorter than the draft median signals a
+        #    dropped paragraph. Conservative (<85%) because synthesis legitimately
+        #    paragraphs and tightens differently from the drafts; a single dropped
+        #    sentence in a long chapter is below this floor and still needs the
+        #    periodic source-aware audit to catch.
+        n_words = lambda t: len(t.split())
+        med = sorted(n_words(d) for d in drafts)[len(drafts) // 2]
+        if med and n_words(translation) < 0.85 * med:
+            warnings.append(
+                f"body {n_words(translation)} words vs median draft {med} "
+                f"(<85%) — possible dropped paragraph"
+            )
+
+    log = {
+        "chapter_id": chapter_id,
+        "drafts_compared": [p.name for p in draft_paths],
+        "warnings": warnings,
+    }
+    (materials_dir / "synthesis_integrity.json").write_text(
+        json.dumps(log, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    if warnings:
+        print(f"      [{chapter_id}] ⚠ synthesis integrity: {len(warnings)} warning(s)")
+        for w in warnings:
+            print(f"          - {w}")
+    return warnings
+
+
 def _synthesize_via_claude_code(
     chapter_id: str,
     n_drafts: int,
@@ -586,6 +689,10 @@ def _synthesize_via_claude_code(
             )
 
     translation = output_path.read_text(encoding="utf-8")
+
+    # Deterministic integrity guard: log anything the synthesis dropped vs its
+    # drafts. provenance.json (written below) records only swaps, never omissions.
+    _check_synthesis_integrity(chapter_id, translation, materials_dir)
 
     # Parse synthesis token usage from Claude Code JSON response.
     # Output is a JSON array; the last entry has type="result" with cost/usage.
