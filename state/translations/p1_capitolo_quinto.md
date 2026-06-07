@@ -4,7 +4,7 @@
 
 CHAPTER FIVE
 
-THE SIEGE OF ROME is indissolubly linked to the name of a man fatal to Liberty: that of Luigi Napoleone. The Carbonari, who had received him into their bosom, regarded him with suspicion as early as 1831; for at that time the rumour had spread that he had made away with his brother (Napoleone Luigi), who, having been born four years before him, stood in his path to the heights of power.
+THE SIEGE OF ROME is indissolubly linked to the name of a man fatal to Liberty: that of Luigi Napoleone. The Carbonari, who had received him into their bosom, regarded him with suspicion as early as 1831; for at that time the rumour had spread that he had made away with his brother (Napoleone Luigi), who, having been born four years before him, barred his path to sublime heights.
 
 Our revolutionary movements opened, or seemed to open, new horizons for Italy at that time, and the two sons of Hortense, taking part in those movements, sought upon the Peninsula a field propitious to their ambition; a compensation, perhaps, as well, for the loss of the French throne, then warmed by Louis-Philippe. This train of thought lent credence to the dark rumour, which, moreover, could never be thoroughly investigated.
 
@@ -24,7 +24,7 @@ The two months elapsed and a second interview took place. The prisoner let her s
 
 In London, and precisely at the Brunswick Hotel, he met again with the Belgioioso and sealed, so to speak, the compact: "He would aid Italy, as soon as the affairs of France were settled."
 
-Events rushed headlong. Louis-Philippe was driven from the throne, and Napoleone demanded permission to return to his country. To overcome the parliamentary opposition, Louis Blanc arose and, with a single speech, altered the course of French history as much as ten battles might have done. Napoleone became a candidate for the National Assembly for the Department of the Seine, and set foot triumphantly upon French soil.
+Events rushed headlong. Louis-Philippe was driven from the throne, and Napoleone asked permission to return to his country. To overcome the parliamentary opposition, Louis Blanc arose and, with a single speech, altered the course of French history as much as ten battles might have done. Napoleone became a candidate for the National Assembly for the Department of the Seine, and set foot triumphantly upon French soil.
 
 A sadly famous epoch! The parties contending for mastery of the Country flew at one another's throats and unleashed upon Paris the tempest of blood that preludes every great political transformation. Cavaignac emerged grimly from the carnage and aspired to the Presidency of the Republic, contested by the vanquished who, in desperation, set against him the candidacy of Ledru-Rollin. The resultant of those two currents, foreseen and facilitated by our secret associations, carried the victory to a third candidacy — that of Luigi Napoleone. On the 20th of December 1848 he became the Supreme Magistrate of the glorious Nation.
 

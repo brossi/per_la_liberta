@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_quarto",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "the shame of centuries of weakness, the cowardly resignation to servitude",
+      "new": "the shame of centuries of wantonness, the cowardly resignation to servitude",
+      "reason": "Restores Gemini's 'wantonness'; lascivie = lasciviousness/wantonness, a moral indictment of decadent vice, not the flattened 'weakness'.",
+      "context_sentence": "aptism of its own blood, the shame of centuries of wantonness, the cowardly resignation to servitude.  In destruction, the gl"
+    }
+  ]
+}

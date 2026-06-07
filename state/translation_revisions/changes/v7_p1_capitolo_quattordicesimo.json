@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_quattordicesimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "a whirlwind of tiny needles of ice that lacerated the skin",
+      "new": "a whirlwind of tiny needles of ice that grazed the skin",
+      "reason": "Restores Gemini's 'grazed'; scalfire means to scratch/graze the surface lightly, not 'lacerated' (tear/mangle) which overstates the violence.",
+      "context_sentence": "s, a frozen sleet — nay, a whirlwind of tiny needles of ice that grazed the skin, that tormented my eyes,"
+    }
+  ]
+}

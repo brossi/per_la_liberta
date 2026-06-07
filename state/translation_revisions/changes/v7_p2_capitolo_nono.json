@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_nono",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "Pieri, however, exchanged a meaningful glance with Orsini.",
+      "new": "Pieri, instead, winked at Orsini.",
+      "reason": "Restores Gemini's 'winked at Orsini'; ammiccò means winked (one-directional), not a vague mutual 'exchanged a meaningful glance'.",
+      "context_sentence": "t on, paying us no heed; Pieri, instead, winked at Orsini. Absorbed in my own thoug"
+    }
+  ]
+}

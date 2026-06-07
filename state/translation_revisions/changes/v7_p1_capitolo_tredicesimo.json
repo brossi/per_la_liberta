@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_tredicesimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "I dissembled by whistling a Verdi tune into the wind",
+      "new": "I dissembled by whistling a cabaletta by Verdi into the wind",
+      "reason": "Restores Gemini's precise operatic term 'cabaletta by Verdi'; the final flattened cabaletta to the generic 'tune,' losing the musicological specificity.",
+      "context_sentence": "tion and bestial menace. I dissembled by whistling a cabaletta by Verdi into the wind that roared about me.  I"
+    }
+  ]
+}

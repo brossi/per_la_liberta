@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_ventesimo_primo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "I peered into the depths...",
+      "new": "I plunged my face deep into it all...",
+      "reason": "Restores Draft A's 'I plunged my face deep into it all'; ficcai il viso = an active thrust of the face, which the final softened to 'peered' and dropped 'il viso' (the face).",
+      "context_sentence": "space and the solitude. I plunged my face deep into it all... a great many of what, on"
+    }
+  ]
+}

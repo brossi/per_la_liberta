@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_sesto",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "Beneath the shield of a clear conscience,",
+      "new": "Under the hauberk of feeling himself pure,",
+      "reason": "Restores Gemini's 'Under the hauberk of feeling himself pure'; usbergo is a hauberk/coat of mail (Dante, Inf. XXVIII), echoing the 'coat of chain-mail' in the next sentence, not a generic 'shield of a clear conscience'.",
+      "context_sentence": "ble to shelter himself  \"Under the hauberk of feeling himself pure,\"  wore, in secret, a coa"
+    }
+  ]
+}

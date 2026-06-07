@@ -28,7 +28,7 @@ My father sat at a table in a café. He sees, he trembles, and planting himself 
 
 Intense was the excitement that followed the momentary stupefaction, and my father owed it to his deeply rooted popularity that he did not live, there and then, his last quarter of an hour.
 
-Pius IX, repudiating the holy crusade for the independence of his Country and fornicating with the foreigner, presently took it upon himself to confirm that popularity and to demonstrate the perspicacity of the old and proud patrician.
+Pius IX, repudiating the holy crusade for the independence of his Country and fornicating with the foreigner, presently took it upon himself to reinforce that popularity and to demonstrate the perspicacity of the old and proud patrician.
 
 A man of such a temper was bound to prove odious to Austria, gloomy and suspicious as she was. The fact remains that he never obtained permission to practise at the bar, despite his considerable grounding in the legal sciences. He consoled himself with the sweetnesses of fatherhood and had fourteen children. I was the fifth-born.
 

@@ -1,0 +1,27 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_secondo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "*LA DURE* ploughed",
+      "new": "*LA DURR* ploughed",
+      "reason": "Restores ship name DURR from both drafts; the synthesis invented the spelling Dure, altering a proper noun present in neither draft.",
+      "context_sentence": "<!-- pages:215-222 -->  *LA DURR* ploughed the waters, bearing in h"
+    },
+    {
+      "old": "the confluence of the São Jorge and the Oyapock",
+      "new": "the confluence of the Saint-Georges and the Oyapock",
+      "reason": "Italian is San Giorgio; both drafts used the French Saint-Georges fitting the French penal colony, while the synthesis invented the Portuguese São Jorge.",
+      "context_sentence": "d’Argent, which rises at the confluence of the Saint-Georges and the Oyapock, at a relatively short d"
+    },
+    {
+      "old": "and then crossed the São Jorge",
+      "new": "and then crossed the Saint-Georges",
+      "reason": "Italian is San Giorgio; both drafts used the French Saint-Georges fitting the French penal colony, while the synthesis invented the Portuguese São Jorge.",
+      "context_sentence": "a stretch of fifty miles and then crossed the Saint-Georges, to make landfall on Bra"
+    }
+  ]
+}

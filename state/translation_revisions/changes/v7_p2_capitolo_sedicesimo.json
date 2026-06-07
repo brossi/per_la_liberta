@@ -1,0 +1,21 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_sedicesimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "is answered, too often, by a corresponding failure to perceive the true strength and character of others.",
+      "new": "is answered, too often, by a corresponding failure to perceive the true strength and character of others. When catastrophe abruptly cuts short the fantastic dreams, the proud and haughty spirit, overflowing with bitterness, will strive, in perfect good faith, to demonstrate that said catastrophe is principally owing to the worthlessness of one's companions in action.",
+      "reason": "Restores the dropped closing thesis sentence (both drafts had it); bruscamente = 'brusquely/abruptly' per Edgren 1901, so 'abruptly' over the draft's 'brutally'; dappocaggine = worthlessness per Zingarelli ('mancanza di valore, inetto').",
+      "context_sentence": "ate of one's own powers, is answered, too often, by a corresponding failure to perceive the true strength and character of others. When catastrophe abruptly cuts short the fantastic dreams, the proud and haughty spirit, overflowing with bitterness, will strive, in perfect good faith, to demonstrate that said catastrophe is principally owing to the worthlessness of one's companions in action.  What reason led Felice"
+    },
+    {
+      "old": "but amid the blandishments, it insinuates, unperceived, a muffled threat",
+      "new": "but amid the blandishments there is prudently inserted the muffled threat",
+      "reason": "Synthesis invented 'unperceived'; the Italian 'prudentemente inserita' means prudently inserted, restored from Claude's draft.",
+      "context_sentence": "his claws in our flesh; but amid the blandishments there is prudently inserted the muffled threat. A single phrase honestl"
+    }
+  ]
+}

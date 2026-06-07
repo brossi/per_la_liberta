@@ -26,7 +26,7 @@ As for the population, unarmed, misled by uncertain and contradictory reports, i
 
 Not a day passed but I was obliged to witness scenes of ferocity and cowardice, often entirely unprovoked, and the suppressed rage tempered my patriotism all the more swiftly.
 
-It found a first outburst at Desenzano. The garrison of Brescia, commanded by one De Domini, my maternal uncle, had effected its junction with Radetzky at that place. Learning of the presence of his two nephews, he wished to see them. He questioned us as to our political opinions. The uncle was a rabid *austriacante* and I was well aware of it. I expressed myself in bold and unrestrained language.
+It found a first outburst at Desenzano. The garrison of Brescia, commanded by one De Domini, my maternal uncle, had effected its junction with Radetzky at that place. Learning of the presence of his two nephews, he wished to see them. He questioned us as to our political opinions. The uncle was a rabid *austriacante* — a zealous partisan of Austria — and I was well aware of it. I expressed myself in bold and unrestrained language.
 
 The old soldier went pale and interrupted me. "These," he said, "are the accursed sentiments of your father. He has instilled them into your blood. Poor fool! In what do you trust? In what do you hope? Do you believe that four peasants armed with pitchfork and cudgel will suffice to frighten the most battle-hardened army in the world; to call into question the stability of the empire?" I contented myself with coolly alluding to Radetzky's retreat; to the revolution bursting forth from one end to the other of the usurped dominion.
 

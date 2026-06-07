@@ -4,7 +4,7 @@ THE following day, at La Roquette. They made us put on the grey uniform of priso
 
 We had been conveyed to the new prison separately and confined separately; yet our cells were so situated that we could see and speak to one another. A rectangular chamber, rather spacious, bare... four white walls, four windows, four doors. Whoever enters by the door communicating with the courtyard perceives, directly opposite, the door and window of Felice Orsini's cell; Pieri's cell lay beyond the left-hand wall; beyond the right-hand wall, my own.
 
-This constituted, for us, a great advantage over the Conciergerie; death was in prospect, yet it was pleased to be preceded by some measure of relief.
+This constituted, for us, a great advantage over the Conciergerie; death was in prospect, yet it was preceded by some measure of relief.
 
 Another circumstance contributed to render the present sad hour more bearable to me. My guards had followed me to La Roquette. They would sleep in turns in order to keep me under continuous surveillance; but this did not trouble me in the least, for I had no intention whatsoever of anticipating my end by self-destruction.
 

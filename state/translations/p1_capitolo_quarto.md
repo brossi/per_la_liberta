@@ -16,7 +16,7 @@ In this astonishing campaign, which certain historians pass over with a rapidity
 
 In his footsteps, by the road through Portogruaro, the only one that remained open, I too entered Venice, together with my brother Achille. Calvi admitted us at once into that legion of the Cacciatori delle Alpi, whose name became synonymous with heroism and with glory.
 
-During the close of 1848 and the first months of the following year, I thus had the opportunity to witness a marvellous spectacle. In my long existence I have known no other more potent in exalting the human soul... A people that, by sheer force of will, retempers its own fibre; that purges, in privation, in the grip of hunger, in the horrors of pestilence, in the baptism of its own blood, the shame of centuries of weakness, the cowardly resignation to servitude.
+During the close of 1848 and the first months of the following year, I thus had the opportunity to witness a marvellous spectacle. In my long existence I have known no other more potent in exalting the human soul... A people that, by sheer force of will, retempers its own fibre; that purges, in privation, in the grip of hunger, in the horrors of pestilence, in the baptism of its own blood, the shame of centuries of wantonness, the cowardly resignation to servitude.
 
 In destruction, the glimmers of life renewing itself, of greatness reaffirming itself.
 

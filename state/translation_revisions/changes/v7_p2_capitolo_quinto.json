@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_quinto",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "noble aspiration of his own — must not weigh",
+      "new": "noble aspiration of his own Fatherland — must not weigh",
+      "reason": "Restores the dropped noun \"Fatherland\" (della Patria sua) from Gemini's draft, preserving the our-Fatherland/his-Fatherland antithesis instead of leaving \"of his own\" dangling.",
+      "context_sentence": "who tramples upon every noble aspiration of his own Fatherland — must not weigh in the balance against t"
+    }
+  ]
+}

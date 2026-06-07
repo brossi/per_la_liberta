@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_ventesimo_settimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "The tactic adopted by the Cousin of steering our dinghy northward",
+      "new": "The tactic adopted by Gousin of steering our dinghy northward",
+      "reason": "Restores the proper name Gousin (both Claude and Gemini drafts); the synthesis misread the surname governed by dal as the common noun cousin.",
+      "context_sentence": "igantic before my eyes.  The tactic adopted by Gousin of steering our dinghy northward had produced its effect."
+    }
+  ]
+}

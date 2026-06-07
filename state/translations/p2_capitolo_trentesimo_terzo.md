@@ -23,7 +23,7 @@ For a moment, it seemed as though the Italian Government was destined to fulfil 
 
 Consul Corti was, on this point, perfectly right. The King of Italy and Napoleon III were bound together, and he who, under the Emperor’s pressure, had not hesitated to fire upon the man to whom he owed a crown, could not remain in doubt between that pressure and the defenceless rights of a simple, obscure citizen.
 
-They did not wish me to have a Fatherland! For some days I remained as though stunned; then I thought: “The despots are all in league, even without need of formal pacts, just as all the peoples of the world are brothers. I shall find tyrants to combat and good causes to defend everywhere.”
+They did not wish me to have a Fatherland! For some days I remained as though stunned; then I thought: “The despots are all in league, even without need of formal pacts, just as all the peoples of the world are brothers. I shall find bullies to combat and good causes to defend everywhere.”
 
 From this I concluded that what I had attempted for my Country’s benefit, to the extent of my powers, did not exempt me from my obligations toward the rest of mankind. I would have shown, if nothing else, that they were wrong to despise the cooperation of a patriot who, if he was not among the best, was not among the lowest either.
 

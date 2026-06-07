@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_nono",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "We watched the workers employed in the manufacture of cartridges emerge from the gateway",
+      "new": "We watched the brutally satisfied workers employed in the manufacture of cartridges emerge from the gateway",
+      "reason": "Restores dropped ironic qualifier 'brutalmente paghi' (the deliberate 'brutalmente…brutalmente' doubling); pago = satisfied/content per Edgren 1901 ('pago, ADJ.: satisfied (pleased)') and Zingarelli 1922 (soddisfatto), so 'satisfied' over the audit's 'compliant'.",
+      "context_sentence": "stood a hedge of Guards. We watched the brutally satisfied workers employed in the manufacture of cartridges emerge from the gateway two by two, four by four"
+    }
+  ]
+}

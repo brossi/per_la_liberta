@@ -54,4 +54,4 @@ Mingled among the Italians, I encountered in my wanderings a good number of Hung
 
 Fortunately, as though to confound the oppressors, Nature has so disposed her affairs that death itself is the great sower of life, and tyranny itself the great fecundator of every liberty!
 
-Despite the defeats, and the bloodletting, and the persecutions, life pulsed in our Fatherland — underground, but intense. Italians who were organising, who were conspiring, or who betrayed the feverish impatience to do so, I found in abundance in every centre. The logical conclusion drawn from the dreadful situation was that one must begin again from the beginning, do better, and conquer at any cost.
+Despite the defeats, and the blood drawn from it, and the persecutions, life pulsed in our Fatherland — underground, but intense. Italians who were organising, who were conspiring, or who betrayed the feverish impatience to do so, I found in abundance in every centre. The logical conclusion drawn from the dreadful situation was that one must begin again from the beginning, do better, and conquer at any cost.

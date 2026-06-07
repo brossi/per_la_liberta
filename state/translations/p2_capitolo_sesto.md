@@ -30,7 +30,7 @@ The reaction aroused by the misdeeds of Luigi Napoleon was too intense not to ma
 
 The attempt of that other daring Romagnole, Giovanni Pianori, failed because Napoleon, unable to shelter himself
 
-"Beneath the shield of a clear conscience,"
+"Under the hauberk of feeling himself pure,"
 
 wore, in secret, a coat of chain-mail. Pianori was struck down before he could fire his second shot. He swelled the company of those martyred by the guillotine. His brother, already embittered by political hatred, felt his fury redoubled in his breast at that tragic death. He left Italy, meditating a resounding vengeance. But no sooner had he set foot on French soil than he was arrested and deported to the hell of the tropical islands, like Galli and Redini, without a shadow of a trial.
 

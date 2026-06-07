@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_trentesimo_terzo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "I shall find tyrants to combat and good causes to defend everywhere.",
+      "new": "I shall find bullies to combat and good causes to defend everywhere.",
+      "reason": "Restores Gemini's 'bullies'; prepotenti = the overbearing/bullies, not tyrants (tiranni/despoti), preserving the deliberate contrast with 'despots' used two sentences earlier.",
+      "context_sentence": "the world are brothers. I shall find bullies to combat and good causes to defend everywhere.”  From this I concluded"
+    }
+  ]
+}

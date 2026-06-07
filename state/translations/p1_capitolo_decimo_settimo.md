@@ -42,9 +42,9 @@ That very evening I procured a passport under an assumed name and set out for Sw
 
 In Brussels, where I made a brief halt, I delivered a letter from the Master to dall'Ungaro, the Venetian Catullus. "Where is the Master, what is he doing?" he asked me, almost feverishly. And I, in his own verses:
 
-*"Mazzini is in every place where men tremble*
+*"Mazzini is in the place where men tremble*
 *That the hour supreme may reach the traitor's ear;*
-*Mazzini is in every place where men hope*
+*Mazzini is in every place where men labour*
 *To shed their blood for Italy entire!"*
 
 Having arrived in Zurich, I wished, before going to Calvi, to have my hands free and hastened to pay a visit to de Boni, to whom I likewise delivered a missive; a third I carried to Caronti of Como. Giuseppe Mazzini had charged me to be very much on my guard with this man, of whom he was highly suspicious. He did, however, contribute sums of some considerable amount to the good cause, and this restrained Mazzini from being rid of him.

@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_terzo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "rabid *austriacante* and I was well aware",
+      "new": "rabid *austriacante* — a zealous partisan of Austria — and I was well aware",
+      "reason": "Restores a gloss for the untranslated term; Claude's draft glosses austriacante as a zealous partisan of Austria so the meaning is not lost to the English reader.",
+      "context_sentence": "pinions. The uncle was a rabid *austriacante* — a zealous partisan of Austria — and I was well aware of it. I expressed mysel"
+    }
+  ]
+}

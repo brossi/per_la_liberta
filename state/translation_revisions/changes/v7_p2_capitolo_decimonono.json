@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_decimonono",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "an enemy come to ascertain, *de visu*, my last moments",
+      "new": "an enemy come to ascertain, *de visu*, my final features",
+      "reason": "Restores Gemini's 'my final features'; tratti reinforced by de visu means physical features/lineaments seen by sight, not temporal 'moments'.",
+      "context_sentence": "re, he had the effect of an enemy come to ascertain, *de visu*, my final features. And since death was nea"
+    }
+  ]
+}

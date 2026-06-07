@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_undicesimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "and the bloodletting, and",
+      "new": "and the blood drawn from it, and",
+      "reason": "Restores Gemini's \"the blood drawn from it\"; the clitic -le in \"sottrattole\" means the blood was drawn FROM the Fatherland, a relational sense the generic \"bloodletting\" drops.",
+      "context_sentence": "y!  Despite the defeats, and the blood drawn from it, and the persecutions, life p"
+    }
+  ]
+}

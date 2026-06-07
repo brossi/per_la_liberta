@@ -1,0 +1,21 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_primo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "This beardless boy smells of good health!",
+      "new": "This beardless boy must be tired of living!",
+      "reason": "Restores Gemini's idiomatic rendering; 'gli puzza la salute' means to be tired of living / asking for a beating, not a literal 'smells of good health'.",
+      "context_sentence": "set foot in it again.  \"This beardless boy must be tired of living!\" replied Bonacina, makin"
+    },
+    {
+      "old": "however rare and restrained as befitted every young English woman",
+      "new": "however rare and sparing in every English young lady",
+      "reason": "Removes the invented 'as befitted' (a notion of propriety absent from source and both drafts); restores Claude's faithful 'rare and sparing in every English young lady'.",
+      "context_sentence": "e energy of her gesture, however rare and sparing in every English young lady.  The Count di Rudio tol"
+    }
+  ]
+}

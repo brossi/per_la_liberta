@@ -1,0 +1,21 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p1_capitolo_decimo_quinto",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "The thing is to cast a spark — a small spark, a great flame! A thorny undertaking",
+      "new": "The thing is to cast a spark — *'Parva favilla gran fiamma seconda.'* A small spark kindles a great flame! A thorny undertaking",
+      "reason": "Restores the discarded Dante quotation and its gloss from Draft A (Claude); the final invented a loose paraphrase in place of the set-apart verse and its rendering.",
+      "context_sentence": "ous and almost tangible. The thing is to cast a spark — *'Parva favilla gran fiamma seconda.'* A small spark kindles a great flame! A thorny undertaking, not a hopeless one. Let"
+    },
+    {
+      "old": "Its green shutters were the sole contrasting note",
+      "new": "Its green grilles were the sole contrasting note",
+      "reason": "Restores Gemini's 'grilles'; 'griglie' means grilles/grates, not shutters (persiane/imposte).",
+      "context_sentence": "snow that surrounded it. Its green grilles were the sole contrasting note upon that vast whiteness"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 7,
+  "timestamp": "2026-06-07T03:02:32.364880+00:00",
+  "chapter_id": "p2_capitolo_settimo",
+  "source": "drift_correction",
+  "model": "claude-opus-4-8 (multi-agent drift audit)",
+  "changes": [
+    {
+      "old": "this union of hands that seek one another",
+      "new": "this union of right hands that seek one another",
+      "reason": "Restores Gemini's 'right hands'; destre = clasped right hands of a pledge/alliance, and the final dropped 'right', losing the handshake-of-allegiance image.",
+      "context_sentence": "will comprehend it. And this union of right hands that seek one another, today compelled to do s"
+    }
+  ]
+}
