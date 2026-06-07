@@ -1,0 +1,14 @@
+{
+  "version": 9,
+  "timestamp": "2026-06-07T04:01:28.962418+00:00",
+  "chapter_id": "p2_capitolo_settimo",
+  "source": "drift_correction",
+  "model": "manual (refuted-finding re-check: dictionary + source context)",
+  "changes": [
+    {
+      "old": "“How did Miss Cheney receive you! Did she hand over the affair to you!”",
+      "new": "“How Miss Cheney received you! She handed the affair over to you!”",
+      "reason": "Source punctuates with '!' not '?'; Allsop speaks laughing, knowingly ('among friends'). The lines are exclamatory/affirmative ('How she received you! She handed you the deal!'), not interrogative. Restores the mood. Refuted-finding re-check overturn."
+    }
+  ]
+}

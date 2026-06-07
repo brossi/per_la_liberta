@@ -1,0 +1,15 @@
+{
+  "version": 8,
+  "timestamp": "2026-06-07T03:51:01.120545+00:00",
+  "chapter_id": "prefazione",
+  "source": "drift_correction",
+  "model": "manual (dictionary + Dante canon)",
+  "changes": [
+    {
+      "old": "“Judges and sentences according to how he coils”",
+      "new": "“Judges and consigns according to how he coils”",
+      "reason": "Dante Inf. V.6: 'manda' = sends/dispatches/consigns (Minos consigning each soul to its circle), a verb distinct from 'giudica'; 'sentences' collapsed the two. 'Consigns' restores the dispatching sense (cf. Longfellow/Singleton 'sends', Hollander 'dispatches'). The originating finding of the drift audit, refuted by the verifier as borderline but confirmed against the Dante canon.",
+      "context_sentence": "Like a Minos who “Judges and consigns according to how he coils” he might have"
+    }
+  ]
+}

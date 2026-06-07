@@ -20,7 +20,7 @@ THE PRESENT volume might make some contribution to History; but it is not histor
 
 The Count di Rudio, so far removed, in time and in space, from the events he narrates, frequently protests that the miseries of politics no longer move him... Doubtless he deceives himself. Like a Minos who
 
-“Judges and sentences according to how he coils”
+“Judges and consigns according to how he coils”
 
 he might have, in the estimation of many of my countrymen, a value altogether relative; but he acquires a great one as a “human document,” and it is precisely as such that he is especially to be considered.
 
@@ -2539,7 +2539,7 @@ Yet the storm itself, which I almost blessed, was, unknown to me, the answer of 
 
 Here, in brief, is what came to pass during that first visit of mine. Orsini's apartment was on the ground floor. The porter accompanied me to the door, knocked, and when the door opened, discreetly withdrew. I entered with a bound and was on the point of embracing Orsini as a brother — he stood erect and waiting — when I noticed the presence of a third person... a young man sprawled with easy familiarity in an armchair. He was fair-haired, with cheeks and lips cleanly shaven, and had the look of a good-natured priest. I thereupon assumed the deferential air of the travelling salesman and, giving the name from the passport, offered to present “Tomaso Allsop” with a few samples of beer.
 
-I was rummaging in the carpet-bag, already turned inside out by the customs officers, when the false Allsop broke into a loud laugh. “We are among friends,” he said. And he introduced me, by my true name, to Antonio Gomez. He then asked me to explain my delay, and, helping things along, said: “How did Miss Cheney receive you! Did she hand over the affair to you!”
+I was rummaging in the carpet-bag, already turned inside out by the customs officers, when the false Allsop broke into a loud laugh. “We are among friends,” he said. And he introduced me, by my true name, to Antonio Gomez. He then asked me to explain my delay, and, helping things along, said: “How Miss Cheney received you! She handed the affair over to you!”
 
 I turned out my few belongings upon the table and set about removing the panel that concealed the mercury fulminate. A moment later it lay spread upon a newspaper — *Le Droit*, if memory does not deceive me. Felice Orsini was running his fingertips over it, as though to judge the degree of its moisture. His face, ordinarily so mobile and open, had assumed a rigid expression of deep melancholy. At last he said: “The supply is now complete, and not for nothing shall we have cast twelve apostles.” And he sighed.
 
@@ -4241,7 +4241,7 @@ The enterprise itself gave the various tendencies wider scope to define themselv
 
 The greatness of the republican soul shines all the more brilliantly from these contrasts. To repeat is of use: The monarchical entity never throws itself into the fray without an eye to its own interest and subordinates the unity of Italy to privileges which it proclaims inviolable; the republican entity, having inscribed its own epic in characters of blood, freely sacrifices upon the altar of the Fatherland both itself and its serene convictions.
 
-A true statesman, Vittorio Emanuele II was regarded by Garibaldi at that time as shrewd, yet foreshadowed by Dante as the Prince schooled by the powerful mind of Machiavelli. Giuseppe Mazzini, more sparing in judgement, contented himself with holding him better than his Ministers.
+A true statesman, Vittorio Emanuele II was regarded by Garibaldi at that time as an end, yet foreshadowed by Dante as the Prince schooled by the powerful mind of Machiavelli. Giuseppe Mazzini, more sparing in judgement, contented himself with holding him better than his Ministers.
 
 The days of disillusionment succeeded one another like lightning. Cavour, overwhelmed by unrelenting toil, succumbed before his time to the common fate. In England he was sincerely mourned; though, to shake his popularity, something of those secret pacts had already transpired — pacts very unwelcome to English liberalism — which, in the ill-fated “September Convention,” were to lead the first King of Italy to the renunciation of Rome and to the defence, against the Italians themselves, of the greatest among the enemies of our Country. The party of action hoped instead that, with the disappearance of Cavour, it would be given to it to draw the King from the baneful influence of Napoleon.
 
