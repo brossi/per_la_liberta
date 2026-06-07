@@ -34,10 +34,10 @@
   --leading: 1.55;
   --heading-tracking: 0.12em;
   --color-body: #483826;
-  --color-muted: #8b7b58;
+  --color-muted: #6f6243;
   --color-accent: #8b0000;
   --color-accent-hover: #b00000;
-  --paper: #e5d9b6;
+  --paper: #f2ebd8;
   --paper-button-hover: #f2f2f2;
   --border-light: #ddd;
   --border-ui: #a89a7e;
@@ -46,10 +46,67 @@
   --shadow-panel: 4px 0 24px rgba(0, 0, 0, 0.15);
   --hover-bg: rgba(0, 0, 0, 0.04);
   --backdrop-bg: rgba(0, 0, 0, 0.2);
+  /* Highlight washes behind active/linked text — tokenised so dark themes can
+     re-tint them (a red/blue wash at 8-15% alpha vanishes on a dark ground). */
+  --hl-accent-1: rgba(139, 0, 0, 0.08);
+  --hl-accent-2: rgba(139, 0, 0, 0.12);
+  --hl-prov-1: rgba(43, 87, 151, 0.10);
+  --hl-prov-2: rgba(43, 87, 151, 0.12);
+  --hl-prov-3: rgba(43, 87, 151, 0.15);
   --gutter: 2.5em;
   /* Right-hand space reserved for marginalia notes (matches .marginalia
      right offset, which is in the note's own 0.94em font size). */
   --marginalia-gutter: 19em;
+}
+
+/* === Selectable theme palettes ===
+   Set via data-theme on <html>. Default (no attribute) renders the "mid" cream.
+   Light themes vary only paper + muted ink; body/accent/provenance are shared.
+   Verified contrast: body AAA (>=7:1) on every theme; muted/accent/provenance AA
+   (>=4.5:1) on all except "original", kept faithful to the originally shipped tan. */
+:root[data-theme="original"] { --paper: #e5d9b6; --color-muted: #8b7b58; }
+:root[data-theme="warm"]     { --paper: #ece2c4; --color-muted: #6f6243; }
+:root[data-theme="cream"]    { --paper: #f0e8d2; --color-muted: #6f6243; }
+:root[data-theme="mid"]      { --paper: #f2ebd8; --color-muted: #6f6243; }
+:root[data-theme="ivory"]    { --paper: #f4eede; --color-muted: #6f6243; }
+:root[data-theme="bright"]   { --paper: #faf6ee; --color-muted: #665a3d; }
+
+/* Dark themes — three temperatures (warm / neutral / cool), all dark grounds at
+   ~L15%, no pure black or white. Distinguished by hue rather than darkness so
+   they read as genuine alternatives (perceptual ΔE 8-24 between grounds).
+   Every token re-derived; body AAA, muted/accent/provenance AA on each. */
+:root[data-theme="cocoa"] {           /* warm: desaturated to S26% so the ground doesn't vibrate (Material guidance) */
+  --color-body: #e8ddc6; --color-muted: #b09a78;
+  --color-accent: #e0866a; --color-accent-hover: #ea9a7e;
+  --color-provenance: #8fb3dd;
+  --paper: #332a1e; --paper-button-hover: #43392b;
+  --border-light: #463c2c; --border-ui: #645338; --border-ui-hover: #84724e;
+  --shadow-panel: 4px 0 24px rgba(0, 0, 0, 0.5);
+  --hover-bg: rgba(255, 255, 255, 0.06); --backdrop-bg: rgba(0, 0, 0, 0.55);
+  --hl-accent-1: rgba(224, 134, 106, 0.18); --hl-accent-2: rgba(224, 134, 106, 0.30);
+  --hl-prov-1: rgba(143, 179, 221, 0.20); --hl-prov-2: rgba(143, 179, 221, 0.24); --hl-prov-3: rgba(143, 179, 221, 0.30);
+}
+:root[data-theme="ash"] {             /* neutral: near-true gray-brown */
+  --color-body: #e6ddcf; --color-muted: #a9a094;
+  --color-accent: #df8568; --color-accent-hover: #e9967b;
+  --color-provenance: #8db0db;
+  --paper: #2a2725; --paper-button-hover: #3a3633;
+  --border-light: #423e3a; --border-ui: #5e5852; --border-ui-hover: #807870;
+  --shadow-panel: 4px 0 24px rgba(0, 0, 0, 0.5);
+  --hover-bg: rgba(255, 255, 255, 0.06); --backdrop-bg: rgba(0, 0, 0, 0.55);
+  --hl-accent-1: rgba(223, 133, 104, 0.18); --hl-accent-2: rgba(223, 133, 104, 0.30);
+  --hl-prov-1: rgba(141, 176, 219, 0.20); --hl-prov-2: rgba(141, 176, 219, 0.24); --hl-prov-3: rgba(141, 176, 219, 0.30);
+}
+:root[data-theme="slate"] {           /* cool: blue-gray ground, cool-tinted ink */
+  --color-body: #dde3e9; --color-muted: #99a3af;
+  --color-accent: #e08a72; --color-accent-hover: #ea9c83;
+  --color-provenance: #8cb7e4;
+  --paper: #22262f; --paper-button-hover: #30343d;
+  --border-light: #383c45; --border-ui: #50545f; --border-ui-hover: #6e7380;
+  --shadow-panel: 4px 0 24px rgba(0, 0, 0, 0.55);
+  --hover-bg: rgba(255, 255, 255, 0.06); --backdrop-bg: rgba(0, 0, 0, 0.6);
+  --hl-accent-1: rgba(224, 138, 114, 0.18); --hl-accent-2: rgba(224, 138, 114, 0.30);
+  --hl-prov-1: rgba(140, 183, 228, 0.20); --hl-prov-2: rgba(140, 183, 228, 0.24); --hl-prov-3: rgba(140, 183, 228, 0.30);
 }
 
 html {
@@ -576,6 +633,113 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   color: var(--paper);
 }
 
+/* === Theme Picker === */
+.theme-controls {
+  position: relative;
+  display: flex;
+}
+
+.theme-controls > button {
+  background: var(--paper);
+  border: 1px solid var(--border-ui);
+  border-radius: 3px;
+  padding: 0.3em 0.55em;
+  font-size: 1em;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-body);
+}
+
+.theme-controls > button:hover {
+  border-color: var(--border-ui-hover);
+}
+
+.theme-menu {
+  position: absolute;
+  top: calc(100% + 0.4em);
+  right: 0;
+  background: var(--paper);
+  border: 1px solid var(--border-ui);
+  border-radius: 5px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  padding: 0.5em;
+  width: 13em;
+  display: none;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.theme-menu.open {
+  display: flex;
+}
+
+.theme-menu .group-label {
+  font-size: 0.62em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0.55em 0.3em 0.2em;
+}
+
+.theme-menu .group-label:first-child {
+  margin-top: 0.15em;
+}
+
+.theme-opt {
+  display: flex;
+  align-items: center;
+  gap: 0.55em;
+  padding: 0.32em 0.4em;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--color-body);
+  font: inherit;
+  font-size: 0.82em;
+  text-align: left;
+  width: 100%;
+}
+
+.theme-opt:hover {
+  background: var(--hover-bg);
+}
+
+.theme-opt.active {
+  background: var(--hover-bg);
+  font-weight: 600;
+}
+
+.theme-opt.active .theme-swatch {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.theme-swatch {
+  flex: none;
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 700;
+  font-family: 'Bodoni Moda', Georgia, serif;
+}
+
+/* Swatch faces mirror each theme's paper ground + ink glyph */
+.sw-original { background: #e5d9b6; color: #483826; }
+.sw-warm     { background: #ece2c4; color: #483826; }
+.sw-cream    { background: #f0e8d2; color: #483826; }
+.sw-mid      { background: #f2ebd8; color: #483826; }
+.sw-ivory    { background: #f4eede; color: #483826; }
+.sw-bright   { background: #faf6ee; color: #483826; }
+.sw-cocoa    { background: #332a1e; color: #e8ddc6; }
+.sw-ash      { background: #2a2725; color: #e6ddcf; }
+.sw-slate    { background: #22262f; color: #dde3e9; }
+
 /* === Single-Language Focus Mode === */
 /* The non-focused column is simply removed from layout. */
 .lang-it-only .recto,
@@ -850,7 +1014,7 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
 .marginalia.active,
 .marginalia.highlight {
   color: var(--color-body);
-  background: rgba(139, 0, 0, 0.08);
+  background: var(--hl-accent-1);
   border-left-width: 2.5px;
   cursor: pointer;
 }
@@ -858,11 +1022,11 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
 .marginalia.prov:hover,
 .marginalia.prov.active,
 .marginalia.prov.highlight {
-  background: rgba(43, 87, 151, 0.10);
+  background: var(--hl-prov-1);
 }
 
 .revised.highlight {
-  background: rgba(139, 0, 0, 0.12);
+  background: var(--hl-accent-2);
   border-bottom-style: solid;
 }
 
@@ -884,7 +1048,7 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
 }
 
 .provenance-mark.highlight {
-  background: rgba(43, 87, 151, 0.12);
+  background: var(--hl-prov-2);
   border-bottom-style: solid;
 }
 
@@ -916,12 +1080,21 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
 }
 
 .italian-linked.highlight {
-  background: rgba(43, 87, 151, 0.15);
+  background: var(--hl-prov-3);
   border-radius: 2px;
 }
 
 /* === Print / PDF (WeasyPrint paged media) === */
 @media print {
+  /* Force the light palette on paper regardless of the screen theme selected. */
+  :root, :root[data-theme] {
+    --color-body: #483826; --color-muted: #6f6243;
+    --color-accent: #8b0000; --color-accent-hover: #b00000;
+    --color-provenance: #2b5797; --paper: #fff;
+    --hl-accent-1: rgba(139, 0, 0, 0.08); --hl-accent-2: rgba(139, 0, 0, 0.12);
+    --hl-prov-1: rgba(43, 87, 151, 0.10); --hl-prov-2: rgba(43, 87, 151, 0.12); --hl-prov-3: rgba(43, 87, 151, 0.15);
+  }
+
   @page {
     size: 7in 10in;
     margin: 1in 0.75in 1in 0.75in;
