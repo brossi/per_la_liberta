@@ -20,7 +20,7 @@ THE PRESENT volume might make some contribution to History; but it is not histor
 
 The Count di Rudio, so far removed, in time and in space, from the events he narrates, frequently protests that the miseries of politics no longer move him... Doubtless he deceives himself. Like a Minos who
 
-“Judges and sentences according to how he coils”
+“Judges and consigns according to how he coils”
 
 he might have, in the estimation of many of my countrymen, a value altogether relative; but he acquires a great one as a “human document,” and it is precisely as such that he is especially to be considered.
 

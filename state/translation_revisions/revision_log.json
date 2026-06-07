@@ -1,5 +1,5 @@
 {
-    "current_version": 7,
+    "current_version": 8,
     "revisions": [
         {
             "version": 1,
@@ -198,6 +198,15 @@
                 "p2_capitolo_ventesimo_settimo"
             ],
             "snapshot_dir": "2026-06-07T03-02-32"
+        },
+        {
+            "version": 8,
+            "timestamp": "2026-06-07T03-51-01",
+            "source": "drift_correction",
+            "scope": [
+                "prefazione"
+            ],
+            "snapshot_dir": "2026-06-07T03-51-01"
         }
     ]
 }
