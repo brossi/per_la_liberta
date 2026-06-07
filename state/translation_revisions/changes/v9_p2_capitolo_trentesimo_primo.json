@@ -1,0 +1,14 @@
+{
+  "version": 9,
+  "timestamp": "2026-06-07T04:01:28.962418+00:00",
+  "chapter_id": "p2_capitolo_trentesimo_primo",
+  "source": "drift_correction",
+  "model": "manual (refuted-finding re-check: dictionary + source context)",
+  "changes": [
+    {
+      "old": "was regarded by Garibaldi at that time as shrewd, yet foreshadowed by Dante",
+      "new": "was regarded by Garibaldi at that time as an end, yet foreshadowed by Dante",
+      "reason": "'come fine' = the noun 'il fine' (an end/goal), not the adjective 'fine' (shrewd) — settled by the parallel two paragraphs later: 'non come fine, ma come mezzo' (not as an end, but as a means). Restores the end/means motif. Refuted-finding re-check overturn."
+    }
+  ]
+}
