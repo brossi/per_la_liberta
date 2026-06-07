@@ -47,6 +47,9 @@
   --hover-bg: rgba(0, 0, 0, 0.04);
   --backdrop-bg: rgba(0, 0, 0, 0.2);
   --gutter: 2.5em;
+  /* Right-hand space reserved for marginalia notes (matches .marginalia
+     right offset, which is in the note's own 0.94em font size). */
+  --marginalia-gutter: 19em;
 }
 
 html {
@@ -256,9 +259,11 @@ body {
   font-style: italic;
 }
 
-/* Page citations survive marginalia toggle */
+/* Page citations live in the right gutter alongside the notes, so they are
+   part of the marginalia: hidden when marginalia are off. This keeps the
+   Italian and English columns the same width (both centered) by default. */
 .no-marginalia .page-cite {
-  display: block;
+  display: none;
 }
 
 /* === Two-Column Spread === */
@@ -267,8 +272,19 @@ body {
   grid-template-columns: minmax(0, 33em) minmax(0, 33em);
   gap: var(--gutter);
   align-items: start;
-  justify-content: start;
+  justify-content: center;
+  box-sizing: border-box;
   overflow: visible;
+}
+
+/* The right-hand gutter holds the page citations and the revision/provenance
+   notes — together "the marginalia", all on the English/recto side. Reserve
+   that gutter only when marginalia are shown, so the text columns + gutter
+   center as one balanced block. When marginalia are off there is no gutter,
+   so the Italian and English columns are the same width and both center
+   outright. Always skipped in Italian-only view (no right-margin content). */
+body:not(.no-marginalia):not(.lang-it-only) .spread {
+  padding-right: var(--marginalia-gutter);
 }
 
 .verso {
@@ -501,16 +517,23 @@ body {
 }
 
 /* === Font Size Controls === */
-.font-size-controls {
+.top-right-controls {
   position: fixed;
   top: 0.8em;
   right: 0.8em;
   z-index: 900;
   display: flex;
+  gap: 0.5em;
+}
+
+.font-size-controls,
+.lang-focus-controls {
+  display: flex;
   gap: 0;
 }
 
-.font-size-controls button {
+.font-size-controls button,
+.lang-focus-controls button {
   background: var(--paper);
   border: 1px solid var(--border-ui);
   padding: 0.3em 0.6em;
@@ -520,26 +543,65 @@ body {
   line-height: 1;
 }
 
-.font-size-controls button:first-child {
+.lang-focus-controls button {
+  font-size: 0.8em;
+  letter-spacing: 0.05em;
+  padding: 0.45em 0.7em;
+}
+
+.font-size-controls button:first-child,
+.lang-focus-controls button:first-child {
   border-radius: 3px 0 0 3px;
 }
 
-.font-size-controls button:not(:last-child) {
+.font-size-controls button:not(:last-child),
+.lang-focus-controls button:not(:last-child) {
   border-right: none;
 }
 
-.font-size-controls button:last-child {
+.font-size-controls button:last-child,
+.lang-focus-controls button:last-child {
   border-radius: 0 3px 3px 0;
 }
 
-.font-size-controls button:hover {
+.font-size-controls button:hover,
+.lang-focus-controls button:hover {
   color: var(--color-body);
   border-color: var(--border-ui-hover);
 }
 
-.font-size-controls button.active {
+.font-size-controls button.active,
+.lang-focus-controls button.active {
   background: var(--color-body);
   color: var(--paper);
+}
+
+/* === Single-Language Focus Mode === */
+/* The non-focused column is simply removed from layout. */
+.lang-it-only .recto,
+.lang-it-only .chapter-title-col[lang="en"],
+.lang-it-only .title-col[lang="en"],
+.lang-en-only .verso,
+.lang-en-only .chapter-title-col[lang="it"],
+.lang-en-only .title-col[lang="it"],
+.lang-it-only .part-page h2[lang="en"],
+.lang-en-only .part-page h2[lang="it"] {
+  display: none;
+}
+
+/* Focus mode is a single centered column (the other column is display:none). */
+.lang-it-only .spread,
+.lang-en-only .spread {
+  grid-template-columns: minmax(0, 36em);
+}
+
+.lang-it-only .verso {
+  border-right: none;
+  padding-right: 0;
+}
+
+.lang-en-only .recto {
+  padding-left: 0;
 }
 
 /* === Chapter Index Panel (slides from right) === */
@@ -883,7 +945,7 @@ body {
     padding: 0;
   }
 
-  .toc-trigger, .toc-panel, .toc-backdrop, .font-size-controls, .marginalia, .scan-qr {
+  .toc-trigger, .toc-panel, .toc-backdrop, .top-right-controls, .marginalia, .scan-qr {
     display: none;
   }
 
