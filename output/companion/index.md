@@ -19,7 +19,7 @@ This companion gathers reader's aids for the English translation of Crespi's 191
 
 There is no required order. For *what happens*, read the [Summary](summary.md) and stop at whatever depth you need. For *who these people were* and *what was at stake*, dip into the [Personae](personae.md) and [Event Context](events.md). The [Timeline](timeline.md) ties everything to dates and source pages; the [Glossary](glossary.md) is for quick lookups.
 
-## A note on sourcing — how to read the two voices
+## A note on sourcing — how to read the voices
 
 *Per la libertà!* is not a neutral history. It is a **partisan memoir**: di Rudio was a lifelong Mazzinian republican, fiercely anticlerical and hostile to the House of Savoy, and Crespi reproduces his voice deliberately. The book's heroes (Mazzini, Calvi, Orsini) and villains (Napoleon III, Pius IX, Cavour's "practical" monarchy) are *the book's*, and these companions present them as such — as the memoir sees them, citable to the chapters where they appear.
 

@@ -50,7 +50,7 @@ Chapter references use the form *P1 Ch. 2 (pp. 15–23)*; pages are the source s
 ## London, marriage, and the road to the conspiracy (1855–1857)
 
 - **mid-1850s** — Destitute in London's émigré world: the Drury Lane chorus, bottle-covering at the Wapping docks; teaches Italian to Sara Mancherini and her cousin Elisa, who secretly sustains him. *(P2 Ch. 1–2, pp. 127–136)*
-- **9 December 1855** — Marries Elisa Cheney. *(P2 Ch. 3, pp. 136–141)*
+- **9 December 1855** — Marries Elisa, the Englishwoman of the Mancherini household. *(P2 Ch. 3, pp. 136–141)*
 - **1855–56** — Nearly killed intervening in the Rossi–Foschini affair; by the book's account Foschini later died with Carlo Pisacane in the failed Sapri expedition, which di Rudio reads as a sign of Mazzini's new southern strategy. *(P2 Ch. 4, pp. 142–143)*
 - **September 1857** — In Nottingham, di Rudio aids a passing Italian exile who in turn mentions him to Felice Orsini at Birmingham; Orsini ("The very man I am looking for!") summons di Rudio to London by letter and revives the plan to kill Napoleon III. *(P2 Ch. 5, pp. 144–148)*
 
@@ -60,7 +60,7 @@ Chapter references use the form *P1 Ch. 2 (pp. 15–23)*; pages are the source s
 - **9 January 1858** — The steamer makes Calais twelve hours late (5 a.m.); he goes on by train to Paris on a Portuguese passport as "Giovanni da Sylva" (supplied by Simon Bernard), to find Orsini absent from the platform. *(P2 Ch. 7, pp. 154–156)*
 - **12 January 1858** — Orsini walks the conspirators through the plan at the piazza of the Opéra. *(P2 Ch. 8, pp. 157–160)*
 - **14 January 1858** — Outside the Opéra in the Rue Le Peletier, the bombs are thrown; Gomez throws the first prematurely, di Rudio the second. *(P2 Ch. 9–10, pp. 161–165)*
-  > **Historical note** — Three bombs were thrown at the imperial carriage outside the Salle Le Peletier on the evening of **14 January 1858**; the Emperor and Empress were unhurt, but roughly eight bystanders were killed and some 150 wounded. *(Source: Wikipedia, "Orsini affair".)*
+  > **Historical note** — Three bombs were thrown at the imperial carriage outside the Salle Le Peletier on the evening of **14 January 1858**; the Emperor and Empress were unhurt, but roughly eight people were killed and some 150 wounded. *(Source: Wikipedia, "Orsini affair".)*
 
 ## Trial, the scaffold, and the penal colony (1858–1859)
 
@@ -80,7 +80,7 @@ Chapter references use the form *P1 Ch. 2 (pp. 15–23)*; pages are the source s
 - **24 December 1859 → 29 February 1860** — Sails for England aboard the brig *John Romelly*, reaching London penniless. *(P2 Ch. 28, pp. 240–245)*
 - **1860** — Clears his name of Simon Bernard's calumny that he bought his freedom by informing, vindicated by witnesses and Mazzini's published attestation; endures poverty and the death of an infant child. *(P2 Ch. 29–30, pp. 245–252)*
   > **Historical note** — Simon Bernard was tried in London in 1858 for his part in the Orsini plot and **acquitted** by the jury — against the judge's summing-up, with Edwin James for the defense — a celebrated case that strained Anglo-French relations. *(Source: Wikipedia, "Simon François Bernard".)*
-- **1859–1861** — From exile, di Rudio follows the war in Italy — welcoming unification but condemning its terms, the reliance on Napoleon III and the cession of Nice and Savoy. *(P2 Ch. 25, 31, pp. 253–258)*
+- **1859–1861** — From exile, di Rudio follows the war in Italy — welcoming unification but condemning its terms, the reliance on Napoleon III and the cession of Nice and Savoy. *(P2 Ch. 31, pp. 253–258)*
   > **Historical note** — The Second War of Independence (1859) and Garibaldi's Expedition of the Thousand (sailed from Quarto, landed at Marsala, 1860) led to the **Kingdom of Italy, proclaimed 17 March 1861** — without Rome or Venetia. *(Sources: Wikipedia, "Expedition of the Thousand"; "Unification of Italy".)*
 
 ## Aspromonte and departure (1862–1864)
