@@ -2,7 +2,7 @@
 
 Quick reference for the places, organizations, terms, and vessels *Per la libertà!* names in passing — the things the memoir assumes its reader already recognizes. Each entry gives a brief gloss — what the thing is and where the book names it — and, where an outside fact corrects, confirms, or deepens it, a demarcated **Historical note** checked against the record (see [the index](index.md) for the convention). The notes are uneven by design: a pivotal site or a traceable ship earns more than a passing one. Fuller treatment of the *episodes* these terms belong to is in the [Event Context](events.md); the *people* are in the [Dramatis Personae](personae.md).
 
-Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with pages keyed to the source scan via `data/chapter_pages.json`.
+Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with pages keyed to the source scan.
 
 ---
 

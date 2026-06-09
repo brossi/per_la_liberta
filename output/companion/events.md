@@ -6,7 +6,7 @@ Framing notes on the historical episodes *Per la libertà!* dramatizes — the p
 - **> Historical note** — external context, checked against outside sources before it is stated, so the reader can measure the memoir against the record. Where the two differ, the note says so.
 - **> Scholarship** — what the standard academic literature on the episode adds: interpretation, scale, and the points where historians confirm, complicate, or contradict the memoir's partisan telling. Each names the work it draws on; full details are in [Sources & further reading](#sources--further-reading) below.
 
-Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with pages keyed to the source scan via `data/chapter_pages.json`.
+Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with pages keyed to the source scan.
 
 ---
 

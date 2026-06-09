@@ -8,7 +8,7 @@ The same three voices used elsewhere in this companion apply (see [the index](in
 - **> Historical note** — external, independently verifiable context, checked before it is stated.
 - **> Scholarship** — what the standard academic literature contributes; full details are in the [Event Context](events.md) bibliography unless given here.
 
-Citations use the companion's form — e.g. *P2 Ch. 33 (pp. 264–268)* — with pages keyed to the source scan via `data/chapter_pages.json`.
+Citations use the companion's form — e.g. *P2 Ch. 33 (pp. 264–268)* — with pages keyed to the source scan.
 
 ---
 
@@ -120,4 +120,4 @@ This is the book's most revealing tension, and it sets it knowingly. di Rudio re
 
 ## A note on sources
 
-These essays are grounded first in the chapters cited from the translation; the page ranges are keyed to `data/chapter_pages.json`. External facts in **Historical note** callouts are checked against general reference works before being stated, and the **Scholarship** callouts draw on the academic literature gathered in the [Event Context](events.md#sources--further-reading) bibliography — chiefly Denis Mack Smith (*Cavour*), Lucy Riall (*Garibaldi: Invention of a Hero*), and Maurizio Isabella (*Risorgimento in Exile*). None of those works treats *Per la libertà!* itself; they are the record against which the memoir's ideas are read.
+These essays are grounded first in the chapters cited from the translation; the page ranges are keyed to the source scan. External facts in **Historical note** callouts are checked against general reference works before being stated, and the **Scholarship** callouts draw on the academic literature gathered in the [Event Context](events.md#sources--further-reading) bibliography — chiefly Denis Mack Smith (*Cavour*), Lucy Riall (*Garibaldi: Invention of a Hero*), and Maurizio Isabella (*Risorgimento in Exile*). None of those works treats *Per la libertà!* itself; they are the record against which the memoir's ideas are read.

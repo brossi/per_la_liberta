@@ -38,7 +38,7 @@ This keeps the memoir's slanted, first-person account visibly distinct from the 
 
 ## Citation convention
 
-Throughout, chapter references use the same form as the summary — e.g. *Part 2, Ch. 10 (pp. 163–165)* — where page numbers refer to the source scan (Library of Congress copy, pp. 7–268), mapped in `data/chapter_pages.json`.
+Throughout, chapter references use the same form as the summary — e.g. *Part 2, Ch. 10 (pp. 163–165)* — where page numbers refer to the source scan (Library of Congress copy, pp. 7–268).
 
 ## A note on provenance
 
