@@ -897,7 +897,9 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   flex-direction: column;
   gap: 0.4em;
   border-top: 1px solid var(--border-light);
-  background: var(--paper);
+  /* Faint accent wash (over the panel's paper) to set the apparatus footer
+     apart; echoes the accent colour of the Reader's Companion link. */
+  background: var(--hl-accent-1);
   padding: 0.8em 1.2em max(1.5em, env(safe-area-inset-bottom, 0px));
 }
 .toc-panel-footer a {
