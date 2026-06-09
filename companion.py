@@ -272,6 +272,11 @@ def _link_sources(text: str) -> list[Token]:
         link_open = Token("link_open", "a", 1)
         link_open.attrSet("href", url)
         link_open.attrSet("class", "source-cite")
+        # Citations leave the reading surface — open in a new tab so the reader
+        # keeps their place; rel guards the opener. The ::after icon (CSS, keyed
+        # on target=_blank) warns of the jump, per WCAG G200.
+        link_open.attrSet("target", "_blank")
+        link_open.attrSet("rel", "noopener")
         out += [link_open, _text_token(title), Token("link_close", "a", -1)]
         pos = end
     if pos < len(text):
@@ -285,7 +290,14 @@ def _rewrite_inline_children(children: list[Token], citation_map: dict, docs_roo
     link_depth = 0
     for ch in children:
         if ch.type == "link_open":
-            ch.attrSet("href", _rewrite_link_href(ch.attrGet("href") or ""))
+            href = _rewrite_link_href(ch.attrGet("href") or "")
+            ch.attrSet("href", href)
+            # External destinations open in a new tab (same rule as the generated
+            # source-cite links); internal companion/edition links stay same-tab
+            # so the Back button works as the reader expects.
+            if re.match(r"^https?:", href):
+                ch.attrSet("target", "_blank")
+                ch.attrSet("rel", "noopener")
             link_depth += 1
             out.append(ch)
         elif ch.type == "link_close":

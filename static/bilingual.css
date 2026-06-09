@@ -1187,6 +1187,18 @@ body.companion {
 }
 .companion-page a.source-cite:hover { text-decoration: none; opacity: 0.75; }
 
+/* External links open in a new tab; the ↗ marks the jump so it isn't silent
+   (WCAG G200). Keyed on target="_blank" so the icon and the new-tab behaviour
+   can never drift apart. Internal chapter/companion links stay same-tab. */
+.companion-page a[target="_blank"]::after {
+  content: "\2197";
+  font-size: 0.75em;
+  margin-left: 0.12em;
+  vertical-align: top;
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
 /* Three-voice callouts (blockquotes). */
 .companion-page blockquote {
   margin: 1.2em 0;
