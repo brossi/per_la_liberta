@@ -1298,6 +1298,55 @@ body.companion {
   margin: 2em 0;
 }
 
+/* Landing hub: a card grid routing to the companion's sections. auto-fit/minmax
+   gives two columns at the 40em body width and collapses to one when narrow,
+   without a media query. Built from tokens so it tracks all themes. */
+.companion-hub {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+  gap: 0.9em;
+  margin: 1.8em 0 1em;
+}
+.companion-hub .hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  padding: 0.9em 1em;
+  border: 1px solid var(--border-light);
+  border-left: 3px solid var(--border-ui);
+  border-radius: 2px;
+  background: var(--paper);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.companion-hub .hub-card:hover {
+  background: var(--hl-accent-1);
+  border-left-color: var(--color-accent);
+}
+.companion-hub .hub-label {
+  font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
+  font-size: 1.02em;
+  letter-spacing: 0.03em;
+  color: var(--color-body);
+}
+.companion-hub .hub-blurb {
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: var(--color-muted);
+}
+.companion-hub .hub-badge {
+  font-size: 0.74em;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  text-transform: uppercase;
+}
+.companion-page .companion-hub-more {
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--color-muted);
+  margin: 0 0 2em;
+}
+
 .companion-footer {
   max-width: 40em;
   margin: 0 auto;

@@ -4,6 +4,8 @@
 
 > **How to read this summary.** It is built in five tiers, from broadest to most detailed. Tier 1 is a single sentence; Tier 2 a short synopsis; Tier 3 a one- to two-page treatment; Tier 4 a summary of each of the book's two parts; Tier 5 a chapter-by-chapter outline of all 58 chapters. Stop at whatever depth you need — each tier is self-contained, and the tiers below it only add resolution. Page numbers throughout refer to the source scan (Library of Congress copy, pp. 7–268).
 
+> **On sourcing.** The book-derived content here was assembled from a chapter-by-chapter reading of the translation and then independently fact-checked against the source chapters. The standard is **fidelity of substance, not of letter**: a summary may carry a name or date the book establishes in a neighboring chapter, or supply a verified historical date for the reader's benefit, but it never invents what is absent from both the book and the historical record, nor states as fact anything a chapter contradicts. External facts in **Historical note** callouts are confirmed against the cited source before being stated.
+
 ---
 
 ## Tier 1 — Logline
