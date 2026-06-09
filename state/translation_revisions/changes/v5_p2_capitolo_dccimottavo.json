@@ -6,8 +6,8 @@
   "model": "claude-sonnet-4-6",
   "changes": [
     {
-      "old": "But the intense hatred towards the Master dissolved on the day that the guards and Giulio Favre informed Orsini of the noble defence of him made by the \"Prophet\" on the morrow of the attempt, at a time when other patriots, scrupulous as to the means of redeeming their country, had all but branded him a common assassin.",
-      "new": "But the old resentment towards the Master dissolved on the day that the guards and Giulio Favre informed Orsini of the noble defence of him made by the \"Prophet\" on the morrow of the attempt, at a time when other patriots, scrupulous as to the means of redeeming their country, had all but branded him a common assassin.",
+      "old": "But the intense hatred towards the Master dissolved on the day that the guards and Giulio Favre informed Orsini of the noble defense of him made by the \"Prophet\" on the morrow of the attempt, at a time when other patriots, scrupulous as to the means of redeeming their country, had all but branded him a common assassin.",
+      "new": "But the old resentment towards the Master dissolved on the day that the guards and Giulio Favre informed Orsini of the noble defense of him made by the \"Prophet\" on the morrow of the attempt, at a time when other patriots, scrupulous as to the means of redeeming their country, had all but branded him a common assassin.",
       "reason": "Changed (no dictionary annotation provided)",
       "context_sentence": "But the old resentment towards the Master dissolved on the day that the guards and Giulio Favre info"
     }

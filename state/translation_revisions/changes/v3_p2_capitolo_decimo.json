@@ -6,7 +6,7 @@
   "model": "claude-sonnet-4-6",
   "changes": [
     {
-      "old": "iron armour cunningly disguised",
+      "old": "iron armor cunningly disguised",
       "new": "iron cuirasses cunningly disguised",
       "reason": "Edgren: corazza = CUIRASS (primary definition), armour (secondary); 'ferree corazze ben dissimulate' more precisely rendered as iron cuirasses",
       "context_sentence": "ch Napoleon III sat, as it were concealed, behind iron cuirasses cunningly disguised, came second and was attended before and behind b"

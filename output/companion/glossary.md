@@ -52,7 +52,7 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 *The hilltop Republic of San Marino on Monte Titano — period view, c. 1855. Wikimedia Commons; public domain.*
 
-**Rue Le Peletier (the Opéra).** The street before the old Paris opera house where the *attentat* was carried out on 14 January 1858; di Rudio and Orsini took their post across from the theatre by the *Broggi* trattoria, and it was here di Rudio threw the second bomb at the imperial carriage. *(P2 Ch. 8, pp. 157–160; P2 Ch. 10, pp. 163–165)*
+**Rue Le Peletier (the Opéra).** The street before the old Paris opera house where the *attentat* was carried out on 14 January 1858; di Rudio and Orsini took their post across from the theater by the *Broggi* trattoria, and it was here di Rudio threw the second bomb at the imperial carriage. *(P2 Ch. 8, pp. 157–160; P2 Ch. 10, pp. 163–165)*
 
 <img src="images/salle_le_peletier.jpg" alt="The Salle Le Peletier, the Paris Opéra" width="460">
 
@@ -72,7 +72,7 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 <img src="images/conciergerie.jpg" alt="The Conciergerie, Paris" width="460">
 
-*The Conciergerie on the Île de la Cité — watercolour view by Henry Edridge, 1818. Yale Center for British Art (via Wikimedia Commons); CC0 (public domain).*
+*The Conciergerie on the Île de la Cité — watercolor view by Henry Edridge, 1818. Yale Center for British Art (via Wikimedia Commons); CC0 (public domain).*
 
 > **Historical note** — The Conciergerie, the medieval former royal palace on the Île de la Cité, is most infamous as the antechamber of the guillotine during the Revolutionary Terror of 1793–94, when Marie Antoinette and thousands of others were held there before execution; it remained in use as a prison until 1934. *(Source: Wikipedia, "Conciergerie".)*
 
@@ -92,9 +92,9 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 **Cayenne.** The capital of French Guiana, and in the book the shorthand for its whole penal colony — the convict's dreaded destination, "the dry guillotine of Cayenne." di Rudio's two stations within it were the Montagne d'Argent and the Île du Salut. *(P2 Ch. 21–23, pp. 212–225)*
 
-<img src="images/cayenne_view.jpg" alt="The harbour of Cayenne, French Guiana" width="460">
+<img src="images/cayenne_view.jpg" alt="The harbor of Cayenne, French Guiana" width="460">
 
-*The harbour of Cayenne, capital of French Guiana — wood engraving after Édouard Riou, 1866 (Le Tour du monde). Wikimedia Commons; public domain.*
+*The harbor of Cayenne, capital of French Guiana — wood engraving after Édouard Riou, 1866 (Le Tour du monde). Wikimedia Commons; public domain.*
 
 **Montagne d'Argent.** A former plantation turned penal station in French Guiana, near the Brazilian frontier, where di Rudio landed on 11 December 1858 and where yellow fever killed all but sixty-three of more than six hundred convicts — his eight escape-plot accomplices among the dead. *(P2 Ch. 22, pp. 216–222)*
 

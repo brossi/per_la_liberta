@@ -44,7 +44,7 @@ Throughout, chapter references use the same form as the summary — e.g. *Part 2
 
 The book-attributed content in these companions was assembled from a chapter-by-chapter reading pass over the English translation, and has since been **independently fact-checked against the source chapters**. External facts in **Historical note** callouts are confirmed against the cited source before being stated; a callout cites only sources actually consulted. Where the record is uncertain, or the book disagrees with itself or with the historical record, the text says so.
 
-The standard applied is **fidelity of substance, not of letter**: a summary may carry a name or date the book establishes in a neighbouring chapter, and may supply a verified historical date for the reader's benefit — but it must not invent what is absent from both the book and the historical record, nor state as fact anything the chapter contradicts. The fact-check was filtered through that test; corrections were made for genuine fabrications, inversions, and misattributions, while faithful compression and legitimate cross-chapter synthesis were left intact.
+The standard applied is **fidelity of substance, not of letter**: a summary may carry a name or date the book establishes in a neighboring chapter, and may supply a verified historical date for the reader's benefit — but it must not invent what is absent from both the book and the historical record, nor state as fact anything the chapter contradicts. The fact-check was filtered through that test; corrections were made for genuine fabrications, inversions, and misattributions, while faithful compression and legitimate cross-chapter synthesis were left intact.
 
 ## A note on the images
 

@@ -6,8 +6,8 @@
   "model": "claude-opus-4-8 (multi-agent drift audit)",
   "changes": [
     {
-      "old": "*LA DURE* ploughed",
-      "new": "*LA DURR* ploughed",
+      "old": "*LA DURE* plowed",
+      "new": "*LA DURR* plowed",
       "reason": "Restores ship name DURR from both drafts; the synthesis invented the spelling Dure, altering a proper noun present in neither draft.",
       "context_sentence": "<!-- pages:215-222 -->  *LA DURR* ploughed the waters, bearing in h"
     },

@@ -6,8 +6,8 @@
   "model": "claude-sonnet-4-6",
   "changes": [
     {
-      "old": "his side-whiskers and his coal-black moustache",
-      "new": "his cases and his coal-black moustache",
+      "old": "his side-whiskers and his coal-black mustache",
+      "new": "his cases and his coal-black mustache",
       "reason": "Edgren: cassetta = 'small box (casket); drawer; coach-box' — 'cassette' refers to his cases/bags, not side-whiskers; the Italian lists 'cassette' and 'baffi' as two distinct items",
       "context_sentence": "than I spotted him standing among the crowd, with his cases and his coal-black moustache. Within seconds I stood before him. \"Where the de"
     }

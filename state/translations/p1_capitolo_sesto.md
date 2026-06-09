@@ -4,7 +4,7 @@
 
 CHAPTER SIX
 
-TO INSINUATE my own personality among the great men who laboured in that titanic defence seems to me an act of irreverence. And I will say, moreover, that my spirit remains as though overwhelmed by the surging return of those powerful visions.
+TO INSINUATE my own personality among the great men who labored in that titanic defense seems to me an act of irreverence. And I will say, moreover, that my spirit remains as though overwhelmed by the surging return of those powerful visions.
 
 On the 30th of April, I too saw the backs of the invaders, and certainly, pressing the advantage of our victory, we would have driven the French into the sea, had not Giuseppe Mazzini deemed it expedient, for his diplomatic designs, to blunt our élan.
 
@@ -14,17 +14,17 @@ In that memorable day I had a part in an episode which I recall with pride. The 
 
 I was fighting along the road, to the right, among the vineyards. We were a handful of beardless youths... But we waited for no orders, and crying: "Forward! forward!" we rushed resolutely to the rescue. The Bourbon troops, assailed in front and on the flank, broke into headlong flight, leaving in our hands a goodly number of prisoners.
 
-Garibaldi recognised in our impetuosity his own deliverance. In the evening, when by order of General Rosselli our offensive was unhappily brought to a close, he came among us. That man, so terrible when the cannon thundered, pinched my cheek good-naturedly. Of this sort of codicil to the episode, I smile now; but then... I felt all the heroic qualities I supposed in myself evaporate. That gesture of paternal familiarity reduced me, with unspeakable force, to the humble proportions of a child.
+Garibaldi recognized in our impetuosity his own deliverance. In the evening, when by order of General Rosselli our offensive was unhappily brought to a close, he came among us. That man, so terrible when the cannon thundered, pinched my cheek good-naturedly. Of this sort of codicil to the episode, I smile now; but then... I felt all the heroic qualities I supposed in myself evaporate. That gesture of paternal familiarity reduced me, with unspeakable force, to the humble proportions of a child.
 
-At the end of May, I was returning to Rome, and we were already on the point of marching against the Austrians, when General Oudinot, adding treachery to treachery, prematurely broke the armistice concluded after his defeat on the 30th of April, and seized, by surprise, the Villa Pamfili. There was no longer any need to go to Ancona to fertilise, with our blood, the soil of Italy!
+At the end of May, I was returning to Rome, and we were already on the point of marching against the Austrians, when General Oudinot, adding treachery to treachery, prematurely broke the armistice concluded after his defeat on the 30th of April, and seized, by surprise, the Villa Pamfili. There was no longer any need to go to Ancona to fertilize, with our blood, the soil of Italy!
 
-That day — the 3rd of June — witnessed such proofs of desperate valour as to astonish Europe and the world, no longer accustomed to behold, among the hills of Rome, Roman greatness. But the hydra of reaction claimed, that day, too grievous a holocaust of our finest. Would it had been the last!
+That day — the 3rd of June — witnessed such proofs of desperate valor as to astonish Europe and the world, no longer accustomed to behold, among the hills of Rome, Roman greatness. But the hydra of reaction claimed, that day, too grievous a holocaust of our finest. Would it had been the last!
 
 The French aimed at subduing Rome by taking possession of the Janiculum, which dominates the entire city. To reach it, it was first indispensable to carry our advanced posts. Having taken Villa Pamfili, they moved, under cover of darkness, against Villa Corsini which, by reason of its elevated and strategic position, might be considered the key to Porta San Pancrazio. They took it by surprise; but by a furious bayonet assault we retook it.
 
 Unhappily, owing both to the enormous disproportion of numbers and to various topographical reasons on which I think it superfluous to dwell, the assault on that villa was more than arduous for those advancing from the city; easy for the French entrenched beyond Villa Pamfili. Our magnanimous contempt for our own lives might lead us, and did repeatedly lead us, to become masters of it once more; but to hold it was for us a superhuman and impossible undertaking.
 
-Nevertheless we displayed incredible aggressive tenacity from the earliest morning hours until late evening. That superb manifestation of the reawakened, virile Italian temper had, so far as I was concerned, an interlude. In one of our first reconquests, as I was passing, weapon in hand, through a passage encumbered with corpses, I caught sight, through the crack of a door, of the red trousers of a Frenchman... an officer who had persisted in the defence and had been unable to withdraw with his men. To escape the first fury of the assailants, he had concealed himself in a privy. Upon my calling on him to surrender, he handed over his sword without a word.
+Nevertheless we displayed incredible aggressive tenacity from the earliest morning hours until late evening. That superb manifestation of the reawakened, virile Italian temper had, so far as I was concerned, an interlude. In one of our first reconquests, as I was passing, weapon in hand, through a passage encumbered with corpses, I caught sight, through the crack of a door, of the red trousers of a Frenchman... an officer who had persisted in the defense and had been unable to withdraw with his men. To escape the first fury of the assailants, he had concealed himself in a privy. Upon my calling on him to surrender, he handed over his sword without a word.
 
 I was charged with escorting him to the Chiesa Nuova, where the captured officers were being temporarily confined.
 
@@ -34,11 +34,11 @@ But on the 3rd of June, the spirit of the Romans had terribly changed. Oudinot's
 
 On reaching the Ponte di San Sisto, I found my way barred by some militiamen of the Guardia Nazionale who, refusing to hear any argument and following the impulse of the moment, demanded that I hand over the prisoner to them. They wished to shoot him dead and cast his body into the river.
 
-I cried out to them: "Let those who thirst for French blood run outside the walls, and blessed be he whose hands prove themselves capable and strong. But here, no! While there is breath in my body, I will not permit the Italian name to be dishonoured by acts of cowardice."
+I cried out to them: "Let those who thirst for French blood run outside the walls, and blessed be he whose hands prove themselves capable and strong. But here, no! While there is breath in my body, I will not permit the Italian name to be dishonored by acts of cowardice."
 
 The timely intervention of an officer calmed the agitated spirits and averted every evil.
 
-We reached the Chiesa Nuova without further incident, and the Frenchman, grateful, recounted what had happened to the other prisoners. While not far off two peoples, made to understand and to love each other, were hurling themselves one against the other, thirsting for vengeance, in that relatively tranquil corner I heard the very invaders extolling our valour and the wish that, once rancour was dispelled, French blood and Italian blood might flow mingled together, but with fraternal solidarity, but for a common and holy vindication.
+We reached the Chiesa Nuova without further incident, and the Frenchman, grateful, recounted what had happened to the other prisoners. While not far off two peoples, made to understand and to love each other, were hurling themselves one against the other, thirsting for vengeance, in that relatively tranquil corner I heard the very invaders extolling our valor and the wish that, once rancour was dispelled, French blood and Italian blood might flow mingled together, but with fraternal solidarity, but for a common and holy vindication.
 
 A prophetic wish!.. In those moments, however, I considered it more probable that I should be taken up alive into the glory of Heaven!
 
@@ -58,7 +58,7 @@ They ride up the hill at a gallop, and reach the summit with nothing to stay the
 
 And perhaps they would all have left their bones there, had we soldiers massed at the Vascello, exalted by that spectacle, not feared that our commanders, persisting in their error, would render even so much heroism fruitless. It was as though an electric spark, leaping from the heart of Angelo Masina, had in an instant kindled a thousand thousand hearts. We broke from cover and rushed to the assault spontaneously, without awaiting orders from any man.
 
-A yet stranger circumstance! The populace, crowded upon the bastions as in a theatre, divined our intent, and, seized by our fever, poured forth, surging like an impetuous wave, into the walled lane; spilled in great confusion and as though impelled by its own momentum up the slopes of the hill, soaked with so much blood. They had no weapons, or weapons altogether inadequate; but they seemed persuaded that their very presence would give strength to our arms... They would have shown, if nothing else, that they knew how to face danger, that they knew how to die!
+A yet stranger circumstance! The populace, crowded upon the bastions as in a theater, divined our intent, and, seized by our fever, poured forth, surging like an impetuous wave, into the walled lane; spilled in great confusion and as though impelled by its own momentum up the slopes of the hill, soaked with so much blood. They had no weapons, or weapons altogether inadequate; but they seemed persuaded that their very presence would give strength to our arms... They would have shown, if nothing else, that they knew how to face danger, that they knew how to die!
 
 Such a breach of discipline, such utter want of every elementary prudence, produced an effect contrary to that which might logically have been expected. Not only was every Frenchman swept from Villa Corsini; but, pressing the victory home, our bayonets retook likewise the Convent of San Pancrazio, where the invader had entrenched his outposts since the morning. And a band of resolute men, veering to the right, succeeded in taking possession of Villa Valentini, from whose windows the French had been harassing us, a little earlier, even within the Vascello itself.
 
@@ -68,7 +68,7 @@ We fell back to the Casa Giacometti, to the Vascello, to the walls, but always w
 
 Giuseppe Garibaldi carried in his heart the certainty that, with the loss of Villa Corsini, the fate of the young Republic was sealed. The improvident General Rosselli had not taken the trouble, during the armistice, to fortify it, to render it, if not invulnerable, at least stronger. To crown the disaster, he — Garibaldi — received from Rome only in driblets and at long intervals the fresh contingents necessary to sustain the battle. Seeing defeat inevitable, he was unwilling to submit to it without pushing his tenacity to the uttermost extreme.
 
-Night was already near when he, placing himself at the head of the Reggimento Unione and whatever remnants of other corps the French lead had spared, personally led yet another furious assault. The valour the same as ever... but catastrophe the result!
+Night was already near when he, placing himself at the head of the Reggimento Unione and whatever remnants of other corps the French lead had spared, personally led yet another furious assault. The valor the same as ever... but catastrophe the result!
 
 I had just fired my last cartridges when I saw pass beside me, supported by his comrades-in-arms, pale but smiling, Goffredo Mameli. They told me he had been wounded in the knee... Italy was about to lose her young Tyrtaeus!
 

@@ -86,7 +86,7 @@ The book's most searching portrait, and an ambivalent one. Orsini recruits di Ru
 
 ### Giuseppe Pieri — the Lucchese *(Part 2, Ch. 8–9)*
 
-A co-executor of the plot whom the book sets out to rehabilitate: *"contrary to the majority of civilised men, who have polished the surface while rotting within, he had nothing of the vulgar about him save the surface alone."* di Rudio paints him as candid to a fault, a self-taught philosopher and outspoken atheist, holding unorthodox views on love and marriage (separated from his wife yet esteeming her as a friend). That same indiscretion — boasting in Brussels that he meant to repay his persecutors *"a misura di carbone"* — helped doom the plot, a failing di Rudio records without erasing the man's sincerity.
+A co-executor of the plot whom the book sets out to rehabilitate: *"contrary to the majority of civilized men, who have polished the surface while rotting within, he had nothing of the vulgar about him save the surface alone."* di Rudio paints him as candid to a fault, a self-taught philosopher and outspoken atheist, holding unorthodox views on love and marriage (separated from his wife yet esteeming her as a friend). That same indiscretion — boasting in Brussels that he meant to repay his persecutors *"a misura di carbone"* — helped doom the plot, a failing di Rudio records without erasing the man's sincerity.
 
 > **Historical note** — Giuseppe Pieri was condemned with Orsini and di Rudio and guillotined in Paris on 13 March 1858. *(Source: Wikipedia, "Orsini affair".)*
 
@@ -94,7 +94,7 @@ A co-executor of the plot whom the book sets out to rehabilitate: *"contrary to 
 
 Orsini's servant, and the man di Rudio first meets at Orsini's Paris lodgings under the name "the false Allsop." He threw the first bomb prematurely and, under interrogation, let slip the acquaintance that unraveled di Rudio's false identity — and briefly tried to claim Orsini had snatched and thrown his bomb for him. The book treats him as the weak link of the four.
 
-> **Historical note** — Of the four tried, Gomez alone escaped the death sentence; he was condemned to hard labour for life. The "Allsop" name is not invented: a real Englishman, **Thomas Allsop**, was a central backer of the plot — he arranged the manufacture of the bombs in Birmingham and supplied a British passport — and escaped to America after the attack. The passport he furnished is the likely source of di Rudio's "false Allsop." *(Source: Wikipedia, "Orsini affair".)*
+> **Historical note** — Of the four tried, Gomez alone escaped the death sentence; he was condemned to hard labor for life. The "Allsop" name is not invented: a real Englishman, **Thomas Allsop**, was a central backer of the plot — he arranged the manufacture of the bombs in Birmingham and supplied a British passport — and escaped to America after the attack. The passport he furnished is the likely source of di Rudio's "false Allsop." *(Source: Wikipedia, "Orsini affair".)*
 
 ### Simon Bernard — the London broker *(Part 2, Ch. 5–6, 28–29)*
 

@@ -325,7 +325,7 @@ def _page_html(title: str, body_html: str, depth: int, css_hash: str, active_ste
         "",
         *_theme_restore_js(reader=False),
         "",
-        "<!-- Top-right controls (font size + colour theme, shared with the edition) -->",
+        "<!-- Top-right controls (font size + color theme, shared with the edition) -->",
         '<div class="top-right-controls">',
         *_font_controls_block(marginalia_toggle=False),
         *_theme_controls_block(),

@@ -6,9 +6,9 @@ I COULD not recount, in any perfect chronological order and as though reading fr
 
 The storms, invoked by the Cousin, came, and came with such fury as to imperil vessels far stouter than our own. It was not the sea alone we had to fight; but sea and sky in league together; which battered us with a pertinacity that almost betrayed some deliberate intent.
 
-To comprehend our peril in its full intensity, one would need to be broken to the art of navigation. For those who are, any description is superfluous; for all others, no description suffices. For two days and three nights, we found ourselves in worse conditions than the wretched convicts condemned to labour in those subterranean dungeons where water seeps in jets of calculated measure. Either work the pump without ceasing, or drown.
+To comprehend our peril in its full intensity, one would need to be broken to the art of navigation. For those who are, any description is superfluous; for all others, no description suffices. For two days and three nights, we found ourselves in worse conditions than the wretched convicts condemned to labor in those subterranean dungeons where water seeps in jets of calculated measure. Either work the pump without ceasing, or drown.
 
-It was then that I understood, in its fullest import, the phrase: "And the floodgates of heaven were opened." Whoever was not keeping every fibre, every atom of himself grappled to the oars that kept us balanced, was working feverishly to bail out the boat. Our palmetto hats served us for that purpose; but the tempest had left several among us bareheaded — these had recourse to the only implement still within their reach: their wretched wooden clogs. In such a crisis, no resource, however trifling, was to be despised.
+It was then that I understood, in its fullest import, the phrase: "And the floodgates of heaven were opened." Whoever was not keeping every fiber, every atom of himself grappled to the oars that kept us balanced, was working feverishly to bail out the boat. Our palmetto hats served us for that purpose; but the tempest had left several among us bareheaded — these had recourse to the only implement still within their reach: their wretched wooden clogs. In such a crisis, no resource, however trifling, was to be despised.
 
 The driving rain, the waves that made any long view impossible, and above all the profound darkness, held in store for us, on the third night, yet another grave and unexpected peril. Blacker than the night itself, and like a phantom risen menacingly from the abyss, a great sailing vessel loomed before us. The Cousin had barely time to wrench the tiller; but the surge was so violent that, for an instant, we believed ourselves swallowed up and done for. The fearful apparition swept past us, gigantic and swift; then vanished, as though dissolved into the darkness.
 
@@ -16,7 +16,7 @@ Not even in this extremity did the Cousin lose his composure, and having remarke
 
 I reflected that we owed our salvation to the fever that had confined Morelli to the hospital — had the little vessel been even slightly heavier, no human force would have been sufficient to keep her afloat. After that encounter, my companions saw a phantom on the crest of every wave.
 
-The following day, the storm subsided. Hoisting the sail anew, we were able at last to think of restoring our exhausted strength. Through the long hours of peril we had swallowed, with difficulty, a few mouthfuls of rum, and what vigour we had was furnished, in some measure, by the danger itself. Now that the tempest had settled around us, a tempestuous hunger arose. But a terrible disillusionment awaited us: the salt water had in part swept away, and in part spoiled, our provisions, rendering them well-nigh useless.
+The following day, the storm subsided. Hoisting the sail anew, we were able at last to think of restoring our exhausted strength. Through the long hours of peril we had swallowed, with difficulty, a few mouthfuls of rum, and what vigor we had was furnished, in some measure, by the danger itself. Now that the tempest had settled around us, a tempestuous hunger arose. But a terrible disillusionment awaited us: the salt water had in part swept away, and in part spoiled, our provisions, rendering them well-nigh useless.
 
 The horrors of cannibalism then flashed grimly through our imagination, and into the air burst imprecations fit to shame those attributed to the damned of hell. The Cousin judged it more than opportune — urgent — to change course, and turned the bow to the south-west, our natural heading.
 
@@ -24,11 +24,11 @@ That very day we observed a long streak of dense smoke in the distance, a few sp
 
 At what point? Did our anxious eyes scan a hospitable shore, or did it hold in reserve for us dangers greater than those we had surmounted with such toil?
 
-For a great distance we could discern no trace of human life; then all of a sudden, rounding a headland, there appeared spread before us a small, tranquil cove, and on the beach a little hut, and around the hut several men — some labouring to shift baskets and barrels, some spreading nets. Others, seated on the sand, were mending meshes.
+For a great distance we could discern no trace of human life; then all of a sudden, rounding a headland, there appeared spread before us a small, tranquil cove, and on the beach a little hut, and around the hut several men — some laboring to shift baskets and barrels, some spreading nets. Others, seated on the sand, were mending meshes.
 
-We bent to the oars and came ashore. As we hauled the boat up the beach, a dozen Negroes gathered about us, their bearing not openly hostile, yet that of men who harbour some suspicion. Among them was a white man, dressed in the European fashion, armed with a musket.
+We bent to the oars and came ashore. As we hauled the boat up the beach, a dozen Negroes gathered about us, their bearing not openly hostile, yet that of men who harbor some suspicion. Among them was a white man, dressed in the European fashion, armed with a musket.
 
-I understood at once that I was among slaves employed to catch and dry fish, toiling under the lash of a white man — of a civilised man, a believer in Christ.
+I understood at once that I was among slaves employed to catch and dry fish, toiling under the lash of a white man — of a civilized man, a believer in Christ.
 
 I asked him whether, for payment, it was possible to obtain some provisions. He had some French and understood me. But his only reply was: "Where's your money?"
 

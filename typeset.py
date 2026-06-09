@@ -200,7 +200,7 @@ def _font_controls_block(marginalia_toggle: bool = True) -> list[str]:
 
 
 def _theme_controls_block() -> list[str]:
-    """The colour-theme swatch popover (9 themes). Shared by edition + companion."""
+    """The color-theme swatch popover (9 themes). Shared by edition + companion."""
     return [
         '  <div class="theme-controls">',
         '    <button id="theme-trigger" aria-label="Colour theme" title="Colour theme" aria-haspopup="true" aria-expanded="false">&#9681;</button>',
