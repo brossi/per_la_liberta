@@ -17,6 +17,7 @@ import json
 import re
 import shutil
 from pathlib import Path
+from urllib.parse import quote
 
 from markdown_it import MarkdownIt
 from markdown_it.token import Token
@@ -66,6 +67,18 @@ FOOTER = [
 CITATION_RE = re.compile(
     r"(?:Part\s*|P)\s*([12])\s*,?\s*Ch\.?\s*(\d+)(?:\s*[–-]\s*\d+)?"
 )
+
+# Wikipedia source citations in the "Historical note"/"Scholarship" callouts are
+# written as `*(Source: Wikipedia, "Charles DeRudio".)*`, sometimes chaining
+# several articles under one marker (`Wikipedia, "Felice Orsini"; "Orsini affair"`)
+# and sometimes sitting beside non-Wikipedia sources (`Wikipedia, "Orsini affair";
+# Britannica, "Felice Orsini."`). We linkify only the quoted titles that follow a
+# `Wikipedia` marker, chaining through consecutive quoted titles and stopping at
+# the first non-quoted source so a neighbour's title is never mislinked.
+WIKI_MARKER = re.compile(r"Wikipedia,?\s*(?=\")")
+WIKI_TITLE = re.compile(r'"([^"]+)"')
+# Separator between chained quoted titles: `; ` or `, `, only if a quote follows.
+WIKI_TITLE_SEP = re.compile(r'\s*[;,]\s*(?=")')
 
 
 # --------------------------------------------------------------------------- #
@@ -181,6 +194,57 @@ def _split_citations(text: str, citation_map: dict, docs_root: str) -> list[Toke
     return out
 
 
+def _wiki_url(title: str) -> str:
+    """Quoted article title → canonical en.wikipedia.org URL.
+
+    Strips a trailing period pulled inside the closing quote (American style:
+    ``"Charles DeRudio."``) before building the slug; spaces → underscores;
+    accents, en-dashes, and other non-ASCII are percent-encoded.
+    """
+    slug = title.strip().rstrip(".").strip().replace(" ", "_")
+    return "https://en.wikipedia.org/wiki/" + quote(slug, safe="_(),'")
+
+
+def _wiki_title_spans(text: str) -> list[tuple[int, int]]:
+    """Locate the inner-text spans of every quoted title attributable to Wikipedia."""
+    spans: list[tuple[int, int]] = []
+    for m in WIKI_MARKER.finditer(text):
+        j = m.end()
+        while j < len(text) and text[j] == '"':
+            qm = WIKI_TITLE.match(text, j)
+            if not qm:
+                break
+            spans.append((qm.start(1), qm.end(1)))
+            sep = WIKI_TITLE_SEP.match(text, qm.end())
+            if not sep:
+                break
+            j = sep.end()  # lookahead leaves us on the next opening quote
+    return spans
+
+
+def _link_wikipedia(text: str) -> list[Token]:
+    """Wrap Wikipedia-attributed quoted titles in external links; leave quotes in place."""
+    spans = sorted(set(_wiki_title_spans(text)))
+    if not spans:
+        return [_text_token(text)]
+    out: list[Token] = []
+    pos = 0
+    for start, end in spans:
+        if start < pos:  # overlap guard (duplicate marker scans)
+            continue
+        if start > pos:
+            out.append(_text_token(text[pos:start]))
+        title = text[start:end]
+        link_open = Token("link_open", "a", 1)
+        link_open.attrSet("href", _wiki_url(title))
+        link_open.attrSet("class", "wiki-cite")
+        out += [link_open, _text_token(title), Token("link_close", "a", -1)]
+        pos = end
+    if pos < len(text):
+        out.append(_text_token(text[pos:]))
+    return out
+
+
 def _rewrite_inline_children(children: list[Token], citation_map: dict, docs_root: str) -> list[Token]:
     """Rewrite links and chapter citations within one inline token's children."""
     out: list[Token] = []
@@ -194,7 +258,13 @@ def _rewrite_inline_children(children: list[Token], citation_map: dict, docs_roo
             link_depth -= 1
             out.append(ch)
         elif ch.type == "text" and link_depth == 0:
-            out.extend(_split_citations(ch.content, citation_map, docs_root))
+            # Chapter deep-links first, then Wikipedia citations within the
+            # remaining plain-text runs (the two never share a span).
+            for piece in _split_citations(ch.content, citation_map, docs_root):
+                if piece.type == "text":
+                    out.extend(_link_wikipedia(piece.content))
+                else:
+                    out.append(piece)
         else:
             out.append(ch)
     return out

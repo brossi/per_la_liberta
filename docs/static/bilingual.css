@@ -1179,6 +1179,14 @@ body.companion {
 }
 .companion-page a.chapter-cite:hover { background: var(--hl-prov-1); }
 
+/* Outbound citation links to Wikipedia articles (in the source parentheticals). */
+.companion-page a.wiki-cite {
+  color: var(--color-accent);
+  border-bottom: 1px dotted var(--color-accent);
+  text-decoration: none;
+}
+.companion-page a.wiki-cite:hover { text-decoration: none; opacity: 0.75; }
+
 /* Three-voice callouts (blockquotes). */
 .companion-page blockquote {
   margin: 1.2em 0;
