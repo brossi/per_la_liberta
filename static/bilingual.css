@@ -1298,6 +1298,68 @@ body.companion {
   margin: 2em 0;
 }
 
+/* Layered summary: nested drill-down (overview → part → chapter). The overview
+   stays visible; each part (H3) opens to its section summary and a list of
+   chapter (H4) disclosures. Mirrors the edition TOC's rotating-marker idiom. */
+.companion-page details.summary-part,
+.companion-page details.summary-standalone,
+.companion-page details.summary-chapter {
+  margin: 0 0 0.4em;
+}
+.companion-page details.summary-part {
+  margin-bottom: 1.4em;
+}
+
+.companion-page details.summary-part > summary,
+.companion-page details.summary-standalone > summary,
+.companion-page details.summary-chapter > summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  padding: 0.15em 0;
+  transition: color 0.15s;
+}
+.companion-page details > summary::-webkit-details-marker { display: none; }
+.companion-page details > summary:hover { color: var(--color-accent); }
+
+/* Rotating disclosure triangle. */
+.companion-page details > summary::before {
+  content: '▸';
+  flex: 0 0 auto;
+  color: var(--color-muted);
+  transition: transform 0.15s ease;
+}
+.companion-page details[open] > summary::before { transform: rotate(90deg); }
+
+/* Headings keep their type but read as labels inside the summary line. */
+.companion-page details > summary > h3,
+.companion-page details > summary > h4 {
+  margin: 0;
+  display: inline;
+}
+.companion-page details.summary-chapter > summary > h4 {
+  font-family: 'Bodoni Moda', Georgia, serif;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 0;
+  color: var(--color-body);
+}
+
+/* Indent each disclosure's body beneath its summary; chapters nest under parts. */
+.companion-page details.summary-part > :not(summary),
+.companion-page details.summary-standalone > :not(summary),
+.companion-page details.summary-chapter > :not(summary) {
+  margin-left: 1.45em;
+}
+
+/* Edition deep-link at the foot of a chapter's outline. */
+.companion-page p.chapter-edition-link {
+  font-size: 0.85em;
+  margin: 0.4em 0 0.2em;
+}
+
 /* Landing hub: a card grid routing to the companion's sections. auto-fit/minmax
    gives two columns at the 40em body width and collapses to one when narrow,
    without a media query. Built from tokens so it tracks all themes. */
@@ -1427,5 +1489,15 @@ body.companion {
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  /* Summary drill-down prints flat and fully expanded (a beforeprint handler
+     forces every <details> open); drop the triangles and disclosure indents. */
+  .companion-page details > summary { cursor: auto; }
+  .companion-page details > summary::before { display: none; }
+  .companion-page details.summary-part > :not(summary),
+  .companion-page details.summary-standalone > :not(summary),
+  .companion-page details.summary-chapter > :not(summary) {
+    margin-left: 0;
   }
 }

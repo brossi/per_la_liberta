@@ -2,19 +2,15 @@
 
 ***Per la libertà! (Dalle mie conversazioni col conte Carlo di Rudio, complice di Felice Orsini)*** — Cesare Crespi, 1913. Canessa Printing Co., 708 Montgomery St., San Francisco.
 
-> **How to read this summary.** It is built in five tiers, from broadest to most detailed. Tier 1 is a single sentence; Tier 2 a short synopsis; Tier 3 a one- to two-page treatment; Tier 4 a summary of each of the book's two parts; Tier 5 a chapter-by-chapter outline of all 58 chapters. Stop at whatever depth you need — each tier is self-contained, and the tiers below it only add resolution. Page numbers throughout refer to the source scan (Library of Congress copy, pp. 7–268).
+> **How to read this summary.** Start with the overview — a one-line logline, a short synopsis, and brief notes on how the book is told and what it cares about. Then open *The book, part by part*: each part unfolds to its own summary and a list of chapters, and any chapter unfolds to its outline. Stop at whatever depth you need; each layer is self-contained, and the ones nested below it only add resolution. Page numbers throughout refer to the source scan (Library of Congress copy, pp. 7–268).
 
 > **On sourcing.** The book-derived content here was assembled from a chapter-by-chapter reading of the translation and then independently fact-checked against the source chapters. The standard is **fidelity of substance, not of letter**: a summary may carry a name or date the book establishes in a neighboring chapter, or supply a verified historical date for the reader's benefit, but it never invents what is absent from both the book and the historical record, nor states as fact anything a chapter contradicts. External facts in **Historical note** callouts are confirmed against the cited source before being stated.
 
----
-
-## Tier 1 — Logline
+## Logline
 
 An aged Risorgimento conspirator, exiled to America, recounts his life — fighting for the 1849 Roman Republic, the 1858 Orsini plot to assassinate Napoleon III, a death sentence commuted on the scaffold, escape from a Guiana penal colony, and a homeland never seen again — as testimony gathered by a journalist in his California exile and published in 1913.
 
----
-
-## Tier 2 — Synopsis
+## Synopsis
 
 The journalist Cesare Crespi sought out Count Carlo di Rudio, living obscurely near Los Angeles in his final years, and persuaded the old patriot to tell his story; Crespi published it in 1913, after the Count's death. The book is the result: not formal history but, as Crespi insists, a "human document," every chapter approved and contestable passages signed by di Rudio himself.
 
@@ -22,23 +18,21 @@ Di Rudio's life is the arc of the Risorgimento seen from below. Born in Belluno 
 
 Reaching London again, he clears his name of the charge that he bought his freedom by betrayal, watches Italy unified by the monarchy he distrusts, and is denied permission to return home. In a last meeting, a gravely ill Mazzini sends him to fight for the American Union. He sails for New York in 1864. The book closes elegiacally: amid every later fortune, "my Fatherland I have never seen again."
 
----
-
-## Tier 3 — Extended Summary
+## How it's told
 
 *Per la libertà!* is a memoir at one remove — the life of Count Carlo di Rudio as told to, and vouched for by, the journalist Cesare Crespi. In the **Preface**, Crespi explains both his subject and his method. He has found in the commercial American West a living relic of the Risorgimento, a man he believes history has calumniated or forgotten, and he means to preserve his testimony as a "human document" that captures "the soul of the times" rather than a methodical chronicle. To guarantee authenticity he obtained di Rudio's written approval of every chapter and his signature on every contestable page, and he refuses to soften the old soldier's harsh, virile speech. The narrative voice throughout alternates between Crespi's frame and di Rudio's first-person recollection, supplemented by letters and by his wife Elisa's perspective.
 
-**Part One** traces the making of a patriot and the long ordeal of conspiracy and exile. Di Rudio is born in Belluno on 26 August 1832 into an anti-papal aristocratic family. Swept up in the revolutions of 1848 — the Five Days of Milan, the war in Venetia under Calvi — he refuses an Austrian commission and makes his way to Rome, where in 1849 he fights in the defense of the Roman Republic alongside Garibaldi. He witnesses the carnage at the Villa Corsini, is wounded and captured, escapes, is court-martialed, and is acquitted only when a French officer argues he fought as a lawful combatant. After Rome falls he becomes a perpetual exile and a sworn member of Mazzini's Giovane Italia: he survives Napoleon III's 1851 Paris coup behind a barricade, runs intelligence missions into Austrian Lombardy-Venetia under false names, and is entangled in the failed risings of 1853 — the Milan insurrection and Alpine guerrilla schemes — that cost his mentor Calvi the gallows and brought arrest to his own father, sister, and the priest Don Bastiano Barozzi. Hunted, betrayed by spies and slandered by rival émigrés, banished from Switzerland in perpetuity, he settles at last in England.
-
-**Part Two** is the conspiracy and its long aftermath. In London's destitute émigré world di Rudio falls in love with and marries Elisa, an Englishwoman of the Mancherini household (9 December 1855). In September 1857 Felice Orsini seeks him out and revives di Rudio's own earlier proposal to kill Napoleon III, on the theory that regicide in Paris would ignite a French revolution, free the French army from Rome, and unify Italy. Di Rudio commits; the conspiracy, run partly through Simon Bernard in London, arms itself with fulminate-charged "hedgehog" bombs. On 14 January 1858, outside the Opéra in the Rue Le Peletier, the bombs are thrown; di Rudio casts the second. The Emperor, shielded by his armored carriage, survives. Arrested after a failed flight, di Rudio sustains a false Portuguese identity until co-conspirators betray it; at the celebrated trial he is condemned to death with Orsini and Pieri. On the morning of execution, with Orsini and Pieri going to the guillotine, di Rudio is reprieved at the scaffold — his sentence commuted to perpetual imprisonment through petitions to the Empress Eugénie. Transported to the penal settlements of French Guiana (the Montagne d'Argent, where yellow fever annihilates his fellow plotters, and the Île du Salut), he organizes a desperate escape by seizing a fishing boat and scuttling the pursuit craft, surviving storm, starvation, and the deadly Guiana coast to reach British territory and asylum in late 1859.
-
-Back in London by 1860, di Rudio spends himself clearing his name against Bernard's calumny that he had purchased his life by informing — vindicated at last by witnesses and by Mazzini's published attestation. He endures grinding poverty, the death of an infant child, and repeated attempts by the French police and the Church to corrupt or convert him. He watches Italy unified by Cavour and the House of Savoy, a victory he regards as a betrayal of the republican ideal, culminating in the wounding of Garibaldi at Aspromonte (1862). Denied permission to return to Italy, he resolves to serve liberty wherever it is fought for. In a final, valedictory meeting, the gravely ill Mazzini dissuades him from a hopeless expedition to Poland and instead urges him toward the United States and its war against slavery, furnishing letters of introduction. On 8 February 1864 di Rudio sails from Liverpool aboard the *Virginia* for New York — the threshold of the American military life only glimpsed at in the book's California frame. The narrative ends on a note of permanent loss: across half a century of subsequent fortune, a secret sorrow endured, for he never saw his country again.
+## What it cares about
 
 The recurring concerns of the book are explicit: testimony against forgetting; the moral superiority of self-sacrificing republican idealism (Mazzini, Calvi, Orsini) over the "practical" calculation of the monarchy; the indictment of Napoleon III as the betrayer of Italian liberty; and the human cost — to families, to the obscure, to the women who waited — of the cause of unification.
 
----
+## The book, part by part
 
-## Tier 4 — Part Summaries
+Open a part for its summary, then open any chapter for its outline.
+
+### Prefazione (pp. 7–8)
+
+Cesare Crespi explained why he wrote the book, framing it not as conventional history but as a "human document" that captures "the soul of the times." He revered Count di Rudio as a living relic of the Risorgimento, encountered in the commercial Far West, and feared the man was either calumniated or forgotten — for, as Crespi observes, the triumph of political men is almost always a reward for their worst qualities. To guarantee authenticity, Crespi obtained di Rudio's written approval of every chapter and his signature on every contestable page. He refused to soften the Count's harsh, virile language, declaring that to alter words from lips "silenced for ever" would be cowardice. He closed with "Salute!"
 
 ### Part One — The Making of a Patriot and the Defense of Rome (Chapters 1–24, pp. 9–127)
 
@@ -47,23 +41,6 @@ Part One opens with the frame: Crespi's visit to di Rudio's modest home near Los
 The early chapters establish his formation — Belluno birth, an anti-papal father, a political education in the oppressions of post-Vienna Italy — and plunge him into 1848: the Five Days of Milan, the People's War in Venetia under Pietro Fortunato Calvi, and his refusal of Austrian service. He reaches Rome in time for the 1849 defense of the Roman Republic, fighting under Garibaldi (Palestrina, Velletri, the slaughter at the Villa Corsini), where he rescues a French prisoner from a mob, is wounded and captured, escapes, and is court-martialed and improbably acquitted.
 
 The remainder of Part One is the machinery of exile and conspiracy: survival as a refugee laborer; the barricades of Napoleon III's December 1851 Paris coup; sworn membership in Giovane Italia; secret intelligence missions into Austrian Lombardy-Venetia disguised as a silk merchant; the abortive 1853 risings (Milan, the Lake Maggiore and Alpine schemes) and Calvi's capture and agonized execution; the betrayal that brings his own father, sister, and Don Bastiano to prison; a celebrated episode in which his mother, shown a corpse, declares with defiance that the dead man is not her son. Hunted, slandered by rival émigrés, and finally banished from Switzerland for life after the failed Maloggia attempt — undone by his own initials carved in a rifle stock — di Rudio chooses exile in England. Throughout, Crespi defends Mazzini and the conspirators against the charge of futility, arguing that even failed sacrifice made Italy's redemption inevitable.
-
-### Part Two — The Orsini Conspiracy and American Exile (Chapters 1–33, pp. 127–268)
-
-Part Two begins as a love story: in London's poverty-stricken émigré community di Rudio teaches Italian, is anonymously fed by the young Englishwoman Elisa, and — overcoming his principled objection to marriage in the midst of the cause — weds her in December 1855. In September 1857 Felice Orsini seeks him out and revives the plan to assassinate Napoleon III. Di Rudio joins; the conspiracy, brokered partly by Simon Bernard in London, equips itself with new fulminate bombs. The central chapters narrate the plot with the intimacy of an eyewitness: the crossing to Paris under a forged passport, the lodgings, the reconnaissance of the Opéra, and the attack of 14 January 1858, in which di Rudio throws the second bomb. The Emperor survives behind his armored carriage.
-
-The aftermath dominates the rest of the book. Arrested, di Rudio maintains a false identity until betrayed, endures the famous trial, and is condemned to death with Orsini and Pieri — then reprieved at the scaffold itself, his sentence commuted through appeals to the Empress. Transported to French Guiana, he survives a yellow-fever epidemic that kills his fellow conspirators and mounts a harrowing escape by sea, reaching British asylum. Returning to London, he labors to clear his name of the charge of betrayal and is vindicated by Mazzini's own testimony. The closing chapters turn to history and elegy: poverty and the death of a child; sustained polemic against the House of Savoy and the "practical" unification that di Rudio sees as a betrayal of republican ideals; Garibaldi's wounding at Aspromonte (1862); and a final meeting in which the gravely ill Mazzini redirects him from Poland toward the American Civil War. Di Rudio sails for New York in February 1864, and the book ends on the lasting sorrow of a patriot who never saw his homeland again.
-
----
-
-## Tier 5 — Chapter-by-Chapter Outline
-
-### Prefazione
-
-#### Prefazione (pp. 7–8)
-Cesare Crespi explained why he wrote the book, framing it not as conventional history but as a "human document" that captures "the soul of the times." He revered Count di Rudio as a living relic of the Risorgimento, encountered in the commercial Far West, and feared the man was either calumniated or forgotten — for, as Crespi observes, the triumph of political men is almost always a reward for their worst qualities. To guarantee authenticity, Crespi obtained di Rudio's written approval of every chapter and his signature on every contestable page. He refused to soften the Count's harsh, virile language, declaring that to alter words from lips "silenced for ever" would be cowardice. He closed with "Salute!"
-
-### Parte Prima
 
 #### Part 1, Chapter 1 (pp. 9–14)
 The narrator arrived one summer morning in Los Angeles, drawn to a small wooden house where Major Carlo di Rudio had taken refuge. He was welcomed by di Rudio's wife, Signora Elisa, and offered coffee, toast, and figs. He met the pale, dark-eyed daughter Italia Adair, learning of the other daughters Roma Scott and America Vickery and a son exploring Arizona. Italia rhapsodized about life with the Seventh Cavalry under "Uncle Sam," praising the American temperament. The narrator admired the study's books and portraits of Giuseppe Mazzini and Fortunato Calvi. The chapter closed with the appearance of the bronze-featured old Count, exchanging a morning kiss with Elisa beneath California's giant sequoias.
@@ -137,7 +114,11 @@ In Zurich, di Rudio found work at Caronti's hat factory but sensed his fellow ex
 #### Part 1, Chapter 24 (pp. 120–127)
 Di Rudio joined the Maloggia attempt to seize Lake Como's steamboats and raise the Valtellina, recruited by Pompei in Orsini's name. He disputes Orsini's later memoir, which blamed Mazzini and belittled the effort. With Fumagalli he assembled rifles near the Muretto glacier, fatally carving his initials "C. C. R." into the fiftieth stock. Militia seized the arms; both men fled but were captured and jailed at Chur, where the engraved rifle confirmed his guilt. Banished as a recidivist, di Rudio was expelled from Switzerland in perpetuity and again chose England. di Rudio closes Part One defending the attempt as a genuine protest against tyranny, not mere comedy.
 
-### Parte Seconda
+### Part Two — The Orsini Conspiracy and American Exile (Chapters 1–33, pp. 127–268)
+
+Part Two begins as a love story: in London's poverty-stricken émigré community di Rudio teaches Italian, is anonymously fed by the young Englishwoman Elisa, and — overcoming his principled objection to marriage in the midst of the cause — weds her in December 1855. In September 1857 Felice Orsini seeks him out and revives the plan to assassinate Napoleon III. Di Rudio joins; the conspiracy, brokered partly by Simon Bernard in London, equips itself with new fulminate bombs. The central chapters narrate the plot with the intimacy of an eyewitness: the crossing to Paris under a forged passport, the lodgings, the reconnaissance of the Opéra, and the attack of 14 January 1858, in which di Rudio throws the second bomb. The Emperor survives behind his armored carriage.
+
+The aftermath dominates the rest of the book. Arrested, di Rudio maintains a false identity until betrayed, endures the famous trial, and is condemned to death with Orsini and Pieri — then reprieved at the scaffold itself, his sentence commuted through appeals to the Empress. Transported to French Guiana, he survives a yellow-fever epidemic that kills his fellow conspirators and mounts a harrowing escape by sea, reaching British asylum. Returning to London, he labors to clear his name of the charge of betrayal and is vindicated by Mazzini's own testimony. The closing chapters turn to history and elegy: poverty and the death of a child; sustained polemic against the House of Savoy and the "practical" unification that di Rudio sees as a betrayal of republican ideals; Garibaldi's wounding at Aspromonte (1862); and a final meeting in which the gravely ill Mazzini redirects him from Poland toward the American Civil War. Di Rudio sails for New York in February 1864, and the book ends on the lasting sorrow of a patriot who never saw his homeland again.
 
 #### Part 2, Chapter 1 (pp. 127–134)
 Crespi opened Part 2 with the love story underlying di Rudio's London exile, drawn from the Count, his wife, and old letters. Arriving in London, di Rudio sang in the Drury Lane chorus, then labored at the Wapping Docks making bottle-coverings, amid the destitution of the émigré community, against whose misery the pensive figure of Mazzini stood out. He lodged with the figurine-maker Mancherini, befriended Fumagalli and Leoni, and routed the spy-provocateur Bonacina in a brawl, later disarming him with words. He began teaching Italian to Sara Mancherini and her cousin Elisa. Losing his job, he sank into hunger until, one night, a mysterious parcel of food appeared on his bed.

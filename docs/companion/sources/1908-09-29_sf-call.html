@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>"In Plot for Overthrow of Emperor" — San Francisco Call, 29 September 1908 — Reader's Companion</title>
-<link rel="stylesheet" href="../../static/bilingual.css?v=51023b0d">
+<link rel="stylesheet" href="../../static/bilingual.css?v=9820847e">
 </head>
 <body class="companion">
 
@@ -182,6 +182,25 @@
     const next = (cur + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length;
     apply(opts[next].dataset.setTheme);
     opts[next].focus();
+  });
+})();
+
+// Open the disclosure ancestors of a URL-targeted anchor (deep links into
+// a collapsed disclosure), and expand every disclosure before printing.
+(function () {
+  function openToHash() {
+    var el = null;
+    try { el = location.hash ? document.querySelector(location.hash) : null; }
+    catch (e) { return; }
+    for (var p = el; p; p = p.parentElement) {
+      if (p.tagName === 'DETAILS') p.open = true;
+    }
+    if (el) el.scrollIntoView();
+  }
+  addEventListener('hashchange', openToHash);
+  if (location.hash) addEventListener('load', openToHash);
+  addEventListener('beforeprint', function () {
+    document.querySelectorAll('details').forEach(function (d) { d.open = true; });
   });
 })();
 </script>

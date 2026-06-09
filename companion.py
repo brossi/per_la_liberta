@@ -68,6 +68,11 @@ CITATION_RE = re.compile(
     r"(?:Part\s*|P)\s*([12])\s*,?\s*Ch\.?\s*(\d+)(?:\s*[–-]\s*\d+)?"
 )
 
+# Pages whose H3/H4 heading hierarchy is wrapped into nested <details>/<summary>
+# disclosures: a book overview stays visible, then each part (H3) opens to its
+# summary and a list of chapter (H4) disclosures. See _wrap_details.
+NESTED_DETAILS_PAGES = {"summary"}
+
 # Source citations in the "Historical note"/"Scholarship" callouts are written as
 # `*(Source: Wikipedia, "Charles DeRudio".)*`, sometimes chaining several articles
 # under one marker (`Wikipedia, "Felice Orsini"; "Orsini affair"`) and sometimes
@@ -360,6 +365,124 @@ def _callout_kind(tokens: list[Token], i: int) -> str | None:
     return None
 
 
+def _html_block(content: str) -> Token:
+    t = Token("html_block", "", 0)
+    t.content = content
+    return t
+
+
+def _h3_has_h4(tokens: list[Token], start: int) -> bool:
+    """Does the H3 opening at ``start`` contain an H4 before the next H3 / EOF?"""
+    for j in range(start + 1, len(tokens)):
+        t = tokens[j]
+        if t.type == "heading_open":
+            if t.tag == "h3":
+                return False
+            if t.tag == "h4":
+                return True
+    return False
+
+
+# Chapter outline headings spell the citation out ("Part 1, Chapter 6 …"), which
+# the abbreviated CITATION_RE ("P1 Ch. 6") deliberately does not match — so the
+# headings were never auto-linked, and the disclosure summary toggles cleanly.
+CHAPTER_HEADING_RE = re.compile(r"Part\s+([12])\s*,?\s*Chapter\s+(\d+)", re.IGNORECASE)
+
+
+def _chapter_edition_link(inline_content: str, citation_map: dict, docs_root: str) -> Token | None:
+    """A body link into the edition for a chapter heading like 'Part 1, Chapter 6 …'."""
+    m = CHAPTER_HEADING_RE.search(inline_content)
+    if not m:
+        return None
+    entry = citation_map.get(f"{m.group(1)}:{int(m.group(2))}")
+    if not entry:
+        return None
+    href = f"{docs_root}index.html#{entry['anchor']}"
+    return _html_block(
+        f'<p class="chapter-edition-link"><a class="chapter-cite" href="{href}" '
+        f'title="Open this chapter in the edition">Read this chapter in the edition →</a></p>\n'
+    )
+
+
+def _wrap_details(tokens: list[Token], citation_map: dict, docs_root: str) -> list[Token]:
+    """Wrap a summary page's H3 parts and H4 chapters into nested <details>/<summary>.
+
+    Runs *after* ``_transform`` so heading ids (for anchors) and body deep-links are
+    already in place. The book overview (everything before the first H3) passes
+    through untouched and stays visible. From the first H3 on:
+
+    - **H3** opens a top-level disclosure: a *part* (an H3 that has H4 children)
+      renders ``open`` with its section-summary prose; a childless H3 (the
+      Prefazione) renders closed.
+    - **H4** opens a *chapter* disclosure nested in its part, rendered closed. Its
+      title is flattened to plain text so the whole summary line toggles, and the
+      edition deep-link is appended to the chapter body instead.
+
+    Both heading kinds keep their ``<hN id>`` inside the ``<summary>`` so existing
+    anchors survive (paired with the expand-on-navigate shim in the page shell).
+    """
+    start = next(
+        (i for i, t in enumerate(tokens) if t.type == "heading_open" and t.tag == "h3"),
+        None,
+    )
+    if start is None:
+        return tokens
+
+    out: list[Token] = tokens[:start]
+    section_open = False
+    chapter_open = False
+    pending_link: Token | None = None
+
+    def close_chapter() -> None:
+        nonlocal chapter_open, pending_link
+        if chapter_open:
+            if pending_link is not None:
+                out.append(pending_link)
+                pending_link = None
+            out.append(_html_block("</details>\n"))
+            chapter_open = False
+
+    def close_section() -> None:
+        nonlocal section_open
+        close_chapter()
+        if section_open:
+            out.append(_html_block("</details>\n"))
+            section_open = False
+
+    i, n = start, len(tokens)
+    while i < n:
+        tok = tokens[i]
+        if tok.type == "heading_open" and tok.tag == "h3":
+            close_section()
+            is_part = _h3_has_h4(tokens, i)
+            cls = "summary-part" if is_part else "summary-standalone"
+            attr = " open" if is_part else ""
+            out.append(_html_block(f'<details class="{cls}"{attr}>\n<summary>'))
+            out.extend(tokens[i:i + 3])           # heading_open, inline, heading_close
+            out.append(_html_block("</summary>\n"))
+            section_open = True
+            i += 3
+            continue
+        if tok.type == "heading_open" and tok.tag == "h4":
+            close_chapter()
+            out.append(_html_block('<details class="summary-chapter">\n<summary>'))
+            inline = tokens[i + 1]
+            # Flatten the auto-linked title to plain text (so the line toggles) and
+            # move its edition deep-link into the chapter body.
+            pending_link = _chapter_edition_link(inline.content, citation_map, docs_root)
+            inline.children = [_text_token(inline.content)]
+            out.extend(tokens[i:i + 3])
+            out.append(_html_block("</summary>\n"))
+            chapter_open = True
+            i += 3
+            continue
+        out.append(tok)
+        i += 1
+
+    close_section()
+    return out
+
+
 def _transform(tokens: list[Token], citation_map: dict, docs_root: str,
                entities: list | None, page_stem: str) -> str | None:
     """Mutate the token stream in place; return the page's H1 text if present."""
@@ -493,6 +616,25 @@ def _page_html(title: str, body_html: str, depth: int, css_hash: str, active_ste
         *_font_size_js(),
         "",
         *_theme_js(),
+        "",
+        "// Open the disclosure ancestors of a URL-targeted anchor (deep links into",
+        "// a collapsed disclosure), and expand every disclosure before printing.",
+        "(function () {",
+        "  function openToHash() {",
+        "    var el = null;",
+        "    try { el = location.hash ? document.querySelector(location.hash) : null; }",
+        "    catch (e) { return; }",
+        "    for (var p = el; p; p = p.parentElement) {",
+        "      if (p.tagName === 'DETAILS') p.open = true;",
+        "    }",
+        "    if (el) el.scrollIntoView();",
+        "  }",
+        "  addEventListener('hashchange', openToHash);",
+        "  if (location.hash) addEventListener('load', openToHash);",
+        "  addEventListener('beforeprint', function () {",
+        "    document.querySelectorAll('details').forEach(function (d) { d.open = true; });",
+        "  });",
+        "})();",
         "</script>",
         "</body>",
         "</html>",
@@ -566,6 +708,8 @@ def build() -> None:
         title = _transform(tokens, citation_map, docs_root, collector, stem)
         if rel.name == "glossary.md":
             entities.extend(_glossary_entities(text))
+        if stem in NESTED_DETAILS_PAGES:
+            tokens = _wrap_details(tokens, citation_map, docs_root)
 
         body_html = md.renderer.render(tokens, md.options, {})
         page_title = title or rel.stem.replace("-", " ").title()
