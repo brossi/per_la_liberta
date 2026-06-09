@@ -14,6 +14,7 @@ This companion gathers reader's aids for the English translation of Crespi's 191
 | [Event Context](events.md) | Framing notes on the historical episodes the book dramatizes, from the Five Days of Milan to Aspromonte. | ✅ done |
 | [Themes](themes.md) | Short interpretive essays: testimony as method, republic vs. monarchy, exile, martyrdom, anticlericalism. | ✅ done |
 | [Glossary](glossary.md) | One-line entries for the places, organizations, and terms the book names in passing. | ✅ done |
+| [Primary sources](sources/) | Transcribed contemporary documents behind the book — beginning with di Rudio's own 1908 *San Francisco Call* interview, the press appearance that set the book in motion. | ✅ seeded |
 
 ## How to read this companion
 

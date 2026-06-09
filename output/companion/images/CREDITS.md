@@ -58,6 +58,8 @@ All images accessed **2026-06-08** (first round) and **2026-06-09** (round-two a
 | `salle_le_peletier.jpg` | Salle Le Peletier (Paris Opéra) | glossary · *Rue Le Peletier (the Opéra)* | engraving, 1844 | A. Provost | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:Opera_Le_Peletier_par_A._Provost_1844.jpg) | PD-old |
 | `san_marino_view.jpg` | San Marino on Monte Titano | glossary · *San Marino* | view / print, c. 1855 | McLeod | Archiv "Deutschland und die Welt" (via Wikimedia Commons) | [File: page](https://commons.wikimedia.org/wiki/File:San_Marino_cliff_c1855.jpg) | Public domain |
 | `sfcall_derudio_1908.jpg` | "De Rudio Served with Gen. Custer" (the book in preparation) | themes · *§1 Testimony as method* | newspaper article (clipping), 30 Sept 1908 | *San Francisco Call* | *San Francisco Call* (daily) | *San Francisco Call*, 30 Sept 1908, p. 10 | Public domain (1908 US publication) |
+| `sfcall_revelations_1908_p1.jpg` | "In Plot for Overthrow of Emperor" — di Rudio's revelations (front page) | sources · *[1908-09-29 SF Call](../sources/1908-09-29_sf-call.md)* | newspaper feature (clipping), 29 Sept 1908 | *San Francisco Call* | *San Francisco Call* (daily) | *San Francisco Call*, 29 Sept 1908, p. 1 | Public domain (1908 US publication) |
+| `sfcall_revelations_1908_p7.jpg` | di Rudio's revelations (continuation) | sources · *[1908-09-29 SF Call](../sources/1908-09-29_sf-call.md)* | newspaper feature (clipping), 29 Sept 1908 | *San Francisco Call* | *San Francisco Call* (daily) | *San Francisco Call*, 29 Sept 1908, p. 7 | Public domain (1908 US publication) |
 | `siege_rome_1849.jpg` | Attack on the Villa Pamphili, 3 June 1849 | events · *§3 Roman Republic and Its Siege* | drawing, 19th c. (a depiction) | Auguste Raffet | Wikimedia Commons (Comitato Gianicolo) | [File: page](https://commons.wikimedia.org/wiki/File:Attacco_a_villa_Pamphili_del_3_giugno_1849.jpg) | Public domain |
 | `siege_rome_1849_map.png` | Plan of the 1849 siege of Rome (the Janiculum) | glossary · *Villa Corsini* | lithographed map, 1907 | from G. M. Trevelyan, *Garibaldi's Defence of the Roman Republic* | Wikimedia Commons (Longmans, Green & Co.) | [File: page](https://commons.wikimedia.org/wiki/File:Rome_in_1849.png) | Public domain |
 | `simon_bernard.jpg` | Dr. Simon François Bernard | personae · *Simon Bernard* | engraving, 1858 | unknown | Bibliothèque nationale de France (via Wikimedia Commons) | [File: page](https://commons.wikimedia.org/wiki/File:Simon-Francois_Bernard.jpg) | Public domain |
@@ -67,7 +69,7 @@ All images accessed **2026-06-08** (first round) and **2026-06-09** (round-two a
 | `toulon_bagne.jpg` | The bagne of Toulon | glossary · *Toulon* | engraving, mid-19th c. (pub. 1869) | from Pierre Zaccone, *Histoire des Bagnes* | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:Bagne_de_Toulon.jpg) | PD-old |
 | `vittorio_emanuele_ii_portrait.jpg` | Vittorio Emanuele II | themes · *§2 Republic against monarchy* | carte-de-visite photograph, c. 1861 | André-Adolphe-Eugène Disdéri | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:VictorEmmanuel2_(3).jpg) | Public domain |
 
-**47 images, 48 placements** (the DeRudio photograph serves both personae and timeline).
+**49 images, 50 placements** (the DeRudio photograph serves both personae and timeline; two of the images illustrate the primary-source transcription in [`sources/`](../sources/1908-09-29_sf-call.md)).
 
 ## Linked, not hosted
 
