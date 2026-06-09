@@ -189,6 +189,17 @@ def _gh_slug(text: str) -> str:
     return s.strip().replace(" ", "-")
 
 
+# Visible references to a sibling companion page — bare prose, a link label, or a
+# code span like `images/CREDITS.md`. The pages are published as HTML, so the text
+# the reader sees must read .html (link *hrefs* are handled by _rewrite_link_href).
+_MD_REF_RE = re.compile(r"([\w./-]+)\.md\b")
+
+
+def _md_refs_to_html(text: str) -> str:
+    """Rewrite visible ``name.md`` companion-page references to ``name.html``."""
+    return _MD_REF_RE.sub(lambda m: m.group(1) + ".html", text)
+
+
 def _rewrite_link_href(href: str) -> str:
     """Companion-relative ``.md`` links → ``.html``; directory links → index."""
     if re.match(r"^(https?:|mailto:|#)", href):
@@ -303,14 +314,26 @@ def _rewrite_inline_children(children: list[Token], citation_map: dict, docs_roo
         elif ch.type == "link_close":
             link_depth -= 1
             out.append(ch)
-        elif ch.type == "text" and link_depth == 0:
-            # Chapter deep-links first, then external source citations within the
-            # remaining plain-text runs (the two never share a span).
-            for piece in _split_citations(ch.content, citation_map, docs_root):
-                if piece.type == "text":
-                    out.extend(_link_sources(piece.content))
-                else:
-                    out.append(piece)
+        elif ch.type == "code_inline":
+            # Code spans naming a sibling page (`images/CREDITS.md`) are visible
+            # text; point them at the rendered .html.
+            ch.content = _md_refs_to_html(ch.content)
+            out.append(ch)
+        elif ch.type == "text":
+            # Visible .md references → .html, at any depth (bare prose *and* link
+            # labels like [images/CREDITS.md](…)); hrefs are handled above.
+            content = _md_refs_to_html(ch.content)
+            if link_depth == 0:
+                # Chapter deep-links first, then external source citations within
+                # the remaining plain-text runs (the two never share a span).
+                for piece in _split_citations(content, citation_map, docs_root):
+                    if piece.type == "text":
+                        out.extend(_link_sources(piece.content))
+                    else:
+                        out.append(piece)
+            else:
+                ch.content = content  # inside a link label — convert, don't nest links
+                out.append(ch)
         else:
             out.append(ch)
     return out
