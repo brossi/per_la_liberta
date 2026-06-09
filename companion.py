@@ -68,17 +68,54 @@ CITATION_RE = re.compile(
     r"(?:Part\s*|P)\s*([12])\s*,?\s*Ch\.?\s*(\d+)(?:\s*[–-]\s*\d+)?"
 )
 
-# Wikipedia source citations in the "Historical note"/"Scholarship" callouts are
-# written as `*(Source: Wikipedia, "Charles DeRudio".)*`, sometimes chaining
-# several articles under one marker (`Wikipedia, "Felice Orsini"; "Orsini affair"`)
-# and sometimes sitting beside non-Wikipedia sources (`Wikipedia, "Orsini affair";
-# Britannica, "Felice Orsini."`). We linkify only the quoted titles that follow a
-# `Wikipedia` marker, chaining through consecutive quoted titles and stopping at
-# the first non-quoted source so a neighbour's title is never mislinked.
-WIKI_MARKER = re.compile(r"Wikipedia,?\s*(?=\")")
-WIKI_TITLE = re.compile(r'"([^"]+)"')
+# Source citations in the "Historical note"/"Scholarship" callouts are written as
+# `*(Source: Wikipedia, "Charles DeRudio".)*`, sometimes chaining several articles
+# under one marker (`Wikipedia, "Felice Orsini"; "Orsini affair"`) and sometimes
+# sitting beside other publishers (`Wikipedia, "Orsini affair"; Britannica,
+# "Felice Orsini."`). We linkify only the quoted titles that follow a *recognised
+# publisher marker*, chaining through consecutive quoted titles and stopping at the
+# first non-quoted source, so a neighbour's title is never mislinked.
+#
+# Wikipedia titles map to URLs by rule (deterministic slug). Britannica and
+# ExecutedToday do not — their path segment / dated post-slug can't be derived
+# from the title — so those are a small curated, verified registry. Untitled
+# mentions of any publisher (a bare "Britannica") name no article and stay plain.
+SOURCE_TITLE = re.compile(r'"([^"]+)"')
 # Separator between chained quoted titles: `; ` or `, `, only if a quote follows.
-WIKI_TITLE_SEP = re.compile(r'\s*[;,]\s*(?=")')
+SOURCE_TITLE_SEP = re.compile(r'\s*[;,]\s*(?=")')
+
+
+def _wiki_url(title: str) -> str:
+    """Quoted article title → canonical en.wikipedia.org URL.
+
+    Strips a trailing period pulled inside the closing quote (American style:
+    ``"Charles DeRudio."``) before building the slug; spaces → underscores;
+    accents, en-dashes, and other non-ASCII are percent-encoded.
+    """
+    slug = title.strip().rstrip(".").strip().replace(" ", "_")
+    return "https://en.wikipedia.org/wiki/" + quote(slug, safe="_(),'")
+
+
+def _curated_resolver(table: dict[str, str]):
+    """Build a resolver that looks a title up in a curated map (trailing '.' tolerant)."""
+    return lambda title: table.get(title.strip().rstrip(".").strip())
+
+
+# Curated, verified URLs for publishers whose links aren't rule-derivable.
+BRITANNICA_URLS = {
+    "Felice Orsini": "https://www.britannica.com/biography/Felice-Orsini",
+}
+EXECUTEDTODAY_URLS = {
+    "1858: Felice Orsini": "https://www.executedtoday.com/2009/03/13/1858-felice-orsini-italian-revolutionary/",
+}
+
+# (publisher marker, title→URL resolver). A resolver returning None leaves the
+# title as plain text (e.g. a Britannica article we haven't curated a URL for).
+SOURCE_PUBLISHERS = [
+    (re.compile(r"Wikipedia,?\s*(?=\")"), _wiki_url),
+    (re.compile(r"Britannica,?\s*(?=\")"), _curated_resolver(BRITANNICA_URLS)),
+    (re.compile(r"ExecutedToday,?\s*(?=\")"), _curated_resolver(EXECUTEDTODAY_URLS)),
+]
 
 
 # --------------------------------------------------------------------------- #
@@ -194,50 +231,47 @@ def _split_citations(text: str, citation_map: dict, docs_root: str) -> list[Toke
     return out
 
 
-def _wiki_url(title: str) -> str:
-    """Quoted article title → canonical en.wikipedia.org URL.
+def _cited_title_spans(text: str) -> list[tuple[int, int, str]]:
+    """Inner-text spans of quoted titles attributable to a recognised publisher.
 
-    Strips a trailing period pulled inside the closing quote (American style:
-    ``"Charles DeRudio."``) before building the slug; spaces → underscores;
-    accents, en-dashes, and other non-ASCII are percent-encoded.
+    Returns ``(start, end, url)`` for each linkable title. Scans every publisher
+    marker, chaining through consecutive quoted titles; a resolver returning None
+    (an uncurated title) is skipped without breaking the chain.
     """
-    slug = title.strip().rstrip(".").strip().replace(" ", "_")
-    return "https://en.wikipedia.org/wiki/" + quote(slug, safe="_(),'")
-
-
-def _wiki_title_spans(text: str) -> list[tuple[int, int]]:
-    """Locate the inner-text spans of every quoted title attributable to Wikipedia."""
-    spans: list[tuple[int, int]] = []
-    for m in WIKI_MARKER.finditer(text):
-        j = m.end()
-        while j < len(text) and text[j] == '"':
-            qm = WIKI_TITLE.match(text, j)
-            if not qm:
-                break
-            spans.append((qm.start(1), qm.end(1)))
-            sep = WIKI_TITLE_SEP.match(text, qm.end())
-            if not sep:
-                break
-            j = sep.end()  # lookahead leaves us on the next opening quote
+    spans: list[tuple[int, int, str]] = []
+    for marker, resolve in SOURCE_PUBLISHERS:
+        for m in marker.finditer(text):
+            j = m.end()
+            while j < len(text) and text[j] == '"':
+                qm = SOURCE_TITLE.match(text, j)
+                if not qm:
+                    break
+                url = resolve(qm.group(1))
+                if url:
+                    spans.append((qm.start(1), qm.end(1), url))
+                sep = SOURCE_TITLE_SEP.match(text, qm.end())
+                if not sep:
+                    break
+                j = sep.end()  # lookahead leaves us on the next opening quote
     return spans
 
 
-def _link_wikipedia(text: str) -> list[Token]:
-    """Wrap Wikipedia-attributed quoted titles in external links; leave quotes in place."""
-    spans = sorted(set(_wiki_title_spans(text)))
+def _link_sources(text: str) -> list[Token]:
+    """Wrap publisher-attributed quoted titles in external links; leave quotes in place."""
+    spans = sorted(set(_cited_title_spans(text)))
     if not spans:
         return [_text_token(text)]
     out: list[Token] = []
     pos = 0
-    for start, end in spans:
+    for start, end, url in spans:
         if start < pos:  # overlap guard (duplicate marker scans)
             continue
         if start > pos:
             out.append(_text_token(text[pos:start]))
         title = text[start:end]
         link_open = Token("link_open", "a", 1)
-        link_open.attrSet("href", _wiki_url(title))
-        link_open.attrSet("class", "wiki-cite")
+        link_open.attrSet("href", url)
+        link_open.attrSet("class", "source-cite")
         out += [link_open, _text_token(title), Token("link_close", "a", -1)]
         pos = end
     if pos < len(text):
@@ -258,11 +292,11 @@ def _rewrite_inline_children(children: list[Token], citation_map: dict, docs_roo
             link_depth -= 1
             out.append(ch)
         elif ch.type == "text" and link_depth == 0:
-            # Chapter deep-links first, then Wikipedia citations within the
+            # Chapter deep-links first, then external source citations within the
             # remaining plain-text runs (the two never share a span).
             for piece in _split_citations(ch.content, citation_map, docs_root):
                 if piece.type == "text":
-                    out.extend(_link_wikipedia(piece.content))
+                    out.extend(_link_sources(piece.content))
                 else:
                     out.append(piece)
         else:

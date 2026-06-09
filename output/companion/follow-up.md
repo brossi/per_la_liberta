@@ -73,5 +73,5 @@ Zimmer cites a Fascist political-police file: **Casellario Politico Centrale, bu
 
 The secular **Cimitero Italiano**, Colma (run by the Italian Mutual Benevolent Society) — the plausible resting place for an anticlerical.
 
-- **Where:** FamilySearch collection **1922526** (index cards + daily log; log begins 1934, so a 1948 burial is in range), free login; or direct lookup at **italiancemetery.com** / **(650) 755-1511**.
+- **Where:** FamilySearch collection **1922526** (index cards + daily log; log begins 1934, so a 1948 burial is in range), free login; or direct lookup at **[italiancemetery.com](https://www.italiancemetery.com/)** / **(650) 755-1511**.
 - **What it would add:** grave location, burial date, age, and often birthplace.
