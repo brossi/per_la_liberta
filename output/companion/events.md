@@ -14,6 +14,14 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 The whole memoir rests on a grievance it expects the reader to share: that after Napoleon's fall, Italy was handed back to foreign and clerical masters. Chapter 2 pauses the narrative to lay this out as di Rudio understood it.
 
+<img src="images/italy_1815_map.png" alt="Map of Italy in 1815" width="480">
+
+*Italy as the Congress of Vienna left it in 1815 — Austrian Lombardy–Venetia, the Papal States, the Kingdom of the Two Sicilies, Sardinia-Piedmont, and the duchies. Map: bramfab, Wikimedia Commons, CC BY-SA 3.0.*
+
+<img src="images/metternich_portrait.jpg" alt="Klemens von Metternich" width="300">
+
+*Klemens von Metternich, architect of the post-1815 Austrian order in Italy — portrait by Sir Thomas Lawrence, c. 1815. Wikimedia Commons; public domain.*
+
 **In the book.** di Rudio gives a compressed, furious history of "the Italian question." Metternich, having helped topple Napoleon, redrew the peninsula at Vienna into a cluster of restored princes — Ferdinand at Naples, Pius VII at Rome, the "executioner" Francesco IV at Modena — whom di Rudio calls Austria's "hired assassins," bound to Vienna by secret treaties that licensed armed intervention against any liberal stirring. He catalogues the machinery of repression: the Spielberg fortress in Moravia, the swarm of informers who "violated the postal secret" and reported even a man's choice of hat, the fiscal bleeding of Lombardy-Venetia, and the tobacco and cloth boycotts that the authorities answered with the knife. The chapter is also where di Rudio plants his own lineage: an ancient Belluno family; a father who smashes a bust of "the liberating Pontiff" Pius IX in a café, crying that the citizens carry "the greatest enemy of our Fatherland"; a maternal grandfather, Fortunato de Domini, who was himself a colonel of Austrian infantry. *(P1 Ch. 2, pp. 15–23)*
 
 > **Historical note** — The Congress of Vienna (1814–15) restored Austrian predominance over Italy: Lombardy and Venetia were annexed directly to the Habsburg Empire as the Kingdom of Lombardy–Venetia, while restored dynasties ruled the rest under Austrian influence. The dismissive tag "Italy is a geographical expression" is traditionally attributed to Metternich. *(Source: Wikipedia, "Kingdom of Lombardy–Venetia"; "Klemens von Metternich".)*
@@ -48,6 +56,10 @@ The first defeat that the book treats as a victory of spirit — and di Rudio's 
 
 **In the book.** After the collapse of 1848 in the north, di Rudio reaches Rome with Garibaldi's Legion. He sees the French under General Oudinot repulsed at the walls on 30 April 1849, and claims the republicans could have driven them into the sea had Mazzini not "blunted our élan" for diplomatic reasons. He fights at Palestrina against the Neapolitan "Re Bomba" (9 May) and at Velletri, where his band of "beardless youths" rescues a fallen Garibaldi and earns the famous "fatherly cheek-pinch." The set piece is 3 June 1849: Oudinot, "adding treachery to treachery," breaks the armistice and seizes the Villa Pamfili and the Villa Corsini — "the key to Porta San Pancrazio." The chapter renders the day-long, doomed assaults on the Corsini in near-liturgical terms: Manara's Bersaglieri cut down on the slope, the Dandolo brothers, the heroic charge and death of Angelo Masina, the wounding of the poet Goffredo Mameli. In a personal interlude di Rudio captures a French officer hiding in a privy and, at the Ponte San Sisto, physically shields him from National Guardsmen who mean to shoot him and throw him in the river — "I will not permit the Italian name to be dishonoured by acts of cowardice." *(P1 Ch. 6, pp. 34–39; see also P1 Ch. 4, pp. 26–31, and P1 Ch. 7, pp. 39–43)*
 
+<img src="images/mameli_portrait.jpg" alt="Goffredo Mameli" width="300">
+
+*Goffredo Mameli, poet of the Roman Republic, mortally wounded in the 1849 siege di Rudio describes — portrait by Domenico Induno, c. 1849. Wikimedia Commons; public domain.*
+
 > **Historical note** — The Roman Republic was proclaimed in February 1849 after Pius IX fled the city; it was governed by a triumvirate including Mazzini and defended by Garibaldi. A French expeditionary force sent by Louis-Napoleon besieged the city; after heavy fighting on the Janiculum in June, the Assembly ceased resistance on 1 July and French troops entered Rome on 3 July 1849, restoring papal rule. Goffredo Mameli, author of what is now the Italian national anthem, died of his wound that July. *(Source: Wikipedia, "Roman Republic (1849)"; "Goffredo Mameli".)*
 
 > **Scholarship** — G. M. Trevelyan's *Garibaldi's Defence of the Roman Republic* (1907) remains the classic English narrative of the siege; he gives a full chapter to "The Third of June — Villa Corsini" and an appendix to the numbers of killed and wounded, ranking the doomed assaults di Rudio describes among the costliest and most celebrated feats of the defence. Trevelyan's frankly heroic, literary manner runs strikingly close to the memoir's own register.
@@ -57,6 +69,10 @@ The first defeat that the book treats as a victory of spirit — and di Rudio's 
 ## 4. The Coup d'État of Louis-Napoleon (December 1851)
 
 The episode that fixes Napoleon III as the book's master-villain, and that di Rudio witnesses from a Paris barricade.
+
+<img src="images/coup_1851.jpg" alt="The coup of December 1851 in Paris" width="480">
+
+*Louis-Napoléon's cavalry in the streets of Paris during the coup of December 1851 — contemporary engraving, 1851. Wikimedia Commons; public domain.*
 
 **In the book.** Exiled in Paris, di Rudio and a comrade make cartridges for the Club of Batignolles. On 2 December 1851 they find the Place de la Bastille under arms; warning the affiliated clubs, they help raise a barricade at the Club of Saint-Denis — "sixteen Frenchmen and two Italians" behind a red kerchief tied to a stick. The chasseurs of Vincennes "attempted twice and twice repulsed"; on the third rush they close ranks, scale the barricade, and "found not a living creature before them" — the defenders, their last cartridge spent, having slipped away. di Rudio then narrates the coup at large in his polemical voice: generals arrested in their beds, the presses seized, the boulevard massacre fuelled by distributed brandy, prisoners shot in batches over twelve nights and buried with their heads above ground for identification, and the Mixed Commissions condemning men in absentia to Lambessa or "the dry guillotine of Cayenne." He records, too, the republicans' fatal scruple — Victor Hugo and the Left who would raise barricades but recoil from striking at the one man, Louis-Napoleon himself. *(P1 Ch. 9, pp. 48–52)*
 
@@ -69,6 +85,10 @@ The episode that fixes Napoleon III as the book's master-villain, and that di Ru
 ## 5. The Conspiratorial Decade — Giovine Italia, the 1853 Rising, and the Belfiore Martyrs
 
 The long middle of Part One: the underground years that made di Rudio a professional conspirator and cost his mentor Calvi his life.
+
+<img src="images/belfiore_martyrs.jpg" alt="The Belfiore martyrs led to the scaffold" width="480">
+
+*"The Belfiore martyrs led to the scaffold" — the patriots Austria hanged at Mantua, 1852–55, among them di Rudio's mentor Calvi. Commemorative wood engraving by Edoardo Matania, 1887. Wikimedia Commons; public domain.*
 
 **In the book.** Driven from France, di Rudio swears Mazzini's oath and enters *Giovine Italia* (Young Italy). Back in Genoa (1852), working for a merchant tailor, he is drawn again into action by the patriot priest Don Bastiano Barozzi and by his old colonel Pietro Fortunato Calvi, who commissions him a secret envoy into Austrian Lombardy-Venetia under the alias "Carlo Moretti, a silk merchant" — coding regiments as bales of silk. The chapters trace the Mazzinian European Revolutionary Committee, the abortive Milan rising of 6 February 1853 (di Rudio, carrying gold for Calvi's Lake Maggiore scheme, is recalled with the word "In Milan all is lost"), his first meeting with Mazzini near Lugano, the doomed Alpine conspiracy around Belluno, and Calvi's capture. The book makes Calvi's death its moral peak: he refuses to beg the clemency Austria reserved for the repentant and goes to the gallows with studied composure. *(P1 Ch. 11–16, pp. 59–83; Calvi's capture, P1 Ch. 22, pp. 108–112)*
 
@@ -104,6 +124,10 @@ The book's descent into hell — and the stage for di Rudio's escape.
 
 **In the book.** Spared the guillotine, di Rudio is shipped to French Guiana aboard the convict transport (the *Durance*), put ashore by way of the Île Royale du Salut, and landed on 11 December 1858 at the Montagne d'Argent, a former plantation turned penal station near the Brazilian frontier. He describes forced labour in the forest, a commandant who promises him he will "leave his skin" there, and his own resolve to escape: with eight accomplices he secretly fells and hollows a great tree into a canoe. Then yellow fever sweeps the colony. di Rudio buries the dead "one by one," his eight fellow escape-plotters among them; of "more than six hundred souls" only sixty-three survive, and the survivors — di Rudio one of only three wholly untouched by the fever — are evacuated to the Île du Salut. There he plans a second, successful escape: seizing a fishing boat and scuttling the pursuit craft. *(P2 Ch. 21–22, pp. 212–222; the escape, P2 Ch. 25–27, pp. 228–240)*
 
+<img src="images/guiana_coast_map.png" alt="Map of the three Guianas" width="500">
+
+*The three Guianas — di Rudio's escape ran from Cayenne and the Îles du Salut (French Guiana, far east) northwest along the coast through Suriname to British Guiana (now Guyana), where he made landfall near the Berbice. Map: SurinameCentral, Wikimedia Commons, CC BY-SA 4.0.*
+
 > **Historical note** — Napoleon III established the penal colony of French Guiana (the *bagne de Cayenne*, centred on the Salvation Islands — Île Royale, Île Saint-Joseph, and the Île du Diable, "Devil's Island") by decree in 1852; it operated until the 1950s and was notorious for a death rate driven by tropical disease. The phrase "dry guillotine" (*la guillotine sèche*) — which the memoir already uses for Cayenne in 1858 — became the popular name for the colony, fixed by escaped convict René Belbenoît's 1938 book of that title. *(Source: Wikipedia, "Devil's Island".)*
 
 > **Scholarship** — Stephen Toth (*Beyond Papillon*, 2006) and Peter Redfield (*Space in the Tropics*, 2000) document the system di Rudio survived: Guiana was chosen in 1852 despite a climate so lethal with yellow fever that it had long repelled free settlers, in the hope that convict labour might develop it, and transportation was institutionalized by the law of 1854. Toth's portrait of an uncaring administration, brutal guards, and a death rate that made Guiana the deadliest of the French *bagnes* renders di Rudio's epidemic and his "you will leave your skin here" commandant representative, not exceptional.
@@ -119,6 +143,10 @@ The making of Italy, watched bitterly from exile by a republican who thinks it w
 *Garibaldi's Thousand landing at Marsala, May 1860 — a contemporary eyewitness drawing. Wikimedia Commons; public domain.*
 
 **In the book.** Returned to London, di Rudio follows unification through the English press and judges it by Mazzinian lights. He condemns the 1859 alliance of Piedmont and Napoleon III, the "treacherous peace of Villafranca" that left Venetia to Austria, and above all the cession of Nice and Savoy — "the full price paid for a service only partially rendered." He hails Garibaldi's landing at Marsala and the victory of Calatafimi, but insists the Expedition of the Thousand was *organised* by Mazzini, Rosalino Pilo (who died in it), Agostino Bertani, and Nino Bixio, the glory of execution falling to Garibaldi. He notes, with sardonic relish, that Francesco Crispi contributed "a conspicuous supply — of Orsini bombs." Throughout, his target is the "practical" monarchy: Cavour the convert to revolution-from-above, Vittorio Emanuele the "vassal of the Empire." *(P2 Ch. 31, pp. 253–258)*
+
+<img src="images/restoration_italy_map.jpg" alt="The unification of Italy, 1815–1870" width="480">
+
+*The making of Italy, 1815–1870 — the stages by which the peninsula was unified, the process di Rudio watched from exile and judged a betrayal of its republican makers. From Shepherd's *Historical Atlas*, 1911. Wikimedia Commons; public domain.*
 
 > **Historical note** — At Plombières (21 July 1858) Napoleon III and Cavour secretly agreed that France would help Piedmont expel Austria from northern Italy in exchange for Nice and Savoy. The Second War of Independence (1859) followed; Napoleon's separate armistice at Villafranca left Venetia with Austria. By the Treaty of Turin (24 March 1860) Sardinia ceded Nice and Savoy to France. Garibaldi's Expedition of the Thousand (sailed from Quarto, landed at Marsala, May 1860) toppled the Kingdom of the Two Sicilies, and the Kingdom of Italy was proclaimed on 17 March 1861 — still without Rome or Venetia. *(Sources: Wikipedia, "Treaty of Turin (1860)"; "Expedition of the Thousand"; "Unification of Italy".)*
 

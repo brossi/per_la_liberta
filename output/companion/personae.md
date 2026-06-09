@@ -46,6 +46,10 @@ The presiding spirit of the book and of di Rudio's life. At their first meeting 
 
 ### Pietro Fortunato Calvi — the mentor and martyr *(Part 1, Ch. 11, 15, 22)*
 
+<img src="images/calvi_bust.jpg" alt="Bust of Pietro Fortunato Calvi" width="280">
+
+*Pietro Fortunato Calvi — marble portrait bust above his memorial in the Palazzo Comunale, Padua (inscribed "soldato, cospiratore, martire"). Photo: Threecharlie, Wikimedia Commons, CC BY-SA 4.0. No period likeness circulates freely; a contemporary portrait relief (Pasquale Miglioretti, c. 1872) is held at the [Palazzo Ducale, Mantua](https://catalogo.cultura.gov.it/detail/HistoricOrArtisticProperty/0303267368-5). The 1887 engraving of the Belfiore martyrs in which he is one of the condemned is in [Event Context §5](events.md#5-the-conspiratorial-decade--giovine-italia-the-1853-rising-and-the-belfiore-martyrs).*
+
 The officer who first commissioned di Rudio as a secret agent and whose watchword — *"Let the arms do their duty; the mind keeps watch and will do its own!"* — frames the conspiratorial chapters. The book makes his death its moral high-water mark: captured carrying his commission as general-in-chief, he refused to beg for the clemency Austria granted only to those who sought it in humiliating, repentant terms, and went to the gallows with studied composure — handing his still-lit cigar to a guard, declining help up the plank, and declaring *"I am ready!"* Crespi laments that official slander and partisan cliques diminished his memory.
 
 > **Historical note** — Pietro Fortunato Calvi was hanged at Mantua on 4 July 1855, the last of the Belfiore martyrs executed by Austria. *(Sources: Wikipedia, "Belfiore martyrs"; ExecutedToday.)*
@@ -91,6 +95,10 @@ Orsini's servant, and the man di Rudio first meets at Orsini's Paris lodgings un
 > **Historical note** — Of the four tried, Gomez alone escaped the death sentence; he was condemned to hard labour for life. The "Allsop" name is not invented: a real Englishman, **Thomas Allsop**, was a central backer of the plot — he arranged the manufacture of the bombs in Birmingham and supplied a British passport — and escaped to America after the attack. The passport he furnished is the likely source of di Rudio's "false Allsop." *(Source: Wikipedia, "Orsini affair".)*
 
 ### Simon Bernard — the London broker *(Part 2, Ch. 5–6, 28–29)*
+
+<img src="images/simon_bernard.jpg" alt="Simon François Bernard" width="240">
+
+*Dr. Simon François Bernard, who directed the plot from London and was tried and acquitted there in 1858 — engraving, 1858. Bibliothèque nationale de France (via Wikimedia Commons); public domain.*
 
 The French émigré physician who organized the plot from the safety of London and, in the book's bitter account, then slandered di Rudio after the escape as a man who had bought his freedom by informing — a calumny di Rudio spent years refuting.
 

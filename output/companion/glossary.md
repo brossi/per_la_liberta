@@ -32,6 +32,10 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 **Villa Corsini.** The villa on the Janiculum heights above Rome — "the key to Porta San Pancrazio" — fought over in the day-long, doomed assaults of 3 June 1849, the book's set piece of heroic slaughter. *(P1 Ch. 6, pp. 34–39; see [Event Context §3](events.md#3-the-roman-republic-and-its-siege-1849))*
 
+<img src="images/siege_rome_1849_map.png" alt="Plan of the 1849 siege of Rome, the Janiculum" width="500">
+
+*The Janiculum in 1849 — G. M. Trevelyan's plan of the siege, with the Villa Corsini and Villa Pamphili just outside the Porta San Pancrazio, the ground of the 3 June assault. From *Garibaldi's Defence of the Roman Republic* (1907). Wikimedia Commons; public domain.*
+
 **Castello di San Giorgio, Mantua.** The Austrian prison-fortress at Mantua where Calvi was held with di Rudio's father, his sister Luisa, and Don Bastiano, and where Orsini too was briefly jailed — the same fortress-prison that held the Belfiore martyrs (executed 1852–55; see [Event Context §5](events.md#5-the-conspiratorial-decade--giovine-italia-the-1853-rising-and-the-belfiore-martyrs)). *(P1 Ch. 22, pp. 108–112)*
 
 <img src="images/mantua_castello_san_giorgio.jpg" alt="Castello di San Giorgio, Mantua" width="460">
@@ -100,6 +104,10 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 **Île du Salut / Îles du Salut.** The "Salvation Islands" off the Guiana coast, the penal archipelago to which the fever survivors were evacuated and from which di Rudio staged his successful escape by sea in December 1859. *(P2 Ch. 23–25, pp. 222–232)*
 
+<img src="images/guiana_escape_map.jpg" alt="Map of the coast of French Guiana, 1852" width="480">
+
+*The coast of French Guiana — "Carte de la Guyane française," 1852, with an inset plan of Cayenne. The Salvation Islands lie off this coast near Kourou. Bibliothèque nationale de France (via Wikimedia Commons); public domain.*
+
 > **Historical note** — The Îles du Salut comprise Île Royale, Île Saint-Joseph, and the Île du Diable ("Devil's Island"), the most notorious unit of the French penal colony of Guiana (the *bagne de Cayenne*), established by Napoleon III's decree in 1852 and operated until the 1950s. The same archipelago would later hold Captain Alfred Dreyfus in isolation (1895–1899) during the Dreyfus Affair, and became known to modern readers as the setting of Henri Charrière's bestselling *Papillon* (1969). *(Sources: Wikipedia, "Devil's Island"; dreyfus.culture.fr.)*
 
 ---
@@ -108,9 +116,17 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 **Carbonari.** The early-nineteenth-century secret society of "charcoal-burners" whose distrust of Louis-Napoleon di Rudio invokes — the conspiratorial seedbed that preceded Mazzini's movement. *(P1 Ch. 5, pp. 31–34)*
 
+<img src="images/carbonari_emblem.jpg" alt="Carbonari statutes" width="300">
+
+*A page from the printed statutes of the Carbonari, the secret society of "charcoal-burners" — 19th c. Wikimedia Commons; public domain.*
+
 > **Historical note** — The Carbonari were a network of secret revolutionary societies active in Italy from about 1800, central to the failed risings of 1820–21 and 1831; Mazzini was himself initiated as a Carbonaro before founding Young Italy. *(Source: Wikipedia, "Carbonari".)*
 
 **Giovine Italia (Young Italy).** Mazzini's movement, into which di Rudio is sworn at Marseilles after the fall of Rome; membership defines his politics for the rest of the book — a unified Italian *republic*, by insurrection, against both Austria and the native monarchy. *(P1 Ch. 8, pp. 43–48)*
+
+<img src="images/giovine_italia.png" alt="Cover of La Giovine Italia" width="240">
+
+*The cover of Mazzini's clandestine journal *La Giovine Italia* (1832) — a 1918 facsimile of the Marseille original. Wikimedia Commons; public domain.*
 
 > **Historical note** — Mazzini founded *Giovine Italia* in 1831 to work for a free, unified, republican Italy through popular insurrection. *(Source: Wikipedia, "Young Italy".)*
 
@@ -151,6 +167,10 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 <img src="images/orsini_bomb.jpg" alt="The Orsini hedgehog bomb" width="360">
 
 *The Orsini "hedgehog" bomb — engraving from the Illustrated London News, 27 February 1858. Wikimedia Commons; public domain.*
+
+<img src="images/orsini_bomb_surviving.jpg" alt="A surviving original Orsini bomb" width="360">
+
+*An original Orsini bomb from the attentat, preserved at the Musée de la Préfecture de Police, Paris — the spiked fulminate device the conspirators handled. Photo: G. Garitan, Wikimedia Commons, CC BY-SA 4.0.*
 
 > **Historical note** — The device is the historically documented "Orsini bomb," and the memoir's manufacturing detail checks out: the castings were made in Birmingham by the gun engineer **Joseph Taylor** (the book's "Taylor foundry") and tested in England before being smuggled to France. The designer the book calls "Baron di Torocfalda," however, cannot be traced in the historical record; the design is usually credited to Orsini himself. *(Sources: Wikipedia, "Orsini bomb"; History Today, "Felice Orsini".)*
 

@@ -16,6 +16,10 @@ Citations use the companion's form — e.g. *P2 Ch. 33 (pp. 264–268)* — with
 
 The book announces its own method in its first sentence, and the method is a refusal. "The present volume might make some contribution to History; but it is not history in the sense in which that word is today understood and written." Crespi disclaims "the methodical concatenation of facts and the cold judgment upon men and events" and offers instead something he calls a **"human document"** — a record not of what objectively happened but of "the soul of the times," reached by "rummaging among the passions that stirred them." *(Preface, pp. 7–8)*
 
+<img src="images/title_page_1913.jpg" alt="Title page of the 1913 first edition" width="300">
+
+*The first edition's title page — *Per la libertà! (Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini)*, Cesare Crespi, San Francisco, 1913. From the Library of Congress copy (in-repo source scan); public domain.*
+
 This is a deliberate choice of genre, and everything follows from it. Because the value sought is the witness's inner truth rather than the historian's verified one, fidelity means fidelity *to the witness*. Crespi says he could have "softened certain jarring notes" and "erased certain heterogeneous imprints" — the borrowed cadences of the authors di Rudio loved — and chose not to: "To adulterate the word issued from lips silenced for ever... for a simple mortal it is cowardice." *(Preface, pp. 7–8)* The partisanship the reader meets on every page is therefore not a flaw the book failed to correct; it is the thing the book exists to preserve.
 
 The guarantee of authenticity is physical, almost legal. Crespi did not merely take notes: "not only did I procure the approval, in writing, of every single chapter, but I also requested and obtained that every page liable to presumable controversy should be authenticated by di Rudio with his own signature." *(Preface, pp. 7–8)* The memoir is built like a deposition — a chain of countersigned testimony — precisely because its maker foresaw that it would be challenged, and that its subject would not be alive to defend it: "I sensed that this book would see the light when di Rudio would be no more."
@@ -35,6 +39,10 @@ The book's deepest quarrel is not with Austria or with France but with the *kind
 *Vittorio Emanuele II, first King of Italy — carte-de-visite by André-Adolphe-Eugène Disdéri, c. 1861. Wikimedia Commons; public domain. To di Rudio, "a simple vassal of the Empire."*
 
 The indictment is itemized. The 1859 alliance of Piedmont with Napoleon III produces "the treacherous peace of Villafranca," which abandons the Veneto to Austria; the price of French help is Nice and Savoy — "the full price paid for a service only partially rendered" — so that "while the Revolution sacrificed the blood of heroes to add new Provinces... the Savoyard Monarchy worked in reverse and severed from it two of its ancient Provinces." Cavour, who had "deplored as the supreme affliction of Italy the arts of the revolutionaries," turns "from devil to friar" by adopting those very arts when they serve the dynasty. Vittorio Emanuele is reduced to "a simple vassal of the Empire." *(P2 Ch. 31, pp. 253–258)*
+
+<img src="images/cavour_portrait.jpg" alt="Count Cavour" width="300">
+
+*Camillo Benso, Count of Cavour — the monarchy's "practical" statesman, who in di Rudio's account turned "from devil to friar" — photograph, c. 1860. Wikimedia Commons; public domain.*
 
 Underneath the grievances is a clean moral antithesis, which di Rudio states as a maxim: "The monarchical entity never throws itself into the fray without an eye to its own interest and subordinates the unity of Italy to privileges which it proclaims inviolable; the republican entity, having inscribed its own epic in characters of blood, freely sacrifices upon the altar of the Fatherland both itself and its serene convictions." *(P2 Ch. 31, pp. 253–258)* The republic is morally superior *because* it loses — because it gives without calculating return. This is the same valuation Crespi announces in the preface, where he declares his sympathies "for those who manfully succumb" and warns that "the triumph of political men is almost always a consequence of their most wretched qualities."
 
