@@ -5,13 +5,14 @@ to **_Per la libertà!_** — Cesare Crespi's 1913 memoir of Count Carlo di Rudi
 This companion gathers background and reference material for the English translation of the memoir — guides to the people, events, chronology, and ideas the book assumes its reader already knows. There is no required order; start wherever your question is.
 
 <nav class="companion-hub" aria-label="Companion sections">
-<a class="hub-card" href="summary.html"><span class="hub-label">Layered Summary</span><span class="hub-blurb">The book in five tiers, from a one-line logline to a chapter-by-chapter outline of all 58 chapters.</span><span class="hub-badge">Start here &#9656;</span></a>
+<a class="hub-card hub-card-wide" href="summary.html"><span class="hub-label">Layered Summary</span><span class="hub-blurb">The book in five tiers, from a one-line logline to a chapter-by-chapter outline of all 58 chapters.</span><span class="hub-badge">Start here &#9656;</span></a>
 <a class="hub-card" href="timeline.html"><span class="hub-label">Timeline</span><span class="hub-blurb">A dated spine of di Rudio's life, cross-referenced to chapters and source pages.</span></a>
 <a class="hub-card" href="personae.html"><span class="hub-label">Dramatis Personae</span><span class="hub-blurb">Who the key figures were — in the book, and in the historical record.</span></a>
 <a class="hub-card" href="events.html"><span class="hub-label">Event Context</span><span class="hub-blurb">The historical episodes the memoir dramatizes, from the Five Days of Milan to Aspromonte.</span></a>
+<a class="hub-card" href="themes.html"><span class="hub-label">Themes</span><span class="hub-blurb">Short interpretive essays — testimony as method, republic versus monarchy, exile, martyrdom, anticlericalism.</span></a>
+<a class="hub-card" href="glossary.html"><span class="hub-label">Glossary</span><span class="hub-blurb">Quick one-line entries for the places, organizations, and terms the book names in passing.</span></a>
+<a class="hub-card" href="sources/index.html"><span class="hub-label">Primary Sources</span><span class="hub-blurb">Transcribed documents behind the book, beginning with di Rudio's own 1908 <em>San Francisco Call</em> interview.</span></a>
 </nav>
-
-<p class="companion-hub-more">Also: <a href="themes.html">Themes</a> &middot; <a href="glossary.html">Glossary</a> &middot; <a href="sources/index.html">Primary Sources</a></p>
 
 ## How to read this companion
 

@@ -1323,6 +1323,8 @@ body.companion {
   background: var(--hl-accent-1);
   border-left-color: var(--color-accent);
 }
+/* The Summary is the primary entry point — span the full grid width. */
+.companion-hub .hub-card-wide { grid-column: 1 / -1; }
 .companion-hub .hub-label {
   font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
   font-size: 1.02em;
@@ -1340,13 +1342,6 @@ body.companion {
   color: var(--color-accent);
   text-transform: uppercase;
 }
-.companion-page .companion-hub-more {
-  text-align: center;
-  font-size: 0.9em;
-  color: var(--color-muted);
-  margin: 0 0 2em;
-}
-
 .companion-footer {
   max-width: 40em;
   margin: 0 auto;
