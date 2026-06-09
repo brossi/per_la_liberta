@@ -28,6 +28,16 @@ The opening chapter then dramatizes the method before the history begins. Crespi
 
 > **Historical note** — Crespi's foresight was exact. The book appeared in 1913; di Rudio — "Charles DeRudio" — had died at Pasadena, California, on 1 November 1910. The memoir is, by design, posthumous testimony. One seam of the later life it otherwise omits shows through in the very first chapter, where di Rudio's daughter speaks of West Point and of her father's service in the U.S. 7th Cavalry — the American afterlife the narrative proper never reaches, since it closes in 1864. That afterlife is set out in the [Timeline](timeline.md). *(Source: Wikipedia, "Charles DeRudio.")*
 
+**Contemporary reception.** The book reached its intended readers at once — San Francisco's Italian free-thinkers. The colony's daily *L'Italia*, which by its own account had "favourably concerned itself" with the memoir "many times," printed on 17 June 1913 an open letter from a **Dr. S. Schirò** who read *Per la libertà!* exactly as it asks to be read:
+
+> "*Per la Libertà* is a truly fitting title, not only because it sums up the ideal of country for which Count di Rudio lived and fought, but — and this matters more to us — because it is happily interwoven with civic lessons and positive philosophical truths, veiled by no religious prejudice nor sectarian spirit. … The historical data you have masterfully reproduced, and the historical critique of the men of government of that time, do not square with the orthodox, official history of the Italian Risorgimento. Still less will your book please the opportunist patrioteers and the jingoists of today's nationalism. … Your book has, above all, a civic mission: to educate the character of man — today enfeebled by the most vulgar utilitarianism — toward better ideals and manly action, drawing him from the pernicious influence of prejudice, tradition, and falsehood."
+
+Schirò would set the book "in the libraries of Italian Free Thinkers" and "in the hands of the pupils of the Modern School" — the anticlerical, rationalist current (Francisco Ferrer's *Escuela Moderna*) in which Crespi himself moved. The letter is a small piece of evidence for this companion's reading: a reader in 1913 already received the book as a partisan, anticlerical counter-history, deliberately out of step with the official Risorgimento — not as neutral chronicle. *(Source: "'Per la Libertà' di Cesare Crespi — Una lusinghiera lettera del Dr. S. Schirò," L'Italia (San Francisco), 17 June 1913, p. 4; the full Italian is reproduced in the clipping. Public domain.)*
+
+<img src="images/litalia_review_1913.jpg" alt="L'Italia review of Per la libertà!, 17 June 1913" width="300">
+
+*Dr. S. Schirò's open letter on "Per la libertà!", from L'Italia (San Francisco), 17 June 1913, p. 4. Public domain (1913).*
+
 ---
 
 ## 2. Republic against monarchy

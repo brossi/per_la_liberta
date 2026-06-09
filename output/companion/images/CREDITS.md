@@ -11,7 +11,9 @@ This is the full provenance record for the images that illustrate the [Reader's 
 - **Linked, not hosted.** Where no cleanly public-domain image of a subject exists but a good, correctly-identified one is held at a stable, linkable source (a museum collection page, a rights-reserved archive), it is **not** downloaded or embedded; instead the relevant entry links the reader to it, and it is recorded in the *Linked, not hosted* section below. This is how the companion points to a genuine likeness of Calvi without hosting a non-free image.
 - **Stable citations.** The "Source page" column gives the canonical Wikimedia Commons *File:* page (or other repository item page), which persists. The volatile direct-download links used to fetch the files are deliberately not recorded here.
 
-All images accessed **2026-06-08** (first round) and **2026-06-09** (round-two additions). Oversized originals were downscaled to a 1600-px long edge; no other alteration was made.
+All images accessed **2026-06-08** (first round) and **2026-06-09** (round-two and CC-BY additions). Oversized originals were downscaled to a 1600-px long edge; no other alteration was made.
+
+**Redistribution note.** The four **CC BY-SA** images below (the surviving Orsini bomb, the 1815 map, the three-Guianas map, and the Calvi bust) — including the resized versions distributed here — remain under CC BY-SA. Anyone redistributing this companion in print or electronically must keep these attributions with the work. See [COPYRIGHT.md](../COPYRIGHT.md) for the licensing of the companion as a whole.
 
 ## Manifest (embedded images)
 
@@ -38,6 +40,7 @@ All images accessed **2026-06-08** (first round) and **2026-06-09** (round-two a
 | `iles_du_salut.jpg` | The Îles du Salut, French Guiana | events · *§7 Penal Colony of Guiana* | wood engraving, 1866 (*Le Tour du monde*) | Édouard Riou | Wikimedia Commons (orig. Gallica/BnF + HathiTrust) | [File: page](https://commons.wikimedia.org/wiki/File:Le_Tour_du_monde_-_13_(page_280_crop).jpg) | Public domain (PD-old / pre-1931 US) |
 | `italy_1815_map.png` | Italy in 1815 (Congress of Vienna) | events · *§1 The Austrian Settlement* | political map, modern | bramfab (after User:Artemka) | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:Italia_1815.png) | **CC BY-SA 3.0** |
 | `la_roquette_prison.jpg` | The Grande Roquette, Paris | glossary · *La Roquette* | photograph, c. 1876–80 | Auguste Hippolyte Collard | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:Depot_des_Condamn%C3%A9s_-_Vue_Ext%C3%A9rieure.jpg) | PD-old |
+| `litalia_review_1913.jpg` | Dr. Schirò's 1913 review of *Per la libertà!* | themes · *§1 Testimony as method* | newspaper open-letter (clipping), 17 June 1913 | letter: Dr. S. Schirò; published in *L'Italia* | *L'Italia* (San Francisco Italian-American daily) | *L'Italia*, 17 June 1913, p. 4 | Public domain (1913 US publication) |
 | `mameli_portrait.jpg` | Goffredo Mameli | events · *§3 Roman Republic and Its Siege* | painting/drawing, c. 1849 | Domenico Induno | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:Induno_Domenico_Goffredo_Mameli.jpg) | Public domain (artist d. 1878) |
 | `mantua_castello_san_giorgio.jpg` | Castello di San Giorgio, Mantua | glossary · *Castello di San Giorgio, Mantua* | book illustration / view, 1896 | from Corrado Ricci, *Correggio* (Scribner's, 1896) | Internet Archive / Flickr Commons (via Wikimedia Commons) | [File: page](https://commons.wikimedia.org/wiki/File:Castello_di_San_Giorgio,_Mantova,_immagine_del_1896.jpg) | "No restrictions" (PD; 1896) |
 | `mazas_prison.jpg` | Prison Mazas, Paris | glossary · *Mazas* | wood engraving, 1882 | Ed. Renard | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:Mazas.jpg) | PD-old |
@@ -63,7 +66,7 @@ All images accessed **2026-06-08** (first round) and **2026-06-09** (round-two a
 | `toulon_bagne.jpg` | The bagne of Toulon | glossary · *Toulon* | engraving, mid-19th c. (pub. 1869) | from Pierre Zaccone, *Histoire des Bagnes* | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:Bagne_de_Toulon.jpg) | PD-old |
 | `vittorio_emanuele_ii_portrait.jpg` | Vittorio Emanuele II | themes · *§2 Republic against monarchy* | carte-de-visite photograph, c. 1861 | André-Adolphe-Eugène Disdéri | Wikimedia Commons | [File: page](https://commons.wikimedia.org/wiki/File:VictorEmmanuel2_(3).jpg) | Public domain |
 
-**45 images, 46 placements** (the DeRudio photograph serves both personae and timeline).
+**46 images, 47 placements** (the DeRudio photograph serves both personae and timeline).
 
 ## Linked, not hosted
 
