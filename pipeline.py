@@ -14,7 +14,7 @@ STATE_DIR = BASE_DIR / "state"
 
 STEPS = [
     "download", "ocr", "reconcile", "triage", "cleanup",
-    "adjudicate", "validate", "translate", "refine", "typeset", "all",
+    "adjudicate", "validate", "translate", "refine", "typeset", "companion", "all",
 ]
 
 
@@ -254,6 +254,15 @@ def main():
 
         site_base = args.site_base or ("http://localhost:8000" if args.local else None)
         typeset(OUTPUT_DIR, STATE_DIR, site_base=site_base)
+        print()
+
+    # Companion runs after typeset so its citation deep-links can be checked
+    # against the freshly-written docs/index.html.
+    if args.step in ("companion", "all"):
+        print("Step 9: Rendering the Reader's Companion...")
+        from companion import build as build_companion
+
+        build_companion()
         print()
 
     print("Done!")

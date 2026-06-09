@@ -133,6 +133,16 @@ def _align_chapters(italian_chapters: list[dict], english_chapters: list[dict]) 
     return pairs
 
 
+def _slug(text: str) -> str:
+    """Slugify a heading into an HTML id fragment.
+
+    The single source of truth for chapter/part ids in the edition. The
+    companion's citation deep-links recompute edition ids with this same
+    function, so the two can never drift apart.
+    """
+    return re.sub(r"[^a-z0-9]", "-", text.lower()).strip("-")
+
+
 def _escape_html(text: str) -> str:
     """Escape HTML special characters."""
     return (
@@ -140,6 +150,145 @@ def _escape_html(text: str) -> str:
         .replace("<", "&lt;")
         .replace(">", "&gt;")
     )
+
+
+def _theme_restore_js(reader: bool = True) -> list[str]:
+    """Pre-paint localStorage restoration so the page never flashes.
+
+    Restores theme + font size always; the reader edition also restores
+    language-focus and marginalia state. Shared by the edition and the
+    companion pages so both behave identically.
+    """
+    lines = [
+        "<!-- Restore the viewer's last configuration before first paint (avoids flash) -->",
+        "<script>",
+        "(function () { try {",
+        "  var b = document.body, d = document.documentElement;",
+        "  d.setAttribute('data-theme', localStorage.getItem('theme') || 'mid');",
+        "  var fs = localStorage.getItem('fontSize');",
+        "  if (fs) d.style.fontSize = parseInt(fs, 10) + 'px';",
+    ]
+    if reader:
+        lines += [
+            "  var lf = localStorage.getItem('langFocus');",
+            "  if (lf === 'it') b.classList.add('lang-it-only');",
+            "  else if (lf === 'en') b.classList.add('lang-en-only');",
+            "  if (localStorage.getItem('hideMarginalia') !== 'false') {",
+            "    b.classList.add('no-marginalia'); b.classList.add('no-provenance');",
+            "  }",
+        ]
+    lines += [
+        "} catch (e) {} })();",
+        "</script>",
+    ]
+    return lines
+
+
+def _font_controls_block(marginalia_toggle: bool = True) -> list[str]:
+    """The font-size control cluster. The marginalia toggle (✎) is reader-only."""
+    lines = [
+        '  <div class="font-size-controls">',
+        '    <button id="font-smaller" aria-label="Decrease font size">&minus;</button>',
+        '    <button id="font-larger" aria-label="Increase font size">&plus;</button>',
+    ]
+    if marginalia_toggle:
+        lines.append(
+            '    <button id="toggle-marginalia" aria-label="Toggle marginalia" title="Toggle marginalia">&#9998;</button>'
+        )
+    lines.append("  </div>")
+    return lines
+
+
+def _theme_controls_block() -> list[str]:
+    """The colour-theme swatch popover (9 themes). Shared by edition + companion."""
+    return [
+        '  <div class="theme-controls">',
+        '    <button id="theme-trigger" aria-label="Colour theme" title="Colour theme" aria-haspopup="true" aria-expanded="false">&#9681;</button>',
+        '    <div id="theme-menu" class="theme-menu" role="menu" aria-label="Colour theme">',
+        '      <div class="group-label">Light</div>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="original"><span class="theme-swatch sw-original">A</span>Original</button>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="warm"><span class="theme-swatch sw-warm">A</span>Warm tan</button>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="cream"><span class="theme-swatch sw-cream">A</span>Lighter cream</button>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="mid"><span class="theme-swatch sw-mid">A</span>Cream (default)</button>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="ivory"><span class="theme-swatch sw-ivory">A</span>Calm ivory</button>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="bright"><span class="theme-swatch sw-bright">A</span>Bright cream</button>',
+        '      <div class="group-label">Dark</div>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="cocoa"><span class="theme-swatch sw-cocoa">A</span>Warm cocoa</button>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="ash"><span class="theme-swatch sw-ash">A</span>Neutral ash</button>',
+        '      <button class="theme-opt" role="menuitemradio" data-set-theme="slate"><span class="theme-swatch sw-slate">A</span>Cool slate</button>',
+        '    </div>',
+        '  </div>',
+    ]
+
+
+def _font_size_js() -> list[str]:
+    """Font-size +/- control logic, persisted to localStorage. Shared."""
+    return [
+        "// Font size controls",
+        "(() => {",
+        "  const root = document.documentElement;",
+        "  const STEP = 1;",
+        "  const MIN = 10;",
+        "  const MAX = 24;",
+        "  let size = 16;",
+        "  const saved = localStorage.getItem('fontSize');",
+        "  if (saved) { size = parseInt(saved); root.style.fontSize = size + 'px'; }",
+        "",
+        "  document.getElementById('font-smaller').addEventListener('click', () => {",
+        "    size = Math.max(MIN, size - STEP);",
+        "    root.style.fontSize = size + 'px';",
+        "    localStorage.setItem('fontSize', size);",
+        "  });",
+        "  document.getElementById('font-larger').addEventListener('click', () => {",
+        "    size = Math.min(MAX, size + STEP);",
+        "    root.style.fontSize = size + 'px';",
+        "    localStorage.setItem('fontSize', size);",
+        "  });",
+        "})();",
+    ]
+
+
+def _theme_js() -> list[str]:
+    """Colour-theme popover logic, writing data-theme on <html>, persisted. Shared."""
+    return [
+        "// Colour theme: swatch popover writing data-theme on <html>, persisted",
+        "(() => {",
+        "  const root = document.documentElement;",
+        "  const trigger = document.getElementById('theme-trigger');",
+        "  const menu = document.getElementById('theme-menu');",
+        "  const opts = Array.from(menu.querySelectorAll('.theme-opt'));",
+        "  function mark(theme) {",
+        "    opts.forEach(o => {",
+        "      const on = o.dataset.setTheme === theme;",
+        "      o.classList.toggle('active', on);",
+        "      o.setAttribute('aria-checked', on ? 'true' : 'false');",
+        "    });",
+        "  }",
+        "  function apply(theme) {",
+        "    root.setAttribute('data-theme', theme);",
+        "    localStorage.setItem('theme', theme);",
+        "    mark(theme);",
+        "  }",
+        "  function open(show) {",
+        "    menu.classList.toggle('open', show);",
+        "    trigger.setAttribute('aria-expanded', show ? 'true' : 'false');",
+        "  }",
+        "  mark(root.getAttribute('data-theme') || 'mid');",
+        "  trigger.addEventListener('click', e => { e.stopPropagation(); open(!menu.classList.contains('open')); });",
+        "  opts.forEach(o => o.addEventListener('click', () => { apply(o.dataset.setTheme); open(false); }));",
+        "  document.addEventListener('click', e => { if (!menu.contains(e.target) && e.target !== trigger) open(false); });",
+        "  document.addEventListener('keydown', e => {",
+        "    if (e.key === 'Escape') { open(false); return; }",
+        "    if (!menu.classList.contains('open')) return;",
+        "    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;",
+        "    e.preventDefault();",
+        "    const cur = opts.findIndex(o => o.dataset.setTheme === (root.getAttribute('data-theme') || 'mid'));",
+        "    const next = (cur + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length;",
+        "    apply(opts[next].dataset.setTheme);",
+        "    opts[next].focus();",
+        "  });",
+        "})();",
+    ]
 
 
 def _para_to_html(text: str) -> str:
@@ -586,21 +735,7 @@ def generate_html(
         "</head>",
         "<body>",
         "",
-        "<!-- Restore the viewer's last configuration before first paint (avoids flash) -->",
-        "<script>",
-        "(function () { try {",
-        "  var b = document.body, d = document.documentElement;",
-        "  d.setAttribute('data-theme', localStorage.getItem('theme') || 'mid');",
-        "  var fs = localStorage.getItem('fontSize');",
-        "  if (fs) d.style.fontSize = parseInt(fs, 10) + 'px';",
-        "  var lf = localStorage.getItem('langFocus');",
-        "  if (lf === 'it') b.classList.add('lang-it-only');",
-        "  else if (lf === 'en') b.classList.add('lang-en-only');",
-        "  if (localStorage.getItem('hideMarginalia') !== 'false') {",
-        "    b.classList.add('no-marginalia'); b.classList.add('no-provenance');",
-        "  }",
-        "} catch (e) {} })();",
-        "</script>",
+        *_theme_restore_js(reader=True),
         "",
         "<!-- Slide-in overlay for source page images -->",
         '<div id="page-overlay" class="page-overlay">',
@@ -635,27 +770,8 @@ def generate_html(
         '    <button id="lang-both" aria-label="Show both languages" title="Both languages">Both</button>',
         '    <button id="lang-en" aria-label="Show English only" title="English only">EN</button>',
         '  </div>',
-        '  <div class="font-size-controls">',
-        '    <button id="font-smaller" aria-label="Decrease font size">&minus;</button>',
-        '    <button id="font-larger" aria-label="Increase font size">&plus;</button>',
-        '    <button id="toggle-marginalia" aria-label="Toggle marginalia" title="Toggle marginalia">&#9998;</button>',
-        '  </div>',
-        '  <div class="theme-controls">',
-        '    <button id="theme-trigger" aria-label="Colour theme" title="Colour theme" aria-haspopup="true" aria-expanded="false">&#9681;</button>',
-        '    <div id="theme-menu" class="theme-menu" role="menu" aria-label="Colour theme">',
-        '      <div class="group-label">Light</div>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="original"><span class="theme-swatch sw-original">A</span>Original</button>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="warm"><span class="theme-swatch sw-warm">A</span>Warm tan</button>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="cream"><span class="theme-swatch sw-cream">A</span>Lighter cream</button>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="mid"><span class="theme-swatch sw-mid">A</span>Cream (default)</button>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="ivory"><span class="theme-swatch sw-ivory">A</span>Calm ivory</button>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="bright"><span class="theme-swatch sw-bright">A</span>Bright cream</button>',
-        '      <div class="group-label">Dark</div>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="cocoa"><span class="theme-swatch sw-cocoa">A</span>Warm cocoa</button>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="ash"><span class="theme-swatch sw-ash">A</span>Neutral ash</button>',
-        '      <button class="theme-opt" role="menuitemradio" data-set-theme="slate"><span class="theme-swatch sw-slate">A</span>Cool slate</button>',
-        '    </div>',
-        '  </div>',
+        *_font_controls_block(marginalia_toggle=True),
+        *_theme_controls_block(),
         '</div>',
         "",
         "<!-- Slide-in chapter index -->",
@@ -699,7 +815,7 @@ def generate_html(
             current_part_it = pair["italian_title"]
             current_part_en = pair["english_title"]
             en_title = pair["english_title"]
-            part_id = re.sub(r"[^a-z0-9]", "-", title.lower()).strip("-")
+            part_id = _slug(title)
             html_parts.extend([
                 f'<div class="part-page" id="part-{part_id}">',
                 f'  <h2 lang="it">{_escape_html(title)}</h2>',
@@ -755,8 +871,8 @@ def generate_html(
                 f'</span></span></span>'
             )
 
-        part_prefix = re.sub(r"[^a-z0-9]", "-", current_part_it.lower()).strip("-") + "-" if current_part_it else ""
-        ch_id = part_prefix + re.sub(r"[^a-z0-9]", "-", pair["italian_title"].lower()).strip("-")
+        part_prefix = _slug(current_part_it) + "-" if current_part_it else ""
+        ch_id = part_prefix + _slug(pair["italian_title"])
         # Record chapter for overlay navigation
         ch_label = pair["english_title"] or pair["italian_title"]
         ch_start_page = pair["page_range"][0] if pair["page_range"] else None
@@ -1118,6 +1234,15 @@ def generate_html(
         "  cLi.appendChild(cA);",
         "  list.appendChild(cLi);",
         "",
+        "  // Link out to the standalone Reader's Companion (background apparatus)",
+        "  const compLi = document.createElement('li');",
+        "  compLi.className = 'toc-standalone';",
+        "  const compA = document.createElement('a');",
+        "  compA.href = 'companion/index.html';",
+        "  compA.textContent = \"Reader's Companion \\u2192\";",
+        "  compLi.appendChild(compA);",
+        "  list.appendChild(compLi);",
+        "",
         "  function toggle(open) {",
         "    panel.classList.toggle('open', open);",
         "    backdrop.classList.toggle('open', open);",
@@ -1128,65 +1253,9 @@ def generate_html(
         "  document.addEventListener('keydown', e => { if (e.key === 'Escape') toggle(false); });",
         "})();",
         "",
-        "// Font size controls",
-        "(() => {",
-        "  const root = document.documentElement;",
-        "  const STEP = 1;",
-        "  const MIN = 10;",
-        "  const MAX = 24;",
-        "  let size = 16;",
-        "  const saved = localStorage.getItem('fontSize');",
-        "  if (saved) { size = parseInt(saved); root.style.fontSize = size + 'px'; }",
+        *_font_size_js(),
         "",
-        "  document.getElementById('font-smaller').addEventListener('click', () => {",
-        "    size = Math.max(MIN, size - STEP);",
-        "    root.style.fontSize = size + 'px';",
-        "    localStorage.setItem('fontSize', size);",
-        "  });",
-        "  document.getElementById('font-larger').addEventListener('click', () => {",
-        "    size = Math.min(MAX, size + STEP);",
-        "    root.style.fontSize = size + 'px';",
-        "    localStorage.setItem('fontSize', size);",
-        "  });",
-        "})();",
-        "",
-        "// Colour theme: swatch popover writing data-theme on <html>, persisted",
-        "(() => {",
-        "  const root = document.documentElement;",
-        "  const trigger = document.getElementById('theme-trigger');",
-        "  const menu = document.getElementById('theme-menu');",
-        "  const opts = Array.from(menu.querySelectorAll('.theme-opt'));",
-        "  function mark(theme) {",
-        "    opts.forEach(o => {",
-        "      const on = o.dataset.setTheme === theme;",
-        "      o.classList.toggle('active', on);",
-        "      o.setAttribute('aria-checked', on ? 'true' : 'false');",
-        "    });",
-        "  }",
-        "  function apply(theme) {",
-        "    root.setAttribute('data-theme', theme);",
-        "    localStorage.setItem('theme', theme);",
-        "    mark(theme);",
-        "  }",
-        "  function open(show) {",
-        "    menu.classList.toggle('open', show);",
-        "    trigger.setAttribute('aria-expanded', show ? 'true' : 'false');",
-        "  }",
-        "  mark(root.getAttribute('data-theme') || 'mid');",
-        "  trigger.addEventListener('click', e => { e.stopPropagation(); open(!menu.classList.contains('open')); });",
-        "  opts.forEach(o => o.addEventListener('click', () => { apply(o.dataset.setTheme); open(false); }));",
-        "  document.addEventListener('click', e => { if (!menu.contains(e.target) && e.target !== trigger) open(false); });",
-        "  document.addEventListener('keydown', e => {",
-        "    if (e.key === 'Escape') { open(false); return; }",
-        "    if (!menu.classList.contains('open')) return;",  # arrows only act while the menu is open
-        "    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;",
-        "    e.preventDefault();",  # don't scroll the page
-        "    const cur = opts.findIndex(o => o.dataset.setTheme === (root.getAttribute('data-theme') || 'mid'));",
-        "    const next = (cur + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length;",
-        "    apply(opts[next].dataset.setTheme);",  # swap + persist live, same as a click
-        "    opts[next].focus();",
-        "  });",
-        "})();",
+        *_theme_js(),
         "",
         "// Language focus: segmented radio — Italian only / both / English only",
         "(() => {",

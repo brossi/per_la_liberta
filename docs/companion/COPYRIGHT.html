@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copyright & Licensing — Reader's Companion</title>
+<link rel="stylesheet" href="../static/bilingual.css?v=b864b835">
+</head>
+<body class="companion">
+
+<!-- Restore the viewer's last configuration before first paint (avoids flash) -->
+<script>
+(function () { try {
+  var b = document.body, d = document.documentElement;
+  d.setAttribute('data-theme', localStorage.getItem('theme') || 'mid');
+  var fs = localStorage.getItem('fontSize');
+  if (fs) d.style.fontSize = parseInt(fs, 10) + 'px';
+} catch (e) {} })();
+</script>
+
+<!-- Top-right controls (font size + colour theme, shared with the edition) -->
+<div class="top-right-controls">
+  <div class="font-size-controls">
+    <button id="font-smaller" aria-label="Decrease font size">&minus;</button>
+    <button id="font-larger" aria-label="Increase font size">&plus;</button>
+  </div>
+  <div class="theme-controls">
+    <button id="theme-trigger" aria-label="Colour theme" title="Colour theme" aria-haspopup="true" aria-expanded="false">&#9681;</button>
+    <div id="theme-menu" class="theme-menu" role="menu" aria-label="Colour theme">
+      <div class="group-label">Light</div>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="original"><span class="theme-swatch sw-original">A</span>Original</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="warm"><span class="theme-swatch sw-warm">A</span>Warm tan</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="cream"><span class="theme-swatch sw-cream">A</span>Lighter cream</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="mid"><span class="theme-swatch sw-mid">A</span>Cream (default)</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="ivory"><span class="theme-swatch sw-ivory">A</span>Calm ivory</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="bright"><span class="theme-swatch sw-bright">A</span>Bright cream</button>
+      <div class="group-label">Dark</div>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="cocoa"><span class="theme-swatch sw-cocoa">A</span>Warm cocoa</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="ash"><span class="theme-swatch sw-ash">A</span>Neutral ash</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="slate"><span class="theme-swatch sw-slate">A</span>Cool slate</button>
+    </div>
+  </div>
+</div>
+
+<header class="companion-topbar">
+  <a class="companion-back" href="../index.html">&larr; Back to the edition</a>
+  <nav class="companion-nav">
+      <a href="index.html">Overview</a>
+      <a href="summary.html">Summary</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="personae.html">Personae</a>
+      <a href="events.html">Events</a>
+      <a href="themes.html">Themes</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="follow-up.html">Research leads</a>
+  </nav>
+</header>
+
+<main class="companion-page">
+<h1 id="copyright--licensing">Copyright &amp; Licensing</h1>
+<h2 id="the-companion-text">The companion text</h2>
+<p>The written content of this Reader's Companion — the prose in <code>index.md</code>, <code>summary.md</code>, <code>timeline.md</code>, <code>personae.md</code>, <code>events.md</code>, <code>themes.md</code>, and <code>glossary.md</code>, together with its selection, arrangement, structure, and editorial commentary — is:</p>
+<p><strong>© 2026 Ben Rossi. All rights reserved.</strong></p>
+<p>No part of this text may be reproduced, distributed, or adapted without the copyright holder's permission, except as permitted by law (for example, fair use / fair dealing for quotation, review, teaching, and scholarship).</p>
+<h2 id="the-images">The images</h2>
+<p>The images in <code>images/</code> are <strong>not</strong> covered by the notice above. Each is licensed individually, as recorded in <a href="images/CREDITS.html"><code>images/CREDITS.md</code></a>:</p>
+<ul>
+<li>Most are in the <strong>public domain</strong> or released under <strong>CC0</strong> (effectively no rights reserved).</li>
+<li>Four are licensed <strong>CC BY-SA</strong> — the surviving Orsini bomb, the 1815 map of Italy, the three-Guianas escape map, and the Calvi portrait bust. These images, including the resized versions distributed here, remain under <strong>CC BY-SA</strong> and may be reused by anyone under that license. Anyone redistributing this companion — in print or electronically — must keep the corresponding attributions from <code>images/CREDITS.md</code> with the work.</li>
+<li>One likeness (a portrait relief of Calvi) is <strong>not hosted</strong> here; the companion only links to it at its holding institution under that institution's terms.</li>
+</ul>
+<p>The all-rights-reserved notice on the text does not — and legally cannot — restrict these separately-licensed images or the public-domain material below.</p>
+<h2 id="the-underlying-work">The underlying work</h2>
+<p>The book this companion accompanies — <em>Per la libertà! (Dalle mie conversazioni col conte Carlo di Rudio, complice di Felice Orsini)</em> by Cesare Crespi (San Francisco: Canessa Printing Co., 1913) — is in the <strong>public domain</strong>. Quotations from its English translation that appear in this companion are the copyright holder's own translation.</p>
+<h2 id="reuse-and-publication">Reuse and publication</h2>
+<p>The copyright holder may use, print, and sell this companion (including bundled with the bilingual edition). Third parties wishing to reproduce the <strong>text</strong> should request permission; the public-domain and CC-licensed <strong>images</strong> may be reused on their own terms as recorded in <code>images/CREDITS.md</code>.</p>
+
+</main>
+
+<footer class="companion-footer">
+  <p>From <em>A Reader&rsquo;s Companion to Per la libert&agrave;!</em> — companion text &copy; 2026 Ben Rossi, all rights reserved. The 1913 book by Cesare Crespi is in the public domain; images are licensed separately (public domain, CC0, or CC BY-SA with attribution).</p>
+  <p class="companion-footer-links"><a href="COPYRIGHT.html">Copyright & licensing</a>
+      <a href="images/CREDITS.html">Image credits</a>
+      <a href="sources/index.html">Primary sources</a></p>
+</footer>
+
+<script>
+// Font size controls
+(() => {
+  const root = document.documentElement;
+  const STEP = 1;
+  const MIN = 10;
+  const MAX = 24;
+  let size = 16;
+  const saved = localStorage.getItem('fontSize');
+  if (saved) { size = parseInt(saved); root.style.fontSize = size + 'px'; }
+
+  document.getElementById('font-smaller').addEventListener('click', () => {
+    size = Math.max(MIN, size - STEP);
+    root.style.fontSize = size + 'px';
+    localStorage.setItem('fontSize', size);
+  });
+  document.getElementById('font-larger').addEventListener('click', () => {
+    size = Math.min(MAX, size + STEP);
+    root.style.fontSize = size + 'px';
+    localStorage.setItem('fontSize', size);
+  });
+})();
+
+// Colour theme: swatch popover writing data-theme on <html>, persisted
+(() => {
+  const root = document.documentElement;
+  const trigger = document.getElementById('theme-trigger');
+  const menu = document.getElementById('theme-menu');
+  const opts = Array.from(menu.querySelectorAll('.theme-opt'));
+  function mark(theme) {
+    opts.forEach(o => {
+      const on = o.dataset.setTheme === theme;
+      o.classList.toggle('active', on);
+      o.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+  }
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    mark(theme);
+  }
+  function open(show) {
+    menu.classList.toggle('open', show);
+    trigger.setAttribute('aria-expanded', show ? 'true' : 'false');
+  }
+  mark(root.getAttribute('data-theme') || 'mid');
+  trigger.addEventListener('click', e => { e.stopPropagation(); open(!menu.classList.contains('open')); });
+  opts.forEach(o => o.addEventListener('click', () => { apply(o.dataset.setTheme); open(false); }));
+  document.addEventListener('click', e => { if (!menu.contains(e.target) && e.target !== trigger) open(false); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { open(false); return; }
+    if (!menu.classList.contains('open')) return;
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    const cur = opts.findIndex(o => o.dataset.setTheme === (root.getAttribute('data-theme') || 'mid'));
+    const next = (cur + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length;
+    apply(opts[next].dataset.setTheme);
+    opts[next].focus();
+  });
+})();
+</script>
+</body>
+</html>

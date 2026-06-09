@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Per la Libertà! / For Freedom!</title>
-<link rel="stylesheet" href="../static/bilingual.css?v=9291ff8c">
+<link rel="stylesheet" href="../static/bilingual.css?v=fafcedaf">
 </head>
 <body>
 
@@ -5269,6 +5269,15 @@ Then he rose and came toward me, smiling a smile that revealed all the melanchol
   cA.addEventListener('click', () => { panel.classList.remove('open'); backdrop.classList.remove('open'); });
   cLi.appendChild(cA);
   list.appendChild(cLi);
+
+  // Link out to the standalone Reader's Companion (background apparatus)
+  const compLi = document.createElement('li');
+  compLi.className = 'toc-standalone';
+  const compA = document.createElement('a');
+  compA.href = 'companion/index.html';
+  compA.textContent = "Reader's Companion \u2192";
+  compLi.appendChild(compA);
+  list.appendChild(compLi);
 
   function toggle(open) {
     panel.classList.toggle('open', open);

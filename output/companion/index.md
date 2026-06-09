@@ -1,4 +1,4 @@
-# A Reader's Companion to *Per la libertà!*
+# A Reader's Companion to<br>*Per la libertà!*
 
 ***Per la libertà! (Dalle mie conversazioni col conte Carlo di Rudio, complice di Felice Orsini)*** — Cesare Crespi, 1913. Canessa Printing Co., 708 Montgomery St., San Francisco.
 
@@ -6,15 +6,15 @@ This companion gathers reader's aids for the English translation of Crespi's 191
 
 ## What's here
 
-| Piece | What it gives you | Status |
-|-------|-------------------|--------|
-| [Layered Summary](summary.md) | The book in five tiers: one-line logline → synopsis → extended summary → part summaries → a chapter-by-chapter outline of all 58 chapters. **Start here for *what happens*.** | ✅ done |
-| [Timeline](timeline.md) | A dated spine of di Rudio's life, cross-referenced to chapters and source pages. **The factual backbone.** | ✅ done |
-| [Dramatis Personae](personae.md) | A profile of each key figure — role in the book, personality as the book draws it, and real-world significance. | ✅ done |
-| [Event Context](events.md) | Framing notes on the historical episodes the book dramatizes, from the Five Days of Milan to Aspromonte. | ✅ done |
-| [Themes](themes.md) | Short interpretive essays: testimony as method, republic vs. monarchy, exile, martyrdom, anticlericalism. | ✅ done |
-| [Glossary](glossary.md) | One-line entries for the places, organizations, and terms the book names in passing. | ✅ done |
-| [Primary sources](sources/) | Transcribed contemporary documents behind the book — beginning with di Rudio's own 1908 *San Francisco Call* interview, the press appearance that set the book in motion. | ✅ seeded |
+| Piece | What it gives you |
+|-------|-------------------|
+| [Layered Summary](summary.md) | The book in five tiers: one-line logline → synopsis → extended summary → part summaries → a chapter-by-chapter outline of all 58 chapters. **Start here for *what happens*.** |
+| [Timeline](timeline.md) | A dated spine of di Rudio's life, cross-referenced to chapters and source pages. **The factual backbone.** |
+| [Dramatis Personae](personae.md) | A profile of each key figure — role in the book, personality as the book draws it, and real-world significance. |
+| [Event Context](events.md) | Framing notes on the historical episodes the book dramatizes, from the Five Days of Milan to Aspromonte. |
+| [Themes](themes.md) | Short interpretive essays: testimony as method, republic vs. monarchy, exile, martyrdom, anticlericalism. |
+| [Glossary](glossary.md) | One-line entries for the places, organizations, and terms the book names in passing. |
+| [Primary sources](sources/) | Transcribed contemporary documents behind the book — beginning with di Rudio's own 1908 *San Francisco Call* interview, the press appearance that set the book in motion. |
 
 ## How to read this companion
 

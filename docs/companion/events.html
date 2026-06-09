@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event Context — Reader's Companion</title>
+<link rel="stylesheet" href="../static/bilingual.css?v=b864b835">
+</head>
+<body class="companion">
+
+<!-- Restore the viewer's last configuration before first paint (avoids flash) -->
+<script>
+(function () { try {
+  var b = document.body, d = document.documentElement;
+  d.setAttribute('data-theme', localStorage.getItem('theme') || 'mid');
+  var fs = localStorage.getItem('fontSize');
+  if (fs) d.style.fontSize = parseInt(fs, 10) + 'px';
+} catch (e) {} })();
+</script>
+
+<!-- Top-right controls (font size + colour theme, shared with the edition) -->
+<div class="top-right-controls">
+  <div class="font-size-controls">
+    <button id="font-smaller" aria-label="Decrease font size">&minus;</button>
+    <button id="font-larger" aria-label="Increase font size">&plus;</button>
+  </div>
+  <div class="theme-controls">
+    <button id="theme-trigger" aria-label="Colour theme" title="Colour theme" aria-haspopup="true" aria-expanded="false">&#9681;</button>
+    <div id="theme-menu" class="theme-menu" role="menu" aria-label="Colour theme">
+      <div class="group-label">Light</div>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="original"><span class="theme-swatch sw-original">A</span>Original</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="warm"><span class="theme-swatch sw-warm">A</span>Warm tan</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="cream"><span class="theme-swatch sw-cream">A</span>Lighter cream</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="mid"><span class="theme-swatch sw-mid">A</span>Cream (default)</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="ivory"><span class="theme-swatch sw-ivory">A</span>Calm ivory</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="bright"><span class="theme-swatch sw-bright">A</span>Bright cream</button>
+      <div class="group-label">Dark</div>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="cocoa"><span class="theme-swatch sw-cocoa">A</span>Warm cocoa</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="ash"><span class="theme-swatch sw-ash">A</span>Neutral ash</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="slate"><span class="theme-swatch sw-slate">A</span>Cool slate</button>
+    </div>
+  </div>
+</div>
+
+<header class="companion-topbar">
+  <a class="companion-back" href="../index.html">&larr; Back to the edition</a>
+  <nav class="companion-nav">
+      <a href="index.html">Overview</a>
+      <a href="summary.html">Summary</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="personae.html">Personae</a>
+      <a href="events.html" class="active">Events</a>
+      <a href="themes.html">Themes</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="follow-up.html">Research leads</a>
+  </nav>
+</header>
+
+<main class="companion-page">
+<h1 id="event-context">Event Context</h1>
+<p>Framing notes on the historical episodes <em>Per la libertà!</em> dramatizes — the public history the memoir assumes its reader already carries. For each episode there are three voices, kept deliberately apart (see <a href="index.html">the index</a> for the convention):</p>
+<ul>
+<li><strong>In the book</strong> — how di Rudio and Crespi present the episode, anchored to the chapters where it appears. This is the memoir's account: partisan, Mazzinian, anticlerical, and hostile to the House of Savoy. It is reported here as the book's view, not as settled fact.</li>
+<li><strong>&gt; Historical note</strong> — external context, checked against outside sources before it is stated, so the reader can measure the memoir against the record. Where the two differ, the note says so.</li>
+<li><strong>&gt; Scholarship</strong> — what the standard academic literature on the episode adds: interpretation, scale, and the points where historians confirm, complicate, or contradict the memoir's partisan telling. Each names the work it draws on; full details are in <a href="#sources--further-reading">Sources &amp; further reading</a> below.</li>
+</ul>
+<p>Citations use the summary's form — e.g. <em><a href="../index.html#ch-parte-prima-capitolo-sesto" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 6</a> (pp. 34–39)</em> — with pages keyed to the source scan via <code>data/chapter_pages.json</code>.</p>
+<hr />
+<h2 id="1-the-austrian-settlement-18151847">1. The Austrian Settlement (1815–1847)</h2>
+<p>The whole memoir rests on a grievance it expects the reader to share: that after Napoleon's fall, Italy was handed back to foreign and clerical masters. Chapter 2 pauses the narrative to lay this out as di Rudio understood it.</p>
+<img src="images/italy_1815_map.png" alt="Map of Italy in 1815" width="480">
+<p><em>Italy as the Congress of Vienna left it in 1815 — Austrian Lombardy–Venetia, the Papal States, the Kingdom of the Two Sicilies, Sardinia-Piedmont, and the duchies. Map: bramfab, Wikimedia Commons, CC BY-SA 3.0.</em></p>
+<img src="images/metternich_portrait.jpg" alt="Klemens von Metternich" width="300">
+<p><em>Klemens von Metternich, architect of the post-1815 Austrian order in Italy — portrait by Sir Thomas Lawrence, c. 1815. Wikimedia Commons; public domain.</em></p>
+<p><strong>In the book.</strong> di Rudio gives a compressed, furious history of &quot;the Italian question.&quot; Metternich, having helped topple Napoleon, redrew the peninsula at Vienna into a cluster of restored princes — Ferdinand at Naples, Pius VII at Rome, the &quot;executioner&quot; Francesco IV at Modena — whom di Rudio calls Austria's &quot;hired assassins,&quot; bound to Vienna by secret treaties that licensed armed intervention against any liberal stirring. He catalogues the machinery of repression: the Spielberg fortress in Moravia, the swarm of informers who &quot;violated the postal secret&quot; and reported even a man's choice of hat, the fiscal bleeding of Lombardy-Venetia, and the tobacco and cloth boycotts that the authorities answered with the knife. The chapter is also where di Rudio plants his own lineage: an ancient Belluno family; a father who smashes a bust of &quot;the liberating Pontiff&quot; Pius IX in a café, crying that the citizens carry &quot;the greatest enemy of our Fatherland&quot;; a maternal grandfather, Fortunato de Domini, who was himself a colonel of Austrian infantry. <em>(<a href="../index.html#ch-parte-prima-capitolo-secondo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 2</a>, pp. 15–23)</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — The Congress of Vienna (1814–15) restored Austrian predominance over Italy: Lombardy and Venetia were annexed directly to the Habsburg Empire as the Kingdom of Lombardy–Venetia, while restored dynasties ruled the rest under Austrian influence. The dismissive tag &quot;Italy is a geographical expression&quot; is traditionally attributed to Metternich. <em>(Source: Wikipedia, &quot;Kingdom of Lombardy–Venetia&quot;; &quot;Klemens von Metternich&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Christopher Duggan (<em>The Force of Destiny</em>, 2007) stresses that the Restoration after 1815 forced patriots into secret societies, and that Italian nationalism in these decades remained a minority cause — confined to a thin stratum of intellectuals, artists, and professionals, with regional loyalties still predominant. The memoir's vision of a Fatherland uniformly groaning for unity is the committed activist's; most contemporaries were not yet &quot;Italians&quot; in di Rudio's sense.</p>
+</blockquote>
+<hr />
+<h2 id="2-the-five-days-of-milan-march-1848">2. The Five Days of Milan (March 1848)</h2>
+<p>di Rudio's war begins here, as a cadet who cannot fight yet.</p>
+<img src="images/five_days_milan_1848.jpg" alt="The Five Days of Milan, 1848" width="460">
+<p><em>The Five Days of Milan, March 1848 — &quot;Episode of the Five Days,&quot; painting by Baldassare Verazzi (before 1886); a depiction of the event, not a contemporary sketch. Wikimedia Commons; public domain.</em></p>
+<p><strong>In the book.</strong> He is a student at the San Luca military academy in Milan when the city rises on 18 March 1848. He describes a spontaneous insurrection — &quot;no plan long prepared, no understanding among the citizens&quot; — touched off by news of Vienna's upheaval and the fall of Metternich; a city of &quot;a hundred and sixty thousand&quot; turned into &quot;one terrible unity&quot;; more than a thousand barricades thrown up overnight from paving stones, furniture, and mattresses; women and children carrying powder and hurling roof tiles. Inside the academy the cadets are first told the rising is the work of &quot;a handful of brigands,&quot; then fall silent as the truth arrives. On the fourth day the garrisons within the Naviglio surrender and Radetzky is forced into a &quot;dissembled but precipitous&quot; retreat; a committee of citizens comes to the college to send the Milanese cadets home. di Rudio's account dwells, in his partisan key, on Austrian atrocities during the withdrawal. <em>(<a href="../index.html#ch-parte-prima-capitolo-secondo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 2</a>, pp. 15–23; the retreat atrocities are detailed in <a href="../index.html#ch-parte-prima-capitolo-terzo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 3</a>, pp. 23–26)</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — The Five Days of Milan (18–22 March 1848) drove Marshal Radetzky's Austrians from the city; over 400 Milanese were killed and some 600 wounded. On the evening of 22 March Radetzky withdrew eastward to the &quot;Quadrilateral&quot; fortresses (Verona, Legnago, Mantua, Peschiera). The next day, 23 March, Charles Albert of Sardinia-Piedmont declared war on Austria, opening the First Italian War of Independence — which, after Austrian victories at Custoza and Novara, ended within a year in the restoration of Lombardy–Venetia to Austria. <em>(Source: Wikipedia, &quot;Five Days of Milan&quot;; &quot;First Italian War of Independence&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Lucy Riall (<em>Risorgimento: The History of Italy from Napoleon to Nation-State</em>, 2009) treats 1848 as a watershed in the <em>politicization</em> of ordinary Italians — the social ferment that made later unification thinkable. Paul Ginsborg, historian of the parallel Venetian revolution, judged the lasting &quot;failure&quot; of 1848 to lie in the choice of so many revolutionaries to subordinate radical republican and democratic aims to national unification — the very subordination di Rudio would spend his life protesting.</p>
+</blockquote>
+<hr />
+<h2 id="3-the-roman-republic-and-its-siege-1849">3. The Roman Republic and Its Siege (1849)</h2>
+<p>The first defeat that the book treats as a victory of spirit — and di Rudio's baptism in battle.</p>
+<img src="images/siege_rome_1849.jpg" alt="The attack on Villa Pamphili, 3 June 1849" width="460">
+<p><em>The attack on the Villa Pamphili during the siege of Rome, 3 June 1849 — drawing by Auguste Raffet; a contemporary depiction. Wikimedia Commons; public domain.</em></p>
+<p><strong>In the book.</strong> After the collapse of 1848 in the north, di Rudio reaches Rome with Garibaldi's Legion. He sees the French under General Oudinot repulsed at the walls on 30 April 1849, and claims the republicans could have driven them into the sea had Mazzini not &quot;blunted our élan&quot; for diplomatic reasons. He fights at Palestrina against the Neapolitan &quot;Re Bomba&quot; (9 May) and at Velletri, where his band of &quot;beardless youths&quot; rescues a fallen Garibaldi and earns the famous &quot;fatherly cheek-pinch.&quot; The set piece is 3 June 1849: Oudinot, &quot;adding treachery to treachery,&quot; breaks the armistice and seizes the Villa Pamfili and the Villa Corsini — &quot;the key to Porta San Pancrazio.&quot; The chapter renders the day-long, doomed assaults on the Corsini in near-liturgical terms: Manara's Bersaglieri cut down on the slope, the Dandolo brothers, the heroic charge and death of Angelo Masina, the wounding of the poet Goffredo Mameli. In a personal interlude di Rudio captures a French officer hiding in a privy and, at the Ponte San Sisto, physically shields him from National Guardsmen who mean to shoot him and throw him in the river — &quot;I will not permit the Italian name to be dishonoured by acts of cowardice.&quot; <em>(<a href="../index.html#ch-parte-prima-capitolo-sesto" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 6</a>, pp. 34–39; see also <a href="../index.html#ch-parte-prima-capitolo-quarto" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 4</a>, pp. 26–31, and <a href="../index.html#ch-parte-prima-capitolo-settimo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 7</a>, pp. 39–43)</em></p>
+<img src="images/mameli_portrait.jpg" alt="Goffredo Mameli" width="300">
+<p><em>Goffredo Mameli, poet of the Roman Republic, mortally wounded in the 1849 siege di Rudio describes — portrait by Domenico Induno, c. 1849. Wikimedia Commons; public domain.</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — The Roman Republic was proclaimed in February 1849 after Pius IX fled the city; it was governed by a triumvirate including Mazzini and defended by Garibaldi. A French expeditionary force sent by Louis-Napoleon besieged the city; after heavy fighting on the Janiculum in June, the Assembly ceased resistance on 1 July and French troops entered Rome on 3 July 1849, restoring papal rule. Goffredo Mameli, author of what is now the Italian national anthem, died of his wound that July. <em>(Source: Wikipedia, &quot;Roman Republic (1849)&quot;; &quot;Goffredo Mameli&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — G. M. Trevelyan's <em>Garibaldi's Defence of the Roman Republic</em> (1907) remains the classic English narrative of the siege; he gives a full chapter to &quot;The Third of June — Villa Corsini&quot; and an appendix to the numbers of killed and wounded, ranking the doomed assaults di Rudio describes among the costliest and most celebrated feats of the defence. Trevelyan's frankly heroic, literary manner runs strikingly close to the memoir's own register.</p>
+</blockquote>
+<hr />
+<h2 id="4-the-coup-détat-of-louis-napoleon-december-1851">4. The Coup d'État of Louis-Napoleon (December 1851)</h2>
+<p>The episode that fixes Napoleon III as the book's master-villain, and that di Rudio witnesses from a Paris barricade.</p>
+<img src="images/coup_1851.jpg" alt="The coup of December 1851 in Paris" width="480">
+<p><em>Louis-Napoléon's cavalry in the streets of Paris during the coup of December 1851 — contemporary engraving, 1851. Wikimedia Commons; public domain.</em></p>
+<p><strong>In the book.</strong> Exiled in Paris, di Rudio and a comrade make cartridges for the Club of Batignolles. On 2 December 1851 they find the Place de la Bastille under arms; warning the affiliated clubs, they help raise a barricade at the Club of Saint-Denis — &quot;sixteen Frenchmen and two Italians&quot; behind a red kerchief tied to a stick. The chasseurs of Vincennes &quot;attempted twice and twice repulsed&quot;; on the third rush they close ranks, scale the barricade, and &quot;found not a living creature before them&quot; — the defenders, their last cartridge spent, having slipped away. di Rudio then narrates the coup at large in his polemical voice: generals arrested in their beds, the presses seized, the boulevard massacre fuelled by distributed brandy, prisoners shot in batches over twelve nights and buried with their heads above ground for identification, and the Mixed Commissions condemning men in absentia to Lambessa or &quot;the dry guillotine of Cayenne.&quot; He records, too, the republicans' fatal scruple — Victor Hugo and the Left who would raise barricades but recoil from striking at the one man, Louis-Napoleon himself. <em>(<a href="../index.html#ch-parte-prima-capitolo-nono" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 9</a>, pp. 48–52)</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — Louis-Napoleon Bonaparte, President of the Second Republic, seized absolute power by coup on 2 December 1851; resistance in Paris and the provinces was crushed and thousands were arrested, deported, or killed (exact tolls remain disputed). Exactly one year later, on 2 December 1852, he was proclaimed Emperor Napoleon III, inaugurating the Second Empire. The memoir's charge that he murdered his elder brother is not supported by the historical record. <em>(Sources: Wikipedia, &quot;French coup d'état of 1851&quot;; &quot;Second French Empire&quot;; &quot;Napoleon III&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Ted Margadant (<em>French Peasants in Revolt: The Insurrection of 1851</em>, 1979) shows that the gravest resistance to the coup came not from Paris but from a wave of provincial, largely peasant insurrection across central and southern France — a new form of popular political participation, answered with mass arrests. di Rudio's Saint-Denis barricade was a real but minor episode beside that rural rising; roughly two hundred were killed in the Paris streets on 4 December alone.</p>
+</blockquote>
+<hr />
+<h2 id="5-the-conspiratorial-decade--giovine-italia-the-1853-rising-and-the-belfiore-martyrs">5. The Conspiratorial Decade — Giovine Italia, the 1853 Rising, and the Belfiore Martyrs</h2>
+<p>The long middle of Part One: the underground years that made di Rudio a professional conspirator and cost his mentor Calvi his life.</p>
+<img src="images/belfiore_martyrs.jpg" alt="The Belfiore martyrs led to the scaffold" width="480">
+<p><em>&quot;The Belfiore martyrs led to the scaffold&quot; — the patriots Austria hanged at Mantua, 1852–55, among them di Rudio's mentor Calvi. Commemorative wood engraving by Edoardo Matania, 1887. Wikimedia Commons; public domain.</em></p>
+<p><strong>In the book.</strong> Driven from France, di Rudio swears Mazzini's oath and enters <em>Giovine Italia</em> (Young Italy). Back in Genoa (1852), working for a merchant tailor, he is drawn again into action by the patriot priest Don Bastiano Barozzi and by his old colonel Pietro Fortunato Calvi, who commissions him a secret envoy into Austrian Lombardy-Venetia under the alias &quot;Carlo Moretti, a silk merchant&quot; — coding regiments as bales of silk. The chapters trace the Mazzinian European Revolutionary Committee, the abortive Milan rising of 6 February 1853 (di Rudio, carrying gold for Calvi's Lake Maggiore scheme, is recalled with the word &quot;In Milan all is lost&quot;), his first meeting with Mazzini near Lugano, the doomed Alpine conspiracy around Belluno, and Calvi's capture. The book makes Calvi's death its moral peak: he refuses to beg the clemency Austria reserved for the repentant and goes to the gallows with studied composure. <em>(<a href="../index.html#ch-parte-prima-capitolo-undicesimo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 11–16</a>, pp. 59–83; Calvi's capture, <a href="../index.html#ch-parte-prima-capitolo-ventesimo-secondo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 22</a>, pp. 108–112)</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — Mazzini founded <em>Giovine Italia</em> in 1831 to work for a unified Italian republic. The Milan insurrection of 6 February 1853, a Mazzinian rising, was suppressed within a day. Pietro Fortunato Calvi, taken by the Austrians in 1853, was hanged at Mantua on 4 July 1855 — counted among the Belfiore martyrs, the patriots executed at Mantua between 1852 and 1855. <em>(Sources: Wikipedia, &quot;Giuseppe Mazzini&quot;; &quot;Belfiore martyrs&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Denis Mack Smith (<em>Mazzini</em>, 1994) confronts the standard charge that Mazzini was a futile dreamer whose conspiracies led the Italian Left up a blind alley. Most of those conspiracies did fail — and &quot;could hardly help but fail,&quot; Mack Smith concedes — yet he argues that their constant pressure, and Mazzini's tenacity across the defeats of 1831–1859, kept the cause of a united Italy alive, as even his opponents privately admitted. The memoir's adoration of the Maestro has a serious scholarly defence beneath it.</p>
+</blockquote>
+<hr />
+<h2 id="6-the-orsini-attentat-14-january-1858">6. The Orsini Attentat (14 January 1858)</h2>
+<p>The event the book exists to re-litigate: the bombing that di Rudio helped carry out, and for which he was nearly executed.</p>
+<img src="images/orsini_attentat_1858.jpg" alt="The Orsini bombing outside the Paris Opéra, 14 January 1858" width="480">
+<p><em>The bombs thrown at Napoleon III's carriage outside the Salle Le Peletier, 14 January 1858 — drawing by Godefroy Durand, made the very evening of the attack. Bibliothèque-musée de l'Opéra (via Wikimedia Commons); public domain. A contemporary depiction.</em></p>
+<p><strong>In the book.</strong> In September 1857, in Nottingham, di Rudio aids a passing Italian exile who mentions him to Felice Orsini at Birmingham; Orsini — &quot;the very man I am looking for!&quot; — summons di Rudio to London by letter and revives a plan to kill Napoleon III. Orsini lays out a sweeping political rationale (a blow in Paris to topple the Empire, free France, and unbar Italy), insists the conspirators not know one another, and routes the operation through the London-based physician Simon Bernard. di Rudio crosses to Paris on a Portuguese passport as &quot;Giovanni da Sylva&quot;; at Orsini's lodgings he meets the servant Antonio Gomez (whom he at first takes for the Englishman &quot;Allsop&quot;) and the Tuscan Giuseppe Pieri. The book is careful with the mechanics of the fulminate: di Rudio spreads the damp explosive on a newspaper while <strong>Orsini</strong> runs his fingertips over it to judge its moisture and takes the dangerous drying upon himself. On the evening of 14 January 1858, outside the Opéra, the bombs are thrown — Gomez's first, prematurely, then di Rudio's. <em>(<a href="../index.html#ch-parte-seconda-capitolo-quinto" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 5–10</a>, pp. 144–165)</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — On 14 January 1858 three bombs were thrown at Napoleon III's carriage outside the Salle Le Peletier; the Emperor and Empress were unhurt, but about eight people were killed and some 150 wounded. Orsini and Pieri were guillotined on 13 March 1858. The attack's longer consequence was diplomatic: though historians doubt Orsini's appeal swayed Napoleon directly, the Emperor met Cavour secretly at Plombières on 21 July 1858 and pledged French arms against Austria — the bargain that produced the Second War of Italian Independence in 1859. <em>(Sources: Wikipedia, &quot;Orsini affair&quot;; Britannica, &quot;Felice Orsini&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — di Rudio's most explosive claim surfaced not in the book but in his 1908 <em>San Francisco Call</em> interview: he named <strong>Francesco Crispi</strong> — the future prime minister of united Italy — as present at the attentat. Half an hour before the attack, he said, a &quot;man with long mustaches&quot; exchanged a low word with Orsini at the corner of the Rue Le Peletier; <em>&quot;That's Francesco Crispi,&quot;</em> di Rudio told Orsini, who replied &quot;with a slight tinge of irritation.&quot; Since it was never established who threw the third (unexploded) bomb, di Rudio left the inference that Crispi did. The claim caused a stir and was promptly doubted — Crispi was indeed arrested in Paris that night but released the next day — and no historian accepts that he took part in the bombing. <em>(Source: <a href="sources/1908-09-29_sf-call.html">San Francisco Call, 29 Sept. 1908</a>; the credibility dispute is the subject of the 30 September follow-up discussed in <a href="themes.html#1-testimony-as-method--the-human-document">Themes §1</a>.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Michael St John Packe's <em>The Bombs of Orsini</em> (1957) is the standard English history of the plot, and it confirms the British dimension the memoir takes for granted: the bombs were manufactured in Birmingham and a British passport supplied (by Thomas Allsop), Orsini had toured Britain as a celebrity lecturer, and the conspirators lived in England known as language teachers — precisely di Rudio's world of Nottingham lessons and London exiles.</p>
+</blockquote>
+<hr />
+<h2 id="7-the-french-penal-colony-of-guiana-18581859">7. The French Penal Colony of Guiana (1858–1859)</h2>
+<p>The book's descent into hell — and the stage for di Rudio's escape.</p>
+<img src="images/iles_du_salut.jpg" alt="The Îles du Salut, French Guiana" width="480">
+<p><em>The Îles du Salut — the French Guiana penal-colony archipelago — seen from the open sea. Wood engraving after Édouard Riou, 1866 (Le Tour du monde). Wikimedia Commons; public domain.</em></p>
+<p><strong>In the book.</strong> Spared the guillotine, di Rudio is shipped to French Guiana aboard the convict transport (the <em>Durance</em>), put ashore by way of the Île Royale du Salut, and landed on 11 December 1858 at the Montagne d'Argent, a former plantation turned penal station near the Brazilian frontier. He describes forced labour in the forest, a commandant who promises him he will &quot;leave his skin&quot; there, and his own resolve to escape: with eight accomplices he secretly fells and hollows a great tree into a canoe. Then yellow fever sweeps the colony. di Rudio buries the dead &quot;one by one,&quot; his eight fellow escape-plotters among them; of &quot;more than six hundred souls&quot; only sixty-three survive, and the survivors — di Rudio one of only three wholly untouched by the fever — are evacuated to the Île du Salut. There he plans a second, successful escape: seizing a fishing boat and scuttling the pursuit craft. <em>(<a href="../index.html#ch-parte-seconda-capitolo-ventesimo-primo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 21–22</a>, pp. 212–222; the escape, <a href="../index.html#ch-parte-seconda-capitolo-ventesimo-quinto" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 25–27</a>, pp. 228–240)</em></p>
+<img src="images/guiana_coast_map.png" alt="Map of the three Guianas" width="500">
+<p><em>The three Guianas — di Rudio's escape ran from Cayenne and the Îles du Salut (French Guiana, far east) northwest along the coast through Suriname to British Guiana (now Guyana), where he made landfall near the Berbice. Map: SurinameCentral, Wikimedia Commons, CC BY-SA 4.0.</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — Napoleon III established the penal colony of French Guiana (the <em>bagne de Cayenne</em>, centred on the Salvation Islands — Île Royale, Île Saint-Joseph, and the Île du Diable, &quot;Devil's Island&quot;) by decree in 1852; it operated until the 1950s and was notorious for a death rate driven by tropical disease. The phrase &quot;dry guillotine&quot; (<em>la guillotine sèche</em>) — which the memoir already uses for Cayenne in 1858 — became the popular name for the colony, fixed by escaped convict René Belbenoît's 1938 book of that title. <em>(Source: Wikipedia, &quot;Devil's Island&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Stephen Toth (<em>Beyond Papillon</em>, 2006) and Peter Redfield (<em>Space in the Tropics</em>, 2000) document the system di Rudio survived: Guiana was chosen in 1852 despite a climate so lethal with yellow fever that it had long repelled free settlers, in the hope that convict labour might develop it, and transportation was institutionalized by the law of 1854. Toth's portrait of an uncaring administration, brutal guards, and a death rate that made Guiana the deadliest of the French <em>bagnes</em> renders di Rudio's epidemic and his &quot;you will leave your skin here&quot; commandant representative, not exceptional.</p>
+</blockquote>
+<hr />
+<h2 id="8-unification--from-plombières-to-the-kingdom-of-italy-18581861">8. Unification — From Plombières to the Kingdom of Italy (1858–1861)</h2>
+<p>The making of Italy, watched bitterly from exile by a republican who thinks it was made the wrong way.</p>
+<img src="images/thousand_marsala_1860.jpg" alt="Garibaldi's Thousand landing at Marsala, 1860" width="480">
+<p><em>Garibaldi's Thousand landing at Marsala, May 1860 — a contemporary eyewitness drawing. Wikimedia Commons; public domain.</em></p>
+<p><strong>In the book.</strong> Returned to London, di Rudio follows unification through the English press and judges it by Mazzinian lights. He condemns the 1859 alliance of Piedmont and Napoleon III, the &quot;treacherous peace of Villafranca&quot; that left Venetia to Austria, and above all the cession of Nice and Savoy — &quot;the full price paid for a service only partially rendered.&quot; He hails Garibaldi's landing at Marsala and the victory of Calatafimi, but insists the Expedition of the Thousand was <em>organised</em> by Mazzini, Rosalino Pilo (who died in it), Agostino Bertani, and Nino Bixio, the glory of execution falling to Garibaldi. He notes, with sardonic relish, that Francesco Crispi contributed &quot;a conspicuous supply — of Orsini bombs.&quot; Throughout, his target is the &quot;practical&quot; monarchy: Cavour the convert to revolution-from-above, Vittorio Emanuele the &quot;vassal of the Empire.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-primo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 31</a>, pp. 253–258)</em></p>
+<img src="images/restoration_italy_map.jpg" alt="The unification of Italy, 1815–1870" width="480">
+<p><em>The making of Italy, 1815–1870 — the stages by which the peninsula was unified, the process di Rudio watched from exile and judged a betrayal of its republican makers. From Shepherd's <em>Historical Atlas</em>, 1911. Wikimedia Commons; public domain.</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — At Plombières (21 July 1858) Napoleon III and Cavour secretly agreed that France would help Piedmont expel Austria from northern Italy in exchange for Nice and Savoy. The Second War of Independence (1859) followed; Napoleon's separate armistice at Villafranca left Venetia with Austria. By the Treaty of Turin (24 March 1860) Sardinia ceded Nice and Savoy to France. Garibaldi's Expedition of the Thousand (sailed from Quarto, landed at Marsala, May 1860) toppled the Kingdom of the Two Sicilies, and the Kingdom of Italy was proclaimed on 17 March 1861 — still without Rome or Venetia. <em>(Sources: Wikipedia, &quot;Treaty of Turin (1860)&quot;; &quot;Expedition of the Thousand&quot;; &quot;Unification of Italy&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Denis Mack Smith (<em>Cavour</em>, 1985), long known for deflating the heroic-nationalist myth, reads Plombières as opportunistic power politics: a war engineered for territorial gain, with Piedmontese hegemony placed above any democratic or federal vision of Italy. That cool verdict converges, from the opposite political pole, with di Rudio's own republican indictment of the monarchy's &quot;practical&quot; unification.</p>
+</blockquote>
+<hr />
+<h2 id="9-aspromonte-1862">9. Aspromonte (1862)</h2>
+<p>The wound that rouses di Rudio from his post-prison &quot;torpor&quot; — and the book's proof that the monarchy would shoot its own liberator.</p>
+<img src="images/aspromonte_1862.jpg" alt="Garibaldi wounded at Aspromonte, 1862" width="460">
+<p><em>Garibaldi wounded at Aspromonte, August 1862 — painting by Gerolamo Induno, c. 1863; a contemporary depiction. Museo Civico Revoltella, Trieste (via Wikimedia Commons); public domain.</em></p>
+<p><strong>In the book.</strong> Garibaldi, having taken up the cry &quot;Roma o morte&quot; (Rome or death), marches up through Calabria toward the capital; at Paris the answer is &quot;You shall have death, not Rome,&quot; and Napoleon imposes on Vittorio Emanuele &quot;the part of the modern Cain.&quot; When the royal Bersaglieri meet the Garibaldian legion on 28 August 1862 (the book's date), Garibaldi orders his men not to fire; he is shot in the ankle and falls &quot;at the foot of a tree which resurgent Italians ought to regard as sacred.&quot; The book frames the affair as a near-assassination of &quot;the first, the most beloved among the fighters for the cause of Italy,&quot; foiled only by a sergeant who deliberately fired wide. <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-primo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 31</a>, pp. 253–258; its aftermath in London, <a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a>, pp. 264–268)</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — At the Battle of Aspromonte (29 August 1862 — the memoir dates it 28 August), Italian royal troops halted Garibaldi's volunteer march on Rome and wounded him in the foot; he was briefly taken prisoner and then amnestied. <em>(Source: Wikipedia, &quot;Battle of Aspromonte&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Lucy Riall (<em>Garibaldi: Invention of a Hero</em>, 2007) argues that Aspromonte, far from dimming Garibaldi's image, burnished it — casting him as the victim of &quot;coldhearted diplomats, insensitive generals, spineless politicians, and a corrupt clergy&quot; — and that Garibaldi was himself complicit in the making of his cult. This both explains the near-sacred pitch of di Rudio's account and supplies the critical distance the memoir lacks.</p>
+</blockquote>
+<hr />
+<h2 id="10-the-risorgimento-exile-and-america-1864">10. The Risorgimento Exile and America (1864)</h2>
+<p>The book's close: a republican shut out of the nation he helped make, sent by his dying master across the Atlantic.</p>
+<p><strong>In the book.</strong> Roused by Aspromonte, di Rudio throws himself into London meetings against the Temporal Power, carrying the &quot;O Roma o Morte&quot; banner. He tries to sail home on an Italian warship offering free passage to returning exiles, but the consul Corti — after he gives his name as Carlo Nosadano — denies him a place and warns that within the Kingdom he would be seized and &quot;handed over to the French authorities.&quot; Turning then toward Poland, di Rudio is summoned instead to a last meeting with a gravely ill Mazzini, who dissuades him from the &quot;lost cause&quot; of Poland and urges him toward the American war &quot;for the abolition of slavery,&quot; writing him a letter of commendation he would keep for life. On 8 February 1864 di Rudio sails from Liverpool aboard the steamship <em>Virginia</em> for New York. The book ends on his lifelong exile's grief: &quot;my Fatherland I have never seen again!&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a>, pp. 264–268)</em></p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — The memoir ends in 1864; the historical &quot;Charles DeRudio&quot; went on to serve in the Union Army and then the U.S. 7th Cavalry, surviving the Battle of the Little Bighorn (1876) and dying at Pasadena, California, in 1910 — three years before this book appeared. That later life is set out in the <a href="timeline.html">Timeline</a>. <em>(Source: Wikipedia, &quot;Charles DeRudio&quot;.)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Maurizio Isabella (<em>Risorgimento in Exile</em>, 2009) recovers the émigré networks — London above all — as engines of a &quot;liberal international,&quot; Italian exiles in sustained exchange with British, continental, and American thinkers rather than mere refugees marking time. di Rudio's London years, and his Mazzini-blessed departure for the American war against slavery, are nodes in exactly that transnational web.</p>
+</blockquote>
+<hr />
+<h2 id="sources--further-reading">Sources &amp; further reading</h2>
+<p>External facts in the <strong>Historical note</strong> callouts are checked against general reference works (Wikipedia, Britannica) before being stated; the <strong>Scholarship</strong> callouts draw on the standard academic literature listed here. None of these works treats <em>Per la libertà!</em> itself — they are the historical record against which the memoir is read.</p>
+<ul>
+<li><strong>Christopher Duggan</strong>, <em>The Force of Destiny: A History of Italy Since 1796</em> (Allen Lane, 2007) — narrative history of the Restoration and Risorgimento.</li>
+<li><strong>Lucy Riall</strong>, <em>Risorgimento: The History of Italy from Napoleon to Nation-State</em> (Palgrave Macmillan, 2009); and <em>Garibaldi: Invention of a Hero</em> (Yale University Press, 2007).</li>
+<li><strong>Paul Ginsborg</strong>, <em>Daniele Manin and the Venetian Revolution of 1848–49</em> (Cambridge University Press, 1979) — the standard study of the 1848–49 revolutions in the Veneto.</li>
+<li><strong>George Macaulay Trevelyan</strong>, <em>Garibaldi's Defence of the Roman Republic</em> (Longmans, Green, 1907) — the classic English narrative of the 1849 siege.</li>
+<li><strong>Ted W. Margadant</strong>, <em>French Peasants in Revolt: The Insurrection of 1851</em> (Princeton University Press, 1979) — the standard account of resistance to Louis-Napoleon's coup.</li>
+<li><strong>Denis Mack Smith</strong>, <em>Mazzini</em> (Yale University Press, 1994); and <em>Cavour</em> (Weidenfeld &amp; Nicolson, 1985).</li>
+<li><strong>Michael St John Packe</strong>, <em>The Bombs of Orsini</em> (Secker &amp; Warburg, 1957) — the standard English history of the 1858 plot.</li>
+<li><strong>Stephen A. Toth</strong>, <em>Beyond Papillon: The French Overseas Penal Colonies, 1854–1952</em> (University of Nebraska Press, 2006); and <strong>Peter Redfield</strong>, <em>Space in the Tropics: From Convicts to Rockets in French Guiana</em> (University of California Press, 2000).</li>
+<li><strong>Maurizio Isabella</strong>, <em>Risorgimento in Exile: Italian Émigrés and the Liberal International in the Post-Napoleonic Era</em> (Oxford University Press, 2009).</li>
+</ul>
+
+</main>
+
+<footer class="companion-footer">
+  <p>From <em>A Reader&rsquo;s Companion to Per la libert&agrave;!</em> — companion text &copy; 2026 Ben Rossi, all rights reserved. The 1913 book by Cesare Crespi is in the public domain; images are licensed separately (public domain, CC0, or CC BY-SA with attribution).</p>
+  <p class="companion-footer-links"><a href="COPYRIGHT.html">Copyright & licensing</a>
+      <a href="images/CREDITS.html">Image credits</a>
+      <a href="sources/index.html">Primary sources</a></p>
+</footer>
+
+<script>
+// Font size controls
+(() => {
+  const root = document.documentElement;
+  const STEP = 1;
+  const MIN = 10;
+  const MAX = 24;
+  let size = 16;
+  const saved = localStorage.getItem('fontSize');
+  if (saved) { size = parseInt(saved); root.style.fontSize = size + 'px'; }
+
+  document.getElementById('font-smaller').addEventListener('click', () => {
+    size = Math.max(MIN, size - STEP);
+    root.style.fontSize = size + 'px';
+    localStorage.setItem('fontSize', size);
+  });
+  document.getElementById('font-larger').addEventListener('click', () => {
+    size = Math.min(MAX, size + STEP);
+    root.style.fontSize = size + 'px';
+    localStorage.setItem('fontSize', size);
+  });
+})();
+
+// Colour theme: swatch popover writing data-theme on <html>, persisted
+(() => {
+  const root = document.documentElement;
+  const trigger = document.getElementById('theme-trigger');
+  const menu = document.getElementById('theme-menu');
+  const opts = Array.from(menu.querySelectorAll('.theme-opt'));
+  function mark(theme) {
+    opts.forEach(o => {
+      const on = o.dataset.setTheme === theme;
+      o.classList.toggle('active', on);
+      o.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+  }
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    mark(theme);
+  }
+  function open(show) {
+    menu.classList.toggle('open', show);
+    trigger.setAttribute('aria-expanded', show ? 'true' : 'false');
+  }
+  mark(root.getAttribute('data-theme') || 'mid');
+  trigger.addEventListener('click', e => { e.stopPropagation(); open(!menu.classList.contains('open')); });
+  opts.forEach(o => o.addEventListener('click', () => { apply(o.dataset.setTheme); open(false); }));
+  document.addEventListener('click', e => { if (!menu.contains(e.target) && e.target !== trigger) open(false); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { open(false); return; }
+    if (!menu.classList.contains('open')) return;
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    const cur = opts.findIndex(o => o.dataset.setTheme === (root.getAttribute('data-theme') || 'mid'));
+    const next = (cur + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length;
+    apply(opts[next].dataset.setTheme);
+    opts[next].focus();
+  });
+})();
+</script>
+</body>
+</html>

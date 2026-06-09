@@ -57,6 +57,13 @@
   /* Right-hand space reserved for marginalia notes (matches .marginalia
      right offset, which is in the note's own 0.94em font size). */
   --marginalia-gutter: 19em;
+  /* Companion's third voice — kept distinct from the reading page's red
+     (revision) and blue (provenance): green = external Historical note,
+     violet = Scholarship. */
+  --color-context: #3a6b53;
+  --color-scholarship: #5b4a8a;
+  --hl-context: rgba(58, 107, 83, 0.08);
+  --hl-scholarship: rgba(91, 74, 138, 0.08);
 }
 
 /* === Selectable theme palettes ===
@@ -85,6 +92,8 @@
   --hover-bg: rgba(255, 255, 255, 0.06); --backdrop-bg: rgba(0, 0, 0, 0.55);
   --hl-accent-1: rgba(224, 134, 106, 0.18); --hl-accent-2: rgba(224, 134, 106, 0.30);
   --hl-prov-1: rgba(143, 179, 221, 0.20); --hl-prov-2: rgba(143, 179, 221, 0.24); --hl-prov-3: rgba(143, 179, 221, 0.30);
+  --color-context: #7fb89a; --color-scholarship: #a99bd6;
+  --hl-context: rgba(127, 184, 154, 0.16); --hl-scholarship: rgba(169, 155, 214, 0.16);
 }
 :root[data-theme="ash"] {             /* neutral: near-true gray-brown */
   --color-body: #e6ddcf; --color-muted: #a9a094;
@@ -96,6 +105,8 @@
   --hover-bg: rgba(255, 255, 255, 0.06); --backdrop-bg: rgba(0, 0, 0, 0.55);
   --hl-accent-1: rgba(223, 133, 104, 0.18); --hl-accent-2: rgba(223, 133, 104, 0.30);
   --hl-prov-1: rgba(141, 176, 219, 0.20); --hl-prov-2: rgba(141, 176, 219, 0.24); --hl-prov-3: rgba(141, 176, 219, 0.30);
+  --color-context: #7fb89a; --color-scholarship: #a99bd6;
+  --hl-context: rgba(127, 184, 154, 0.16); --hl-scholarship: rgba(169, 155, 214, 0.16);
 }
 :root[data-theme="slate"] {           /* cool: blue-gray ground, cool-tinted ink */
   --color-body: #dde3e9; --color-muted: #99a3af;
@@ -107,6 +118,8 @@
   --hover-bg: rgba(255, 255, 255, 0.06); --backdrop-bg: rgba(0, 0, 0, 0.6);
   --hl-accent-1: rgba(224, 138, 114, 0.18); --hl-accent-2: rgba(224, 138, 114, 0.30);
   --hl-prov-1: rgba(140, 183, 228, 0.20); --hl-prov-2: rgba(140, 183, 228, 0.24); --hl-prov-3: rgba(140, 183, 228, 0.30);
+  --color-context: #7fb89a; --color-scholarship: #a99bd6;
+  --hl-context: rgba(127, 184, 154, 0.16); --hl-scholarship: rgba(169, 155, 214, 0.16);
 }
 
 html {
@@ -1084,6 +1097,168 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   border-radius: 2px;
 }
 
+/* === Reader's Companion (standalone apparatus pages) ===
+   Single-column scholarly pages that share the edition's shell (fonts, theme
+   system, top-right controls) but read like a reference book rather than a
+   facing-page text. */
+body.companion {
+  background: var(--paper);
+  color: var(--color-body);
+}
+
+.companion-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6em 1.4em;
+  padding: 1em 2em;
+  /* Clear the fixed top-right controls cluster. */
+  padding-right: 11em;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.companion-back {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.companion-back:hover { color: var(--color-accent); }
+
+.companion-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em 1.1em;
+  font-size: 0.92em;
+}
+
+.companion-nav a {
+  color: var(--color-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.companion-nav a:hover { color: var(--color-body); }
+.companion-nav a.active {
+  color: var(--color-body);
+  border-bottom-color: var(--color-accent);
+}
+
+.companion-page {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 2.5em 2em 4em;
+  text-align: left;
+}
+
+.companion-page h1,
+.companion-page h2,
+.companion-page h3 {
+  font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
+  letter-spacing: 0.03em;
+  line-height: 1.25;
+  margin: 1.8em 0 0.5em;
+}
+
+.companion-page h1 { font-size: 1.9em; margin-top: 0.2em; }
+.companion-page h2 { font-size: 1.4em; }
+.companion-page h3 { font-size: 1.15em; }
+
+.companion-page p { margin: 0 0 1em; }
+.companion-page a { color: var(--color-accent); text-decoration: none; }
+.companion-page a:hover { text-decoration: underline; }
+
+/* Chapter-citation deep-links into the edition. */
+.companion-page a.chapter-cite {
+  color: var(--color-provenance);
+  border-bottom: 1px dotted var(--color-provenance);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.companion-page a.chapter-cite:hover { background: var(--hl-prov-1); }
+
+/* Three-voice callouts (blockquotes). */
+.companion-page blockquote {
+  margin: 1.2em 0;
+  padding: 0.6em 1em;
+  border-left: 3px solid var(--color-muted);
+  background: var(--hover-bg);
+  font-size: 0.96em;
+}
+.companion-page blockquote.callout-historical {
+  border-left-color: var(--color-context);
+  background: var(--hl-context);
+}
+.companion-page blockquote.callout-scholarship {
+  border-left-color: var(--color-scholarship);
+  background: var(--hl-scholarship);
+}
+.companion-page blockquote > :first-child { margin-top: 0; }
+.companion-page blockquote > :last-child { margin-bottom: 0; }
+.companion-page blockquote.callout-historical strong:first-child {
+  color: var(--color-context);
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+}
+.companion-page blockquote.callout-scholarship strong:first-child {
+  color: var(--color-scholarship);
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+}
+
+/* Tables (GFM). */
+.companion-page table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2em 0;
+  font-size: 0.94em;
+}
+.companion-page th,
+.companion-page td {
+  border: 1px solid var(--border-light);
+  padding: 0.4em 0.7em;
+  text-align: left;
+  vertical-align: top;
+}
+.companion-page th {
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  color: var(--color-muted);
+}
+
+/* Figures: period images, each followed by an italic caption paragraph. */
+.companion-page img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.4em auto 0.4em;
+}
+.companion-page img + p {
+  font-size: 0.85em;
+  color: var(--color-muted);
+  text-align: center;
+  margin-top: 0.3em;
+}
+
+.companion-page hr {
+  border: none;
+  border-top: 1px solid var(--border-light);
+  margin: 2em 0;
+}
+
+.companion-footer {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 1.5em 2em 3em;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.82em;
+  color: var(--color-muted);
+}
+.companion-footer a { color: var(--color-muted); }
+.companion-footer-links { display: flex; flex-wrap: wrap; gap: 0.4em 1.2em; }
+
 /* === Print / PDF (WeasyPrint paged media) === */
 @media print {
   /* Force the light palette on paper regardless of the screen theme selected. */
@@ -1093,6 +1268,8 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
     --color-provenance: #2b5797; --paper: #fff;
     --hl-accent-1: rgba(139, 0, 0, 0.08); --hl-accent-2: rgba(139, 0, 0, 0.12);
     --hl-prov-1: rgba(43, 87, 151, 0.10); --hl-prov-2: rgba(43, 87, 151, 0.12); --hl-prov-3: rgba(43, 87, 151, 0.15);
+    --color-context: #3a6b53; --color-scholarship: #5b4a8a;
+    --hl-context: rgba(58, 107, 83, 0.08); --hl-scholarship: rgba(91, 74, 138, 0.08);
   }
 
   @page {
@@ -1118,7 +1295,8 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
     padding: 0;
   }
 
-  .toc-trigger, .toc-panel, .toc-backdrop, .top-right-controls, .marginalia, .scan-qr {
+  .toc-trigger, .toc-panel, .toc-backdrop, .top-right-controls, .marginalia, .scan-qr,
+  .companion-topbar, .companion-footer-links {
     display: none;
   }
 
