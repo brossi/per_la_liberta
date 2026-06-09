@@ -10,7 +10,15 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 **Belluno.** The Alpine town in the Veneto where di Rudio was born (26 August 1832) into an anti-papal aristocratic family, and the target of Calvi's 1853 Alpine conspiracy — di Rudio slips home by night to raise it, only for the plot to collapse and his father, sister, and Don Bastiano to be arrested. *(P1 Ch. 2, pp. 15–23; P1 Ch. 17–19, pp. 83–98)*
 
+<img src="images/belluno_view.jpg" alt="Belluno" width="460">
+
+*Belluno, di Rudio's birthplace in the Veneto — photographic panorama, 1918. Austrian National Library / Bildarchiv Austria (via Wikimedia Commons); public domain.*
+
 **The Spielberg.** The fortress-prison di Rudio names as the emblem of Austrian repression, where Italian patriots languished and died in its underground cells. *(P1 Ch. 2, pp. 15–23)*
+
+<img src="images/spielberg_fortress.jpg" alt="The Špilberk (Spielberg) fortress" width="460">
+
+*The Špilberk (Spielberg) fortress above Brno, Moravia — copper engraving by Martin Engelbrecht, 1736. Wikimedia Commons; public domain.*
 
 > **Historical note** — The Spielberg (Czech *Špilberk*) is a hilltop castle in Brno, Moravia, used by the Habsburgs as a prison for Italian patriots; Silvio Pellico's memoir *Le mie prigioni* (1832), written about his confinement there, made it a byword for Austrian tyranny across the Risorgimento. *(Source: Wikipedia, "Špilberk Castle".)*
 
@@ -18,9 +26,17 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 > **Historical note** — The "Quadrilateral" was the defensive system formed by the fortresses of Verona, Legnago, Mantua, and Peschiera, which let Austria dominate the Veneto plain throughout the wars of independence. *(Source: Wikipedia, "Quadrilatero".)*
 
+<img src="images/quadrilateral_map.jpg" alt="Map of the Austrian Quadrilateral" width="460">
+
+*"Le quadrilatère" — a period map of the Austrian fortress system (Verona, Legnago, Mantua, Peschiera). British Library (via Wikimedia Commons); public domain.*
+
 **Villa Corsini.** The villa on the Janiculum heights above Rome — "the key to Porta San Pancrazio" — fought over in the day-long, doomed assaults of 3 June 1849, the book's set piece of heroic slaughter. *(P1 Ch. 6, pp. 34–39; see [Event Context §3](events.md#3-the-roman-republic-and-its-siege-1849))*
 
 **Castello di San Giorgio, Mantua.** The Austrian prison-fortress at Mantua where Calvi was held with di Rudio's father, his sister Luisa, and Don Bastiano, and where Orsini too was briefly jailed — the same fortress-prison that held the Belfiore martyrs (executed 1852–55; see [Event Context §5](events.md#5-the-conspiratorial-decade--giovine-italia-the-1853-rising-and-the-belfiore-martyrs)). *(P1 Ch. 22, pp. 108–112)*
+
+<img src="images/mantua_castello_san_giorgio.jpg" alt="Castello di San Giorgio, Mantua" width="460">
+
+*The Castello di San Giorgio, Mantua — period view, 1896. Internet Archive (via Wikimedia Commons); public domain.*
 
 > **Historical note** — Orsini's imprisonment and escape here are well documented: arrested by the Austrians in December 1854, he sawed through his cell bars on the night of 29–30 March 1856, lowered himself down the fortress wall on a rope of knotted bedding, and escaped to England, where he told the story in *The Austrian Dungeons in Italy* (1856). *(Sources: Orsini, *The Austrian Dungeons in Italy*, 1856; Britannica, "Felice Orsini".)*
 
@@ -28,27 +44,59 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 **San Marino.** The independent republic where di Rudio took refuge after the fall of Rome in 1849. *(P1 Ch. 7, pp. 39–43)*
 
+<img src="images/san_marino_view.jpg" alt="San Marino on Monte Titano" width="420">
+
+*The hilltop Republic of San Marino on Monte Titano — period view, c. 1855. Wikimedia Commons; public domain.*
+
 **Rue Le Peletier (the Opéra).** The street before the old Paris opera house where the *attentat* was carried out on 14 January 1858; di Rudio and Orsini took their post across from the theatre by the *Broggi* trattoria, and it was here di Rudio threw the second bomb at the imperial carriage. *(P2 Ch. 8, pp. 157–160; P2 Ch. 10, pp. 163–165)*
+
+<img src="images/salle_le_peletier.jpg" alt="The Salle Le Peletier, the Paris Opéra" width="460">
+
+*The Salle Le Peletier, the Paris Opéra on the Rue Le Peletier (1821–1873), outside which the attentat took place — engraving by A. Provost, 1844. Wikimedia Commons; public domain.*
 
 > **Historical note** — The house was the Salle Le Peletier, home of the Paris Opéra from 1821 until it burned down on the night of 28–29 October 1873. The attack outside it prompted Napoleon III to commission a new, more secure opera house — the Palais Garnier, inaugurated 1875. *(Sources: Opéra de Paris official history; Wikipedia, "Salle Le Peletier".)*
 
 **Mazas.** The Paris remand prison to which di Rudio was committed for trial after the Orsini bombing, held among planted police informers. *(P2 Ch. 13–14, pp. 173–183)*
 
+<img src="images/mazas_prison.jpg" alt="Prison Mazas, Paris" width="460">
+
+*The cellular Prison Mazas, Paris (opened 1850, demolished 1900) — wood engraving, 1882. Wikimedia Commons; public domain.*
+
 > **Historical note** — Mazas, near the Gare de Lyon, was a large cellular remand prison opened in 1850 on the "Pennsylvania" model of solitary confinement in separate cells; it was demolished in 1898 ahead of the 1900 Universal Exposition. *(Source: Wikipedia, "Mazas Prison".)*
 
 **The Conciergerie.** The historic Paris prison to which the four conspirators were moved for trial, held in adjacent cells — di Rudio in No. 1, Pieri No. 2, Gomez No. 3, Orsini No. 4. *(P2 Ch. 14–17, pp. 178–195)*
+
+<img src="images/conciergerie.jpg" alt="The Conciergerie, Paris" width="460">
+
+*The Conciergerie on the Île de la Cité — watercolour view by Henry Edridge, 1818. Yale Center for British Art (via Wikimedia Commons); CC0 (public domain).*
 
 > **Historical note** — The Conciergerie, the medieval former royal palace on the Île de la Cité, is most infamous as the antechamber of the guillotine during the Revolutionary Terror of 1793–94, when Marie Antoinette and thousands of others were held there before execution; it remained in use as a prison until 1934. *(Source: Wikipedia, "Conciergerie".)*
 
 **La Roquette.** The Paris prison of the condemned, where the three death-sentenced conspirators were held in straitjackets within sight of one another and the scaffold was raised before the door; di Rudio was reprieved here at the foot of the guillotine. *(P2 Ch. 18–20, pp. 196–210)*
 
+<img src="images/la_roquette_prison.jpg" alt="The Grande Roquette prison, Paris" width="460">
+
+*The Grande Roquette, the Paris prison of the condemned — photograph by Auguste Hippolyte Collard, c. 1876–80. Wikimedia Commons; public domain.*
+
 > **Historical note** — The Grande Roquette, in Paris's 11th arrondissement, was the prison of the condemned — holding both those awaiting execution and convicts bound for the penal colonies. From 1851 to 1899, public guillotinings took place just outside, on the Place de la Roquette, the scaffold seated on five granite slabs set in the pavement (nicknamed *l'abbaye des cinq-pierres*, and still visible today). It was here, at about seven in the morning of 13 March 1858, that Felice Orsini and Giuseppe Pieri were beheaded for the attack on Napoleon III — the execution from which di Rudio was spared at the last moment. The prison was demolished in 1900. *(Sources: Wikipedia, "La Roquette Prisons"; ExecutedToday, "1858: Felice Orsini".)*
 
 **Toulon.** The Mediterranean naval bagne where the condemned were held before transportation to the tropics; di Rudio was chained in a sea-level casemate here from April 1858, plotting a first, aborted escape, until he was shipped to Guiana. *(P2 Ch. 21, pp. 212–215)*
 
+<img src="images/toulon_bagne.jpg" alt="The bagne of Toulon" width="460">
+
+*The bagne (convict port) of Toulon — mid-19th-c. engraving. Wikimedia Commons; public domain.*
+
 **Cayenne.** The capital of French Guiana, and in the book the shorthand for its whole penal colony — the convict's dreaded destination, "the dry guillotine of Cayenne." di Rudio's two stations within it were the Montagne d'Argent and the Île du Salut. *(P2 Ch. 21–23, pp. 212–225)*
 
+<img src="images/cayenne_view.jpg" alt="The harbour of Cayenne, French Guiana" width="460">
+
+*The harbour of Cayenne, capital of French Guiana — wood engraving after Édouard Riou, 1866 (Le Tour du monde). Wikimedia Commons; public domain.*
+
 **Montagne d'Argent.** A former plantation turned penal station in French Guiana, near the Brazilian frontier, where di Rudio landed on 11 December 1858 and where yellow fever killed all but sixty-three of more than six hundred convicts — his eight escape-plot accomplices among the dead. *(P2 Ch. 22, pp. 216–222)*
+
+<img src="images/montagne_dargent.jpg" alt="The Montagne d'Argent penal station" width="460">
+
+*The Montagne d'Argent penal station, French Guiana — engraving after Édouard Riou, 1867. Wikimedia Commons; public domain.*
 
 **Île du Salut / Îles du Salut.** The "Salvation Islands" off the Guiana coast, the penal archipelago to which the fever survivors were evacuated and from which di Rudio staged his successful escape by sea in December 1859. *(P2 Ch. 23–25, pp. 222–232)*
 
@@ -80,6 +128,10 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 
 **Bersaglieri.** Italy's elite light-infantry sharpshooters, who appear on both sides of the book's sympathies: Manara's republican Bersaglieri cut down at the Villa Corsini in 1849, and the royal Bersaglieri who fired on Garibaldi at Aspromonte in 1862. di Rudio twice refuses a Piedmontese Bersaglieri commission rather than swear to the monarchy. *(P1 Ch. 6, pp. 34–39; P1 Ch. 8, pp. 43–48; P2 Ch. 31, pp. 253–258)*
 
+<img src="images/bersaglieri_uniform.jpg" alt="A Bersagliere in uniform" width="300">
+
+*A Bersagliere in the corps' plumed hat — photograph by Giorgio Sommer, Naples, c. 1860s. Wikimedia Commons; public domain.*
+
 > **Historical note** — The Bersaglieri are a high-mobility marksman corps of the Italian army, founded in the Piedmontese-Sardinian army in 1836 and distinguished by their plumed wide-brimmed hats. *(Source: Wikipedia, "Bersaglieri".)*
 
 **Cacciatori delle Alpi.** The book applies this name ("Hunters of the Alps") to the volunteer corps under Pietro Fortunato Calvi that di Rudio and his brother Achille joined in the defense of Venice in 1848–49. *(P1 Ch. 4, pp. 26–31)*
@@ -95,6 +147,10 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 > **Historical note** — The phrase renders a term of art from literary naturalism: *document humain*, claimed by Edmond de Goncourt in his 1882 preface to *La Faustin* and taken up in Italy by the Veristi (Capuana, Verga) for a work grounded in direct, near-documentary observation of real life rather than methodical invention — precisely the contrast Crespi draws. *(Sources: Goncourt, preface to *La Faustin*, 1882; standard accounts of Verismo.)*
 
 **The Orsini "hedgehog" bombs.** The novel bombs studded with spikes, each tipped with a percussion cap so they would detonate however they fell ("in the form of a hedgehog") — devised by Baron Egassy di Torocfalda, cast piece by piece "in the guise of gas-fittings" by the Taylor foundry in Birmingham, and charged with mercury fulminate. Orsini called the twelve to be cast his "twelve apostles." Three were thrown outside the Opéra on 14 January 1858. *(P2 Ch. 6, pp. 149–152; P2 Ch. 7, pp. 154–156)*
+
+<img src="images/orsini_bomb.jpg" alt="The Orsini hedgehog bomb" width="360">
+
+*The Orsini "hedgehog" bomb — engraving from the Illustrated London News, 27 February 1858. Wikimedia Commons; public domain.*
 
 > **Historical note** — The device is the historically documented "Orsini bomb," and the memoir's manufacturing detail checks out: the castings were made in Birmingham by the gun engineer **Joseph Taylor** (the book's "Taylor foundry") and tested in England before being smuggled to France. The designer the book calls "Baron di Torocfalda," however, cannot be traced in the historical record; the design is usually credited to Orsini himself. *(Sources: Wikipedia, "Orsini bomb"; History Today, "Felice Orsini".)*
 
@@ -113,6 +169,10 @@ Citations use the summary's form — e.g. *P1 Ch. 6 (pp. 34–39)* — with page
 **"Dio e Popolo" ("God and the People").** The Mazzinian motto on the banner that touched off the deadly Genoa cemetery riot di Rudio witnessed after the fall of Rome — the watchword of Young Italy's fusion of faith and republic. *(P1 Ch. 8, pp. 43–48)*
 
 **"Re Bomba" ("King Bomb").** The derisive nickname for Ferdinand II, King of the Two Sicilies, whose Neapolitan troops di Rudio fought at Palestrina in 1849. *(P1 Ch. 5, pp. 31–34; P1 Ch. 6, pp. 34–39)*
+
+<img src="images/ferdinand_ii_portrait.jpg" alt="Ferdinand II of the Two Sicilies" width="300">
+
+*Ferdinand II of the Two Sicilies, "Re Bomba" — portrait by Giuseppe Bonolis, 1835. Reggia di Caserta (via Wikimedia Commons); public domain.*
 
 > **Historical note** — Ferdinand II of the Two Sicilies earned the epithet "Re Bomba" for his heavy bombardment of his own cities, notably Messina, during the 1848 revolutions. *(Source: Wikipedia, "Ferdinand II of the Two Sicilies".)*
 

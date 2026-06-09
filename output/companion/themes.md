@@ -30,6 +30,10 @@ The opening chapter then dramatizes the method before the history begins. Crespi
 
 The book's deepest quarrel is not with Austria or with France but with the *kind* of Italy that won. di Rudio is a Mazzinian republican, and to him unification under the House of Savoy was not a triumph imperfectly achieved but a cause achieved by the wrong hands and for the wrong reasons. The argument is stated most fully in Chapter 31, his bitter retrospect on unification watched from London.
 
+<img src="images/vittorio_emanuele_ii_portrait.jpg" alt="Vittorio Emanuele II" width="300">
+
+*Vittorio Emanuele II, first King of Italy — carte-de-visite by André-Adolphe-Eugène Disdéri, c. 1861. Wikimedia Commons; public domain. To di Rudio, "a simple vassal of the Empire."*
+
 The indictment is itemized. The 1859 alliance of Piedmont with Napoleon III produces "the treacherous peace of Villafranca," which abandons the Veneto to Austria; the price of French help is Nice and Savoy — "the full price paid for a service only partially rendered" — so that "while the Revolution sacrificed the blood of heroes to add new Provinces... the Savoyard Monarchy worked in reverse and severed from it two of its ancient Provinces." Cavour, who had "deplored as the supreme affliction of Italy the arts of the revolutionaries," turns "from devil to friar" by adopting those very arts when they serve the dynasty. Vittorio Emanuele is reduced to "a simple vassal of the Empire." *(P2 Ch. 31, pp. 253–258)*
 
 Underneath the grievances is a clean moral antithesis, which di Rudio states as a maxim: "The monarchical entity never throws itself into the fray without an eye to its own interest and subordinates the unity of Italy to privileges which it proclaims inviolable; the republican entity, having inscribed its own epic in characters of blood, freely sacrifices upon the altar of the Fatherland both itself and its serene convictions." *(P2 Ch. 31, pp. 253–258)* The republic is morally superior *because* it loses — because it gives without calculating return. This is the same valuation Crespi announces in the preface, where he declares his sympathies "for those who manfully succumb" and warns that "the triumph of political men is almost always a consequence of their most wretched qualities."
@@ -75,6 +79,10 @@ From the cult of the martyr it is a short step to the book's most uncomfortable 
 ## 5. God, the Church, and the limits of reverence
 
 di Rudio is an anticlerical, and more than that: an outright atheist, in a movement and a memoir otherwise drenched in religious language. The hostility to the Church is established in the book's first historical chapter, where his father smashes a café bust of "the liberating Pontiff" Pius IX, crying that the citizens are honoring "the greatest enemy of our Fatherland." *(P1 Ch. 2, pp. 15–23)* It runs to the end, where the London agitation against the **Temporal Power** of the popes is the cause that rouses di Rudio from his post-prison "torpor," and where he sneers at the Irish for "subordinating... to the watchword of the tonsured camarilla." *(P2 Ch. 33, pp. 264–268)*
+
+<img src="images/pius_ix_portrait.jpg" alt="Pope Pius IX" width="300">
+
+*Pope Pius IX (Pio Nono) — photograph by Adolphe Braun, 1875. Wikimedia Commons; public domain. The pontiff whose café bust di Rudio's father smashed.*
 
 But the anticlericalism is aimed at the Church as a political institution, not at every priest. The book draws the distinction carefully in the figure of Don Bastiano Barozzi, the patriot-priest "in whom the cassock did not stifle the love of the Fatherland," who served as a Legion chaplain at the siege of Venice and lost the right to say Mass for refusing to shave the moustache that "smacked of the modernist." *(P1 Ch. 11, pp. 59–62)* The enemy is the clergy that "to please the powerful" hears patriots' confessions and then "lend[s] a hand in their torment" — the Church as an arm of reaction, not the priesthood as such.
 

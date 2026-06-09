@@ -26,6 +26,10 @@ The whole memoir rests on a grievance it expects the reader to share: that after
 
 di Rudio's war begins here, as a cadet who cannot fight yet.
 
+<img src="images/five_days_milan_1848.jpg" alt="The Five Days of Milan, 1848" width="460">
+
+*The Five Days of Milan, March 1848 — "Episode of the Five Days," painting by Baldassare Verazzi (before 1886); a depiction of the event, not a contemporary sketch. Wikimedia Commons; public domain.*
+
 **In the book.** He is a student at the San Luca military academy in Milan when the city rises on 18 March 1848. He describes a spontaneous insurrection — "no plan long prepared, no understanding among the citizens" — touched off by news of Vienna's upheaval and the fall of Metternich; a city of "a hundred and sixty thousand" turned into "one terrible unity"; more than a thousand barricades thrown up overnight from paving stones, furniture, and mattresses; women and children carrying powder and hurling roof tiles. Inside the academy the cadets are first told the rising is the work of "a handful of brigands," then fall silent as the truth arrives. On the fourth day the garrisons within the Naviglio surrender and Radetzky is forced into a "dissembled but precipitous" retreat; a committee of citizens comes to the college to send the Milanese cadets home. di Rudio's account dwells, in his partisan key, on Austrian atrocities during the withdrawal. *(P1 Ch. 2, pp. 15–23; the retreat atrocities are detailed in P1 Ch. 3, pp. 23–26)*
 
 > **Historical note** — The Five Days of Milan (18–22 March 1848) drove Marshal Radetzky's Austrians from the city; over 400 Milanese were killed and some 600 wounded. On the evening of 22 March Radetzky withdrew eastward to the "Quadrilateral" fortresses (Verona, Legnago, Mantua, Peschiera). The next day, 23 March, Charles Albert of Sardinia-Piedmont declared war on Austria, opening the First Italian War of Independence — which, after Austrian victories at Custoza and Novara, ended within a year in the restoration of Lombardy–Venetia to Austria. *(Source: Wikipedia, "Five Days of Milan"; "First Italian War of Independence".)*
@@ -37,6 +41,10 @@ di Rudio's war begins here, as a cadet who cannot fight yet.
 ## 3. The Roman Republic and Its Siege (1849)
 
 The first defeat that the book treats as a victory of spirit — and di Rudio's baptism in battle.
+
+<img src="images/siege_rome_1849.jpg" alt="The attack on Villa Pamphili, 3 June 1849" width="460">
+
+*The attack on the Villa Pamphili during the siege of Rome, 3 June 1849 — drawing by Auguste Raffet; a contemporary depiction. Wikimedia Commons; public domain.*
 
 **In the book.** After the collapse of 1848 in the north, di Rudio reaches Rome with Garibaldi's Legion. He sees the French under General Oudinot repulsed at the walls on 30 April 1849, and claims the republicans could have driven them into the sea had Mazzini not "blunted our élan" for diplomatic reasons. He fights at Palestrina against the Neapolitan "Re Bomba" (9 May) and at Velletri, where his band of "beardless youths" rescues a fallen Garibaldi and earns the famous "fatherly cheek-pinch." The set piece is 3 June 1849: Oudinot, "adding treachery to treachery," breaks the armistice and seizes the Villa Pamfili and the Villa Corsini — "the key to Porta San Pancrazio." The chapter renders the day-long, doomed assaults on the Corsini in near-liturgical terms: Manara's Bersaglieri cut down on the slope, the Dandolo brothers, the heroic charge and death of Angelo Masina, the wounding of the poet Goffredo Mameli. In a personal interlude di Rudio captures a French officer hiding in a privy and, at the Ponte San Sisto, physically shields him from National Guardsmen who mean to shoot him and throw him in the river — "I will not permit the Italian name to be dishonoured by acts of cowardice." *(P1 Ch. 6, pp. 34–39; see also P1 Ch. 4, pp. 26–31, and P1 Ch. 7, pp. 39–43)*
 
@@ -74,6 +82,10 @@ The long middle of Part One: the underground years that made di Rudio a professi
 
 The event the book exists to re-litigate: the bombing that di Rudio helped carry out, and for which he was nearly executed.
 
+<img src="images/orsini_attentat_1858.jpg" alt="The Orsini bombing outside the Paris Opéra, 14 January 1858" width="480">
+
+*The bombs thrown at Napoleon III's carriage outside the Salle Le Peletier, 14 January 1858 — drawing by Godefroy Durand, made the very evening of the attack. Bibliothèque-musée de l'Opéra (via Wikimedia Commons); public domain. A contemporary depiction.*
+
 **In the book.** In September 1857, in Nottingham, di Rudio aids a passing Italian exile who mentions him to Felice Orsini at Birmingham; Orsini — "the very man I am looking for!" — summons di Rudio to London by letter and revives a plan to kill Napoleon III. Orsini lays out a sweeping political rationale (a blow in Paris to topple the Empire, free France, and unbar Italy), insists the conspirators not know one another, and routes the operation through the London-based physician Simon Bernard. di Rudio crosses to Paris on a Portuguese passport as "Giovanni da Sylva"; at Orsini's lodgings he meets the servant Antonio Gomez (whom he at first takes for the Englishman "Allsop") and the Tuscan Giuseppe Pieri. The book is careful with the mechanics of the fulminate: di Rudio spreads the damp explosive on a newspaper while **Orsini** runs his fingertips over it to judge its moisture and takes the dangerous drying upon himself. On the evening of 14 January 1858, outside the Opéra, the bombs are thrown — Gomez's first, prematurely, then di Rudio's. *(P2 Ch. 5–10, pp. 144–165)*
 
 > **Historical note** — On 14 January 1858 three bombs were thrown at Napoleon III's carriage outside the Salle Le Peletier; the Emperor and Empress were unhurt, but about eight people were killed and some 150 wounded. Orsini and Pieri were guillotined on 13 March 1858. The attack's longer consequence was diplomatic: though historians doubt Orsini's appeal swayed Napoleon directly, the Emperor met Cavour secretly at Plombières on 21 July 1858 and pledged French arms against Austria — the bargain that produced the Second War of Italian Independence in 1859. *(Sources: Wikipedia, "Orsini affair"; Britannica, "Felice Orsini".)*
@@ -85,6 +97,10 @@ The event the book exists to re-litigate: the bombing that di Rudio helped carry
 ## 7. The French Penal Colony of Guiana (1858–1859)
 
 The book's descent into hell — and the stage for di Rudio's escape.
+
+<img src="images/iles_du_salut.jpg" alt="The Îles du Salut, French Guiana" width="480">
+
+*The Îles du Salut — the French Guiana penal-colony archipelago — seen from the open sea. Wood engraving after Édouard Riou, 1866 (Le Tour du monde). Wikimedia Commons; public domain.*
 
 **In the book.** Spared the guillotine, di Rudio is shipped to French Guiana aboard the convict transport (the *Durance*), put ashore by way of the Île Royale du Salut, and landed on 11 December 1858 at the Montagne d'Argent, a former plantation turned penal station near the Brazilian frontier. He describes forced labour in the forest, a commandant who promises him he will "leave his skin" there, and his own resolve to escape: with eight accomplices he secretly fells and hollows a great tree into a canoe. Then yellow fever sweeps the colony. di Rudio buries the dead "one by one," his eight fellow escape-plotters among them; of "more than six hundred souls" only sixty-three survive, and the survivors — di Rudio one of only three wholly untouched by the fever — are evacuated to the Île du Salut. There he plans a second, successful escape: seizing a fishing boat and scuttling the pursuit craft. *(P2 Ch. 21–22, pp. 212–222; the escape, P2 Ch. 25–27, pp. 228–240)*
 
@@ -98,6 +114,10 @@ The book's descent into hell — and the stage for di Rudio's escape.
 
 The making of Italy, watched bitterly from exile by a republican who thinks it was made the wrong way.
 
+<img src="images/thousand_marsala_1860.jpg" alt="Garibaldi's Thousand landing at Marsala, 1860" width="480">
+
+*Garibaldi's Thousand landing at Marsala, May 1860 — a contemporary eyewitness drawing. Wikimedia Commons; public domain.*
+
 **In the book.** Returned to London, di Rudio follows unification through the English press and judges it by Mazzinian lights. He condemns the 1859 alliance of Piedmont and Napoleon III, the "treacherous peace of Villafranca" that left Venetia to Austria, and above all the cession of Nice and Savoy — "the full price paid for a service only partially rendered." He hails Garibaldi's landing at Marsala and the victory of Calatafimi, but insists the Expedition of the Thousand was *organised* by Mazzini, Rosalino Pilo (who died in it), Agostino Bertani, and Nino Bixio, the glory of execution falling to Garibaldi. He notes, with sardonic relish, that Francesco Crispi contributed "a conspicuous supply — of Orsini bombs." Throughout, his target is the "practical" monarchy: Cavour the convert to revolution-from-above, Vittorio Emanuele the "vassal of the Empire." *(P2 Ch. 31, pp. 253–258)*
 
 > **Historical note** — At Plombières (21 July 1858) Napoleon III and Cavour secretly agreed that France would help Piedmont expel Austria from northern Italy in exchange for Nice and Savoy. The Second War of Independence (1859) followed; Napoleon's separate armistice at Villafranca left Venetia with Austria. By the Treaty of Turin (24 March 1860) Sardinia ceded Nice and Savoy to France. Garibaldi's Expedition of the Thousand (sailed from Quarto, landed at Marsala, May 1860) toppled the Kingdom of the Two Sicilies, and the Kingdom of Italy was proclaimed on 17 March 1861 — still without Rome or Venetia. *(Sources: Wikipedia, "Treaty of Turin (1860)"; "Expedition of the Thousand"; "Unification of Italy".)*
@@ -109,6 +129,10 @@ The making of Italy, watched bitterly from exile by a republican who thinks it w
 ## 9. Aspromonte (1862)
 
 The wound that rouses di Rudio from his post-prison "torpor" — and the book's proof that the monarchy would shoot its own liberator.
+
+<img src="images/aspromonte_1862.jpg" alt="Garibaldi wounded at Aspromonte, 1862" width="460">
+
+*Garibaldi wounded at Aspromonte, August 1862 — painting by Gerolamo Induno, c. 1863; a contemporary depiction. Museo Civico Revoltella, Trieste (via Wikimedia Commons); public domain.*
 
 **In the book.** Garibaldi, having taken up the cry "Roma o morte" (Rome or death), marches up through Calabria toward the capital; at Paris the answer is "You shall have death, not Rome," and Napoleon imposes on Vittorio Emanuele "the part of the modern Cain." When the royal Bersaglieri meet the Garibaldian legion on 28 August 1862 (the book's date), Garibaldi orders his men not to fire; he is shot in the ankle and falls "at the foot of a tree which resurgent Italians ought to regard as sacred." The book frames the affair as a near-assassination of "the first, the most beloved among the fighters for the cause of Italy," foiled only by a sergeant who deliberately fired wide. *(P2 Ch. 31, pp. 253–258; its aftermath in London, P2 Ch. 33, pp. 264–268)*
 

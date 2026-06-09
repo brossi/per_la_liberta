@@ -93,6 +93,10 @@ Chapter references use the form *P1 Ch. 2 (pp. 15–23)*; pages are the source s
 
 ## After the book (1864–1913)
 
+<img src="images/derudio_portrait.jpg" alt="Charles DeRudio of the 7th U.S. Cavalry" width="300">
+
+*Carlo di Rudio's American afterlife: "Charles DeRudio," officer of the U.S. 7th Cavalry and a survivor of the Little Bighorn — photograph by D. F. Barry, c. 1870s. Wikimedia Commons (Denver Public Library); public domain.*
+
 > **Historical note** — The memoir closes at di Rudio's emigration; his later life is documented outside it:
 > - **1864** — Enlists as a private in the **79th New York Infantry**, serving at the Siege of Petersburg (25 August – 17 October 1864); on **11 November 1864** he is commissioned second lieutenant in the **2nd U.S. Colored Infantry**.
 > - **14 July 1869** — Commissioned a second lieutenant in the **U.S. 7th Cavalry**.

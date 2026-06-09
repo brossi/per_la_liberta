@@ -14,6 +14,10 @@ The journalist who found di Rudio in his California exile and set down his story
 
 ### Count Carlo di Rudio — the protagonist *(throughout; esp. Part 1, Ch. 1–2)*
 
+<img src="images/derudio_portrait.jpg" alt="Charles DeRudio of the 7th U.S. Cavalry" width="300">
+
+*Carlo di Rudio in later life as the U.S. cavalry officer "Charles DeRudio" — photograph by D. F. Barry, c. 1870s. Wikimedia Commons (Denver Public Library); public domain. The only surviving likeness of the book's subject postdates its 1864 close.*
+
 Born at Belluno on 26 August 1832, son of Count Ercole di Rudio and Countess Elisabetta de Domini, and nicknamed in boyhood *"Moretto"* — "the dark one," for his complexion — a name his fellow conspirators still used in Paris in 1858. The book frames him at the close of his life: a bronze-featured old man in a small wooden house near Los Angeles, his study hung with portraits of Mazzini and Calvi. Between those two images — the boy soldier and the exiled patriarch — runs the whole arc: Roman Republic, decades of Mazzinian conspiracy, the Orsini plot, the scaffold, the penal colony, and permanent exile. He is drawn as proud, combative, unrepentantly republican and anticlerical, and incapable of the "practical" compromise he despises in others.
 
 > **Historical note** — In American life he was "Charles DeRudio." His later career — the 79th New York Infantry, the U.S. 7th Cavalry, surviving the Battle of the Little Bighorn (1876), and his death at Pasadena in 1910 — lies beyond the book's 1864 close and is set out in the [Timeline](timeline.md). *(Source: Wikipedia, "Charles DeRudio".)*
@@ -32,6 +36,10 @@ Named only at di Rudio's birth and otherwise simply "Mamma," she anchors the boo
 
 ### Giuseppe Mazzini — the Maestro *(Part 1, Ch. 15; Part 2, Ch. 33)*
 
+<img src="images/mazzini_portrait.jpg" alt="Giuseppe Mazzini" width="300">
+
+*Giuseppe Mazzini — photograph, c. 1860. Wikimedia Commons; public domain.*
+
 The presiding spirit of the book and of di Rudio's life. At their first meeting in 1853, in a white villa above Lugano, di Rudio sees a man *"slight, dressed in black, with a black kerchief at his throat… a high, smooth brow; pale cheeks,"* and is struck that, where others are told to "write as you speak," *"Giuseppe Mazzini, in grave moments, spoke instead as he wrote."* The book reveres him as the prophet who alone foresaw that martyrdom would redeem Italy, and who *"eluded for half a century the combined police forces of all Europe."* At their last meeting, a gravely ill Mazzini sends di Rudio to the American war and writes him a commendation he kept for life. Notably, di Rudio — a militant atheist — reveres the man while openly rejecting his religiosity, judging Mazzini's belief in God *"a singular aberration"* that "served as a picklock in the hands of his most bitter enemies." The portrait is thus both worship and argument.
 
 > **Historical note** — Giuseppe Mazzini (Genoa, 22 June 1805 – Pisa, 10 March 1872) founded the revolutionary society *Giovine Italia* (Young Italy) in 1831, dedicated to a unified Italian republic. *(Sources: Britannica; Wikipedia, "Giuseppe Mazzini".)*
@@ -43,6 +51,10 @@ The officer who first commissioned di Rudio as a secret agent and whose watchwor
 > **Historical note** — Pietro Fortunato Calvi was hanged at Mantua on 4 July 1855, the last of the Belfiore martyrs executed by Austria. *(Sources: Wikipedia, "Belfiore martyrs"; ExecutedToday.)*
 
 ### Giuseppe Garibaldi — the soldier *(Part 1, Ch. 6–7; Part 2, Ch. 31)*
+
+<img src="images/garibaldi_portrait.jpg" alt="Giuseppe Garibaldi" width="300">
+
+*Giuseppe Garibaldi — photograph by Fratelli Alinari, c. 1866. Wikimedia Commons; public domain.*
 
 Present at the book's two poles. In 1849 di Rudio fights under him in the defense of Rome — at Velletri his band of youths rescues Garibaldi, earning *"a fatherly cheek-pinch"* — and the book treats him as the embodiment of selfless valor. Years later his wounding at Aspromonte is the betrayal that rouses di Rudio from his torpor; the book calls him *"the leader of the Thousand"* and renders his fall in near-sacred terms.
 
@@ -57,6 +69,10 @@ di Rudio's old teacher, a refugee priest who reconnects him with Calvi and the c
 ## The Conspiracy of 1858
 
 ### Felice Orsini — the chief *(Part 2, Ch. 5–10, 16)*
+
+<img src="images/orsini_portrait.jpg" alt="Felice Orsini" width="300">
+
+*Felice Orsini — period engraved portrait, 19th c. Wikimedia Commons; public domain.*
 
 The book's most searching portrait, and an ambivalent one. Orsini recruits di Rudio for the attempt on Napoleon III, and di Rudio renders him as a man *"capable, in the highest degree, of generous impulses,"* yet ruined as a conspirator by *"an overflowing imagination"* and a fatal carelessness — he preserved the very correspondence he urged others to burn, bought a general's uniform before one venture, and rode conspicuously through Paris before the attempt, so that *"the essential gifts of the conspirator were conspicuous in him by their complete absence."* And yet di Rudio insists on his greatness: the lonely courage of drying mercury fulminate by the fire *"with a watch in one hand and a thermometer in the other,"* and above all his refusal to betray the conspiracy's network to buy his own life — *"an austere greatness, worthy of an ancient Roman."*
 
@@ -92,11 +108,19 @@ In the book, the inventor of the fulminate "hedgehog" bombs (named as Baron Egas
 
 ### Napoleon III (Luigi Napoleone) — the usurper *(Part 1, Ch. 5, 23)*
 
+<img src="images/napoleon_iii_portrait.jpg" alt="Napoleon III" width="300">
+
+*Napoleon III, Emperor of the French — photograph by Pierre-Louis Pierson, 1869. Library of Congress (via Wikimedia Commons); public domain.*
+
 The book's chief villain, and the most polemical of its portraits. di Rudio calls him *"a man fatal to Liberty,"* tracing a career of treachery from the suspicious early death of his elder brother, through the failed Strasbourg and Boulogne attempts and the prison of Ham, to the bargain with Princess Belgioioso (Italian liberty in exchange for liberal support) that he then betrayed — sending Oudinot's army to crush the Roman Republic and restore the Pope. This is advocacy, and the book half-admits it: even di Rudio reports that *"the majority of historians… assert simply that Napoleone Luigi died of measles."*
 
 > **Historical note** — Louis-Napoléon Bonaparte was elected President of the French Republic on 10 December 1848, made himself Emperor as Napoleon III on 2 December 1852, and was deposed on 4 September 1870 after the Franco-Prussian War, dying in England in 1873. The story that he murdered his brother is not supported by the historical record. *(Sources: Britannica; Wikipedia, "Napoleon III".)*
 
 ### Empress Eugénie *(Part 2, Ch. 19–20)*
+
+<img src="images/eugenie_portrait.jpg" alt="Empress Eugénie" width="300">
+
+*Empress Eugénie de Montijo — photograph by Pierre Petit. Musée Carnavalet / Paris Musées (via Wikimedia Commons); CC0 (public domain).*
 
 Appears at the book's hinge: a petition circulated by the London *Times* and pressed on the Empress through the British ambassador — with Queen Victoria's authorization — secures her intercession, and her grace, granted (in the book's telling) on the imperial prince's second birthday, commutes di Rudio's death sentence at the very foot of the scaffold.
 
