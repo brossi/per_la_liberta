@@ -10,7 +10,7 @@ In all fairness, both Fumagalli and I came to know of Mazzini's direct participa
 
 Great is my veneration for the memory of Felice Orsini; yet the motive behind his virulent denunciation of this and other Mazzinian ventures has never been altogether clear to me. Had he not implicitly approved them by taking part in them, and at times accepting a leading rôle? And in approving them, had he not assumed full responsibility for them? Every word of censure that Orsini levels at the Master seems to me censure that falls back upon his own head. And never, as when I read his autobiography, did I have occasion to suspect that the flashes of that ardent spirit were not always worthy of the hero.
 
-I shall add, in passing, that the very phrases of recognition which the fierce Francesco recalls and holds up to ridicule are a variant of those we actually employed, according to the instructions we had received — whether he allowed himself to be carried away by the fervour of polemic, or whether his memory failed him.
+I shall add, in passing, that the very phrases of recognition which the fierce Francesco recalls and holds up to ridicule are a variant of those we actually employed, according to the instructions we had received — whether he allowed himself to be carried away by the fervor of polemic, or whether his memory failed him.
 
 The man posted on the Via Giulia did not say to us — as we walked wearing a flower in our hats — "Hola, good fellows, where are you bound?" He asked whether we were Italians. And our reply was not, as Orsini claims, "We are going to Signor Francesco, or to Signor Giuseppe," but simply: "Conti." And when the other man shook our hands, I added, still according to the instructions received: "Where is Tito Gelsi?" *(1)*
 
@@ -30,9 +30,9 @@ With what intensity must the forerunners of the third Italy have kept their eyes
 
 One evening Fumagalli appeared before me brandishing a letter in the air. It was from Tito Gelsi, announcing that his arrival was imminent — and he fell upon us at that very moment as we were reading his brief lines. In our conversation, Felice Orsini mentioned no names; confining himself, in what concerned his plans, to assuring us that he could dispose of two thousand rifles. He gave us a letter of introduction to an innkeeper at Maloggia and, assuring us that we should shortly receive his instructions, took his leave.
 
-The innkeeper at Maloggia was not privy to the secret affairs, yet had some inkling of them and looked upon them with favour. He informed us that he was expecting a crate of "hardware" from Saint-Étienne — it arrived, and with it, the instructions from Tito Gelsi. These were the arms that were to serve for the redemption of the Fatherland; Orsini directed us to a spot not far from the Muretto glacier where we were to put them in order. The innkeeper quietly furnished the means of transport.
+The innkeeper at Maloggia was not privy to the secret affairs, yet had some inkling of them and looked upon them with favor. He informed us that he was expecting a crate of "hardware" from Saint-Étienne — it arrived, and with it, the instructions from Tito Gelsi. These were the arms that were to serve for the redemption of the Fatherland; Orsini directed us to a spot not far from the Muretto glacier where we were to put them in order. The innkeeper quietly furnished the means of transport.
 
-The chosen place was favourable. A crag sheer on three sides; an abandoned shepherd's hut hidden among thickets and chestnut trees. From up there we could follow every winding of the path that led to it. No danger of surprise.
+The chosen place was favorable. A crag sheer on three sides; an abandoned shepherd's hut hidden among thickets and chestnut trees. From up there we could follow every winding of the path that led to it. No danger of surprise.
 
 It was the middle of August, 1854, and we made the most of the long days to press on with our work briskly. We rose from our pallet of grass at first light and, after contemplating the dawn, set ourselves to the task. Having assembled a rifle, one would level it, test the action with a silent motion, then stand it along the wall interwoven with fronds. We leant them there with a kind of tenderness, as though they were delicate trinkets.
 
@@ -44,7 +44,7 @@ I had gone out on lookout and had barely shaded my eyes with my hand when, in th
 
 I had a great deal of trouble persuading Fumagalli that we must seek safety by making for the heights. He wanted to stand his ground and "sell his skin dearly." We crawled through the undergrowth and gained the mountain.
 
-They arrived, surrounded the hut, and called upon us to surrender, with rifles levelled. Half an hour later they were departing in small detachments, carrying off our rifles and our hopes.
+They arrived, surrounded the hut, and called upon us to surrender, with rifles leveled. Half an hour later they were departing in small detachments, carrying off our rifles and our hopes.
 
 We came down to Maloggia after nightfall, and the innkeeper, on seeing us, shrugged his shoulders. He advised us to remain quietly out of sight at his inn until he had sniffed the wind well enough.
 

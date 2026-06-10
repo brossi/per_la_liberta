@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Reader's Companion — Reader's Companion</title>
+<link rel="stylesheet" href="../static/bilingual.css?v=1a2d8d5d">
+</head>
+<body class="companion">
+
+<!-- Restore the viewer's last configuration before first paint (avoids flash) -->
+<script>
+(function () { try {
+  var b = document.body, d = document.documentElement;
+  d.setAttribute('data-theme', localStorage.getItem('theme') || 'mid');
+  var fs = localStorage.getItem('fontSize');
+  if (fs) d.style.fontSize = parseInt(fs, 10) + 'px';
+} catch (e) {} })();
+</script>
+
+<!-- Top-right controls (font size + color theme, shared with the edition) -->
+<div class="top-right-controls">
+  <div class="font-size-controls">
+    <button id="font-smaller" aria-label="Decrease font size">&minus;</button>
+    <button id="font-larger" aria-label="Increase font size">&plus;</button>
+  </div>
+  <div class="theme-controls">
+    <button id="theme-trigger" aria-label="Colour theme" title="Colour theme" aria-haspopup="true" aria-expanded="false">&#9681;</button>
+    <div id="theme-menu" class="theme-menu" role="menu" aria-label="Colour theme">
+      <div class="group-label">Light</div>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="original"><span class="theme-swatch sw-original">A</span>Original</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="warm"><span class="theme-swatch sw-warm">A</span>Warm tan</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="cream"><span class="theme-swatch sw-cream">A</span>Lighter cream</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="mid"><span class="theme-swatch sw-mid">A</span>Cream (default)</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="ivory"><span class="theme-swatch sw-ivory">A</span>Calm ivory</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="bright"><span class="theme-swatch sw-bright">A</span>Bright cream</button>
+      <div class="group-label">Dark</div>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="cocoa"><span class="theme-swatch sw-cocoa">A</span>Warm cocoa</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="ash"><span class="theme-swatch sw-ash">A</span>Neutral ash</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="slate"><span class="theme-swatch sw-slate">A</span>Cool slate</button>
+    </div>
+  </div>
+</div>
+
+<header class="companion-topbar">
+  <a class="companion-back" href="../index.html">&larr; Back to the edition</a>
+  <nav class="companion-nav">
+      <a href="index.html" class="active">Overview</a>
+      <a href="summary.html">Summary</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="personae.html">Personae</a>
+      <a href="events.html">Events</a>
+      <a href="themes.html">Themes</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="follow-up.html">Research leads</a>
+  </nav>
+</header>
+
+<main class="companion-page">
+<h1 id="a-readers-companion">A Reader's Companion</h1>
+<p>to <strong><em>Per la libertà!</em></strong> — <a href="personae.html#cesare-crespi--the-author-preface-part-1-ch-1" class="entity-link" title="See Cesare Crespi in the Personae">Cesare Crespi</a>'s 1913 memoir of <a href="personae.html#count-carlo-di-rudio--the-protagonist-throughout-esp-part-1-ch-12" class="entity-link" title="See Count Carlo di Rudio in the Personae">Count Carlo di Rudio</a>, conspirator with <a href="personae.html#felice-orsini--the-chief-part-2-ch-510-16" class="entity-link" title="See Felice Orsini in the Personae">Felice Orsini</a>.</p>
+<p>An aged Risorgimento conspirator, exiled to America, recounts his life — fighting for the 1849 Roman Republic, the 1858 Orsini plot to assassinate <a href="personae.html#napoleon-iii-luigi-napoleone--the-usurper-part-1-ch-5-23" class="entity-link" title="See Napoleon III in the Personae">Napoleon III</a>, a death sentence commuted on the scaffold, escape from a Guiana penal colony, and a homeland never seen again — as testimony gathered by a journalist in his California exile and published in 1913.</p>
+<p>This companion gathers background and reference material for the English translation of the memoir — guides to the people, events, chronology, and ideas the book assumes its reader already knows. There is no required order; start wherever your question is.</p>
+<nav class="companion-hub" aria-label="Companion sections">
+<a class="hub-card hub-card-wide" href="summary.html"><span class="hub-label">Layered Summary</span><span class="hub-blurb">The book at every depth — from a short synopsis to a chapter-by-chapter outline of all 58 chapters.</span><span class="hub-badge">Start here &#9656;</span></a>
+<a class="hub-card" href="timeline.html"><span class="hub-label">Timeline</span><span class="hub-blurb">A dated spine of di Rudio's life, cross-referenced to chapters and source pages.</span></a>
+<a class="hub-card" href="personae.html"><span class="hub-label">Dramatis Personae</span><span class="hub-blurb">Who the key figures were — in the book, and in the historical record.</span></a>
+<a class="hub-card" href="events.html"><span class="hub-label">Event Context</span><span class="hub-blurb">The historical episodes the memoir dramatizes, from the Five Days of Milan to Aspromonte.</span></a>
+<a class="hub-card" href="themes.html"><span class="hub-label">Themes</span><span class="hub-blurb">Short interpretive essays — testimony as method, republic versus monarchy, exile, martyrdom, anticlericalism.</span></a>
+<a class="hub-card" href="glossary.html"><span class="hub-label">Glossary</span><span class="hub-blurb">Quick one-line entries for the places, organizations, and terms the book names in passing.</span></a>
+<a class="hub-card" href="sources/index.html"><span class="hub-label">Primary Sources</span><span class="hub-blurb">Transcribed documents behind the book, beginning with di Rudio's own 1908 <em>San Francisco Call</em> interview.</span></a>
+</nav>
+<h2 id="how-to-read-this-companion">How to read this companion</h2>
+<p><em>Per la libertà!</em> is not neutral history but a <strong>partisan memoir</strong> — di Rudio was a lifelong Mazzinian republican, fiercely anticlerical and hostile to the House of Savoy, and Crespi reproduces his voice deliberately. Its heroes (<a href="personae.html#giuseppe-mazzini--the-maestro-part-1-ch-15-part-2-ch-33" class="entity-link" title="See Giuseppe Mazzini in the Personae">Mazzini</a>, <a href="personae.html#pietro-fortunato-calvi--the-mentor-and-martyr-part-1-ch-11-15-22" class="entity-link" title="See Pietro Fortunato Calvi in the Personae">Calvi</a>, Orsini) and villains (Napoleon III, <a href="https://en.wikipedia.org/wiki/Pope_Pius_IX" class="entity-link" title="Pope Pius IX — Wikipedia" target="_blank" rel="noopener">Pius IX</a>, the &quot;practical&quot; monarchy) are <em>the book's</em>, and these pages present them as the memoir sees them, citable to the chapters where they appear.</p>
+<p>Where the companion adds <strong>external context</strong> — a date, an outcome, or a point where the historical record differs from di Rudio's account — it is set off in a marked <strong>Historical note</strong> callout; the <a href="events.html">Event Context</a> pages add a second voice, <strong>Scholarship</strong>, drawing on the standard academic literature. Both keep the memoir's first-person telling visibly distinct from the historical record. It is also where the companion can say what the book itself cannot — above all, that di Rudio's story did not end where the memoir does, in 1864:</p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — The book closes with di Rudio sailing for New York in 1864 and never returning to Italy. In fact, &quot;Charles DeRudio&quot; went on to a long career as a U.S. Army officer: commissioned into the 7th Cavalry in 1869, he survived the Battle of the Little Bighorn (25–26 June 1876) under Reno and Benteen, and died at Pasadena, California, on 1 November 1910 — three years before Crespi published this book. The memoir is, in effect, posthumous testimony, exactly as Crespi foresaw: in the preface he writes, &quot;I sensed that this book would see the light when di Rudio would be no more.&quot; <em>(Source: Wikipedia, &quot;<a href="https://en.wikipedia.org/wiki/Charles_DeRudio" class="source-cite" target="_blank" rel="noopener">Charles DeRudio</a>&quot;; the preface quotation is from the book itself.)</em></p>
+</blockquote>
+
+</main>
+
+<nav class="companion-next" aria-label="Next section">
+  <a href="summary.html">Next: Summary &rarr;</a>
+</nav>
+
+<footer class="companion-footer">
+  <p>From <em>A Reader&rsquo;s Companion to Per la libert&agrave;!</em> — companion text &copy; 2026 Ben Rossi, all rights reserved. The 1913 book by Cesare Crespi is in the public domain; images are licensed separately (public domain, CC0, or CC BY-SA with attribution).</p>
+  <p class="companion-footer-links"><a href="COPYRIGHT.html">Copyright & licensing</a>
+      <a href="images/CREDITS.html">Image credits</a>
+      <a href="sources/index.html">Primary sources</a></p>
+</footer>
+
+<script>
+// Font size controls
+(() => {
+  const root = document.documentElement;
+  const STEP = 1;
+  const MIN = 10;
+  const MAX = 24;
+  let size = 16;
+  const saved = localStorage.getItem('fontSize');
+  if (saved) { size = parseInt(saved); root.style.fontSize = size + 'px'; }
+
+  document.getElementById('font-smaller').addEventListener('click', () => {
+    size = Math.max(MIN, size - STEP);
+    root.style.fontSize = size + 'px';
+    localStorage.setItem('fontSize', size);
+  });
+  document.getElementById('font-larger').addEventListener('click', () => {
+    size = Math.min(MAX, size + STEP);
+    root.style.fontSize = size + 'px';
+    localStorage.setItem('fontSize', size);
+  });
+})();
+
+// Colour theme: swatch popover writing data-theme on <html>, persisted
+(() => {
+  const root = document.documentElement;
+  const trigger = document.getElementById('theme-trigger');
+  const menu = document.getElementById('theme-menu');
+  const opts = Array.from(menu.querySelectorAll('.theme-opt'));
+  function mark(theme) {
+    opts.forEach(o => {
+      const on = o.dataset.setTheme === theme;
+      o.classList.toggle('active', on);
+      o.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+  }
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    mark(theme);
+  }
+  function open(show) {
+    menu.classList.toggle('open', show);
+    trigger.setAttribute('aria-expanded', show ? 'true' : 'false');
+  }
+  mark(root.getAttribute('data-theme') || 'mid');
+  trigger.addEventListener('click', e => { e.stopPropagation(); open(!menu.classList.contains('open')); });
+  opts.forEach(o => o.addEventListener('click', () => { apply(o.dataset.setTheme); open(false); }));
+  document.addEventListener('click', e => { if (!menu.contains(e.target) && e.target !== trigger) open(false); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { open(false); return; }
+    if (!menu.classList.contains('open')) return;
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    const cur = opts.findIndex(o => o.dataset.setTheme === (root.getAttribute('data-theme') || 'mid'));
+    const next = (cur + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length;
+    apply(opts[next].dataset.setTheme);
+    opts[next].focus();
+  });
+})();
+
+// Open the disclosure ancestors of a URL-targeted anchor (deep links into
+// a collapsed disclosure), and expand every disclosure before printing.
+(function () {
+  function openToHash() {
+    var el = null;
+    try { el = location.hash ? document.querySelector(location.hash) : null; }
+    catch (e) { return; }
+    for (var p = el; p; p = p.parentElement) {
+      if (p.tagName === 'DETAILS') p.open = true;
+    }
+    if (el) el.scrollIntoView();
+  }
+  addEventListener('hashchange', openToHash);
+  if (location.hash) addEventListener('load', openToHash);
+  addEventListener('beforeprint', function () {
+    document.querySelectorAll('details').forEach(function (d) { d.open = true; });
+  });
+})();
+</script>
+</body>
+</html>

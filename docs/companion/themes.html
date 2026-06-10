@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Themes — Reader's Companion</title>
+<link rel="stylesheet" href="../static/bilingual.css?v=1a2d8d5d">
+</head>
+<body class="companion">
+
+<!-- Restore the viewer's last configuration before first paint (avoids flash) -->
+<script>
+(function () { try {
+  var b = document.body, d = document.documentElement;
+  d.setAttribute('data-theme', localStorage.getItem('theme') || 'mid');
+  var fs = localStorage.getItem('fontSize');
+  if (fs) d.style.fontSize = parseInt(fs, 10) + 'px';
+} catch (e) {} })();
+</script>
+
+<!-- Top-right controls (font size + color theme, shared with the edition) -->
+<div class="top-right-controls">
+  <div class="font-size-controls">
+    <button id="font-smaller" aria-label="Decrease font size">&minus;</button>
+    <button id="font-larger" aria-label="Increase font size">&plus;</button>
+  </div>
+  <div class="theme-controls">
+    <button id="theme-trigger" aria-label="Colour theme" title="Colour theme" aria-haspopup="true" aria-expanded="false">&#9681;</button>
+    <div id="theme-menu" class="theme-menu" role="menu" aria-label="Colour theme">
+      <div class="group-label">Light</div>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="original"><span class="theme-swatch sw-original">A</span>Original</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="warm"><span class="theme-swatch sw-warm">A</span>Warm tan</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="cream"><span class="theme-swatch sw-cream">A</span>Lighter cream</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="mid"><span class="theme-swatch sw-mid">A</span>Cream (default)</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="ivory"><span class="theme-swatch sw-ivory">A</span>Calm ivory</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="bright"><span class="theme-swatch sw-bright">A</span>Bright cream</button>
+      <div class="group-label">Dark</div>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="cocoa"><span class="theme-swatch sw-cocoa">A</span>Warm cocoa</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="ash"><span class="theme-swatch sw-ash">A</span>Neutral ash</button>
+      <button class="theme-opt" role="menuitemradio" data-set-theme="slate"><span class="theme-swatch sw-slate">A</span>Cool slate</button>
+    </div>
+  </div>
+</div>
+
+<header class="companion-topbar">
+  <a class="companion-back" href="../index.html">&larr; Back to the edition</a>
+  <nav class="companion-nav">
+      <a href="index.html">Overview</a>
+      <a href="summary.html">Summary</a>
+      <a href="timeline.html">Timeline</a>
+      <a href="personae.html">Personae</a>
+      <a href="events.html">Events</a>
+      <a href="themes.html" class="active">Themes</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="follow-up.html">Research leads</a>
+  </nav>
+</header>
+
+<main class="companion-page">
+<h1 id="themes">Themes</h1>
+<p>Five short essays on the ideas that organize <em>Per la libertà!</em> — the convictions that turn a string of episodes into a single argument. The book is not a chronicle that happens to have opinions; it is a polemic that happens to take the form of a life. These essays read it on its own terms first, then step back.</p>
+<p>The same three voices used elsewhere in this companion apply (see <a href="index.html">the index</a>):</p>
+<ul>
+<li>Body prose reads the book as it understands itself — <a href="personae.html#count-carlo-di-rudio--the-protagonist-throughout-esp-part-1-ch-12" class="entity-link" title="See Count Carlo di Rudio in the Personae">di Rudio</a>'s partisan, Mazzinian, anticlerical, anti-Savoy account — anchored to the chapters where the ideas surface.</li>
+<li><strong>&gt; Historical note</strong> — external, independently verifiable context, checked before it is stated.</li>
+<li><strong>&gt; Scholarship</strong> — what the standard academic literature contributes; full details are in the <a href="events.html">Event Context</a> bibliography unless given here.</li>
+</ul>
+<p>Citations use the companion's form — e.g. <em><a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a> (pp. 264–268)</em> — with pages keyed to the source scan.</p>
+<hr />
+<h2 id="1-testimony-as-method--the-human-document">1. Testimony as method — the &quot;human document&quot;</h2>
+<p>The book announces its own method in its first sentence, and the method is a refusal. &quot;The present volume might make some contribution to History; but it is not history in the sense in which that word is today understood and written.&quot; <a href="personae.html#cesare-crespi--the-author-preface-part-1-ch-1" class="entity-link" title="See Cesare Crespi in the Personae">Crespi</a> disclaims &quot;the methodical concatenation of facts and the cold judgment upon men and events&quot; and offers instead something he calls a <strong>&quot;human document&quot;</strong> — a record not of what objectively happened but of &quot;the soul of the times,&quot; reached by &quot;rummaging among the passions that stirred them.&quot; <em>(Preface, pp. 7–8)</em></p>
+<img src="images/title_page_1913.jpg" alt="Title page of the 1913 first edition" width="300">
+<p><em>The first edition's title page — <em>Per la libertà! (Dalle mie conversazioni col Conte Carlo di Rudio, complice di <a href="personae.html#felice-orsini--the-chief-part-2-ch-510-16" class="entity-link" title="See Felice Orsini in the Personae">Felice Orsini</a>)</em>, Cesare Crespi, San Francisco, 1913. From the Library of Congress copy (in-repo source scan); public domain.</em></p>
+<p>This is a deliberate choice of genre, and everything follows from it. Because the value sought is the witness's inner truth rather than the historian's verified one, fidelity means fidelity <em>to the witness</em>. Crespi says he could have &quot;softened certain jarring notes&quot; and &quot;erased certain heterogeneous imprints&quot; — the borrowed cadences of the authors di Rudio loved — and chose not to: &quot;To adulterate the word issued from lips silenced for ever... for a simple mortal it is cowardice.&quot; <em>(Preface, pp. 7–8)</em> The partisanship the reader meets on every page is therefore not a flaw the book failed to correct; it is the thing the book exists to preserve.</p>
+<p>The guarantee of authenticity is physical, almost legal. Crespi did not merely take notes: &quot;not only did I procure the approval, in writing, of every single chapter, but I also requested and obtained that every page liable to presumable controversy should be authenticated by di Rudio with his own signature.&quot; <em>(Preface, pp. 7–8)</em> The memoir is built like a deposition — a chain of countersigned testimony — precisely because its maker foresaw that it would be challenged, and that its subject would not be alive to defend it: &quot;I sensed that this book would see the light when di Rudio would be no more.&quot;</p>
+<p>The opening chapter then dramatizes the method before the history begins. Crespi arrives at the little wooden house in Los Angeles as &quot;a reporter wizened in the trade,&quot; and the whole encounter is staged as an act of reading a man from his surroundings: the freethinking library, &quot;works stamped with the spirit of freedom of thought,&quot; and on the walls the two presiding portraits — <a href="personae.html#giuseppe-mazzini--the-maestro-part-1-ch-15-part-2-ch-33" class="entity-link" title="See Giuseppe Mazzini in the Personae">Giuseppe Mazzini</a> and the martyr <a href="personae.html#pietro-fortunato-calvi--the-mentor-and-martyr-part-1-ch-11-15-22" class="entity-link" title="See Pietro Fortunato Calvi in the Personae">Fortunato Calvi</a> — prompting the line that is the method in miniature: <strong>&quot;The house reveals the man!&quot;</strong> <em>(<a href="../index.html#ch-parte-prima-capitolo-primo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 1</a>, pp. 9–14)</em> The title's full claim — <em>Dalle mie conversazioni col conte Carlo di Rudio</em>, &quot;from my conversations with&quot; — is the warrant for everything after: this is oral testimony, transcribed and vouched for, not research.</p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — Crespi's foresight was exact. The book appeared in 1913; di Rudio — &quot;Charles DeRudio&quot; — had died at Pasadena, California, on 1 November 1910. The memoir is, by design, posthumous testimony. One seam of the later life it otherwise omits shows through in the very first chapter, where di Rudio's daughter speaks of West Point and of her father's service in the U.S. 7th Cavalry — the American afterlife the narrative proper never reaches, since it closes in 1864. That afterlife is set out in the <a href="timeline.html">Timeline</a>. <em>(Source: Wikipedia, &quot;<a href="https://en.wikipedia.org/wiki/Charles_DeRudio" class="source-cite" target="_blank" rel="noopener">Charles DeRudio.</a>&quot;)</em></p>
+</blockquote>
+<p><strong>Genesis and reception.</strong> Both the making of the book and its hostile relation to official history are documented in the San Francisco Italian-American press. Five years before publication, the <em>San Francisco Call</em> reported (30 September 1908, under the headline &quot;De Rudio Served with Gen. <a href="https://en.wikipedia.org/wiki/George_Armstrong_Custer" class="entity-link" title="George Armstrong Custer — Wikipedia" target="_blank" rel="noopener">Custer</a>&quot;) that Cesare Crespi — &quot;a well known Italian journalist, who lives at 961 Vallejo street&quot; — was &quot;now engaged in preparing the memoirs of De Rudio and as a result of their frequent conferences is satisfied that the veteran speaks the truth.&quot; The notice has di Rudio's credibility vouched for by the editors Ettore Patrizi (<em>L'Italia</em>) and Carlo del Pino (<em>La Voce del Popolo</em>) after &quot;some quarters&quot; had doubted his memory — specifically his implicating <a href="https://en.wikipedia.org/wiki/Francesco_Crispi" class="entity-link" title="Francesco Crispi — Wikipedia" target="_blank" rel="noopener">Francesco Crispi</a> in the 1858 plot, the claim the companion notes at <a href="events.html#8-unification--from-plombi%C3%A8res-to-the-kingdom-of-italy-18581861">Event Context §8</a> — and reports that di Rudio &quot;took part in the engagements with the Indians… his most important expedition was with Custer, where he was one of the few survivors&quot;: the American afterlife the memoir itself never reaches (see the <a href="timeline.html">Timeline</a>). It confirms in passing what this companion reconstructs of Crespi — the Vallejo Street address, the free-thought milieu, and the conference-and-countersign method that makes the book a &quot;human document.&quot;</p>
+<img src="images/sfcall_derudio_1908.jpg" alt="San Francisco Call article on De Rudio, 30 September 1908" width="460">
+<p><em>&quot;De Rudio Served with Gen. Custer,&quot; San Francisco Call, 30 September 1908, p. 10 — the memoir in preparation, five years before publication. Public domain.</em></p>
+<p>When the finished book appeared in 1913, the colony's daily <em>L'Italia</em>, which by its own account had &quot;favorably concerned itself&quot; with the memoir &quot;many times,&quot; printed an open letter from a <strong>Dr. S. Schirò</strong> who read <em>Per la libertà!</em> exactly as it asks to be read:</p>
+<blockquote>
+<p>&quot;<em>Per la Libertà</em> is a truly fitting title, not only because it sums up the ideal of country for which Count di Rudio lived and fought, but — and this matters more to us — because it is happily interwoven with civic lessons and positive philosophical truths, veiled by no religious prejudice nor sectarian spirit. … The historical data you have masterfully reproduced, and the historical critique of the men of government of that time, do not square with the orthodox, official history of the Italian Risorgimento. Still less will your book please the opportunist patrioteers and the jingoists of today's nationalism. … Your book has, above all, a civic mission: to educate the character of man — today enfeebled by the most vulgar utilitarianism — toward better ideals and manly action, drawing him from the pernicious influence of prejudice, tradition, and falsehood.&quot;</p>
+</blockquote>
+<p>Schirò would set the book &quot;in the libraries of Italian Free Thinkers&quot; and &quot;in the hands of the pupils of the Modern School&quot; — the anticlerical, rationalist current (<a href="https://en.wikipedia.org/wiki/Francisco_Ferrer" class="entity-link" title="Francisco Ferrer — Wikipedia" target="_blank" rel="noopener">Francisco Ferrer</a>'s <em>Escuela Moderna</em>) in which Crespi himself moved. The letter is a small piece of evidence for this companion's reading: a reader in 1913 already received the book as a partisan, anticlerical counter-history, deliberately out of step with the official Risorgimento — not as neutral chronicle. <em>(Source: &quot;'Per la Libertà' di Cesare Crespi — Una lusinghiera lettera del Dr. S. Schirò,&quot; L'Italia (San Francisco), 17 June 1913, p. 4; the full Italian is reproduced in the clipping. Public domain.)</em></p>
+<img src="images/litalia_review_1913.jpg" alt="L'Italia review of Per la libertà!, 17 June 1913" width="300">
+<p><em>Dr. S. Schirò's open letter on &quot;Per la libertà!&quot;, from L'Italia (San Francisco), 17 June 1913, p. 4. Public domain (1913).</em></p>
+<hr />
+<h2 id="2-republic-against-monarchy">2. Republic against monarchy</h2>
+<p>The book's deepest quarrel is not with Austria or with France but with the <em>kind</em> of Italy that won. di Rudio is a Mazzinian republican, and to him unification under the House of Savoy was not a triumph imperfectly achieved but a cause achieved by the wrong hands and for the wrong reasons. The argument is stated most fully in Chapter 31, his bitter retrospect on unification watched from London.</p>
+<img src="images/vittorio_emanuele_ii_portrait.jpg" alt="Vittorio Emanuele II" width="300">
+<p><em><a href="https://en.wikipedia.org/wiki/Victor_Emmanuel_II_of_Italy" class="entity-link" title="Victor Emmanuel II of Italy — Wikipedia" target="_blank" rel="noopener">Vittorio Emanuele II</a>, first King of Italy — carte-de-visite by André-Adolphe-Eugène Disdéri, c. 1861. Wikimedia Commons; public domain. To di Rudio, &quot;a simple vassal of the Empire.&quot;</em></p>
+<p>The indictment is itemized. The 1859 alliance of Piedmont with <a href="personae.html#napoleon-iii-luigi-napoleone--the-usurper-part-1-ch-5-23" class="entity-link" title="See Napoleon III in the Personae">Napoleon III</a> produces &quot;the treacherous peace of Villafranca,&quot; which abandons the Veneto to Austria; the price of French help is Nice and Savoy — &quot;the full price paid for a service only partially rendered&quot; — so that &quot;while the Revolution sacrificed the blood of heroes to add new Provinces... the Savoyard Monarchy worked in reverse and severed from it two of its ancient Provinces.&quot; <a href="https://en.wikipedia.org/wiki/Camillo_Benso,_Count_of_Cavour" class="entity-link" title="Camillo Benso, Count of Cavour — Wikipedia" target="_blank" rel="noopener">Cavour</a>, who had &quot;deplored as the supreme affliction of Italy the arts of the revolutionaries,&quot; turns &quot;from devil to friar&quot; by adopting those very arts when they serve the dynasty. Vittorio Emanuele is reduced to &quot;a simple vassal of the Empire.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-primo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 31</a>, pp. 253–258)</em></p>
+<img src="images/cavour_portrait.jpg" alt="Count Cavour" width="300">
+<p><em>Camillo Benso, Count of Cavour — the monarchy's &quot;practical&quot; statesman, who in di Rudio's account turned &quot;from devil to friar&quot; — photograph, c. 1860. Wikimedia Commons; public domain.</em></p>
+<p>Underneath the grievances is a clean moral antithesis, which di Rudio states as a maxim: &quot;The monarchical entity never throws itself into the fray without an eye to its own interest and subordinates the unity of Italy to privileges which it proclaims inviolable; the republican entity, having inscribed its own epic in characters of blood, freely sacrifices upon the altar of the Fatherland both itself and its serene convictions.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-primo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 31</a>, pp. 253–258)</em> The republic is morally superior <em>because</em> it loses — because it gives without calculating return. This is the same valuation Crespi announces in the preface, where he declares his sympathies &quot;for those who manfully succumb&quot; and warns that &quot;the triumph of political men is almost always a consequence of their most wretched qualities.&quot;</p>
+<p>The claim has a factual edge, too, and here the book is careful to redistribute credit. The Expedition of the Thousand, di Rudio insists, &quot;had been organized by Giuseppe Mazzini, by <a href="https://en.wikipedia.org/wiki/Rosalino_Pilo" class="entity-link" title="Rosalino Pilo — Wikipedia" target="_blank" rel="noopener">Rosalino Pilo</a> — who gave his life in it — by <a href="https://en.wikipedia.org/wiki/Agostino_Bertani" class="entity-link" title="Agostino Bertani — Wikipedia" target="_blank" rel="noopener">Agostino Bertani</a>, by <a href="https://en.wikipedia.org/wiki/Nino_Bixio" class="entity-link" title="Nino Bixio — Wikipedia" target="_blank" rel="noopener">Nino Bixio</a>&quot;; to <a href="personae.html#giuseppe-garibaldi--the-soldier-part-1-ch-67-part-2-ch-31" class="entity-link" title="See Giuseppe Garibaldi in the Personae">Garibaldi</a> fell &quot;the glory of triumph,&quot; to the organizers &quot;that of having prepared it and rendered it possible.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-primo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 31</a>, pp. 253–258)</em> The monarchy, on this telling, harvested a crop the republicans had sown and watered.</p>
+<p>The final proof, for di Rudio, is <a href="events.html#9-aspromonte-1862">Aspromonte</a>: the spectacle of the new kingdom firing on the very man who had handed it a kingdom. Napoleon dictates &quot;You shall have death, not Rome,&quot; and imposes on Vittorio Emanuele &quot;the part of the modern Cain.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-primo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 31</a>, pp. 253–258)</em> A monarchy that will shoot its own liberator has, in the book's logic, confessed what it is.</p>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — <a href="https://en.wikipedia.org/wiki/Denis_Mack_Smith" class="entity-link" title="Denis Mack Smith — Wikipedia" target="_blank" rel="noopener">Denis Mack Smith</a> (<em>Cavour</em>, 1985), long the most influential deflater of the heroic-nationalist myth, reads the Piedmontese path to unity as opportunistic power politics — Piedmontese hegemony placed above any democratic or federal vision of Italy. That cool academic verdict converges, from the opposite political pole, with di Rudio's hot republican one: both deny that the monarchy made Italy out of idealism.</p>
+</blockquote>
+<hr />
+<h2 id="3-exile-and-its-costs">3. Exile and its costs</h2>
+<p>If the book has an emotional keynote, it is exile — not as an episode but as a permanent condition. di Rudio is a foreigner almost everywhere the narrative takes him: a refugee tailor in Genoa, a cartridge-maker on a Paris barricade, a language teacher among the London émigrés, a convict in Guiana, and finally an emigrant to America. The last word of the book is the wound: &quot;my Fatherland I have never seen again!&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a>, pp. 264–268)</em></p>
+<p>The cruelty the book feels most keenly is being shut out of the nation he helped make. In Chapter 33, with Italy now a kingdom, di Rudio tries to sail home on an Italian warship offering free passage to returning exiles; the consul Corti, recognizing him, refuses — and warns that within the Kingdom he would be seized &quot;and handed over to the French authorities.&quot; di Rudio's response is the book's exile-creed in a line: &quot;They did not wish me to have a Fatherland!&quot; From which he draws not despair but a widened loyalty: &quot;The despots are all in league, even without need of formal pacts, just as all the peoples of the world are brothers... I shall find bullies to combat and good causes to defend everywhere.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a>, pp. 264–268)</em> Exile from one country becomes citizenship in a cause.</p>
+<p>That cause is explicitly transnational, and the book's close makes it a kind of inheritance. Turned away from Italy and drawn next toward dying Poland, di Rudio is summoned instead to a last meeting with a gravely ill Mazzini — himself the arch-exile, his banishment from Italy made perpetual by royal edict (<em><a href="../index.html#ch-parte-seconda-capitolo-trentesimo-primo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 31</a>, pp. 253–258</em>). Mazzini dissuades him from the &quot;lost cause&quot; of Poland and directs him toward the American war &quot;for the abolition of slavery,&quot; pressing into his hand a letter of commendation di Rudio &quot;preserve[s] to this day.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a>, pp. 264–268)</em> The exile is passed, hand to hand, from the old world's lost battles to the new world's. He sails from Liverpool on the <em>Virginia</em> on 8 February 1864, leaving &quot;peoples torn by grave upheavals&quot; for a continent locked in &quot;a titanic fratricidal war&quot; — the chapter's mordant verdict being that &quot;in the old world and the new, the road to Liberty is slippery with blood.&quot;</p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — For di Rudio the exile proved final: he never returned to Italy, settling in the United States and dying at Pasadena in 1910. The departure the book treats as a fresh start opened, in fact, a forty-six-year American second life — Union soldier, then 7th Cavalry officer, survivor of the Little Bighorn (1876) — narrated in the <a href="timeline.html">Timeline</a>. <em>(Source: Wikipedia, &quot;<a href="https://en.wikipedia.org/wiki/Charles_DeRudio" class="source-cite" target="_blank" rel="noopener">Charles DeRudio.</a>&quot;)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — Maurizio Isabella (<em>Risorgimento in Exile</em>, 2009) recovers London and the other émigré capitals as engines of a &quot;liberal international&quot; — Italian exiles in sustained exchange with British, continental, and American radicals, not refugees merely marking time. di Rudio's London meetings against the Temporal Power and his Mazzini-blessed departure for the American war are nodes in exactly that web; the memoir's lonely-wanderer pathos sits atop a real transnational politics.</p>
+</blockquote>
+<hr />
+<h2 id="4-martyrdom-tyrannicide-and-the-uses-of-blood">4. Martyrdom, tyrannicide, and the uses of blood</h2>
+<p>The book holds a theory of how liberty is won, and it is not the obvious one. Victories do not win it; deaths do. &quot;Death itself is the great sower of life, and tyranny itself the great fecundator of every liberty,&quot; di Rudio writes — martyrdom is productive, the conspirator's defeats are seeds. <em>(<a href="../index.html#ch-parte-prima-capitolo-undicesimo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 11</a>, pp. 59–62)</em> This belief governs the book's whole moral economy, from the preface's sympathy &quot;for those who manfully succumb&quot; onward.</p>
+<p>Its supreme exemplar is di Rudio's old colonel, Pietro Fortunato Calvi, whose death the book renders as a passion. Captured by the Austrians and offered the regime's &quot;new species of mercy&quot; — clemency in exchange for a humiliating, repentant petition — Calvi refuses, reportedly answering: &quot;My hatred for Austria is more intense than my love of life. I shall ask nothing and I want nothing from the oppressors of my Country!&quot; He shields his fellow conspirators to the last, climbs to a gallows built too short for him, and dies in a long agony that drives even the commanding Austrian officer to curse the executioner. di Rudio calls him &quot;the last of the great men murdered for the Italian cause&quot; and insists his &quot;moral influence... beyond the grave&quot; so unnerved the oppressors that the aged <a href="https://en.wikipedia.org/wiki/Joseph_Radetzky_von_Radetz" class="entity-link" title="Joseph Radetzky von Radetz — Wikipedia" target="_blank" rel="noopener">Radetzky</a> pressed the tribunal to manufacture a posthumous defamation. <em>(<a href="../index.html#ch-parte-prima-capitolo-ventesimo-secondo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 22</a>, pp. 108–112)</em> The martyr's power is precisely what the regime cannot kill.</p>
+<p>Calvi joins a named company — the Belfiore martyrs <a href="https://en.wikipedia.org/wiki/Enrico_Tazzoli" class="entity-link" title="Enrico Tazzoli — Wikipedia" target="_blank" rel="noopener">Tazzoli</a>, <a href="https://en.wikipedia.org/wiki/Tito_Speri" class="entity-link" title="Tito Speri — Wikipedia" target="_blank" rel="noopener">Speri</a>, Poma, Montanari and the rest, catalogued reverently in the same chapter (<em><a href="../index.html#ch-parte-prima-capitolo-ventesimo-secondo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 22</a>, pp. 108–112</em>) — and against them the book sets a recurring complaint: that the &quot;sycophancy that blossomed after the hour of triumph&quot; credited unification to the politicians who profited and glided over the dead who made it possible. The book is, in part, an attempt to settle that account.</p>
+<p>From the cult of the martyr it is a short step to the book's most uncomfortable conviction: that striking down a tyrant can be a sacred duty. di Rudio was, after all, a <a href="events.html#6-the-orsini-attentat-14-january-1858">bomber</a>. His own weapon, the blade that &quot;had already, in the insurrectionary attempts of 1853, known the beating of my heart,&quot; recurs as a kind of relic, and he boasts more than once that it stayed &quot;virgin of blood — its menacing flash had sufficed.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-settimo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 7</a>, pp. 154–156; <a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a>, pp. 264–268)</em> Yet the book does not present violence as simple. The Orsini plot is shot through with reluctance: Orsini handles the fulminate himself to spare di Rudio, and his &quot;horror of bloodshed&quot; makes him cling to the blade over the bomb even as he prepares the bombs. <em>(<a href="../index.html#ch-parte-seconda-capitolo-quinto" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 5</a>, pp. 144–148; <a href="../index.html#ch-parte-seconda-capitolo-settimo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 7</a>, pp. 154–156)</em> The deed is framed as tyrannicide — a blow aimed at one guilty man to free two nations — and the violence is owned as duty, not relished as cruelty.</p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — The book's tyrannicide frame elides the cost the record records: the three bombs thrown outside the Salle Le Peletier on 14 January 1858 left Napoleon III and <a href="personae.html#empress-eugénie-part-2-ch-1920" class="entity-link" title="See Empress Eugénie in the Personae">Eugénie</a> unhurt but killed about eight people and wounded some 150. The &quot;spark capable of altering history&quot; fell, in fact, mostly on a crowd. <em>(Sources: Wikipedia, &quot;<a href="https://en.wikipedia.org/wiki/Orsini_affair" class="source-cite" target="_blank" rel="noopener">Orsini affair</a>&quot;; Britannica, &quot;<a href="https://www.britannica.com/biography/Felice-Orsini" class="source-cite" target="_blank" rel="noopener">Felice Orsini.</a>&quot;)</em></p>
+</blockquote>
+<blockquote class="callout callout-scholarship">
+<p><strong>Scholarship</strong> — <a href="https://en.wikipedia.org/wiki/Lucy_Riall" class="entity-link" title="Lucy Riall — Wikipedia" target="_blank" rel="noopener">Lucy Riall</a> (<em>Garibaldi: Invention of a Hero</em>, 2007) shows how thoroughly the Risorgimento ran on the manufacture of heroes and martyrs — and how the wounded, defeated, or executed patriot could be a more potent political image than the victorious one. The mechanism Riall analyzes from the outside is the very one di Rudio works from the inside: defeat sanctified into propaganda, the martyr more useful dead than alive.</p>
+</blockquote>
+<hr />
+<h2 id="5-god-the-church-and-the-limits-of-reverence">5. God, the Church, and the limits of reverence</h2>
+<p>di Rudio is an anticlerical, and more than that: an outright atheist, in a movement and a memoir otherwise drenched in religious language. The hostility to the Church is established in the book's first historical chapter, where his father smashes a café bust of &quot;the liberating Pontiff&quot; <a href="https://en.wikipedia.org/wiki/Pope_Pius_IX" class="entity-link" title="Pope Pius IX — Wikipedia" target="_blank" rel="noopener">Pius IX</a>, crying that the citizens are honoring &quot;the greatest enemy of our Fatherland.&quot; <em>(<a href="../index.html#ch-parte-prima-capitolo-secondo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 2</a>, pp. 15–23)</em> It runs to the end, where the London agitation against the <strong>Temporal Power</strong> of the popes is the cause that rouses di Rudio from his post-prison &quot;torpor,&quot; and where he sneers at the Irish for &quot;subordinating... to the watchword of the tonsured camarilla.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a>, pp. 264–268)</em></p>
+<img src="images/pius_ix_portrait.jpg" alt="Pope Pius IX" width="300">
+<p><em>Pope Pius IX (Pio Nono) — photograph by Adolphe Braun, 1875. Wikimedia Commons; public domain. The pontiff whose café bust di Rudio's father smashed.</em></p>
+<p>But the anticlericalism is aimed at the Church as a political institution, not at every priest. The book draws the distinction carefully in the figure of <a href="personae.html#don-bastiano-barozzi--the-patriot-priest-part-1-ch-11-1819-22" class="entity-link" title="See Don Bastiano Barozzi in the Personae">Don Bastiano Barozzi</a>, the patriot-priest &quot;in whom the cassock did not stifle the love of the Fatherland,&quot; who served as a Legion chaplain at the siege of Venice and lost the right to say Mass for refusing to shave the mustache that &quot;smacked of the modernist.&quot; <em>(<a href="../index.html#ch-parte-prima-capitolo-undicesimo" class="chapter-cite" title="Open this chapter in the edition">P1 Ch. 11</a>, pp. 59–62)</em> The enemy is the clergy that &quot;to please the powerful&quot; hears patriots' confessions and then &quot;lend[s] a hand in their torment&quot; — the Church as an arm of reaction, not the priesthood as such.</p>
+<p>The book's boldest pages, though, go past anticlericalism to atheism proper, and they appear in the most reverent setting imaginable: the deathbed-side homage to Mazzini in the final chapter. Having exalted Mazzini almost without limit, di Rudio turns to the Master's faith and dissents flatly. Belief in God, he argues, is the root of injustice — &quot;In the belief in God there takes root and is nourished every privilege, every spoliation, every political and social injustice&quot; — and a benevolent omnipotent Mind is refuted by the very existence of evil and the triumph of &quot;the criminals who dwell in palaces.&quot; He asks: &quot;what avails it to bow before a Most High who is always on the side of the strongest?&quot; and concludes that Mazzini, &quot;by a singular aberration, consecrated so great a part of his energy to reinforcing the error that served as a picklock in the hands of his most bitter enemies.&quot; <em>(<a href="../index.html#ch-parte-seconda-capitolo-trentesimo-terzo" class="chapter-cite" title="Open this chapter in the edition">P2 Ch. 33</a>, pp. 264–268)</em></p>
+<p>This is the book's most revealing tension, and it sets it knowingly. di Rudio reveres Mazzini above all living and dead men — and rejects the God on whom Mazzini built everything. He resolves it not by softening either pole but by bracketing: &quot;setting aside this weakness, what wholeness in the pages of that great man.&quot; The homage is to the man and the moral teaching; the religious foundation is honored only by being explicitly set aside. It is the same discipline Crespi claims in the preface — to preserve the witness's voice without adulterating it — applied by di Rudio to his own master.</p>
+<blockquote class="callout callout-historical">
+<p><strong>Historical note</strong> — The tension is real, not the memoir's invention. Mazzini's politics were emphatically religious: his motto was <strong>&quot;Dio e Popolo&quot;</strong> (&quot;God and People&quot;), he held nationhood and patriotic duty to be a divine mission, and — a deist of Jansenist formation — he expressly denounced atheism and rationalism as the solvents of social bond. di Rudio's tribute therefore embraces a thinker whose first principle he flatly denied; the memoir's &quot;setting aside this weakness&quot; papers over a genuine gulf between the freethinker and the prophet of a religion of duty. <em>(Sources: Wikipedia, &quot;<a href="https://en.wikipedia.org/wiki/Giuseppe_Mazzini" class="source-cite" target="_blank" rel="noopener">Giuseppe Mazzini</a>&quot;; Politics Shed, &quot;Giuseppe Mazzini (1805–1872).&quot;)</em></p>
+</blockquote>
+<hr />
+<h2 id="a-note-on-sources">A note on sources</h2>
+<p>These essays are grounded first in the chapters cited from the translation; the page ranges are keyed to the source scan. External facts in <strong>Historical note</strong> callouts are checked against general reference works before being stated, and the <strong>Scholarship</strong> callouts draw on the academic literature gathered in the <a href="events.html#sources--further-reading">Event Context</a> bibliography — chiefly Denis Mack Smith (<em>Cavour</em>), Lucy Riall (<em>Garibaldi: Invention of a Hero</em>), and Maurizio Isabella (<em>Risorgimento in Exile</em>). None of those works treats <em>Per la libertà!</em> itself; they are the record against which the memoir's ideas are read.</p>
+
+</main>
+
+<nav class="companion-next" aria-label="Next section">
+  <a href="glossary.html">Next: Glossary &rarr;</a>
+</nav>
+
+<footer class="companion-footer">
+  <p>From <em>A Reader&rsquo;s Companion to Per la libert&agrave;!</em> — companion text &copy; 2026 Ben Rossi, all rights reserved. The 1913 book by Cesare Crespi is in the public domain; images are licensed separately (public domain, CC0, or CC BY-SA with attribution).</p>
+  <p class="companion-footer-links"><a href="COPYRIGHT.html">Copyright & licensing</a>
+      <a href="images/CREDITS.html">Image credits</a>
+      <a href="sources/index.html">Primary sources</a></p>
+</footer>
+
+<script>
+// Font size controls
+(() => {
+  const root = document.documentElement;
+  const STEP = 1;
+  const MIN = 10;
+  const MAX = 24;
+  let size = 16;
+  const saved = localStorage.getItem('fontSize');
+  if (saved) { size = parseInt(saved); root.style.fontSize = size + 'px'; }
+
+  document.getElementById('font-smaller').addEventListener('click', () => {
+    size = Math.max(MIN, size - STEP);
+    root.style.fontSize = size + 'px';
+    localStorage.setItem('fontSize', size);
+  });
+  document.getElementById('font-larger').addEventListener('click', () => {
+    size = Math.min(MAX, size + STEP);
+    root.style.fontSize = size + 'px';
+    localStorage.setItem('fontSize', size);
+  });
+})();
+
+// Colour theme: swatch popover writing data-theme on <html>, persisted
+(() => {
+  const root = document.documentElement;
+  const trigger = document.getElementById('theme-trigger');
+  const menu = document.getElementById('theme-menu');
+  const opts = Array.from(menu.querySelectorAll('.theme-opt'));
+  function mark(theme) {
+    opts.forEach(o => {
+      const on = o.dataset.setTheme === theme;
+      o.classList.toggle('active', on);
+      o.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+  }
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    mark(theme);
+  }
+  function open(show) {
+    menu.classList.toggle('open', show);
+    trigger.setAttribute('aria-expanded', show ? 'true' : 'false');
+  }
+  mark(root.getAttribute('data-theme') || 'mid');
+  trigger.addEventListener('click', e => { e.stopPropagation(); open(!menu.classList.contains('open')); });
+  opts.forEach(o => o.addEventListener('click', () => { apply(o.dataset.setTheme); open(false); }));
+  document.addEventListener('click', e => { if (!menu.contains(e.target) && e.target !== trigger) open(false); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { open(false); return; }
+    if (!menu.classList.contains('open')) return;
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    e.preventDefault();
+    const cur = opts.findIndex(o => o.dataset.setTheme === (root.getAttribute('data-theme') || 'mid'));
+    const next = (cur + (e.key === 'ArrowDown' ? 1 : -1) + opts.length) % opts.length;
+    apply(opts[next].dataset.setTheme);
+    opts[next].focus();
+  });
+})();
+
+// Open the disclosure ancestors of a URL-targeted anchor (deep links into
+// a collapsed disclosure), and expand every disclosure before printing.
+(function () {
+  function openToHash() {
+    var el = null;
+    try { el = location.hash ? document.querySelector(location.hash) : null; }
+    catch (e) { return; }
+    for (var p = el; p; p = p.parentElement) {
+      if (p.tagName === 'DETAILS') p.open = true;
+    }
+    if (el) el.scrollIntoView();
+  }
+  addEventListener('hashchange', openToHash);
+  if (location.hash) addEventListener('load', openToHash);
+  addEventListener('beforeprint', function () {
+    document.querySelectorAll('details').forEach(function (d) { d.open = true; });
+  });
+})();
+</script>
+</body>
+</html>

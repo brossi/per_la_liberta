@@ -2,7 +2,7 @@
 
 ## Chapter Thirteen
 
-Here, traced step by step, is the staircase leading to the abyss that was to swallow up both us and every hope we harboured: Pieri’s childlike trust in the Hartmann; the storm at sea that prevented my interview with Orsini at the Paris station; the association formed between the executors of the attempt, contrary to the understanding; Pieri’s failure to act and his all-too-ready loquacity immediately after his arrest; Gomez’s nerves. To these must be added — I shall speak of it later — the character of Felice Orsini, little or not at all suited to the life of a conspirator, and the good faith of an English young lady, blind with love for him. If other causes have been put forward, they were invented by the malice of men or the fancy of novelists.
+Here, traced step by step, is the staircase leading to the abyss that was to swallow up both us and every hope we harbored: Pieri’s childlike trust in the Hartmann; the storm at sea that prevented my interview with Orsini at the Paris station; the association formed between the executors of the attempt, contrary to the understanding; Pieri’s failure to act and his all-too-ready loquacity immediately after his arrest; Gomez’s nerves. To these must be added — I shall speak of it later — the character of Felice Orsini, little or not at all suited to the life of a conspirator, and the good faith of an English young lady, blind with love for him. If other causes have been put forward, they were invented by the malice of men or the fancy of novelists.
 
 I had forgotten! There was yet another cause, secondary perhaps, but one that must nonetheless be taken into account: the defection of Simon Bernard. He never came to Paris. While others, for having attempted to serve his France, were being driven by great strides toward the scaffold, he gave a fine proof of his courage by strolling tranquilly, prating of his own heroism, through the streets of London!
 
@@ -12,7 +12,7 @@ I had barely set foot in the antechamber before I was obliged to persuade myself
 
 Yet the heaviest blow came when I was brought before the magistrate. It was the same personage who had questioned me a few hours earlier. He received me with a smile, as though seeing me again afforded him immense pleasure. “Ah, ah! And how are we this morning, Signor Conte? No longer da Sylva this morning; but Carlo of the Counts di Rudio!”
 
-No doubt remained: Antonio Gomez had let my name slip. I must say at once, in his defence, that both Pieri and Orsini had always called me, in his presence, either Moretto or di Rudio. He, in all probability, had no knowledge that I carried a Portuguese passport.
+No doubt remained: Antonio Gomez had let my name slip. I must say at once, in his defense, that both Pieri and Orsini had always called me, in his presence, either Moretto or di Rudio. He, in all probability, had no knowledge that I carried a Portuguese passport.
 
 I put a good face on a bad business and answered, smiling no less than he: “Carlo di Rudio, precisely!”
 

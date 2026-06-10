@@ -6,7 +6,7 @@
   "model": "claude-sonnet-4-6",
   "changes": [
     {
-      "old": "travelling bag",
+      "old": "traveling bag",
       "new": "valise",
       "reason": "Edgren: valigia = 'valise (portmanteau; carpet-bag)' — 'valise' is the primary period-appropriate equivalent",
       "context_sentence": "ll steam towards my destiny. To face it, I had my valise... between the leather and the wooden panel of th"
