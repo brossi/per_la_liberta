@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Per la Libertà! / For Freedom!</title>
-<link rel="stylesheet" href="static/bilingual.css?v=3e1e0bd4">
+<link rel="stylesheet" href="static/bilingual.css?v=36a838f9">
 </head>
 <body>
 
@@ -14,7 +14,7 @@
   d.setAttribute('data-theme', localStorage.getItem('theme') || 'mid');
   var fs = localStorage.getItem('fontSize');
   if (fs) d.style.fontSize = parseInt(fs, 10) + 'px';
-  var lf = localStorage.getItem('langFocus');
+  var lf = localStorage.getItem('langFocus') || 'en';
   if (lf === 'it') b.classList.add('lang-it-only');
   else if (lf === 'en') b.classList.add('lang-en-only');
   if (localStorage.getItem('hideMarginalia') !== 'false') {
@@ -5345,16 +5345,16 @@ Then he rose and came toward me, smiling a smile that revealed all the melanchol
 (() => {
   const body = document.body;
   const btns = { it: document.getElementById('lang-it'),
-                 '': document.getElementById('lang-both'),
+                 both: document.getElementById('lang-both'),
                  en: document.getElementById('lang-en') };
   function apply(focus) {
     body.classList.toggle('lang-it-only', focus === 'it');
     body.classList.toggle('lang-en-only', focus === 'en');
     for (const k in btns) btns[k].classList.toggle('active', k === focus);
-    if (focus) localStorage.setItem('langFocus', focus); else localStorage.removeItem('langFocus');
+    localStorage.setItem('langFocus', focus);
     window.dispatchEvent(new Event('resize'));
   }
-  apply(localStorage.getItem('langFocus') || '');
+  apply(localStorage.getItem('langFocus') || 'en');
   for (const k in btns) btns[k].addEventListener('click', () => apply(k));
 })();
 

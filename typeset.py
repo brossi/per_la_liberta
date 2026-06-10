@@ -170,7 +170,7 @@ def _theme_restore_js(reader: bool = True) -> list[str]:
     ]
     if reader:
         lines += [
-            "  var lf = localStorage.getItem('langFocus');",
+            "  var lf = localStorage.getItem('langFocus') || 'en';",  # default: English only
             "  if (lf === 'it') b.classList.add('lang-it-only');",
             "  else if (lf === 'en') b.classList.add('lang-en-only');",
             "  if (localStorage.getItem('hideMarginalia') !== 'false') {",
@@ -1253,16 +1253,16 @@ def generate_html(
         "(() => {",
         "  const body = document.body;",
         "  const btns = { it: document.getElementById('lang-it'),",
-        "                 '': document.getElementById('lang-both'),",
+        "                 both: document.getElementById('lang-both'),",
         "                 en: document.getElementById('lang-en') };",
         "  function apply(focus) {",
         "    body.classList.toggle('lang-it-only', focus === 'it');",
         "    body.classList.toggle('lang-en-only', focus === 'en');",
         "    for (const k in btns) btns[k].classList.toggle('active', k === focus);",
-        "    if (focus) localStorage.setItem('langFocus', focus); else localStorage.removeItem('langFocus');",
+        "    localStorage.setItem('langFocus', focus);",  # 'both' stored explicitly so it persists vs. the EN default
         "    window.dispatchEvent(new Event('resize'));",  # re-align marginalia after layout change
         "  }",
-        "  apply(localStorage.getItem('langFocus') || '');",
+        "  apply(localStorage.getItem('langFocus') || 'en');",  # default: English only
         "  for (const k in btns) btns[k].addEventListener('click', () => apply(k));",
         "})();",
         "",
