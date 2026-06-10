@@ -17,7 +17,7 @@ import json
 import re
 import shutil
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 
 from markdown_it import MarkdownIt
 from markdown_it.token import Token
@@ -72,6 +72,67 @@ CITATION_RE = re.compile(
 # disclosures: a book overview stays visible, then each part (H3) opens to its
 # summary and a list of chapter (H4) disclosures. See _wrap_details.
 NESTED_DETAILS_PAGES = {"summary"}
+
+# Summary-page personae auto-link (see _autolink_personae): surface forms that appear
+# in the summary's lead and part summaries → the canonical ``name`` in
+# companion_entity_index.json. Anchors are NOT hard-coded here — the canonical
+# name → anchor lookup is resolved from the entity index at build time
+# (_summary_person_pattern), so a personae slug change can't silently break these
+# links. Matching is case-insensitive (catches sentence-initial "Di Rudio") and the
+# alternation is tried longest-alias-first so "Count Carlo di Rudio" wins over a bare
+# "di Rudio". Every value must be a real personae entry. Figures that appear only in
+# the (link-free) chapter outlines — Gomez, Torocfalda, the Countess de Domini — are
+# omitted. Deliberately ABSENT and never to be added as person aliases: "Belluno" (a
+# place) and "Italia" / "Roma" / "America" (di Rudio's daughters, and place/exile words).
+SUMMARY_PERSON_ALIASES = {
+    "Cesare Crespi": "Cesare Crespi",
+    "Crespi": "Cesare Crespi",
+    "Count Carlo di Rudio": "Count Carlo di Rudio",
+    "Carlo di Rudio": "Count Carlo di Rudio",
+    "di Rudio": "Count Carlo di Rudio",
+    "Signora Elisa": "Signora Elisa",
+    "Elisa": "Signora Elisa",
+    "Giuseppe Mazzini": "Giuseppe Mazzini",
+    "Mazzini": "Giuseppe Mazzini",
+    "Pietro Fortunato Calvi": "Pietro Fortunato Calvi",
+    "Fortunato Calvi": "Pietro Fortunato Calvi",
+    "Calvi": "Pietro Fortunato Calvi",
+    "Giuseppe Garibaldi": "Giuseppe Garibaldi",
+    "Garibaldi": "Giuseppe Garibaldi",
+    "Don Bastiano Barozzi": "Don Bastiano Barozzi",
+    "Don Bastiano": "Don Bastiano Barozzi",
+    "Felice Orsini": "Felice Orsini",
+    "Orsini": "Felice Orsini",
+    "Giuseppe Pieri": "Giuseppe Pieri",
+    "Pieri": "Giuseppe Pieri",
+    "Simon Bernard": "Simon Bernard",
+    "Napoleon III": "Napoleon III",
+    "Empress Eugénie": "Empress Eugénie",
+    "Eugénie": "Empress Eugénie",
+    "Empress": "Empress Eugénie",
+}
+
+# H2 sections of the summary overview that carry personae auto-links (the "lead").
+# "The book, part by part" and its intro line are excluded; the part summaries are
+# handled separately (an H3 part region ending at its first chapter H4).
+SUMMARY_OVERVIEW_IDS = {"logline", "synopsis", "how-its-told", "what-it-cares-about"}
+
+# Summary-page glossary auto-link (companion to SUMMARY_PERSON_ALIASES): surface forms
+# in the summary prose → the glossary headword (now an ``### Term`` heading, so it has
+# its own anchor, resolved from the entity index at build time). Only the terms that
+# actually surface in the lead and part summaries are mapped; note the spelling bridge
+# ("Giov**a**ne" in the summary vs. the glossary's "Giov**i**ne") and the headword's
+# parenthetical gloss, which the prose abbreviates ("the Opéra").
+SUMMARY_GLOSSARY_ALIASES = {
+    "Belluno": "Belluno",
+    "Villa Corsini": "Villa Corsini",
+    "Paris Opéra": "Rue Le Peletier (the Opéra)",
+    "the Opéra": "Rue Le Peletier (the Opéra)",
+    "Opéra": "Rue Le Peletier (the Opéra)",
+    "Giovane Italia": "Giovine Italia (Young Italy)",
+    "Giovine Italia": "Giovine Italia (Young Italy)",
+    "Young Italy": "Giovine Italia (Young Italy)",
+}
 
 # Source citations in the "Historical note"/"Scholarship" callouts are written as
 # `*(Source: Wikipedia, "Charles DeRudio".)*`, sometimes chaining several articles
@@ -174,6 +235,30 @@ def _assert_citation_targets(citation_map: dict[str, dict]) -> None:
         raise AssertionError(
             "Companion citation anchors absent from docs/index.html (slug drift?): "
             + ", ".join(missing)
+        )
+
+
+def _assert_companion_xrefs(page_ids: dict[str, set[str]],
+                            xrefs: list[tuple[str, str, str]]) -> None:
+    """Fail loudly if any companion-internal cross-link anchor doesn't resolve.
+
+    Complements ``_assert_citation_targets`` (which guards the edition's ``ch-*``
+    anchors): this checks bare same-directory companion links like ``personae.html#…``
+    and ``events.html#…`` — both the generated personae auto-links and the
+    hand-authored cross-references — against the heading ids each target page actually
+    emitted, so a renamed heading can't leave a dead cross-link.
+    """
+    missing: list[str] = []
+    for src, target, anchor in xrefs:
+        ids = page_ids.get(target)
+        if ids is None:
+            missing.append(f"{src} → {target} (target page not built)")
+        elif anchor not in ids:
+            missing.append(f"{src} → {target}#{anchor}")
+    if missing:
+        raise AssertionError(
+            "Companion cross-link anchors that don't resolve (slug drift?):\n  "
+            + "\n  ".join(sorted(missing))
         )
 
 
@@ -483,6 +568,122 @@ def _wrap_details(tokens: list[Token], citation_map: dict, docs_root: str) -> li
     return out
 
 
+def _summary_link_pattern(entities: list[dict]) -> tuple[re.Pattern, dict[str, tuple[str, str]]]:
+    """Compile the personae + glossary alias matcher for the summary page.
+
+    Resolves each alias in ``SUMMARY_PERSON_ALIASES`` / ``SUMMARY_GLOSSARY_ALIASES`` to
+    its target via the entity index (page == personae.html / glossary.html), so anchors
+    follow the index rather than being hard-coded. Returns ``(compiled pattern,
+    lowercased-alias → (relative href, hover title))``. Raises if an alias names an
+    entry that doesn't exist (a typo, or a renamed heading) so slug drift fails the
+    build loudly instead of emitting a dead link.
+    """
+    by_page = {"personae.html": {}, "glossary.html": {}}
+    for e in entities:
+        if e["page"] in by_page:
+            by_page[e["page"]][e["name"]] = e["anchor"]
+
+    alias_target: dict[str, tuple[str, str]] = {}
+
+    def add(aliases: dict[str, str], page: str, where: str) -> None:
+        anchors = by_page[page]
+        for alias, canon in aliases.items():
+            if canon not in anchors:
+                raise AssertionError(
+                    f"Summary {where} alias {alias!r} → unknown {page} name {canon!r}"
+                )
+            alias_target[alias.lower()] = (f"{page}#{anchors[canon]}", f"See {canon} in the {where}")
+
+    add(SUMMARY_PERSON_ALIASES, "personae.html", "Personae")
+    add(SUMMARY_GLOSSARY_ALIASES, "glossary.html", "Glossary")
+
+    aliases = sorted(
+        set(SUMMARY_PERSON_ALIASES) | set(SUMMARY_GLOSSARY_ALIASES), key=len, reverse=True
+    )  # longest wins
+    pattern = re.compile(
+        r"\b(" + "|".join(re.escape(a) for a in aliases) + r")\b", re.IGNORECASE
+    )
+    return pattern, alias_target
+
+
+def _autolink_run(text: str, pattern: re.Pattern, alias_target: dict[str, tuple[str, str]],
+                  companion_root: str, seen: set[str]) -> list[Token]:
+    """Wrap the first not-yet-seen personae/glossary mention in a text run; record it in ``seen``."""
+    out: list[Token] = []
+    pos = 0
+    for m in pattern.finditer(text):
+        rel_href, title = alias_target[m.group(1).lower()]
+        if rel_href in seen:               # already linked this target in this section
+            continue
+        seen.add(rel_href)
+        if m.start() > pos:
+            out.append(_text_token(text[pos:m.start()]))
+        link_open = Token("link_open", "a", 1)
+        link_open.attrSet("href", f"{companion_root}{rel_href}")
+        link_open.attrSet("class", "entity-link")
+        link_open.attrSet("title", title)
+        out += [link_open, _text_token(m.group(0)), Token("link_close", "a", -1)]
+        pos = m.end()
+    if not out:
+        return [_text_token(text)]
+    if pos < len(text):
+        out.append(_text_token(text[pos:]))
+    return out
+
+
+def _autolink_summary_terms(tokens: list[Token], pattern: re.Pattern,
+                            alias_target: dict[str, tuple[str, str]], companion_root: str) -> None:
+    """Auto-link the first per-section personae/glossary mention across the summary's
+    lead and part summaries (mutating the token stream in place).
+
+    A *section* is each whitelisted overview H2 region (``SUMMARY_OVERVIEW_IDS``) and
+    each part-summary region — the prose between an ``### Part …`` H3 that has chapter
+    H4 children and that part's first H4. The per-section ``seen`` set resets at every
+    heading, so a figure links once per section (lead-then-body, per Wikipedia
+    MOS:LINKONCE). Headings themselves, the Prefazione body (a childless H3),
+    ``## The book, part by part`` and its intro line, and all chapter-outline H4 bodies
+    stay link-free; text already inside a link (a chapter-cite, source-cite, or
+    hand-authored event link) is skipped.
+
+    Runs after ``_transform`` (needs heading ids; must not fight citation rewriting)
+    and before ``_wrap_details`` (which only restructures and never re-enters these
+    paragraph links).
+    """
+    region_on = False
+    seen: set[str] = set()
+    i, n = 0, len(tokens)
+    while i < n:
+        tok = tokens[i]
+        if tok.type == "heading_open":
+            if tok.tag == "h2":
+                region_on = tok.attrGet("id") in SUMMARY_OVERVIEW_IDS
+            elif tok.tag == "h3":
+                region_on = _h3_has_h4(tokens, i)
+            else:                              # h1, and h4 chapter-outline bodies
+                region_on = False
+            seen = set()
+            i += 3                             # skip the heading's own inline + close
+            continue
+        if region_on and tok.type == "inline" and tok.children:
+            out: list[Token] = []
+            link_depth = 0
+            for ch in tok.children:
+                if ch.type == "link_open":
+                    link_depth += 1
+                    out.append(ch)
+                elif ch.type == "link_close":
+                    link_depth -= 1
+                    out.append(ch)
+                elif ch.type == "text" and link_depth == 0:
+                    out.extend(
+                        _autolink_run(ch.content, pattern, alias_target, companion_root, seen)
+                    )
+                else:
+                    out.append(ch)
+            tok.children = out
+        i += 1
+
+
 def _transform(tokens: list[Token], citation_map: dict, docs_root: str,
                entities: list | None, page_stem: str) -> str | None:
     """Mutate the token stream in place; return the page's H1 text if present."""
@@ -535,23 +736,36 @@ def _personae_entity(heading_content: str, anchor: str, page_stem: str) -> dict:
     }
 
 
-def _glossary_entities(md_text: str) -> list[dict]:
-    """Index glossary bold-lead terms (**Term.**) to their section anchor."""
+def _glossary_entities(tokens: list[Token]) -> list[dict]:
+    """Index each glossary term (an ``### Term`` heading) to its own anchor.
+
+    Terms are H3 headings (one ``## section`` above several ``### term`` entries, the
+    same shape as the personae page), so ``_transform`` has already assigned each a
+    unique ``id``. The term *name* is the heading text; its *chapters* come from the
+    citations in the gloss paragraph(s) that follow, up to the next heading. Runs after
+    ``_transform``.
+    """
     ents: list[dict] = []
-    section = ""
-    for line in md_text.split("\n"):
-        head = re.match(r"^#{2,3}\s+(.*)$", line)
-        if head:
-            section = _gh_slug(head.group(1))
-            continue
-        bold = re.match(r"^\*\*(.+?)\.?\*\*", line.strip())
-        if bold:
+    i, n = 0, len(tokens)
+    while i < n:
+        tok = tokens[i]
+        if tok.type == "heading_open" and tok.tag == "h3":
+            head = tokens[i + 1]
+            chapters: list[str] = []
+            j = i + 3                                  # past heading_open/inline/close
+            while j < n and tokens[j].type != "heading_open":
+                if tokens[j].type == "inline":
+                    chapters.extend(_citations_in(tokens[j].content))
+                j += 1
             ents.append({
-                "name": bold.group(1).strip().rstrip("."),
+                "name": head.content.strip(),
                 "page": "glossary.html",
-                "anchor": section,
-                "chapters": _citations_in(line),
+                "anchor": tok.attrGet("id"),
+                "chapters": chapters,
             })
+            i = j
+            continue
+        i += 1
     return ents
 
 
@@ -569,6 +783,28 @@ def _nav_links(active_stem: str, companion_root: str) -> str:
 def _footer_links(companion_root: str) -> str:
     items = [f'<a href="{companion_root}{stem}.html">{label}</a>' for stem, label in FOOTER]
     return "\n      ".join(items)
+
+
+def _next_section_link(active_stem: str, companion_root: str, docs_root: str) -> str:
+    """A 'next section' link threading the reading sections (NAV) in order.
+
+    Only the eight reading sections are threaded; apparatus pages (active_stem == "")
+    get none. The last section (Research leads) points back to the reading edition.
+    """
+    stems = [s for s, _ in NAV]
+    if active_stem not in stems:
+        return ""
+    i = stems.index(active_stem)
+    if i + 1 < len(stems):
+        nxt, label = NAV[i + 1]
+        href, text = f"{companion_root}{nxt}.html", f"Next: {label} &rarr;"
+    else:
+        href, text = f"{docs_root}index.html", "Back to the reading edition &rarr;"
+    return (
+        '<nav class="companion-next" aria-label="Next section">\n'
+        f'  <a href="{href}">{text}</a>\n'
+        "</nav>"
+    )
 
 
 def _page_html(title: str, body_html: str, depth: int, css_hash: str, active_stem: str) -> str:
@@ -603,6 +839,8 @@ def _page_html(title: str, body_html: str, depth: int, css_hash: str, active_ste
         '<main class="companion-page">',
         body_html,
         "</main>",
+        "",
+        _next_section_link(active_stem, companion_root, docs_root),
         "",
         '<footer class="companion-footer">',
         "  <p>From <em>A Reader&rsquo;s Companion to Per la libert&agrave;!</em> — "
@@ -694,12 +932,15 @@ def build() -> None:
 
     entities: list[dict] = []
     page_count = 0
+    page_ids: dict[str, set[str]] = {}              # output html → its heading ids
+    xrefs: list[tuple[str, str, str]] = []          # (source page, target page, anchor)
 
     for src in sorted(COMPANION_SRC.rglob("*.md")):
         rel = src.relative_to(COMPANION_SRC)
         depth = len(rel.parts) - 1
         stem = rel.with_suffix("").as_posix()
         docs_root = "../" * (depth + 1)
+        companion_root = "../" * depth
 
         text = src.read_text(encoding="utf-8")
         tokens = md.parse(text)
@@ -707,13 +948,29 @@ def build() -> None:
         collector = entities if rel.name == "personae.md" else None
         title = _transform(tokens, citation_map, docs_root, collector, stem)
         if rel.name == "glossary.md":
-            entities.extend(_glossary_entities(text))
+            entities.extend(_glossary_entities(tokens))
+        if stem == "summary":
+            assert any(e["page"] == "personae.html" for e in entities) and \
+                any(e["page"] == "glossary.html" for e in entities), \
+                "personae and glossary entities must be collected before the summary page"
+            link_pat, alias_target = _summary_link_pattern(entities)
+            _autolink_summary_terms(tokens, link_pat, alias_target, companion_root)
         if stem in NESTED_DETAILS_PAGES:
             tokens = _wrap_details(tokens, citation_map, docs_root)
 
         body_html = md.renderer.render(tokens, md.options, {})
         page_title = title or rel.stem.replace("-", " ").title()
         active_stem = stem if any(stem == n for n, _ in NAV) else ""
+
+        # Collect heading ids and bare same-directory cross-links for validation.
+        out_rel = rel.with_suffix(".html").as_posix()
+        page_ids[out_rel] = set(re.findall(r'\sid="([^"]+)"', body_html))
+        for href in re.findall(r'href="([^"#]+\.html#[^"]+)"', body_html):
+            path, _, frag = href.partition("#")
+            if "/" not in path:                     # skip edition (../index.html#…) & external
+                # Markdown-it percent-encodes the fragment (è → %C3%A8); heading ids
+                # keep the literal char, and browsers decode before matching, so decode.
+                xrefs.append((out_rel, path, unquote(frag)))
 
         out_path = DOCS_COMPANION / rel.with_suffix(".html")
         out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -722,6 +979,8 @@ def build() -> None:
             encoding="utf-8",
         )
         page_count += 1
+
+    _assert_companion_xrefs(page_ids, xrefs)
 
     # Mirror every non-markdown asset (images, etc.), preserving the tree.
     asset_count = 0

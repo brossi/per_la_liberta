@@ -1217,6 +1217,15 @@ body.companion {
 }
 .companion-page a.source-cite:hover { text-decoration: none; opacity: 0.75; }
 
+/* In-summary auto-links from a figure's first per-section mention to their personae
+   entry (an internal, same-tab companion cross-reference). */
+.companion-page a.entity-link {
+  color: var(--color-accent);
+  border-bottom: 1px dotted var(--color-accent);
+  text-decoration: none;
+}
+.companion-page a.entity-link:hover { text-decoration: none; opacity: 0.75; }
+
 /* External links open in a new tab; the ↗ marks the jump so it isn't silent
    (WCAG G200). Keyed on target="_blank" so the icon and the new-tab behaviour
    can never drift apart. Internal chapter/companion links stay same-tab. */
@@ -1415,6 +1424,23 @@ body.companion {
 .companion-footer a { color: var(--color-muted); }
 .companion-footer-links { display: flex; flex-wrap: wrap; gap: 0.4em 1.2em; }
 
+/* Sequential "next section" link threading the companion's reading order. */
+.companion-next {
+  max-width: 40em;
+  margin: 0 auto;
+  padding: 1.5em 2em 0;
+  text-align: right;
+}
+.companion-next a {
+  font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
+  letter-spacing: 0.03em;
+  font-size: 1.05em;
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.companion-next a:hover { border-bottom-color: var(--color-accent); }
+
 /* === Print / PDF (WeasyPrint paged media) === */
 @media print {
   /* Force the light palette on paper regardless of the screen theme selected. */
@@ -1452,7 +1478,7 @@ body.companion {
   }
 
   .toc-trigger, .toc-panel, .toc-backdrop, .top-right-controls, .marginalia, .scan-qr,
-  .companion-topbar, .companion-footer-links {
+  .companion-topbar, .companion-footer-links, .companion-next {
     display: none;
   }
 

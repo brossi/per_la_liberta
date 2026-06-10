@@ -2,7 +2,7 @@
   {
     "name": "Belluno",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "belluno",
     "chapters": [
       "1:2",
       "1:17"
@@ -11,7 +11,7 @@
   {
     "name": "The Spielberg",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "the-spielberg",
     "chapters": [
       "1:2"
     ]
@@ -19,7 +19,7 @@
   {
     "name": "The Quadrilateral",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "the-quadrilateral",
     "chapters": [
       "2:31"
     ]
@@ -27,7 +27,7 @@
   {
     "name": "Villa Corsini",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "villa-corsini",
     "chapters": [
       "1:6"
     ]
@@ -35,7 +35,7 @@
   {
     "name": "Castello di San Giorgio, Mantua",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "castello-di-san-giorgio-mantua",
     "chapters": [
       "1:22"
     ]
@@ -43,7 +43,7 @@
   {
     "name": "Osoppo",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "osoppo",
     "chapters": [
       "1:17"
     ]
@@ -51,7 +51,7 @@
   {
     "name": "San Marino",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "san-marino",
     "chapters": [
       "1:7"
     ]
@@ -59,7 +59,7 @@
   {
     "name": "Rue Le Peletier (the Opéra)",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "rue-le-peletier-the-opéra",
     "chapters": [
       "2:8",
       "2:10"
@@ -68,7 +68,7 @@
   {
     "name": "Mazas",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "mazas",
     "chapters": [
       "2:13"
     ]
@@ -76,7 +76,7 @@
   {
     "name": "The Conciergerie",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "the-conciergerie",
     "chapters": [
       "2:14"
     ]
@@ -84,7 +84,7 @@
   {
     "name": "La Roquette",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "la-roquette",
     "chapters": [
       "2:18"
     ]
@@ -92,7 +92,7 @@
   {
     "name": "Toulon",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "toulon",
     "chapters": [
       "2:21"
     ]
@@ -100,7 +100,7 @@
   {
     "name": "Cayenne",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "cayenne",
     "chapters": [
       "2:21"
     ]
@@ -108,7 +108,7 @@
   {
     "name": "Montagne d'Argent",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "montagne-dargent",
     "chapters": [
       "2:22"
     ]
@@ -116,7 +116,7 @@
   {
     "name": "Île du Salut / Îles du Salut",
     "page": "glossary.html",
-    "anchor": "places--sites",
+    "anchor": "île-du-salut--îles-du-salut",
     "chapters": [
       "2:23"
     ]
@@ -124,7 +124,7 @@
   {
     "name": "Carbonari",
     "page": "glossary.html",
-    "anchor": "organizations-societies--military-units",
+    "anchor": "carbonari",
     "chapters": [
       "1:5"
     ]
@@ -132,7 +132,7 @@
   {
     "name": "Giovine Italia (Young Italy)",
     "page": "glossary.html",
-    "anchor": "organizations-societies--military-units",
+    "anchor": "giovine-italia-young-italy",
     "chapters": [
       "1:8"
     ]
@@ -140,7 +140,7 @@
   {
     "name": "European Revolutionary Committee",
     "page": "glossary.html",
-    "anchor": "organizations-societies--military-units",
+    "anchor": "european-revolutionary-committee",
     "chapters": [
       "1:11",
       "1:22"
@@ -149,7 +149,7 @@
   {
     "name": "The Secret Committee",
     "page": "glossary.html",
-    "anchor": "organizations-societies--military-units",
+    "anchor": "the-secret-committee",
     "chapters": [
       "2:5"
     ]
@@ -157,7 +157,7 @@
   {
     "name": "The Fratellanza",
     "page": "glossary.html",
-    "anchor": "organizations-societies--military-units",
+    "anchor": "the-fratellanza",
     "chapters": [
       "1:13"
     ]
@@ -165,7 +165,7 @@
   {
     "name": "The Military and Mixed Commissions",
     "page": "glossary.html",
-    "anchor": "organizations-societies--military-units",
+    "anchor": "the-military-and-mixed-commissions",
     "chapters": [
       "1:9"
     ]
@@ -173,7 +173,7 @@
   {
     "name": "Bersaglieri",
     "page": "glossary.html",
-    "anchor": "organizations-societies--military-units",
+    "anchor": "bersaglieri",
     "chapters": [
       "1:6",
       "1:8",
@@ -183,7 +183,7 @@
   {
     "name": "Cacciatori delle Alpi",
     "page": "glossary.html",
-    "anchor": "organizations-societies--military-units",
+    "anchor": "cacciatori-delle-alpi",
     "chapters": [
       "1:4"
     ]
@@ -191,13 +191,13 @@
   {
     "name": "\"Human document.\"",
     "page": "glossary.html",
-    "anchor": "terms-objects--phrases",
+    "anchor": "human-document",
     "chapters": []
   },
   {
     "name": "The Orsini \"hedgehog\" bombs",
     "page": "glossary.html",
-    "anchor": "terms-objects--phrases",
+    "anchor": "the-orsini-hedgehog-bombs",
     "chapters": [
       "2:6",
       "2:7"
@@ -206,7 +206,7 @@
   {
     "name": "Mercury fulminate",
     "page": "glossary.html",
-    "anchor": "terms-objects--phrases",
+    "anchor": "mercury-fulminate",
     "chapters": [
       "2:7"
     ]
@@ -214,7 +214,7 @@
   {
     "name": "The \"dry guillotine.\"",
     "page": "glossary.html",
-    "anchor": "terms-objects--phrases",
+    "anchor": "the-dry-guillotine",
     "chapters": [
       "1:9",
       "2:21"
@@ -223,7 +223,7 @@
   {
     "name": "Vase",
     "page": "glossary.html",
-    "anchor": "terms-objects--phrases",
+    "anchor": "vase",
     "chapters": [
       "2:23",
       "2:26"
@@ -232,7 +232,7 @@
   {
     "name": "\"O Roma o morte\" (\"Rome or death\")",
     "page": "glossary.html",
-    "anchor": "terms-objects--phrases",
+    "anchor": "o-roma-o-morte-rome-or-death",
     "chapters": [
       "2:31",
       "2:33"
@@ -241,7 +241,7 @@
   {
     "name": "\"Dio e Popolo\" (\"God and the People\")",
     "page": "glossary.html",
-    "anchor": "terms-objects--phrases",
+    "anchor": "dio-e-popolo-god-and-the-people",
     "chapters": [
       "1:8"
     ]
@@ -249,7 +249,7 @@
   {
     "name": "\"Re Bomba\" (\"King Bomb\")",
     "page": "glossary.html",
-    "anchor": "terms-objects--phrases",
+    "anchor": "re-bomba-king-bomb",
     "chapters": [
       "1:5",
       "1:6"
@@ -258,7 +258,7 @@
   {
     "name": "Radetzky",
     "page": "glossary.html",
-    "anchor": "ships",
+    "anchor": "radetzky",
     "chapters": [
       "1:13"
     ]
@@ -266,7 +266,7 @@
   {
     "name": "La Durance",
     "page": "glossary.html",
-    "anchor": "ships",
+    "anchor": "la-durance",
     "chapters": [
       "2:21"
     ]
@@ -274,7 +274,7 @@
   {
     "name": "Abeille",
     "page": "glossary.html",
-    "anchor": "ships",
+    "anchor": "abeille",
     "chapters": [
       "2:22"
     ]
@@ -282,7 +282,7 @@
   {
     "name": "Amazzone",
     "page": "glossary.html",
-    "anchor": "ships",
+    "anchor": "amazzone",
     "chapters": [
       "2:25"
     ]
@@ -290,7 +290,7 @@
   {
     "name": "John Romelly",
     "page": "glossary.html",
-    "anchor": "ships",
+    "anchor": "john-romelly",
     "chapters": [
       "2:28"
     ]
@@ -298,7 +298,7 @@
   {
     "name": "Virginia",
     "page": "glossary.html",
-    "anchor": "ships",
+    "anchor": "virginia",
     "chapters": [
       "2:33"
     ]
