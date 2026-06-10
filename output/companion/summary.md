@@ -2,17 +2,13 @@
 
 ***Per la libertà! (Dalle mie conversazioni col conte Carlo di Rudio, complice di Felice Orsini)*** — Cesare Crespi, 1913. Canessa Printing Co., 708 Montgomery St., San Francisco.
 
-> **How to read this summary.** Start with the overview — a one-line logline, a short synopsis, and brief notes on how the book is told and what it cares about. Then open *The book, part by part*: each part unfolds to its own summary and a list of chapters, and any chapter unfolds to its outline. Stop at whatever depth you need; each layer is self-contained, and the ones nested below it only add resolution. Page numbers throughout refer to the source scan (Library of Congress copy, pp. 7–268).
+> **How to read this summary.** Start with the overview — a short synopsis and brief notes on how the book is told and what it cares about. Then open *The book, part by part*: each part unfolds to its own summary and a list of chapters, and any chapter unfolds to its outline. Stop at whatever depth you need; each layer is self-contained, and the ones nested below it only add resolution. Page numbers throughout refer to the source scan (Library of Congress copy, pp. 7–268).
 
 > **On sourcing.** The book-derived content here was assembled from a chapter-by-chapter reading of the translation and then independently fact-checked against the source chapters. The standard is **fidelity of substance, not of letter**: a summary may carry a name or date the book establishes in a neighboring chapter, or supply a verified historical date for the reader's benefit, but it never invents what is absent from both the book and the historical record, nor states as fact anything a chapter contradicts. External facts in **Historical note** callouts are confirmed against the cited source before being stated.
 
-## Logline
-
-An aged Risorgimento conspirator, exiled to America, recounts his life — fighting for [the 1849 Roman Republic](events.md#3-the-roman-republic-and-its-siege-1849), the 1858 Orsini plot to assassinate Napoleon III, a death sentence commuted on the scaffold, escape from a [Guiana penal colony](events.md#7-the-french-penal-colony-of-guiana-18581859), and a homeland never seen again — as testimony gathered by a journalist in his California exile and published in 1913.
-
 ## Synopsis
 
-The journalist Cesare Crespi sought out Count Carlo di Rudio, living obscurely near Los Angeles in his final years, and persuaded the old patriot to tell his story; Crespi published it in 1913, after the Count's death. The book is the result: not formal history but, as Crespi insists, a "human document," every chapter approved and contestable passages signed by di Rudio himself.
+The journalist Cesare Crespi sought out Count Carlo di Rudio, living obscurely in Los Angeles in his final years, and persuaded the old patriot to tell his story; Crespi published it in 1913, after the Count's death. The book is the result: not formal history but, as Crespi insists, a "human document," every chapter approved and contestable passages signed by di Rudio himself.
 
 Di Rudio's life is the arc of the Risorgimento seen from below. Born in Belluno in 1832, he fights for the Roman Republic in 1849 under Garibaldi, is captured and nearly shot, and begins decades of exile and clandestine conspiracy across France, Switzerland, and England under the inspiration of Giuseppe Mazzini and the martyred Pietro Fortunato Calvi. In London he marries an Englishwoman, Elisa. In 1858 Felice Orsini draws him into [the plot to kill Napoleon III](events.md#6-the-orsini-attentat-14-january-1858), whose suppression of the Roman Republic the conspirators hold responsible for Italy's chains. Di Rudio throws the second bomb outside the Paris Opéra on 14 January 1858; the Emperor survives. Condemned to the guillotine alongside Orsini and Pieri, di Rudio is reprieved at the foot of the scaffold and transported to the [penal colonies of French Guiana](events.md#7-the-french-penal-colony-of-guiana-18581859), from which he stages a near-suicidal escape by sea.
 
@@ -36,7 +32,7 @@ Cesare Crespi explained why he wrote the book, framing it not as conventional hi
 
 ### Part One — The Making of a Patriot and the Defense of Rome (Chapters 1–24, pp. 9–127)
 
-Part One opens with the frame: Crespi's visit to di Rudio's modest home near Los Angeles, the household (Elisa and the children named Italia, Roma, and America), and the study with its portraits of Mazzini and Calvi. Pressed that telling his story is a duty owed to the martyrs and to his children, di Rudio begins.
+Part One opens with the frame: Crespi's visit to di Rudio's modest home in Los Angeles, the household (Elisa and the children named Italia, Roma, and America), and the study with its portraits of Mazzini and Calvi. Pressed that telling his story is a duty owed to the martyrs and to his children, di Rudio begins.
 
 The early chapters establish his formation — Belluno birth, an anti-papal father, a political education in the oppressions of post-Vienna Italy — and plunge him into 1848: [the Five Days of Milan](events.md#2-the-five-days-of-milan-march-1848), the People's War in Venetia under Pietro Fortunato Calvi, and his refusal of Austrian service. He reaches Rome in time for [the 1849 defense of the Roman Republic](events.md#3-the-roman-republic-and-its-siege-1849), fighting under Garibaldi (Palestrina, Velletri, the slaughter at the Villa Corsini), where he rescues a French prisoner from a mob, is wounded and captured, escapes, and is court-martialed and improbably acquitted.
 

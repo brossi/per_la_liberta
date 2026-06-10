@@ -73,49 +73,105 @@ CITATION_RE = re.compile(
 # summary and a list of chapter (H4) disclosures. See _wrap_details.
 NESTED_DETAILS_PAGES = {"summary"}
 
-# Summary-page personae auto-link (see _autolink_personae): surface forms that appear
-# in the summary's lead and part summaries → the canonical ``name`` in
-# companion_entity_index.json. Anchors are NOT hard-coded here — the canonical
-# name → anchor lookup is resolved from the entity index at build time
-# (_summary_person_pattern), so a personae slug change can't silently break these
-# links. Matching is case-insensitive (catches sentence-initial "Di Rudio") and the
-# alternation is tried longest-alias-first so "Count Carlo di Rudio" wins over a bare
-# "di Rudio". Every value must be a real personae entry. Figures that appear only in
-# the (link-free) chapter outlines — Gomez, Torocfalda, the Countess de Domini — are
-# omitted. Deliberately ABSENT and never to be added as person aliases: "Belluno" (a
-# place) and "Italia" / "Roma" / "America" (di Rudio's daughters, and place/exile words).
-SUMMARY_PERSON_ALIASES = {
-    "Cesare Crespi": "Cesare Crespi",
-    "Crespi": "Cesare Crespi",
-    "Count Carlo di Rudio": "Count Carlo di Rudio",
-    "Carlo di Rudio": "Count Carlo di Rudio",
-    "di Rudio": "Count Carlo di Rudio",
-    "Signora Elisa": "Signora Elisa",
-    "Elisa": "Signora Elisa",
-    "Giuseppe Mazzini": "Giuseppe Mazzini",
-    "Mazzini": "Giuseppe Mazzini",
-    "Pietro Fortunato Calvi": "Pietro Fortunato Calvi",
-    "Fortunato Calvi": "Pietro Fortunato Calvi",
+# Person auto-linking (see _autolink_people_page / _autolink_summary_terms). Two maps:
+#
+# PERSONAE_ALIASES — surface forms → the canonical ``name`` in
+# companion_entity_index.json. Anchors are resolved from the index at build time
+# (_people_targets), so a personae slug change can't silently break these; these render
+# as INTERNAL links to the figure's dossier (everywhere except the personae page
+# itself, to avoid self-links).
+#
+# NOTABLE_PEOPLE — (aliases, Wikipedia article title) for figures the text names that
+# have no companion dossier; these render as EXTERNAL links (every title was verified
+# to resolve). Memoir-only incidental figures with no lookup target are deliberately
+# absent, as are common-word collisions: matching is CASE-SENSITIVE (so the verb
+# "grant" never links to General Grant — only the capitalised "Grant" does), the
+# alternation is longest-alias-first, and bare ambiguous forms ("Napoleon", "de Domini",
+# "Vittorio Emanuele") are omitted in favour of disambiguated ones. NEVER add: "Belluno"
+# (a place) or "Italia"/"Roma"/"America" (di Rudio's daughters).
+PERSONAE_ALIASES = {
+    "Cesare Crespi": "Cesare Crespi", "Crespi": "Cesare Crespi",
+    "Count Carlo di Rudio": "Count Carlo di Rudio", "Carlo di Rudio": "Count Carlo di Rudio",
+    "di Rudio": "Count Carlo di Rudio", "Di Rudio": "Count Carlo di Rudio",
+    "Signora Elisa": "Signora Elisa", "Elisa": "Signora Elisa",
+    "Countess Elisabetta de Domini": "Countess Elisabetta de Domini",
+    "Elisabetta de Domini": "Countess Elisabetta de Domini",
+    "Giuseppe Mazzini": "Giuseppe Mazzini", "Mazzini": "Giuseppe Mazzini",
+    "Pietro Fortunato Calvi": "Pietro Fortunato Calvi", "Fortunato Calvi": "Pietro Fortunato Calvi",
     "Calvi": "Pietro Fortunato Calvi",
-    "Giuseppe Garibaldi": "Giuseppe Garibaldi",
-    "Garibaldi": "Giuseppe Garibaldi",
-    "Don Bastiano Barozzi": "Don Bastiano Barozzi",
-    "Don Bastiano": "Don Bastiano Barozzi",
-    "Felice Orsini": "Felice Orsini",
-    "Orsini": "Felice Orsini",
-    "Giuseppe Pieri": "Giuseppe Pieri",
-    "Pieri": "Giuseppe Pieri",
-    "Simon Bernard": "Simon Bernard",
-    "Napoleon III": "Napoleon III",
-    "Empress Eugénie": "Empress Eugénie",
-    "Eugénie": "Empress Eugénie",
-    "Empress": "Empress Eugénie",
+    "Giuseppe Garibaldi": "Giuseppe Garibaldi", "Garibaldi": "Giuseppe Garibaldi",
+    "Don Bastiano Barozzi": "Don Bastiano Barozzi", "Don Bastiano": "Don Bastiano Barozzi",
+    "Barozzi": "Don Bastiano Barozzi",
+    "Felice Orsini": "Felice Orsini", "Orsini": "Felice Orsini",
+    "Giuseppe Pieri": "Giuseppe Pieri", "Pieri": "Giuseppe Pieri",
+    "Antonio Gomez": "Antonio Gomez", "Gomez": "Antonio Gomez",
+    "Simon Bernard": "Simon Bernard", "Bernard": "Simon Bernard",
+    "Baron di Torocfalda": "Baron di Torocfalda", "Baron Egassy di Torocfalda": "Baron di Torocfalda",
+    "di Torocfalda": "Baron di Torocfalda", "Torocfalda": "Baron di Torocfalda",
+    "Napoleon III": "Napoleon III", "Luigi Napoleone": "Napoleon III",
+    "Louis-Napoleon": "Napoleon III", "Louis Napoleon": "Napoleon III",
+    "Empress Eugénie": "Empress Eugénie", "Eugénie": "Empress Eugénie", "Empress": "Empress Eugénie",
 }
+
+NOTABLE_PEOPLE = [
+    (("Cavour", "Camillo Benso"), "Camillo Benso, Count of Cavour"),
+    (("Vittorio Emanuele II", "Victor Emmanuel II"), "Victor Emmanuel II of Italy"),
+    (("Pius IX", "Pio Nono", "Mastai-Ferretti"), "Pope Pius IX"),
+    (("Pius VII",), "Pope Pius VII"),
+    (("Radetzky",), "Joseph Radetzky von Radetz"),
+    (("Charles Albert", "Carlo Alberto"), "Charles Albert of Sardinia"),
+    (("Napoleon I", "Napoleon the Great", "Napoleon Bonaparte"), "Napoleon"),
+    (("Francesco IV", "Francis IV"), "Francis IV, Duke of Modena"),
+    (("Victor Hugo",), "Victor Hugo"),
+    (("Francesco Crispi", "Crispi"), "Francesco Crispi"),
+    (("Carlo Pisacane", "Pisacane"), "Carlo Pisacane"),
+    (("Luciano Manara", "Manara"), "Luciano Manara"),
+    (("Daniele Manin", "Manin"), "Daniele Manin"),
+    (("Silvio Pellico", "Pellico"), "Silvio Pellico"),
+    (("Goffredo Mameli", "Mameli"), "Goffredo Mameli"),
+    (("Lajos Kossuth", "Kossuth"), "Lajos Kossuth"),
+    (("Ledru-Rollin", "Ledru Rollin"), "Alexandre Auguste Ledru-Rollin"),
+    (("Princess Cristina Belgioioso Triulzio", "Cristina Belgioioso Triulzio",
+      "Princess Belgioioso"), "Cristina Trivulzio di Belgiojoso"),
+    (("Nino Bixio", "Bixio"), "Nino Bixio"),
+    (("Agostino Bertani", "Bertani"), "Agostino Bertani"),
+    (("Rosalino Pilo", "Pilo"), "Rosalino Pilo"),
+    (("Anita Garibaldi",), "Anita Garibaldi"),
+    (("Ugo Bassi", "Bassi"), "Ugo Bassi"),
+    (("Ciceruacchio",), "Angelo Brunetti"),
+    (("Marie Antoinette",), "Marie Antoinette"),
+    (("Alfred Dreyfus", "Dreyfus"), "Alfred Dreyfus"),
+    (("Henri Charrière", "Charrière"), "Henri Charrière"),
+    (("Queen Victoria",), "Queen Victoria"),
+    (("Grant",), "Ulysses S. Grant"),
+    (("Sherman",), "William Tecumseh Sherman"),
+    (("Custer",), "George Armstrong Custer"),
+    (("McKinley",), "William McKinley"),
+    (("Franz Joseph", "Francesco Giuseppe"), "Franz Joseph I of Austria"),
+    (("Ferdinand II", "Re Bomba"), "Ferdinand II of the Two Sicilies"),
+    (("Metternich", "Klemens von Metternich"), "Klemens von Metternich"),
+    (("Edmond de Goncourt", "Goncourt"), "Edmond de Goncourt"),
+    (("Giovanni Verga", "Verga"), "Giovanni Verga"),
+    (("Luigi Capuana", "Capuana"), "Luigi Capuana"),
+    (("Francisco Ferrer", "Ferrer"), "Francisco Ferrer"),
+    (("Jules Favre", "Favre"), "Jules Favre"),
+    (("Emilio Visconti Venosta", "Visconti Venosta"), "Emilio Visconti-Venosta"),
+    (("Enrico Tazzoli", "Tazzoli"), "Enrico Tazzoli"),
+    (("Tito Speri", "Speri"), "Tito Speri"),
+    (("Adelaide Ristori", "La Ristori"), "Adelaide Ristori"),
+    (("Prince Napoleon", "Plon-Plon"), "Napoléon Joseph Charles Paul Bonaparte"),
+    # Cited historians that have an English Wikipedia article (others stay bare).
+    (("Christopher Duggan", "Duggan"), "Christopher Duggan"),
+    (("Lucy Riall", "Riall"), "Lucy Riall"),
+    (("Paul Ginsborg", "Ginsborg"), "Paul Ginsborg"),
+    (("G. M. Trevelyan", "George Macaulay Trevelyan", "Trevelyan"), "G. M. Trevelyan"),
+    (("Denis Mack Smith", "Mack Smith"), "Denis Mack Smith"),
+]
 
 # H2 sections of the summary overview that carry personae auto-links (the "lead").
 # "The book, part by part" and its intro line are excluded; the part summaries are
 # handled separately (an H3 part region ending at its first chapter H4).
-SUMMARY_OVERVIEW_IDS = {"logline", "synopsis", "how-its-told", "what-it-cares-about"}
+SUMMARY_OVERVIEW_IDS = {"synopsis", "how-its-told", "what-it-cares-about"}
 
 # Summary-page glossary auto-link (companion to SUMMARY_PERSON_ALIASES): surface forms
 # in the summary prose → the glossary headword (now an ``### Term`` heading, so it has
@@ -568,60 +624,61 @@ def _wrap_details(tokens: list[Token], citation_map: dict, docs_root: str) -> li
     return out
 
 
-def _summary_link_pattern(entities: list[dict]) -> tuple[re.Pattern, dict[str, tuple[str, str]]]:
-    """Compile the personae + glossary alias matcher for the summary page.
+def _people_targets(entities: list[dict], *, link_personae: bool,
+                    include_glossary: bool) -> dict[str, tuple[str, str, bool]]:
+    """Build ``alias → (href, hover title, is_external)`` for person auto-linking.
 
-    Resolves each alias in ``SUMMARY_PERSON_ALIASES`` / ``SUMMARY_GLOSSARY_ALIASES`` to
-    its target via the entity index (page == personae.html / glossary.html), so anchors
-    follow the index rather than being hard-coded. Returns ``(compiled pattern,
-    lowercased-alias → (relative href, hover title))``. Raises if an alias names an
-    entry that doesn't exist (a typo, or a renamed heading) so slug drift fails the
-    build loudly instead of emitting a dead link.
+    Personae figures resolve to an INTERNAL dossier anchor via the entity index
+    (omitted when ``link_personae`` is False — i.e. on the personae page itself, to
+    avoid self-links); NOTABLE_PEOPLE resolve to an EXTERNAL Wikipedia URL; glossary
+    terms (summary page only) resolve to their glossary anchor. Raises if a personae/
+    glossary alias names an entry that doesn't exist, so slug drift fails the build.
     """
-    by_page = {"personae.html": {}, "glossary.html": {}}
-    for e in entities:
-        if e["page"] in by_page:
-            by_page[e["page"]][e["name"]] = e["anchor"]
-
-    alias_target: dict[str, tuple[str, str]] = {}
-
-    def add(aliases: dict[str, str], page: str, where: str) -> None:
-        anchors = by_page[page]
-        for alias, canon in aliases.items():
-            if canon not in anchors:
-                raise AssertionError(
-                    f"Summary {where} alias {alias!r} → unknown {page} name {canon!r}"
-                )
-            alias_target[alias.lower()] = (f"{page}#{anchors[canon]}", f"See {canon} in the {where}")
-
-    add(SUMMARY_PERSON_ALIASES, "personae.html", "Personae")
-    add(SUMMARY_GLOSSARY_ALIASES, "glossary.html", "Glossary")
-
-    aliases = sorted(
-        set(SUMMARY_PERSON_ALIASES) | set(SUMMARY_GLOSSARY_ALIASES), key=len, reverse=True
-    )  # longest wins
-    pattern = re.compile(
-        r"\b(" + "|".join(re.escape(a) for a in aliases) + r")\b", re.IGNORECASE
-    )
-    return pattern, alias_target
+    pa = {e["name"]: e["anchor"] for e in entities if e["page"] == "personae.html"}
+    ga = {e["name"]: e["anchor"] for e in entities if e["page"] == "glossary.html"}
+    targets: dict[str, tuple[str, str, bool]] = {}
+    if link_personae:
+        for alias, canon in PERSONAE_ALIASES.items():
+            if canon not in pa:
+                raise AssertionError(f"Personae alias {alias!r} → unknown name {canon!r}")
+            targets[alias] = (f"personae.html#{pa[canon]}", f"See {canon} in the Personae", False)
+    if include_glossary:
+        for alias, canon in SUMMARY_GLOSSARY_ALIASES.items():
+            if canon not in ga:
+                raise AssertionError(f"Glossary alias {alias!r} → unknown name {canon!r}")
+            targets[alias] = (f"glossary.html#{ga[canon]}", f"See {canon} in the Glossary", False)
+    for aliases, wiki_title in NOTABLE_PEOPLE:
+        url = _wiki_url(wiki_title)
+        for alias in aliases:
+            targets[alias] = (url, f"{wiki_title} — Wikipedia", True)
+    return targets
 
 
-def _autolink_run(text: str, pattern: re.Pattern, alias_target: dict[str, tuple[str, str]],
-                  companion_root: str, seen: set[str]) -> list[Token]:
-    """Wrap the first not-yet-seen personae/glossary mention in a text run; record it in ``seen``."""
+def _people_pattern(targets: dict) -> re.Pattern:
+    """Longest-alias-first, CASE-SENSITIVE matcher (so the verb 'grant' never links)."""
+    aliases = sorted(targets, key=len, reverse=True)
+    return re.compile(r"\b(" + "|".join(re.escape(a) for a in aliases) + r")\b")
+
+
+def _emit_people_run(text: str, pattern: re.Pattern, targets: dict,
+                     companion_root: str, seen: set[str]) -> list[Token]:
+    """Wrap the first not-yet-seen person mention in a text run; record it in ``seen``."""
     out: list[Token] = []
     pos = 0
     for m in pattern.finditer(text):
-        rel_href, title = alias_target[m.group(1).lower()]
-        if rel_href in seen:               # already linked this target in this section
+        href, title, external = targets[m.group(1)]
+        if href in seen:                    # already linked this target in this scope
             continue
-        seen.add(rel_href)
+        seen.add(href)
         if m.start() > pos:
             out.append(_text_token(text[pos:m.start()]))
         link_open = Token("link_open", "a", 1)
-        link_open.attrSet("href", f"{companion_root}{rel_href}")
+        link_open.attrSet("href", href if external else f"{companion_root}{href}")
         link_open.attrSet("class", "entity-link")
         link_open.attrSet("title", title)
+        if external:                        # leaves the site — new tab + ↗ icon (CSS, WCAG G200)
+            link_open.attrSet("target", "_blank")
+            link_open.attrSet("rel", "noopener")
         out += [link_open, _text_token(m.group(0)), Token("link_close", "a", -1)]
         pos = m.end()
     if not out:
@@ -631,10 +688,48 @@ def _autolink_run(text: str, pattern: re.Pattern, alias_target: dict[str, tuple[
     return out
 
 
+def _autolink_inline(tok: Token, pattern: re.Pattern, targets: dict,
+                     companion_root: str, seen: set[str]) -> None:
+    """Rewrite one inline token's text children, skipping any already inside a link."""
+    out: list[Token] = []
+    depth = 0
+    for ch in tok.children:
+        if ch.type == "link_open":
+            depth += 1
+            out.append(ch)
+        elif ch.type == "link_close":
+            depth -= 1
+            out.append(ch)
+        elif ch.type == "text" and depth == 0:
+            out.extend(_emit_people_run(ch.content, pattern, targets, companion_root, seen))
+        else:
+            out.append(ch)
+    tok.children = out
+
+
+def _autolink_people_page(tokens: list[Token], pattern: re.Pattern, targets: dict,
+                          companion_root: str) -> None:
+    """Per-page first-mention person auto-link for a reference page (in place).
+
+    Links the first occurrence of each person across the whole page; never inside a
+    heading or an existing link. Runs after ``_transform``.
+    """
+    seen: set[str] = set()
+    i, n = 0, len(tokens)
+    while i < n:
+        tok = tokens[i]
+        if tok.type == "heading_open":
+            i += 3                          # skip heading_open / inline / heading_close
+            continue
+        if tok.type == "inline" and tok.children:
+            _autolink_inline(tok, pattern, targets, companion_root, seen)
+        i += 1
+
+
 def _autolink_summary_terms(tokens: list[Token], pattern: re.Pattern,
-                            alias_target: dict[str, tuple[str, str]], companion_root: str) -> None:
-    """Auto-link the first per-section personae/glossary mention across the summary's
-    lead and part summaries (mutating the token stream in place).
+                            targets: dict, companion_root: str) -> None:
+    """Auto-link the first per-section personae/glossary/notable mention across the
+    summary's lead and part summaries (mutating the token stream in place).
 
     A *section* is each whitelisted overview H2 region (``SUMMARY_OVERVIEW_IDS``) and
     each part-summary region — the prose between an ``### Part …`` H3 that has chapter
@@ -665,22 +760,7 @@ def _autolink_summary_terms(tokens: list[Token], pattern: re.Pattern,
             i += 3                             # skip the heading's own inline + close
             continue
         if region_on and tok.type == "inline" and tok.children:
-            out: list[Token] = []
-            link_depth = 0
-            for ch in tok.children:
-                if ch.type == "link_open":
-                    link_depth += 1
-                    out.append(ch)
-                elif ch.type == "link_close":
-                    link_depth -= 1
-                    out.append(ch)
-                elif ch.type == "text" and link_depth == 0:
-                    out.extend(
-                        _autolink_run(ch.content, pattern, alias_target, companion_root, seen)
-                    )
-                else:
-                    out.append(ch)
-            tok.children = out
+            _autolink_inline(tok, pattern, targets, companion_root, seen)
         i += 1
 
 
@@ -934,33 +1014,48 @@ def build() -> None:
     page_count = 0
     page_ids: dict[str, set[str]] = {}              # output html → its heading ids
     xrefs: list[tuple[str, str, str]] = []          # (source page, target page, anchor)
+    nav_stems = {n for n, _ in NAV}                 # pages that carry person auto-links
 
+    # Pass 1 — parse, assign ids + citation/source links, and collect the entity index
+    # for EVERY page first, so person auto-links (which resolve to personae/glossary
+    # anchors) can reference figures defined on pages rendered later in sorted order.
+    parsed: list[tuple] = []
     for src in sorted(COMPANION_SRC.rglob("*.md")):
         rel = src.relative_to(COMPANION_SRC)
         depth = len(rel.parts) - 1
         stem = rel.with_suffix("").as_posix()
         docs_root = "../" * (depth + 1)
-        companion_root = "../" * depth
-
-        text = src.read_text(encoding="utf-8")
-        tokens = md.parse(text)
-
+        tokens = md.parse(src.read_text(encoding="utf-8"))
         collector = entities if rel.name == "personae.md" else None
         title = _transform(tokens, citation_map, docs_root, collector, stem)
         if rel.name == "glossary.md":
             entities.extend(_glossary_entities(tokens))
-        if stem == "summary":
-            assert any(e["page"] == "personae.html" for e in entities) and \
-                any(e["page"] == "glossary.html" for e in entities), \
-                "personae and glossary entities must be collected before the summary page"
-            link_pat, alias_target = _summary_link_pattern(entities)
-            _autolink_summary_terms(tokens, link_pat, alias_target, companion_root)
+        parsed.append((rel, depth, stem, docs_root, tokens, title))
+
+    assert any(e["page"] == "personae.html" for e in entities) and \
+        any(e["page"] == "glossary.html" for e in entities), \
+        "personae/glossary entities must be collected before person auto-linking"
+
+    # Pass 2 — person auto-link (NAV pages), wrap the summary's disclosures, render.
+    for rel, depth, stem, docs_root, tokens, title in parsed:
+        companion_root = "../" * depth
+        if stem in nav_stems:
+            targets = _people_targets(
+                entities,
+                link_personae=(stem != "personae"),   # no self-links on the dossier page
+                include_glossary=(stem == "summary"),  # glossary terms only on the summary
+            )
+            pattern = _people_pattern(targets)
+            if stem == "summary":
+                _autolink_summary_terms(tokens, pattern, targets, companion_root)
+            else:
+                _autolink_people_page(tokens, pattern, targets, companion_root)
         if stem in NESTED_DETAILS_PAGES:
             tokens = _wrap_details(tokens, citation_map, docs_root)
 
         body_html = md.renderer.render(tokens, md.options, {})
         page_title = title or rel.stem.replace("-", " ").title()
-        active_stem = stem if any(stem == n for n, _ in NAV) else ""
+        active_stem = stem if stem in nav_stems else ""
 
         # Collect heading ids and bare same-directory cross-links for validation.
         out_rel = rel.with_suffix(".html").as_posix()
@@ -1011,5 +1106,92 @@ def build() -> None:
           f"data/companion_entity_index.json ({len(entities)} entities)")
 
 
+# --------------------------------------------------------------------------- #
+# Offline external-link check (on demand; NOT part of build())
+# --------------------------------------------------------------------------- #
+def check_links(timeout: float = 15.0, workers: int = 8) -> int:
+    """Verify the rendered companion's external links resolve (network, on demand).
+
+    The build's ``_assert_companion_xrefs`` validates *internal* anchors but cannot
+    check the person→Wikipedia links, the source citations, or hand-authored outbound
+    links — if Wikipedia renames an article, such a link rots silently. This scans
+    ``docs/companion/**/*.html`` for ``http(s)`` links, de-duplicates them, and probes
+    each with a HEAD (falling back to GET) request. 2xx/3xx pass; 401/403/429 are
+    reported as *blocked* (reachable but bot-refused — not a failure); 404/410/5xx and
+    connection errors FAIL. Returns a non-zero exit code only on real failures, so it
+    can gate a manual or CI check. Kept out of ``build()`` so the build stays offline.
+    """
+    import urllib.request
+    import urllib.error
+    from collections import defaultdict
+    from concurrent.futures import ThreadPoolExecutor
+
+    if not DOCS_COMPANION.exists():
+        print(f"  {DOCS_COMPANION} not found — run `python companion.py` first.")
+        return 1
+
+    refs: dict[str, set[str]] = defaultdict(set)        # url → pages that reference it
+    for html in sorted(DOCS_COMPANION.rglob("*.html")):
+        page = html.relative_to(DOCS_COMPANION).as_posix()
+        for url in re.findall(r'href="(https?://[^"]+)"', html.read_text(encoding="utf-8")):
+            refs[url].add(page)
+
+    urls = sorted(refs)
+    print(f"  Checking {len(urls)} unique external links in {DOCS_COMPANION} …")
+
+    def probe(url: str) -> tuple[str, object]:
+        headers = {"User-Agent": "PerLaLiberta-link-check/1.0 (companion build)"}
+        last: object = "ERR"
+        for method in ("HEAD", "GET"):
+            try:
+                req = urllib.request.Request(url, method=method, headers=headers)
+                with urllib.request.urlopen(req, timeout=timeout) as r:
+                    return url, r.status
+            except urllib.error.HTTPError as e:
+                last = e.code
+                if method == "HEAD" and e.code in (400, 403, 405):
+                    continue                            # host refuses HEAD — retry as GET
+                return url, e.code
+            except Exception as e:                      # timeout/URLError — retry as GET
+                last = f"ERR {type(e).__name__}"
+        return url, last
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        results = dict(pool.map(probe, urls))
+
+    def kind(status: object) -> str:
+        if isinstance(status, int) and 200 <= status < 400:
+            return "ok"
+        if status in (401, 403, 429):
+            return "blocked"
+        return "fail"
+
+    blocked = sorted(u for u, s in results.items() if kind(s) == "blocked")
+    failed = sorted(u for u, s in results.items() if kind(s) == "fail")
+    ok = len(urls) - len(blocked) - len(failed)
+    print(f"  {ok}/{len(urls)} OK"
+          + (f", {len(blocked)} blocked (bot-refused)" if blocked else "")
+          + (f", {len(failed)} FAILED" if failed else "") + ".")
+
+    for url in blocked:
+        print(f"    [blocked {results[url]}] {url}")
+    for url in failed:
+        print(f"    [FAIL {results[url]}] {url}\n        ← {', '.join(sorted(refs[url]))}")
+
+    if failed:
+        return 1
+    print("  All external links resolve." if not blocked
+          else "  No broken links (blocked hosts refuse automated checks but are reachable).")
+    return 0
+
+
 if __name__ == "__main__":
-    build()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Render the Reader's Companion to docs/companion/.")
+    parser.add_argument(
+        "--check-links", action="store_true",
+        help="Verify external links in the built companion resolve (network); does not rebuild.",
+    )
+    args = parser.parse_args()
+    raise SystemExit(check_links() if args.check_links else build())

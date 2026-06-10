@@ -2,10 +2,12 @@
 
 to **_Per la libertà!_** — Cesare Crespi's 1913 memoir of Count Carlo di Rudio, conspirator with Felice Orsini.
 
+An aged Risorgimento conspirator, exiled to America, recounts his life — fighting for the 1849 Roman Republic, the 1858 Orsini plot to assassinate Napoleon III, a death sentence commuted on the scaffold, escape from a Guiana penal colony, and a homeland never seen again — as testimony gathered by a journalist in his California exile and published in 1913.
+
 This companion gathers background and reference material for the English translation of the memoir — guides to the people, events, chronology, and ideas the book assumes its reader already knows. There is no required order; start wherever your question is.
 
 <nav class="companion-hub" aria-label="Companion sections">
-<a class="hub-card hub-card-wide" href="summary.html"><span class="hub-label">Layered Summary</span><span class="hub-blurb">The book in five tiers, from a one-line logline to a chapter-by-chapter outline of all 58 chapters.</span><span class="hub-badge">Start here &#9656;</span></a>
+<a class="hub-card hub-card-wide" href="summary.html"><span class="hub-label">Layered Summary</span><span class="hub-blurb">The book at every depth — from a short synopsis to a chapter-by-chapter outline of all 58 chapters.</span><span class="hub-badge">Start here &#9656;</span></a>
 <a class="hub-card" href="timeline.html"><span class="hub-label">Timeline</span><span class="hub-blurb">A dated spine of di Rudio's life, cross-referenced to chapters and source pages.</span></a>
 <a class="hub-card" href="personae.html"><span class="hub-label">Dramatis Personae</span><span class="hub-blurb">Who the key figures were — in the book, and in the historical record.</span></a>
 <a class="hub-card" href="events.html"><span class="hub-label">Event Context</span><span class="hub-blurb">The historical episodes the memoir dramatizes, from the Five Days of Milan to Aspromonte.</span></a>
