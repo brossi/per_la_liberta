@@ -4,7 +4,13 @@
       "style": "verse",
       "it": "\"Giudica e manda secondo che avvinghia\"",
       "en": "“Judges and consigns according to how he coils”",
-      "note": "Dante, Inferno V.6 — centered italic display line in the 1913 printing (p. 7)"
+      "note": "Prefazione, p.7: centered, italic display line (Dante quotation), set off on its own line with surrounding quotation marks; native-resolution crop shows clearly slanted letterforms."
+    },
+    {
+      "style": "small-caps",
+      "it": "Cesare Crespi.",
+      "en": "Cesare Crespi.",
+      "note": "Prefazione, p.8: right-aligned author signature set in small caps (initial full-height capitals C, remaining letters capital forms at x-height); not the chapter-opening incipit."
     }
   ],
   "p1_capitolo_primo": [
@@ -12,7 +18,137 @@
       "style": "bold",
       "it": "Popolo",
       "en": "People",
-      "note": "Mazzini's concept of The People — bold in the 1913 printing (p. 5), set against the plain 'popolo' immediately following"
+      "it_anchor": "un uomo noto al Popolo ed ai suoi tiranni",
+      "en_anchor": "a man known to the People and to its tyrants",
+      "note": "Crespi, p.11 (scan page_0011), left column, mid-paragraph 'un uomo noto al Popolo ed ai suoi tiranni'. 'Popolo' set in visibly heavier/darker strokes than surrounding roman text (concept-word emphasis, same convention as Mazzini's 'Popolo'). English 'People' is capitalized in en_text and carries the same emphasis intent."
+    }
+  ],
+  "p1_capitolo_quarto": [
+    {
+      "style": "bold",
+      "it": "Fortunato Calvi",
+      "en": "Fortunato Calvi",
+      "it_anchor": "amicissimo della mia famiglia: Pietro Fortunato Calvi",
+      "en_anchor": "dear friend of my family: Pietro Fortunato Calvi",
+      "note": "Dante n/a — Crespi, p.26 (left column, last line): in the patriot's first introduction \"famiglia: Pietro Fortunato Calvi...\" the words 'Fortunato Calvi' are set in clearly heavier (bold) strokes while 'Pietro' is roman; verified in native-resolution crop. The other three mentions of 'Pietro Fortunato Calvi' (p.26 right col, p.27 left col, p.28) are plain roman — only the first introduction is bold, hence the anchor."
+    }
+  ],
+  "p1_capitolo_decimo_quinto": [
+    {
+      "style": "verse",
+      "it": "\"Parva favilla gran fiamma seconda\"",
+      "en": "'Parva favilla gran fiamma seconda.'",
+      "note": "Dante quotation set off as an indented, bold display line on p.77, right column (lone line with whitespace, heavier strokes than surrounding paragraph text). Categorized as verse for the set-off centered display rendering; EN carries it as an italicized inline quotation."
+    }
+  ],
+  "p1_capitolo_decimo_settimo": [
+    {
+      "style": "verse",
+      "it": "\"Mazzini è in sul loco ove si trema",
+      "en": "*\"Mazzini is in the place where men tremble*",
+      "note": "Dante/dall'Ungaro verse quotation, p.85 right column, four-line centered set-off stanza in quotation marks; line 1"
+    },
+    {
+      "style": "verse",
+      "it": "\"Che giunga a' traditor l'ora suprema;",
+      "en": "*That the hour supreme may reach the traitor's ear;*",
+      "note": "verse stanza p.85 centered set-off line 2"
+    },
+    {
+      "style": "verse",
+      "it": "\"Mazzini è in ogni loco ove si opera",
+      "en": "*Mazzini is in every place where men labor*",
+      "note": "verse stanza p.85 centered set-off line 3"
+    },
+    {
+      "style": "verse",
+      "it": "\"Versar il sangue per l'Italia intera!\"",
+      "en": "*To shed their blood for Italy entire!\"*",
+      "note": "verse stanza p.85 centered set-off line 4"
+    }
+  ],
+  "p1_capitolo_ventesimoterzo": [
+    {
+      "style": "bold",
+      "it": "pena la morte",
+      "en": "on pain of death",
+      "note": "p.116, left column, mid-page: 'difendere pena la morte, aveva' — 'pena la morte' set in visibly heavier strokes than surrounding roman; 'pena la' ends one line, 'morte,' begins the next, both bold."
+    },
+    {
+      "style": "bold",
+      "it": "Francesco Giuseppe",
+      "en": "Francesco Giuseppe",
+      "note": "p.119, footnote (1), second line: 'Francesco Giuseppe si recò a Venezia' — name set in bold, clearly heavier than the surrounding footnote roman."
+    }
+  ],
+  "p2_capitolo_terzo": [
+    {
+      "style": "bold",
+      "it": "amori",
+      "en": "loves",
+      "it_anchor": "altri amori",
+      "en_anchor": "other loves",
+      "note": "Dante p.140 (printed folio 134), right column: in the line 'altri uomini, altri amori!' the final word 'amori' is set in visibly heavier strokes than the surrounding roman; the other 'amori' (p.137 'grandi nei loro amori') is plain roman, hence the anchor."
+    }
+  ],
+  "p2_capitolo_sesto": [
+    {
+      "style": "verse",
+      "it": "\"Sotto l'usbergo del sentirsi puro\"",
+      "en": "\"Under the hauberk of feeling himself pure,\"",
+      "note": "Crespi p.150 (scan page 150), right column: Dante quotation (Inferno XXVIII) set on its own centered line, offset from the surrounding prose. Set in roman type (not slanted) but typographically set off as a display verse line. Quotation marks included per convention."
+    }
+  ],
+  "p2_capitolo_dodicesimo": [
+    {
+      "style": "bold",
+      "it": "th",
+      "it_anchor": "cambiando in t il suono del th e facendo",
+      "note": "p2_capitolo_dodicesimo, scan page_0170.png (folio 164), right column. Phonetic letter-pair set in bold roman (heavier strokes than surrounding text) in the passage on Orsini's pronunciation of 'thirty'. Confirmed in native-resolution crop /tmp/d3.png. English en_text already encodes this as markdown italic (*th*), so en left empty to avoid double-styling."
+    },
+    {
+      "style": "bold",
+      "it": "t",
+      "it_anchor": "cambiando in t il suono",
+      "note": "p2_capitolo_dodicesimo, scan page_0170.png (folio 164), right column. Standalone phonetic letter 't' set in bold roman ('cambiando in t il suono del th'). First 't' inside the anchor is the bold standalone letter. Confirmed in crop /tmp/d3.png. English en_text already carries *t* italic, so en left empty."
+    },
+    {
+      "style": "bold",
+      "it": "r",
+      "it_anchor": "l'r... il che",
+      "note": "Crespi p.170: phonetic reference — only the letter 'r' (after the elided article l') is bold roman; l' is plain. Narrowed from 'l'r' per native-crop verification so the article is not emboldened."
+    }
+  ],
+  "p2_capitolo_sedicesimo": [
+    {
+      "style": "bold",
+      "it": "a cavallo",
+      "en": "rode frequently",
+      "note": "Crespi, p.187, right column: in 'percorresse frequentemente, a cavallo, le vie della metropoli' the phrase 'a cavallo' is set in visibly heavier (bold) type than the surrounding roman; concept-emphasis bold. English carries no styling in the source; mapped to the corresponding 'rode frequently'."
+    },
+    {
+      "style": "bold",
+      "it": "star",
+      "en": "standing without trembling",
+      "it_anchor": "di star di fronte, senza tremiti",
+      "note": "Crespi, p.189, left column: in 'incapaci di star di fronte, senza tremiti' the word 'star' is upright but visibly heavier (bold) than surrounding roman; emphasis bold. Italian fragment 'star' is unique in it_text. English 'standing' (within 'standing without trembling') is the corresponding word."
+    }
+  ],
+  "p2_capitolo_decimonono": [
+    {
+      "style": "bold",
+      "it": "non dovrei dirlo",
+      "en": "why should I not say it",
+      "it_anchor": "Quanto a me perchè non dovrei dirlo! Quei momenti",
+      "en_anchor": "As for me... why should I not say it? Those moments",
+      "note": "Crespi, p.204 (scan page_0204), left column. \"non dovrei dir-\" / \"-lo\" is set in visibly heavier bold strokes versus the surrounding roman (\"Quanto a me.... perchè\"). Word hyphenated across the line break; the \"lo\" reads regular weight but the emphasis unit is the full phrase \"non dovrei dirlo\". English carries no original markup (translation); en fragment supplied so the concept-emphasis can map to both editions."
+    }
+  ],
+  "p2_capitolo_ventesimo_ottavo": [
+    {
+      "style": "bold",
+      "it": "precipitò tra le braccia priva di sensi",
+      "note": "Crespi, folio 238 (page_0244.png), right column. Full line set in visibly heavier strokes than the surrounding roman text: 'precipitò tra le braccia priva di sensi.' The preceding 'Mi' (end of prior line) is roman; the bold span begins at 'precipitò' and runs through 'sensi'. Verified on a native-resolution crop. English carries no corresponding bold (the translation 'She fell senseless into my arms.' is plain roman), so en is left empty."
     }
   ]
 }
