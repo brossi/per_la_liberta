@@ -33,6 +33,7 @@ main.py
 
 # LLM cleanup cache (transient, regenerable via --batch --llm-cleanup)
 state/llm_cleaned/
+state/_llm_cleaned.stale-2026-04-03/
 state/llm_batch.json
 
 # Claude Code local settings

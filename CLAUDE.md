@@ -63,6 +63,19 @@ uv run python pipeline.py --skip-ocr     # use existing copy3 or fall back to 2-
 uv run python pipeline.py --no-triage    # majority vote only, skip LLM triage
 ```
 
+### Regeneration guard (cleanup / translate / all)
+
+`--step cleanup`, `--step translate`, and `--step all` overwrite committed,
+hand-tuned text. The local LLM-cleanup cache (`state/llm_cleaned/`) holds only
+31/58 chapters and some are stale, so re-running these **degrades**
+`output/*.md` and `state/translations/`. `pipeline.py` blocks them: each prints
+a warning and requires a human to type `regenerate <step>` at an interactive
+TTY. There is no TTY for agents, CI, or the auto-mode overseer, so they
+hard-abort with exit code 2 — and the same three commands are in the `deny`
+list of `.claude/settings.local.json`. A human who genuinely intends to
+regenerate can set `PER_LA_LIBERTA_ALLOW_REGEN=1`. Typesetting needs only
+`--step typeset`, which is unguarded.
+
 ## Environment Variables
 
 Set in `.env` (gitignored, loaded automatically by `pipeline.py` via `python-dotenv`):

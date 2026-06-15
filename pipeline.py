@@ -1,6 +1,8 @@
 """Main orchestrator for the OCR reconciliation and translation pipeline."""
 
 import argparse
+import os
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -16,6 +18,57 @@ STEPS = [
     "download", "ocr", "reconcile", "triage", "cleanup",
     "adjudicate", "validate", "translate", "refine", "typeset", "companion", "all",
 ]
+
+# Steps that overwrite committed, hand-tuned text. The local LLM-cleanup cache
+# (state/llm_cleaned/) holds only 31 of 58 chapters and some entries are stale,
+# so re-running these regenerates output/*.md and state/translations/ from
+# degraded inputs. They are complete; regenerating is a rare, deliberate act
+# that must never happen unattended (agents, CI, the auto-mode overseer).
+REGEN_STEPS = {"cleanup", "translate"}
+
+
+def _require_human_regen_consent(step: str) -> None:
+    """Refuse a text-regenerating step unless a human confirms at a real TTY.
+
+    A non-interactive caller (any agent, CI, or the overseer running Bash) has
+    no terminal on stdin, so isatty() is False and the step hard-aborts. Set
+    PER_LA_LIBERTA_ALLOW_REGEN=1 only when a human has deliberately scripted a
+    regeneration and accepts the consequences above.
+    """
+    banner = (
+        "\n"
+        "============================================================\n"
+        f"  REFUSING --step {step}: this OVERWRITES committed text.\n"
+        "------------------------------------------------------------\n"
+        "  The local LLM-cleanup cache is incomplete (31/58) and\n"
+        "  partly stale. Regenerating DEGRADES output/*.md and\n"
+        "  state/translations/. These steps are done -- to typeset,\n"
+        "  use --step typeset only.\n"
+        "============================================================\n"
+    )
+    print(banner, file=sys.stderr)
+
+    if os.environ.get("PER_LA_LIBERTA_ALLOW_REGEN") == "1":
+        print("PER_LA_LIBERTA_ALLOW_REGEN=1 set -- proceeding.", file=sys.stderr)
+        return
+
+    if not sys.stdin.isatty():
+        print(
+            "No interactive terminal. This step requires a human to confirm "
+            "at a prompt and cannot run unattended. Aborting.",
+            file=sys.stderr,
+        )
+        sys.exit(2)
+
+    phrase = f"regenerate {step}"
+    try:
+        reply = input(f'Type exactly "{phrase}" to proceed (anything else aborts): ')
+    except (EOFError, KeyboardInterrupt):
+        print("\nAborted.", file=sys.stderr)
+        sys.exit(2)
+    if reply.strip() != phrase:
+        print("Aborted.", file=sys.stderr)
+        sys.exit(2)
 
 
 def main():
@@ -118,6 +171,11 @@ def main():
     else:
         ch_list = None
 
+    # `all` runs cleanup and translate (and overwrites earlier artifacts on the
+    # way there), so gate it once up front -- before any step touches disk.
+    if args.step == "all":
+        _require_human_regen_consent("all")
+
     if args.step in ("download", "all"):
         print("Step 1: Downloading OCR texts...")
         from download import download_texts
@@ -171,6 +229,8 @@ def main():
         print()
 
     if args.step in ("cleanup", "all"):
+        if args.step == "cleanup":
+            _require_human_regen_consent("cleanup")
         print("Step 5: Cleaning up OCR artifacts...")
         from cleanup import cleanup
 
@@ -200,6 +260,8 @@ def main():
         print()
 
     if args.step in ("translate", "all"):
+        if args.step == "translate":
+            _require_human_regen_consent("translate")
         if args.multi_model:
             print("Step 7: Multi-witness translation (draft → evaluate → synthesise)...")
             from multi_translate import multi_translate
