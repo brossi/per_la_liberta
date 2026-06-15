@@ -2,37 +2,73 @@
    Loeb Classical Library-style facing pages.
    Italian (verso/left) — English (recto/right) */
 
-/* === Font === */
+/* === Fonts ===
+   Display (titles, chapter heads): Spectral — a moderate-contrast, screen-tuned
+   literary serif. Body (running text, both languages): Fraunces — a warm old-style
+   with an optical-size axis (font-optical-sizing, set on html, drives opsz from the
+   rendered size, so small text gets the more legible cut automatically). Both SIL
+   OFL, self-hosted. Fraunces is one variable file per slope; Spectral is static
+   weights (the display weights actually used: 400 / 600 / 700 + italic). */
 @font-face {
-  font-family: 'Bodoni Moda';
-  src: url('../docs/assets/fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
-  font-weight: 400 900;
+  font-family: 'Fraunces';
+  src: url('../docs/assets/fonts/Fraunces/Fraunces-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Bodoni Moda';
-  src: url('../docs/assets/fonts/Bodoni_Moda/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
-  font-weight: 400 900;
+  font-family: 'Fraunces';
+  src: url('../docs/assets/fonts/Fraunces/Fraunces-Italic-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 
-/* Small Caps variant for headers */
 @font-face {
-  font-family: 'Bodoni Moda SC';
-  src: url('../docs/assets/fonts/Bodoni_Moda_SC/BodoniModaSC-VariableFont_opsz,wght.ttf') format('truetype');
-  font-weight: 400 900;
+  font-family: 'Spectral';
+  src: url('../docs/assets/fonts/Spectral/Spectral-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('../docs/assets/fonts/Spectral/Spectral-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('../docs/assets/fonts/Spectral/Spectral-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Spectral';
+  src: url('../docs/assets/fonts/Spectral/Spectral-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 /* === Base Typography === */
 :root {
-  --body-size: 16px;
+  /* Fluid body size: ~16px on a phone up to 18px on a wide desktop. Uses px+vw
+     only (no rem/em — this property defines the root font size). The A−/A+ control
+     sets html's inline font-size in px, overriding this once the reader opts in. */
+  --body-size: clamp(16px, 14.5px + 0.4vw, 18px);
   --leading: 1.55;
   --heading-tracking: 0.12em;
+  /* Type families — the single source of truth, mirroring the colour tokens.
+     Display = Spectral (titles/heads); body = Fraunces (running text). */
+  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
+  --font-body: 'Fraunces', Georgia, 'Times New Roman', serif;
   --color-body: #483826;
   --color-muted: #6f6243;
   --color-accent: #8b0000;
@@ -123,7 +159,7 @@
 }
 
 html {
-  font-family: 'Bodoni Moda', 'Libre Bodoni', Georgia, 'Times New Roman', serif;
+  font-family: var(--font-body);
   font-size: var(--body-size);
   font-optical-sizing: auto;
   line-height: var(--leading);
@@ -143,6 +179,7 @@ body {
 }
 
 .title-col {
+  font-family: var(--font-display);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -182,6 +219,7 @@ body {
 }
 
 .part-page h2 {
+  font-family: var(--font-display);
   font-size: 2em;
   font-weight: 700;
   letter-spacing: var(--heading-tracking);
@@ -204,6 +242,7 @@ body {
 }
 
 .chapter-header {
+  font-family: var(--font-display);
   text-align: center;
   margin-bottom: 1.5em;
   padding-bottom: 0.8em;
@@ -394,6 +433,7 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
 }
 
 .colophon h2 {
+  font-family: var(--font-display);
   font-size: 1.3em;
   letter-spacing: var(--heading-tracking);
   margin-bottom: 1em;
@@ -739,7 +779,7 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   justify-content: center;
   font-size: 0.8em;
   font-weight: 700;
-  font-family: 'Bodoni Moda', Georgia, serif;
+  font-family: var(--font-display);
 }
 
 /* Swatch faces mirror each theme's paper ground + ink glyph */
@@ -830,8 +870,9 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   align-items: center;
   padding: 0.8em 1.2em;
   border-bottom: 1px solid var(--border-light);
-  font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
-  font-size: 1em;
+  font-family: var(--font-display);
+  font-variant: small-caps;
+  font-size: 1.05em;
   font-weight: 600;
   letter-spacing: var(--heading-tracking);
   color: var(--color-body);
@@ -1011,6 +1052,85 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   }
 }
 
+/* === Responsive / mobile ===
+   The facing-page spread assumes a wide screen. Below ~60em it folds to a single
+   centred column (measure still capped — never full-bleed), the marginalia gutter
+   and its notes (a desktop affordance) fold away, and the slide-in scan panel takes
+   most of the viewport. Phones additionally trade page margins for column width and
+   enlarge the fixed controls to tappable (~44px) targets. */
+@media screen and (max-width: 60em) {
+  /* One centred column in every language mode; measure capped at 36em so a line
+     never runs to a tablet-wide measure. */
+  .spread,
+  .lang-it-only .spread,
+  .lang-en-only .spread {
+    grid-template-columns: minmax(0, 36em);
+  }
+  /* No reserved right gutter, no inter-column rule/padding once stacked. */
+  body:not(.no-marginalia):not(.lang-it-only) .spread {
+    padding-right: 0;
+  }
+  .verso {
+    border-right: none;
+    padding-right: 0;
+  }
+  .recto {
+    padding-left: 0;
+  }
+  /* Both-language mode stacks verso over recto — divide them with a horizontal rule,
+     since the vertical column border is gone. */
+  body:not(.lang-it-only):not(.lang-en-only) .recto {
+    border-top: 1px solid var(--border-light);
+    margin-top: 1.4em;
+    padding-top: 1.4em;
+  }
+  /* Marginalia (revision/provenance notes) and page citations live in the gutter
+     that no longer exists — fold them away rather than let them break the flow. */
+  .marginalia,
+  .page-cite {
+    display: none;
+  }
+  /* The source-scan overlay was 45vw of a wide screen; give it most of a narrow one. */
+  .page-overlay {
+    width: min(94vw, 32em);
+  }
+}
+
+@media screen and (max-width: 34em) {
+  /* Phone: spend the page margins on column width (the Kindle / Apple Books move). */
+  body {
+    margin: 1em auto;
+    padding: 0 0.7em;
+  }
+  .companion-page {
+    padding: 1.6em 1.1em 3em;
+  }
+  .companion-footer,
+  .companion-next {
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+  }
+  /* Fixed controls: let the cluster wrap and keep each control tappable (~44px). */
+  .top-right-controls {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: calc(100vw - 1em);
+    top: 0.5em;
+    right: 0.5em;
+  }
+  .font-size-controls button,
+  .lang-focus-controls button {
+    min-height: 44px;
+  }
+  .toc-trigger {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* === Revision Marginalia === */
 .recto {
   overflow: visible;
@@ -1186,7 +1306,8 @@ body.companion {
 .companion-page h1,
 .companion-page h2,
 .companion-page h3 {
-  font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
+  font-family: var(--font-display);
+  font-variant: small-caps;
   letter-spacing: 0.03em;
   line-height: 1.25;
   margin: 1.8em 0 0.5em;
@@ -1349,7 +1470,7 @@ body.companion {
   display: inline;
 }
 .companion-page details.summary-chapter > summary > h4 {
-  font-family: 'Bodoni Moda', Georgia, serif;
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: 1em;
   letter-spacing: 0;
@@ -1397,8 +1518,9 @@ body.companion {
 /* The Summary is the primary entry point — span the full grid width. */
 .companion-hub .hub-card-wide { grid-column: 1 / -1; }
 .companion-hub .hub-label {
-  font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
-  font-size: 1.02em;
+  font-family: var(--font-display);
+  font-variant: small-caps;
+  font-size: 1.08em;
   letter-spacing: 0.03em;
   color: var(--color-body);
 }
@@ -1432,9 +1554,10 @@ body.companion {
   text-align: right;
 }
 .companion-next a {
-  font-family: 'Bodoni Moda SC', 'Bodoni Moda', Georgia, serif;
+  font-family: var(--font-display);
+  font-variant: small-caps;
   letter-spacing: 0.03em;
-  font-size: 1.05em;
+  font-size: 1.1em;
   color: var(--color-accent);
   text-decoration: none;
   border-bottom: 1px solid transparent;

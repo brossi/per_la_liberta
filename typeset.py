@@ -1010,7 +1010,7 @@ def generate_html(
         '  (<span style="color:var(--color-accent)">\u270e</span>) mark post-synthesis refinements.</p>',
         "  <p>Translation and typesetting by Ben Rossi, March\u2013April 2026.</p>",
         f'  <p>Source scans: <a href="https://archive.org/details/{IA_ITEM_ID}">Internet Archive</a></p>',
-        "  <p>Typeface: Bodoni Moda</p>",
+        "  <p>Typefaces: Spectral (display) &amp; Fraunces (text), both SIL Open Font License.</p>",
         "</div>",
         "",
         "",
