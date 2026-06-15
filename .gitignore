@@ -40,3 +40,6 @@ state/llm_batch.json
 
 # Throwaway typeface decision specimens (repo-root scratch; one loads a commercial demo font via CDN)
 type-specimen*.html
+
+# Drop-cap analysis sheets (large glyph/context measurement scratch, regenerable)
+docs/assets/dropcaps/
