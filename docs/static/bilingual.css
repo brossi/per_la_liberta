@@ -495,6 +495,13 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   margin: 0.7em 0;
 }
 
+/* Bold concept-emphasis from the 1913 printing (e.g. Mazzini's "Popolo").
+   Fraunces is variable (100-900), so this maps to a true bold instance rather
+   than synthetic bolding. */
+strong {
+  font-weight: 700;
+}
+
 /* === Colophon === */
 .colophon {
   page-break-before: always;

@@ -6,5 +6,13 @@
       "en": "“Judges and consigns according to how he coils”",
       "note": "Dante, Inferno V.6 — centered italic display line in the 1913 printing (p. 7)"
     }
+  ],
+  "p1_capitolo_primo": [
+    {
+      "style": "bold",
+      "it": "Popolo",
+      "en": "People",
+      "note": "Mazzini's concept of The People — bold in the 1913 printing (p. 5), set against the plain 'popolo' immediately following"
+    }
   ]
 }

@@ -30,9 +30,24 @@ Sidecar shape — keyed by the slug chapter id that ``typeset.py`` uses (the
 
 Each entry carries the verbatim text to mark per language (``it`` / ``en``); a
 language key may be omitted when only one edition uses the convention for that
-span. ``style`` is one of:
+span.
+
+Disambiguation when a word recurs in a chapter (there is no stable paragraph
+id to address by position):
+
+- ``<lang>_anchor`` — a longer verbatim context containing the fragment (e.g.
+  ``"it_anchor": "un uomo noto al Popolo ed ai suoi tiranni"``). The fragment is
+  wrapped only inside the first instance of that anchor, so "the Popolo in *this*
+  sentence" is addressable. Two same-word entries get distinct anchors.
+- ``occurrences`` — ``"first"`` (default), ``"all"`` (a word emphasized
+  throughout), or a 1-based int. Applies within the anchor region when one is
+  given, else across the whole paragraph.
+
+``style`` is one of:
 
 - ``italic``     — inline emphasis -> markdown ``*...*`` -> ``<em>``
+- ``bold``       — inline heavy emphasis (the 1913 printer's bold concept-words,
+                   e.g. Mazzini's "Popolo") -> ``<strong>``
 - ``small-caps`` — inline small capitals -> ``<span class="sc">``
 - ``verse``      — set-off display line (e.g. a quoted verse), rendered as a
                    centered italic block; include surrounding quotation marks in
@@ -55,6 +70,7 @@ from pathlib import Path
 # never occur in the source text. Rewritten to spans by typeset._para_to_html.
 SC_OPEN, SC_CLOSE = "⟦sc⟧", "⟦/sc⟧"
 VERSE_OPEN, VERSE_CLOSE = "⟦verse⟧", "⟦/verse⟧"
+B_OPEN, B_CLOSE = "⟦b⟧", "⟦/b⟧"
 
 
 def load_typography(data_dir: Path) -> dict[str, list[dict]]:
@@ -65,53 +81,113 @@ def load_typography(data_dir: Path) -> dict[str, list[dict]]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _wrap(frag: str, style: str) -> str | None:
+    """Return ``frag`` wrapped in the marker for ``style``, or ``None`` if unknown."""
+    if style == "italic":
+        return f"*{frag}*"
+    if style == "bold":
+        return f"{B_OPEN}{frag}{B_CLOSE}"
+    if style in ("small-caps", "sc"):
+        return f"{SC_OPEN}{frag}{SC_CLOSE}"
+    if style == "verse":
+        return f"{VERSE_OPEN}{frag}{VERSE_CLOSE}"
+    return None
+
+
+def _apply_occurrences(text: str, frag: str, repl: str, occ) -> str:
+    """Wrap occurrence(s) of ``frag`` in ``text`` per ``occ``.
+
+    ``occ`` is ``"first"`` (default), ``"all"``, or an int N (1-based) selecting
+    a single occurrence. ``str.replace`` does not rescan its own output, so even
+    ``"all"`` cannot double-wrap (the marker contains ``frag``). Returns ``text``
+    unchanged when the requested occurrence does not exist.
+    """
+    if occ == "all":
+        return text.replace(frag, repl)
+    try:
+        n = 1 if occ in (None, "first") else int(occ)
+    except (TypeError, ValueError):
+        n = 1
+    if n <= 1:
+        return text.replace(frag, repl, 1)
+    idx, start = -1, 0
+    for _ in range(n):
+        idx = text.find(frag, start)
+        if idx == -1:
+            return text  # fewer than n occurrences — no-op
+        start = idx + len(frag)
+    return text[:idx] + repl + text[idx + len(frag):]
+
+
 def apply_typography(
     text: str, chapter_id: str, typo_map: dict[str, list[dict]], lang: str
-) -> tuple[str, list[tuple[str, str]]]:
+) -> tuple[str, list[tuple[str, str, str]]]:
     """Inject typography markers into one paragraph's text for ``chapter_id``/``lang``.
 
-    Matching is verbatim-substring; the first occurrence of each fragment is
-    wrapped. Returns ``(text, applied)`` where ``applied`` is the list of
-    ``(style, fragment)`` actually marked in this paragraph. A fragment absent
-    from *this* paragraph is simply skipped (it may live in another paragraph);
-    the caller compares accumulated ``applied`` against the full sidecar to
-    detect fragments that matched nowhere (see ``expected_spans``).
+    Matching is verbatim-substring. An entry may carry a ``<lang>_anchor`` — a
+    longer verbatim context that contains ``frag`` — to disambiguate which
+    occurrence to style when the same word recurs in the chapter: the target is
+    wrapped only inside the first instance of that anchor. Without an anchor, the
+    ``occurrences`` key controls scope (``"first"`` default, ``"all"``, or a
+    1-based int). The anchor solves the no-stable-paragraph-id problem without
+    positional addressing.
+
+    Returns ``(text, applied)`` where ``applied`` lists the ``(style, fragment,
+    anchor)`` triples actually marked in this paragraph (anchor is ``""`` when
+    none). A fragment absent from *this* paragraph is skipped (it may live in
+    another); the caller diffs accumulated ``applied`` against ``expected_spans``
+    to flag entries that matched nowhere — keyed including the anchor so two
+    same-word entries are tracked independently.
     """
-    applied: list[tuple[str, str]] = []
+    applied: list[tuple[str, str, str]] = []
     for entry in typo_map.get(chapter_id, []):
         frag = entry.get(lang)
         if not frag:
             continue
         style = entry.get("style", "italic")
-        if frag not in text:
+        repl = _wrap(frag, style)
+        if repl is None:
             continue
-        if style == "italic":
-            repl = f"*{frag}*"
-        elif style in ("small-caps", "sc"):
-            repl = f"{SC_OPEN}{frag}{SC_CLOSE}"
-        elif style == "verse":
-            repl = f"{VERSE_OPEN}{frag}{VERSE_CLOSE}"
+        anchor = entry.get(f"{lang}_anchor") or ""
+        occ = entry.get("occurrences", "first")
+        if anchor:
+            # Restrict wrapping to the first instance of the anchor context.
+            start = text.find(anchor)
+            if start == -1 or frag not in anchor:
+                continue
+            end = start + len(anchor)
+            new_region = _apply_occurrences(text[start:end], frag, repl, occ)
+            if new_region == text[start:end]:
+                continue
+            text = text[:start] + new_region + text[end:]
         else:
-            continue
-        text = text.replace(frag, repl, 1)
-        applied.append((style, frag))
+            if frag not in text:
+                continue
+            new_text = _apply_occurrences(text, frag, repl, occ)
+            if new_text == text:
+                continue
+            text = new_text
+        applied.append((style, frag, anchor))
     return text, applied
 
 
 def expected_spans(
     typo_map: dict[str, list[dict]], langs: tuple[str, ...] = ("it", "en")
-) -> set[tuple[str, str, str, str]]:
-    """Every span the sidecar should place, as ``(chapter_id, lang, style, fragment)``.
+) -> set[tuple[str, str, str, str, str]]:
+    """Every span the sidecar should place, as ``(chapter_id, lang, style, fragment, anchor)``.
 
-    Subtract the set of spans actually applied to get the fragments that matched
-    no paragraph in any chapter — i.e. a stale or mis-keyed sidecar entry.
+    Subtract the set of spans actually applied to get the entries that matched
+    no paragraph in any chapter — i.e. a stale or mis-keyed sidecar entry (or a
+    bad anchor). The anchor is part of the identity so two same-word entries
+    distinguished only by their anchor are tracked independently.
     """
-    expected: set[tuple[str, str, str, str]] = set()
+    expected: set[tuple[str, str, str, str, str]] = set()
     for chapter_id, entries in typo_map.items():
         for entry in entries:
             style = entry.get("style", "italic")
             for lang in langs:
                 frag = entry.get(lang)
                 if frag:
-                    expected.add((chapter_id, lang, style, frag))
+                    anchor = entry.get(f"{lang}_anchor") or ""
+                    expected.add((chapter_id, lang, style, frag, anchor))
     return expected

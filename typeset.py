@@ -293,11 +293,12 @@ def _theme_js() -> list[str]:
 
 def _para_to_html(text: str) -> str:
     """Convert a paragraph to HTML: markdown italics plus the typography sentinels
-    (small caps, verse) injected by typography.apply_typography."""
+    (bold, small caps, verse) injected by typography.apply_typography."""
     text = _escape_html(text)
     # Convert *italic* to <em>
     text = re.sub(r"\*(.+?)\*", r"<em>\1</em>", text)
-    # Convert typography sentinels (⟦sc⟧/⟦verse⟧) from the typography sidecar
+    # Convert typography sentinels (⟦b⟧/⟦sc⟧/⟦verse⟧) from the typography sidecar
+    text = re.sub(r"⟦b⟧(.+?)⟦/b⟧", r"<strong>\1</strong>", text)
     text = re.sub(r"⟦sc⟧(.+?)⟦/sc⟧", r'<span class="sc">\1</span>', text)
     text = re.sub(r"⟦verse⟧(.+?)⟦/verse⟧", r'<span class="verse">\1</span>', text)
     return text
@@ -941,7 +942,7 @@ def generate_html(
         # Italian paragraphs (with cross-column provenance links)
         for para_idx, p in enumerate(pair["italian_paragraphs"]):
             p_styled, _applied = apply_typography(p, ch_id, typo_map, "it")
-            _typo_applied.update((ch_id, "it", st, fr) for st, fr in _applied)
+            _typo_applied.update((ch_id, "it", st, fr, an) for st, fr, an in _applied)
             para_html = _para_to_html(p_styled)
             para_num = para_idx + 1
             for prov_id, it_word in ch_it_annot.get(para_num, []):
@@ -969,7 +970,7 @@ def generate_html(
             # Style a copy for HTML; keep `p` raw so the revision-change gate
             # (`new_text in p`) below still matches against unmarked text.
             p_styled, _applied = apply_typography(p, ch_id, typo_map, "en")
-            _typo_applied.update((ch_id, "en", st, fr) for st, fr in _applied)
+            _typo_applied.update((ch_id, "en", st, fr, an) for st, fr, an in _applied)
             para_html = _para_to_html(p_styled)
             para_num = para_idx + 1
 
@@ -1533,8 +1534,9 @@ def generate_html(
     if typo_map:
         missed = expected_spans(typo_map) - _typo_applied
         print(f"  Typography: {len(_typo_applied)} spans applied, {len(missed)} unmatched")
-        for ch_id, lang, style, frag in sorted(missed):
-            print(f"    ! typography fragment not found in {ch_id} [{lang}/{style}]: {frag!r}")
+        for ch_id, lang, style, frag, anchor in sorted(missed):
+            where = f" (anchor {anchor!r})" if anchor else ""
+            print(f"    ! typography fragment not found in {ch_id} [{lang}/{style}]: {frag!r}{where}")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text("\n".join(html_parts), encoding="utf-8")
