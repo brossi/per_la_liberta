@@ -180,6 +180,7 @@ SUMMARY_OVERVIEW_IDS = {"synopsis", "how-its-told", "what-it-cares-about"}
 # ("Giov**a**ne" in the summary vs. the glossary's "Giov**i**ne") and the headword's
 # parenthetical gloss, which the prose abbreviates ("the Opéra").
 SUMMARY_GLOSSARY_ALIASES = {
+    "Risorgimento": "Risorgimento",
     "Belluno": "Belluno",
     "Villa Corsini": "Villa Corsini",
     "Paris Opéra": "Rue Le Peletier (the Opéra)",

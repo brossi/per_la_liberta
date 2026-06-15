@@ -37,3 +37,6 @@ state/llm_batch.json
 
 # Claude Code local settings
 .claude/
+
+# Throwaway typeface decision specimens (repo-root scratch; one loads a commercial demo font via CDN)
+type-specimen*.html

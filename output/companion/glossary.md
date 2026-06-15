@@ -204,6 +204,12 @@ The book applies this name ("Hunters of the Alps") to the volunteer corps under 
 
 ## Terms, objects & phrases
 
+### Risorgimento
+
+The "resurgence" — the nineteenth-century movement that turned a peninsula of restored kingdoms and duchies into a single Italian nation-state, free of Austrian and other foreign and dynastic rule, conventionally dated from the Congress of Vienna (1815) to the capture of Rome (1870). It was never one movement: di Rudio belongs to its democratic, republican wing — the Mazzinian current that wanted unity won by popular insurrection and crowned by a republic — which the book sets against the moderate, monarchist current that actually made Italy, under Cavour's Piedmont and the House of Savoy. That "practical" unification the memoir mourns as a betrayal of the republican dead; the whole book is testimony from inside the losing strand. *(The book's survey of "the Italian question" is P1 Ch. 2, pp. 15–23; see [Event Context](events.md))*
+
+> **Historical note** — The standard one-volume histories in English are Lucy Riall's *Risorgimento: The History of Italy from Napoleon to Nation-State* and Christopher Duggan's *The Force of Destiny: A History of Italy Since 1796*, both drawn on throughout the [Event Context](events.md); Denis Mack Smith's biographies of Mazzini, Cavour, and Garibaldi remain standard. *(Source: Wikipedia, "Risorgimento".)*
+
 ### "Human document."
 
 Crespi's own term, in the preface, for what the book is: not a methodical history but living testimony that captures "the soul of the times" — its method being di Rudio's written approval of every chapter and his signature on contestable pages. *(Prefazione, pp. 7–8; see [Themes §1](themes.md#1-testimony-as-method--the-human-document))*

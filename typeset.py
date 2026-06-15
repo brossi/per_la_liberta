@@ -299,6 +299,29 @@ def _para_to_html(text: str) -> str:
     return text
 
 
+# Leading inline tags (if any), then the first letter and the rest of the first word.
+# Reproduces the 1913 chapter-opening device: a versal initial + the remainder of the
+# first word in small caps (e.g. MEZZ'ORA). Word chars include accents and apostrophes.
+_DROPCAP_RE = re.compile(
+    r"^(\s*(?:<[^>]+>\s*)*)([^\W\d_])([\w'’À-ɏ]*)", re.UNICODE
+)
+
+
+def _wrap_dropcap(html: str) -> str:
+    """Wrap a chapter's opening initial as a versal drop cap and the rest of its first
+    word as a small-caps incipit. No-op when the paragraph doesn't begin with a letter."""
+    def repl(m: "re.Match[str]") -> str:
+        lead, initial, rest = m.group(1), m.group(2), m.group(3)
+        incipit = f'<span class="incipit">{rest}</span>' if rest else ""
+        # Only the initial floats; the rest of the first word follows it as ordinary
+        # inline small caps, so it sits on the first line and baseline-aligns with the
+        # body automatically. Wrapped lines 2-3 then align to the right edge of the bare
+        # initial (as in the 1913 setting), not after the whole first word.
+        return f'{lead}<span class="versal">{initial}</span>{incipit}'
+
+    return _DROPCAP_RE.sub(repl, html, count=1)
+
+
 def _qr_data_uri(url: str, scale: int = 3) -> str:
     """Generate a QR code as a PNG data URI."""
     import base64
@@ -917,6 +940,8 @@ def generate_html(
                         f'<span class="italian-linked" data-prov="{prov_id}">{escaped_word}</span>',
                         1,
                     )
+            if para_idx == 0:
+                para_html = _wrap_dropcap(para_html)
             html_parts.append(f"      <p>{para_html}</p>")
 
         html_parts.extend([
@@ -973,6 +998,9 @@ def generate_html(
                     )
                     para_marginalia.append(margin_html)
 
+            if para_idx == 0:
+                para_html = _wrap_dropcap(para_html)
+
             # Inject page citation into first paragraph, marginalia into all
             cite_html = ""
             if not page_cite_injected and page_cite_html:
@@ -1010,7 +1038,7 @@ def generate_html(
         '  (<span style="color:var(--color-accent)">\u270e</span>) mark post-synthesis refinements.</p>',
         "  <p>Translation and typesetting by Ben Rossi, March\u2013April 2026.</p>",
         f'  <p>Source scans: <a href="https://archive.org/details/{IA_ITEM_ID}">Internet Archive</a></p>',
-        "  <p>Typeface: Bodoni Moda</p>",
+        "  <p>Typefaces: Spectral (display) &amp; Fraunces (text), both SIL Open Font License.</p>",
         "</div>",
         "",
         "",
