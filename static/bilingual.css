@@ -418,10 +418,60 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   text-indent: 0;
 }
 
-/* First paragraph of each column: no indent */
+/* First paragraph of each column: no first-line indent (it carries the drop cap; the
+   first line's exdent is handled by `.incipit`'s negative margin-left, not here). */
 .verso p:first-child,
 .recto p:first-child {
   text-indent: 0;
+}
+
+/* Chapter-opening drop cap — the 1913 device: a versal initial ~3 lines tall plus
+   the remainder of the first word in small caps (the "incipit"). typeset.py floats
+   only the initial; the incipit follows as ordinary inline small caps. Faithful
+   monochrome, set in the display face.
+
+   A floated initial is positioned by its line box, not its glyph: the box-top pins to
+   the first line, but the glyph's cap-top sits below that by the font's internal
+   leading (ascent − cap-height), scaled by the large font-size — which is what made
+   earlier attempts hang the cap a line too low. Three independent handles control it:
+     • font-size  — visual size (cap-height ≈ 0.66·em → 6.6em spans ~2.75 body lines);
+     • line-height — the float's reserved height, i.e. how many lines wrap beside it;
+     • margin-top — kept at 0 so the float stays anchored to the first line.
+   With margin-top:0, line-height is solved so the negative half-leading lifts the
+   glyph cap-top onto the first line's cap line (measured: line-height 0.852 lands the
+   cap-top within 1px of the body cap line at this font-size). */
+.versal {
+  font-family: var(--font-display);
+  font-weight: 400;
+  float: left;
+  font-size: 6.6em;
+  line-height: 0.852;
+  /* margin-right sets the DEEPER indent of the wrapped body lines (2,3,…): the gap
+     from the glyph's right edge to where those lines begin. 0.2em (of the 6.6em
+     versal ≈ 1.3 body-em) matches the 1913 setting. The first line's incipit is then
+     pulled back tight against the glyph by its own negative margin-left (see
+     `.incipit`) — done there, not via the paragraph's text-indent, because a negative
+     text-indent drags the float itself left out of the margin.
+     margin-left is a small OPTICAL overhang: the float box is flush with the text
+     margin, but the glyph's own left side-bearing (measured ≈0.07em, consistent across
+     letters in this face) would otherwise leave its ink visibly inset from the body.
+     -0.07em hangs the glyph so its ink lands on the margin, level with the full-width
+     lines below; pointed caps (A, T) overhang a hair, which is what you want. */
+  margin: 0 0.2em 0 -0.07em;
+  color: var(--color-body);
+}
+/* Rest of the first word: ordinary inline small caps at body size, riding on the first
+   line and baseline-aligned with the body after it. The negative margin-left "exdents"
+   the first line — pulling the incipit (and the rest of line 1 that flows from it) left,
+   tight against the versal, so the opening word reads continuously across the drop cap
+   while the wrapped lines below stay at the deeper body indent. Magnitude = the versal's
+   margin-right (≈1.3 body-em) minus the small gap the incipit keeps from the glyph; keep
+   it in step with that margin-right. The float stays put, so the drop cap remains flush
+   with the left margin. */
+.incipit {
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  margin-left: -1.14em;
 }
 
 /* === Colophon === */
