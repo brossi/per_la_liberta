@@ -182,6 +182,7 @@ OCR text of the *Italian and English Dictionary* by Hjalmar Edgren (1901) — pr
 - **Source scan overlay**: Slide-in panel from left showing original PDF page images, navigable with arrow keys
 - **TOC**: Slide-in chapter index with collapsible Part 1/Part 2 `<details>/<summary>` sections
 - **CSS variables**: All colors, borders, shadows, and backgrounds defined in `:root` — no hardcoded hex values outside `:root` and `@media print`
+- **Restored typography** (`data/typography.json` + `typography.py`): OCR flattens the 1913 printing's italics, small caps, and set-off verse lines to plain roman. A hand-curated, scan-verified sidecar restores them. It is the **sole source of truth** and is applied at **one** site — `typeset.py`, per parsed paragraph, just before HTML conversion — so `output/*.md` stay clean text (and `validate.py`, which reads `italian_clean.md`, is unaffected). Each entry has a `style` (`italic` | `small-caps` | `verse`) and verbatim `it`/`en` fragments; for `verse`, include the quotation marks in the fragment. Keyed by the **slug** chapter id (`parse_italian_markdown` scheme: `prefazione`, `p2_capitolo_decimottavo`) that `typeset.py` uses — note this differs from the `p1_ch18` scheme `cleanup.py`/`chapter_pages.json` use. Rendering: `italic`→`<em>`; `small-caps`/`verse` via `⟦sc⟧`/`⟦verse⟧` sentinels → `<span class="sc">`/`<span class="verse">` (`.verse` is a centered italic `display:block` span, kept inline so it doesn't shift the paragraph numbering provenance/revision matching relies on). `typeset` logs any sidecar fragment that matched nowhere. Because it is semantic, the same sidecar will drive a future InDesign print export. The chapter-opening drop cap / first-paragraph no-indent / opening-word small caps are separate, already handled by `_wrap_dropcap` + `.versal`/`.incipit`.
 - **PDF**: WeasyPrint (HTML→PDF). Render per-chapter then merge for performance (not yet implemented — currently single-pass).
 
 ## File Structure
@@ -200,6 +201,7 @@ data/
   corrections.json                # Audit trail: LLM diffs + manual overrides
   adjudication_results.json       # Zingarelli-classified tokens (step 5b)
   validation_report.json          # Validation results (step 6)
+  typography.json                 # Scan-verified italics/small-caps/verse, applied at typeset (step 8)
 output/
   italian_clean.md                # Cleaned Italian markdown (step 5)
   english_translation.md          # English translation (step 7)

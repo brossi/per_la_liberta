@@ -474,6 +474,27 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   margin-left: -1.14em;
 }
 
+/* === Restored 1913 typography (from data/typography.json) === */
+
+/* Mid-text small capitals the 1913 compositor used outside the chapter opening.
+   The body face (Fraunces) carries no true `smcp` table, so these synthesize —
+   consistent with the chapter-opening incipit, which does the same. */
+.sc {
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+}
+
+/* Set-off display line (e.g. the Dante quotation in the Preface). Rendered as a
+   centered italic block via an inline span so it doesn't alter paragraph
+   numbering, which provenance/revision matching relies on. */
+.verse {
+  display: block;
+  text-align: center;
+  text-indent: 0;
+  font-style: italic;
+  margin: 0.7em 0;
+}
+
 /* === Colophon === */
 .colophon {
   page-break-before: always;

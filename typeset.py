@@ -292,10 +292,14 @@ def _theme_js() -> list[str]:
 
 
 def _para_to_html(text: str) -> str:
-    """Convert a paragraph to HTML, preserving markdown italics."""
+    """Convert a paragraph to HTML: markdown italics plus the typography sentinels
+    (small caps, verse) injected by typography.apply_typography."""
     text = _escape_html(text)
     # Convert *italic* to <em>
     text = re.sub(r"\*(.+?)\*", r"<em>\1</em>", text)
+    # Convert typography sentinels (⟦sc⟧/⟦verse⟧) from the typography sidecar
+    text = re.sub(r"⟦sc⟧(.+?)⟦/sc⟧", r'<span class="sc">\1</span>', text)
+    text = re.sub(r"⟦verse⟧(.+?)⟦/verse⟧", r'<span class="verse">\1</span>', text)
     return text
 
 
@@ -689,6 +693,12 @@ def generate_html(
     revision_changes = _load_revision_changes(state_dir)
     provenance_data = _load_provenance_data(state_dir)
 
+    # Load typography sidecar (italics / small caps / verse) — re-applies the
+    # 1913 printing's type styling that OCR flattened. Applied per paragraph below.
+    from typography import apply_typography, expected_spans, load_typography
+    typo_map = load_typography(Path(__file__).parent / "data")
+    _typo_applied: set[tuple[str, str, str, str]] = set()  # (chapter_id, lang, style, fragment)
+
     # Build ordered list of content chapter IDs from Italian source.
     # Can't use title-based dict: Part 1 and Part 2 share chapter names
     # (e.g., both have "Capitolo Primo"), so a dict would clobber entries.
@@ -930,7 +940,9 @@ def generate_html(
 
         # Italian paragraphs (with cross-column provenance links)
         for para_idx, p in enumerate(pair["italian_paragraphs"]):
-            para_html = _para_to_html(p)
+            p_styled, _applied = apply_typography(p, ch_id, typo_map, "it")
+            _typo_applied.update((ch_id, "it", st, fr) for st, fr in _applied)
+            para_html = _para_to_html(p_styled)
             para_num = para_idx + 1
             for prov_id, it_word in ch_it_annot.get(para_num, []):
                 escaped_word = _escape_html(it_word)
@@ -954,7 +966,11 @@ def generate_html(
 
         page_cite_injected = False
         for para_idx, p in enumerate(pair["english_paragraphs"]):
-            para_html = _para_to_html(p)
+            # Style a copy for HTML; keep `p` raw so the revision-change gate
+            # (`new_text in p`) below still matches against unmarked text.
+            p_styled, _applied = apply_typography(p, ch_id, typo_map, "en")
+            _typo_applied.update((ch_id, "en", st, fr) for st, fr in _applied)
+            para_html = _para_to_html(p_styled)
             para_num = para_idx + 1
 
             # Revision changes
@@ -1513,6 +1529,12 @@ def generate_html(
         "</body>",
         "</html>",
     ])
+
+    if typo_map:
+        missed = expected_spans(typo_map) - _typo_applied
+        print(f"  Typography: {len(_typo_applied)} spans applied, {len(missed)} unmatched")
+        for ch_id, lang, style, frag in sorted(missed):
+            print(f"    ! typography fragment not found in {ch_id} [{lang}/{style}]: {frag!r}")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text("\n".join(html_parts), encoding="utf-8")
