@@ -44,3 +44,6 @@ type-specimen*.html
 
 # Drop-cap analysis sheets (large glyph/context measurement scratch, regenerable)
 docs/assets/dropcaps/
+
+# Divergence-audit candidate manifests (regenerable via audit_divergences.py)
+state/audit/
