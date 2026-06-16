@@ -10,7 +10,7 @@
 
 <!-- pages:7-8 -->
 
-IL PRESENTE volume potrebbe portare qualche contributo alla Storia; ma non è storia nel senso in cui oggi essa si intende e si scrive... Qualcosa di meno per chi esigesse la metodica concatenazione dei fatti e il freddo giudizio sugli uomini e sugli avvenimenti; qualcosa di più per chi, considerando gli avvenimenti come una semplice risultante, mirasse ad afferrare "l'anima dei tempi," rovistando tra le passioni che li agitarono.
+Il presente volume potrebbe portare qualche contributo alla Storia; ma non è storia nel senso in cui oggi essa si intende e si scrive... Qualcosa di meno per chi esigesse la metodica concatenazione dei fatti e il freddo giudizio sugli uomini e sugli avvenimenti; qualcosa di più per chi, considerando gli avvenimenti come una semplice risultante, mirasse ad afferrare "l'anima dei tempi," rovistando tra le passioni che li agitarono.
 
 Il Conte di Rudio, tanto lontano, nel tempo e nello spazio, dai fatti che narra, protesta frequentemente che le miserie della politica non lo commuovono più... Indubbiamente egli si illude. Come un Minosse che
 
@@ -37,7 +37,7 @@ Cesare Crespi.
 
 <!-- pages:8-14 -->
 
-LOS ANGELES, una splendida mattina d'estate. Vi ero giunto da poche ore, su un treno che mi aveva rammentato quelli che, da ogni parte della Francia, convergono al santuario di Lourdes.
+Los Angeles, una splendida mattina d'estate. Vi ero giunto da poche ore, su un treno che mi aveva rammentato quelli che, da ogni parte della Francia, convergono al santuario di Lourdes.
 
 Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose: dove, l'estate, il sole prostra, come erbe appassite, uomini e mandrie; dove il gelo del lungo inverno fa la terra rigida e impenetrabile persino ai colpi del piccone; dove i cicloni scorrono per le vallate immense, sradicando gli alberi e sfasciando le case.
 
@@ -415,7 +415,7 @@ Eran gli ultimi giorni d'Aprile. Il 30, le truppe del francese invasore frangeva
 
 <!-- pages:31-34 -->
 
-L'ASSEDIO di Roma va indissolubilmente collegato al nome di un uomo nefasto alla Libertà: quello di Luigi Napoleone. I Carbonari, che l'avevano accolto nel loro grembo, lo guardavano con sospetto già nel 1831; poiché, a quell'epoca, si era sparsa la voce che egli avesse tolto di mezzo il fratello (Napoleone Luigi); il quale, per essere nato quattro anni prima, gli sbarrava la via a salire sublime.
+L'assedio di Roma va indissolubilmente collegato al nome di un uomo nefasto alla Libertà: quello di Luigi Napoleone. I Carbonari, che l'avevano accolto nel loro grembo, lo guardavano con sospetto già nel 1831; poiché, a quell'epoca, si era sparsa la voce che egli avesse tolto di mezzo il fratello (Napoleone Luigi); il quale, per essere nato quattro anni prima, gli sbarrava la via a salire sublime.
 
 I nostri moti rivoluzionari aprivano allora, o sembrava, nuovi orizzonti all'Italia e i due figli di Ortensia, partecipando a quei moti, cercavano nella Penisola un campo propizio alla loro ambizione; un compenso, fors'anche, alla perdita del trono francese, riscaldato pel momento, da Luigi Filippo. Questo ordine d'idee avvalorava la fosca diceria che, del resto, non potè mai essere approfondita.
 
@@ -458,7 +458,7 @@ Un uomo solo, Giuseppe Mazzini, previde, in quel tragico momento che, dalla mort
 
 <!-- pages:34-39 -->
 
-ELL'INSINUARE la mia personalità fra i grandi che si adoperarono in quella titanica difesa, mi sembra di commettere un atto di irriverenza. E dirò anche che il mio animo rimane come sopraffatto dal rigurgito delle forti riapparizioni.
+Nell'insinuare la mia personalità fra i grandi che si adoperarono in quella titanica difesa, mi sembra di commettere un atto di irriverenza. E dirò anche che il mio animo rimane come sopraffatto dal rigurgito delle forti riapparizioni.
 
 Il 30 Aprile, vidi anch'io le spalle degli invasori e certo, approfittando della vittoria, noi avremmo rigettato i Francesi al mare, se Giuseppe Mazzini non avesse creduto opportuno, per le sue mire diplomatiche, di rintuzzare il nostro slancio.
 
@@ -541,7 +541,7 @@ Il 8 Giugno fu giornata torrida... Stetti qualche secondo in silenzio, pensando 
 
 <!-- pages:39-43 -->
 
-NON intendo narrare la storia particolareggiata di un assedio che si protrasse al di là d'ogni previsione. Col suo piano primitivo, il generale Oudinot tendeva ad impossessarsi del Gianicolo per assalto diretto. Senonchè la fiera, inaspettata resistenza opposta da casa Giacometti e sopratutto quella del Vascello, che venne trasformato in un cumulo di rovine, ma che le armi francesi non giunsero a conquistare, avevano costretto l'Oudinot a mutare quel suo primo divisamento. Egli girò la difficoltà estendendo le sue trincee verso il sud e preparando un attacco di fianco. Ciò prolungò di un mese l'agonia della Repubblica.
+Non intendo narrare la storia particolareggiata di un assedio che si protrasse al di là d'ogni previsione. Col suo piano primitivo, il generale Oudinot tendeva ad impossessarsi del Gianicolo per assalto diretto. Senonchè la fiera, inaspettata resistenza opposta da casa Giacometti e sopratutto quella del Vascello, che venne trasformato in un cumulo di rovine, ma che le armi francesi non giunsero a conquistare, avevano costretto l'Oudinot a mutare quel suo primo divisamento. Egli girò la difficoltà estendendo le sue trincee verso il sud e preparando un attacco di fianco. Ciò prolungò di un mese l'agonia della Repubblica.
 
 Durante quel mese ebbi, tra l'una e l'altra fucilata, più di un'occasione d'ascoltare la parola ispirata di Ugo Bassi e di intrattenermi in vibrate conversazioni con Ciceruacchio. Poveri martiri di una causa più che santa, essi ritornano talvolta a ravvivare la mia solitudine ed in quei momenti odo ancora la loro voce e non oso batter palpebra per tema che la realtà si imponga e la visione scompaia. Precisamente come un figlio che, fatto scoperchiare, dopo lunghi anni, il feretro racchiudente la salma del padre e trovatala intatta, teme che un lieve soffio scompagini le care sembianze e le riduca ad un informe pugno di cenere.
 
@@ -685,7 +685,7 @@ Egli poteva ormai scalzare il terreno di sotto ai suoi nemici; ingolfarsi in un 
 
 <!-- pages:48-52 -->
 
-RAZIE ai nostri rapporti col Circolo del Paradiso fummo, sin dal nostro arrivo a Parigi, fraternamente accolti dal Club di Batignolle. Venimmo impiegati a fabbricare cartuccie.
+Grazie ai nostri rapporti col Circolo del Paradiso fummo, sin dal nostro arrivo a Parigi, fraternamente accolti dal Club di Batignolle. Venimmo impiegati a fabbricare cartuccie.
 
 Le camere del Club erano permanentemente occupate da una quarantina di rivoluzionari... non un cantuccio per alloggiare noi. Ma finimmo per trovare di che posare il capo in casa di un cappellaio torinese, dimorante nel sobborgo Sant'Antonio, all'estremità opposta della metropoli.
 
@@ -762,7 +762,7 @@ In breve volgere di tempo, le Commissioni Militari e le Commissioni Miste precip
 
 <!-- pages:53-58 -->
 
-ABBANDONATA al suo destino, la barricata, io e il Trolli ci dirigemmo verso il "boulevard". Ma passato appena il ponte Saint Denis, dovemmo convenire che la Legge marziale veniva rigorosamente applicata e che il mezzo migliore per invitare la morte era quello di camminare a due. Di cadaveri ne trovammo un po' dappertutto. Rammento ancora vivamente quello di un venditore d'acqua, disteso bocconi, col recipiente sulla schiena, le braccia protese, la testa ridotta letteralmente a frantumi... Apparivano, in orribile miscela, sangue, cervella e fette di limone!
+Abbandonata al suo destino, la barricata, io e il Trolli ci dirigemmo verso il "boulevard". Ma passato appena il ponte Saint Denis, dovemmo convenire che la Legge marziale veniva rigorosamente applicata e che il mezzo migliore per invitare la morte era quello di camminare a due. Di cadaveri ne trovammo un po' dappertutto. Rammento ancora vivamente quello di un venditore d'acqua, disteso bocconi, col recipiente sulla schiena, le braccia protese, la testa ridotta letteralmente a frantumi... Apparivano, in orribile miscela, sangue, cervella e fette di limone!
 
 Ci separammo, coll'intesa di non perderci di vista e di uscire dalla città per la barriera del Trono. Ma il passarla, guardata com'era da buon nerbo di guardie di Finanza e di soldati, riesciva impresa piuttosto scabrosa. Prima di giungervi, comperai un grosso pane e me lo strinsi sotto l'ascella. Il Trolli ne intuì lo scopo e fece altrettanto. Operai che tornavano dal lavoro fummo squadrati dal capo alle piante, ma nessuna molestia.
 
@@ -887,7 +887,7 @@ Congedata la scorta e rimasto solo, mi volsi a contemplare la Terra bella e sven
 
 <!-- pages:58-62 -->
 
-NELL'APRILE del 1852 ero nuovamente a Genova e lavoravo presso certo Ferrari negoziante sarto, quando venni informato che don Bastiano Barozzi, parroco di San Pietro in Campo, viveva rifugiato a Torino. Il Barozzi, durante l'assedio di Venezia, fu cappellano di una Legione composta quasi esclusivamente di studenti di Padova. Era uno di quei preti a cui la sottana non soffocava l'amor di Patria e che, all'ubbidienza passiva, preferivano il seguire gli impulsi della propria coscienza. L'Italia ne vanta buon numero e la Chiesa di Roma avrebbe potuto trarne grande prestigio se, per piacere ai prepotenti, non avesse preferito confessarli e prestare anche mano al loro supplizio.
+Nell'aprile del 1852 ero nuovamente a Genova e lavoravo presso certo Ferrari negoziante sarto, quando venni informato che don Bastiano Barozzi, parroco di San Pietro in Campo, viveva rifugiato a Torino. Il Barozzi, durante l'assedio di Venezia, fu cappellano di una Legione composta quasi esclusivamente di studenti di Padova. Era uno di quei preti a cui la sottana non soffocava l'amor di Patria e che, all'ubbidienza passiva, preferivano il seguire gli impulsi della propria coscienza. L'Italia ne vanta buon numero e la Chiesa di Roma avrebbe potuto trarne grande prestigio se, per piacere ai prepotenti, non avesse preferito confessarli e prestare anche mano al loro supplizio.
 
 Versatissimo nella storia antica, don Bastiano giudicava gli uomini attraverso il prisma del mondo romano buon al livello di Attilio Regolo, degli Scipioni, dei Gracchi avrebbe valuto inalzare l'intera nostra razza. Durante le mie vacanze scolastiche egli, passeggiando lungo l'Ardo e senza darsene l'aria, mi soppannava il cervello di episodi eroici. Penso che gli devo, in non minima parte, il mio culto per la Libertà.
 
@@ -1013,7 +1013,7 @@ Allora l'ateo saltò al collo del sacerdote. Il che tende a dimostrare che l'ipo
 
 <!-- pages:66-74 -->
 
-NON conosco moto insurrezionale italiano che sia valso a Giuseppe Mazzini tante calunnie, tante amarezze, tante defezioni quanto quello del 1853.
+Non conosco moto insurrezionale italiano che sia valso a Giuseppe Mazzini tante calunnie, tante amarezze, tante defezioni quanto quello del 1853.
 
 La gente così detta positiva, di quel positivismo miope che consiste nel lasciare il mondo correre indisturbato magari alla propria rovina, sosteneva che un Popolo di recente dissanguato e rotto, non poteva rispondere animosamente ad un appello alle armi; sobbarcarsi volonteroso a nuovi sacrifici. E sentenziava, con tutta serietà, che le rivoluzioni si fanno quando spontaneamente maturano, non quando si vuole.
 
@@ -1132,7 +1132,7 @@ C. C.
 
 <!-- pages:74-76 -->
 
-L'ECCITAZIONE del momento non m'impedì di pensare alla stranezza del caso. Io patriotta, e non degli infimi (se l'intensità degli affetti conta per qualche cosa) ero cacciato, quasi nemico, dall'unico lembo di terra italiana libero ed anelavo febbrilmente di passare la linea mediana del lago per ritornare, come si suol dire, all'ombra del giallo e nero... l'oggetto della nostra esecrazione diventato subitamente simbolo della mia salvezza. Vi giunsi e respirai più liberamente. Ma era salvezza temporanea e il destino disponeva che non potessi arrivare al confine svizzero senza grave fatica.
+L'eccitazione del momento non m'impedì di pensare alla stranezza del caso. Io patriotta, e non degli infimi (se l'intensità degli affetti conta per qualche cosa) ero cacciato, quasi nemico, dall'unico lembo di terra italiana libero ed anelavo febbrilmente di passare la linea mediana del lago per ritornare, come si suol dire, all'ombra del giallo e nero... l'oggetto della nostra esecrazione diventato subitamente simbolo della mia salvezza. Vi giunsi e respirai più liberamente. Ma era salvezza temporanea e il destino disponeva che non potessi arrivare al confine svizzero senza grave fatica.
 
 Il tempo, che si era mostrato minaccioso sin dal mattino, volse al peggio e dall'Alpi, verso le quali avevamo rivolta la prua, procedeva, più che il vento, la bufera. L'acque, che la presentivano, ne acquistarono un ondeggiamento formidabile e la nostra fragile imbarcazione ballonzolava all'impazzata. Mi accorsi presto che non si avanzava più e, impugnati i remi di riserva, mi misi terzo in quella lotta disperata fra la volontà umana e la prepotenza della burrasca. Ma stimando imprudente il voltare le spalle ai due barcaioli, dovetti rassegnarmi a tenere la faccia rivolta alle Alpi. Ed ecco precipitare trasversalmente un nevischio gelato, anzi un turbine di aghetti di ghiaccio che la scalfivano, che mi tormentavano gli occhi, che mi levavano il respiro. E l'onde, spumeggianti alla cresta, girate dal vento a truciolo, minacciavano di capovolgere la navicella. Nessun dubbio! gli elementi si erano dichiarati per l'Austria e, più di una volta, pensai d'essere scampato a tanti pericoli per finire miseramente in quello stagno d'agoni.
 
@@ -1173,7 +1173,7 @@ Rimisi l'oro nella cintola e strinsi la mano a Fortunato Calvi. Agli altri feci 
 
 <!-- pages:76-79 -->
 
-COSÌ il fatale 6 Febbraio non mi trovai né all'assalto della Gran Guardia a Milano, né a bordo del Radetzky, sul Lago Maggiore.
+Così il fatale 6 Febbraio non mi trovai né all'assalto della Gran Guardia a Milano, né a bordo del Radetzky, sul Lago Maggiore.
 
 Salivo invece, di buon mattino, un'erta che, distaccandosi dal Ceresio, a pochi passi da Lugano, metteva capo ad una villa biancheggiante come la neve che l'attorniava. Le sue griglie verdi erano la sola nota risaltante su quel vasto candore. Giunto sulla spianata che fronteggia la villa, mi fermai per contemplarla e nella mente mi passarono le parole di Fortunato Calvi: "Facciano le braccia il proprio dovere, la mente veglia e farà il suo!"
 
@@ -1291,7 +1291,7 @@ Giuseppe Monti e i suoi compagni di martirio resero così indirettamente impossi
 
 <!-- pages:83-88 -->
 
-LOCARNO, dove ero ritornato per comunicare al Calvi una missiva del Mazzini, fui arrestato e rilasciato poche ore dopo, a piede libero, sotto parola di presentarmi al Delegato Federale. Venni poi processato per cospirazione contro una Potenza amica, espulso dalla Svizzera, messo nell'alternativa di scegliere fra l'America e l'Inghilterra.
+A Locarno, dove ero ritornato per comunicare al Calvi una missiva del Mazzini, fui arrestato e rilasciato poche ore dopo, a piede libero, sotto parola di presentarmi al Delegato Federale. Venni poi processato per cospirazione contro una Potenza amica, espulso dalla Svizzera, messo nell'alternativa di scegliere fra l'America e l'Inghilterra.
 
 L'Inghilterra era più vicina al campo delle probabili future imprese e fu da me preferita. Mi stabilii a Londra, dove trovai non pochi compromessi nei moti del Febbraio, che si erano sottratti alla vendetta austriaca con fughe avventurose... tra gli altri, un Jean Valjean milanese accompagnato fuori dalle mura in una cassa da morto e con solenni funerali.
 
@@ -1433,7 +1433,7 @@ Oh qual sangue e quanti rimorsi mormora un istante d'esitazione! Un'ombra si fec
 
 <!-- pages:92-98 -->
 
-Nella EFFICACIA di qualunque squarcio oratorio ad incitare i nobili impulsi ribelli giungono al cuore di un figlio, i singhiozzi della madre. Quelli della mia, nel silenzio della notte, risonarono spaventosamente.
+Nella efficacia di qualunque squarcio oratorio ad incitare i nobili impulsi ribelli giungono al cuore di un figlio, i singhiozzi della madre. Quelli della mia, nel silenzio della notte, risonarono spaventosamente.
 
 Mi affrettai a sorreggerla con un braccio e le posi la destra sulle labbra come per soffocarli. "Calmati, calmati!" volevo dire, ma la voce non venne e, vinto da un impeto di tenerezza, io pure singhiozzai.
 
@@ -1586,7 +1586,7 @@ Una, due, tre martellate, a discreto intervallo... il sonno si abbarbica tenacem
 
 <!-- pages:98-100 -->
 
-QUANTO sto per narrare ricavai dalle lettere scrittemi da Giustiniano. Io le ho impresse nella memoria a caratteri indelebili. A rincuorare la mamma, Giustiniano le tratteggiava la situazione stemperandovi buona dose d'ottimismo. Luisa subirebbe qualche interrogatorio, ma verrebbe presto rimessa in libertà. Papà era in odore di vecchio patriotta, di uomo irriducibile e non avrebbe potuto cavarsela tanto facilmente. Ma come condannarlo senza prove? Le autorità giudiziarie erano rigorose oltre ogni dire; ma ci tenevano a parere integerrime e non oserebbero commettere una furfanteria palese. Quanto a me, egli stesso mi aveva accompagnato sino alle miniere di Agordo. Da quel punto, avevo scelto vie che io solo e i camosci sapevamo percorrere. Già dovevo essere arrivato oltre i confini e la Polizia mi credeva ancora a Belluno ed a Belluno mi cercava. Fra breve, avrebbero ricevuto mie lettere dalla Svizzera, o da qualche altro paese ove il giallo e nero non sventolava. Tutto stava dunque a non accasciarsi, per poter conservare la salute, tanto necessaria in quella burrasca.
+Quanto sto per narrare ricavai dalle lettere scrittemi da Giustiniano. Io le ho impresse nella memoria a caratteri indelebili. A rincuorare la mamma, Giustiniano le tratteggiava la situazione stemperandovi buona dose d'ottimismo. Luisa subirebbe qualche interrogatorio, ma verrebbe presto rimessa in libertà. Papà era in odore di vecchio patriotta, di uomo irriducibile e non avrebbe potuto cavarsela tanto facilmente. Ma come condannarlo senza prove? Le autorità giudiziarie erano rigorose oltre ogni dire; ma ci tenevano a parere integerrime e non oserebbero commettere una furfanteria palese. Quanto a me, egli stesso mi aveva accompagnato sino alle miniere di Agordo. Da quel punto, avevo scelto vie che io solo e i camosci sapevamo percorrere. Già dovevo essere arrivato oltre i confini e la Polizia mi credeva ancora a Belluno ed a Belluno mi cercava. Fra breve, avrebbero ricevuto mie lettere dalla Svizzera, o da qualche altro paese ove il giallo e nero non sventolava. Tutto stava dunque a non accasciarsi, per poter conservare la salute, tanto necessaria in quella burrasca.
 
 Ma la sicurezza che egli si industriava di istillare nell'animo della mamma, era ben lungi dall'essere nel suo. I giornali, soggetti a rigorosa censura, parevano concordi nel trattare l'ultima congiura colla congiura del silenzio. Ma le notizie sanno fare di molto cammino anche senza l'aiuto dei giornali. Ora dalle labbra dei fidati, in cui si imbatteva lungo la via; ora al caffè, d'attorno al tavolino, tra l'una e l'altra frase sul bel tempo, o sul prezzo dei prodotti agricoli, scivolavano, nel suo orecchio, le parole che non potevano essere apertamente pronunciate senza pericolo, e da esse, come sempre in simili casi, i lieti affidamenti apparivano delineati appena; fortemente pennellate le sinistre previsioni.
 
@@ -1624,8 +1624,6 @@ Nel freddo ambiente della caserma, nei petti induriti dalla ferrea disciplina, a
 ### Capitolo Ventesimo Primo
 
 <!-- pages:100-108 -->
-
-Correggo gli errori OCR nel testo:
 
 Dalle alture sovrastanti le miniere d'Agordo, rivolsi un ultimo sguardo a mio fratello che rimpiccioliva nella pianura. Poi presi risolutamente il sentiero su pei monti, iniziando una fuga che doveva riescire piena d'emozioni e veramente singolare. Raggiunta la zona delle nevi perpetue, rallentai il passo e per la stanchezza e per le crescenti difficoltà, ma anche perchè mi sentivo nascosto e fatto sicuro dallo spazio e dalla solitudine. Ficcai il viso nel profondo... gran parte di quelle che, salendo, mi erano sembrate alture, apparivano adesso pareggiate al piano. L'odio dei prepotenti, pensavo, non giungerebbe a turbare quel silenzio vergine.
 
@@ -1766,7 +1764,7 @@ L'insuccesso, che già mi era manifesto, si accentuò dalle notizie attinte, a m
 
 <!-- pages:108-112 -->
 
-AFFERMANO gli storici che la spia Felicità Buanvecchiato, sorpreso qualche brano di una conversazione tenuta da Pietro Fortunato Calvi, si affrettasse a rivelare il nostro tentativo alle Autorità, che ne avevano così pieno sentore prima ancora che noi pigliassimo le mosse per tradurlo in atto.
+Affermano gli storici che la spia Felicità Buanvecchiato, sorpreso qualche brano di una conversazione tenuta da Pietro Fortunato Calvi, si affrettasse a rivelare il nostro tentativo alle Autorità, che ne avevano così pieno sentore prima ancora che noi pigliassimo le mosse per tradurlo in atto.
 
 Sino a qual punto si spingesse tale delazione ignoro; ma so che a provocare la nostra rovina essa era pressochè superflua.
 
@@ -1833,7 +1831,7 @@ Tuttavia il Calvi fu fortunato in questo: il lividore delle cricche consortesche
 
 <!-- pages:112-120 -->
 
-MI spinsi sino a Zurigo, ove trovai un nucleo di compatrioti sottrattisi, coll'esilio, alla bufera reazionaria succeduta ai moti del Febbraio. Fra essi era Radonitz che mi accolse con molta cortesia. Egli non fece la benché minima allusione all'incidente di Locamo. Mi recai a far visita anche al Caronti. Le sue parole non potevano essere più lusinghiere; ma al primo vedermi, la sua faccia aveva assunto una espressione di meraviglia, non scevra da una tinta di inquietudine. Forse, pensai, è una mia immaginazione. Giuseppe Mazzini mi aveva tanto mal prevenuto!...
+Mi spinsi sino a Zurigo, ove trovai un nucleo di compatrioti sottrattisi, coll'esilio, alla bufera reazionaria succeduta ai moti del Febbraio. Fra essi era Radonitz che mi accolse con molta cortesia. Egli non fece la benché minima allusione all'incidente di Locamo. Mi recai a far visita anche al Caronti. Le sue parole non potevano essere più lusinghiere; ma al primo vedermi, la sua faccia aveva assunto una espressione di meraviglia, non scevra da una tinta di inquietudine. Forse, pensai, è una mia immaginazione. Giuseppe Mazzini mi aveva tanto mal prevenuto!...
 
 Quel negoziante di chincaglierie, fallito a Como, viveva a Zurigo con grande lusso, alle spalle di una ricca signora, fabbricante di cioccolata. Si era però ingegnato di metter su una modesta fabbrica di cappelli di feltro e parecchi Italiani vi trovavano di che guadagnarsi il sostentamento. Divenni del loro numero e mi parve un raggio di fortuna. Ma fiutando l'aria, non tardai a scoprire qualcosa di eterogeneo. Eran strette di mano che si risolvevano in un semplice contatto della pelle; risposte evasive; monosillabi, lindi per sé stessi, ma che acquistavano un sapore subdolo per la smorfia del viso che li accompagnava. Nel complesso, una freddezza, una freddezza!... persino a merenda, quando le labbra si scambiavano frasi più spontanee, i fili misteriosi che connettono l'anime, difettavano.
 
@@ -1950,7 +1948,7 @@ Pochi giorni dopo ero impegnato nel tentativo di Maloggia.
 
 <!-- pages:120-127 -->
 
-SI trattava questa volta, d'impossessarsi dei piroscafi che solcano il Lario e di tentare la presa di Como. Al primo sentore dell'insurrezione di questa città, parecchie colonne armate sarebbero calate dai Grigioni, per sollevare la Valtellina, per dare forza ed ampiezza al moto.
+Si trattava questa volta, d'impossessarsi dei piroscafi che solcano il Lario e di tentare la presa di Como. Al primo sentore dell'insurrezione di questa città, parecchie colonne armate sarebbero calate dai Grigioni, per sollevare la Valtellina, per dare forza ed ampiezza al moto.
 
 La proposta di pigliarvi parte mi venne direttamente dal pavese Pompei, della Giovine Italia, sezione di Stradella... ma egli mi parlò a nome di Felice Orsini. Noto questo perchè l'Orsini, nelle sue "Memorie" indica Giuseppe Mazzini come capo effettivo e palese di questo tentativo; traendo pretesto dal numero esiguo delle persone che risposero alla chiamata, per dimostrare "la nessuna influenza" di quell'onesto, tra le file del partito che era più propriamente il suo.
 
@@ -2049,7 +2047,7 @@ FINE DELLA PRIMA PARTE
 
 <!-- pages:127-134 -->
 
-COME introduzione a questa seconda parte, ha il suo debito posto una pagina essenzialmente d'amore. Quanto narro ebbi, in parte, dallo stesso Conte di Rudio, in parte, dalla sua signora. Né mi mancò l'aiuto di qualche lettera intima, ingiallita dal tempo; ma esalante, fresco ancora, il profumo del passato.
+Come introduzione a questa seconda parte, ha il suo debito posto una pagina essenzialmente d'amore. Quanto narro ebbi, in parte, dallo stesso Conte di Rudio, in parte, dalla sua signora. Né mi mancò l'aiuto di qualche lettera intima, ingiallita dal tempo; ma esalante, fresco ancora, il profumo del passato.
 
 Quel po' di politica che vi fa capolino sente l'anima di Giuseppe Mazzini... ma che è il Di Rudio, in fondo, se non che un riflesso di quel grande cospiratore? A parte le proporzioni dell'ingegno, l'unica differenza sostanziale fra i due, mi sembra questa: l'uno riteneva che, senza la fede in Dio, non sia possibile né spirito di sacrificio, né onestà duratura; l'altro ha saputo sacrificarsi e vivere onestamente, anche scartando quell'ipotesi poderosa.
 
@@ -2156,7 +2154,7 @@ E poiché la vita e l'universo non esistono, all'atto pratico, se non per quel t
 
 <!-- pages:134-136 -->
 
-LA GRATA sorpresa notturna continuò, con matematica regolarità... un pacchetto ben legato e ben fornito, ogni ventiquattro ore. Il conte di Rudio decise d'andare al fondo della cosa, e, un bel mattino, rassettata come di consueto la camera, si rannicchiò nel vano della finestra, dietro il cortinaggio, risoluto a rimanere appostato e silenzioso magari il giorno intero. Di lassù dominava, per buon tratto, il marciapiede a destra ed a sinistra ed egli pensava, a ragione, che le polpette non gli potevano giungere per l'aria a volo. Avrebbe scoperto il suo misterioso benefattore.
+La grata sorpresa notturna continuò, con matematica regolarità... un pacchetto ben legato e ben fornito, ogni ventiquattro ore. Il conte di Rudio decise d'andare al fondo della cosa, e, un bel mattino, rassettata come di consueto la camera, si rannicchiò nel vano della finestra, dietro il cortinaggio, risoluto a rimanere appostato e silenzioso magari il giorno intero. Di lassù dominava, per buon tratto, il marciapiede a destra ed a sinistra ed egli pensava, a ragione, che le polpette non gli potevano giungere per l'aria a volo. Avrebbe scoperto il suo misterioso benefattore.
 
 Un pò prima del mezzogiorno, mentre appoggiato al davanzale fotografava coll'occhio il bruno via vai che si agitava confusamente ai suoi piedi, un subito destarsi delle vibrazioni vitali, un dolce tepore, un senso di luce penetrante, lo scossero. Egli si volse di scatto... non era più solo!
 
@@ -2187,7 +2185,7 @@ Il conte di Rudio se ne stette a lungo immobile, fissando l'occhio nel vuoto, co
 
 <!-- pages:136-141 -->
 
-AMORE!... per la signorina Sara o per la signorina Elisa? Il problema, per quanto semplice, gli suscitò nell'animo uno sgomento singolare, a cui succedette una non meno singolare irritazione. "Perchè affannarsi a risolverlo — ne concluse — dal momento che l'accasarmi mi è conteso da altri ideali?" Il conte di Rudio agiva inconsciamente, ed in un campo diverso, come di fronte alle idee nuove agisce l'uomo nel cui cervello si abbarbica il pregiudizio. Il quale intuisce la ragionevolezza di quelle idee, ma tant'è! chiude ostinatamente gli occhi al vero e la certezza stessa che il suo idolo si infrange, lo fa campione più strenuo delle vecchie fole e della menzogna.
+Amore!... per la signorina Sara o per la signorina Elisa? Il problema, per quanto semplice, gli suscitò nell'animo uno sgomento singolare, a cui succedette una non meno singolare irritazione. "Perchè affannarsi a risolverlo — ne concluse — dal momento che l'accasarmi mi è conteso da altri ideali?" Il conte di Rudio agiva inconsciamente, ed in un campo diverso, come di fronte alle idee nuove agisce l'uomo nel cui cervello si abbarbica il pregiudizio. Il quale intuisce la ragionevolezza di quelle idee, ma tant'è! chiude ostinatamente gli occhi al vero e la certezza stessa che il suo idolo si infrange, lo fa campione più strenuo delle vecchie fole e della menzogna.
 
 Ed ora, ecco come finì la lunga siccità di scarsella del conte di Rudio.
 
@@ -2272,7 +2270,7 @@ Quando la signorina Sara rientrò colle chicchere e col latte, l'innamorato che 
 
 <!-- pages:142-143 -->
 
-LA parola al Conte di Rudio: L'anno stesso che mi accasai fui coinvolto in una malaugurata faccenda che fece molto chiasso. Gli esuli che non avevano dovizie di baiocchi, frequentavano certa trattoria di Rupert Street, ove per poco prezzo potevano assaporare qualche piatto cucinato all'usanza nostra. Più di una volta vi ero capitato anch'io e vi avevo stretto conoscenza con un Rossi mantovano, giovanotto che si acquistò presto le mie simpatie per il suo carattere espansivo ed allegro. Il Rossi era soverchiamente corrivo in fatto di relazioni amorose, ma altri vizi in lui non seppi riscontrare e quando il romagnolo Foschini mi avvertì, in tutta confidenza, di stare alla larga da quel "brutto ceffo" perchè era una spia del Governo francese, io gli osservai che il prestare leggermente fede alle calunnie insinuate, con tutta probabilità, per fini loschi, dai nemici del nostro partito, era un prestarsi puerilmente al loro giuoco.
+La parola al Conte di Rudio: L'anno stesso che mi accasai fui coinvolto in una malaugurata faccenda che fece molto chiasso. Gli esuli che non avevano dovizie di baiocchi, frequentavano certa trattoria di Rupert Street, ove per poco prezzo potevano assaporare qualche piatto cucinato all'usanza nostra. Più di una volta vi ero capitato anch'io e vi avevo stretto conoscenza con un Rossi mantovano, giovanotto che si acquistò presto le mie simpatie per il suo carattere espansivo ed allegro. Il Rossi era soverchiamente corrivo in fatto di relazioni amorose, ma altri vizi in lui non seppi riscontrare e quando il romagnolo Foschini mi avvertì, in tutta confidenza, di stare alla larga da quel "brutto ceffo" perchè era una spia del Governo francese, io gli osservai che il prestare leggermente fede alle calunnie insinuate, con tutta probabilità, per fini loschi, dai nemici del nostro partito, era un prestarsi puerilmente al loro giuoco.
 
 Il Foschini, imbronciato, mi voltò le spalle ed io... strinsi col Rossi maggiore intimità... un pochino anche per l'istinto, in me prepotente, di voler veder chiaro, sino al fondo delle cose. Ebbi a convincermi che il Foschini era realmente in errore. Tale convinzione, a dir vero, non è oggigiorno tanto radicata. Un Rossi, come seppi vari anni dopo, era stato sinistramente implicato nelle congiure di Mantova. Tuttavia il cognome Rossi è molto comune nell'Alta Italia ed io non ebbi mai il modo di accertare se la mia conoscenza di Londra e la spia del Governo austriaco siano l'identica persona. Per chi si interessi d'indagare queste minuzie, dirò che il Rossi di
 
@@ -2307,7 +2305,7 @@ Lasciato completamente in disparte, probabilmente perché si riputava fossi ramm
 
 <!-- pages:143-148 -->
 
-NEL Settembre del 1857, mentre campavo alla meglio, dando lezioni di lingua a Nottingham, un esule italiano, di passaggio per quella città, venne a farmi visita. Egli trovavasi in circostanze molto più critiche delle mie. Lo sovvenni e, il giorno stesso, proseguì pel suo cammino. Arrivato a Birmingham, si rivolse per soccorsi a Felice Orsini, che gli era, se non m'inganno, compaesano. Nel parlare delle sue traversie, alluse alla visita fattami. "Per Dio! esclamò Felice Orsini. Proprio l'uomo che cerco!" E mi scrisse, dandomi appuntamento alla stazione della Great Northern, a Londra.
+Nel Settembre del 1857, mentre campavo alla meglio, dando lezioni di lingua a Nottingham, un esule italiano, di passaggio per quella città, venne a farmi visita. Egli trovavasi in circostanze molto più critiche delle mie. Lo sovvenni e, il giorno stesso, proseguì pel suo cammino. Arrivato a Birmingham, si rivolse per soccorsi a Felice Orsini, che gli era, se non m'inganno, compaesano. Nel parlare delle sue traversie, alluse alla visita fattami. "Per Dio! esclamò Felice Orsini. Proprio l'uomo che cerco!" E mi scrisse, dandomi appuntamento alla stazione della Great Northern, a Londra.
 
 Non avevo visto Felice Orsini da lungo tempo. Ma non appena il treno entrò, sbuffando, sotto la tettoia della stazione (Charing Cross) lo scorsi ritto tra la folla, colle sue cassette e i suoi baffi nerissimi. Pochi secondi e lo fronteggiavo. "Dove diavolo sei stato sinora?" mi disse. Ed io glie lo raccontai. Quando allusi al mio matrimonio, il suo viso si rabbuiò. "Allora, addio propositi patriottici!" Lo disingannai. Adesso anzi mi correva obbligo tanto maggiore di cospirare e di battermi... mio figlio non doveva avere una patria serva ed infelice.
 
@@ -2370,7 +2368,7 @@ Ringraziai e Simon Bernard, adducendo a pretesto affari urgenti, grazie ai quali
 
 <!-- pages:148-152 -->
 
-PER parecchi giorni, mi sforzai a comprimere i pensieri che mi tumultuavano pel capo, riannodando vecchie conoscenze. Cercavo, nel tempo stesso, un punto d'appoggio che valesse a metter fine alla mia situazione finanziaria estremamente spinosa, ad assicurarmi lavoro e pane per l'avvenire.
+Per parecchi giorni, mi sforzai a comprimere i pensieri che mi tumultuavano pel capo, riannodando vecchie conoscenze. Cercavo, nel tempo stesso, un punto d'appoggio che valesse a metter fine alla mia situazione finanziaria estremamente spinosa, ad assicurarmi lavoro e pane per l'avvenire.
 
 Una sera, poco prima del tramonto, me ne ritornavo, insolitamente stanco, quasi avvilito, dalla solita escursione, quando, scantonando sulla piazza dello Shoah, urtai, letteralmente, in Simon Bernard.
 
@@ -2439,7 +2437,7 @@ Dormiva e sorrideva... forse, in sogno, al seno turgido di mamma sua. Abbracciai
 
 <!-- pages:154-156 -->
 
-LA domane, procedevo a tutto vapore verso il mio destino. Per affrontarlo, avevo la mia valigia a sacco... tra il cuoio e l'assicella del fondo, essa celava il fulminato di mercurio ed una lama che già, nei tentativi insurrezionali del 1853, aveva conosciuto i battiti del mio cuore. Avevo inoltre, un passaporto al nome di Giovanni da Sylva, portoghese, commesso viaggiatore di una fabbrica di birra e una diecina di scellini. Danaro e passaporto mi erano stati consegnati dal dott. Bernard, durante il nostro ultimo colloquio. Avevo, sopratutto, la mia giovinezza ed il mio coraggio. Che sarebbe uscito da tutto questo? La scintilla capace di modificare la storia, o null'altro fuorché la desolazione e la morte?
+La domane, procedevo a tutto vapore verso il mio destino. Per affrontarlo, avevo la mia valigia a sacco... tra il cuoio e l'assicella del fondo, essa celava il fulminato di mercurio ed una lama che già, nei tentativi insurrezionali del 1853, aveva conosciuto i battiti del mio cuore. Avevo inoltre, un passaporto al nome di Giovanni da Sylva, portoghese, commesso viaggiatore di una fabbrica di birra e una diecina di scellini. Danaro e passaporto mi erano stati consegnati dal dott. Bernard, durante il nostro ultimo colloquio. Avevo, sopratutto, la mia giovinezza ed il mio coraggio. Che sarebbe uscito da tutto questo? La scintilla capace di modificare la storia, o null'altro fuorché la desolazione e la morte?
 
 Lasciate alle spalle le bocche del Tamigi, trovammo un mare agitatissimo, anzi una vera tempesta. I disturbi dello stomaco e lo spavento misero una grande confusione a bordo. Ma l'infinito, che ruggiva d'ogni intorno, a me dava un esaltamento che mi raddoppiava la coscienza della vita. Da tempo il quietismo tentava come di sovrapporsi alla mia natura e quella specie di guazzo nella forza e nel moto pareva mi rigenerasse.
 
@@ -2515,7 +2513,7 @@ Con quel rifiuto, egli segnava irrevocabilmente il proprio destino!
 
 <!-- pages:160-162 -->
 
-LA sera del giorno successivo, il 14 Gennaio, io e il Pieri pranzammo, come il solito, alla trattoria della galleria Montmartre. Riparammo, subito dopo, all'albergo e il portiere, porgendo al Pieri la chiave della camera, gli annunciò che mezz'ora prima, un signore era venuto a chiedere di lui. Non aveva palesato il proprio nome, ma aveva assicurato che sarebbe ritornato tra breve.
+La sera del giorno successivo, il 14 Gennaio, io e il Pieri pranzammo, come il solito, alla trattoria della galleria Montmartre. Riparammo, subito dopo, all'albergo e il portiere, porgendo al Pieri la chiave della camera, gli annunciò che mezz'ora prima, un signore era venuto a chiedere di lui. Non aveva palesato il proprio nome, ma aveva assicurato che sarebbe ritornato tra breve.
 
 Eccoci in camera, alla ricerca smaniosa di un fiammifero per accendere il gas. Avevamo lasciato l'uscio aperto, per approfittare temporaneamente della luce proveniente dal corridoio. Voltandomi istintivamente scorsi, disegnato in nero su quella luce, la figura di Felice Orsini.
 
@@ -2550,7 +2548,7 @@ Debbo o non debbo soggiungere che, con quell'ultima stretta di mano l'Orsini ave
 
 <!-- pages:162-165 -->
 
-POCHI minuti dopo eravamo al posto di fronte all'Opera. La luce proiettata dai locali di una trattoria, quella del Broggi, salvo errore, mi batteva alle spalle; l'illuminazione straordinaria del teatro ci rischiarava in pieno viso. L'entrata della trattoria era fiancheggiata da colonne. Ad una d'esse l'Orsini si appoggiò colla schiena; io mi misi ritto alla sua destra. Eravamo tra molta gente, ferma per lo più, in attesa del corteggio imperiale. Di fronte, poco oltre il marciapiede, un cordone di guardie municipali si era allineato, coll'arme al piede... al di là della via Le Pelletier, lungo i fianchi della piazzetta, una folla bruna si agitava... tra essa, al posto assegnatogli, vidi Antonio Gomez, alto, ritto, immobile come una statua; ma per quanto scrutassi all'altro lato, non vidi Giuseppe Pieri.
+Pochi minuti dopo eravamo al posto di fronte all'Opera. La luce proiettata dai locali di una trattoria, quella del Broggi, salvo errore, mi batteva alle spalle; l'illuminazione straordinaria del teatro ci rischiarava in pieno viso. L'entrata della trattoria era fiancheggiata da colonne. Ad una d'esse l'Orsini si appoggiò colla schiena; io mi misi ritto alla sua destra. Eravamo tra molta gente, ferma per lo più, in attesa del corteggio imperiale. Di fronte, poco oltre il marciapiede, un cordone di guardie municipali si era allineato, coll'arme al piede... al di là della via Le Pelletier, lungo i fianchi della piazzetta, una folla bruna si agitava... tra essa, al posto assegnatogli, vidi Antonio Gomez, alto, ritto, immobile come una statua; ma per quanto scrutassi all'altro lato, non vidi Giuseppe Pieri.
 
 E già udivasi, in lontananza, il clamore confuso della moltitudine che esaltava l'Imperatore... pochi secondi, e le voci si fecero sonore e distinte. Levare a cielo l'uomo che li ha mitragliati... deplorevole degradazione dei Popoli che preferiscono il quieto vivere, all'ardue lotte per la Libertà!
 
@@ -2583,7 +2581,7 @@ Tuttavia, debbo anche dire che l'effetto deprimente della pietà era, in gran pa
 
 <!-- pages:165-168 -->
 
-NON appena mi vidi fuori di pericolo, il mio primo pensiero fu per l'Elisa. Mi ero diretto verso il Boulevard des Italiens... entrai in un caffè. Debbo narrare cose che sembreranno inezie; ma esse ebbero il loro peso. Il caffè era vuoto. La padrona, dietro il banco, parlava in modo spiritato con un avventore che le stava ritto di fronte. Non mi vide entrare e non notò la mia presenza sinché non le domandai, per favore, carta e calamaio. Scrissi brevemente: "Elisa, tutto va bene. Partirò domani per Oporto." Suggellata la lettera, riportai il calamaio al banco e chiesi un francobollo da otto soldi. La signora frugò in un cassetto e mi domandò, porgendomeli, se non mi servirebbero quattro da due.
+Non appena mi vidi fuori di pericolo, il mio primo pensiero fu per l'Elisa. Mi ero diretto verso il Boulevard des Italiens... entrai in un caffè. Debbo narrare cose che sembreranno inezie; ma esse ebbero il loro peso. Il caffè era vuoto. La padrona, dietro il banco, parlava in modo spiritato con un avventore che le stava ritto di fronte. Non mi vide entrare e non notò la mia presenza sinché non le domandai, per favore, carta e calamaio. Scrissi brevemente: "Elisa, tutto va bene. Partirò domani per Oporto." Suggellata la lettera, riportai il calamaio al banco e chiesi un francobollo da otto soldi. La signora frugò in un cassetto e mi domandò, porgendomeli, se non mi servirebbero quattro da due.
 
 Mi avviai alla Piazza della Concorde. Era deserta. Rimasi di piantone sul ponte a lungo. I mille rumori della città mi giungevano confusamente, ronzìo di un immenso alveare. La Senna, fatta più cupa dal riflesso irrequieto dei fanali, correva verso il mare misteriosamente, come l'ora che incombeva. Nessuno dei congiurati comparve. Quando l'aspettare più a lungo sarebbe stata follia, mi sbarazzai della rivoltella gettandola nel fiume e mi incamminai verso il Boulevard, deciso a scoprire terreno.
 
@@ -2774,7 +2772,7 @@ Ed impartì l'ordine che mi conducessero a Mazas.
 
 <!-- pages:177-183 -->
 
-DA quel momento non ebbi più alcun dubbio sulla sorte che mi era riserbata e se mi proponevo di lottare sino alla fine, era unicamente, come si suol dire, per onore di firma; per poter esclamare, arrivando in fondo al baratro: "Ho fatto tutto quanto era umanamente possibile per non precipitarvi!"
+Da quel momento non ebbi più alcun dubbio sulla sorte che mi era riserbata e se mi proponevo di lottare sino alla fine, era unicamente, come si suol dire, per onore di firma; per poter esclamare, arrivando in fondo al baratro: "Ho fatto tutto quanto era umanamente possibile per non precipitarvi!"
 
 Quel giorno stesso, dovetti convincermi che una volontà prepotente lavorava in senso inverso, rafforzando i mezzi che le erano onorevolmente concessi, colla frode e collo spergiuro. Io ero rinchiuso in una cella a pianterreno. Mi venne dato un compagno... un agente della Polizia segreta, in abito da borghese il quale mi annunciò che avrebbe passato con me il giorno e la notte. Certo, non per tenermi allegro — pensai — ma per carpirmi qualche parola sfuggitami, nel travaglio dell'anima, durante il sonno.
 
@@ -2905,7 +2903,7 @@ Poi corsi via, tanto celermente che le guardie, venendomi appresso, pareva m'ins
 
 <!-- pages:183-186 -->
 
-QUANDO l'uscio della cella si richiuse fu come se le torbide passioni che mi agitavano restassero al di là della soglia. Saturno e l'altro mi interrogarono coll'espressione del viso. "Tutto è finito! Ogni mia aspirazione alla libertà è troncata da oggi. Bisogna prepararsi a morire". Noi dissi, ma dentro, sentivo che m'avrebbe sorretto l'orgoglio d'essermi sacrificato pel mio Paese.
+Quando l'uscio della cella si richiuse fu come se le torbide passioni che mi agitavano restassero al di là della soglia. Saturno e l'altro mi interrogarono coll'espressione del viso. "Tutto è finito! Ogni mia aspirazione alla libertà è troncata da oggi. Bisogna prepararsi a morire". Noi dissi, ma dentro, sentivo che m'avrebbe sorretto l'orgoglio d'essermi sacrificato pel mio Paese.
 
 Non appena ebbi terminato di narrare, essi si sforzarono, come per tacita intesa, di trascinarmi a ritroso delle mie convinzioni. Accamparono tra l'altro, le simpatie della popolazione e le buone disposizioni che, a quanto si assicurava, animavano la Corte imperiale. A questo risposi dondolando il capo e sorridendo. Ne nacque uno strano bisticcio e finimmo col fare una scommessa. Se il Tribunale pronunciava sentenza di morte essi si sarebbero assoggettati a pagarmi una bottiglia di champagne e del migliore. Se no, l'avrei pagata io. Suggellammo il patto scambiandoci una energica stretta di mano...
 
@@ -2952,7 +2950,7 @@ Nugent de Saint Laurent che approvò poi pienamente la tattica del Pieri, tentò
 
 <!-- pages:186-190 -->
 
-ED eccoci al nostro capo. Rievocherò vecchie impressioni; esprimerò giudizi che cinquant'anni di meditazione non valsero a mutare.
+Ed eccoci al nostro capo. Rievocherò vecchie impressioni; esprimerò giudizi che cinquant'anni di meditazione non valsero a mutare.
 
 Noi ci troviamo di fronte un carattere capace, in sommo grado, di impulsi generosi. Senonchè, per le misteriose reazioni dell'animo suo, alle frequenti esaltazioni del sentimento tenevano dietro, sempre o quasi sempre, depressioni profonde. Natura soverchiamente nervosa e sensitiva, oscillava fatalmente dall'uno all'altro estremo, mettendo a nudo deficienze strane che io tenevo, sin da quei tempi, in conto di malattie... di quale precisa natura non sapevo e non so definire.
 
@@ -3013,7 +3011,7 @@ Giulio Favre al disopra dei piccoli raggiri legali e delle cose meschine. Spazia
 
 <!-- pages:190-195 -->
 
-GIUNSE il 25 Febbraio giorno fissato per lo svolgimento del processo. Fui tratto al Palazzo di Giustizia e per la prima volta, dopo la sera dell'attentato, vidi in pieno i miei compagni di sventura.
+Giunse il 25 Febbraio giorno fissato per lo svolgimento del processo. Fui tratto al Palazzo di Giustizia e per la prima volta, dopo la sera dell'attentato, vidi in pieno i miei compagni di sventura.
 
 L'aula del Tribunale era gremita di uomini e di signore. Vi era sfoggio di abbigliamenti... si accorreva al processo come a teatro. Tuttavia, per la percezione di non so quale senso misterioso, compresi subito che l'anima multiforme di quell'uditorio non ci era avverso. Ostili, invece, deliberatamente ostili gli individui seduti alla cattedra e il manipolo di stipendiati che li attorniava. Costoro si immaginavano forse d'essere l'Impero e la sua forza e consideravano il nostro attentato come si considera un'offesa personale.
 
@@ -3080,7 +3078,7 @@ Così, per una bizzarria del destino, conversando facetamente e brindando, finii
 
 <!-- pages:195-200 -->
 
-IL giorno seguente, alla Roquette. Ci fecero indossare il grigio uniforme dei prigionieri; ci misero la camicia di forza... non per libidine di tortura, ma per prevenire tentativi di suicidio.
+Il giorno seguente, alla Roquette. Ci fecero indossare il grigio uniforme dei prigionieri; ci misero la camicia di forza... non per libidine di tortura, ma per prevenire tentativi di suicidio.
 
 Ci avevano trasportati al nuovo carcere separatamente e separatamente rinchiusi; ma le nostre celle erano situate in modo che potevamo vederci e parlarci. Una camera rettangolare, piuttosto ampia, nuda... quattro pareti bianche, quattro finestre, quattro usci. Chi entra da quello che comunica col cortile, scorge di fronte l'uscio e la finestra della cella di Felice Orsini; la cella del Pieri era oltre la parete di sinistra; oltre la parete di destra, la mia.
 
@@ -3165,7 +3163,7 @@ Il Consiglio di Stato ed il clero... Napoleone III n'ebbe più di quanto sperava
 
 <!-- pages:200-206 -->
 
-LA sera del dodici, il cappellano Hughon venne a farmi la solita visita. Era grave, grave, grave. Gli parlai del nostro appello respinto ed egli divenne impacciato. Allora mi balenò il sospetto della triste realtà e ricorsi, per accertarmene, a parecchi sotterfugi. Ma l'Hughon assunse prontamente l'aria dell'ingenuo e, al riparo di quel semplice artificio, divenne inattaccabile. Forse ogni mio sospetto svaporava se, nel congedarsi, il mio visitatore non mi avesse stesa la mano. A me parve che quelle dita segnassero nell'aria segni misteriosi, tanto visibilmente tremavano.
+La sera del dodici, il cappellano Hughon venne a farmi la solita visita. Era grave, grave, grave. Gli parlai del nostro appello respinto ed egli divenne impacciato. Allora mi balenò il sospetto della triste realtà e ricorsi, per accertarmene, a parecchi sotterfugi. Ma l'Hughon assunse prontamente l'aria dell'ingenuo e, al riparo di quel semplice artificio, divenne inattaccabile. Forse ogni mio sospetto svaporava se, nel congedarsi, il mio visitatore non mi avesse stesa la mano. A me parve che quelle dita segnassero nell'aria segni misteriosi, tanto visibilmente tremavano.
 
 Aspettai il ritorno di Saturno che, delle due guardie, mi sembrava la più schietta e, senza dargli neppure il tempo di levarsi il berretto: "Saturno — dissi — so che domattina verrò tratto al supplizio. Dà retta e fa, tu che sei buono, di eseguire appuntino la mia ultima volontà. Alle cinque mi sveglierai."
 
@@ -3242,7 +3240,7 @@ Le mie labbra non si mossero, ma l'anima ebbe un grido: "Oh quanto ci è costata
 
 <!-- pages:206-210 -->
 
-ALLE nove precise, Monsieur de Collet era nella mia cella. Non si diffuse in grandi particolari, ma quanto mi narrò fu più che sufficiente a metter fine alle mie congetture. Influenti personaggi inglesi avevano intercesso, per me, presso la sua augusta Imperatrice. Ricorreva, appunto in quei giorni, il secondo compleanno del principe ereditario ed ella, che era sopratutto donna e madre, si era compiaciuta di solennizzare il fausto avvenimento, accordando una grazia che avrebbe sollevato dalla sua afflizione una donna, una madre. Mia moglie era già stata avvisata telegraficamente della mia buona ventura.
+Alle nove precise, Monsieur de Collet era nella mia cella. Non si diffuse in grandi particolari, ma quanto mi narrò fu più che sufficiente a metter fine alle mie congetture. Influenti personaggi inglesi avevano intercesso, per me, presso la sua augusta Imperatrice. Ricorreva, appunto in quei giorni, il secondo compleanno del principe ereditario ed ella, che era sopratutto donna e madre, si era compiaciuta di solennizzare il fausto avvenimento, accordando una grazia che avrebbe sollevato dalla sua afflizione una donna, una madre. Mia moglie era già stata avvisata telegraficamente della mia buona ventura.
 
 Monsieur de Collet si profuse, a questo punto, in congratulazioni; poi si incamminò per andarsene, ma ritornando sui suoi passi: "Fu l'Imperatrice che mi inviò stamane. Ella volle accertare che la sua volontà non fosse violata. Tuttavia è bene il rammentare che molto di bene e molto di severa giustizia può procedere dal suo augusto consorte. Una frase di gratitudine a lui rivolta, certo non vi potrebbe nuocere. Dico questo di mia propria iniziativa; ma sono persuaso di interpretare il pensiero di Sua Maestà l'Imperatrice, a cui siete pur debitore della vita."
 
@@ -3303,7 +3301,7 @@ La rividi, ritta tra l'oscurità, come la Madonna di un quadro fiammingo. Il bim
 
 <!-- pages:212-215 -->
 
-LIBERO... fra un anno!" Non lo avevo detto solo per egoismo, né solo per pietà e tanto meno per millanteria. Il mio primo tentativo di fuga era stato meditato, appunto di quei giorni alla Roquette. Vi avevo fatto la conoscenza di un Inglese che scontava sei mesi di carcere per bancarotta fraudolenta. Era uomo dotato di una certa coltura, di poche parole; possedeva, da quanto potevo arguire, mezzi più che bastevoli. Come la grande maggioranza dei suoi connazionali, si interessava di politica e odiava Napoleone. Egli stesso venne, per così dire, incontro all'animo mio e si offerse d'aiutarmi con tutti i suoi mezzi. "In chiesa coi santi, in taverna coi ghiottoni!" E, d'altra parte, se la società ipocrita trova comodo il tener calcolo unicamente delle colpe di un uomo per deprimerlo, malgrado le sue virtù; io trovo più logico, più fraterno il por mente alle sue virtù e l'inalzarlo, malgrado le sue colpe. Aveva realmente il mio inglese acquistato in modo riprovevole le sue ricchezze? Lo spendere per ridare il marito alla vedova consorte, il padre al figlio, ritornava a buon uso il mal tolto. Accettai.
+Libero... fra un anno!" Non lo avevo detto solo per egoismo, né solo per pietà e tanto meno per millanteria. Il mio primo tentativo di fuga era stato meditato, appunto di quei giorni alla Roquette. Vi avevo fatto la conoscenza di un Inglese che scontava sei mesi di carcere per bancarotta fraudolenta. Era uomo dotato di una certa coltura, di poche parole; possedeva, da quanto potevo arguire, mezzi più che bastevoli. Come la grande maggioranza dei suoi connazionali, si interessava di politica e odiava Napoleone. Egli stesso venne, per così dire, incontro all'animo mio e si offerse d'aiutarmi con tutti i suoi mezzi. "In chiesa coi santi, in taverna coi ghiottoni!" E, d'altra parte, se la società ipocrita trova comodo il tener calcolo unicamente delle colpe di un uomo per deprimerlo, malgrado le sue virtù; io trovo più logico, più fraterno il por mente alle sue virtù e l'inalzarlo, malgrado le sue colpe. Aveva realmente il mio inglese acquistato in modo riprovevole le sue ricchezze? Lo spendere per ridare il marito alla vedova consorte, il padre al figlio, ritornava a buon uso il mal tolto. Accettai.
 
 Avevamo calcolato che egli ritornasse tra i liberi prima che io fossi a Tolone. Sapevamo che i condannati, prima d'essere trasportati alle terre tropicali, fanno una tappa, più o meno lunga, a quel bagno. Non avevamo una pianta della località e il concertare un piano ben definito riesciva affare sgarrato; ma non si ignorava che se è possibile l'indurre, per danaro, un'umana creatura a commettere atti turpi, è del pari possibile l'indurla, per danaro, a tentare atti di generoso ardimento.
 
@@ -3448,7 +3446,7 @@ Quando la febbre, non trovando più carne da rodere, scomparve, i Deputati franc
 
 <!-- pages:215-222 -->
 
-LA DURR filava portando nel suo ampio ventre, diviso in tre ponti, circa trecento condannati. Io e il Gomez eravamo rinchiusi nel più profondo. Ma il Comandante, che era un orleanista e non doveva nutrire soverchio antipatie per noi, non appena seppe chi eravamo, ci fece trasportare sul ponte superiore. Anzi egli spinse la sua benevole parzialità sino a permettermi di salire, di quando in quando, sopra coperta per fumare liberamente... i Regolamenti prescrivevano la bagatella di cinquanta colpi di corda a chi l'avesse fatto nei compartimenti.
+La Durr filava portando nel suo ampio ventre, diviso in tre ponti, circa trecento condannati. Io e il Gomez eravamo rinchiusi nel più profondo. Ma il Comandante, che era un orleanista e non doveva nutrire soverchio antipatie per noi, non appena seppe chi eravamo, ci fece trasportare sul ponte superiore. Anzi egli spinse la sua benevole parzialità sino a permettermi di salire, di quando in quando, sopra coperta per fumare liberamente... i Regolamenti prescrivevano la bagatella di cinquanta colpi di corda a chi l'avesse fatto nei compartimenti.
 
 Poggiammo all'isola di Santa Cruz (Carmarie) per approvvigionarci d'acqua e vi rimanemmo due giorni, a finestre chiuse, per toglierci ogni possibilità di fuga; poi si procedette direttamente all'Isola reale del Saluto, ove vennero sbarcati circa duecento forzati.
 
@@ -3533,7 +3531,7 @@ Quando la febbre, non trovando più carne da rodere, scomparve, i Deputati franc
 
 <!-- pages:222-225 -->
 
-AVEVO gettato appena il mio sacco di tela sul molo dell'isola del Saluto e già la speranza mi inondava il petto, intensa, prepotente.
+Avevo gettato appena il mio sacco di tela sul molo dell'isola del Saluto e già la speranza mi inondava il petto, intensa, prepotente.
 
 L'isola, mettendo in giuoco un po' di imaginazione, presentava la forma di un 8. Sull'occhio maggiore, che era anche il più elevato, sorgevano le abitazioni, l'ospedale, una chiesa; sull'occhio più esiguo, erano le officine e, sulla sua curva estrema, le caserme. Da quell'estremità, rivolta più o meno esattamente a nordovest, si poteva gettar con mano un sasso sul lungo isolotto del Diavolo, lo stesso che divenne poi tristemente celebre pel losco dramma di cui fu vittima il capitano Dreyfus. A marea bassa, non riesciva difficile, saltando sugli scheggioni rimasti scoperti, il passare dall'una all'altra isola, a piedi asciutti.
 
@@ -3602,7 +3600,7 @@ E le cannoniere? Ecco il problema! Ogni qualvolta mi proponevo di scioglierlo il
 
 <!-- pages:225-228 -->
 
-NELLE mie ore di riposo, nulla trascuravo per avere ampie informazioni sugli uomini che vivevano e soffrivano a me d'attorno. Antonio Gomez, dopo essere stato addetto, per qualche tempo, al servizio degli Ufficiali, aveva ritrovata, benché colorata in bronzo, la sua faccia da prete bonaccione. Ma un ordine inaspettato lo sottrasse ad ogni mia influenza. Fu inviato, con altri, al penitenziario del Corù, sul Continente ed ebbi appena il tempo di stringergli la mano. D'allora, benché abbia fede che i rivolgimenti politici di Francia gli procurassero giorni migliori, io più non lo rividi e più nulla ne intesi.
+Nelle mie ore di riposo, nulla trascuravo per avere ampie informazioni sugli uomini che vivevano e soffrivano a me d'attorno. Antonio Gomez, dopo essere stato addetto, per qualche tempo, al servizio degli Ufficiali, aveva ritrovata, benché colorata in bronzo, la sua faccia da prete bonaccione. Ma un ordine inaspettato lo sottrasse ad ogni mia influenza. Fu inviato, con altri, al penitenziario del Corù, sul Continente ed ebbi appena il tempo di stringergli la mano. D'allora, benché abbia fede che i rivolgimenti politici di Francia gli procurassero giorni migliori, io più non lo rividi e più nulla ne intesi.
 
 Sull'isola erano però altri Italiani, una dozzina forse; Romani per lo più, tutti condannati per aver raddoppiato il loro odio politico, sovrapponendosi quello privato; per aver vendicato, colla prepotenza nostrana, l'onta loro inflitta dalla prepotenza straniera. Il Cristo ha molto perdonato — dicesi — a chi ha molto amato; egli dovrebbe perdonare molto di più a chi ha molto odiato e, nell'odio seppe trovare la virtù di non esser pecora. Fra questi Romani era un Morelli, sarto, condannato a vita. Chi presta facile orecchio alla speranza, più di colui che le ha tutte perdute?
 
@@ -3702,7 +3700,7 @@ L'alba ci trovò molli e raggrinziti. Ma avevamo lasciato alle spalle l'acque in
 
 <!-- pages:232-235 -->
 
-NON saprei ripetere, con perfetto ordine cronologico e come se le leggessi su un registro di bordo, le molteplici peripezie della nostra ardua prova. Dirò in breve di quelle che ne determinarono più propriamente il corso.
+Non saprei ripetere, con perfetto ordine cronologico e come se le leggessi su un registro di bordo, le molteplici peripezie della nostra ardua prova. Dirò in breve di quelle che ne determinarono più propriamente il corso.
 
 Le tempeste, invocate dal Cousin, vennero e così gagliarde da mettere a repentaglio ben altre imbarcazioni che non fosse quella nostra. Non era solo il mare che dovevamo combattere; ma il mare ed il cielo congiurati; i quali ci martellavano con una pertinacia che quasi rivelava un intendimento.
 
@@ -3862,7 +3860,7 @@ Penso che la loro fibra virile li rendesse degni della libertà che tanto ardent
 
 <!-- pages:240-245 -->
 
-NEL pomeriggio, rividi invece il vecchio Governatore. Ispirandosi alla sconfinata democrazia degli Inglesi, che pur sono tanto aristocratici nel tratto, egli si era creduto in dovere di scendere sino a me, per congratularsi personalmente col condannato politico rinato a vita civile. E avendo compreso, da quanto gli narrò lo stesso dottore, che la mia partenza per l'Inghilterra, con mezzi ordinari, non era scevra di pericoli, si offerse di accaparrarmi un posto su una nave da guerra, che avrebbe fatto rotta per la capitale dell'Impero non più tardi del Marzo.
+Nel pomeriggio, rividi invece il vecchio Governatore. Ispirandosi alla sconfinata democrazia degli Inglesi, che pur sono tanto aristocratici nel tratto, egli si era creduto in dovere di scendere sino a me, per congratularsi personalmente col condannato politico rinato a vita civile. E avendo compreso, da quanto gli narrò lo stesso dottore, che la mia partenza per l'Inghilterra, con mezzi ordinari, non era scevra di pericoli, si offerse di accaparrarmi un posto su una nave da guerra, che avrebbe fatto rotta per la capitale dell'Impero non più tardi del Marzo.
 
 Con questo, prese congedo. Ma prima mi porse, senza una parola di commento, un suo grosso volume legato in marocchino nero. Era... una Bibbia. Al buon vecchio non sembrava d'aver fatto abbastanza coll'aver contribuito alla mia liberazione materiale; egli avrebbe voluto anche gettare nel mio animo i germi d'una fermentazione morale. Benché riputassi e reputo che il suo pio desiderio, germogliando e sbocciando, mi avrebbe, per così dire, evirato, ciò nulla meno non seppi esimermi dal provare un senso di gratitudine per la disinteressata nobiltà del suo pensiero. Dalla finestra lo guardai finché scomparve. Parecchie volte ho desiderato rivederlo per provargli che il bene da lui fatto non fu rivolto a male. Ma egli contava, già allora, una settantina d'anni e chi sa da quanto tempo le virtù e le follie del mondo non lo commuovono più! Mi ha lasciato un'impressione indelebile, non solo perchè da lui incomincia un nuovo periodo della mia esistenza; ma anche perchè, in tempo tanto breve, mi seppe rivelare molteplici lati del suo carattere. La sua ammirazione pei fatti arditi compiuti sul mare; l'orgoglio che lo indusse, pur non disconoscendo i meriti altrui, a proclamare, al nostro cospetto, la superiorità della propria razza; i suoi sentimenti umani; il suo concetto sulla nobiltà del lavoro e sull'influenza rigeneratrice della parsimonia; la sua fede nella riabilitazione dei caduti; il suo ribrezzo per la menzogna; la sua spontanea riparazione di un'offesa, sia pur lieve, fatta a chi trovavasi in condizioni sociali tanto inferiori alla sua; il rispetto manifestato pel diritto degli oppressi; persino la sua tendenza al misticismo, erano la sintesi delle virtù e dei difetti di un Popolo... di un gran Popolo.
 
@@ -3943,7 +3941,7 @@ In quella, un pensiero mi balenò nella mente. Avrei ritrovato la mia Patria una
 
 <!-- pages:245-249 -->
 
-PER quanto vasti fossero i miei desideri, momentaneamente non potevo far altro se non che cercare il modo di stabilirmi decentemente a Londra. Presto le arti del Bernard mi misero in posizione tale che, lungi dal combattere i nemici dell'integrità italiana, dovetti provvedere, d'urgenza, alla difesa dell'integrità mia personale.
+Per quanto vasti fossero i miei desideri, momentaneamente non potevo far altro se non che cercare il modo di stabilirmi decentemente a Londra. Presto le arti del Bernard mi misero in posizione tale che, lungi dal combattere i nemici dell'integrità italiana, dovetti provvedere, d'urgenza, alla difesa dell'integrità mia personale.
 
 Le calunnie di cui ebbi, dal Rossi, il primo sentore, mi furono subito riconfermate, con maggiore ampiezza di particolari, da varie altre persone. Il dottor Bernard non solo insisteva, a quattr'occhi, sulle affermazioni lanciate quando mi credeva già sceso sotterra; ma tentava di avvalorare sostenendo che io avevo riacquistato la mia libertà, non già con una fuga premeditata e arditamente compiuta, ma perchè le Autorità francesi, a compenso delle mie delazioni, mi avevano, per così dire, spalancate le porte dell'ergastolo.
 
@@ -4000,7 +3998,7 @@ Per staccarmi da quel cadavere, già quasi in dissoluzione, dovetti fare uno sfo
 
 <!-- pages:249-252 -->
 
-ANNO stesso del mio arrivo a Londra, la Polizia francese fece, per quanto mi riguarda, il suo ultimo tentativo di corruzione. Le mie finanze volgevano allora al peggio. Sfumate le cinque sterline dell'Allsop; i pochi risparmi effettuati nel mio giro di conferenze, sfumati! L'Elisa, in procinto di diventare madre una seconda volta, richiedeva di grandi cure. Fortunatamente l'aiuto che, per un senso d'orgoglio, più non sollecitavo dai miei connazionali, ebbi dal Le Houx, l'ex galeotto francese. Il quale, trovata occupazione in una segheria di marmi, aveva indotto il suo principale ad impiegarmi per levigar lastre. Ma la mia imperizia assottigliava la mercede. Fatto in simili momenti, il passo della Polizia francese non mancava di tattica. L'Ispettore che entrò nella mia modesta dimora, procedette all'attacco senza alcun giro di parole, a carte scoperte, con una ruvida franchezza degna di miglior causa. Egli insistette sul mio isolamento, sulla ingratitudine delle persone a cui "istigazione" avevo affrontato il patibolo, sull'indigenza rivelata dalla mia abitazione e dal mio aspetto. Valeva la pena di sacrificarmi per gente che, nella migliore delle ipotesi, se ne infischiava de' miei sacrifici? Egli comprendeva benissimo come potessi nutrire male prevenzioni contro il Governo di Napoleone III; ma quel Governo non ne nutriva punto a mio riguardo. Una sola parola, ed ogni mia miseria sarebbe finita e avrei potuto rimettere mia moglie nell'ambiente agiato che si meritava, che le spettava di diritto.
+L'anno stesso del mio arrivo a Londra, la Polizia francese fece, per quanto mi riguarda, il suo ultimo tentativo di corruzione. Le mie finanze volgevano allora al peggio. Sfumate le cinque sterline dell'Allsop; i pochi risparmi effettuati nel mio giro di conferenze, sfumati! L'Elisa, in procinto di diventare madre una seconda volta, richiedeva di grandi cure. Fortunatamente l'aiuto che, per un senso d'orgoglio, più non sollecitavo dai miei connazionali, ebbi dal Le Houx, l'ex galeotto francese. Il quale, trovata occupazione in una segheria di marmi, aveva indotto il suo principale ad impiegarmi per levigar lastre. Ma la mia imperizia assottigliava la mercede. Fatto in simili momenti, il passo della Polizia francese non mancava di tattica. L'Ispettore che entrò nella mia modesta dimora, procedette all'attacco senza alcun giro di parole, a carte scoperte, con una ruvida franchezza degna di miglior causa. Egli insistette sul mio isolamento, sulla ingratitudine delle persone a cui "istigazione" avevo affrontato il patibolo, sull'indigenza rivelata dalla mia abitazione e dal mio aspetto. Valeva la pena di sacrificarmi per gente che, nella migliore delle ipotesi, se ne infischiava de' miei sacrifici? Egli comprendeva benissimo come potessi nutrire male prevenzioni contro il Governo di Napoleone III; ma quel Governo non ne nutriva punto a mio riguardo. Una sola parola, ed ogni mia miseria sarebbe finita e avrei potuto rimettere mia moglie nell'ambiente agiato che si meritava, che le spettava di diritto.
 
 E diede maggior peso alle sue parole, cavando dalla tasca una manata di sterline, che si sarebbe — disse — periodicamente rinnovata.
 
@@ -4065,7 +4063,7 @@ Quell'anno stesso, dopo un'esistenza di brevi settimane cessava di vivere il mio
 
 <!-- pages:252-258 -->
 
-TRA l'uno e l'altro incidente della mia vita privata, manda soffi saturi di rinnovate speranze e d'entusiasmo, d'amarezza e d'ira, la Storia del mio Paese.
+Tra l'uno e l'altro incidente della mia vita privata, manda soffi saturi di rinnovate speranze e d'entusiasmo, d'amarezza e d'ira, la Storia del mio Paese.
 
 Le mie previsioni sulle conseguenze fatali dell'alleanza stretta fra il Re del Piemonte e Napoleone III, benché occorsemi alla mente a tanta distanza dal teatro degli avvenimenti e mentre mi trovavo come escluso dal resto dell'umanità, collimavano con quelle espresse da Giuseppe Mazzini. Tali previsioni si erano avverate.
 
@@ -4138,7 +4136,7 @@ E, quel che è peggio, profondeva medaglie e premiava con avanzamenti, i disones
 
 <!-- pages:258-263 -->
 
-TRISTE fatalità che sembra castigo! Dal misfatto di Aspromonte sino ai giorni che corrono, in mezzo secolo di Storia, Casa Savoia, benemerita sotto vari punti di vista, non ha più saputo condurre l'Italia alla vittoria, che pure arrise ripetutamente ancora alla vittima gloriosa del suo piombo fratricida (1).
+Triste fatalità che sembra castigo! Dal misfatto di Aspromonte sino ai giorni che corrono, in mezzo secolo di Storia, Casa Savoia, benemerita sotto vari punti di vista, non ha più saputo condurre l'Italia alla vittoria, che pure arrise ripetutamente ancora alla vittima gloriosa del suo piombo fratricida (1).
 
 Nel 1866 il Veneto fu sottratto al giogo esoso dell'Austria; ma sottostando a misteriose sconfitte, ad umiliazioni che troppo rammentano un altro losco mistero, quello che si accoppia al nome di Novara. Come a Novara, a Custoza ed a Lissa il nemico, sensibilmente inferiore di forze, si meraviglia della sua stessa vittoria e, per poco, non vi presta fede. Nel frattempo, un pugno di volontari, premeditatamente lasciato deficiente di armi, redime, sulle balze del Tirolo, l'onore d'Italia. Una volta ancora, coloro che si arrogavano il monopolio dell'ingegno e della serietà, dimostravano la loro vacua gonfiezza, la loro inferiorità di fronte al manipolo degli "insensati" che si ostinavano a volere un'Italia integra e gloriosa. E l'ordine perentorio impartito a Garibaldi di sgombrare le terre redente e fecondate col sangue dei suoi, rivela anche troppo palesemente il regio dispetto per lo stridente contrasto.
 
@@ -4205,7 +4203,7 @@ Ma nell'esporre le ragioni per cui non hanno saputo realizzare il meglio, i Cons
 
 <!-- pages:263-268 -->
 
-LE sofferenze dell'ergastolo erano ormai cancellate dal mio lungo bagno nella luce libera e negli affetti della famiglia che quasi mi conciliavano coll'inerzia, quando venne, a scuotermi, l'annuncio del delitto di Aspromonte.
+Le sofferenze dell'ergastolo erano ormai cancellate dal mio lungo bagno nella luce libera e negli affetti della famiglia che quasi mi conciliavano coll'inerzia, quando venne, a scuotermi, l'annuncio del delitto di Aspromonte.
 
 Le conferenze e i comizi organizzati per protestare contro il Potere Temporale dei Papi divennero, a Londra, un avvenimento giornaliero ed io mi ci sono, per così dire, tuffato.
 

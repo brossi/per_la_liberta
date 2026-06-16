@@ -16,7 +16,7 @@
 
 # Preface
 
-THE PRESENT volume might make some contribution to History; but it is not history in the sense in which that word is today understood and written... Something less, for those who would demand the methodical concatenation of facts and the cold judgment upon men and events; something more, for those who, regarding events as a mere resultant, might seek to grasp “the soul of the times,” rummaging among the passions that stirred them.
+The present volume might make some contribution to History; but it is not history in the sense in which that word is today understood and written... Something less, for those who would demand the methodical concatenation of facts and the cold judgment upon men and events; something more, for those who, regarding events as a mere resultant, might seek to grasp “the soul of the times,” rummaging among the passions that stirred them.
 
 The Count di Rudio, so far removed, in time and in space, from the events he narrates, frequently protests that the miseries of politics no longer move him... Doubtless he deceives himself. Like a Minos who
 
@@ -49,7 +49,7 @@ Cesare Crespi.
 
 
 
-LOS ANGELES, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.
+Los Angeles, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.
 
 For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies: where, in summer, the sun prostrates men and herds alike, like withered grass; where the frost of the long winter makes the earth rigid and impenetrable even to the blows of the pickaxe; where cyclones sweep through the immense valleys, uprooting trees and shattering houses.
 
@@ -441,7 +441,7 @@ It was the last days of April. On the 30th, the troops of the French invader bro
 
 
 
-THE SIEGE OF ROME is indissolubly linked to the name of a man fatal to Liberty: that of Luigi Napoleone. The Carbonari, who had received him into their bosom, regarded him with suspicion as early as 1831; for at that time the rumor had spread that he had made away with his brother (Napoleone Luigi), who, having been born four years before him, barred his path to sublime heights.
+The siege of Rome is indissolubly linked to the name of a man fatal to Liberty: that of Luigi Napoleone. The Carbonari, who had received him into their bosom, regarded him with suspicion as early as 1831; for at that time the rumor had spread that he had made away with his brother (Napoleone Luigi), who, having been born four years before him, barred his path to sublime heights.
 
 Our revolutionary movements opened, or seemed to open, new horizons for Italy at that time, and the two sons of Hortense, taking part in those movements, sought upon the Peninsula a field propitious to their ambition; a compensation, perhaps, as well, for the loss of the French throne, then warmed by Louis-Philippe. This train of thought lent credence to the dark rumor, which, moreover, could never be thoroughly investigated.
 
@@ -488,7 +488,7 @@ One man alone, Giuseppe Mazzini, foresaw, in that tragic moment, that from death
 
 
 
-TO INSINUATE my own personality among the great men who labored in that titanic defense seems to me an act of irreverence. And I will say, moreover, that my spirit remains as though overwhelmed by the surging return of those powerful visions.
+To insinuate my own personality among the great men who labored in that titanic defense seems to me an act of irreverence. And I will say, moreover, that my spirit remains as though overwhelmed by the surging return of those powerful visions.
 
 On the 30th of April, I too saw the backs of the invaders, and certainly, pressing the advantage of our victory, we would have driven the French into the sea, had not Giuseppe Mazzini deemed it expedient, for his diplomatic designs, to blunt our élan.
 
@@ -575,7 +575,7 @@ The 8th of June was a torrid day... I stood for a few seconds in silence, contem
 
 
 
-I DO NOT intend to narrate the detailed history of a siege that extended beyond all expectation. With his original plan, General Oudinot aimed to take possession of the Gianicolo by direct assault. However, the fierce, unexpected resistance offered by the Casa Giacometti and above all that of the Vascello — which was reduced to a heap of ruins, yet which French arms never succeeded in conquering — had compelled Oudinot to abandon his first design. He turned the difficulty by extending his trenches toward the south and preparing a flanking attack. This prolonged the agony of the Republic by a month.
+I do not intend to narrate the detailed history of a siege that extended beyond all expectation. With his original plan, General Oudinot aimed to take possession of the Gianicolo by direct assault. However, the fierce, unexpected resistance offered by the Casa Giacometti and above all that of the Vascello — which was reduced to a heap of ruins, yet which French arms never succeeded in conquering — had compelled Oudinot to abandon his first design. He turned the difficulty by extending his trenches toward the south and preparing a flanking attack. This prolonged the agony of the Republic by a month.
 
 During that month I had, between one exchange of rifle-fire and the next, more than one occasion to listen to the inspired words of Ugo Bassi and to engage in vibrant conversation with Ciceruacchio. Poor martyrs of a cause more than holy, they return at times to quicken my solitude, and in those moments I hear their voices still and dare not let fall an eyelid, lest reality reassert itself and the vision fade. Precisely as a son who, having had the bier that contains his father's remains unsealed after many long years, and finding the body intact, fears that a mere breath might scatter those dear features and reduce them to a shapeless handful of ash.
 
@@ -725,7 +725,7 @@ He could henceforth undermine the ground beneath his enemies' feet; plunge into 
 
 
 
-THANKS to our connections with the Circolo del Paradiso, we were, from the very moment of our arrival in Paris, fraternally welcomed by the Club of Batignolles. We were put to work making cartridges.
+Thanks to our connections with the Circolo del Paradiso, we were, from the very moment of our arrival in Paris, fraternally welcomed by the Club of Batignolles. We were put to work making cartridges.
 
 The rooms of the Club were permanently occupied by some forty revolutionaries... not a corner in which to lodge ourselves. But we ended by finding somewhere to lay our heads in the house of a Turinese hatter, residing in the faubourg Saint-Antoine, at the opposite extremity of the metropolis.
 
@@ -804,7 +804,7 @@ In a brief space of time, the Military Commissions and the Mixed Commissions plu
 
 
 
-THE barricade having been abandoned to its fate, Trolli and I made our way toward the “boulevard.” But scarcely had we crossed the Pont Saint Denis when we were forced to acknowledge that martial law was being rigorously enforced and that the surest means of courting death was to walk in company. We found corpses here and there. I still recall, with great vividness, that of a water-seller, lying face downward, the vessel upon his back, his arms outstretched, his head literally shattered to fragments... There appeared, in horrible confusion, blood, brains and slices of lemon!
+The barricade having been abandoned to its fate, Trolli and I made our way toward the “boulevard.” But scarcely had we crossed the Pont Saint Denis when we were forced to acknowledge that martial law was being rigorously enforced and that the surest means of courting death was to walk in company. We found corpses here and there. I still recall, with great vividness, that of a water-seller, lying face downward, the vessel upon his back, his arms outstretched, his head literally shattered to fragments... There appeared, in horrible confusion, blood, brains and slices of lemon!
 
 We parted, with the understanding that we should not lose sight of one another, and that we would quit the city by the Barrière du Trône. But to pass it, guarded as it was by a sound body of Finance guards and soldiers, was rather a ticklish undertaking. Before reaching it, I bought a large loaf and tucked it under my arm. Trolli divined my purpose and did likewise. As workmen returning from their labors we were looked up and down from head to foot, but suffered no molestation.
 
@@ -931,7 +931,7 @@ Having taken leave of my escort and remaining alone, I turned to contemplate the
 
 
 
-IN APRIL of 1852 I was once again in Genoa, working for a certain Ferrari, a merchant tailor, when I was informed that Don Bastiano Barozzi, parish priest of San Pietro in Campo, was living as a refugee in Turin. Barozzi, during the siege of Venice, had served as chaplain to a Legion composed almost exclusively of students from Padua. He was one of those priests in whom the cassock did not stifle the love of the Fatherland and who, to passive obedience, preferred to follow the impulses of their own conscience. Italy boasts a good number of such men, and the Church of Rome might have drawn great prestige from them, had she not preferred, in order to please the powerful, to hear their confessions and even lend a hand in their torment.
+In April of 1852 I was once again in Genoa, working for a certain Ferrari, a merchant tailor, when I was informed that Don Bastiano Barozzi, parish priest of San Pietro in Campo, was living as a refugee in Turin. Barozzi, during the siege of Venice, had served as chaplain to a Legion composed almost exclusively of students from Padua. He was one of those priests in whom the cassock did not stifle the love of the Fatherland and who, to passive obedience, preferred to follow the impulses of their own conscience. Italy boasts a good number of such men, and the Church of Rome might have drawn great prestige from them, had she not preferred, in order to please the powerful, to hear their confessions and even lend a hand in their torment.
 
 Deeply versed in ancient history, Don Bastiano judged men through the prism of the Roman world; to the level of Attilio Regolo, of the Scipios, of the Gracchi he would have wished to raise our entire race. During my school holidays, while walking with me along the Ardo and without seeming to make anything of it, he would steep my mind in heroic episodes. I believe that I owe to him, in no small part, my devotion to Liberty.
 
@@ -1063,7 +1063,7 @@ Then the atheist threw himself upon the neck of the priest. Which tends to demon
 
 
 
-I KNOW of no Italian insurrectionary movement that brought upon Giuseppe Mazzini so many calumnies, so much bitterness, so many desertions as that of 1853.
+I know of no Italian insurrectionary movement that brought upon Giuseppe Mazzini so many calumnies, so much bitterness, so many desertions as that of 1853.
 
 The so-called practical men, with that short-sighted practicality which consists in leaving the world to run undisturbed even to its own ruin, maintained that a People recently bled white and broken could not respond with spirit to a call to arms; could not willingly submit to new sacrifices. And they pronounced, with great solemnity, that revolutions come to pass when they ripen of themselves, not when one wills it so.
 
@@ -1184,7 +1184,7 @@ C. C.
 
 
 
-THE EXCITEMENT of the moment did not prevent me from reflecting upon the strangeness of my situation. I, a patriot, and no mean one (if the intensity of one's feelings counts for anything), was being hunted out, almost as an enemy, from the one strip of free Italian soil, and I was feverishly longing to cross the median line of the lake in order to return, as the saying goes, to the shadow of the yellow and black — the very object of our execration become all at once the symbol of my salvation. I reached it, and breathed more freely. But it was a temporary salvation, and fate decreed that I could not attain the Swiss frontier without grievous hardship.
+The excitement of the moment did not prevent me from reflecting upon the strangeness of my situation. I, a patriot, and no mean one (if the intensity of one's feelings counts for anything), was being hunted out, almost as an enemy, from the one strip of free Italian soil, and I was feverishly longing to cross the median line of the lake in order to return, as the saying goes, to the shadow of the yellow and black — the very object of our execration become all at once the symbol of my salvation. I reached it, and breathed more freely. But it was a temporary salvation, and fate decreed that I could not attain the Swiss frontier without grievous hardship.
 
 The weather, which had been threatening since morning, turned for the worse, and from the Alps, towards which we had set our prow, there came, more than wind, a full tempest. The waters, which presaged it, took on a formidable rolling, and our frail craft was tossing about wildly. I soon perceived that we were making no headway, and, seizing a spare pair of oars, I made myself a third in that desperate struggle between human will and the tyranny of the storm. But deeming it imprudent to turn my back upon the two boatmen, I was compelled to resign myself to keeping my face turned towards the Alps. And then there fell, slanting across us, a frozen sleet — nay, a whirlwind of tiny needles of ice that grazed the skin, that tormented my eyes, that took away my breath. And the waves, foaming at their crests, curled into shavings by the wind, threatened to capsize the little vessel. There was no doubting it: the elements had declared for Austria, and more than once I thought that I had escaped so many dangers only to end miserably in that pond of shad.
 
@@ -1229,7 +1229,7 @@ I replaced the gold in my money-belt and pressed the hand of Fortunato Calvi. To
 
 
 
-THUS on the fateful 6th of February I found myself neither at the assault on the Gran Guardia in Milan, nor aboard the Radetzky on Lake Maggiore.
+Thus on the fateful 6th of February I found myself neither at the assault on the Gran Guardia in Milan, nor aboard the Radetzky on Lake Maggiore.
 
 Instead, early in the morning, I was climbing a steep path which, branching off from the Ceresio, a few steps from Lugano, led up to a villa gleaming white as the snow that surrounded it. Its green grilles were the sole contrasting note upon that vast whiteness. Having reached the esplanade facing the villa, I paused to contemplate it, and through my mind passed the words of Fortunato Calvi: "Let the arms do their duty, the mind keeps watch and will do its own!"
 
@@ -1294,7 +1294,7 @@ Brief lines, immense calamity! To my eyes they seemed traced by a pen dipped in 
 
 
 
-HERE is the painful page: The secret of the vast conspiracy, jealously guarded; the Austrian Authorities utterly unprepared; the distribution of soldiers’ pay already accomplished; the targeted positions stripped of their defenders; the garrison dispersed and carousing. Eugenio Brizzi himself, on the very eve of the meditated assault, penetrated into the inner courtyard of the Castello and conferred with the two armorers. He found them steadfast to their pledged word; nor had any coup de main ever set forth under fairer auspices.
+Here is the painful page: The secret of the vast conspiracy, jealously guarded; the Austrian Authorities utterly unprepared; the distribution of soldiers’ pay already accomplished; the targeted positions stripped of their defenders; the garrison dispersed and carousing. Eugenio Brizzi himself, on the very eve of the meditated assault, penetrated into the inner courtyard of the Castello and conferred with the two armorers. He found them steadfast to their pledged word; nor had any coup de main ever set forth under fairer auspices.
 
 But at the moment of action, Assi and several other chiefs, instead of mustering their squads, vanished. The few bold men stationed at their posts, seeing themselves too small in number, waited for a time, chafing with rage; then, suspecting treachery, or believing that everything had been deferred to another day, they dispersed.
 
@@ -1349,7 +1349,7 @@ Giuseppe Monti and his companions in martyrdom thus indirectly rendered any acco
 
 
 
-IN LOCARNO, where I had returned to deliver a missive from Mazzini to Calvi, I was arrested and released a few hours later, at liberty, on my word to present myself to the Federal Delegate. I was later tried for conspiracy against a friendly Power, expelled from Switzerland, and put to the alternative of choosing between America and England.
+In Locarno, where I had returned to deliver a missive from Mazzini to Calvi, I was arrested and released a few hours later, at liberty, on my word to present myself to the Federal Delegate. I was later tried for conspiracy against a friendly Power, expelled from Switzerland, and put to the alternative of choosing between America and England.
 
 England was closer to the field of probable future enterprises and was preferred by me. I settled in London, where I found not a few of those compromised in the February uprisings, who had escaped Austrian vengeance through adventurous flights... among others, a Milanese Jean Valjean, accompanied out of the city walls in a coffin and with a solemn funeral.
 
@@ -1494,7 +1494,7 @@ Oh what blood and what remorse does a moment’s hesitation murmur! A shadow adv
 
 
 
-IN THE EFFICACY of any oratorical passage in stirring noble rebellious impulses, a mother's sobs reach the heart of a son. My mother's, in the silence of the night, resounded with terrible force.
+In the efficacy of any oratorical passage in stirring noble rebellious impulses, a mother's sobs reach the heart of a son. My mother's, in the silence of the night, resounded with terrible force.
 
 I hastened to support her with one arm and placed my right hand over her lips as if to stifle them. "Calm yourself, calm yourself!" I wished to say, but the voice would not come and, overcome by a surge of tenderness, I too broke into sobs.
 
@@ -1651,7 +1651,7 @@ One, two, three blows of the knocker, at decent intervals... sleep clings tenaci
 
 
 
-WHAT I am about to narrate I gathered from the letters Giustiniano wrote to me. I have them impressed upon my memory in indelible characters. To hearten mother, Giustiniano would sketch the situation for her, tempering it with a good dose of optimism. Luisa would undergo some interrogations, but would soon be set at liberty. Father had the reputation of an old patriot, an irreducible man, and would not have been able to extricate himself so easily. But how could they condemn him without proof? The judicial authorities were rigorous beyond all telling; but they were keen to appear most upright and would not dare commit a manifest piece of knavery. As for me, he himself had accompanied me as far as the mines of Agordo. From that point, I had chosen paths that only I and the chamois knew how to travel. I must have already arrived beyond the frontier, yet the Police still believed me to be in Belluno and were searching for me there. Before long, they would receive letters from me from Switzerland, or from some other country where the yellow and black did not fly. Everything therefore depended on not losing heart, so as to preserve one’s health, so necessary in that storm.
+What I am about to narrate I gathered from the letters Giustiniano wrote to me. I have them impressed upon my memory in indelible characters. To hearten mother, Giustiniano would sketch the situation for her, tempering it with a good dose of optimism. Luisa would undergo some interrogations, but would soon be set at liberty. Father had the reputation of an old patriot, an irreducible man, and would not have been able to extricate himself so easily. But how could they condemn him without proof? The judicial authorities were rigorous beyond all telling; but they were keen to appear most upright and would not dare commit a manifest piece of knavery. As for me, he himself had accompanied me as far as the mines of Agordo. From that point, I had chosen paths that only I and the chamois knew how to travel. I must have already arrived beyond the frontier, yet the Police still believed me to be in Belluno and were searching for me there. Before long, they would receive letters from me from Switzerland, or from some other country where the yellow and black did not fly. Everything therefore depended on not losing heart, so as to preserve one’s health, so necessary in that storm.
 
 But the confidence he labored to instill in mother’s heart was far from dwelling in his own. The newspapers, subject to rigorous censorship, seemed agreed in treating the latest conspiracy with the conspiracy of silence. Yet news knows how to travel a great distance even without the aid of newspapers. Now from the lips of trusted friends he encountered along the way; now at the café, gathered about a table, between one remark about the fine weather and another about the price of agricultural produce, words that could not be openly spoken without danger would slip into his ear, and from them, as always in such cases, the hopeful assurances appeared but faintly delineated, while the sinister predictions were painted in bold strokes.
 
@@ -1833,7 +1833,7 @@ The failure which had already been manifest to me grew more pronounced with ever
 
 
 
-HISTORIANS affirm that the spy Felicita Buanvecchiato, having caught some fragment of a conversation held by Pietro Fortunato Calvi, hastened to reveal our attempt to the Authorities, who thus had full wind of it even before we had taken the first steps to carry it into effect.
+Historians affirm that the spy Felicita Buanvecchiato, having caught some fragment of a conversation held by Pietro Fortunato Calvi, hastened to reveal our attempt to the Authorities, who thus had full wind of it even before we had taken the first steps to carry it into effect.
 
 To what extent that denunciation went, I know not; but I do know that in bringing about our ruin it was well-nigh superfluous.
 
@@ -1904,7 +1904,7 @@ Yet Calvi was fortunate in this: the spite of the partisan cliques, which spared
 
 
 
-I PUSHED on as far as Zurich, where I found a nucleus of compatriots who had escaped, by way of exile, the reactionary storm that had followed the disturbances of February. Among them was Radonitz, who received me with great courtesy. He made not the slightest allusion to the incident at Locarno. I also paid a visit to Caronti. His words could not have been more flattering; but upon first seeing me, his face had assumed an expression of wonder not unmixed with a tinge of unease. Perhaps, I thought, it is my imagination. Giuseppe Mazzini had so thoroughly prejudiced me against him!
+I pushed on as far as Zurich, where I found a nucleus of compatriots who had escaped, by way of exile, the reactionary storm that had followed the disturbances of February. Among them was Radonitz, who received me with great courtesy. He made not the slightest allusion to the incident at Locarno. I also paid a visit to Caronti. His words could not have been more flattering; but upon first seeing me, his face had assumed an expression of wonder not unmixed with a tinge of unease. Perhaps, I thought, it is my imagination. Giuseppe Mazzini had so thoroughly prejudiced me against him!
 
 That dealer in trinkets, who had gone bankrupt at Como, was living in Zurich in great luxury, at the expense of a wealthy lady who manufactured chocolate. He had, however, contrived to set up a modest felt hat factory, and several Italians found there the means to earn their sustenance. I became one of their number, and it seemed to me a ray of fortune. But sniffing the air, I was not long in discovering something heterogeneous. There were handshakes that resolved themselves into a mere contact of skin; evasive replies; monosyllables, innocent enough in themselves, but which acquired a subtly treacherous flavor from the grimace of the face that accompanied them. In all, a coldness, a coldness! — even at the afternoon meal, when lips exchanged more spontaneous phrases, the mysterious threads that connect souls were wanting.
 
@@ -2023,7 +2023,7 @@ A few days later I was engaged in the attempt at Maloggia.
 
 
 
-THE plan, on this occasion, was to seize the steamboats that ply Lake Como and to attempt the capture of the city itself. At the first signal of insurrection there, several armed columns were to descend from the Grisons to raise the Valtellina and lend force and breadth to the movement.
+The plan, on this occasion, was to seize the steamboats that ply Lake Como and to attempt the capture of the city itself. At the first signal of insurrection there, several armed columns were to descend from the Grisons to raise the Valtellina and lend force and breadth to the movement.
 
 The proposal to take part in it came to me directly from Pompei of Pavia, of the *Giovine Italia*, Stradella section — though he spoke to me in the name of Felice Orsini. I note this because Orsini, in his *Memorie*, names Giuseppe Mazzini as the effective and acknowledged leader of this attempt, seizing upon the paltry number of those who answered the call to demonstrate "the negligible influence" of that honest man among the ranks of the party that was, in the strictest sense, his own.
 
@@ -2120,7 +2120,7 @@ END OF PART ONE
 
 <!-- pages:127-134 -->
 
-AS an introduction to this second part, a page essentially of love claims its rightful place. What I here relate I had, in part, from the Count di Rudio himself, and in part from his wife. Nor was I without the aid of certain intimate letters, yellowed by time, yet still exhaling, fresh as ever, the fragrance of the past.
+As an introduction to this second part, a page essentially of love claims its rightful place. What I here relate I had, in part, from the Count di Rudio himself, and in part from his wife. Nor was I without the aid of certain intimate letters, yellowed by time, yet still exhaling, fresh as ever, the fragrance of the past.
 
 The little politics that peeps in through the doorway carries the soul of Giuseppe Mazzini. For what, after all, is di Rudio, if not a reflection of that great conspirator? Setting aside the disproportion of their genius, the only substantial difference between the two seems to me this: the one held that without faith in God neither a spirit of sacrifice nor an enduring honesty is possible; the other managed to sacrifice himself and to live honestly, having set aside that mighty hypothesis altogether.
 
@@ -2231,7 +2231,7 @@ And since life and the universe, in practical terms, exist only insofar as they 
 
 
 
-THE AGREEABLE nocturnal surprise continued with mathematical regularity... a well-tied and well-stocked parcel, every twenty-four hours. The Count di Rudio resolved to get to the bottom of the matter, and one fine morning, having set his room in order as usual, he crouched in the window recess behind the curtain, determined to remain posted there in silence were it to take the whole of the day. From that vantage above he commanded a good stretch of the pavement to right and left, and he reasoned, not without justice, that the morsels could hardly reach him through the air on the wing. He would discover his mysterious benefactor.
+The agreeable nocturnal surprise continued with mathematical regularity... a well-tied and well-stocked parcel, every twenty-four hours. The Count di Rudio resolved to get to the bottom of the matter, and one fine morning, having set his room in order as usual, he crouched in the window recess behind the curtain, determined to remain posted there in silence were it to take the whole of the day. From that vantage above he commanded a good stretch of the pavement to right and left, and he reasoned, not without justice, that the morsels could hardly reach him through the air on the wing. He would discover his mysterious benefactor.
 
 A little before midday, while leaning against the sill and photographing with his eye the dark to-and-fro that stirred confusedly at his feet, a sudden awakening of vital vibrations, a gentle warmth, a sense of penetrating light, startled him. He turned with a start... he was no longer alone!
 
@@ -2266,7 +2266,7 @@ The Count di Rudio remained a long while motionless, fixing his gaze upon the vo
 
 
 
-LOVE!... for Miss Sara or for Miss Elisa? The problem, however simple it might appear, stirred within him a singular dismay, followed by a no less singular irritation. “Why torment oneself to resolve it,” he concluded, “when the settling down into marriage is denied me by other ideals?” The Count di Rudio was acting unconsciously, and in a different arena, much as a man acts before new ideas when prejudice has taken root in his brain. Such a man intuits the reasonableness of those ideas, yet — so it is! — he obstinately closes his eyes to the truth, and the very certainty that his idol is crumbling makes him a yet more strenuous champion of old fables and falsehood.
+Love!... for Miss Sara or for Miss Elisa? The problem, however simple it might appear, stirred within him a singular dismay, followed by a no less singular irritation. “Why torment oneself to resolve it,” he concluded, “when the settling down into marriage is denied me by other ideals?” The Count di Rudio was acting unconsciously, and in a different arena, much as a man acts before new ideas when prejudice has taken root in his brain. Such a man intuits the reasonableness of those ideas, yet — so it is! — he obstinately closes his eyes to the truth, and the very certainty that his idol is crumbling makes him a yet more strenuous champion of old fables and falsehood.
 
 And now — here is how the Count di Rudio’s long drought of purse came at last to an end.
 
@@ -2352,7 +2352,7 @@ When Miss Sara returned with the cups and the milk, the lover who but a short wh
 
 
 
-THE Count di Rudio speaks: The very year I took a wife I was drawn into an ill-starred affair that made a great deal of noise. The exiles who had no abundance of coin used to frequent a certain eating-house in Rupert Street, where for little outlay they could savour some dish prepared after our own fashion. I myself had gone there more than once and had struck up an acquaintance with one Rossi, a Mantuan, a young fellow who soon won my sympathies by his open and cheerful character. Rossi was excessively hasty in the matter of amorous relations, but no other vices could I discover in him; and when the Romagnol Foschini warned me, in strictest confidence, to keep clear of that "ugly customer" because he was a spy in the pay of the French Government, I observed to him that to lend easy credence to calumnies insinuated, in all likelihood for base ends, by the enemies of our party, was to lend oneself most childishly to their game.
+The Count di Rudio speaks: The very year I took a wife I was drawn into an ill-starred affair that made a great deal of noise. The exiles who had no abundance of coin used to frequent a certain eating-house in Rupert Street, where for little outlay they could savour some dish prepared after our own fashion. I myself had gone there more than once and had struck up an acquaintance with one Rossi, a Mantuan, a young fellow who soon won my sympathies by his open and cheerful character. Rossi was excessively hasty in the matter of amorous relations, but no other vices could I discover in him; and when the Romagnol Foschini warned me, in strictest confidence, to keep clear of that "ugly customer" because he was a spy in the pay of the French Government, I observed to him that to lend easy credence to calumnies insinuated, in all likelihood for base ends, by the enemies of our party, was to lend oneself most childishly to their game.
 
 Foschini, nettled, turned his back on me, and I... drew closer to Rossi... in part, also, from that instinct, so imperious in me, of wanting to see clearly, to the very bottom of things. I came to be convinced that Foschini was genuinely mistaken. That conviction, to tell the truth, is not so firmly rooted today. A certain Rossi, as I learned several years later, had been sinisterly implicated in the conspiracies at Mantua. Nevertheless the surname Rossi is exceedingly common in Northern Italy, and I never had the means of ascertaining whether my London acquaintance and the spy of the Austrian Government were one and the same person. For anyone interested in probing these minutiae, I will say that the Rossi of
 
@@ -2389,7 +2389,7 @@ Left entirely to one side — presumably because I was thought to have been soft
 
 
 
-IN September of 1857, while I was making shift to live by giving language lessons in Nottingham, an Italian exile passing through that city came to call on me. He found himself in circumstances far more critical than my own. I came to his aid, and that same day he continued on his way. Arriving in Birmingham, he applied to Felice Orsini for assistance — Orsini being, if I am not mistaken, his fellow-countryman. In the course of recounting his misfortunes, he made mention of the visit he had paid me. “By God!” exclaimed Felice Orsini. “The very man I am looking for!” And he wrote to me, giving me an appointment at the Great Northern station in London.
+In September of 1857, while I was making shift to live by giving language lessons in Nottingham, an Italian exile passing through that city came to call on me. He found himself in circumstances far more critical than my own. I came to his aid, and that same day he continued on his way. Arriving in Birmingham, he applied to Felice Orsini for assistance — Orsini being, if I am not mistaken, his fellow-countryman. In the course of recounting his misfortunes, he made mention of the visit he had paid me. “By God!” exclaimed Felice Orsini. “The very man I am looking for!” And he wrote to me, giving me an appointment at the Great Northern station in London.
 
 I had not seen Felice Orsini for a long while. But no sooner had the train puffed in under the station roof (Charing Cross) than I caught sight of him standing erect amid the crowd, with his little cases and his very black mustaches. A few seconds and I was face to face with him. “Where the devil have you been all this time?” he said to me. And I told him. When I touched upon my marriage, his face clouded over. “Then, farewell to patriotic resolutions!” I disabused him. Indeed, I now felt all the greater obligation to conspire and to fight — my son was not to have a servile and unhappy fatherland.
 
@@ -2456,7 +2456,7 @@ I gave thanks, and Simon Bernard, citing urgent business as his pretext — busi
 
 
 
-FOR several days, I forced myself to suppress the thoughts that surged tumultuously through my head, renewing old acquaintances. At the same time, I sought some foothold that might put an end to my extremely thorny financial situation, and secure for me work and bread for the future.
+For several days, I forced myself to suppress the thoughts that surged tumultuously through my head, renewing old acquaintances. At the same time, I sought some foothold that might put an end to my extremely thorny financial situation, and secure for me work and bread for the future.
 
 One evening, a little before sunset, I was returning, unusually tired, almost dispirited, from my customary excursion, when, turning the corner into Shoah Square, I literally ran into Simon Bernard.
 
@@ -2531,7 +2531,7 @@ He slept, and smiled... dreaming, perhaps, at his mother's full breast. I claspe
 
 
 
-THE next morning, I was pressing forward at full steam towards my destiny. To face it, I had my carpet-bag... between the leather and the wooden panel of the bottom, it concealed mercury fulminate and a blade which had already, in the insurrectionary attempts of 1853, known the beating of my heart. I had moreover a passport in the name of Giovanni da Sylva, a Portuguese, traveling salesman for a brewery, and some ten shillings. Money and passport had been placed in my hands by Dr. Bernard during our last colloquy. I had, above all, my youth and my courage. What would come of all this? The spark capable of altering history, or nothing other than desolation and death?
+The next morning, I was pressing forward at full steam towards my destiny. To face it, I had my carpet-bag... between the leather and the wooden panel of the bottom, it concealed mercury fulminate and a blade which had already, in the insurrectionary attempts of 1853, known the beating of my heart. I had moreover a passport in the name of Giovanni da Sylva, a Portuguese, traveling salesman for a brewery, and some ten shillings. Money and passport had been placed in my hands by Dr. Bernard during our last colloquy. I had, above all, my youth and my courage. What would come of all this? The spark capable of altering history, or nothing other than desolation and death?
 
 Leaving the mouths of the Thames behind us, we encountered a very rough sea, a veritable tempest. The stomach's distress and the terror cast a great confusion aboard. But the infinite, which roared on every side, filled me with an exaltation that redoubled my consciousness of life. For some time a certain quietism had seemed to impose itself upon my nature, and that kind of immersion in force and motion seemed to regenerate me.
 
@@ -2610,7 +2610,7 @@ With that refusal, he sealed his own destiny irrevocably.
 
 
 
-THE evening of the following day, the 14th of January, Pieri and I dined, as was our custom, at the trattoria in the Galerie Montmartre. We repaired immediately afterwards to the hotel, and the doorkeeper, handing Pieri the key to his room, announced to him that half an hour earlier a gentleman had come asking for him. He had not disclosed his own name, but had assured them he would return shortly.
+The evening of the following day, the 14th of January, Pieri and I dined, as was our custom, at the trattoria in the Galerie Montmartre. We repaired immediately afterwards to the hotel, and the doorkeeper, handing Pieri the key to his room, announced to him that half an hour earlier a gentleman had come asking for him. He had not disclosed his own name, but had assured them he would return shortly.
 
 And so we found ourselves in the room, feverishly searching for a match to light the gas. We had left the door open, to make temporary use of the light coming from the corridor. Turning instinctively, I caught sight, outlined in black against that light, of the figure of Felice Orsini.
 
@@ -2647,7 +2647,7 @@ Ought I, or ought I not, to add that with that final handshake Orsini had conclu
 
 
 
-A FEW minutes later we were in position opposite the Opera. The light cast by the premises of a trattoria — the Broggi, if I am not mistaken — struck me from behind; the extraordinary illumination of the theater fell full upon our faces. The entrance to the trattoria was flanked by columns. Against one of these Orsini leaned his back; I placed myself upright to his right. We were among a great many people, most of them standing still, awaiting the imperial cortège. Opposite us, just beyond the pavement, a cordon of municipal guards had drawn up in line, arms at the foot... beyond the rue Le Pelletier, along the sides of the little square, a dark crowd surged and pressed... among it, at the place assigned him, I saw Antonio Gomez, tall, erect, motionless as a statue; but though I searched as keenly as I could on the other side, I did not see Giuseppe Pieri.
+A few minutes later we were in position opposite the Opera. The light cast by the premises of a trattoria — the Broggi, if I am not mistaken — struck me from behind; the extraordinary illumination of the theater fell full upon our faces. The entrance to the trattoria was flanked by columns. Against one of these Orsini leaned his back; I placed myself upright to his right. We were among a great many people, most of them standing still, awaiting the imperial cortège. Opposite us, just beyond the pavement, a cordon of municipal guards had drawn up in line, arms at the foot... beyond the rue Le Pelletier, along the sides of the little square, a dark crowd surged and pressed... among it, at the place assigned him, I saw Antonio Gomez, tall, erect, motionless as a statue; but though I searched as keenly as I could on the other side, I did not see Giuseppe Pieri.
 
 And already one could hear, in the distance, the confused clamor of the multitude acclaiming the Emperor... a few seconds more, and the voices grew sonorous and distinct. To cry up to heaven the man who had mown them down with grapeshot... a deplorable degradation of Peoples who prefer a quiet life to the arduous struggles for Liberty!
 
@@ -2684,7 +2684,7 @@ Nevertheless, I must also say that the depressing effect of pity was, in great p
 
 
 
-SCARCELY had I found myself out of danger than my first thought was for Elisa. I had made my way towards the Boulevard des Italiens… and entered a café. I must recount things that will seem trifles; yet they had their weight. The café was empty. The proprietress, behind the counter, was speaking in a frenzied manner with a customer who stood before her. She did not see me enter and took no notice of my presence until I asked her, if she would be so kind, for paper and inkwell. I wrote briefly: “Elisa, all is well. I shall leave tomorrow for Oporto.” Having sealed the letter, I returned the inkwell to the counter and asked for an eight-sou stamp. The lady rummaged in a drawer and, holding them out to me, asked whether four two-sou ones would not serve my purpose.
+Scarcely had I found myself out of danger than my first thought was for Elisa. I had made my way towards the Boulevard des Italiens… and entered a café. I must recount things that will seem trifles; yet they had their weight. The café was empty. The proprietress, behind the counter, was speaking in a frenzied manner with a customer who stood before her. She did not see me enter and took no notice of my presence until I asked her, if she would be so kind, for paper and inkwell. I wrote briefly: “Elisa, all is well. I shall leave tomorrow for Oporto.” Having sealed the letter, I returned the inkwell to the counter and asked for an eight-sou stamp. The lady rummaged in a drawer and, holding them out to me, asked whether four two-sou ones would not serve my purpose.
 
 I made my way to the Place de la Concorde. It was deserted. I stood long at my post on the bridge. The thousand sounds of the city reached me confusedly, the humming of an immense hive. The Seine, made darker by the restless reflections of the gas-lamps, flowed towards the sea mysteriously, like the hour that hung above us. None of the conspirators appeared. When to wait longer would have been madness, I rid myself of the revolver by casting it into the river, and set off towards the Boulevard, resolved to reconnoiter the ground.
 
@@ -2885,7 +2885,7 @@ And he gave the order that I be conducted to Mazas.
 
 
 
-FROM that moment I harbored no further doubt as to the fate that lay in store for me; and if I resolved to struggle to the end, it was solely, as one says, for honor of signature — so that I might cry out, upon reaching the bottom of the abyss: "I have done everything humanly possible to avoid plunging into it!"
+From that moment I harbored no further doubt as to the fate that lay in store for me; and if I resolved to struggle to the end, it was solely, as one says, for honor of signature — so that I might cry out, upon reaching the bottom of the abyss: "I have done everything humanly possible to avoid plunging into it!"
 
 That very same day I was compelled to convince myself that an overbearing will was working in the contrary direction, reinforcing the means honorably at its disposal with fraud and perjury. I was confined in a ground-floor cell. A companion was assigned to me — an agent of the secret Police, dressed in civilian clothes, who informed me that he would pass the day and night in my company. Certainly not to keep my spirits up, I thought — but to catch some word that might escape me, in the anguish of the soul, during sleep.
 
@@ -3018,7 +3018,7 @@ Then I hurried away, so swiftly that the guards who came after me seemed almost 
 
 
 
-WHEN the door of the cell closed behind me, it was as though the turbid passions that had agitated me remained on the other side of the threshold. Saturno and the other questioned me with the expression of their faces. "It is all over! Every aspiration I had towards liberty is cut short from this day. One must prepare oneself to die." So I said; but within, I felt that the pride of having sacrificed myself for my Country would sustain me.
+When the door of the cell closed behind me, it was as though the turbid passions that had agitated me remained on the other side of the threshold. Saturno and the other questioned me with the expression of their faces. "It is all over! Every aspiration I had towards liberty is cut short from this day. One must prepare oneself to die." So I said; but within, I felt that the pride of having sacrificed myself for my Country would sustain me.
 
 No sooner had I finished relating what had passed than they strove, as if by tacit agreement, to drag me back from my convictions. They put forward, among other things, the sympathies of the population and the favorable dispositions which, as it was asserted, animated the imperial Court. To this I replied with a shake of my head and a smile. A strange dispute arose from this, and we ended by making a wager. If the Tribunal pronounced a sentence of death, they would undertake to pay me a bottle of champagne, and of the finest. If not, I should pay it. We sealed the compact by exchanging a vigorous handshake...
 
@@ -3067,7 +3067,7 @@ Nugent de Saint Laurent, who afterwards fully approved of Pieri's tactics, attem
 
 <!-- pages:186-190 -->
 
-AND so we come to our chief. I shall call up old impressions; I shall express judgments which fifty years of meditation have not availed to alter.
+And so we come to our chief. I shall call up old impressions; I shall express judgments which fifty years of meditation have not availed to alter.
 
 We find ourselves before a character capable, in the highest degree, of generous impulses. Yet, through the mysterious reactions of his soul, the frequent exaltations of feeling were followed, always or almost always, by profound depressions. A nature excessively nervous and sensitive, he oscillated fatally from one extreme to the other, laying bare strange deficiencies which I regarded, even in those days, as maladies — of what precise nature I could not then define, nor can I now.
 
@@ -3118,7 +3118,7 @@ His masterstroke was the letter addressed by Felice Orsini to Napoleon III. With
 
 <!-- pages:190-195 -->
 
-THE twenty-fifth of February arrived — the day appointed for the proceedings of the trial. I was brought to the Palais de Justice and for the first time, since the evening of the attempt, I saw my companions in misfortune fully and plainly.
+The twenty-fifth of February arrived — the day appointed for the proceedings of the trial. I was brought to the Palais de Justice and for the first time, since the evening of the attempt, I saw my companions in misfortune fully and plainly.
 
 The assembly-hall of the Tribunal was packed with men and ladies. There was a great display of fine apparel... people flocked to the trial as to the theater. Yet, through the perception of I know not what mysterious sense, I understood at once that the manifold soul of that audience was not opposed to us. Hostile, by contrast — deliberately hostile — were the individuals seated upon the bench, and the handful of hired servants who surrounded them. These men perhaps imagined themselves to be the Empire and its might, and regarded our attempt as one regards a personal affront.
 
@@ -3185,7 +3185,7 @@ Thus, by a caprice of fate, chatting merrily and raising our glasses, I passed t
 
 <!-- pages:195-200 -->
 
-THE following day, at La Roquette. They made us put on the gray uniform of prisoners; they fitted us with the straitjacket... not from any lust for torture, but to forestall attempts at suicide.
+The following day, at La Roquette. They made us put on the gray uniform of prisoners; they fitted us with the straitjacket... not from any lust for torture, but to forestall attempts at suicide.
 
 We had been conveyed to the new prison separately and confined separately; yet our cells were so situated that we could see and speak to one another. A rectangular chamber, rather spacious, bare... four white walls, four windows, four doors. Whoever enters by the door communicating with the courtyard perceives, directly opposite, the door and window of Felice Orsini's cell; Pieri's cell lay beyond the left-hand wall; beyond the right-hand wall, my own.
 
@@ -3272,7 +3272,7 @@ The Council of State and the clergy... Napoleon III obtained from them more than
 
 
 
-ON the evening of the twelfth, the chaplain Hughon came to pay me his customary visit. He was grave, grave, grave. I spoke to him of our rejected appeal, and he became embarrassed. Then the suspicion of the grim truth flashed upon me, and I resorted to several subterfuges to confirm it. But Hughon promptly assumed the air of the ingenuous, and sheltering behind that simple artifice, became unassailable. Perhaps every suspicion of mine might have dissolved, had my visitor not extended his hand as he took his leave. Those fingers seemed to me to trace mysterious signs in the air, so visibly did they tremble.
+On the evening of the twelfth, the chaplain Hughon came to pay me his customary visit. He was grave, grave, grave. I spoke to him of our rejected appeal, and he became embarrassed. Then the suspicion of the grim truth flashed upon me, and I resorted to several subterfuges to confirm it. But Hughon promptly assumed the air of the ingenuous, and sheltering behind that simple artifice, became unassailable. Perhaps every suspicion of mine might have dissolved, had my visitor not extended his hand as he took his leave. Those fingers seemed to me to trace mysterious signs in the air, so visibly did they tremble.
 
 I awaited the return of Saturno who, of the two guards, seemed to me the more candid, and without even giving him time to remove his cap: "Saturno," I said, "I know that tomorrow morning I shall be led to the scaffold. Heed me and see to it, you who are good, that my last wishes are carried out to the letter. At five o'clock you will wake me..."
 
@@ -3349,7 +3349,7 @@ My lips did not move, but my soul gave a cry: "Oh, how dearly the Patria has cos
 
 
 
-AT precisely nine o’clock, Monsieur de Collet was in my cell. He did not dwell upon great particulars, but what he narrated to me was more than sufficient to put an end to my conjectures. Influential English personages had interceded on my behalf with his august Empress. It so happened that those very days fell upon the second birthday of the crown prince, and she, who was above all else a woman and a mother, had been pleased to solemnize the auspicious occasion by according a grace that would lift from her affliction a woman, a mother. My wife had already been advised by telegraph of my good fortune.
+At precisely nine o’clock, Monsieur de Collet was in my cell. He did not dwell upon great particulars, but what he narrated to me was more than sufficient to put an end to my conjectures. Influential English personages had interceded on my behalf with his august Empress. It so happened that those very days fell upon the second birthday of the crown prince, and she, who was above all else a woman and a mother, had been pleased to solemnize the auspicious occasion by according a grace that would lift from her affliction a woman, a mother. My wife had already been advised by telegraph of my good fortune.
 
 Monsieur de Collet lavished congratulations upon me at this point; then he turned to take his leave, but retracing his steps: “It was the Empress who sent me this morning. She wished to ensure that her will had not been violated. Nevertheless, it is well to bear in mind that much good, and much of stern justice, may proceed from her august consort. A phrase of gratitude directed toward him could certainly do you no harm. I say this of my own initiative; but I am persuaded that I interpret the thought of Her Majesty the Empress, to whom you are moreover indebted for your life.”
 
@@ -3412,7 +3412,7 @@ I saw her, standing in the darkness, like the Madonna in a Flemish painting. The
 
 
 
-"FREE... within a year!" I had not said it out of egotism alone, nor out of pity alone, and still less out of boastfulness. My first attempt at escape had been conceived during precisely those days at La Roquette. There I had made the acquaintance of an Englishman who was serving six months' imprisonment for fraudulent bankruptcy. He was a man possessed of a certain culture, of few words; he had, so far as I could infer, means more than sufficient. Like the great majority of his countrymen, he took an interest in politics and hated Napoleon. He came, so to speak, of his own accord to meet the inclinations of my heart and offered to assist me with all the resources at his command. "In church with the saints, in the tavern with the gluttons!" And, moreover, if hypocritical society finds it convenient to take account only of a man's faults in order to depress him, despite his virtues, I find it more logical, more fraternal, to fix one's mind upon his virtues and to exalt him, despite his faults. Had my Englishman truly acquired his riches by reprehensible means? To spend them in order to restore the husband to his widowed consort, the father to his son, was to put ill-gotten gains to good use. I accepted.
+"Free... within a year!" I had not said it out of egotism alone, nor out of pity alone, and still less out of boastfulness. My first attempt at escape had been conceived during precisely those days at La Roquette. There I had made the acquaintance of an Englishman who was serving six months' imprisonment for fraudulent bankruptcy. He was a man possessed of a certain culture, of few words; he had, so far as I could infer, means more than sufficient. Like the great majority of his countrymen, he took an interest in politics and hated Napoleon. He came, so to speak, of his own accord to meet the inclinations of my heart and offered to assist me with all the resources at his command. "In church with the saints, in the tavern with the gluttons!" And, moreover, if hypocritical society finds it convenient to take account only of a man's faults in order to depress him, despite his virtues, I find it more logical, more fraternal, to fix one's mind upon his virtues and to exalt him, despite his faults. Had my Englishman truly acquired his riches by reprehensible means? To spend them in order to restore the husband to his widowed consort, the father to his son, was to put ill-gotten gains to good use. I accepted.
 
 We had calculated that he would return among the free before I was conveyed to Toulon. We knew that the condemned, before being transported to the tropical territories, make a stay of greater or lesser duration at that penal establishment. We had no plan of the locality, and to concert a well-defined scheme proved a vague and uncertain business; but it was not unknown that if it is possible to induce a human creature, by means of money, to commit base acts, it is equally possible to induce one, by the same means, to attempt acts of generous daring.
 
@@ -3559,7 +3559,7 @@ When the fever, finding no more flesh to devour, at last disappeared, the French
 
 <!-- pages:215-222 -->
 
-*LA DURR* plowed the waters, bearing in her ample belly, divided into three decks, some three hundred condemned men. Gomez and I were confined in the deepest. But the Commander, who was an Orleanist and could not have harbored excessive antipathies towards us, no sooner learned who we were than he had us transferred to the upper deck. Indeed he pressed his benevolent partiality so far as to permit me, from time to time, to come up on deck and smoke freely... the Regulations prescribed the trifling penalty of fifty lashes of the rope for anyone who had done so in the compartments below.
+*La Durr* plowed the waters, bearing in her ample belly, divided into three decks, some three hundred condemned men. Gomez and I were confined in the deepest. But the Commander, who was an Orleanist and could not have harbored excessive antipathies towards us, no sooner learned who we were than he had us transferred to the upper deck. Indeed he pressed his benevolent partiality so far as to permit me, from time to time, to come up on deck and smoke freely... the Regulations prescribed the trifling penalty of fifty lashes of the rope for anyone who had done so in the compartments below.
 
 We put in at the island of Santa Cruz (Carmarie) to take on water and remained there two days, with hatches closed, to deprive us of any possibility of escape; then we proceeded directly to the Île Royale du Salut, where some two hundred convicts were put ashore.
 
@@ -3648,7 +3648,7 @@ When the fever, finding no more flesh to gnaw upon, at last disappeared, the Fre
 
 
 
-I HAD scarcely thrown my canvas sack upon the mole of the Île du Salut when hope already flooded my breast, intense, overpowering.
+I had scarcely thrown my canvas sack upon the mole of the Île du Salut when hope already flooded my breast, intense, overpowering.
 
 The island, with a little exercise of the imagination, presented the shape of a figure 8. Upon the larger loop, which was also the more elevated, stood the dwellings, the hospital, a church; upon the smaller loop were the workshops, and along its outermost curve, the barracks. From that extremity, directed more or less exactly to the north-west, one could toss a stone by hand onto the long islet of the Diable, the same that afterwards became sadly notorious for the murky drama of which Captain Dreyfus was the victim. At low tide, it was no great difficulty, leaping upon the jagged rocks left exposed, to pass from one island to the other dry-shod.
 
@@ -3721,7 +3721,7 @@ And the gunboats? There lay the problem! Every time I set myself to solve it my 
 
 
 
-DURING my hours of rest, I neglected nothing in order to obtain full intelligence of the men who lived and suffered about me. Antonio Gomez, having been assigned for some time to the service of the Officers, had recovered, though bronzed in color, his good-natured priest’s face. But an unexpected order removed him from any influence I might have over him. He was dispatched, with others, to the penitentiary at Corù, on the Continent, and I had barely time to press his hand. From that day forth, though I believe the political upheavals of France may have procured him better days, I never saw him again nor heard any tidings of him.
+During my hours of rest, I neglected nothing in order to obtain full intelligence of the men who lived and suffered about me. Antonio Gomez, having been assigned for some time to the service of the Officers, had recovered, though bronzed in color, his good-natured priest’s face. But an unexpected order removed him from any influence I might have over him. He was dispatched, with others, to the penitentiary at Corù, on the Continent, and I had barely time to press his hand. From that day forth, though I believe the political upheavals of France may have procured him better days, I never saw him again nor heard any tidings of him.
 
 Yet on the island there were other Italians, a dozen or so; Romans for the most part, all condemned for having redoubled their political hatred by superimposing upon it a private one; for having avenged, with our native tyranny, the outrage inflicted upon them by a foreign tyranny. Christ forgave much, it is said, to those who loved much; He ought to forgive far more to those who hated much and who, in their hatred, knew how to find the virtue of not being sheep. Among these Romans there was one Morelli, a tailor, condemned to life imprisonment. Who lends a readier ear to hope than he who has lost all hope?
 
@@ -3825,7 +3825,7 @@ The dawn found us drenched and shrivelled. But we had left behind the waters mud
 
 
 
-I COULD not recount, in any perfect chronological order and as though reading from a ship's log, the manifold vicissitudes of our arduous trial. I shall speak briefly of those which determined its course most properly.
+I could not recount, in any perfect chronological order and as though reading from a ship's log, the manifold vicissitudes of our arduous trial. I shall speak briefly of those which determined its course most properly.
 
 The storms, invoked by the Cousin, came, and came with such fury as to imperil vessels far stouter than our own. It was not the sea alone we had to fight; but sea and sky in league together; which battered us with a pertinacity that almost betrayed some deliberate intent.
 
@@ -3987,7 +3987,7 @@ I believe that their virile mettle made them worthy of the liberty they had year
 
 
 
-IN the afternoon, I saw the old Governor once more. Inspired by the boundless democracy of the English, who are nevertheless so aristocratic in their bearing, he had thought it his duty to descend to my level, in order to congratulate in person the political prisoner reborn to civil life. And having gathered, from what the doctor himself had told him, that my departure for England by ordinary means was not without its dangers, he offered to secure me a place aboard a man-of-war which would make for the capital of the Empire no later than March.
+In the afternoon, I saw the old Governor once more. Inspired by the boundless democracy of the English, who are nevertheless so aristocratic in their bearing, he had thought it his duty to descend to my level, in order to congratulate in person the political prisoner reborn to civil life. And having gathered, from what the doctor himself had told him, that my departure for England by ordinary means was not without its dangers, he offered to secure me a place aboard a man-of-war which would make for the capital of the Empire no later than March.
 
 With this, he took his leave. But before departing he placed in my hands, without a word of comment, a large volume of his, bound in black morocco. It was... a Bible. The good old man did not feel he had done enough by contributing to my material liberation; he would also have wished to cast into my soul the seeds of a moral fermentation. Although I considered, and still consider, that his pious desire, had it taken root and flowered, would have, so to speak, unmanned me, I could not nevertheless refrain from feeling a sense of gratitude for the disinterested nobility of his intention. From the window I watched him until he disappeared. Many times I have wished to see him again, to prove to him that the good he did was not turned to ill. But he was already then some seventy years of age, and who can say how long since the virtues and follies of the world have ceased to move him! He left upon me an indelible impression, not only because with him begins a new period of my existence, but also because, in so brief a time, he knew how to reveal to me many facets of his character. His admiration for bold deeds performed at sea; the pride which led him, while not disowning the merits of others, to proclaim in our presence the superiority of his own race; his humane feelings; his conception of the nobility of labor and of the regenerating influence of parsimony; his faith in the rehabilitation of the fallen; his abhorrence of falsehood; his spontaneous redress of an offense, however slight, given to one who stood in a social condition so far beneath his own; the respect he showed for the rights of the oppressed; even his tendency towards mysticism — all these were the synthesis of the virtues and faults of a People... of a great People.
 
@@ -4072,7 +4072,7 @@ At that moment a thought flashed through my mind. Should I find my Fatherland un
 
 
 
-HOWEVER vast my desires, for the moment I could do nothing other than seek a way to establish myself decently in London. Soon the arts of Bernard put me in such a position that, far from combating the enemies of Italian integrity, I was compelled to provide, with all urgency, for the defense of my own personal integrity.
+However vast my desires, for the moment I could do nothing other than seek a way to establish myself decently in London. Soon the arts of Bernard put me in such a position that, far from combating the enemies of Italian integrity, I was compelled to provide, with all urgency, for the defense of my own personal integrity.
 
 The calumnies of which I had received, from Rossi, the first inkling, were at once confirmed to me anew, with a greater abundance of particulars, by various other persons. Doctor Bernard not only persisted, in private, in the assertions he had launched when he believed me already beneath the earth; but he attempted to lend them credence by maintaining that I had regained my liberty, not through a premeditated and boldly accomplished escape, but because the French Authorities, in recompense for my denunciations, had, so to speak, thrown wide the doors of the penal colony.
 
@@ -4131,7 +4131,7 @@ To tear myself away from that corpse, already well-nigh in dissolution, I was fo
 
 
 
-IN THE very year of my arrival in London, the French Police made, as far as I was concerned, their last attempt at corruption. My finances were then turning for the worse. The five pounds from Allsop had vanished; the few savings made during my round of lectures, vanished! Elisa, on the point of becoming a mother a second time, required great care. Fortunately, the help which, out of a sense of pride, I no longer solicited from my compatriots, I received from Le Houx, the former French convict. Having found employment in a marble saw-mill, he had induced his employer to take me on for polishing slabs. But my inexperience thinned my wages. Made at such a moment, the move of the French Police was not wanting in tactics. The Inspector who entered my modest dwelling proceeded to the attack without any beating about the bush, cards on the table, with a rough frankness worthy of a better cause. He dwelt upon my isolation, upon the ingratitude of the persons at whose “instigation” I had faced the scaffold, upon the indigence revealed by my lodgings and my appearance. Was it worth sacrificing myself for people who, in the best of cases, cared nothing for my sacrifices? He understood perfectly well how I might harbor ill feelings against the Government of Napoleon III; but that Government harbored none at all towards me. A single word, and all my misery would be ended, and I could restore my wife to the comfortable station she deserved, that was hers by right.
+In the very year of my arrival in London, the French Police made, as far as I was concerned, their last attempt at corruption. My finances were then turning for the worse. The five pounds from Allsop had vanished; the few savings made during my round of lectures, vanished! Elisa, on the point of becoming a mother a second time, required great care. Fortunately, the help which, out of a sense of pride, I no longer solicited from my compatriots, I received from Le Houx, the former French convict. Having found employment in a marble saw-mill, he had induced his employer to take me on for polishing slabs. But my inexperience thinned my wages. Made at such a moment, the move of the French Police was not wanting in tactics. The Inspector who entered my modest dwelling proceeded to the attack without any beating about the bush, cards on the table, with a rough frankness worthy of a better cause. He dwelt upon my isolation, upon the ingratitude of the persons at whose “instigation” I had faced the scaffold, upon the indigence revealed by my lodgings and my appearance. Was it worth sacrificing myself for people who, in the best of cases, cared nothing for my sacrifices? He understood perfectly well how I might harbor ill feelings against the Government of Napoleon III; but that Government harbored none at all towards me. A single word, and all my misery would be ended, and I could restore my wife to the comfortable station she deserved, that was hers by right.
 
 And he lent greater weight to his words by drawing from his pocket a handful of pounds sterling, which would — he said — be periodically renewed.
 
@@ -4200,7 +4200,7 @@ That same year, after an existence of but a few brief weeks, my second-born ceas
 
 
 
-BETWEEN one and another incident of my private life, the History of my Country sends forth gusts laden with renewed hopes and enthusiasm, with bitterness and wrath.
+Between one and another incident of my private life, the History of my Country sends forth gusts laden with renewed hopes and enthusiasm, with bitterness and wrath.
 
 My predictions concerning the fatal consequences of the alliance forged between the King of Piedmont and Napoleon III, though they had come to my mind at so great a distance from the theater of events and while I found myself as though excluded from the rest of humanity, were in perfect accord with those expressed by Giuseppe Mazzini. Those predictions had come to pass.
 
@@ -4274,7 +4274,7 @@ And, what is worse, he lavished medals and rewarded with promotion the dishonest
 
 
 
-SAD fatality that seems like punishment! From the misdeed of Aspromonte to the present day, in half a century of History, the House of Savoy, deserving of credit from various points of view, has no longer known how to lead Italy to victory — victory that yet smiled repeatedly upon the glorious victim of its fratricidal lead.(1)
+Sad fatality that seems like punishment! From the misdeed of Aspromonte to the present day, in half a century of History, the House of Savoy, deserving of credit from various points of view, has no longer known how to lead Italy to victory — victory that yet smiled repeatedly upon the glorious victim of its fratricidal lead.(1)
 
 In 1866 Venetia was wrested from the hateful yoke of Austria; but only by submitting to mysterious defeats, to humiliations that call to mind all too vividly another dark mystery — the one coupled to the name of Novara. As at Novara, so at Custoza and at Lissa, the enemy, sensibly inferior in forces, marvels at his own victory and is, for a moment, scarcely able to credit it. Meanwhile, a handful of volunteers, deliberately left wanting in arms, redeems, on the crags of the Tyrol, the honor of Italy. Once again, those who arrogated to themselves the monopoly of genius and gravity gave proof of their hollow pomposity, their inferiority before the band of "madmen" who obstinately persisted in demanding an Italy whole and glorious. And the peremptory order issued to Garibaldi to evacuate the redeemed lands fertilized with the blood of his men reveals, all too plainly, the royal displeasure at so glaring a contrast.
 
@@ -4343,7 +4343,7 @@ But in setting forth the reasons why they had not known how to achieve the bette
 
 
 
-THE sufferings of the *ergastolo* were by now erased by my long immersion in the free light and in the affections of my family, which had almost reconciled me to inertia, when the news of the crime of Aspromonte came to rouse me.
+The sufferings of the *ergastolo* were by now erased by my long immersion in the free light and in the affections of my family, which had almost reconciled me to inertia, when the news of the crime of Aspromonte came to rouse me.
 
 The conferences and public meetings organized to protest against the Temporal Power of the Popes had become, in London, a daily occurrence, and I threw myself into them, so to speak, headlong.
 
