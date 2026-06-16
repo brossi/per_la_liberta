@@ -1,0 +1,3979 @@
+{
+  "verdicts": [
+    {
+      "chapter": "prefazione",
+      "id": "A1763",
+      "scan_reads": "IL",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Chapter opening: drop-cap 'I' (versal) followed by 'L PRESENTE'. The word printed is 'IL'. Published text's lone apostrophe ' is an OCR artifact of the decorative drop cap; the witness reading IL is correct."
+    },
+    {
+      "chapter": "prefazione",
+      "id": "A1764",
+      "scan_reads": "qualche",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "First body line: 'potrebbe portare qualche contributo alla Storia'. Page clearly prints 'qualche'; published 'qualcbe' is an OCR h/b error."
+    },
+    {
+      "chapter": "prefazione",
+      "id": "A1768",
+      "scan_reads": "Disp. 1",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Bottom-right fascicle signature reads 'Disp. 1' (abbreviation of Dispensa). Neither candidate ('Diip.' nor 'DUp.') matches; both are OCR garblings of 'Disp.'."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "A0000",
+      "scan_reads": "cielo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col p.9, line 'il cielo profondamente azzurro e l'aria bal-'. First letter clearly an open 'c'; published 'nielo' is an OCR c->n misread."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "A0001",
+      "scan_reads": "aggrédiva",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.9, 'smeraldo, aggrédiva con voli fulminei'. Printed with acute accent on e; matches witness 'aggrediva', not published 'aggradiva'."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "A0010",
+      "scan_reads": "ermai,",
+      "verdict": "published",
+      "confidence": "medium",
+      "note": "Right col p.12, line-broken 'sono er-/mai,'. The broken char shows an 'e' crossbar (not closed 'o'), giving 'ermai,' as published; not the witness 'ormai'."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "D0000",
+      "scan_reads": "acettano",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col bottom p.9, 'tenace, acettano come verità'. Single c printed; published 'accettano' is a normalization."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "D0001",
+      "scan_reads": "amarillis.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.10, 'un mazzo di a-/marillis.' continuation reads 'marillis' (single-l? no: m-a-r-i-l-l-i-s) i.e. amarillis with i, not y."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "D0002",
+      "scan_reads": "riescite",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.11, 'le sarebbero riescite fatali'. Archaic 'riescite' printed; published 'riuscite' is modernized."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "D0003",
+      "scan_reads": "carriere",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.11, 'avviarlo alla carriere militare'. Ends in -e on the page; published 'carriera' is wrong."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "D0004",
+      "scan_reads": "amarillis",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.12, 'il mazzo di amarillis che ros-/seggiava'. Printed with i (amarillis), not y."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "D0005",
+      "scan_reads": "celiando,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.13, 'La buona signora, celiando, finì'. Clear 'celiando' with i; published 'celando' is wrong."
+    },
+    {
+      "chapter": "p1_ch01",
+      "id": "D0006",
+      "scan_reads": "inalzato,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col top p.14, 'un tempio inalzato, nella notte dei secoli'. Single n printed; published 'innalzato' is normalized."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0015",
+      "scan_reads": "MEZZ'ORA",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Chapter-opening dropcap: large versal M + small-caps EZZ'ORA = MEZZ'ORA. Published 'EZZ'ORA' is the post-dropcap remainder; full printed word matches the suggestion. Versal handled separately by typesetter."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0016",
+      "scan_reads": "complice",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page clearly prints 'si renderebbe complice volontario'. Published 'ciomplice' is OCR garble."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0023",
+      "scan_reads": "Roma",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p18 left col, paragraph start 'Roma e le Legazioni toccarono a Pio VII'. Published 'Eoma' is R->E OCR error."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0025",
+      "scan_reads": "signoreggiare",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p18 'dovette accontentarsi di signoreggiare a Parma'. Published 'aSgnotreggiare' is garbled OCR."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0029",
+      "scan_reads": "nocente",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "p19 top line: '...nocente strappato alla sua famiglia' — fragment of 'innocente' (the 'in-' is carried over from p18). Page prints 'nocente'; neither published 'noeente' nor witness 'La' matches."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0066",
+      "scan_reads": "carni,",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "p19 left col: 'colpi che penetravano nelle carni, che le asportavano a brandelli'. Page prints 'carni,'; published 'earni,' is c->e OCR, witness 'se' is wrong."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0087",
+      "scan_reads": "riprincipiava",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "p19 left col: 'Essa riprincipiava non appena un gemito'. Page matches current text; witness 'E' was wrong."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0101",
+      "scan_reads": "sessantamila",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p20 right col: 'I cento sessantamila abitanti della citta'. Target word prints 'sessantamila'; published 'sessautamila' is n->u OCR."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0102",
+      "scan_reads": "città",
+      "verdict": "other",
+      "confidence": "medium",
+      "note": "No context in bundle; the word is unambiguously 'città' (e.g. p20 'abitanti della città divennero'). Page prints lowercase accented 'città'; published 'citbà' is garble and witness 'cittÀ' has wrong-case accent. Marked other since neither candidate matches the printed 'città'."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0106",
+      "scan_reads": "pel",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p21 right col: 'avevano sparso pel contado gli eccitamenti'. Word prints 'pel' (a faint speck precedes it). Published 'ipel' has a stray i."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "A0107",
+      "scan_reads": "Radetzky,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p22 top left: 'stioni. Radetzky, il ferreo Radetzky, malgrado'. First occurrence prints 'Radetzky,'; published 'Kadetzky,' is R->K OCR."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0007",
+      "scan_reads": "riescire",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p16 left col: 'doveva riescire inviso all'Austria'. Archaic 'riescire'; published 'riuscire' is a modernization."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0008",
+      "scan_reads": "biricchinate",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p16 left col: 'più per le mie biricchinate che'. Page prints double-c 'biricchinate'; published 'birichinate' is wrong."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0009",
+      "scan_reads": "acciecato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p16 left col: 'infanteria austriaca, acciecato dall'affetto'. Archaic 'acciecato'; published 'accecato' is a modernization."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0010",
+      "scan_reads": "riescito",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p17 left col top: 'imbarazzo di Napoleone il Grande, era riescito a saltargli alla'. Archaic 'riescito'; published 'riuscito' is a modernization."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0011",
+      "scan_reads": "Meternich",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p18 left col: 'quel debito, Meternich ebbe cura di crearsi d'attorno'. Page prints single-t 'Meternich'; published 'Metternich' is normalized."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0012",
+      "scan_reads": "\"boja\".",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p18 left col: 'soprannominato il \"boja\".' Page prints 'boja' (with j) in double quotes; published 'boia' is normalized."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0013",
+      "scan_reads": "armaiuoli,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p20 right col: 'a cui gli armaiuoli, vuotando le loro botteghe'. Archaic 'armaiuoli'; published 'armaioli' is a modernization."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0014",
+      "scan_reads": "sorreggendolo,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p21 left col: 'i padri, sorreggendolo, gli avevano insegnato'. Page prints 'sorreggendolo'; published 'correggendolo' is s->c OCR error (changes meaning)."
+    },
+    {
+      "chapter": "p1_ch02",
+      "id": "D0015",
+      "scan_reads": "patriotti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p21 left col: 'Mentre i patriotti combattono alle prime file'. Archaic double-t 'patriotti'; published 'patrioti' is a modernization."
+    },
+    {
+      "chapter": "p1_ch03",
+      "id": "A0111",
+      "scan_reads": "mondo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 23 left col bottom: 'attratto dal meraviglioso mondo / delle cose minime, si chinò'. Clearly 'mondo'; published 'monido' is OCR damage."
+    },
+    {
+      "chapter": "p1_ch03",
+      "id": "A0113",
+      "scan_reads": "dell'impero?”",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 24 right col: '...a mettere in forse la stabilità dell'impero?”' then next line 'Mi accontentai di accennare fredda-'. Published 'dell'impero?”' matches the page exactly; witness 'i\\Ii' is garbled OCR of the correctly-printed 'Mi' that follows. False positive."
+    },
+    {
+      "chapter": "p1_ch03",
+      "id": "A0115",
+      "scan_reads": "coll'arme",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 25 left col: 'Ed ecco, dalla casa stessa, pro-/mpere, coll'arme in pugno, il sozzo'. Page prints 'coll'arme'; both published 'eoli' and witness 'coli' are OCR fragments of 'coll''."
+    },
+    {
+      "chapter": "p1_ch03",
+      "id": "A0116",
+      "scan_reads": "delle",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 25 left col bottom: '...di rabbia. Al / [toc]co delle mie mani, che le sollevavano'. Clearly 'delle'; published 'dielle' is OCR damage."
+    },
+    {
+      "chapter": "p1_ch03",
+      "id": "D0016",
+      "scan_reads": "pressocchè",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 24 left col: 'guarnigioni scesero pressocchè / indisturbate'. Page prints double-c 'pressocchè'; published 'pressochè' (single c) is wrong. Period spelling with -cchè."
+    },
+    {
+      "chapter": "p1_ch03",
+      "id": "D0017",
+      "scan_reads": "in-/[im]barcarvisi",
+      "verdict": "other",
+      "confidence": "medium",
+      "note": "The 'monito di Carlo Alberto' clause: page 24 right col ends 'Alberto, che in-' and page 25 left col top continues '[im]barcarvisi.' (a page-break-hyphenated word, OCR-damaged). The page does NOT print 'incagliare' nor 'incagliarne'; both candidates are reconstruction artifacts of this damaged word. Could not resolve the exact word with certainty, but it is neither candidate."
+    },
+    {
+      "chapter": "p1_ch03",
+      "id": "D0018",
+      "scan_reads": "elittica",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 25 left col: 'all'estremitá di una / piazza elittica. E come i Croati'. Page prints single-l 'elittica'; published 'ellittica' (double l) is the modern normalization. Honor the 1913 form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "A0120",
+      "scan_reads": "parecchie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page prints 'distaccate parecchie (pattug...'; published 'pajreieehie' is OCR garbage."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "A0121",
+      "scan_reads": "finimmo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'...rrascoso, finimmo per diventarne...'; published 'fiuimmto' is OCR garbage."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "A0122",
+      "scan_reads": "coll'autorità",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page prints 'coll'au-/torità e coll'eloquenza, Daniele Manin'; published form is correct."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "A0123",
+      "scan_reads": "coll'eloquenza,",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page prints 'coll'eloquenza,'; both published 'eoli' and suggestion 'coli' are OCR garbage."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0019",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'patriotta amicissimo della mia fa-' before 'Pietro Fortunato Calvi'; archaic geminate form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0020",
+      "scan_reads": "ravvivasse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'...rte cadavere si ravvivasse come un...' (top of p27)."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0021",
+      "scan_reads": "d'innanzi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'la mia causa d'innanzi al Consiglio'; archaic apostrophized form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0022",
+      "scan_reads": "d'innanzi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'Io ho ancora d'innanzi agli occhi la'; archaic apostrophized form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0023",
+      "scan_reads": "menomarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'i suoi figli. Dividerla, menomarne la...'."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0024",
+      "scan_reads": "riescirebbe",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'quanta maggior gloria riescirebbe anche'; archaic 'riescire' form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0025",
+      "scan_reads": "scapata",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'La scapata è / contemplata dai regolamenti militari'; single-p archaic form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0026",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'ma il patriotta stese'; archaic geminate form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0027",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'la destra al patriotta e mi diede una'; archaic geminate form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0028",
+      "scan_reads": "trabaccoli",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'leggeri come gusci!.. i trabaccoli a-/iti dall'ala dei gabbiani'; correct nautical term (small boats)."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0029",
+      "scan_reads": "riescì,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'Provvidenziale / riescì, in quel frangente, la manovra'; archaic form."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0030",
+      "scan_reads": "rindossata",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'spigata di bianco, che avevo rindossata a / Ravenna'."
+    },
+    {
+      "chapter": "p1_ch04",
+      "id": "D0031",
+      "scan_reads": "frustagno.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "'un abito di / frustagno. Profondo fu il senso d'amarez-'; fabric name (fustian)."
+    },
+    {
+      "chapter": "p1_ch05",
+      "id": "A0156",
+      "scan_reads": "27",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page footer of scan page 33 prints the page number 27 flanked by printer's ornaments. The witness 'f>n.' is OCR garble of the ornamental flourishes. Current text '27' is correct."
+    },
+    {
+      "chapter": "p1_ch05",
+      "id": "D0032",
+      "scan_reads": "rivoluzionri",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Scan page 31, left column, line 'I nostri moti rivoluzionri aprivano allora' prints 'rivoluzionri' (missing the second 'a') -- an original 1913 typesetting typo. The published text 'rivoluzionari' is a silent correction; verbatim ground truth matches the witness 'rivoluzionri'."
+    },
+    {
+      "chapter": "p1_ch06",
+      "id": "A0158",
+      "scan_reads": "precpitosa,",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page prints 'precpitosa,' (printer's typo, missing the 'i'); neither published 'preepitosa,' nor suggestion 'precipitosa,'. Page 34, right column."
+    },
+    {
+      "chapter": "p1_ch06",
+      "id": "D0033",
+      "scan_reads": "diventarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Word hyphenated across line break; visible suffix 'iventarne padroni' (full word 'ridiventarne'). Ends in '-ne', matching suggestion 'ridiventarne', not published 'ridiventare'. Page 35, left column."
+    },
+    {
+      "chapter": "p1_ch06",
+      "id": "D0034",
+      "scan_reads": "dela",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page prints 'manifestazione dela rinascente' with single 'l' (printer's typo), matching suggestion 'dela', not published 'della'. Page 35, left column."
+    },
+    {
+      "chapter": "p1_ch06",
+      "id": "D0035",
+      "scan_reads": "spetro",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page prints 'il roseo spetro della' (typo for 'spettro'), matching suggestion 'spetro', not published 'spero'. Page 35, right column."
+    },
+    {
+      "chapter": "p1_ch06",
+      "id": "D0036",
+      "scan_reads": "trscinandosi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page prints 'trscinandosi' (printer's typo, missing 'a'), matching suggestion exactly, not published 'trascinandosi'. Page 37, left column."
+    },
+    {
+      "chapter": "p1_ch06",
+      "id": "D0037",
+      "scan_reads": "sacrifizi.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page prints archaic 'sacrifizi.' with 'z', matching suggestion, not published 'sacrifici.'. Page 37, right column."
+    },
+    {
+      "chapter": "p1_ch06",
+      "id": "D0038",
+      "scan_reads": "cartuccie,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page prints archaic 'cartuccie,', matching suggestion, not published 'cartucce,'. Page 38, left column."
+    },
+    {
+      "chapter": "p1_ch07",
+      "id": "A0161",
+      "scan_reads": "Gianieolo",
+      "verdict": "published",
+      "confidence": "medium",
+      "note": "Page 39 left col prints a malformed 'Gianieolo' (the letter after 'Gian-i' reads as an 'e', not a 'c'). The current published text reproduces the scan's broken form; suggestion 'Gianicolo' is the correct toponym but is NOT what the 1913 page prints."
+    },
+    {
+      "chapter": "p1_ch07",
+      "id": "A0165",
+      "scan_reads": "sacre",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 41 right col clearly prints 'sacre' ('riteneva sacre le manifestazioni del genio'). Current published 'saero' is wrong."
+    },
+    {
+      "chapter": "p1_ch07",
+      "id": "D0039",
+      "scan_reads": "riescì,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 40 top-left prints the archaic 'riescì,' (grave accent on final i). Suggestion 'riesci,' matches the archaic stem; current published 'riuscì,' is the modernized form and does not match the scan."
+    },
+    {
+      "chapter": "p1_ch07",
+      "id": "D0040",
+      "scan_reads": "rincalzando,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 41 top-left col prints 'E, rincalzando, diceva ai miei giu-' with a clear leading 'r'. Current published 'incalzando,' is wrong."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "A0174",
+      "scan_reads": "(not found)",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "The context 'quel tuffo nell'acqua limpida ebbe ... di impartire al nostro canto' does not appear anywhere in the chapter scan (pages 43-47). Could not locate the target word to read it. OCR witnesses (wtù/virtii/virtù) suggest heavy garble; the reconciliation context appears to be a phantom passage."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "A0176",
+      "scan_reads": "causa",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 44, right column last line: 'dell'esule, soggiunse: \"Chi fu la causa d-' (line-break hyphen, continuing 'del...'). Page clearly prints 'causa'. Current published 'causàTdi' is OCR garble."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "A0179",
+      "scan_reads": "ricevimenti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 45, right column: 'Fu una sequela di pranzi e di ricevi-/menti' (hyphenated across line). Joined form is 'ricevimenti'. Current published 'riccvimenti' is OCR garble."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "D0041",
+      "scan_reads": "subbisso",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 43, right column top: 'subbisso di approvazioni. Ad un trat-'. Page prints the archaic double-b form 'subbisso', matching the suggestion."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "D0042",
+      "scan_reads": "accoglie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 43, right column: 'Balilla, sempre vivo a Geno-/li accoglie a sassate e li inferocisce.' Page prints present-tense 'accoglie' (not past 'accolse'). Note the verb 'inferocisce' is also present-tense in the scan."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "D0043",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 43, right column: 'con certo Trolli, patriotta lombardo,'. Page prints the archaic double-t form 'patriotta'."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "D0044",
+      "scan_reads": "Terragona.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 44, left column: 'poi a Saragozza, poi a Terragona. Il Trolli'. Page prints 'Terragona' (with first 'e'), matching the suggestion."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "D0045",
+      "scan_reads": "gruccie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 44, right column: 's'appoggiava sulle gruccie e che sbarcav[a]'. Page prints the archaic form 'gruccie'."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "D0046",
+      "scan_reads": "(not found)",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "The context 'se, un giorno, pur non odiandomi, si sono trovati di fronte' does not appear in the chapter scan (pages 43-47). The thematically nearest text (p45 right col, 'le nostre... anime non s'incontrarono più') does not contain 'odiandomi' or 'si sono trovati di fronte'. Could not locate the target word."
+    },
+    {
+      "chapter": "p1_ch08",
+      "id": "D0047",
+      "scan_reads": "Monpellier.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 45, right column: 'che si protrasse sino a Monpellier.' Page prints 'Monpellier' (no 't'), matching the suggestion."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "A0196",
+      "scan_reads": "colle",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 49 right column: 'la milizia faceva sgombrare, colle baionette, l'aula dell'Assemblea'. Prints 'colle' (con+le); published 'eolle' is an OCR error."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "A0202",
+      "scan_reads": "bidienza",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Hyphenated across the page 51 column break: left column ends 'Le orde dell'ub-' and right column begins 'bidienza passiva non arrivano alle alte'. Joined form is 'ubbidienza' (dell'ubbidienza). Line-start fragment 'bidienza' matches the published text. Suggestion 'ostacolo' is from a different sentence and is wrong."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "D0048",
+      "scan_reads": "dirozzarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 48 left column: 'ore; dirozzarne fraternamente l'intel-'. Prints 'dirozzarne' with final -ne (parallel to 'ricambiarne' on the prior line); published 'dirozzare' is wrong."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "D0049",
+      "scan_reads": "pagni",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Hyphenated across the page 48 column break: left column ends 'Vedemmo i com-' and right column begins 'pagni addetti alla fabbricazione delle car-'. Joined form is 'compagni'. The line-start fragment prints 'pagni', matching the suggestion; published 'paghi' is wrong."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "D0050",
+      "scan_reads": "inalzare",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 48 right column: 'si lavora febbrilmente ad inalzare una barricata'. Prints archaic single-n 'inalzare'; published 'innalzare' is wrong."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "D0051",
+      "scan_reads": "atterrandolo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 49 left column: 'se ne vendicò atterrandolo' (knocking him down with a kick). Prints 'atterrandolo'; published 'afferrandolo' is wrong."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "D0052",
+      "scan_reads": "inalzare",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 51 left column: 'eccitato il Popolo parigino ad inalzare le barricate, a combattere ed'. Prints archaic single-n 'inalzare'; published 'innalzare' is wrong."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "D0053",
+      "scan_reads": "veltri",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 51 right column: line ends 'immoti, quasi veltri' continuing 'guinzaglio'. Prints 'veltri' (greyhounds at the leash); published 'vetri' is wrong."
+    },
+    {
+      "chapter": "p1_ch09",
+      "id": "D0054",
+      "scan_reads": "inocuo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 51 right column: 'la caccia spietata al cittadino inocuo che attendeva quietamente'. Prints single-n 'inocuo'; published 'innocuo' is wrong."
+    },
+    {
+      "chapter": "p1_ch10",
+      "id": "A0209",
+      "scan_reads": "inquisitiva",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 54 right col: \"del limone. Ella divenne inquisitiva: 'Una lettera? da parte di chi?'\". The witness 'lettera?' was a copy3 misalignment grabbing the next word; the page clearly prints 'inquisitiva'."
+    },
+    {
+      "chapter": "p1_ch10",
+      "id": "A0219",
+      "scan_reads": "donna",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 55 left col: \"Sua moglie, donna onesta e di gran[di] [m]eriti\". Page prints 'donna'; published 'donua' is an OCR/typo error."
+    },
+    {
+      "chapter": "p1_ch10",
+      "id": "D0055",
+      "scan_reads": "dabben",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 53 right col: \"Non appena il cavallo ebbe ripreso suo trotto, il dabben uomo ci domandò dove eravamo diretti.\" Page prints 'dabben' (no final e)."
+    },
+    {
+      "chapter": "p1_ch10",
+      "id": "D0056",
+      "scan_reads": "Langre,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 54 left col bottom: \"...un passaggio, sulla diligenza, a Langre, la località, ove le maglie...\". Page prints 'Langre,' (no final s)."
+    },
+    {
+      "chapter": "p1_ch10",
+      "id": "D0057",
+      "scan_reads": "Langre",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 54 right col top: \"trio dell'albergo di Langre e già mi avviavo frettolosamente\". Page prints 'Langre' (no final s)."
+    },
+    {
+      "chapter": "p1_ch10",
+      "id": "D0058",
+      "scan_reads": "sgambietto",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 55 right col: \"dava lo sgambietto ad una guardia\". Page prints the archaic 'sgambietto' (with -ie-, NO accent). Neither the published 'sgambetto' nor the witness 'sgambìetto' (accented) matches exactly; the correct reading is 'sgambietto'."
+    },
+    {
+      "chapter": "p1_ch10",
+      "id": "D0059",
+      "scan_reads": "afferratolo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 55 right col: \"e afferratolo pel bavero se lo cacciò in[nanzi]\". Page prints 'afferratolo'; published 'afferratelo' is wrong."
+    },
+    {
+      "chapter": "p1_ch10",
+      "id": "D0060",
+      "scan_reads": "gambuccie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 56 left col: \"Una passera diede un gemito, voltò [le] gambuccie all'aria e rimase stecchita.\" Page prints the archaic 'gambuccie' (-ie-)."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "A0229",
+      "scan_reads": "giorno",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 60 right col: 'il giorno stesso della mia partenza' — clear 'g'. Published 'piorno' is an OCR error."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "A0233",
+      "scan_reads": "(decorative page-number ornament; no body word — non-word artifact)",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "Context empty; both '•8»' and '&imi' are non-words. Corresponds to footer ornament/page-number decoration, not locatable as a printed body word."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "D0061",
+      "scan_reads": "sconfessarli",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 59 left col: 'non avesse preferito sconfessarli e' — published 'confessarli' drops leading 's'."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "D0062",
+      "scan_reads": "voluto",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 59 left col: 'avrebbe voluto inalzare l'intera nostra razza' — published 'valuto' is OCR error."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "D0063",
+      "scan_reads": "soppannava",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 59 left col: 'mi soppannava il cervel-' with double p — published 'sopannava' missing one p."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "D0064",
+      "scan_reads": "d'innanzi",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 59 right col: 'piantato d'innanzi al cartellone' — apostrophe form with lowercase i. Published 'dinanzi' lacks apostrophe; suggestion 'd'Innanzi' wrongly capitalizes I. Verbatim is 'd'innanzi'."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "D0065",
+      "scan_reads": "riescì",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 60 left col: 'Tuttavia mi riescì facile il dimostrarne' — archaic 'riescì' with grave accent. Published 'riuscì' modernizes; suggestion 'riesci' lacks the accent. Verbatim is 'riescì'."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "D0066",
+      "scan_reads": "patriotti.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 61 left col: 'cadaveri di patriotti.' — archaic double-t form. Published 'patrioti.' is the modern normalization."
+    },
+    {
+      "chapter": "p1_ch11",
+      "id": "D0067",
+      "scan_reads": "dovizie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 62 right col: 'ne trovai a dovizie in ogni centro' — final 'e'. Published 'dovizia' has wrong ending."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "A0236",
+      "scan_reads": "ELLA",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Chapter-opening word in small caps following drop-cap D (DELLA). Page prints ELLA; published 'ELXiA' is OCR garble."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "A0240",
+      "scan_reads": "57",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page-number footer flanked by decorative ornaments. Page prints 57; witness 'A»' is a misread of the ornaments. False positive."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "D0068",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.63 left col: 'era un patriotta addentro nel-/se segrete.' Archaic double-t form; published 'patriota' is wrong."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "D0069",
+      "scan_reads": "gualciscono",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.63 right col: 'non si gualciscono per passare degli'. No leading s; published 'sgualciscono' is wrong."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "D0070",
+      "scan_reads": "guatteri",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.64 right col first line: 'guatteri ed inservienti'. No leading s; published 'sguatteri' is wrong."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "D0071",
+      "scan_reads": "guattero.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.64 right col: 'qualche / guattero. In pochi seco...'. No leading s; published 'sguattero.' is wrong."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "D0072",
+      "scan_reads": "patriotti,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.65 left col: 'E tra quei / patriotti, trovai anche chi'. Archaic double-t; published 'patrioti,' is wrong."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "D0073",
+      "scan_reads": "d'innanzi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.66 left col: 'Vi entrai e mi trovai d'innanzi'. With apostrophe; published 'dinanzi' is wrong."
+    },
+    {
+      "chapter": "p1_ch12",
+      "id": "D0074",
+      "scan_reads": "patriotti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.66 left col: 'gruppo di patriotti che mi accolsero'. Archaic double-t; published 'patrioti' is wrong."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "A0334",
+      "scan_reads": "Grillanzoni,",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 68 (printed 62), left col: 'incarico avuto direttamente dal Conte Grillan-zoni, io partivo per Milano'. Hyphenated across lines; joined reads 'Grillanzoni,'. The witness 'greto' comes from a different paragraph (it appears on page 73, 'salto sul greto'); it is misaligned. Published is correct."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0075",
+      "scan_reads": "proprii",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 67 (printed 61), left col: 'per rivendicare i proprii diritti, nulla di meglio dello sdra-iarsi'. Archaic double-i form; page prints 'proprii'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0076",
+      "scan_reads": "giacilio",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 67 (printed 61), bottom left col: 'se non di acconciar-si un giacilio nei fatti compiuti'. Page prints 'giacilio' (printer's error, missing g before lio), not 'giaciglio'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0077",
+      "scan_reads": "entre",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 68 (printed 62), bottom left col: 'tra l'altro, insediata, entre le mura di Mi-lano'. Page prints 'entre' (printer's error), not 'entro'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0078",
+      "scan_reads": "armaiuoli",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 68 (printed 62), right col: 'I due armaiuoli che, giornalmente li ispezionavano'. Archaic form 'armaiuoli', not 'armaioli'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0079",
+      "scan_reads": "inalzava,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 69 (printed 63), left col: 'per proteggere chi le inalzava, si era impe-gnato'. Page prints 'inalzava,' (single n), not 'innalzava,'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0080",
+      "scan_reads": "patriotti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 69 (printed 63), bottom left col: 'dopo aver battuto al-la porta dei patriotti piu facoltosi'. Archaic double-t form 'patriotti'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0081",
+      "scan_reads": "rivolgerne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 70 (printed 64), left col: 'rimorchiatele al largo, rivolgerne le boc-che omicide contro la piccola guarnigio-ne'. Page prints 'rivolgerne'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0082",
+      "scan_reads": "patriotti,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 70 (printed 64), bottom left col: 'organizzato buon nerbo di patriotti, avrebbe assaltato Luino'. Archaic double-t form 'patriotti,'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0083",
+      "scan_reads": "patriotti.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 71 (printed 65), left col: 'Si trattava della vita, sacra per lui, di tanti patriotti. Che cosa si sareb-be perso'. Page prints 'patriotti' with double-t (matching suggestion's word). Note punctuation is a period, not the comma shown in the suggestion candidate."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0084",
+      "scan_reads": "celeramente",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 71 (printed 65), right col: 'ridiscendevo celeramente il Verbano. Sander e Ra-'. Page prints 'celeramente' (extra a), not 'celermente'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0085",
+      "scan_reads": "iago.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 71 (printed 65), right col: 'grigio e quasi cinereo il iago. Dalle Alpi soffiava'. Word 'lago' is printed as 'iago' (broken/missing initial l) — page genuinely prints 'iago.'."
+    },
+    {
+      "chapter": "p1_ch13",
+      "id": "D0086",
+      "scan_reads": "ubbriachi,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 72 (printed 66), left col: 'mi parvero imbevuti, e quasi ubbriachi, di commiserazione cretina'. Archaic double-b form 'ubbriachi,'."
+    },
+    {
+      "chapter": "p1_ch14",
+      "id": "D0087",
+      "scan_reads": "patriotta,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 74 left column clearly prints 'Io patriotta,' with double-t, matching the suggestion. Period-appropriate archaic doubling."
+    },
+    {
+      "chapter": "p1_ch14",
+      "id": "D0088",
+      "scan_reads": "scalifivano,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 74 left column prints 'la scalifivano, che' with the extra 'i' (s-c-a-l-i-f-i-v-a-n-o), matching the suggestion; appears to be a 1913 printing typo but is verbatim what the page shows."
+    },
+    {
+      "chapter": "p1_ch15",
+      "id": "A0386",
+      "scan_reads": "Radetzky,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line reads 'Radetzky, sul Lago Maggiore.' Capital R, clearly not K. Published 'Kadetzky' is wrong."
+    },
+    {
+      "chapter": "p1_ch15",
+      "id": "D0089",
+      "scan_reads": "riescirmi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 76 left col prints archaic 'riescirmi l'essere presentato'. Published 'riuscirmi' is wrong."
+    },
+    {
+      "chapter": "p1_ch15",
+      "id": "D0090",
+      "scan_reads": "esilo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 77 left col: 'anche in un esilo petto'. Clearly -o ending. Published 'esile' is wrong."
+    },
+    {
+      "chapter": "p1_ch15",
+      "id": "D0091",
+      "scan_reads": "pressocchè",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 77 right col bottom: 'seri e pressocchè tangibili'. Double-c form with grave accent. Published 'pressochè' is wrong."
+    },
+    {
+      "chapter": "p1_ch15",
+      "id": "D0092",
+      "scan_reads": "parricide",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 78 left col: 'all'armi parricide di Napoleone'. -e ending agreeing with plural armi. Published 'parricida' is wrong."
+    },
+    {
+      "chapter": "p1_ch16",
+      "id": "A0392",
+      "scan_reads": "frutto!”",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 81 (printed 75), left col: \"...ce ne avrebbero rapito il frutto!'” The page prints frutto!\" (closing the quoted speech). Published placeholder is '.'; suggestion matches the page."
+    },
+    {
+      "chapter": "p1_ch16",
+      "id": "D0093",
+      "scan_reads": "armaiuoli.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 80, left col: \"si abboccava coi due armaiuoli.\" Archaic spelling with 'u'; suggestion 'armaiuoli.' matches, published 'armaioli.' is wrong."
+    },
+    {
+      "chapter": "p1_ch16",
+      "id": "D0094",
+      "scan_reads": "vistisi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 80, left col: \"I pochi animosi appostati, vistisi in numero troppo esiguo\". Page prints 'vistisi'; suggestion correct, published 'vistosi' wrong."
+    },
+    {
+      "chapter": "p1_ch16",
+      "id": "D0095",
+      "scan_reads": "riescì",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 80, left col: \"solo quel tanto riescì che basta\". Page prints the archaic 'riescì' (with grave accent). Neither published 'riuscì' nor suggestion 'riesci' (no accent) matches exactly; verbatim is riescì."
+    },
+    {
+      "chapter": "p1_ch16",
+      "id": "D0096",
+      "scan_reads": "",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "Context 'La congiura prese consistenza ed iniziò il suo fatale andare' does not appear anywhere in scan pages 79-83 (all columns read). Could not locate the word to read it."
+    },
+    {
+      "chapter": "p1_ch16",
+      "id": "D0097",
+      "scan_reads": "“blouses”?",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 81, left col: \"comune colle “blouses”? Non arrischiavano\". Page prints plural 'blouses' followed by ?. Published '“blouse”?' is singular; suggestion '“blouses”!' has wrong punctuation. Verbatim is “blouses”? (plural, question mark)."
+    },
+    {
+      "chapter": "p1_ch16",
+      "id": "D0098",
+      "scan_reads": "proprii",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 82, left col: \"altrui rinnegando persino i proprii martiri\". Archaic double-i form; suggestion 'proprii' matches, published 'propri' wrong."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "A0394",
+      "scan_reads": "virtù,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 83 left col: 'tra l'altre sue virtù, quella di chiudere un occhio'. Grave accent confirmed at native res; published 'virtìì,' is OCR garbage."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "A0449",
+      "scan_reads": "\"Che",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 83 right col: 'come per dire: \"Che decide? Li lasceremo sgozzare...'. Opening double quote + Che; published 'ZM' is OCR garbage."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0099",
+      "scan_reads": "imagini",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 83 right col: 'era turbata da imagini terribili'. Single-m archaic spelling as printed."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0100",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 84 left col bottom: 'il Conte di Rudio e il patriotta italiano e l'inviato'. Double-t archaic form."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0101",
+      "scan_reads": "lettala,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 84 left col: 'stando ritto sulla soglia e, lettala, trasse di tasca un memorandum'. Clear 'l' not 'g' at native res (having-read-it)."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0102",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 84 right col bottom: 'non vi sarebbe patriotta senza febbre, non lembo d'Italia'. Double-t archaic form."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0103",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 85 right col mid: 'ritemprarmi nell'abbraccio di un patriotta autentico, di una coscienza intemerata'. Double-t archaic form."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0104",
+      "scan_reads": "Trevis",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 86 left col: 'recarmi nella vallata del Trevis' (line ends 'Trevis', no trailing -o, no hyphen; next line 'd'abboccarmi')."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0105",
+      "scan_reads": "camminandovi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 86 left col bottom: 'un parapetto alto così che un uomo, camminandovi rasente e carponi, non può essere scorto'. Printed with -vi; note published also mis-reads 'alto' as 'al'."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0106",
+      "scan_reads": "aguato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 86 right col top: 'un pugno dei nostri, in aguato presso il portone'. Single-g spelling as printed."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0107",
+      "scan_reads": "appiattarsi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 86 right col: 'un altro manipolo di patriotti doveva appiattarsi presso la Caserma dei Gendarmi'. Printed with -ar-."
+    },
+    {
+      "chapter": "p1_ch17",
+      "id": "D0108",
+      "scan_reads": "Osopo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 87 left col: 'Osopo diventa la nostra base d'operazione'. Single-p spelling as printed."
+    },
+    {
+      "chapter": "p1_ch18",
+      "id": "A0468",
+      "scan_reads": "cadorina",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 89 reads 'Bastiano, bella cadorina dai fianchi pro[caci]'. Published 'cadorina' matches; witness 'mia,' does not appear."
+    },
+    {
+      "chapter": "p1_ch18",
+      "id": "D0109",
+      "scan_reads": "disepellire",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 90 prints 'Fu deciso di non disepellire le armi' with a single s and single p, matching the witness reading; the published 'disseppellire' is a doubled-consonant normalization not present in the 1913 text."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "A0627",
+      "scan_reads": "strettagli",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 87 (scan 93): 'E strettagli la mano, voltai le spalle...' — published matches."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0110",
+      "scan_reads": "abbracciatala",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 86 (scan 92): 'posi la santa donna e abbracciatala le impressi sulla fronte'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0111",
+      "scan_reads": "lanciano",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 87 (scan 93): 'due bracchi si lanciano abbaiando; ma rimisero tosto'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0112",
+      "scan_reads": "ingrommate",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 87 (scan 93): 'Nella cucina dalle pareti ingrommate di fumo'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0113",
+      "scan_reads": "bragie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 88 (scan 94): 'egli tormentava le bragie colle corna del soffietto a canna'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0114",
+      "scan_reads": "allestirle",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 88 (scan 94): 'penseremo poi ad allestirle un letto un po' più da cristiani'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0115",
+      "scan_reads": "scritturale",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 89 (scan 95): 'uno scritturale della Polizia, a cui'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0116",
+      "scan_reads": "vagan",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 90 (scan 96): 'le volpi vagan per la montagna' — word ends at right margin, no hyphen, next line begins 'per la montagna'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0117",
+      "scan_reads": "traccie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 90 (scan 96): 'sin l'ultime traccie del dubbio' — archaic form printed."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0118",
+      "scan_reads": "circondata",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 90 (scan 96): 'gli sgherri dell'Austria avevano circondata la casa'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0119",
+      "scan_reads": "piantatala",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 90 (scan 96): 'Afferrò una sedia e piantatala presso il prigioniero'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0120",
+      "scan_reads": "bestiemme",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 91 (scan 97): 'uno scroscio di bestiemme esotiche' — neither 'bestemmie' (published) nor 'bestìemme' (suggestion); printed plain 'bestiemme', no accent."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0121",
+      "scan_reads": "giuocare",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 91 (scan 97): 'Decisi di giuocare disperatamente l'ultima carta'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0122",
+      "scan_reads": "peste",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 92 (scan 98): 'la peste maledetta fosse realmente giù per la china'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0123",
+      "scan_reads": "patriotta,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Found on scan page 99 (Capitolo Ventesimo, printed p.93 — paragraph physically overruns onto next chapter's page): 'in odore di vecchio patriotta, di uomo irriducibile'."
+    },
+    {
+      "chapter": "p1_ch19",
+      "id": "D0124",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Found on scan page 99 (Capitolo Ventesimo, printed p.93): 'aveva sbarrato il sentiero al patriotta fuggitivo'."
+    },
+    {
+      "chapter": "p1_ch20",
+      "id": "D0125",
+      "scan_reads": "rincorare",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left column, first paragraph: 'A rincorare la mamma, Giustiniano le tratteggiava' — prints 'rincorare' (no u), not published 'rincuorare'."
+    },
+    {
+      "chapter": "p1_ch20",
+      "id": "D0126",
+      "scan_reads": "patriotta,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left column: 'Papà era in odore di vecchio patriotta, di uomo irri-' — prints archaic double-t 'patriotta', matching the witness suggestion."
+    },
+    {
+      "chapter": "p1_ch20",
+      "id": "D0127",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right column: 'rato il sentiero al patriotta fuggitivo.' — prints 'patriotta' (double t)."
+    },
+    {
+      "chapter": "p1_ch20",
+      "id": "D0128",
+      "scan_reads": "ravvivarono",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 100 right column: 'e vi ravvivarono la tramortita pietà.' — prints 'ravvivarono', not published 'ravviarono'."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "A0674",
+      "scan_reads": "",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "Empty context, copy3 null; no locatable phrase. Could not find this single-char fragment ('!' vs l'n) on pages 101-107."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "A0679",
+      "scan_reads": "poichè",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 105 (printed 99) left col: 'd'affetto fraterno.... poi-/chè il disertore'. Word wraps poi-/chè, prints 'poichè' with grave accent. Published 'pulchè' is OCR garble; suggestion 'poichè' matches."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0129",
+      "scan_reads": "riescire",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 101 (printed 95) left col: 'iniziando una fuga che doveva riescire'. Archaic form printed."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0130",
+      "scan_reads": "ombrelle",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 102 (printed 96) left col: 'protette da enormi ombrelle e un pi-'. Prints 'ombrelle'."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0131",
+      "scan_reads": "qualeosa",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 102 right col: 'Ma trovai qualeosa di peggio.' The 4th char is printed as 'e' (broken/extra-stroke c), so the page reads 'qualeosa'. Published 'qualcosa' is the correct word but the scan prints the witness form."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0132",
+      "scan_reads": "debol",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 102 right col bottom: 'debol filo pendeva la mia salvezza!...'. Prints 'debol'."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0133",
+      "scan_reads": "bragie.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 103 (printed 97) left col: 'cascare dal-/la padella nelle bragie.\" E additando'. Prints 'bragie' (frying pan into the embers)."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0134",
+      "scan_reads": "‘Nelle",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 103 left col: 'so profondo: ‘Nelle vene dei Burrasca'. Dialogue opens with a single turned-comma quote ‘ , not a double quote. Published uses double quote."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0135",
+      "scan_reads": "D'innanzi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 103 right col bottom: 'D'innanzi la ronda, dietro il gendarme di'. Clear D + apostrophe + innanzi; archaic 'D'innanzi'."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0136",
+      "scan_reads": "\"Che cosa c'è'?\"",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 104 (printed 98) left col bottom: '\"Che cosa c'è'?\" domanda dall'interno'. Prints an extra apostrophe after è AND a question mark: c'è'? . Matches neither published (c'è?\") nor suggestion (c'è'!\"): has the suggestion's inner apostrophe but the published's question mark."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0137",
+      "scan_reads": "d'innanzi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 104 left col bottom: 'mi trovai d'innanzi/un uomo tarchiato, in maniche di camicia'. Prints archaic 'd'innanzi'."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0138",
+      "scan_reads": "riescito",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 104 right col: 'non ero/riescito a trovar letto, anche offrendomi'. Archaic 'riescito'."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0139",
+      "scan_reads": "rincalzare",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 104 right col: 'a rincalzare la donna, a usarle cortese vio-'. Prints 'rincalzare'; published 'incalzare' is wrong."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0140",
+      "scan_reads": "quele",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 105 (printed 99) right col top: 'la diligenza diretta a Marano il quele'. Printed typo 'quele' (e for a)."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0141",
+      "scan_reads": "stradicciuole",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 106 (printed 100) right col: 'stradicciuole assiepate; poi presi la pine-'. Archaic 'stradicciuole'."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0142",
+      "scan_reads": "",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "Could not locate the sentence 'era un orologio col cuculo. I gendarmi dell'Impero non potevano' anywhere on pages 101-107 after exhaustive column-by-column reading. Only one 'orologio col cuculo' occurrence found (D0143, page 107). This second context did not appear; cannot verify."
+    },
+    {
+      "chapter": "p1_ch21",
+      "id": "D0143",
+      "scan_reads": "cuculio",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 107 (printed 101) left col, top: 'l'orologio col cu-/culio, quando la mia attenzione fu at-'. Word wraps cu-/culio; joined form printed is 'cuculio'."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "A0694",
+      "scan_reads": "contemporancamente",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 108 (printed 102), right column. Prints a print-typo 'contemporancamente' (missing the 'ea') — matches neither published 'conteimporancamente' nor suggestion 'contemporaneamente'."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "A0695",
+      "scan_reads": "Calvi,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 108 right column, 'arrestati contemporancamente al Calvi, il'. Clearly 'Calvi'; published 'Cialvi,' is an OCR error."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "A0759",
+      "scan_reads": "Duodo",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 110 (printed 104), right column top, 'E scrisse una lettera a Teresa Duodo da Padova'. Surname 'Duodo' — published is correct."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0144",
+      "scan_reads": "l'abbiezione",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 109 (printed 103), left column lower half, 'tutta quanta l'abbiezione della effimera superiorità'. Archaic double-b 'abbiezione'; published 'l'abiezione' is wrong."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0145",
+      "scan_reads": "quadrivi,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 109 right column top, 'le mille e mille statue che l'Italia prodiga ai suoi quadrivi, sembreranno'. Plural 'quadrivi'; published 'quadrivio,' is wrong."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0146",
+      "scan_reads": "patriotti,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 109 right column lower half, 'ove con parecchi altri patriotti, era mio padre'. Archaic double-t 'patriotti'; published 'patrioti,' is wrong."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0147",
+      "scan_reads": "cantarellando",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 109 right column lower half, 'tirandoseli d'attorno e cantarellando le romanze'. Spelled with 'a' (cantarellando); published 'canterellando' is wrong."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0148",
+      "scan_reads": "messolo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 110 left column, 'quando i suoi giudici, messolo al fronto con un abbietto delatore'. Prints 'messolo'; published 'messo' is wrong (dropped the enclitic)."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0149",
+      "scan_reads": "“La",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 110 right column lower, 'essa poteva dire: “La taccia di crudele'. Printed with a typographic open double-quote (“), best represented by ASCII '\"'; suggestion ''La (two apostrophes) is the OCR misread."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0150",
+      "scan_reads": "pàtriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 110 right column lower, 'toglievano ogni prestigio al pàtriotta malcauto'. Archaic double-t (with grave accent on first a as printed); published 'patriota' is wrong."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0151",
+      "scan_reads": "meditarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 110 right column lower half, 'avvezzo da lunghi anni a meditarne gli orrori'. Prints 'meditarne'; published 'meditare' is wrong (dropped the enclitic)."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0152",
+      "scan_reads": "“più",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 110 right column lower half, 'amante del “più vero e maggiore”'. Printed with a typographic open double-quote (“), best represented by ASCII '\"'; suggestion ''più (two apostrophes) is the OCR misread."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0153",
+      "scan_reads": "aceinse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 111 (printed 105), left column bottom, 'Allora il boia si aceinse all'opera sua'. Third letter is clearly 'e' not 'c' — page prints the print-typo 'aceinse' (for accinse); matches suggestion, not published 'accinse'."
+    },
+    {
+      "chapter": "p1_ch22",
+      "id": "D0154",
+      "scan_reads": "impensierirne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 111 right column upper, 'da impensierirne gli oppressori'. Prints 'impensierirne'; published 'impensierire' is wrong (dropped the enclitic)."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "A0783",
+      "scan_reads": "bavaglio",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 112, right column: 'una mano di ferro mettesse il bavaglio ad ogni bocca (1).' Page prints 'bavaglio'; published 'bavaiflio' is an OCR error."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "A0818",
+      "scan_reads": "Egli",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 117, left column: 'Egli trovavasi allora a Londra. Gli comunicai minutamente un mio piano'. Page prints 'Egli'; published 'Egili' is wrong."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "A0821",
+      "scan_reads": "incondizionata;",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 118, left column bottom: 'la vostra stima incondizionata; rilasciatemi una formale ritrattazione.' Page prints 'incondizionata;'; published 'incondiadonata' is wrong."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0155",
+      "scan_reads": "sentirmente",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 112, right column bottom: 'Finii per sentirmente disgustato e decisi di partire per Parigi.' The 1913 page literally prints 'sentirmente' (printer's typo for sentirmene); published normalized it to 'sentirmene'. Verbatim form is 'sentirmente'."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0156",
+      "scan_reads": "dala",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 115, right column: 'Napoleone III, anche vincitore, uscì dala lotta cruenta, irremissibilmente sconfitto.' Page prints 'dala' (single-l, 1913 typo); published 'dalla' does not match the scan."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0157",
+      "scan_reads": "giuocando",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 116, left column: 'l'Austria, Napoleone, giuocando a partita doppia'. Page prints the archaic 'giuocando'; published modernized 'giocando' is wrong for the scan."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0158",
+      "scan_reads": "spagnuola",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 116, right column: 'Eugenia Montijo, contessa di Teba, spagnuola di bellezza impareggiabile'. Page prints archaic 'spagnuola'; published 'spagnola' does not match."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0159",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 117, left column bottom: 'i miei futuri rapporti col patriotta di Meldola.' Page prints archaic double-t 'patriotta'; published 'patriota' does not match."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0160",
+      "scan_reads": "colunnia.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 117, right column: 'isolarmi, annientarmi colla colunnia.' Page prints 'colunnia.' (1913 typo for calunnia); published 'calunnia.' does not match the scan."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0161",
+      "scan_reads": "manifestarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 118, left column: 'Non avevo che a manifestarne il desiderio.' Page prints 'manifestarne'; published 'manifestare' does not match."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0162",
+      "scan_reads": "suspetti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 118, right column: 'Ho avuto dei brutti suspetti e.... perchè nascondertelo?' Page prints archaic 'suspetti'; published 'sospetti' does not match the scan here (a different occurrence on 117r reads 'sospetti')."
+    },
+    {
+      "chapter": "p1_ch23",
+      "id": "D0163",
+      "scan_reads": "rittrattazione",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 119, left column: 'compresi e gli porsi la rittrattazione del Caronti.' Page prints double-t 'rittrattazione' here; published 'ritrattazione' does not match this occurrence (the 118 occurrences read 'ritrattazione')."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0164",
+      "scan_reads": "approvandoli,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 120 left column: 'approvandoli, non ne aveva assunta la' — final -i clearly printed."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0165",
+      "scan_reads": "patriotti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 121 left column: 'patriotti italiani costretti' — archaic double-t form."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0166",
+      "scan_reads": "ripiegarci!",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 121 left column bottom: 'i ripiegarci!' — clear -c-."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0167",
+      "scan_reads": "d'innanzi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 121 right column: 'd'innanzi agitando' — apostrophe + double-n archaic form."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0168",
+      "scan_reads": "giacilio",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 121 right column bottom: 'orgevamo dal giacilio di erbe' — printed g-i-a-c-i-l-i-o (no second g); a typo in the 1913 print, but that is what the page prints."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0169",
+      "scan_reads": "riesciva",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 122 left column: 'essa non riesciva a nascondermi lo' — archaic -ie- form."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0170",
+      "scan_reads": "Celsi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 122 right column: 'annunziò che Tito Celsi era stato arrestato' — clear initial C (also printed Celsi at the two other mentions on pages 120 and 121)."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0171",
+      "scan_reads": "irriquietezza",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 124 right column: 'persistente irriquietezza' — printed i-r-r-i-q-u-i-e-t-e-z-z-a."
+    },
+    {
+      "chapter": "p1_ch24",
+      "id": "D0172",
+      "scan_reads": "interdiva",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 124 right column: 'che ci interdiva di co-' — clear v, not c."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "A0830",
+      "scan_reads": "condizione",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.128 right col: 'a condizione che si spacciassero per rifu/giati'. Published 'eondizione' is OCR garble; scan prints 'condizione'."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "A0834",
+      "scan_reads": "ornamented footer page-number (e.g. '121'/'125' flanked by printer's ornaments)",
+      "verdict": "other",
+      "confidence": "low",
+      "note": "Empty context; copy1='31', copy2='4fc.'. Footers carry the printed body page number flanked by decorative ornaments; this is a mangled OCR of such a running-footer string, not a body word. Could not tie to one specific footer."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0173",
+      "scan_reads": "covili,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.128 left col: 'descrivere gli angusti covili, parteggiati da una'. Published 'civili' wrong; scan prints 'covili'."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0174",
+      "scan_reads": "proprii",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.128 left col: 'impegna... i proprii stivali.' Archaic double-i form printed; published 'propri' wrong."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0175",
+      "scan_reads": "sdrusciti;",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.128 left col: 'attraverso i gomiti sdrusciti; i lunghi digiuni'. Published 'sdruciti' wrong; scan prints 'sdrusciti'."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0176",
+      "scan_reads": "commiserarli",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.128 right col: 'cesserebbe da[l] commiserarli e dall'assecondarne moral[mente]'. Published 'commiserarti' wrong; scan prints 'commiserarli'."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0177",
+      "scan_reads": "all'usato",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "p.129 right col: 'Il primo a mostrarsi di rado all'usato / convegno fu il di Rudio.' Scan prints double-l 'all'usato'; suggestion 'al'usato' is OCR error. False positive."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0178",
+      "scan_reads": "conquistatrici.\"",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.129 right col: 'irruenti, conquistatrici.\"' Published 'conquistatrice' wrong; scan prints 'conquistatrici'."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0179",
+      "scan_reads": "ananasso",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.130 left col: 'Eccetto dattero, limone, ananasso / [f]ico!' Scan prints 'ananasso' at the flagged slot; published 'ananassa' wrong. (The earlier 'una pera..' line is a different sentence.)"
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0180",
+      "scan_reads": "sopraccaricato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.130 left col: 'dell'Olimpo aveva sopraccaricato'. Published 'sovraccaricato' wrong; scan prints 'sopraccaricato'."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0181",
+      "scan_reads": "Perche'",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.131 left col: 'mamma Mancherini. / Perche' rifiutarvisi?' The 1913 printer renders the accent as a trailing apostrophe: 'Perche''. Published normalized 'Perché'; scan reads 'Perche''."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0182",
+      "scan_reads": "bracciuoli.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.131 left col: 'l'ampia sedia a / [b]racciuoli. Sara sedeva'. Archaic 'bracciuoli' printed; published 'braccioli' wrong."
+    },
+    {
+      "chapter": "p2_ch01",
+      "id": "D0183",
+      "scan_reads": "arguirne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.133 right col: 'noi possiamo arguirne a quali minimi ter-'. Published 'arguire' wrong; scan prints 'arguirne'."
+    },
+    {
+      "chapter": "p2_ch02",
+      "id": "D0184",
+      "scan_reads": "rannodati,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left column: 'capelli in parte rannodati, in parte fluenti' — clearly begins with 'ra'. Published 'annodati,' is missing the leading 'r'."
+    },
+    {
+      "chapter": "p2_ch02",
+      "id": "D0185",
+      "scan_reads": "riescito",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right column: 'riescito a risolvere.' — archaic 1913 form 'riescito', not the modern 'riuscito' in the published text. (systematic, expected)"
+    },
+    {
+      "chapter": "p2_ch02",
+      "id": "D0186",
+      "scan_reads": "imbraga",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 135 right column: 'in cui si affonda e si imbraga' (word ends at margin, next line begins 'nostro vivere civile'). Clear 'g', not 'c'. Published 'imbraca' is wrong."
+    },
+    {
+      "chapter": "p2_ch03",
+      "id": "A0838",
+      "scan_reads": "concluse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 136 (printed 130), left column: 'concluse—dal momento che l'accasar...' Clearly 'concluse' with 'cl'. Published 'coneluse' is an OCR error."
+    },
+    {
+      "chapter": "p2_ch03",
+      "id": "A0839",
+      "scan_reads": "probabilmente",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 136 (printed 130), right column: hyphenated across line break 'probabil-/mente per gettarlo alle fiamme'. Joined = 'probabilmente', no stray character. Published 'probabilmjente' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch03",
+      "id": "D0187",
+      "scan_reads": "buluardo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 138 (printed 132), bottom-left column: 'buluardo di Stati liberi che avrebbe...'. Clearly b-u-l-u-a-r-d-o (printer's typo in 1913 original). Published normalized to 'baluardo'; the page prints the witness reading 'buluardo'."
+    },
+    {
+      "chapter": "p2_ch03",
+      "id": "D0188",
+      "scan_reads": "d'innanzi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 138 (printed 132), right column: 'il di Rudio si vide capitare / d'innanzi il Fumagalli ed il Leoni.' Archaic form with apostrophe. Published 'dinanzi' is wrong."
+    },
+    {
+      "chapter": "p2_ch03",
+      "id": "D0189",
+      "scan_reads": "lagrimosa.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 138 (printed 132), right column: 'faccia pallida e lagrimosa. Fiori e ramo-'. Clearly 'lagrimosa' with g (archaic 1913 spelling). Published normalized to 'lacrimosa'."
+    },
+    {
+      "chapter": "p2_ch04",
+      "id": "A0846",
+      "scan_reads": "affron-tato (hyphenated across line break = affrontato)",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 143 left column: 'in America poi, ho affron-/tato pericoli gravissimi'. Published 'affrontajto' is an OCR corruption."
+    },
+    {
+      "chapter": "p2_ch04",
+      "id": "A0847",
+      "scan_reads": "spendidamente",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 143, last text line: 'Il Foschini chiuse spendidamente i suoi'. The 1913 page genuinely prints it without the L (printer's typo); current text matches the scan."
+    },
+    {
+      "chapter": "p2_ch04",
+      "id": "D0190",
+      "scan_reads": "torbida.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 142 right column: 'si correva il rischio di na-/vigare in marina torbida.' Note the actual phrase is 'in marina torbida', not the context's 'acque torbide'; the printed word is singular 'torbida.' Published 'torbide.' is wrong."
+    },
+    {
+      "chapter": "p2_ch04",
+      "id": "D0191",
+      "scan_reads": "romagnuolo,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 142 right column: 'quando il romagnuolo, tratto un'. Archaic spelling with -uo-; published 'romagnolo,' is wrong."
+    },
+    {
+      "chapter": "p2_ch04",
+      "id": "D0192",
+      "scan_reads": "(not located on pages 142-143)",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "The passage 'sterline... buon patriota e, benché il suo nascondiglio' does not appear anywhere on the two bundle pages (142-143). Checked neighbors 141 (end of ch.3) and 144 (Capitolo Quinto) too. The only patriotta/patriota cluster present is on p.142 but not this context. Could not confidently read the target form."
+    },
+    {
+      "chapter": "p2_ch04",
+      "id": "D0193",
+      "scan_reads": "riescire",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 143 right column: '\"morte ignominiosa\", ma esso doveva riescire tra i massimi fattori'. Archaic 'riescire'; published 'riuscire' is a normalization and is wrong."
+    },
+    {
+      "chapter": "p2_ch05",
+      "id": "A0850",
+      "scan_reads": "città,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 144 opening paragraph: 'per quella città, venne a farmi visita.' Published 'citità,' is a leftover OCR error; page prints 'città,'."
+    },
+    {
+      "chapter": "p2_ch05",
+      "id": "A0855",
+      "scan_reads": "dell'Ungheria.",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 145 first line prints 'dell'Ungheria.' Published 'Idell' and witness 'Nel' are both wrong; the OCR split 'dell'Ungheria' into 'Idell 'Ungheria'. Correct word is 'dell''."
+    },
+    {
+      "chapter": "p2_ch05",
+      "id": "D0194",
+      "scan_reads": "bassette",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 144 left column: 'colle sue bassette e i suoi baffi nerissimi.' Page prints 'bassette' (side-whiskers), not published 'cassette'."
+    },
+    {
+      "chapter": "p2_ch05",
+      "id": "D0195",
+      "scan_reads": "patriottici!\"",
+      "verdict": "published",
+      "confidence": "medium",
+      "note": "Page 144: 'addio propositi patriottici!' followed by a raised closing double-quote glyph. The '\"' vs ''' difference is only a transcription of the same closing-quote mark; published '\"' is the standard form used throughout this edition."
+    },
+    {
+      "chapter": "p2_ch05",
+      "id": "D0196",
+      "scan_reads": "riescito",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 145 left column: 'monarchici è già riescito fatale al Popolo italiano'. Page prints archaic 'riescito', not published 'riuscito'."
+    },
+    {
+      "chapter": "p2_ch05",
+      "id": "D0197",
+      "scan_reads": "scongiurarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 146 left column: 'dini necessari a scongiurarne le conseguenze; finché non abbiano proclamata'. Page prints 'scongiurarne', not published 'scongiurare'."
+    },
+    {
+      "chapter": "p2_ch05",
+      "id": "D0198",
+      "scan_reads": "comunicatami",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 148 left column: 'la notizia comunicatami da Simon Bernard, a tutta prima, mi urtò.' (wraps 'comunicatam-/i'). Page prints 'comunicatami', not published 'comunicatemi'."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "A0874",
+      "scan_reads": "dissipata",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image p149 left col bottom: 'La lettera dell'Orsini aveva dissipata la freddezza di Simon Bernard'. Page prints clean 'dissipata'; published 'idissipata' is a copy1 OCR artifact."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "A0903",
+      "scan_reads": "tarscinarono",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Same word as D0200, image p150 left col: 'mi tarscinarono nel loro vortice'. Page prints 'tarscinarono' (1913 typo for trascinarono); witness 'hai' is copy2 garbage."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0199",
+      "scan_reads": "L'abboccarsi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image p149 right col: 'L'abboccarsi con lui, non era tanto facile'. Page prints 'L'abboccarsi'; published 'L'abboccassi' is wrong."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0200",
+      "scan_reads": "tarscinarono",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image p150 left col: 'Gli avvenimenti precipitarono e mi tarscinarono nel loro vortice'. Page prints the 1913 typo 'tarscinarono'; published 'trascinarono' is a normalization away from the printed form."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0201",
+      "scan_reads": "influenzza",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image p150 left col: 'portato il contributo della sua influenzza e dell'ardente anima sua?'. Page prints 'influenzza' (double z, 1913 typo); published 'influenza' is a normalization."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0202",
+      "scan_reads": "riescì",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Image p151 left col: 'Facile gli riescì lo strappare, alla spaventata, l'improvvida'. Page prints archaic 'riescì' (r-i-e-s-c-ì) — neither published 'riuscì' nor suggestion 'rie.scì'. Current text normalizes the archaic form."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0203",
+      "scan_reads": "piccioletta,",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Image p151 right col: 'sottile, piccioletta, bruna'. Page prints 'piccioletta' (plain i, no accent) — neither published 'piccoletta' nor accented suggestion 'piccìoletta'."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0204",
+      "scan_reads": "scattola",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image p151 right col bottom: 'aveva tutta l'apparenza di una scattola da oggetti d'abbigliamento'. Page prints 'scattola' (double t, 1913 spelling); published 'scatola' is a normalization."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0205",
+      "scan_reads": "scattola",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image p151 right col (lower, y~3500): 'neppure quando ebbe la scattola tra le dita'. Page prints 'scattola' (double t); published 'scatola' is a normalization."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0206",
+      "scan_reads": "inocua.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image p152 left col: 'dissimulata dall'altra trapunta ed inocua.'. Page prints 'inocua' (single n, 1913 typo); published 'innocua' is a normalization."
+    },
+    {
+      "chapter": "p2_ch06",
+      "id": "D0207",
+      "scan_reads": "copersi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image p152 right col bottom: 'Mi inginocchiai e le copersi le mani di baci'. Page prints 'copersi'; published 'coperti' is wrong."
+    },
+    {
+      "chapter": "p2_ch07",
+      "id": "D0208",
+      "scan_reads": "avutala,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 155 (printed p.149) top of left column: 'mio ritardo e, avutala, disse \"Come ti ha accolto la signorina Cheney?\"'. The scan clearly prints 'avutala,' (avere+la = having received it, i.e. the explanation), not the published 'aiutata,'."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0209",
+      "scan_reads": "eclissarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p157 left col: 'ne ingigantirono i difetti co[sì] / [d]a eclissarne le belle e non comuni virtù'. Page prints 'eclissarne'."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0210",
+      "scan_reads": "riescirà",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p158 right col: 'peristilio che ti riescirà possibile.' Archaic form printed."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0211",
+      "scan_reads": "patriotti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p158 right col bottom: 'via Rossini, troverà i patriotti che sap[ranno]'. Archaic double-t."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0212",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p158 right col bottom: 'se nel patriotta toscano il bisogno'. Archaic double-t."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0213",
+      "scan_reads": "frigidezza",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p158 right col bottom: 'espandersi e, alla frigidezza eccezio[nale]'. Page prints 'frigidezza'."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0214",
+      "scan_reads": "imagini",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p159 left col line 2: 'lore di frasi, di imagini, di rievocazioni.' Single-m archaic form."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0215",
+      "scan_reads": "chichessia",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p159 left col: '[fa]nno chichessia propenso al facile abban-[dono]'. Printed with single c (no 'cc')."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0216",
+      "scan_reads": "riescivo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p159 right col: 'precedenza? Se riescivo, la nostra ca[usa]'. Archaic form."
+    },
+    {
+      "chapter": "p2_ch08",
+      "id": "D0217",
+      "scan_reads": "d'innanzi....",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p160 right col: 'Finì per piantar[misi] / d'innanzi.... prese e gettò'. Apostrophe + double-n; followed by four dots in the original."
+    },
+    {
+      "chapter": "p2_ch09",
+      "id": "A0967",
+      "scan_reads": "Credevo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 162 right column, in the dialogue: 'Diamine! Credevo che non lo conoscessi!'. The page clearly prints 'Credevo'; the published 'Crcrlcvo' is OCR garble. Matches the suggestion."
+    },
+    {
+      "chapter": "p2_ch09",
+      "id": "D0218",
+      "scan_reads": "imaginava",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 162 right column, top: 'Egli si imaginava che un importuno affatto inocuo si fosse attaccato'. The 1913 page prints 'imaginava' with a single m (period variant), not the published 'immaginava'. Matches the suggestion."
+    },
+    {
+      "chapter": "p2_ch09",
+      "id": "D0219",
+      "scan_reads": "inocuo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 162 right column, top: 'un importuno affatto inocuo si fosse attaccato'. The 1913 page prints 'inocuo' with a single n (period variant), not the published 'innocuo'. Matches the suggestion."
+    },
+    {
+      "chapter": "p2_ch10",
+      "id": "A0976",
+      "scan_reads": "Ripetutamente,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Chapter-opening word on p.165; page prints capital R, published 'Eipetutamente,' is an OCR E-for-R error. Witness suggestion 'Ripetutamente,' matches."
+    },
+    {
+      "chapter": "p2_ch10",
+      "id": "A0977",
+      "scan_reads": "quell'incubo",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Last line of right column p.165 prints 'quell'incubo dal mondo.' The published 'quell'incubo' is correct; suggestion 'quel]' was OCR garble. False positive."
+    },
+    {
+      "chapter": "p2_ch11",
+      "id": "D0220",
+      "scan_reads": "goccie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line reads 'goccie di sangue le rigavano di vern[iglio]'; archaic plural goccie, not goccia."
+    },
+    {
+      "chapter": "p2_ch11",
+      "id": "D0221",
+      "scan_reads": "prigionero",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line reads 'considerarmi come prigionero in quell'al-bergo?'; printed without the second i."
+    },
+    {
+      "chapter": "p2_ch11",
+      "id": "D0222",
+      "scan_reads": "imaginato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line reads 'pel motivo imaginato forse dalla mia be[lla] tentatrice'; single-m archaic form."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "A1129",
+      "scan_reads": "destra.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 169 left col: 'lungo la parete di destra.' Published 'deatra' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "A1153",
+      "scan_reads": "chi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 172 left col: 'Tuttavia chi sonnecchia stanotte'. Published 'fehi' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0223",
+      "scan_reads": "scaffe",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 169 left col: 'veva le scaffe tanto alte da lasciarmi'. Page prints 'scaffe', not 'staffe'."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0224",
+      "scan_reads": "pero'",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 170 left col, split line: 'Rammento p-/ero' che egli portava il barbone.' Printed with apostrophe, not accent."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0225",
+      "scan_reads": "ordino'",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 170 left col bottom: 'na guardia e le ordino' di far entrare'. Apostrophe form."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0226",
+      "scan_reads": "domando'",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 170 right col: 'E' questi? mi domando' il Giudice'. Apostrophe form."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0227",
+      "scan_reads": "lascio'",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 170 right col: 'Allora il giudice lascio' la scrivania'. Apostrophe form."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0228",
+      "scan_reads": "Parlo'",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 170 right col: 'domanda successiva. Parlo' in inglese'. Apostrophe form."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0229",
+      "scan_reads": "conprendo!...",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 171 right col: 'Non conprendo!... di che si tratta?' Page prints 'conprendo' with n."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0230",
+      "scan_reads": "iscuse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 172 left col: 'la Polizia francese profondersi in iscuse'. Archaic prosthetic-i form."
+    },
+    {
+      "chapter": "p2_ch12",
+      "id": "D0231",
+      "scan_reads": "auguratami",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 172 left col: 'E il Giudice, auguratami la buona notte'. Page prints 'auguratami'."
+    },
+    {
+      "chapter": "p2_ch13",
+      "id": "A1167",
+      "scan_reads": "nelle",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 174 (printed 168), right column: 'nelle vicinanze dell'opera al mo[mento] dell'attentato.' The published 'uetllte' is OCR garble; the page prints 'nelle'."
+    },
+    {
+      "chapter": "p2_ch13",
+      "id": "A1170",
+      "scan_reads": "momento",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Same line on page 174 ends 'al mom-' at the page edge, the word is 'momento'. Published 'nitomiento' is garble; suggestion 'momento' is correct. Note the page reads 'al momento' (not 'nel')."
+    },
+    {
+      "chapter": "p2_ch13",
+      "id": "A1172",
+      "scan_reads": "superfluo",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 175 (printed 169) top-left line begins '...rfluo e ridicolo di fronte alle prove che,' — the visible fragment 'rfluo' is the tail of 'superfluo' carried over a page-break hyphen. Published 'perfluo' is the garbled tail; the witness suggestion 'aveva' (copy2) is clearly NOT on the page."
+    },
+    {
+      "chapter": "p2_ch13",
+      "id": "A1176",
+      "scan_reads": "colla",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 175 bottom-right: 'parisse colla meraviglia, una tinta di le[g-]'. Published 'l'esamino' is wrong; the page prints 'colla'."
+    },
+    {
+      "chapter": "p2_ch13",
+      "id": "A1178",
+      "scan_reads": "ripugnanza,",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 176 (printed 170) top-left: 'era ripugnanza, perche il conte sorris[e]'. The page prints 'ripugnanza,'. Published 'ripagnanza,' is a one-letter OCR garble (a for u); witness suggestion 'chiamato,' is completely wrong. Closest correct form is 'ripugnanza,'."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "A1198",
+      "scan_reads": "Kim?",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col, p.178 (book 172): '— Orbene Kim? disse'. Published 'Kimf' is OCR garble of the question mark."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "A1200",
+      "scan_reads": "l'uno",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Right col, p.178: 'Feci atto di cazzottarlo e l'uno e l'altro sloggiarono.' Page prints 'l'uno'; suggestion 'l'nno' and published 'Vxmo' are both wrong."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "A1203",
+      "scan_reads": "certezza",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col, p.179 (book 173): 'derivava dalla certezza che, alla'. Published 'eertezza' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "A1212",
+      "scan_reads": "che",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col, p.179: 'rete inestricabile che stava per avvolgermi'. Published 'esfla' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "A1214",
+      "scan_reads": "avvolgermi,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col, p.179: 'che stava per avvolgermi, l'ebbi quando'. Published 'taiessa' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "A1240",
+      "scan_reads": "cospiratore,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col, p.179: 'più caldo patriotta che prudente cospiratore, aveva conservato'. Published 'cioepiratore,' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "A1244",
+      "scan_reads": "distin",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col bottom, p.181 (book 175): 'da impedirmi di distin' (hyphenated at column end). Published 'dislin' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "A1249",
+      "scan_reads": "(could not locate)",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "Empty context; copy1 '.', copy2 '''a'. Likely a stray quote/punctuation artifact in the quote-dense dialogue region of p.181 right col ('— ... a caratteri indelebili...'), but cannot pin to a definite printed token."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "D0232",
+      "scan_reads": "sotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col, p.179: 'condotto sotta buona scorta all'ufficio del Cancelliere'. Page genuinely prints 'sotta' (1913 misprint); published 'sotto' is the corrected form."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "D0233",
+      "scan_reads": "traccie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col, p.181: 'su quella testa scultoria, le traccie della tempesta'. Archaic 1913 spelling 'traccie'; published 'tracce' normalizes it."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "D0234",
+      "scan_reads": "siedeva",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col, p.181: 'presso la finestra, siedeva il solito Giudice d'Istruzione'. Page prints 'siedeva'; published 'sedeva' normalizes it. (A separate occurrence on p.179 reads 'Sedevo'.)"
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "D0235",
+      "scan_reads": "d'innanzi,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col, p.181: 'mi fece balenare d'innanzi, tratta non saprei dir d'onde'. Archaic 'd'innanzi'; published 'dinanzi,' normalizes it."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "D0236",
+      "scan_reads": "pelesare",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col, p.182 (book 176): 'che la esortava a pelesare quanto sapeva'. Page genuinely prints 'pelesare' (1913 misprint for palesare); published 'palesare' is the corrected form."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "D0237",
+      "scan_reads": "riescirvi,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col, p.182: 'per riescirvi, tradisce l'innocente'. Archaic 'riescirvi'; published 'riuscirvi,' normalizes it."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "D0238",
+      "scan_reads": "Scottland",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col, p.182: 'il capo dei detectives della Scottland Yard'. Page prints 'Scottland' (double-t misspelling present in 1913); published 'Scotland' corrects it."
+    },
+    {
+      "chapter": "p2_ch14",
+      "id": "D0239",
+      "scan_reads": "riescisse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col, p.182: 'il parlare la lingua di Shakespeare mi riescisse difficile'. Archaic 'riescisse'; published 'riuscisse' normalizes it."
+    },
+    {
+      "chapter": "p2_ch15",
+      "id": "A1252",
+      "scan_reads": "morte,",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page (184) prints 'pronunciava sentenza di morte, essi si sarebbero'. Neither published 'mortr' nor suggestion 'morto'; the printed form is 'morte,' (with comma), matching copy3."
+    },
+    {
+      "chapter": "p2_ch15",
+      "id": "A1258",
+      "scan_reads": "colle",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page (185) prints 'Il corroborarle colle ammissioni degli imputati'. Published 'insinuatesi' is wrong; the witness reading 'colle' is correct."
+    },
+    {
+      "chapter": "p2_ch15",
+      "id": "A1259",
+      "scan_reads": "avrebbe",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page (185) prints 'colle ammissioni degli imputati avrebbe dato piu energico risalto'. Published 'avreblie' is an OCR garble; witness 'avrebbe' is correct."
+    },
+    {
+      "chapter": "p2_ch15",
+      "id": "A1265",
+      "scan_reads": "sulle",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Located at 'trarne partito in Patria, sulle barricate' (page 186). Page prints 'sulle'; copy1 'sullp' is an OCR garble. False positive."
+    },
+    {
+      "chapter": "p2_ch15",
+      "id": "D0240",
+      "scan_reads": "acciecati",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page (185) prints 'ai malevoli, acciecati sia da rancori personali'. Archaic 'acciecati' (witness reading), not modern 'accecati'."
+    },
+    {
+      "chapter": "p2_ch15",
+      "id": "D0241",
+      "scan_reads": "giovine,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page (185) prints 'incominciato da me, che ero il piu giovine, il suo sottile lavorio'. Archaic 'giovine,' (witness reading), not 'giovane,'."
+    },
+    {
+      "chapter": "p2_ch15",
+      "id": "D0242",
+      "scan_reads": "ammobigliato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page (185) prints 'nell'appartamento ammobigliato dell'Orsini, in via Monthabor No. 10'. The gl-form 'ammobigliato' matches the witness reading (current 'ammobiliato' wrong). Note: printed with a plain 'i', no grave accent, so the suggestion's accent 'ammobigliato' (=ammobìgliato) is not borne out; printed form is 'ammobigliato'."
+    },
+    {
+      "chapter": "p2_ch15",
+      "id": "D0243",
+      "scan_reads": "riescì",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page (185, bottom right) prints 'Piu arduo riesci il dibattersi, fra simili strette, a Giuseppe Pieri'. Archaic 'riescì' (with grave accent on final i), matching the witness reading; published 'riusci' is wrong."
+    },
+    {
+      "chapter": "p2_ch16",
+      "id": "A1266",
+      "scan_reads": "estremo,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Hyphenated across line break 'all'altro e-/stremo,'; joined form is 'estremo,'. Published 'ebtremo,' is an OCR error."
+    },
+    {
+      "chapter": "p2_ch16",
+      "id": "A1297",
+      "scan_reads": "dappocaggine",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page 188 left col: 'palmente dovuta alla dappocaggine dei propri compagni d'azione.' Witness 'per' is spurious."
+    },
+    {
+      "chapter": "p2_ch16",
+      "id": "D0244",
+      "scan_reads": "spendido",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 189 right col: 'lo spendido materiale che esse gli offrivano.' The 1913 print itself reads 'spendido' (no 'l'); published 'splendido' is a silent normalization."
+    },
+    {
+      "chapter": "p2_ch16",
+      "id": "D0245",
+      "scan_reads": "trasuderà",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 190 left col: 'i mancati giuramenti, trasuderà l'ira'. Single 's' in the print; published 'trassuderà' has a doubled 's'."
+    },
+    {
+      "chapter": "p2_ch17",
+      "id": "D0246",
+      "scan_reads": "acciecato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 191 (printed 185), left col bottom: 'mostrerebbe chi, acciecato dal pre-'. Archaic double-i form clearly printed; published 'accecato' is a normalization."
+    },
+    {
+      "chapter": "p2_ch17",
+      "id": "D0247",
+      "scan_reads": "dela",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 191 left col bottom: 'l primo svolgersi dela Storia sino ai'. Single-L 'dela' is a 1913 printer's typo (same paragraph also prints 'privilego' and 'deficienza'); published 'della' is normalized."
+    },
+    {
+      "chapter": "p2_ch17",
+      "id": "D0248",
+      "scan_reads": "ripulsioni",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 192 (printed 186), right col bottom: 'pi in cui le attrazioni e le ripulsioni de[gli] animi'. Prints 'ripulsioni' with i; published 'repulsioni' is normalized."
+    },
+    {
+      "chapter": "p2_ch17",
+      "id": "D0249",
+      "scan_reads": "spavalveria:",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 194 (printed 188), right col: 'cesse, senz'ombra di spavalveria:'. Printer's typo with v (intended spavalderia); matches witness. Published 'spavalderia:' is a correction."
+    },
+    {
+      "chapter": "p2_ch17",
+      "id": "D0250",
+      "scan_reads": "Suturno",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 195 (printed 189), left col: 'quasi famigliare. Suturno e l'al-[tra] [g]uardia'. Printer's typo with u (guard's name is Saturno); published 'Saturno' is a correction."
+    },
+    {
+      "chapter": "p2_ch18",
+      "id": "A1307",
+      "scan_reads": "gran",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image 196 (printed 190), right column line 1: 'lo avrebbe ormai sollevato da un gran' (continues 'peso'). Published 'grux' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch18",
+      "id": "A1309",
+      "scan_reads": "neria;",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Image 201 (printed 195), top of left column: 'neria; essi avevano combattuto anima e' — continuation of 'Masso-' from prior page (Massoneria). The published 'neria' matches; witness 'n' was a truncated OCR."
+    },
+    {
+      "chapter": "p2_ch18",
+      "id": "A1311",
+      "scan_reads": "sperava",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image 201 (printed 195), right column lines 2-3: 'Napoleone III n'ebbe piu di quanto spe-/rava'. Joined = 'sperava'. Published 'spedano' is OCR garble (split-line confusion)."
+    },
+    {
+      "chapter": "p2_ch18",
+      "id": "D0251",
+      "scan_reads": "romagnuolo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image 197 (printed 191), right column: 'nelle sue \"Memorie\" l'iracondo / romagnuolo tratteggiava il Mazzini'. Archaic form 'romagnuolo' printed; published 'romagnolo' is a normalization. (Note: page prints 'iracondo', not 'irruente' as in the context string.)"
+    },
+    {
+      "chapter": "p2_ch18",
+      "id": "D0252",
+      "scan_reads": "rammolite,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image 198 (printed 192), left column: 'la figura di Silvio Pel-/lico e d'altri, rammolite, quasi, dai pati-/menti'. Published 'rammolliti,' is wrong; page prints 'rammolite,'."
+    },
+    {
+      "chapter": "p2_ch18",
+      "id": "D0253",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image 198 (printed 192), left column: 'la prima giovinezza; patriotta fu e si pro-[clamo]'. Archaic geminate 'patriotta' printed; published 'patriota'."
+    },
+    {
+      "chapter": "p2_ch18",
+      "id": "D0254",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Image 199 (printed 193), right column: 'consideravo le cose coll'occhio del patriotta illuminato, non tar-[derei]'. Archaic 'patriotta' printed; published 'patriota'."
+    },
+    {
+      "chapter": "p2_ch19",
+      "id": "D0255",
+      "scan_reads": "imaginai",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page prints single-m 'imaginai' with no accent; matches neither published 'immaginai' (double m) nor suggestion 'imagìnai' (accent). Page 204 left col, 'Mi imaginai'."
+    },
+    {
+      "chapter": "p2_ch19",
+      "id": "D0256",
+      "scan_reads": "dela",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 203 right col prints 'cappellano dela Casa dei Di-' with single l (1913 misprint). Matches suggestion."
+    },
+    {
+      "chapter": "p2_ch19",
+      "id": "D0257",
+      "scan_reads": "l'alterezza",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 204 left col bottom: 'l'alterezza si prese cura' — clearly 't', not 'b'. Published 'l'alberezza' is wrong."
+    },
+    {
+      "chapter": "p2_ch19",
+      "id": "D0258",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 204 left col: 'di un patriotta che' — archaic double-t form printed. Published 'patriota' modernizes it."
+    },
+    {
+      "chapter": "p2_ch19",
+      "id": "D0259",
+      "scan_reads": "indarmo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 204 right col bottom: 'tremiti che io indarmo mi' — prints 'indarmo' with m (1913 misprint). Published 'indarno' differs."
+    },
+    {
+      "chapter": "p2_ch19",
+      "id": "D0260",
+      "scan_reads": "irritandomi,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 204 right col bottom: 'fiacchezza, irritandomi, mi induceva' — prints 'irritandomi'. Published 'irritandosi' is wrong."
+    },
+    {
+      "chapter": "p2_ch20",
+      "id": "A1333",
+      "scan_reads": "Ratificata",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 208 left col prints 'Ratificata la grazia, il Presidente Delangle'. Published 'lìatificata' is an OCR garble of 'Ratificata'; witness 'Pieri' was a misaligned token from the nearby 'Pieri e dell'Orsini' line."
+    },
+    {
+      "chapter": "p2_ch20",
+      "id": "D0261",
+      "scan_reads": "rizzarmi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 207 right col: 'per rizzarmi più fieramente a mani slegate'. Page prints the witness reading 'rizzarmi', not 'rizzarsi'."
+    },
+    {
+      "chapter": "p2_ch20",
+      "id": "D0262",
+      "scan_reads": "Marchesse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 208 right col: 'il Marchesse Lassalle' with double s as printed in 1913."
+    },
+    {
+      "chapter": "p2_ch20",
+      "id": "D0263",
+      "scan_reads": "chichessia.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 209 left col, at margin: 'chichessia.' (single c in the middle cluster), the 1913 archaic/variant spelling."
+    },
+    {
+      "chapter": "p2_ch20",
+      "id": "D0264",
+      "scan_reads": "patriotti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 209 left col: 'dei patriotti italiani' with archaic double-t form."
+    },
+    {
+      "chapter": "p2_ch20",
+      "id": "D0265",
+      "scan_reads": "imaginaria,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 209 right col: 'Non imaginaria, non mentita' with single m as printed."
+    },
+    {
+      "chapter": "p2_ch20",
+      "id": "D0266",
+      "scan_reads": "riescita",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 210 left col: 'era riescita ad interessare' with archaic riescita form."
+    },
+    {
+      "chapter": "p2_ch20",
+      "id": "D0267",
+      "scan_reads": "Nothingham,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 210 left col: 'della sua stessa Nothingham, il quale' - the 1913 text's misspelling of Nottingham."
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "A1337",
+      "scan_reads": "Roquette.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p212 left col: 'punto di quei giorni alla Roquette.'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "A1339",
+      "scan_reads": "virtù",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p212 left col: 'malgrado le sue virtù;'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "A1359",
+      "scan_reads": "colla",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p213 right col: 'rendendo, colla mia conversione'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "A1361",
+      "scan_reads": "fran-",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p214 right col line end 'Autorità fran-', continues p215 'cesi.' = francesi"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0268",
+      "scan_reads": "l'inalzarlo,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p212 left col: 'virtù e l'inalzarlo, malgrado le sue colpe'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0269",
+      "scan_reads": "ricevesse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p212 right col: 'come poi seppi, che ella ricevesse da parte mia.'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0270",
+      "scan_reads": "elargirmi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p213 left col: 'Si proffersero di elargirmi una somma'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0271",
+      "scan_reads": "chinesi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p214 left col: 'Se i chinesi sono tutti come questo cane'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0272",
+      "scan_reads": "esterefatta,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p214 left col: 'con aria esterefatta, come se fossi il demonio' (single r)"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0273",
+      "scan_reads": "bagatella",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p216 left col (ch22): 'prescrivevano la bagatella di cinquanta colpi'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0274",
+      "scan_reads": "bastasse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p217 left col (ch22): 'quel tanto che bastasse a ripigliar lena'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0275",
+      "scan_reads": "foggiarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p218 left col (ch22): 'scavarlo in modo da foggiarne una piroga capace'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0276",
+      "scan_reads": "inalzato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p219 left col (ch22): 'mi avevano improvvisamente inalzato nel concetto di quei disgraziati'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0277",
+      "scan_reads": "pressocchè",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p219 right col (ch22): 'con segni pressocchè invisibili agli altri mortali'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0278",
+      "scan_reads": "spander",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p220 left col (ch22): 'non era riescita a spander una sola goccia d'acqua'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0279",
+      "scan_reads": "cessa",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p220 right col (ch22): 'due figli ed egli cessa d'interessarsi della mia salute'"
+    },
+    {
+      "chapter": "p2_ch21",
+      "id": "D0280",
+      "scan_reads": "carname",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p221 right col (ch22): 'il vasto carname a cui eravamo miracolosamente sfuggiti'"
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0281",
+      "scan_reads": "imagine,",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 218 (printed 212), left column: 'sua imagine, intensamente rievocata'. Single 'm', plain roman 'i' with no grave accent. Matches neither 'immagine,' (published) nor 'ìmagine,' (suggestion with accent)."
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0282",
+      "scan_reads": "foggiarne",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 218 left column: 'scavarlo in modo da foggiarne / una piroga capace'. Clearly ends in -ne. Published 'foggiare' is wrong."
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0283",
+      "scan_reads": "informatosi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 219 (printed 213) left column: 'Il guardiano, certo Cosson, accorre e informatosi della faccenda'. Reflexive -si present. Published 'informato' is wrong."
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0284",
+      "scan_reads": "inalzato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 219 left column bottom: 'mi avevano improvvisamente inalzato nel concetto di quei disgraziati'. Single 'n'. Published 'innalzato' is wrong."
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0285",
+      "scan_reads": "riescì",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Page 219 left column bottom: 'da quel giorno mi riescì impresa relativamente facile'. Archaic form 'riescì' (r-i-e-s-c-ì) with grave accent on final i. Neither 'riuscì' (published) nor 'riesci' (suggestion, no accent)."
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0286",
+      "scan_reads": "pressocchè",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 219 right column: 'il nostro cammino con segni pressocchè invisibili agli altri mortali'. Double c-h. Published 'pressochè' is wrong."
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0287",
+      "scan_reads": "spander",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 220 (printed 214) left column bottom: 'non era riescita / spander una sola goccia d'acqua'. Initial 'sp-'. Published 'scander' is wrong."
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0288",
+      "scan_reads": "cessa",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 220 right column: 'la moglie e due figli ed egli cessa d'interessarsi della mia salute'. Present tense 'cessa'. Published 'cessò' is wrong."
+    },
+    {
+      "chapter": "p2_ch22",
+      "id": "D0289",
+      "scan_reads": "carname",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 221 (printed 215) right column: 'il vasto carname a cui eravamo miracolosamente sfuggiti'. Reads 'carname'. Published 'carnale' is wrong."
+    },
+    {
+      "chapter": "p2_ch23",
+      "id": "D0290",
+      "scan_reads": "tristamente",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 222 (printed 216), left col: 'che divenne poi tristamente celebre pel losco dramma di cui fu vittima il capi...'. Published 'tristemente' is wrong; scan prints 'tristamente'."
+    },
+    {
+      "chapter": "p2_ch23",
+      "id": "D0291",
+      "scan_reads": "celatamente,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 224 (printed 218), left col: 'piu o meno celatamente, a chiunque ne voglia comprare.' Published 'velatamente' is wrong; scan prints 'celatamente'."
+    },
+    {
+      "chapter": "p2_ch23",
+      "id": "D0292",
+      "scan_reads": "riescire",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 224 (printed 218), right col: 'con un colpo di mano, non dovesse riescire impresa soverchiamente difficile ad uomini'. Archaic form 'riescire'; published 'riuscire' is wrong."
+    },
+    {
+      "chapter": "p2_ch24",
+      "id": "A1366",
+      "scan_reads": "semplicemente",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Hyphenated 'sem-plicemente' across lines; joined form is 'semplicemente', no 'j'. Published 'semplicjemente' is an OCR error."
+    },
+    {
+      "chapter": "p2_ch24",
+      "id": "D0293",
+      "scan_reads": "sovrapponendovi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Clearly reads 'sovrapponendovi' (ends -vi, not -si)."
+    },
+    {
+      "chapter": "p2_ch24",
+      "id": "D0294",
+      "scan_reads": "riescire",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Archaic form 'riescire' printed; published 'riuscire' is a modernization/error."
+    },
+    {
+      "chapter": "p2_ch24",
+      "id": "D0295",
+      "scan_reads": "cannottiere",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Prints double-n double-t 'cannottiere'; published 'canottiere' is wrong."
+    },
+    {
+      "chapter": "p2_ch24",
+      "id": "D0296",
+      "scan_reads": "sfondali,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page prints 'pisellone; sfondali, se puoi!' and next sentence 'Quella semplice parola \"sfondali!\"'. Published 'fondali,' is wrong."
+    },
+    {
+      "chapter": "p2_ch24",
+      "id": "D0297",
+      "scan_reads": "riescisse",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Reads 'purchè riescisse a coin-volgermi'; archaic 'riescisse', published 'riuscisse' is wrong."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "A1383",
+      "scan_reads": "Piemonte",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "\"Il Re del Piemonte aveva seguito la tat-\" p.228 left col. Current 'riemonte' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "A1386",
+      "scan_reads": "latina,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "\"che avrebbe invaso l'anima latina, cosi\" p.228 right col. Current 'latma,' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "A1393",
+      "scan_reads": "liani!....",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "p.230 right col prints 'Morbioli, unici Ita-/liani!....' (joined 'Italiani!....'). Neither published 'lianil.' (garble) nor suggestion 'Ora' (next paragraph's first word) matches; the token is 'Italiani!'."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "A1395",
+      "scan_reads": "riescivano",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "\"terribilmente tesi, non riescivano a / comprenderlo... Ora\" p.231 right col. Archaic 'riescivano'; published 'rieseivano' is garble, suggestion 'riuscivano' is a modernization."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "D0298",
+      "scan_reads": "impiegarvi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "\"da impiegarvi / un paio di mesi\" p.229 right col. Current 'impiegarci' is wrong."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "D0299",
+      "scan_reads": "police",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "\"mostrando, stretto tra il police e l'indice\" p.230 left col. Archaic/period form 'police', not 'pollice'."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "D0300",
+      "scan_reads": "riescivo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "\"novra, che non riescivo a comprendere, il\" p.230 right col bottom. Archaic 'riescivo', not modern 'riuscivo'."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "D0301",
+      "scan_reads": "scalmi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "\"Nessuno scende a bordo perche gli scalmi\" p.230 right col bottom. Current 'calmi' is wrong (missing initial s)."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "D0302",
+      "scan_reads": "scalmi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "\"grave d'onda, aveva raggiunto gli scalmi\" p.231 left col. Current 'calmi' is wrong."
+    },
+    {
+      "chapter": "p2_ch25",
+      "id": "D0303",
+      "scan_reads": "rovesciativi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "\"dai grandi fiumi rovesciativi dal Con-\" p.231 right col. Archaic 'rovesciativi', not 'rovesciatevi'."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "A1398",
+      "scan_reads": "Rinavigammo",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Opening word of paragraph on p.227 (page_0233) right column: 'Rinavigammo verso l'ovest'. Copy2's 'La' is bad OCR."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0304",
+      "scan_reads": "apersero",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.226 (page_0232) left col: 'portata la frase: \"E si apersero le catara[tte]'. Page prints 'apersero', current 'persero' is wrong."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0305",
+      "scan_reads": "scarpaccie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.226 (page_0232) left col end-of-line: 'le scarpaccie'. Archaic double-i form; current 'scarpacce' is wrong."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0306",
+      "scan_reads": "pressocchè",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.227 (page_0233) left col: 'renderle pressocchè inservibili'. Page prints double-c 'pressocchè'."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0307",
+      "scan_reads": "tristamente",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.227 (page_0233) left col: 'balenarono allora tristamente'. Page prints 'tristamente' with 'a'."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0308",
+      "scan_reads": "compagni",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.227 (page_0233) right col: 'morte i compagni del Pianori'. Page prints 'compagni', not 'compari'."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0309",
+      "scan_reads": "piu'",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.227 (page_0233) right col end-of-line: 'non sentirono piu'' — printed as 'piu' with an apostrophe (no grave accent). Witness reading matches; current 'più' differs from the printed glyphs."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0310",
+      "scan_reads": "stantufo.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.227 (page_0233) right col: 'colpo di / stantufo. Cousin'. Word fully on next line, single f: 'stantufo.'"
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0311",
+      "scan_reads": "``vase''.",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "p.227 (page_0233) right col: 'impigliati in una ``vase''.' Word is 'vase' in period doubled-comma/apostrophe quotes. Published \"vase\". is the correct normalization; the suggestion '**vase''.' carries OCR asterisk garbage."
+    },
+    {
+      "chapter": "p2_ch26",
+      "id": "D0312",
+      "scan_reads": "compatriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.228 (page_0234) right col: 'al pugnale di un mio / compatriotta ed ai luridi crostacei'. Page prints archaic double-t 'compatriotta'."
+    },
+    {
+      "chapter": "p2_ch27",
+      "id": "D0313",
+      "scan_reads": "spalmatura",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p235 left col, bottom: 'i nostri calzoni / [m]algrado la spalmatura di fango che li [copriva]'. Prints spalmatura, not published 'spalatura'."
+    },
+    {
+      "chapter": "p2_ch27",
+      "id": "D0314",
+      "scan_reads": "cocodrillo.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p235 right col, bottom (below crease): 'le dure croste, con / [de]nti da cocodrillo.' Single-c spelling, matches suggestion; published 'coccodrillo.' is wrong."
+    },
+    {
+      "chapter": "p2_ch27",
+      "id": "D0315",
+      "scan_reads": "Inoltratici",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p236 left col: 'Inoltratici appena, ecco venire celeramente'. Prints Inoltratici (with i), not published 'Inoltrateci'."
+    },
+    {
+      "chapter": "p2_ch27",
+      "id": "D0316",
+      "scan_reads": "bragie?",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p236 right col: 'cascare cosi misera[mente] / dalla padella nelle bragie?' Prints bragie, not published 'brage'."
+    },
+    {
+      "chapter": "p2_ch27",
+      "id": "D0317",
+      "scan_reads": "bassette",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p237 left col: 'Il vecchio Go-/[verna]tore dalle lunghe bassette candide,'. Prints bassette (double s); a second occurrence (the lancia/vecchio) also prints 'bassette' on p236. Published 'basette' is wrong."
+    },
+    {
+      "chapter": "p2_ch27",
+      "id": "D0318",
+      "scan_reads": "magnetizzatore.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p238 left col: 'leggere come quelle di un magnetizzatore.' No leading s; published 'smagnetizzatore.' is wrong."
+    },
+    {
+      "chapter": "p2_ch27",
+      "id": "D0319",
+      "scan_reads": "ripercotendosi,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p238 left col: 'V'eran pur note che, ripercotendosi, nel pro-/[f]ondo'. No 'u' between c and o; prints ripercotendosi, not published 'ripercuotendosi'."
+    },
+    {
+      "chapter": "p2_ch27",
+      "id": "D0320",
+      "scan_reads": "ridivenni",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p239 right col, top line: 'io ridivenni improvvisamente fanciullo.' Prints ridivenni, not published 'ridiventi'."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "A1437",
+      "scan_reads": "circostanze,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.240: 'rato esame delle circostanze, ci indusse'. Clear 'o', published 'circastanze' is OCR error."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "A1439",
+      "scan_reads": "calata",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Bottom right col p.240: 'a ter[...] / calata e, per meglio deludere l'occhio'. Prints 'calata'; published 'ealata' is OCR garble. Same physical word as D0323."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "A1440",
+      "scan_reads": "pubblicato,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Bottom right col p.240: 'il dottore avreb[be] / pubblicato, sul suo giornale'. Published 'jtubblicato,' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "A1464",
+      "scan_reads": "astuto,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Top right col p.243: '[Ber]nard, uomo astuto, guardingo, duplice,'. Published 'pimto' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "A1568",
+      "scan_reads": "sgusciarmi",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Right col p.243: 'E riescì a sgusciarmi di sotto.' Page prints 'sgusciarmi' (matches copy3), not published 'sgnsciarmi' nor suggestion 'commosso'. The word 'commosso' does occur lower on the page in a different sentence ('Ne fui tanto commosso')."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0321",
+      "scan_reads": "Berbiche",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.240: 'Era anc[ora] / nel Berbiche un \"brick\" inglese'. Clearly 'Berbiche' with 'h'."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0322",
+      "scan_reads": "Randel,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.240: 'Romelly\", capitano Randel, che avreb[be]'. Initial 'R', published 'Kandel,' is OCR error."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0323",
+      "scan_reads": "calata",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Bottom right col p.240: 'chiuso nella mia camera, a ter[...] / calata e, per meglio deludere l'occhio'. Page prints 'calata', not published 'malato'. Same word as A1439."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0324",
+      "scan_reads": "alberature",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col p.241: 'ne scorgemmo trac[cie] / indubbie nelle alberature uscenti'. Ends '-ure', not published '-ura'."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0325",
+      "scan_reads": "forcato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.241: 'avevo rin- / forcato i calzoni dell'ergastolo'. Full word is 'rinforcato'; target tail prints 'forcato', not published 'ornato'."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0326",
+      "scan_reads": "patriotti,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Left col p.243 line wrap: '...tanti amici miei, tanti / otti, li aveva ormai, come voragine'. Tail clearly double-t 'otti' forming 'patriotti' (archaic), not published 'patrioti'."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0327",
+      "scan_reads": "riescì",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.243: 'E riescì a sgusciarmi di sotto.' Page prints 'riescì' (riesc- stem with grave accent). Substantively matches witness 'riesci' against the wrong published 'riuscì'; the verbatim print carries the accent (riescì)."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0328",
+      "scan_reads": "sgusciarmi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.243: 'E riescì a sgusciarmi di sotto.' Prints 'sgusciarmi', not published 'sguisciarmi'."
+    },
+    {
+      "chapter": "p2_ch28",
+      "id": "D0329",
+      "scan_reads": "riescivano",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Right col p.243: 'le mie dita non riescivano ad azzeccare / un occhiello.' Prints 'riescivano' (riesc- stem), not published 'riuscivano'."
+    },
+    {
+      "chapter": "p2_ch29",
+      "id": "A1582",
+      "scan_reads": "fron-",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 247 (printed 241), last line of left column: 'si mostrano e sordi e muti e ciechi di fron-' hyphenated at line break, joining to 'fronte'. The published word 'Torocfalda.' is a reconciliation garble placed at this slot; the page prints fron-(te). Suggestion 'fronte' is correct."
+    },
+    {
+      "chapter": "p2_ch29",
+      "id": "A1588",
+      "scan_reads": "“libera parola”, mentre",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "Empty context and ambiguous witnesses (copy1 '.', copy2 \"''il\", copy3 null). The only nearby '' marks are the closing quotes of “libera parola”, on page 247 left column, which are correctly present in the text. Could not confidently isolate the specific target slot for this candidate."
+    },
+    {
+      "chapter": "p2_ch29",
+      "id": "D0330",
+      "scan_reads": "capitaletto",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 245 (printed 239), bottom of left column: 'un capitaletto di mille e cento' — clearly printed with an 'a' (capit-a-letto), not 'capitoletto'. Suggestion is correct; published 'capitoletto' is wrong."
+    },
+    {
+      "chapter": "p2_ch29",
+      "id": "D0331",
+      "scan_reads": "",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "Context 'Corù. Da quest'ultima località, era riuscito ad evadere' belongs to the Le Roux paragraph (markdown line 3970). Its end ('Colpo di Stato come egli lo chiamava...ergastolo') is the first lines of page 246 right column, but the line containing 'era riuscito/riescito' is not present in the available scan columns of pages 245-247 (bridge text between page 246 left-col end 'vertenza piena-' and right-col start 'testimonio oculare' is missing from this scan). Could not read the printed form."
+    },
+    {
+      "chapter": "p2_ch29",
+      "id": "D0332",
+      "scan_reads": "patriotta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 246 (printed 240), right column: 'di un patriotta italiano, venne prestata' — printed with archaic double-t 'patriotta'. Suggestion is correct; published 'patriota' is the modern normalization."
+    },
+    {
+      "chapter": "p2_ch30",
+      "id": "A1594",
+      "scan_reads": "fece,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line: 'fece, per quanto mi riguarda' (p.243/scan 249, left col). Published 'lece,' is an OCR error for 'fece,'."
+    },
+    {
+      "chapter": "p2_ch30",
+      "id": "A1606",
+      "scan_reads": "sollecitavo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line: 'd'orgoglio, più non sollecitavo dai miei connazionali' (scan 249, left col). Published 'ijoUecìtavo' is OCR garble for 'sollecitavo'."
+    },
+    {
+      "chapter": "p2_ch30",
+      "id": "A1612",
+      "scan_reads": "aspetto.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line: 'rivelata dalla mia abitazione e dal mio aspetto. Valeva la pena di sacri-' (scan 249, left col). Published 'astpetto.' is OCR error for 'aspetto.'."
+    },
+    {
+      "chapter": "p2_ch30",
+      "id": "A1620",
+      "scan_reads": "rimando: “Il",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "Page prints 'Ed io di rimando: “Il bene esisteva in' (scan 251, left col). A colon IS printed after 'rimando'; the witness '“Il' captures the following opening-quote token. The published ':' token is present."
+    },
+    {
+      "chapter": "p2_ch30",
+      "id": "D0333",
+      "scan_reads": "d'innanzi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line: 'di curvare l'animo d'innanzi alla maestà di Apollo' (scan 250, right col). Page prints the apostrophe form 'd'innanzi'; published 'dinanzi' is wrong. Matches systematic flag."
+    },
+    {
+      "chapter": "p2_ch30",
+      "id": "D0334",
+      "scan_reads": "cupidigie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Line: 'una coalizione cattolica di superstizioni e di cupidigie che avrebbe presa la morale' (scan 251, left col). Page prints plural 'cupidigie'; published 'cupidigia' is wrong."
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1624",
+      "scan_reads": "quella",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "concluso quella pace di Villafranca"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1625",
+      "scan_reads": "quadrilatero",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "il quadrilatero e parte della stessa Lombardia"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1627",
+      "scan_reads": "maggiore",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "che, a maggiore insulto, non ebbe"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1630",
+      "scan_reads": "piega",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "alla piega presa dalle manovre di Napoleone; published 'piecra' and witness 'pie^a' both wrong, copy3 'piega' matches"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1631",
+      "scan_reads": "regno",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "un regno centrale retto da Plon-plon"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1632",
+      "scan_reads": "quest'ultimo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "persuadendo quest'ultimo dell'inutilita"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1635",
+      "scan_reads": "famiglia",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "col resto della famiglia italiana"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1642",
+      "scan_reads": "condizioni",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "se le condizioni generali d'Europa"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1646",
+      "scan_reads": "d'Italia,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "dettando alle genti d'Italia, come Legge suprema"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1647",
+      "scan_reads": "",
+      "verdict": "uncertain",
+      "confidence": "low",
+      "note": "no context; '15' does not appear in ch31 body text and is not a page footer (247-252); likely an unlocatable header/footer artifact"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1659",
+      "scan_reads": "sogno",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "la riputavano un sogno di menti esaltate"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1675",
+      "scan_reads": "rannodano",
+      "verdict": "published",
+      "confidence": "high",
+      "note": "rannodano le sparse fila; matches published 'rannodano', not witness 'impresa,'"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "A1695",
+      "scan_reads": "sanguinaria",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "sanguinaria nel petto patriottico degli inermi; published 'eanguinarla' and witness 'Siamo' both wrong; copy3 'sanguinarla' close but actual is 'sanguinaria'"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0335",
+      "scan_reads": "dalle",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "alla piega presa dalle manovre di Napoleone; scan prints 'dalle' not 'delle'"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0336",
+      "scan_reads": "contradditorie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "le voci piu contradditorie e persino quella; single t (contraddi-t-orie)"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0337",
+      "scan_reads": "rannodano",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "rannodano le sparse fila, distribuiscono armi; scan prints 'rannodano' not 'annodano'"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0338",
+      "scan_reads": "debellarvi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "invade le Marche par debellarvi i mercenari"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0339",
+      "scan_reads": "Napoleon",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "il consenso di Napoleon III, a cui mostrava; no final e"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0340",
+      "scan_reads": "aguato",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "di Messina, un aguato di ferro e di piombo; single g"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0341",
+      "scan_reads": "accordatosi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Ma quando, accordatosi con Garibaldi, il fiero barone"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0342",
+      "scan_reads": "patriotti.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "resto dei patriotti. Brescia; double t archaic form"
+    },
+    {
+      "chapter": "p2_ch31",
+      "id": "D0343",
+      "scan_reads": "patriotti,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "contro i patriotti, a favore dell'Austria; double t archaic form (also 'fucila i patriotti' same line group)"
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "A1705",
+      "scan_reads": "che",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Right column p.253: 'che si sacrificavano per sgombrare a'. Small stray ink mark precedes it; word is plainly 'che'. Neither 'tihe' nor '•dhe'."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "A1707",
+      "scan_reads": "umanesimo",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.256 left col: 'Gli atti del regale / umanesimo più che alla spettacolosità'. Prints 'umanesimo', matching suggestion."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "A1709",
+      "scan_reads": "'accresciuta",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.256 left col: 'rintuzzando, col-/'accresciuta potenza della Chiesa'. The fragment prints \"'accresciuta\"."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "A1730",
+      "scan_reads": "Rudio",
+      "verdict": "other",
+      "confidence": "high",
+      "note": "Footnote p.257: 'Il Conte di Rudio ha chiuso gli occhi prima che...'. Prints 'Rudio'; suggestion 'completare' is a witness misalignment, published 'Rndio' is OCR error."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0344",
+      "scan_reads": "ferravecchi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.254: 'La Monarchia gettando nei ferravecchi'. Prints 'ferravecchi', matching suggestion; current 'ferrivecchi' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0345",
+      "scan_reads": "patriotti",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.254 right col: 'ai patriotti che non si rassegnano a con-'. Archaic 'patriotti' as suggested; current 'patrioti' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0346",
+      "scan_reads": "riescirà",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.254 right col: 'non riescirà ad altro'. Archaic 'riescirà'; current 'riuscirà' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0347",
+      "scan_reads": "intesa",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.255 left col: 'si riversa / tanto più intesa sulla setta nefasta che,'. Prints 'intesa'; current 'intensa' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0348",
+      "scan_reads": "disdegnandole,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.255 right col: 'sorpassa, quas/disdegnandole, le rivendicazioni interme-'. Prints 'disdegnandole,'; current 'disegnandole,' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0349",
+      "scan_reads": "trsformazione.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.256 left col: 'una / arziale trsformazione. Gli atti del regale'. 1913 print typo 'trsformazione.' (missing a); matches suggestion, current normalized 'trasformazione.'."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0350",
+      "scan_reads": "riescirete",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.256 right col: 'È in tal modo che riescirete a / dominarlo.'. Archaic 'riescirete'; current 'riuscirete' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0351",
+      "scan_reads": "traccie",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.257 left col: 'Nella politica estera le traccie del-'. Archaic 'traccie'; current 'tracce' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0352",
+      "scan_reads": "sonnecchiato.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.257 left col: 'malgrado la fa-/erata alleanza, non ha sonnecchiato.'. Prints 'sonnecchiato.'; current 'sonnecchiare.' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0353",
+      "scan_reads": "affondarle.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.257 left col: 'in / carne anela affondarle. Urge l'ope-'. Prints 'affondarle.'; current 'affondare.' wrong."
+    },
+    {
+      "chapter": "p2_ch32",
+      "id": "D0354",
+      "scan_reads": "l'ontosa",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "p.257 footnote: 'Trattato di pace che rammenta l'ontosa \"cessione\" della Venezia!'. Prints \"l'ontosa\"; current \"l'onosa\" wrong."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "A1732",
+      "scan_reads": "regia",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 264 right col: 'sulla regia nave.' Published 'roaria' is OCR garble; scan prints 'regia'."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "A1748",
+      "scan_reads": "si",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 267 left col: 'sedette alla scrivania e si / [ac]cinse a vergar lettere'. The word ('si') is split from 'accinse' across the line break. Published 'ajc' is garble."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "A1753",
+      "scan_reads": "avrebbe",
+      "verdict": "suggestion",
+      "confidence": "low",
+      "note": "No context supplied and the conditional recurs many times in pages 264-268; could not pinpoint the exact line. 'avreibbe' is not valid Italian (copy1 garble); copy2 reads 'avrebbe', the only possible printed form. Published output already reads 'avrebbe' everywhere."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "A1760",
+      "scan_reads": "qualche",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 268 left col: 'il pensiero umano non si cristal-[lizza] in qualche formula ed in pochi vo-[lumi]'. Published 'qualclie' is OCR garble."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "A1761",
+      "scan_reads": "Il",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 268 left col: 'Il Maestro si alzò e mi venne incontro'. Published 'dorto,' is garble; scan clearly prints 'Il' at the left margin."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "D0355",
+      "scan_reads": "d'innanzi.",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 264 right col: 'Tuttavia all'ora indicata gli com-[parvi] d'innanzi. Aveva al fianco un tal[e]'. Archaic 'd'innanzi' with apostrophe printed; current 'dinanzi.' is wrong."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "D0356",
+      "scan_reads": "vistomi",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 264 right col: 'vistomi entrare, gli sussurrò poche'. Scan prints 'vistomi', not 'vistosi'."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "D0357",
+      "scan_reads": "cose !''",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 266 left col: 'nelle cose !\"' — the closing mark is two raised single quotes (''), not a curly double quote. Matches suggestion cose!''. Note a space precedes the '!' in print."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "D0358",
+      "scan_reads": "seriamento",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 266 right col, first line: 'tendo seriamento mano, in casa prop[ria]'. Scan clearly prints final -o ('seriamento'), not 'seriamente'."
+    },
+    {
+      "chapter": "p2_ch33",
+      "id": "D0359",
+      "scan_reads": "abberrazione,",
+      "verdict": "suggestion",
+      "confidence": "high",
+      "note": "Page 267 bottom right: 'per una singolare abberrazio-[ne], consacrò'. Scan prints double-b 'abberrazione' (period-variant spelling), not 'aberrazione'."
+    }
+  ],
+  "totals": {
+    "total": 496,
+    "published": 27,
+    "suggestion": 423,
+    "other": 35,
+    "uncertain": 11
+  }
+}
