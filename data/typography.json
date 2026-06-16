@@ -179,5 +179,13 @@
       "en_anchor": "the PEOPLE; even as",
       "note": "p1 ch2, p.20: 'il POPOLO'/'the PEOPLE' set in full capitals for emphasis (full-height caps, not small-caps)."
     }
+  ],
+  "p1_capitolo_sesto": [
+    {
+      "style": "bold",
+      "it": "capitale",
+      "en": "capital",
+      "note": "p1 ch6, p.36: 'capitale' bold in the quoted line \"Italia una, Roma capitale d'Italia!\" (the line-wrapped \"d'Italia\" stays roman). Re-added after the first pass dropped the over-wide 'capitale d'' fragment."
+    }
   ]
 }
