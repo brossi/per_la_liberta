@@ -47,3 +47,6 @@ docs/assets/dropcaps/
 
 # Divergence-audit candidate manifests (regenerable via audit_divergences.py)
 state/audit/
+
+# Comprehension-review collection (intention-review stage 1; raw model reads + ledger)
+state/comprehension/
