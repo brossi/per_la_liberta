@@ -1511,7 +1511,7 @@ Lo spilungone, un sergente, si dileguò per l'uscio di fronte, preceduto dalla C
 
 Quando ricomparve a capo de' suoi, il sergente si asciugava, col rovescio della mano, i baffi a punta... si era industriato di rendere meno tediosa la sua perquisizione spillando da qualche botte. Ma evidentemente il vino non aveva fatto generoso il suo cuore. Afferrò una sedia e piantatela presso il prigioniero, vi si pose risolutamente a cavalcioni.
 
-Incominciò a parlare con una calma ipocrita e così sottovoce che, or sì or no, mi giungevano le parole. Udii a intervalli, in un italiano infarcito di dialetto veneto ed incrostato di sali croati, queste frasi anche troppo significative: "Non ci siamo arrampicati sin qui pel gusto di lasciarci infinocchiare. — Il sorcio c'è e Sua Maestà l'Imperatore e Re... — el garon o un falò de la tua casa e di to straèsi. — La segreta, el baston sul... I ferri corti e la forca!"
+Incominciò a parlare con una calma ipocrita e così sottovoce che, or sì or no, mi giungevano le parole. Udii a intervalli, in un italiano infarcito di dialetto veneto ed incrostato di sali croati, queste frasi anche troppo significative: "Non ci siamo arrampicati sin qui pel gusto di lasciarci infinocchiare. — Il sorcio c'è e Sua Maestà l'Imperatore e Re... — el paron o un falò de la tua casa e di to strassi. — La segreta, el baston sul... I ferri corti e la forca!"
 
 Dopo quest'ultima frase, appoggiò il pugno allo schienale della sedia, il mento nella fossetta del pugno e stette in attesa. Domenico non mosse palpebra.
 

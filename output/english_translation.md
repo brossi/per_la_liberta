@@ -1572,7 +1572,7 @@ The lanky man, a sergeant, disappeared through the opposite door, preceded by Ca
 
 When the sergeant reappeared at the head of his men, he was wiping his pointed mustaches with the back of his hand... he had taken the trouble to make his search less tedious by drawing from some cask. But evidently the wine had not made his heart generous. He seized a chair, planted it near the prisoner, and straddled it resolutely.
 
-He began to speak with a hypocritical calm and so quietly that only here and there his words reached me. I heard at intervals, in an Italian larded with Venetian dialect and encrusted with Croatian saltiness, these phrases all too full of meaning: "We haven't scrambled all the way up here for the pleasure of being made fools of. — The mouse is here and His Majesty the Emperor and King... — *el garon o un falò de la tua casa e di to straèsi* [the gallows or a bonfire of your house and your rags]. — The dungeon, the rod on... Short irons and the gallows!"
+He began to speak with a hypocritical calm and so quietly that only here and there his words reached me. I heard at intervals, in an Italian larded with Venetian dialect and encrusted with Croatian saltiness, these phrases all too full of meaning: "We haven't scrambled all the way up here for the pleasure of being made fools of. — The mouse is here and His Majesty the Emperor and King... — *el paron o un falò de la tua casa e di to strassi* [the master or a bonfire of your house and your rags]. — The dungeon, the rod on... Short irons and the gallows!"
 
 After this last phrase, he rested his fist on the chair-back, his chin in the hollow of his fist, and waited. Domenico did not move an eyelid.
 

@@ -15307,6 +15307,12 @@
       "replace": "arta, una quinta rimbombarono nel vano, e finalmente dalle sconnessure del vecchio",
       "reason": "llm_correction",
       "source": "llm"
+    },
+    {
+      "find": "el garon o un falò de la tua casa e di to straèsi",
+      "replace": "el paron o un falò de la tua casa e di to strassi",
+      "reason": "ocr_cleanup_error: scan + copy3 read 'el paron ... strassi'; cleanup LLM mutated to 'garon ... straèsi'",
+      "source": "manual"
     }
   ],
   "p1_ch20": [
@@ -36002,6 +36008,12 @@
       "find": "Plon-plon",
       "replace": "Plon-plon",
       "reason": "accepted"
+    },
+    {
+      "find": "considerato dal Garibaldi come fine, ma preconizzato",
+      "replace": "considerato dal Garibaldi come il \"Dux\" preconizzato",
+      "reason": "ocr_reconcile_error: witnesses + scan read 'come il \"Dux\"'; reconciliation produced 'come fine, ma'",
+      "source": "manual"
     }
   ],
   "p2_ch32": [
