@@ -4107,7 +4107,7 @@ L'impresa stessa diede maggior campo alle varie tendenze di delinearsi. Napoleon
 
 La grandezza della Psiche repubblicana sfolgora tanto maggiormente da questi confronti. Il ripetere giovi: L'entità monarchica non si getta mai nella mischia senz'aver l'occhio al proprio interesse e subordina l'unità d'Italia a privilegi che proclama e vuole intangibili; l'entità repubblicana, scritta a caratteri di sangue la propria epopea, sacrifica spontaneamente, sull'altare della Patria, e sé stessa e i sereni convincimenti.
 
-Vero statista, Vittorio Emanuele II veniva allora considerato dal Garibaldi come fine, ma preconizzato dal Dante, come il Principe ammaestrato dalla mente poderosa del Machiavelli. Giuseppe Mazzini, più parco nel giudizio, si accontentava di ritenerlo migliore dei suoi Ministri.
+Vero statista, Vittorio Emanuele II veniva allora considerato dal Garibaldi come il "Dux" preconizzato dal Dante, come il Principe ammaestrato dalla mente poderosa del Machiavelli. Giuseppe Mazzini, più parco nel giudizio, si accontentava di ritenerlo migliore dei suoi Ministri.
 
 Fulminei succedettero i giorni del disinganno. Cavour, sopraffatto da improbe fatiche, soggiacque innanzi tempo al fato comune. In Inghilterra fu pianto sinceramente; benché, a scuotere la popolarità, già fosse trapelato qualcosa di quei patti segreti, molto invisi al liberalismo inglese che, poi nella malaugurata "Convenzione di Settembre" inducevano il primo Re d'Italia alla rinuncia di Roma ed alla difesa, contro gli stessi Italiani, del massimo tra i nemici del nostro Paese. Il partito d'azione sperava invece che, colla scomparsa del Cavour, gli fosse dato di sottrarre il Re alla nefasta influenza di Napoleone.
 

@@ -293,13 +293,24 @@ def _theme_js() -> list[str]:
 
 def _para_to_html(text: str) -> str:
     """Convert a paragraph to HTML: markdown italics plus the typography sentinels
-    (bold, small caps, verse) injected by typography.apply_typography."""
+    injected by typography.apply_typography.
+
+    Markdown ``*...*`` is the translation layer's own emphasis (foreign words,
+    editorial italics) and becomes ``<em class="translator">`` so it stays
+    distinguishable from scan-restored 1913 italics (``⟦i⟧`` -> plain ``<em>``)
+    for the print/InDesign workflow. The remaining sentinels carry the restored
+    1913 styling from data/typography.json.
+    """
     text = _escape_html(text)
-    # Convert *italic* to <em>
-    text = re.sub(r"\*(.+?)\*", r"<em>\1</em>", text)
-    # Convert typography sentinels (⟦b⟧/⟦sc⟧/⟦verse⟧) from the typography sidecar
+    # Translation-layer italics (the *only* markdown asterisks in the body text).
+    text = re.sub(r"\*(.+?)\*", r'<em class="translator">\1</em>', text)
+    # Restored 1913 typography sentinels.
+    text = re.sub(r"⟦i⟧(.+?)⟦/i⟧", r"<em>\1</em>", text)
     text = re.sub(r"⟦b⟧(.+?)⟦/b⟧", r"<strong>\1</strong>", text)
+    text = re.sub(r"⟦caps⟧(.+?)⟦/caps⟧", r'<span class="caps">\1</span>', text)
     text = re.sub(r"⟦sc⟧(.+?)⟦/sc⟧", r'<span class="sc">\1</span>', text)
+    text = re.sub(r"⟦verseI⟧(.+?)⟦/verseI⟧", r'<span class="verse verse-italic">\1</span>', text)
+    text = re.sub(r"⟦verseB⟧(.+?)⟦/verseB⟧", r'<span class="verse verse-bold">\1</span>', text)
     text = re.sub(r"⟦verse⟧(.+?)⟦/verse⟧", r'<span class="verse">\1</span>', text)
     return text
 

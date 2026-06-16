@@ -484,15 +484,26 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
   letter-spacing: 0.03em;
 }
 
-/* Set-off display line (e.g. the Dante quotation in the Preface). Rendered as a
-   centered italic block via an inline span so it doesn't alter paragraph
-   numbering, which provenance/revision matching relies on. */
+/* Set-off display line (e.g. a quoted verse). A centered block via an inline
+   span so it doesn't alter paragraph numbering, which provenance/revision
+   matching relies on. The block itself is neutral roman: the 1913 printer set
+   verse variously italic, plain, or bold, so the line's actual slant/weight is
+   carried by the modifier below (scan-verified, Italian side). */
 .verse {
   display: block;
   text-align: center;
   text-indent: 0;
-  font-style: italic;
   margin: 0.7em 0;
+}
+.verse-italic { font-style: italic; }
+.verse-bold { font-weight: 700; }
+
+/* Full-capitals emphasis the 1913 printer used on otherwise ordinary words
+   (e.g. "Sì"/"No" set as SI/NO). The source text keeps its normal case; the
+   transform restores the printed all-caps appearance and tags it semantically. */
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 /* Bold concept-emphasis from the 1913 printing (e.g. Mazzini's "Popolo").
@@ -500,6 +511,13 @@ body:not(.no-marginalia):not(.lang-it-only) .spread {
    than synthetic bolding. */
 strong {
   font-weight: 700;
+}
+
+/* Translation-layer italics (foreign words, the translator's editorial
+   emphasis) — visually identical to restored 1913 italics on the web, but
+   class-tagged so the InDesign/print workflow can treat them case-by-case. */
+em.translator {
+  font-style: italic;
 }
 
 /* === Colophon === */

@@ -45,13 +45,21 @@ id to address by position):
 
 ``style`` is one of:
 
-- ``italic``     — inline emphasis -> markdown ``*...*`` -> ``<em>``
+- ``italic``     — inline emphasis -> ``<em>`` (scan-restored; kept distinct from
+                   the translator's markdown ``*...*``, which become ``<em
+                   class="translator">``)
 - ``bold``       — inline heavy emphasis (the 1913 printer's bold concept-words,
                    e.g. Mazzini's "Popolo") -> ``<strong>``
 - ``small-caps`` — inline small capitals -> ``<span class="sc">``
-- ``verse``      — set-off display line (e.g. a quoted verse), rendered as a
-                   centered italic block; include surrounding quotation marks in
-                   the fragment so they sit on the display line, not orphaned.
+- ``all-caps``   — full capitals the 1913 printer used for emphasis on otherwise
+                   ordinary words (e.g. "Sì"/"No" set as SI/NO) -> ``<span
+                   class="caps">`` (CSS uppercases, so the source text keeps its
+                   ordinary case)
+- ``verse``      — set-off display line (e.g. a quoted verse), a centered block;
+                   include surrounding quotation marks in the fragment so they sit
+                   on the display line. The block is neutral roman; an optional
+                   ``emphasis`` (``italic`` | ``bold`` | ``none``) carries the
+                   line's actual 1913 slant/weight on the Italian side.
 
 ``note`` is editorial provenance and is ignored at runtime.
 
@@ -71,6 +79,11 @@ from pathlib import Path
 SC_OPEN, SC_CLOSE = "⟦sc⟧", "⟦/sc⟧"
 VERSE_OPEN, VERSE_CLOSE = "⟦verse⟧", "⟦/verse⟧"
 B_OPEN, B_CLOSE = "⟦b⟧", "⟦/b⟧"
+I_OPEN, I_CLOSE = "⟦i⟧", "⟦/i⟧"          # scan-restored 1913 italic (distinct from translator italics)
+CAPS_OPEN, CAPS_CLOSE = "⟦caps⟧", "⟦/caps⟧"
+# Verse carries the 1913 line's own weight/slant; the neutral form is roman.
+VERSE_I_OPEN, VERSE_I_CLOSE = "⟦verseI⟧", "⟦/verseI⟧"  # set-off line, italic
+VERSE_B_OPEN, VERSE_B_CLOSE = "⟦verseB⟧", "⟦/verseB⟧"  # set-off line, bold
 
 
 def load_typography(data_dir: Path) -> dict[str, list[dict]]:
@@ -81,15 +94,28 @@ def load_typography(data_dir: Path) -> dict[str, list[dict]]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _wrap(frag: str, style: str) -> str | None:
-    """Return ``frag`` wrapped in the marker for ``style``, or ``None`` if unknown."""
+def _wrap(frag: str, style: str, emphasis: str = "none", lang: str = "it") -> str | None:
+    """Return ``frag`` wrapped in the marker for ``style``, or ``None`` if unknown.
+
+    ``emphasis`` (verse only) reproduces the 1913 line's actual weight/slant —
+    the printer set verse variously italic-roman, plain-roman, or bold-roman, so
+    the block is neutral and the slant/weight is carried per entry. It is applied
+    to the Italian original (``lang == "it"``) only; the English is the
+    translator's setting, whose own markdown italics survive on their own.
+    """
     if style == "italic":
-        return f"*{frag}*"
+        return f"{I_OPEN}{frag}{I_CLOSE}"
     if style == "bold":
         return f"{B_OPEN}{frag}{B_CLOSE}"
     if style in ("small-caps", "sc"):
         return f"{SC_OPEN}{frag}{SC_CLOSE}"
+    if style in ("all-caps", "caps"):
+        return f"{CAPS_OPEN}{frag}{CAPS_CLOSE}"
     if style == "verse":
+        if lang == "it" and emphasis == "italic":
+            return f"{VERSE_I_OPEN}{frag}{VERSE_I_CLOSE}"
+        if lang == "it" and emphasis == "bold":
+            return f"{VERSE_B_OPEN}{frag}{VERSE_B_CLOSE}"
         return f"{VERSE_OPEN}{frag}{VERSE_CLOSE}"
     return None
 
@@ -145,7 +171,7 @@ def apply_typography(
         if not frag:
             continue
         style = entry.get("style", "italic")
-        repl = _wrap(frag, style)
+        repl = _wrap(frag, style, entry.get("emphasis", "none"), lang)
         if repl is None:
             continue
         anchor = entry.get(f"{lang}_anchor") or ""

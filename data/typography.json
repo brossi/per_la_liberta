@@ -4,7 +4,8 @@
       "style": "verse",
       "it": "\"Giudica e manda secondo che avvinghia\"",
       "en": "“Judges and consigns according to how he coils”",
-      "note": "Prefazione, p.7: centered, italic display line (Dante quotation), set off on its own line with surrounding quotation marks; native-resolution crop shows clearly slanted letterforms."
+      "note": "Prefazione, p.7: centered, italic display line (Dante quotation), set off on its own line with surrounding quotation marks; native-resolution crop shows clearly slanted letterforms.",
+      "emphasis": "italic"
     },
     {
       "style": "small-caps",
@@ -38,7 +39,8 @@
       "style": "verse",
       "it": "\"Parva favilla gran fiamma seconda\"",
       "en": "'Parva favilla gran fiamma seconda.'",
-      "note": "Dante quotation set off as an indented, bold display line on p.77, right column (lone line with whitespace, heavier strokes than surrounding paragraph text). Categorized as verse for the set-off centered display rendering; EN carries it as an italicized inline quotation."
+      "note": "Dante quotation set off as an indented, bold display line on p.77, right column (lone line with whitespace, heavier strokes than surrounding paragraph text). Categorized as verse for the set-off centered display rendering; EN carries it as an italicized inline quotation.",
+      "emphasis": "bold"
     }
   ],
   "p1_capitolo_decimo_settimo": [
@@ -46,25 +48,29 @@
       "style": "verse",
       "it": "\"Mazzini è in sul loco ove si trema",
       "en": "*\"Mazzini is in the place where men tremble*",
-      "note": "Dante/dall'Ungaro verse quotation, p.85 right column, four-line centered set-off stanza in quotation marks; line 1"
+      "note": "Dante/dall'Ungaro verse quotation, p.85 right column, four-line centered set-off stanza in quotation marks; line 1",
+      "emphasis": "bold"
     },
     {
       "style": "verse",
       "it": "\"Che giunga a' traditor l'ora suprema;",
       "en": "*That the hour supreme may reach the traitor's ear;*",
-      "note": "verse stanza p.85 centered set-off line 2"
+      "note": "verse stanza p.85 centered set-off line 2",
+      "emphasis": "bold"
     },
     {
       "style": "verse",
       "it": "\"Mazzini è in ogni loco ove si opera",
       "en": "*Mazzini is in every place where men labor*",
-      "note": "verse stanza p.85 centered set-off line 3"
+      "note": "verse stanza p.85 centered set-off line 3",
+      "emphasis": "bold"
     },
     {
       "style": "verse",
       "it": "\"Versar il sangue per l'Italia intera!\"",
       "en": "*To shed their blood for Italy entire!\"*",
-      "note": "verse stanza p.85 centered set-off line 4"
+      "note": "verse stanza p.85 centered set-off line 4",
+      "emphasis": "bold"
     }
   ],
   "p1_capitolo_ventesimoterzo": [
@@ -79,6 +85,18 @@
       "it": "Francesco Giuseppe",
       "en": "Francesco Giuseppe",
       "note": "p.119, footnote (1), second line: 'Francesco Giuseppe si recò a Venezia' — name set in bold, clearly heavier than the surrounding footnote roman."
+    },
+    {
+      "style": "all-caps",
+      "it": "Sì",
+      "it_anchor": "otto milioni di Sì...",
+      "note": "p1 ch23, p.114: 'Sì' set as full-caps SI in the plebiscite tally."
+    },
+    {
+      "style": "all-caps",
+      "it": "No",
+      "it_anchor": "duecentocinquantatremila No.",
+      "note": "p1 ch23, p.114: 'No' set as full-caps NO in the plebiscite tally."
     }
   ],
   "p2_capitolo_terzo": [
@@ -96,7 +114,8 @@
       "style": "verse",
       "it": "\"Sotto l'usbergo del sentirsi puro\"",
       "en": "\"Under the hauberk of feeling himself pure,\"",
-      "note": "Crespi p.150 (scan page 150), right column: Dante quotation (Inferno XXVIII) set on its own centered line, offset from the surrounding prose. Set in roman type (not slanted) but typographically set off as a display verse line. Quotation marks included per convention."
+      "note": "Crespi p.150 (scan page 150), right column: Dante quotation (Inferno XXVIII) set on its own centered line, offset from the surrounding prose. Set in roman type (not slanted) but typographically set off as a display verse line. Quotation marks included per convention.",
+      "emphasis": "none"
     }
   ],
   "p2_capitolo_dodicesimo": [
@@ -149,6 +168,16 @@
       "style": "bold",
       "it": "precipitò tra le braccia priva di sensi",
       "note": "Crespi, folio 238 (page_0244.png), right column. Full line set in visibly heavier strokes than the surrounding roman text: 'precipitò tra le braccia priva di sensi.' The preceding 'Mi' (end of prior line) is roman; the bold span begins at 'precipitò' and runs through 'sensi'. Verified on a native-resolution crop. English carries no corresponding bold (the translation 'She fell senseless into my arms.' is plain roman), so en is left empty."
+    }
+  ],
+  "p1_capitolo_secondo": [
+    {
+      "style": "all-caps",
+      "it": "POPOLO",
+      "en": "PEOPLE",
+      "it_anchor": "il POPOLO; così come",
+      "en_anchor": "the PEOPLE; even as",
+      "note": "p1 ch2, p.20: 'il POPOLO'/'the PEOPLE' set in full capitals for emphasis (full-height caps, not small-caps)."
     }
   ]
 }
