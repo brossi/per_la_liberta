@@ -7,6 +7,10 @@ requires-python = ">=3.13"
 dependencies = [
     "anthropic>=0.86.0",
     "google-genai>=1.69.0",
+    # spaCy Italian model (cleanup NER protection + validate word-quality). Not on
+    # PyPI, so pinned by its release wheel URL — declared here so `uv sync` locks it
+    # instead of pruning the manually-downloaded copy (it has no other home in uv.lock).
+    "it-core-news-lg @ https://github.com/explosion/spacy-models/releases/download/it_core_news_lg-3.8.0/it_core_news_lg-3.8.0-py3-none-any.whl",
     "markdown-it-py>=4.0.0",
     "pillow>=12.1.1",
     "pymupdf>=1.27.2.2",
