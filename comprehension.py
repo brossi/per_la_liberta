@@ -347,12 +347,15 @@ def _overlap(a: str, b: str) -> bool:
     return len(wa & wb) / max(1, min(len(wa), len(wb))) >= 0.6
 
 
-def cluster_and_score(flags: list[dict], samples_run: int) -> list[dict]:
+def cluster_and_score(flags: list[dict], samples_per_model: int) -> list[dict]:
     """Cluster a passage's flags across the panel and assign a suspicion score.
 
-    Breadth (distinct architectures agreeing) dominates; singletons survive at a
-    lower rank, never dropped. The component fields are emitted alongside the
-    score so the weights can be retuned from the collected data.
+    Severity-led: breadth (distinct architectures agreeing) is the largest single
+    lever, but a high-vs-low severity gap can overcome one missing architecture,
+    so a passage two architectures both rate a high-severity comprehension failure
+    outranks a passage three architectures merely find low-severity awkward.
+    Singletons survive at a lower rank, never dropped. The component fields are
+    emitted alongside the score so the weights can be retuned from the data.
     """
     clusters: list[list[dict]] = []
     for f in flags:
@@ -366,12 +369,14 @@ def cluster_and_score(flags: list[dict], samples_run: int) -> list[dict]:
     for cl in clusters:
         models = {g["_model"] for g in cl}
         breadth = len(models)
-        # Strongest intra-model agreement: best (hits / samples) over the panel.
+        # Strongest intra-model agreement: how many of a single model's samples
+        # repeated the flag, as a fraction of that model's sample budget (capped
+        # at 1.0 — a model can emit several flags into one anchor cluster).
         per_model = {m: sum(1 for g in cl if g["_model"] == m) for m in models}
-        consistency = max(per_model.values()) / max(1, samples_run)
+        consistency = min(1.0, max(per_model.values()) / max(1, samples_per_model))
         sev = max(SEV_RANK[g["severity"]] for g in cl)
         conf = sum(CONF_RANK[g["confidence"]] for g in cl) / len(cl)
-        score = round(10 * breadth + 4 * consistency + 3 * sev + 1 * conf, 2)
+        score = round(8 * breadth + 2 * consistency + 6 * sev + 1 * conf, 2)
         rep = max(cl, key=lambda g: SEV_RANK[g["severity"]])
         scored.append({
             "score": score, "breadth": breadth,
@@ -425,7 +430,6 @@ def run(units: list[dict], samples: int, resume: bool = True, workers: int = WOR
         for r in reads:
             health["needs_rerun" if r["status"] == "needs_rerun" else "ok"] += 1
         ok_reads = [r for r in reads if r["status"] == "ok"]
-        samples_run = max(1, len(ok_reads))
         flags = []
         for r in ok_reads:
             for f in r["flags"]:
@@ -433,7 +437,7 @@ def run(units: list[dict], samples: int, resume: bool = True, workers: int = WOR
         if not flags:
             health["none"] += 1
             continue
-        clusters = cluster_and_score(flags, samples_run)
+        clusters = cluster_and_score(flags, samples)
         u = slot["unit"]
         for c in clusters:
             row = {"chapter": chapter, "idx": idx, "title": u["title"], **c}
@@ -462,7 +466,7 @@ def run(units: list[dict], samples: int, resume: bool = True, workers: int = WOR
 def write_ledger(rows: list[dict]) -> None:
     """Human-readable ranked suspicion ledger — the triage queue you read."""
     lines = [f"# Comprehension suspicion ledger — {len(rows)} clusters, ranked",
-             "# score = 10*breadth + 4*consistency + 3*severity + 1*confidence",
+             "# score = 8*breadth + 2*consistency + 6*severity + 1*confidence",
              ""]
     for r in rows:
         lines.append("=" * 78)
