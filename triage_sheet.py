@@ -25,6 +25,7 @@ import html
 import json
 import os
 
+import mt
 from align import italian_window
 from comprehension import OUT_DIR, build_units, resolve_anchor
 
@@ -65,6 +66,7 @@ def scope(clusters: list[dict], args) -> list[dict]:
 def build(rows: list[dict]) -> list[dict]:
     """Join each cluster to its review window and shape it for the page."""
     units = {(u["chapter"], u["idx"]): u for u in build_units()}
+    mt_cache = mt.load_cache()
     out = []
     for rank, c in enumerate(rows, 1):
         u = units.get((c["chapter"], c["idx"]), {})
@@ -81,6 +83,7 @@ def build(rows: list[dict]) -> list[dict]:
             "prev": u.get("prev") or "", "target_html": highlight(target, c["anchor"]),
             "next": u.get("next") or "", "rationales": rats,
             "italian": italian_window(c["chapter"], c["idx"]),
+            "mt": mt.cached((italian_window(c["chapter"], c["idx"], radius=0) or {}).get("text", ""), mt_cache),
         })
     return out
 
@@ -124,6 +127,9 @@ details.rats>summary,details.src>summary{cursor:pointer;font-size:.8rem;color:va
 .src .it{font-style:italic;background:#f4f6f4;border-left:3px solid #b9c7b3;
  padding:.35rem .6rem;border-radius:0 4px 4px 0;margin:.4rem 0;white-space:pre-wrap}
 .src .smeta{font-size:.72rem;color:var(--mut)}
+.mt{background:#f3f5f8;border-left:3px solid #9bb0c7;padding:.35rem .6rem;
+ border-radius:0 4px 4px 0;margin:.5rem 0 0;font-size:.92rem}
+.mt b{font-variant:small-caps;color:var(--mut);font-weight:600;font-size:.85em}
 .rat{font-size:.85rem;margin:.4rem 0;padding-left:.6rem;border-left:2px solid var(--line)}
 .rat b{font-variant:small-caps;color:var(--mut);font-weight:600}
 .verdict{display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0 0;align-items:center}
@@ -202,6 +208,7 @@ function card(d){
   ${d.italian?`<details class="src"><summary>Italian source ${d.italian.conf>0?'· conf '+d.italian.conf:'· positional'}${d.italian.drift?' · drift '+(d.italian.drift>0?'+':'')+d.italian.drift:''}</summary>
    <p class="it">${esc(d.italian.text)}</p>
    <p class="smeta">±1-paragraph window; aligned to Italian ¶${d.italian.it_idx}. Confirm before relying on it.</p></details>`:''}
+  ${d.mt?`<p class="mt"><b>neutral MT (DeepL)</b> — ${esc(d.mt)}</p>`:''}
   <details class="rats"><summary>${d.rationales.length} model reads</summary>${rats}</details>
   <div class="verdict">${verds}</div>
   <textarea class="note" placeholder="note (optional)…">${esc(v.note||"")}</textarea>
