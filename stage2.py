@@ -23,6 +23,7 @@ import argparse
 import json
 import os
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from dotenv import load_dotenv
 
@@ -31,6 +32,7 @@ from comprehension import OUT_DIR, build_units
 import mt
 
 PROPOSALS = os.path.join(OUT_DIR, "proposals.jsonl")
+WORKERS = 12  # each item is 2 serial calls (opus + gpt); well under Tier-4 limits
 
 PROPOSER_SYSTEM = """You are the editor of an English literary translation of a 1913 Italian memoir (Cesare Crespi on Carlo di Rudio and the Orsini conspiracy). A comprehension reviewer has flagged a passage of OUR English translation as hard to understand. You now have the Italian source. Decide what to do and, if a fix is warranted, draft it.
 
@@ -163,12 +165,28 @@ def propose_one(c: dict, unit: dict) -> dict:
             "score": c["score"], "proposal": prop, "check": chk}
 
 
+def safe_propose(c: dict, unit: dict) -> dict:
+    """propose_one with one retry; on persistent failure return an `error` record
+    so a single transient API fault never sinks the whole run."""
+    for attempt in range(2):
+        try:
+            return propose_one(c, unit)
+        except Exception as e:
+            if attempt:
+                return {"chapter": c["chapter"], "idx": c["idx"], "anchor": c["anchor"],
+                        "category": c["category"], "severity": c["severity"],
+                        "breadth": c["breadth"], "score": c["score"],
+                        "proposal": {"verdict": "error", "rationale": str(e)[:200]},
+                        "check": {"fix_needed": "error"}}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description="Stage 2 proposal engine (proposes, never applies)")
     ap.add_argument("--anchors", default="", help="comma-separated anchor substrings (pilot mode)")
     ap.add_argument("--breadth", type=int, default=3)
     ap.add_argument("--severity", choices=["high", "medium", "low"], default=None)
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--workers", type=int, default=WORKERS)
     args = ap.parse_args()
     load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
@@ -184,26 +202,31 @@ def main() -> None:
         rows = rows[: args.limit]
 
     units = {(u["chapter"], u["idx"]): u for u in build_units()}
-    results = []
-    for i, c in enumerate(rows, 1):
-        u = units.get((c["chapter"], c["idx"]), {})
-        res = propose_one(c, u)
-        results.append(res)
-        p, ck = res["proposal"], res["check"]
-        grade = ck.get("fix_needed", "?")
-        tag = {"none": "✓ ready", "minor": "› quick-edit", "major": "⚠ needs-you"}.get(grade, f"? {grade}")
-        print(f"[{i}/{len(rows)}] {c['chapter']} ¶{c['idx']} — {p.get('verdict','?')}/{p.get('confidence','?')}  [{tag}]")
-        print(f"    flag : «{c['anchor']}»")
-        print(f"    draft: {p.get('draft','—')}")
-        print(f"    check: faithful={ck.get('faithful','?')} agree={ck.get('verdict_agree','?')} fix={grade} — {ck.get('note','')[:150]}")
-        print()
+    results = [None] * len(rows)
+    tags = {"none": "✓ ready", "minor": "› quick-edit", "major": "⚠ needs-you", "error": "✗ error"}
+    done = 0
+    with ThreadPoolExecutor(max_workers=args.workers) as ex:
+        futs = {ex.submit(safe_propose, c, units.get((c["chapter"], c["idx"]), {})): i
+                for i, c in enumerate(rows)}
+        for fut in as_completed(futs):
+            i = futs[fut]
+            results[i] = res = fut.result()
+            done += 1
+            c, p, ck = rows[i], res["proposal"], res["check"]
+            grade = ck.get("fix_needed", "?")
+            tag = tags.get(grade, f"? {grade}")
+            print(f"[{done}/{len(rows)}] {c['chapter']} ¶{c['idx']} — {p.get('verdict','?')}/{p.get('confidence','?')}  [{tag}]")
+            print(f"    flag : «{c['anchor']}»")
+            print(f"    draft: {p.get('draft','—')}")
+            print(f"    check: faithful={ck.get('faithful','?')} agree={ck.get('verdict_agree','?')} fix={grade} — {ck.get('note','')[:150]}")
+            print()
     with open(PROPOSALS, "w", encoding="utf-8") as fh:
         for r in results:
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
     from collections import Counter
     grades = Counter(r["check"].get("fix_needed", "?") for r in results)
     print(f"wrote {len(results)} proposals → {PROPOSALS}")
-    print(f"  grades: ready={grades['none']}  quick-edit={grades['minor']}  needs-you={grades['major']}")
+    print(f"  grades: ready={grades['none']}  quick-edit={grades['minor']}  needs-you={grades['major']}  error={grades['error']}")
 
 
 if __name__ == "__main__":
