@@ -25,6 +25,7 @@ import html
 import json
 import os
 
+from align import italian_window
 from comprehension import OUT_DIR, build_units, resolve_anchor
 
 FLAGS = os.path.join(OUT_DIR, "flags.jsonl")
@@ -79,6 +80,7 @@ def build(rows: list[dict]) -> list[dict]:
             "anchor": c["anchor"], "split": maybe_split(target),
             "prev": u.get("prev") or "", "target_html": highlight(target, c["anchor"]),
             "next": u.get("next") or "", "rationales": rats,
+            "italian": italian_window(c["chapter"], c["idx"]),
         })
     return out
 
@@ -117,8 +119,11 @@ h1{font:600 1.15rem/1.2 Georgia,serif;margin:0 0 .35rem}
 .win .ctx{color:var(--mut);font-size:.9rem}
 .win .tgt{background:#fffdf6;border-left:3px solid var(--mark);padding:.3rem .6rem;border-radius:0 4px 4px 0}
 mark{background:var(--mark);padding:0 .1em;border-radius:2px}
-details.rats{margin:.5rem 0 0}
-details.rats>summary{cursor:pointer;font-size:.8rem;color:var(--mut)}
+details.rats,details.src{margin:.5rem 0 0}
+details.rats>summary,details.src>summary{cursor:pointer;font-size:.8rem;color:var(--mut)}
+.src .it{font-style:italic;background:#f4f6f4;border-left:3px solid #b9c7b3;
+ padding:.35rem .6rem;border-radius:0 4px 4px 0;margin:.4rem 0;white-space:pre-wrap}
+.src .smeta{font-size:.72rem;color:var(--mut)}
 .rat{font-size:.85rem;margin:.4rem 0;padding-left:.6rem;border-left:2px solid var(--line)}
 .rat b{font-variant:small-caps;color:var(--mut);font-weight:600}
 .verdict{display:flex;flex-wrap:wrap;gap:.3rem;margin:.6rem 0 0;align-items:center}
@@ -194,6 +199,9 @@ function card(d){
    <p class="tgt">${d.target_html}</p>
    ${d.next?`<p class="ctx">${esc(d.next)}</p>`:''}
   </div>
+  ${d.italian?`<details class="src"><summary>Italian source ${d.italian.conf>0?'· conf '+d.italian.conf:'· positional'}${d.italian.drift?' · drift '+(d.italian.drift>0?'+':'')+d.italian.drift:''}</summary>
+   <p class="it">${esc(d.italian.text)}</p>
+   <p class="smeta">±1-paragraph window; aligned to Italian ¶${d.italian.it_idx}. Confirm before relying on it.</p></details>`:''}
   <details class="rats"><summary>${d.rationales.length} model reads</summary>${rats}</details>
   <div class="verdict">${verds}</div>
   <textarea class="note" placeholder="note (optional)…">${esc(v.note||"")}</textarea>
