@@ -74,3 +74,6 @@ state/blind_fullbook_medium/
 
 # Blind-deviation scan-adjudication cache (regenerable via scan_adjudicate.py --source blind)
 state/scan_adjudication_blind/
+
+# Deviation review-sheet boxed crops (regenerable via box_crops.py)
+state/deviation_crops/
