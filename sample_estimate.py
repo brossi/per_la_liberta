@@ -211,14 +211,8 @@ def blind_read(pg: int) -> str:
     return best
 
 
-def adjudicate(pg: int, cands: list[dict]) -> list[dict]:
-    """One both-copy read classifying every substantive divergence on a page."""
-    images = [(f"Copy A (LoC) scan p.{pg}", vr.page_jpeg(pg))]
-    for h in vr.harvard_window([pg]):
-        try:
-            images.append((f"Copy B (Harvard) scan p.{h}", vr.harvard_jpeg(h)))
-        except Exception:
-            pass
+def _adjudicate_call(images, cands: list[dict], idxs: list[int]) -> dict:
+    """One adjudication read over the given candidate indices; returns {idx: record}."""
     lines = [
         "Each item is a place where an independent transcription (SCAN_BLIND) disagrees with our "
         "PUBLISHED text. Locate the target via CONTEXT and read what the page ACTUALLY prints, "
@@ -237,7 +231,8 @@ def adjudicate(pg: int, cands: list[dict]) -> list[dict]:
         "{idx, scan_truth, verdict, confidence(high|medium|low), copy, note}.",
         "",
     ]
-    for i, c in enumerate(cands):
+    for i in idxs:
+        c = cands[i]
         lines.append(f"idx={i} PUBLISHED={c['published']!r} SCAN_BLIND={c['scan_blind']!r} "
                      f"CONTEXT={c['context']!r}")
     parsed, _raw = vr.read_json_images(images, SYSTEM_ADJ, "\n".join(lines), model=vr.PRIMARY)
@@ -249,15 +244,45 @@ def adjudicate(pg: int, cands: list[dict]) -> list[dict]:
                     by_idx[int(r["idx"])] = r
                 except (TypeError, ValueError):
                     pass
+    return by_idx
+
+
+def adjudicate(pg: int, cands: list[dict]) -> list[dict]:
+    """Classify every substantive divergence on a page against both copies (via the
+    verified concordance). Missing items are RETRIED (whole-call failures and dropped
+    indices alike); anything still unanswered is marked 'unadjudicated' — never silently
+    defaulted to a finding verdict."""
+    images = [(f"Copy A (LoC) scan p.{pg}", vr.page_jpeg(pg))]
+    for h in vr.harvard_window([pg]):
+        try:
+            images.append((f"Copy B (Harvard) scan p.{h}", vr.harvard_jpeg(h)))
+        except Exception:
+            pass
+
+    got: dict = {}
+    pending = list(range(len(cands)))
+    for attempt in range(3):           # initial + 2 retries, splitting on each retry
+        if not pending:
+            break
+        chunks = ([pending] if attempt == 0
+                  else [pending[i:i + 3] for i in range(0, len(pending), 3)])
+        for ch in chunks:
+            got.update(_adjudicate_call(images, cands, ch))
+        pending = [i for i in range(len(cands)) if i not in got]
+
     out = []
     for i, c in enumerate(cands):
-        r = by_idx.get(i, {})
-        out.append({**c,
-                    "scan_truth": (r.get("scan_truth") or "").strip(),
-                    "verdict": r.get("verdict", "cannot_read"),
-                    "confidence": r.get("confidence", "low"),
-                    "copy": r.get("copy", ""),
-                    "note": r.get("note", "")})
+        r = got.get(i)
+        if r is None:
+            out.append({**c, "scan_truth": "", "verdict": "unadjudicated",
+                        "confidence": "low", "copy": "", "note": "no model response after retries"})
+        else:
+            out.append({**c,
+                        "scan_truth": (r.get("scan_truth") or "").strip(),
+                        "verdict": r.get("verdict", "unadjudicated"),
+                        "confidence": r.get("confidence", "low"),
+                        "copy": r.get("copy", ""),
+                        "note": r.get("note", "")})
     return out
 
 
@@ -335,9 +360,14 @@ def main() -> None:
     # Aggregate every sampled page from cache.
     recs = [json.load(open(CACHE_DIR / f"page_{p:04d}.json", encoding="utf-8")) for p in sample]
     sampled_chars = sum(r["sampled_chars"] for r in recs)
-    verdicts = Counter(d["verdict"] for r in recs for d in r["divergences"])
+    alldiv = [d for r in recs for d in r["divergences"]]
+    verdicts = Counter(d["verdict"] for d in alldiv)
     misread = verdicts["misread"]                 # genuine OCR errors (wrong/dropped/spurious word)
     variant = verdicts["variant"]                 # period-spelling normalisations (minor fidelity drift)
+    # Two-copy-confirmed misreads (copy=both) are the robust floor; copy=A-only is single-copy,
+    # same-image-as-the-blind-read, so softer. Now that Copy B is correctly aligned this split is meaningful.
+    mis_both = sum(1 for d in alldiv if d["verdict"] == "misread" and (d.get("copy") or "").lower() == "both")
+    unadj = verdicts["unadjudicated"]
     coverage = sampled_chars / total_chars if total_chars else 0
 
     def band(k):
@@ -353,30 +383,34 @@ def main() -> None:
         "coverage": round(coverage, 4),
         "verdict_counts": dict(verdicts),
         "misreads": misread,
+        "misreads_two_copy_confirmed": mis_both,
         "fidelity_variants": variant,
-        # Headline = genuine misreads. Upper definition folds in period-spelling drift.
+        "unadjudicated": unadj,
+        # Two-copy-confirmed floor, all-misreads headline, and the upper band incl. spelling drift.
+        "estimate_two_copy_floor": band(mis_both),
         "estimate_misreads": band(misread),
         "estimate_misreads_plus_variants": band(misread + variant),
     }
     json.dump(report, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
-    b1, b2 = band(misread), band(misread + variant)
+    bf, b1, b2 = band(mis_both), band(misread), band(misread + variant)
     print(f"\n{'='*64}")
     print(f"sampled {sampled_chars} / {total_chars} chars  ({coverage*100:.1f}% of the book)")
     print(f"divergence verdicts: {dict(verdicts)}")
-    print(f"  misreads (genuine OCR errors):      {misread}")
+    print(f"  misreads (genuine OCR errors):      {misread}  (of which two-copy-confirmed: {mis_both})")
     print(f"  fidelity variants (spelling drift): {variant}")
     print(f"  source typos fixed in published:    {verdicts['source_fixed']}  (not errors)")
     print(f"  source typos kept in published:     {verdicts['source_typo']}")
-    print(f"  false positives (match):            {verdicts['match']}    "
-          f"cannot_read: {verdicts['cannot_read']}")
-    print(f"\nHEADLINE — genuine misreads: {misread} in sample "
-          f"→ {b1['rate_per_10k']}/10k chars (95% CI {b1['rate_ci95_per_10k'][0]}–{b1['rate_ci95_per_10k'][1]})")
-    print(f"  BOOK-WIDE: ~{b1['book_estimate']:.0f} misreads (95% CI {b1['book_ci95'][0]:.0f}–{b1['book_ci95'][1]:.0f})")
-    print(f"UPPER — misreads + spelling variants: {misread+variant} "
-          f"→ ~{b2['book_estimate']:.0f} book-wide (95% CI {b2['book_ci95'][0]:.0f}–{b2['book_ci95'][1]:.0f})")
-    if misread == 0:
-        print(f"(0 misreads observed → rule-of-three upper bound ≈ {3/sampled_chars*total_chars:.0f} book-wide)")
+    print(f"  match (false positive): {verdicts['match']}   cannot_read: {verdicts['cannot_read']}   "
+          f"unadjudicated: {unadj}")
+    print(f"\nFLOOR — two-copy-confirmed misreads: {mis_both} → ~{bf['book_estimate']:.0f} book-wide "
+          f"(95% CI {bf['book_ci95'][0]:.0f}–{bf['book_ci95'][1]:.0f})")
+    print(f"HEADLINE — all misreads: {misread} → {b1['rate_per_10k']}/10k → ~{b1['book_estimate']:.0f} book-wide "
+          f"(95% CI {b1['book_ci95'][0]:.0f}–{b1['book_ci95'][1]:.0f})")
+    print(f"UPPER — misreads + spelling variants: {misread+variant} → ~{b2['book_estimate']:.0f} book-wide "
+          f"(95% CI {b2['book_ci95'][0]:.0f}–{b2['book_ci95'][1]:.0f})")
+    if unadj:
+        print(f"NOTE: {unadj} divergences went unadjudicated (model gave no response) — excluded, not counted.")
     print(f"\nwrote {OUT}")
 
 

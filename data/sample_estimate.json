@@ -1,0 +1,94 @@
+{
+ "seed": 20260618,
+ "pages_sampled": [
+  18,
+  22,
+  30,
+  36,
+  52,
+  74,
+  75,
+  76,
+  97,
+  100,
+  118,
+  119,
+  127,
+  128,
+  129,
+  130,
+  133,
+  137,
+  147,
+  150,
+  157,
+  162,
+  165,
+  179,
+  183,
+  186,
+  194,
+  203,
+  204,
+  215,
+  225,
+  227,
+  230,
+  233,
+  235,
+  243,
+  246,
+  254,
+  260,
+  267
+ ],
+ "book_chars": 650278,
+ "sampled_chars": 92799,
+ "coverage": 0.1427,
+ "verdict_counts": {
+  "source_fixed": 27,
+  "variant": 40,
+  "misread": 89,
+  "match": 3
+ },
+ "misreads": 89,
+ "misreads_two_copy_confirmed": 67,
+ "fidelity_variants": 40,
+ "unadjudicated": 0,
+ "estimate_two_copy_floor": {
+  "rate_per_10k": 7.22,
+  "rate_ci95_per_10k": [
+   5.686,
+   9.167
+  ],
+  "book_estimate": 469.5,
+  "book_ci95": [
+   369.8,
+   596.1
+  ]
+ },
+ "estimate_misreads": {
+  "rate_per_10k": 9.591,
+  "rate_ci95_per_10k": [
+   7.795,
+   11.799
+  ],
+  "book_estimate": 623.7,
+  "book_ci95": [
+   506.9,
+   767.3
+  ]
+ },
+ "estimate_misreads_plus_variants": {
+  "rate_per_10k": 13.901,
+  "rate_ci95_per_10k": [
+   11.701,
+   16.513
+  ],
+  "book_estimate": 904.0,
+  "book_ci95": [
+   760.9,
+   1073.8
+  ]
+ }
+}
