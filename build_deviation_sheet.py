@@ -183,7 +183,8 @@ function card(it){
         <button data-d="keep" class="${sel('keep')} ${sug2('keep')}">${keepLbl}</button>
         <button data-d="unsure" class="${sel('unsure')} ${sug2('unsure')}">? Unsure</button>
       </div>
-      <textarea class="notes" placeholder="custom correction / note (optional)…" data-note>${esc(v.note||'')}</textarea>
+      <textarea class="notes" placeholder="custom correction / note (optional)…" data-note
+        spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off">${esc(v.note||'')}</textarea>
     </div>
     <div class="scanwrap">
       <img src="${esc(img)}" loading="lazy" alt="scan p.${it.page}" data-zoom="${esc(img)}">
