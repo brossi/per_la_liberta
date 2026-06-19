@@ -1,0 +1,233 @@
+{
+ "7": {
+  "verdict": "correct",
+  "harvard_page": "10",
+  "note": "",
+  "folio": "1",
+  "mapped": "10"
+ },
+ "8": {
+  "verdict": "correct",
+  "harvard_page": "11",
+  "note": "",
+  "folio": "2",
+  "mapped": "11"
+ },
+ "21": {
+  "verdict": "correct",
+  "harvard_page": "24",
+  "note": "",
+  "folio": "15",
+  "mapped": "24"
+ },
+ "23": {
+  "verdict": "correct",
+  "harvard_page": "26",
+  "note": "",
+  "folio": "17",
+  "mapped": "26"
+ },
+ "27": {
+  "verdict": "correct",
+  "harvard_page": "30",
+  "note": "",
+  "folio": "21",
+  "mapped": "30"
+ },
+ "33": {
+  "verdict": "correct",
+  "harvard_page": "36",
+  "note": "",
+  "folio": "27",
+  "mapped": "36"
+ },
+ "47": {
+  "verdict": "correct",
+  "harvard_page": "50",
+  "note": "",
+  "folio": "41",
+  "mapped": "50"
+ },
+ "52": {
+  "verdict": "correct",
+  "harvard_page": "55",
+  "note": "",
+  "folio": "46",
+  "mapped": "55"
+ },
+ "53": {
+  "verdict": "correct",
+  "harvard_page": "56",
+  "note": "",
+  "folio": "47",
+  "mapped": "56"
+ },
+ "54": {
+  "verdict": "correct",
+  "harvard_page": "57",
+  "note": "",
+  "folio": "48",
+  "mapped": "57"
+ },
+ "55": {
+  "verdict": "correct",
+  "harvard_page": "58",
+  "note": "",
+  "folio": "49",
+  "mapped": "58"
+ },
+ "56": {
+  "verdict": "correct",
+  "harvard_page": "59",
+  "note": "",
+  "folio": "50",
+  "mapped": "59"
+ },
+ "57": {
+  "verdict": "correct",
+  "harvard_page": "60",
+  "note": "",
+  "folio": "51",
+  "mapped": "60"
+ },
+ "91": {
+  "verdict": "correct",
+  "harvard_page": "94",
+  "note": "",
+  "folio": "85",
+  "mapped": "94"
+ },
+ "93": {
+  "verdict": "correct",
+  "harvard_page": "96",
+  "note": "",
+  "folio": "87",
+  "mapped": "96"
+ },
+ "95": {
+  "verdict": "correct",
+  "harvard_page": "98",
+  "note": "",
+  "folio": "89",
+  "mapped": "98"
+ },
+ "97": {
+  "verdict": "correct",
+  "harvard_page": "100",
+  "note": "",
+  "folio": "91",
+  "mapped": "100"
+ },
+ "99": {
+  "verdict": "correct",
+  "harvard_page": "102",
+  "note": "",
+  "folio": "93",
+  "mapped": "102"
+ },
+ "102": {
+  "verdict": "correct",
+  "harvard_page": "105",
+  "note": "",
+  "folio": "96",
+  "mapped": "105"
+ },
+ "113": {
+  "verdict": "correct",
+  "harvard_page": "116",
+  "note": "",
+  "folio": "107",
+  "mapped": "116"
+ },
+ "121": {
+  "verdict": "correct",
+  "harvard_page": "124",
+  "note": "",
+  "folio": "115",
+  "mapped": "124"
+ },
+ "125": {
+  "verdict": "correct",
+  "harvard_page": "128",
+  "note": "",
+  "folio": "119",
+  "mapped": "128"
+ },
+ "126": {
+  "verdict": "correct",
+  "harvard_page": "129",
+  "note": "",
+  "folio": "120",
+  "mapped": "129"
+ },
+ "137": {
+  "verdict": "skipped",
+  "harvard_page": "",
+  "note": "Harvard prints 130 (PDF139) then 132 (PDF140); folio 131 has no leaf in the Harvard copy (human-verified in viewer)",
+  "folio": "131",
+  "mapped": ""
+ },
+ "160": {
+  "verdict": "correct",
+  "harvard_page": "162",
+  "note": "",
+  "folio": "154",
+  "mapped": "162"
+ },
+ "161": {
+  "verdict": "correct",
+  "harvard_page": "163",
+  "note": "",
+  "folio": "155",
+  "mapped": "163"
+ },
+ "162": {
+  "verdict": "correct",
+  "harvard_page": "164",
+  "note": "",
+  "folio": "156",
+  "mapped": "164"
+ },
+ "163": {
+  "verdict": "correct",
+  "harvard_page": "165",
+  "note": "",
+  "folio": "157",
+  "mapped": "165"
+ },
+ "164": {
+  "verdict": "correct",
+  "harvard_page": "166",
+  "note": "",
+  "folio": "158",
+  "mapped": "166"
+ },
+ "165": {
+  "verdict": "correct",
+  "harvard_page": "167",
+  "note": "",
+  "folio": "159",
+  "mapped": "167"
+ },
+ "177": {
+  "verdict": "correct",
+  "harvard_page": "179",
+  "note": "",
+  "folio": "171",
+  "mapped": "179"
+ },
+ "194": {
+  "verdict": "correct",
+  "harvard_page": "196",
+  "note": "",
+  "folio": "188",
+  "mapped": "196"
+ },
+ "238": {
+  "verdict": "correct",
+  "harvard_page": "240",
+  "note": "",
+  "folio": "232",
+  "mapped": "240"
+ }
+}

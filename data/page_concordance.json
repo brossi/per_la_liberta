@@ -1,0 +1,2463 @@
+{
+ "loc_folio_offset": 6,
+ "harvard_segments": [
+  {
+   "folios": [
+    3,
+    130
+   ],
+   "harvard_offset": 9
+  },
+  {
+   "folios": [
+    132,
+    262
+   ],
+   "harvard_offset": 8
+  }
+ ],
+ "boundary_folios_skipped": [
+  131
+ ],
+ "n_pages": 262,
+ "n_direct": 241,
+ "n_needs_audit": 21,
+ "n_harvard_low_res": 99,
+ "verified": true,
+ "map": {
+  "7": {
+   "folio": 1,
+   "loc_page": 7,
+   "harvard_page": 10,
+   "harvard_res": "full",
+   "method": "extrapolated",
+   "loc_folio_confirmed": false,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "8": {
+   "folio": 2,
+   "loc_page": 8,
+   "harvard_page": 11,
+   "harvard_res": "full",
+   "method": "extrapolated",
+   "loc_folio_confirmed": false,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "9": {
+   "folio": 3,
+   "loc_page": 9,
+   "harvard_page": 12,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "10": {
+   "folio": 4,
+   "loc_page": 10,
+   "harvard_page": 13,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "11": {
+   "folio": 5,
+   "loc_page": 11,
+   "harvard_page": 14,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "12": {
+   "folio": 6,
+   "loc_page": 12,
+   "harvard_page": 15,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "13": {
+   "folio": 7,
+   "loc_page": 13,
+   "harvard_page": 16,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "14": {
+   "folio": 8,
+   "loc_page": 14,
+   "harvard_page": 17,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "15": {
+   "folio": 9,
+   "loc_page": 15,
+   "harvard_page": 18,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "16": {
+   "folio": 10,
+   "loc_page": 16,
+   "harvard_page": 19,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "17": {
+   "folio": 11,
+   "loc_page": 17,
+   "harvard_page": 20,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "18": {
+   "folio": 12,
+   "loc_page": 18,
+   "harvard_page": 21,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "19": {
+   "folio": 13,
+   "loc_page": 19,
+   "harvard_page": 22,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "20": {
+   "folio": 14,
+   "loc_page": 20,
+   "harvard_page": 23,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "21": {
+   "folio": 15,
+   "loc_page": 21,
+   "harvard_page": 24,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "22": {
+   "folio": 16,
+   "loc_page": 22,
+   "harvard_page": 25,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "23": {
+   "folio": 17,
+   "loc_page": 23,
+   "harvard_page": 26,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "24": {
+   "folio": 18,
+   "loc_page": 24,
+   "harvard_page": 27,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "25": {
+   "folio": 19,
+   "loc_page": 25,
+   "harvard_page": 28,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "26": {
+   "folio": 20,
+   "loc_page": 26,
+   "harvard_page": 29,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "27": {
+   "folio": 21,
+   "loc_page": 27,
+   "harvard_page": 30,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "28": {
+   "folio": 22,
+   "loc_page": 28,
+   "harvard_page": 31,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "29": {
+   "folio": 23,
+   "loc_page": 29,
+   "harvard_page": 32,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "30": {
+   "folio": 24,
+   "loc_page": 30,
+   "harvard_page": 33,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "31": {
+   "folio": 25,
+   "loc_page": 31,
+   "harvard_page": 34,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "32": {
+   "folio": 26,
+   "loc_page": 32,
+   "harvard_page": 35,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "33": {
+   "folio": 27,
+   "loc_page": 33,
+   "harvard_page": 36,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "34": {
+   "folio": 28,
+   "loc_page": 34,
+   "harvard_page": 37,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "35": {
+   "folio": 29,
+   "loc_page": 35,
+   "harvard_page": 38,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "36": {
+   "folio": 30,
+   "loc_page": 36,
+   "harvard_page": 39,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "37": {
+   "folio": 31,
+   "loc_page": 37,
+   "harvard_page": 40,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "38": {
+   "folio": 32,
+   "loc_page": 38,
+   "harvard_page": 41,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "39": {
+   "folio": 33,
+   "loc_page": 39,
+   "harvard_page": 42,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "40": {
+   "folio": 34,
+   "loc_page": 40,
+   "harvard_page": 43,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "41": {
+   "folio": 35,
+   "loc_page": 41,
+   "harvard_page": 44,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "42": {
+   "folio": 36,
+   "loc_page": 42,
+   "harvard_page": 45,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "43": {
+   "folio": 37,
+   "loc_page": 43,
+   "harvard_page": 46,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "44": {
+   "folio": 38,
+   "loc_page": 44,
+   "harvard_page": 47,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "45": {
+   "folio": 39,
+   "loc_page": 45,
+   "harvard_page": 48,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "46": {
+   "folio": 40,
+   "loc_page": 46,
+   "harvard_page": 49,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "47": {
+   "folio": 41,
+   "loc_page": 47,
+   "harvard_page": 50,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "48": {
+   "folio": 42,
+   "loc_page": 48,
+   "harvard_page": 51,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "49": {
+   "folio": 43,
+   "loc_page": 49,
+   "harvard_page": 52,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "50": {
+   "folio": 44,
+   "loc_page": 50,
+   "harvard_page": 53,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "51": {
+   "folio": 45,
+   "loc_page": 51,
+   "harvard_page": 54,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "52": {
+   "folio": 46,
+   "loc_page": 52,
+   "harvard_page": 55,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "53": {
+   "folio": 47,
+   "loc_page": 53,
+   "harvard_page": 56,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "54": {
+   "folio": 48,
+   "loc_page": 54,
+   "harvard_page": 57,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "55": {
+   "folio": 49,
+   "loc_page": 55,
+   "harvard_page": 58,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "56": {
+   "folio": 50,
+   "loc_page": 56,
+   "harvard_page": 59,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "57": {
+   "folio": 51,
+   "loc_page": 57,
+   "harvard_page": 60,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "58": {
+   "folio": 52,
+   "loc_page": 58,
+   "harvard_page": 61,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "59": {
+   "folio": 53,
+   "loc_page": 59,
+   "harvard_page": 62,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "60": {
+   "folio": 54,
+   "loc_page": 60,
+   "harvard_page": 63,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "61": {
+   "folio": 55,
+   "loc_page": 61,
+   "harvard_page": 64,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "62": {
+   "folio": 56,
+   "loc_page": 62,
+   "harvard_page": 65,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "63": {
+   "folio": 57,
+   "loc_page": 63,
+   "harvard_page": 66,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "64": {
+   "folio": 58,
+   "loc_page": 64,
+   "harvard_page": 67,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "65": {
+   "folio": 59,
+   "loc_page": 65,
+   "harvard_page": 68,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "66": {
+   "folio": 60,
+   "loc_page": 66,
+   "harvard_page": 69,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "67": {
+   "folio": 61,
+   "loc_page": 67,
+   "harvard_page": 70,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "68": {
+   "folio": 62,
+   "loc_page": 68,
+   "harvard_page": 71,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "69": {
+   "folio": 63,
+   "loc_page": 69,
+   "harvard_page": 72,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "70": {
+   "folio": 64,
+   "loc_page": 70,
+   "harvard_page": 73,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "71": {
+   "folio": 65,
+   "loc_page": 71,
+   "harvard_page": 74,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "72": {
+   "folio": 66,
+   "loc_page": 72,
+   "harvard_page": 75,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "73": {
+   "folio": 67,
+   "loc_page": 73,
+   "harvard_page": 76,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "74": {
+   "folio": 68,
+   "loc_page": 74,
+   "harvard_page": 77,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "75": {
+   "folio": 69,
+   "loc_page": 75,
+   "harvard_page": 78,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "76": {
+   "folio": 70,
+   "loc_page": 76,
+   "harvard_page": 79,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "77": {
+   "folio": 71,
+   "loc_page": 77,
+   "harvard_page": 80,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "78": {
+   "folio": 72,
+   "loc_page": 78,
+   "harvard_page": 81,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "79": {
+   "folio": 73,
+   "loc_page": 79,
+   "harvard_page": 82,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "80": {
+   "folio": 74,
+   "loc_page": 80,
+   "harvard_page": 83,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "81": {
+   "folio": 75,
+   "loc_page": 81,
+   "harvard_page": 84,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "82": {
+   "folio": 76,
+   "loc_page": 82,
+   "harvard_page": 85,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "83": {
+   "folio": 77,
+   "loc_page": 83,
+   "harvard_page": 86,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "84": {
+   "folio": 78,
+   "loc_page": 84,
+   "harvard_page": 87,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "85": {
+   "folio": 79,
+   "loc_page": 85,
+   "harvard_page": 88,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "86": {
+   "folio": 80,
+   "loc_page": 86,
+   "harvard_page": 89,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "87": {
+   "folio": 81,
+   "loc_page": 87,
+   "harvard_page": 90,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "88": {
+   "folio": 82,
+   "loc_page": 88,
+   "harvard_page": 91,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "89": {
+   "folio": 83,
+   "loc_page": 89,
+   "harvard_page": 92,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "90": {
+   "folio": 84,
+   "loc_page": 90,
+   "harvard_page": 93,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "91": {
+   "folio": 85,
+   "loc_page": 91,
+   "harvard_page": 94,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "92": {
+   "folio": 86,
+   "loc_page": 92,
+   "harvard_page": 95,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "93": {
+   "folio": 87,
+   "loc_page": 93,
+   "harvard_page": 96,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "94": {
+   "folio": 88,
+   "loc_page": 94,
+   "harvard_page": 97,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "95": {
+   "folio": 89,
+   "loc_page": 95,
+   "harvard_page": 98,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "96": {
+   "folio": 90,
+   "loc_page": 96,
+   "harvard_page": 99,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "97": {
+   "folio": 91,
+   "loc_page": 97,
+   "harvard_page": 100,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "98": {
+   "folio": 92,
+   "loc_page": 98,
+   "harvard_page": 101,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "99": {
+   "folio": 93,
+   "loc_page": 99,
+   "harvard_page": 102,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "100": {
+   "folio": 94,
+   "loc_page": 100,
+   "harvard_page": 103,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "101": {
+   "folio": 95,
+   "loc_page": 101,
+   "harvard_page": 104,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "102": {
+   "folio": 96,
+   "loc_page": 102,
+   "harvard_page": 105,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "103": {
+   "folio": 97,
+   "loc_page": 103,
+   "harvard_page": 106,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "104": {
+   "folio": 98,
+   "loc_page": 104,
+   "harvard_page": 107,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "105": {
+   "folio": 99,
+   "loc_page": 105,
+   "harvard_page": 108,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "106": {
+   "folio": 100,
+   "loc_page": 106,
+   "harvard_page": 109,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "107": {
+   "folio": 101,
+   "loc_page": 107,
+   "harvard_page": 110,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "108": {
+   "folio": 102,
+   "loc_page": 108,
+   "harvard_page": 111,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "109": {
+   "folio": 103,
+   "loc_page": 109,
+   "harvard_page": 112,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "110": {
+   "folio": 104,
+   "loc_page": 110,
+   "harvard_page": 113,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "111": {
+   "folio": 105,
+   "loc_page": 111,
+   "harvard_page": 114,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "112": {
+   "folio": 106,
+   "loc_page": 112,
+   "harvard_page": 115,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "113": {
+   "folio": 107,
+   "loc_page": 113,
+   "harvard_page": 116,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "114": {
+   "folio": 108,
+   "loc_page": 114,
+   "harvard_page": 117,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "115": {
+   "folio": 109,
+   "loc_page": 115,
+   "harvard_page": 118,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "116": {
+   "folio": 110,
+   "loc_page": 116,
+   "harvard_page": 119,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "117": {
+   "folio": 111,
+   "loc_page": 117,
+   "harvard_page": 120,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "118": {
+   "folio": 112,
+   "loc_page": 118,
+   "harvard_page": 121,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "119": {
+   "folio": 113,
+   "loc_page": 119,
+   "harvard_page": 122,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "120": {
+   "folio": 114,
+   "loc_page": 120,
+   "harvard_page": 123,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "121": {
+   "folio": 115,
+   "loc_page": 121,
+   "harvard_page": 124,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "122": {
+   "folio": 116,
+   "loc_page": 122,
+   "harvard_page": 125,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "123": {
+   "folio": 117,
+   "loc_page": 123,
+   "harvard_page": 126,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "124": {
+   "folio": 118,
+   "loc_page": 124,
+   "harvard_page": 127,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "125": {
+   "folio": 119,
+   "loc_page": 125,
+   "harvard_page": 128,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": false,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "126": {
+   "folio": 120,
+   "loc_page": 126,
+   "harvard_page": 129,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": false,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "127": {
+   "folio": 121,
+   "loc_page": 127,
+   "harvard_page": 130,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "128": {
+   "folio": 122,
+   "loc_page": 128,
+   "harvard_page": 131,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "129": {
+   "folio": 123,
+   "loc_page": 129,
+   "harvard_page": 132,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "130": {
+   "folio": 124,
+   "loc_page": 130,
+   "harvard_page": 133,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "131": {
+   "folio": 125,
+   "loc_page": 131,
+   "harvard_page": 134,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "132": {
+   "folio": 126,
+   "loc_page": 132,
+   "harvard_page": 135,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "133": {
+   "folio": 127,
+   "loc_page": 133,
+   "harvard_page": 136,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "134": {
+   "folio": 128,
+   "loc_page": 134,
+   "harvard_page": 137,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "135": {
+   "folio": 129,
+   "loc_page": 135,
+   "harvard_page": 138,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "136": {
+   "folio": 130,
+   "loc_page": 136,
+   "harvard_page": 139,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "137": {
+   "folio": 131,
+   "loc_page": 137,
+   "harvard_page": null,
+   "harvard_res": null,
+   "method": "skipped_leaf",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "skipped",
+   "human_note": "Harvard prints 130 (PDF139) then 132 (PDF140); folio 131 has no leaf in the Harvard copy (human-verified in viewer)"
+  },
+  "138": {
+   "folio": 132,
+   "loc_page": 138,
+   "harvard_page": 140,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "139": {
+   "folio": 133,
+   "loc_page": 139,
+   "harvard_page": 141,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "140": {
+   "folio": 134,
+   "loc_page": 140,
+   "harvard_page": 142,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "141": {
+   "folio": 135,
+   "loc_page": 141,
+   "harvard_page": 143,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "142": {
+   "folio": 136,
+   "loc_page": 142,
+   "harvard_page": 144,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "143": {
+   "folio": 137,
+   "loc_page": 143,
+   "harvard_page": 145,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "144": {
+   "folio": 138,
+   "loc_page": 144,
+   "harvard_page": 146,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "145": {
+   "folio": 139,
+   "loc_page": 145,
+   "harvard_page": 147,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "146": {
+   "folio": 140,
+   "loc_page": 146,
+   "harvard_page": 148,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "147": {
+   "folio": 141,
+   "loc_page": 147,
+   "harvard_page": 149,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "148": {
+   "folio": 142,
+   "loc_page": 148,
+   "harvard_page": 150,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "149": {
+   "folio": 143,
+   "loc_page": 149,
+   "harvard_page": 151,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "150": {
+   "folio": 144,
+   "loc_page": 150,
+   "harvard_page": 152,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "151": {
+   "folio": 145,
+   "loc_page": 151,
+   "harvard_page": 153,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "152": {
+   "folio": 146,
+   "loc_page": 152,
+   "harvard_page": 154,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "153": {
+   "folio": 147,
+   "loc_page": 153,
+   "harvard_page": 155,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "154": {
+   "folio": 148,
+   "loc_page": 154,
+   "harvard_page": 156,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "155": {
+   "folio": 149,
+   "loc_page": 155,
+   "harvard_page": 157,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "156": {
+   "folio": 150,
+   "loc_page": 156,
+   "harvard_page": 158,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "157": {
+   "folio": 151,
+   "loc_page": 157,
+   "harvard_page": 159,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "158": {
+   "folio": 152,
+   "loc_page": 158,
+   "harvard_page": 160,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "159": {
+   "folio": 153,
+   "loc_page": 159,
+   "harvard_page": 161,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "160": {
+   "folio": 154,
+   "loc_page": 160,
+   "harvard_page": 162,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "161": {
+   "folio": 155,
+   "loc_page": 161,
+   "harvard_page": 163,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "162": {
+   "folio": 156,
+   "loc_page": 162,
+   "harvard_page": 164,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "163": {
+   "folio": 157,
+   "loc_page": 163,
+   "harvard_page": 165,
+   "harvard_res": "low",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "164": {
+   "folio": 158,
+   "loc_page": 164,
+   "harvard_page": 166,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "165": {
+   "folio": 159,
+   "loc_page": 165,
+   "harvard_page": 167,
+   "harvard_res": "full",
+   "method": "interpolated",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "166": {
+   "folio": 160,
+   "loc_page": 166,
+   "harvard_page": 168,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "167": {
+   "folio": 161,
+   "loc_page": 167,
+   "harvard_page": 169,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "168": {
+   "folio": 162,
+   "loc_page": 168,
+   "harvard_page": 170,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "169": {
+   "folio": 163,
+   "loc_page": 169,
+   "harvard_page": 171,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "170": {
+   "folio": 164,
+   "loc_page": 170,
+   "harvard_page": 172,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "171": {
+   "folio": 165,
+   "loc_page": 171,
+   "harvard_page": 173,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "172": {
+   "folio": 166,
+   "loc_page": 172,
+   "harvard_page": 174,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "173": {
+   "folio": 167,
+   "loc_page": 173,
+   "harvard_page": 175,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "174": {
+   "folio": 168,
+   "loc_page": 174,
+   "harvard_page": 176,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "175": {
+   "folio": 169,
+   "loc_page": 175,
+   "harvard_page": 177,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "176": {
+   "folio": 170,
+   "loc_page": 176,
+   "harvard_page": 178,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "177": {
+   "folio": 171,
+   "loc_page": 177,
+   "harvard_page": 179,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "178": {
+   "folio": 172,
+   "loc_page": 178,
+   "harvard_page": 180,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "179": {
+   "folio": 173,
+   "loc_page": 179,
+   "harvard_page": 181,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "180": {
+   "folio": 174,
+   "loc_page": 180,
+   "harvard_page": 182,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "181": {
+   "folio": 175,
+   "loc_page": 181,
+   "harvard_page": 183,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "182": {
+   "folio": 176,
+   "loc_page": 182,
+   "harvard_page": 184,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "183": {
+   "folio": 177,
+   "loc_page": 183,
+   "harvard_page": 185,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "184": {
+   "folio": 178,
+   "loc_page": 184,
+   "harvard_page": 186,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "185": {
+   "folio": 179,
+   "loc_page": 185,
+   "harvard_page": 187,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "186": {
+   "folio": 180,
+   "loc_page": 186,
+   "harvard_page": 188,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "187": {
+   "folio": 181,
+   "loc_page": 187,
+   "harvard_page": 189,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "188": {
+   "folio": 182,
+   "loc_page": 188,
+   "harvard_page": 190,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "189": {
+   "folio": 183,
+   "loc_page": 189,
+   "harvard_page": 191,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "190": {
+   "folio": 184,
+   "loc_page": 190,
+   "harvard_page": 192,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "191": {
+   "folio": 185,
+   "loc_page": 191,
+   "harvard_page": 193,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "192": {
+   "folio": 186,
+   "loc_page": 192,
+   "harvard_page": 194,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "193": {
+   "folio": 187,
+   "loc_page": 193,
+   "harvard_page": 195,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "194": {
+   "folio": 188,
+   "loc_page": 194,
+   "harvard_page": 196,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "195": {
+   "folio": 189,
+   "loc_page": 195,
+   "harvard_page": 197,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "196": {
+   "folio": 190,
+   "loc_page": 196,
+   "harvard_page": 198,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "197": {
+   "folio": 191,
+   "loc_page": 197,
+   "harvard_page": 199,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "198": {
+   "folio": 192,
+   "loc_page": 198,
+   "harvard_page": 200,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "199": {
+   "folio": 193,
+   "loc_page": 199,
+   "harvard_page": 201,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "200": {
+   "folio": 194,
+   "loc_page": 200,
+   "harvard_page": 202,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "201": {
+   "folio": 195,
+   "loc_page": 201,
+   "harvard_page": 203,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "202": {
+   "folio": 196,
+   "loc_page": 202,
+   "harvard_page": 204,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "203": {
+   "folio": 197,
+   "loc_page": 203,
+   "harvard_page": 205,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "204": {
+   "folio": 198,
+   "loc_page": 204,
+   "harvard_page": 206,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "205": {
+   "folio": 199,
+   "loc_page": 205,
+   "harvard_page": 207,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "206": {
+   "folio": 200,
+   "loc_page": 206,
+   "harvard_page": 208,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "207": {
+   "folio": 201,
+   "loc_page": 207,
+   "harvard_page": 209,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "208": {
+   "folio": 202,
+   "loc_page": 208,
+   "harvard_page": 210,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "209": {
+   "folio": 203,
+   "loc_page": 209,
+   "harvard_page": 211,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "210": {
+   "folio": 204,
+   "loc_page": 210,
+   "harvard_page": 212,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "211": {
+   "folio": 205,
+   "loc_page": 211,
+   "harvard_page": 213,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "212": {
+   "folio": 206,
+   "loc_page": 212,
+   "harvard_page": 214,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "213": {
+   "folio": 207,
+   "loc_page": 213,
+   "harvard_page": 215,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "214": {
+   "folio": 208,
+   "loc_page": 214,
+   "harvard_page": 216,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "215": {
+   "folio": 209,
+   "loc_page": 215,
+   "harvard_page": 217,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "216": {
+   "folio": 210,
+   "loc_page": 216,
+   "harvard_page": 218,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "217": {
+   "folio": 211,
+   "loc_page": 217,
+   "harvard_page": 219,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "218": {
+   "folio": 212,
+   "loc_page": 218,
+   "harvard_page": 220,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "219": {
+   "folio": 213,
+   "loc_page": 219,
+   "harvard_page": 221,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "220": {
+   "folio": 214,
+   "loc_page": 220,
+   "harvard_page": 222,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "221": {
+   "folio": 215,
+   "loc_page": 221,
+   "harvard_page": 223,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "222": {
+   "folio": 216,
+   "loc_page": 222,
+   "harvard_page": 224,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "223": {
+   "folio": 217,
+   "loc_page": 223,
+   "harvard_page": 225,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "224": {
+   "folio": 218,
+   "loc_page": 224,
+   "harvard_page": 226,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "225": {
+   "folio": 219,
+   "loc_page": 225,
+   "harvard_page": 227,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "226": {
+   "folio": 220,
+   "loc_page": 226,
+   "harvard_page": 228,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "227": {
+   "folio": 221,
+   "loc_page": 227,
+   "harvard_page": 229,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "228": {
+   "folio": 222,
+   "loc_page": 228,
+   "harvard_page": 230,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "229": {
+   "folio": 223,
+   "loc_page": 229,
+   "harvard_page": 231,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "230": {
+   "folio": 224,
+   "loc_page": 230,
+   "harvard_page": 232,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "231": {
+   "folio": 225,
+   "loc_page": 231,
+   "harvard_page": 233,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "232": {
+   "folio": 226,
+   "loc_page": 232,
+   "harvard_page": 234,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "233": {
+   "folio": 227,
+   "loc_page": 233,
+   "harvard_page": 235,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "234": {
+   "folio": 228,
+   "loc_page": 234,
+   "harvard_page": 236,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "235": {
+   "folio": 229,
+   "loc_page": 235,
+   "harvard_page": 237,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "236": {
+   "folio": 230,
+   "loc_page": 236,
+   "harvard_page": 238,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "237": {
+   "folio": 231,
+   "loc_page": 237,
+   "harvard_page": 239,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "238": {
+   "folio": 232,
+   "loc_page": 238,
+   "harvard_page": 240,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false,
+   "human": "correct",
+   "human_note": ""
+  },
+  "239": {
+   "folio": 233,
+   "loc_page": 239,
+   "harvard_page": 241,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "240": {
+   "folio": 234,
+   "loc_page": 240,
+   "harvard_page": 242,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "241": {
+   "folio": 235,
+   "loc_page": 241,
+   "harvard_page": 243,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "242": {
+   "folio": 236,
+   "loc_page": 242,
+   "harvard_page": 244,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "243": {
+   "folio": 237,
+   "loc_page": 243,
+   "harvard_page": 245,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "244": {
+   "folio": 238,
+   "loc_page": 244,
+   "harvard_page": 246,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "245": {
+   "folio": 239,
+   "loc_page": 245,
+   "harvard_page": 247,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "246": {
+   "folio": 240,
+   "loc_page": 246,
+   "harvard_page": 248,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "247": {
+   "folio": 241,
+   "loc_page": 247,
+   "harvard_page": 249,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "248": {
+   "folio": 242,
+   "loc_page": 248,
+   "harvard_page": 250,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "249": {
+   "folio": 243,
+   "loc_page": 249,
+   "harvard_page": 251,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "250": {
+   "folio": 244,
+   "loc_page": 250,
+   "harvard_page": 252,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "251": {
+   "folio": 245,
+   "loc_page": 251,
+   "harvard_page": 253,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "252": {
+   "folio": 246,
+   "loc_page": 252,
+   "harvard_page": 254,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "253": {
+   "folio": 247,
+   "loc_page": 253,
+   "harvard_page": 255,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "254": {
+   "folio": 248,
+   "loc_page": 254,
+   "harvard_page": 256,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "255": {
+   "folio": 249,
+   "loc_page": 255,
+   "harvard_page": 257,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "256": {
+   "folio": 250,
+   "loc_page": 256,
+   "harvard_page": 258,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "257": {
+   "folio": 251,
+   "loc_page": 257,
+   "harvard_page": 259,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "258": {
+   "folio": 252,
+   "loc_page": 258,
+   "harvard_page": 260,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "259": {
+   "folio": 253,
+   "loc_page": 259,
+   "harvard_page": 261,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "260": {
+   "folio": 254,
+   "loc_page": 260,
+   "harvard_page": 262,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "261": {
+   "folio": 255,
+   "loc_page": 261,
+   "harvard_page": 263,
+   "harvard_res": "low",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "262": {
+   "folio": 256,
+   "loc_page": 262,
+   "harvard_page": 264,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "263": {
+   "folio": 257,
+   "loc_page": 263,
+   "harvard_page": 265,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "264": {
+   "folio": 258,
+   "loc_page": 264,
+   "harvard_page": 266,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "265": {
+   "folio": 259,
+   "loc_page": 265,
+   "harvard_page": 267,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "266": {
+   "folio": 260,
+   "loc_page": 266,
+   "harvard_page": 268,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "267": {
+   "folio": 261,
+   "loc_page": 267,
+   "harvard_page": 269,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  },
+  "268": {
+   "folio": 262,
+   "loc_page": 268,
+   "harvard_page": 270,
+   "harvard_res": "full",
+   "method": "direct",
+   "loc_folio_confirmed": true,
+   "needs_audit": false
+  }
+ },
+ "audit": {
+  "sample_size": 33,
+  "verdict_counts": {
+   "correct": 32,
+   "skipped": 1
+  },
+  "corrected": [],
+  "unresolved": [],
+  "note": "offset segments human-validated on a 33-page sample ({'correct': 32, 'skipped': 1}); direct pages in a confirmed segment inherit."
+ }
+}
