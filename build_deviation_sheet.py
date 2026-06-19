@@ -42,6 +42,7 @@ header{position:sticky;top:0;z-index:10;background:var(--panel);border-bottom:1p
 header h1{margin:0 0 .35rem;font-size:1.05rem;font-weight:600}
 .bar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
 .prog{font-variant-numeric:tabular-nums;color:var(--muted)}.prog b{color:var(--ink)}
+.legend{font-size:.8rem;color:var(--muted);margin:0 0 .45rem}.legend code{font-size:.92em}
 .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.18rem .7rem;
   font-size:.82rem;cursor:pointer;color:var(--muted)}
 .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
@@ -94,6 +95,8 @@ dialog.zoom img{max-width:96vw;max-height:96vh}dialog.zoom::backdrop{background:
 <header>
   <h1>Deviation review &mdash; <i>Per la Libertà!</i> &nbsp;
     <span class="prog"><b id="ndone">0</b>/<span id="ntot">0</span> confirmed</span></h1>
+  <div class="legend"><b>Original</b> = the 1913 printed page (ground truth) &nbsp;·&nbsp;
+    <b>Derived</b> = our transcription (<code>output/italian_clean.md</code>)</div>
   <div class="bar">
     <span class="chip on" data-f="all">All</span>
     <span class="chip" data-f="undecided">Undecided</span>
@@ -138,9 +141,9 @@ function card(it){
   const cat=`<span class="b cat">${esc(it.category)}</span>`;
   const copy=it.scan_copy?`<span class="b cap">Copy ${esc(it.scan_copy)}${it.scan_confidence?' · '+esc(it.scan_confidence):''}</span>`:'';
   const printed = it.printed ? `<span class="frag printed">${esc(it.printed)}</span>`
-                             : `<span class="frag empty">(nothing on page)</span>`;
+                             : `<span class="frag empty">(not in Original)</span>`;
   const published = it.published ? `<span class="frag published">${esc(it.published)}</span>`
-                                 : `<span class="frag empty">(missing from edition)</span>`;
+                                 : `<span class="frag empty">(missing from Derived)</span>`;
   const sel=d=>v.decision===d?"sel":"";
   const sug2=d=>d===sug?"suggested":"";
   const restoreLbl = it.printed ? `✓ Restore «${esc(it.printed)}»`
@@ -155,9 +158,9 @@ function card(it){
       <div class="tags">${actbadge}${cat}${copy}</div>
       <div class="ctx">${ctxHTML(it)}</div>
       <div class="pair">
-        <span class="lab">page prints</span>${printed}
+        <span class="lab">Original</span>${printed}
         <span class="arrow">vs</span>
-        <span class="lab">edition</span>${published}
+        <span class="lab">Derived</span>${published}
       </div>
       <div class="reason">judge: ${esc(it.reason||"")}</div>
       <div class="dec">
