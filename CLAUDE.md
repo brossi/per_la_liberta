@@ -159,6 +159,13 @@ OCR text of the *Italian and English Dictionary* by Hjalmar Edgren (1901) — pr
 - Lookup via `edgren.edgren_lookup(word)` — lemmatizes via spaCy, tries exact headword match, flexible text search, then fuzzy fallback
 - Used by `translate.py --with-edgren` for prompt enrichment and `refine.py` for post-hoc refinement
 
+### Hoare 1915 Italian Dictionary
+OCR text of *An Italian Dictionary* by Alfred Hoare (Cambridge Univ. Press, 1915) — a period authority published two years after the source text, strong on archaic/literary/technical vocabulary. Public domain (Internet Archive: NOT_IN_COPYRIGHT).
+
+- 26 letter chunks in `assets/dictionary/hoare_1915/` (A–Z, Italian→English body binned by headword letter) + `en_index.txt` (the English→Italian back index, kept whole) + `headwords.json` + `index.json`. `raw.txt` is the regenerable download (gitignored, like Zingarelli's).
+- Lookup via `hoare.hoare_lookup(word)` / membership via `hoare.hoare_contains(word)` — lemmatizes via spaCy, then flexible accent/hyphen-tolerant search of the letter chunk and the back index. Exact-headword matching is unusable here because Hoare's OCR headwords are hyphen/accent-mangled (`moltiplic-are`), so flexible search is primary.
+- Third member of the period-dictionary membership oracle: a word found in ≥2 of {Zingarelli 1922, Edgren 1901, Hoare 1915} is confidently a real period word — used to tell a cleanup *corruption* of a valid 1913 form from a legitimate fix of OCR garble.
+
 ### Translation
 - Claude Sonnet 4.6 with 128K max_tokens and 32K thinking budget
 - Page provenance markers (`<!-- pages:N-M -->`) extracted before translation, reinserted after

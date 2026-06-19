@@ -12,6 +12,7 @@ dependencies = [
     # instead of pruning the manually-downloaded copy (it has no other home in uv.lock).
     "it-core-news-lg @ https://github.com/explosion/spacy-models/releases/download/it_core_news_lg-3.8.0/it_core_news_lg-3.8.0-py3-none-any.whl",
     "markdown-it-py>=4.0.0",
+    "openai>=2.30.0",
     "pillow>=12.1.1",
     "pymupdf>=1.27.2.2",
     "python-dotenv>=1.2.2",

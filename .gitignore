@@ -18,6 +18,7 @@ wheels/
 # Source dictionaries (downloaded at build time)
 data/dictionaries/it_full.txt
 data/dictionaries/morph-it_048.txt
+assets/dictionary/hoare_1915/raw.txt
 
 # OCR per-page progress (resume state)
 data/ocr_*_pages/
