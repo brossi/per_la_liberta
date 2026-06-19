@@ -50,3 +50,15 @@ state/audit/
 
 # Comprehension-review collection (intention-review stage 1; raw model reads + ledger)
 state/comprehension/
+
+# Scan re-adjudication cache (Gemini-primary vision reviewer; per-chapter, regenerable)
+state/readjudication/
+
+# Residual-error sampling estimate cache (per-page blind reads + adjudications, regenerable)
+state/sample_estimate/
+
+# Page-concordance cache (folio reads + audit sheet/images; regenerable via build_concordance.py)
+state/concordance/
+
+# Harvard/Google copy scans rendered from the PDF (Copy B; regenerable via vision_review)
+assets/page_images_harvard/
