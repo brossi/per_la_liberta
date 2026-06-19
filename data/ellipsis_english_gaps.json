@@ -1,0 +1,605 @@
+{
+  "_note": "English spots where no ellipsis existed, so a suspension was INSERTED at an estimated sentence boundary to mirror the Italian. Review placement when finishing cleanup.",
+  "items": [
+    {
+      "chapter": "Chapter One",
+      "paragraph": 6,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "aggrediva con voli fulminei, persistenti, un fiore scarlatto....",
+      "english": "A rubber hose coiled in spirals upon the green grass was driving from its metal tip, into the air, a fan of the finest droplets, which the sun was painting with the colors of the rainbow. A hummingbird, with its reflecti"
+    },
+    {
+      "chapter": "Chapter One",
+      "paragraph": 42,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "olitudini, tracciarono i primi sentieri alla giovane umanità.... so",
+      "english": "There exist in California isolated groves of ancient vegetation which botanists call *sequoie*, but the people call simply \"big trees.\" They rise straight, without boughs, like the immense columns of a temple raised, in "
+    },
+    {
+      "chapter": "Chapter Two",
+      "paragraph": 49,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "dovuto rispetto alle forme prescritte dalla stretta legalità.... fa",
+      "english": "Not for this did the repression of refractory spirits proceed without due respect for the forms prescribed by strict legality — an easy task where the Laws are promulgated by despotism, without the collaboration and asse"
+    },
+    {
+      "chapter": "Chapter Eight",
+      "paragraph": 7,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "sue molteplici attrattive: al di là della Spagna, la Francia.... l'",
+      "english": "I never arrived there. A storm, which forced us to put in at Cartagena, once again altered the course of my existence. Before us lay Spain with her manifold attractions; beyond Spain, France — political energy, life! I t"
+    },
+    {
+      "chapter": "Chapter Eight",
+      "paragraph": 35,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "l sangue e si accingeva a delitto più vasto, se non maggiore.... l'",
+      "english": "It was June of 1851, and stormy days were being prepared for France; yet to the eye of the superficial observer nothing of this appeared. Louis Napoleon, having assassinated the Roman Republic, had contracted a taste for"
+    },
+    {
+      "chapter": "Chapter Nine",
+      "paragraph": 29,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "sione colle armi piccole, il cannone. L'eccidio durò tre ore.... un",
+      "english": "But Louis Napoleon never dared to publish the revealing figures. A cowardly malefactor, having struck his victims to death, he turns livid at the sight of the enormous number of corpses and takes every care to spirit the"
+    },
+    {
+      "chapter": "Chapter Nine",
+      "paragraph": 31,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "Scese la notte.... Il",
+      "english": "Nor, with victory achieved, does the carnage-lust of the executioner abate. The prisons are bursting with the wretched. How to make room for the crowds that keep arriving? The answer that came from above is brief and ter"
+    },
+    {
+      "chapter": "Chapter Nine",
+      "paragraph": 32,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "e vengano, né quale posizione occupino nel consorzio sociale.... qu",
+      "english": "The horrible tragedy is repeated for twelve consecutive nights, at the Champ de Mars, in the courtyard of the Prefecture, in the adjacent Rue de Jérusalem. The slaughter is perpetrated at the mouth of the sewer, so that "
+    },
+    {
+      "chapter": "Chapter Nine",
+      "paragraph": 32,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "a al cimitero di Montmartre, colla testa sporgente dal suolo.... lu",
+      "english": "The horrible tragedy is repeated for twelve consecutive nights, at the Champ de Mars, in the courtyard of the Prefecture, in the adjacent Rue de Jérusalem. The slaughter is perpetrated at the mouth of the sewer, so that "
+    },
+    {
+      "chapter": "Chapter Thirteen",
+      "paragraph": 54,
+      "it_dots": 4,
+      "placed": true,
+      "italian": " applausi. I due carabinieri scrutano la superficie del lago.... ne",
+      "english": "From the shore came laughter and applause. The two carabinieri scanned the surface of the lake — no hope of assistance from that quarter. They vented their fury by shaking their fists at the horizon."
+    },
+    {
+      "chapter": "Chapter Fourteen",
+      "paragraph": 0,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "er ritornare, come si suol dire, all'ombra del giallo e nero.... l'",
+      "english": "The excitement of the moment did not prevent me from reflecting upon the strangeness of my situation. I, a patriot, and no mean one (if the intensity of one's feelings counts for anything), was being hunted out, almost a"
+    },
+    {
+      "chapter": "Chapter Fourteen",
+      "paragraph": 10,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "Fu come se un velo mi cadesse dagli occhi. Pensai \"Tardi.... ma",
+      "english": "It was as though a veil had fallen from my eyes. I thought: \"Late — yet in time!\" And turning to Radonitz, who had unrolled one of the packets: \"Since you consider our enterprise as having failed, restore the sum I broug"
+    },
+    {
+      "chapter": "Chapter Twenty-One",
+      "paragraph": 39,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "Era un'imprudenza.... no",
+      "english": "It was an imprudence — ninety-nine times out of a hundred, the most effective means of making a woman chatter is to recommend she keep silent. But my good fortune would have it that, precisely from that crack, my salvati"
+    },
+    {
+      "chapter": "Chapter Twenty-Two",
+      "paragraph": 5,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "alle villane perquisizioni dei secondini, insolenti e feroci.... no",
+      "english": "He was conveyed to Mantova. The grim walls of that fortress had already swallowed up don Bastiano Barozzi, my father, and my sister Luisa. Poor Luisa! — her indomitable instinct for self-expression confined within a veri"
+    },
+    {
+      "chapter": "Chapter Twenty-Two",
+      "paragraph": 8,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "o; dell'antica non meno serena, l'anima di più di un Socrate.... e ",
+      "english": "Italy saw, trembling, passing through the narrow compass of those secret cells without pomp, in rags almost, yet no less bright than of old, the iron temper of her Attilio Regolo, of her Trasea Peto; no less serene than "
+    },
+    {
+      "chapter": "Chapter Twenty-Two",
+      "paragraph": 18,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "L'Austria aveva ideato, a quei tempi, nuovo genere di pietà.... ac",
+      "english": "Austria had devised, in those times, a new species of mercy — to grant some clemency, provided the condemned man requested it in humiliating terms and as a repentant sinner. If the clemency were not sought, she could say"
+    },
+    {
+      "chapter": "Chapter Twenty-Two",
+      "paragraph": 18,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "era redatta, toglievano ogni prestigio al pàtriotta malcauto.... vi",
+      "english": "Austria had devised, in those times, a new species of mercy — to grant some clemency, provided the condemned man requested it in humiliating terms and as a repentant sinner. If the clemency were not sought, she could say"
+    },
+    {
+      "chapter": "Chapter Twenty-Three",
+      "paragraph": 46,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "erso l'Italia e stimavo opportuna una piccola sosta a Lugano.... mi",
+      "english": "Thereupon, as though we were old friends vying with one another in civilities, he fell over himself to offer me his services — in whatever part of the world, at whatever time. I had only to express the wish. If moreover "
+    },
+    {
+      "chapter": "Chapter Twenty-Three",
+      "paragraph": 49,
+      "it_dots": 4,
+      "placed": true,
+      "italian": " cocchiere? Questa poi non l'ho mai creduta. Quanto al resto.... tu",
+      "english": "It was Angelo Fumagalli, pale and smiling. He put a finger across his lips and added: \"Come to the stables. We can talk at our ease!\" He took my right hand and, with gentle violence, dragged me along as though I were a c"
+    },
+    {
+      "chapter": "Chapter Twenty-Four",
+      "paragraph": 1,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "al pavese Pompei, della Giovine Italia, sezione di Stradella.... ma",
+      "english": "The proposal to take part in it came to me directly from Pompei of Pavia, of the *Giovine Italia*, Stradella section — though he spoke to me in the name of Felice Orsini. I note this because Orsini, in his *Memorie*, nam"
+    },
+    {
+      "chapter": "Chapter Twenty-Four",
+      "paragraph": 4,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "da noi realmente pronunciate, secondo le ricevute istruzioni.... si",
+      "english": "I shall add, in passing, that the very phrases of recognition which the fierce Francesco recalls and holds up to ridicule are a variant of those we actually employed, according to the instructions we had received — wheth"
+    },
+    {
+      "chapter": "Chapter Twenty-Four",
+      "paragraph": 10,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "mportuna curiosità di uno sfaccendato, l'abbaiare di un cane.... mi",
+      "english": "Things stood very differently for the Italian patriots, who were compelled to hinge all their plans upon the fortunate outcome of a first, uncertain surprise. The bitter experience of recent years led me to suspect, in o"
+    },
+    {
+      "chapter": "Chapter Twenty-Four",
+      "paragraph": 10,
+      "it_dots": 4,
+      "placed": false,
+      "italian": " di un cane.... mille cause minime, scaturite come dal nulla.... e ",
+      "english": "Things stood very differently for the Italian patriots, who were compelled to hinge all their plans upon the fortunate outcome of a first, uncertain surprise. The bitter experience of recent years led me to suspect, in o"
+    },
+    {
+      "chapter": "Chapter Twenty-Four",
+      "paragraph": 12,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "referire, al vivere riposato, la triste odissea del ribelle!....",
+      "english": "With what intensity must the forerunners of the third Italy have kept their eyes fixed upon their ideal, to prefer, over a life of ease, the bleak odyssey of the rebel!"
+    },
+    {
+      "chapter": "Chapter Twenty-Four",
+      "paragraph": 13,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "Era di Tito Gelsi, che ci comunicava imminente il suo arrivo.... ci",
+      "english": "One evening Fumagalli appeared before me brandishing a letter in the air. It was from Tito Gelsi, announcing that his arrival was imminent — and he fell upon us at that very moment as we were reading his brief lines. In "
+    },
+    {
+      "chapter": "Chapter Three",
+      "paragraph": 20,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "te di un'eleganza da parata, era già eccezionalmente animato.... un",
+      "english": "— Any flag is a mockery when it does not stand as a symbol of truth and justice!"
+    },
+    {
+      "chapter": "Chapter Three",
+      "paragraph": 30,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "seduta sul pianerottolo, una figura di donna in veste bianca.... ne",
+      "english": "Here, and here alone, Miss Elisa raised her face and looked him in the eyes. With the acuteness of simple souls, she knew how to sound a soul. She expressed herself as a creature conscious of the power to dispose of her "
+    },
+    {
+      "chapter": "Chapter Three",
+      "paragraph": 33,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "celto, tra due mali, il minore; aveva deciso di allontanarsi.... pe",
+      "english": "“No, Elisa! The conspirator is alone even in the bosom of his family. He must at times forget that he has a mother, a wife, children. If his predestined hour arrives, he stops his ears to their prayer, he sees not the te"
+    },
+    {
+      "chapter": "Chapter Four",
+      "paragraph": 2,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "Londra aveva un fratello prete.... ci",
+      "english": "London had a brother who was a priest — a circumstance which might serve as a guide to establishing the truth!"
+    },
+    {
+      "chapter": "Chapter Five",
+      "paragraph": 1,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "mi correva obbligo tanto maggiore di cospirare e di battermi.... mi",
+      "english": "I had not seen Felice Orsini for a long while. But no sooner had the train puffed in under the station roof (Charing Cross) than I caught sight of him standing erect amid the crowd, with his little cases and his very bla"
+    },
+    {
+      "chapter": "Chapter Five",
+      "paragraph": 7,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "arantisce dell'Ungheria. Per quanto riguarda l'Italia nostra.... so",
+      "english": "Felice Orsini had come to a full understanding with the French Republicans. The coup d’état had surprised and paralyzed them — but had not tamed them. They were conspiring to prepare a revolution. A successful bold strok"
+    },
+    {
+      "chapter": "Chapter Five",
+      "paragraph": 7,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "entano miei prigionieri e me li chiudo in Castel Sant'Angelo.... il",
+      "english": "Felice Orsini had come to a full understanding with the French Republicans. The coup d’état had surprised and paralyzed them — but had not tamed them. They were conspiring to prepare a revolution. A successful bold strok"
+    },
+    {
+      "chapter": "Chapter Six",
+      "paragraph": 21,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "e, una di quelle borse che gli Inglesi chiamano \"carpet bag\".... di",
+      "english": "The next letter sent me by Felice Orsini had been written from Paris, but its envelope bore no other postmark than that of London. Evidently some trusted third party had received it and posted it in the latter city. Orsi"
+    },
+    {
+      "chapter": "Chapter Six",
+      "paragraph": 24,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "sei e le otto, arrivereste a Parigi. Egli sarà alla stazione.... il",
+      "english": "The day after, the 8th of January 1858, Simon Bernard appeared once more upon the threshold. He wore a grave, almost solemn expression, and I, who was now expecting definitive communications, understood at once that a fe"
+    },
+    {
+      "chapter": "Chapter Six",
+      "paragraph": 24,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "untamento, pigliate nota del suo indirizzo!\" E me lo dettava....",
+      "english": "The day after, the 8th of January 1858, Simon Bernard appeared once more upon the threshold. He wore a grave, almost solemn expression, and I, who was now expecting definitive communications, understood at once that a fe"
+    },
+    {
+      "chapter": "Chapter Six",
+      "paragraph": 27,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "iude le orecchie alle preghiere, non vede le lagrime e parte.... pa",
+      "english": "That evening, on returning, I did not give Elisa the usual kiss, as though to prepare her for the parting. While she laid the table for supper, I sat to one side, nervously tormenting my goatee. She caught me with my eye"
+    },
+    {
+      "chapter": "Chapter Six",
+      "paragraph": 27,
+      "it_dots": 4,
+      "placed": false,
+      "italian": "confidare i suoi segreti neppure all'aria che respira. Elisa.... qu",
+      "english": "That evening, on returning, I did not give Elisa the usual kiss, as though to prepare her for the parting. While she laid the table for supper, I sat to one side, nervously tormenting my goatee. She caught me with my eye"
+    },
+    {
+      "chapter": "Chapter Six",
+      "paragraph": 31,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "rai qualche consiglio.... Un altro bacio con labbra frementi.... po",
+      "english": "So as not to prolong the painful hours, I had resolved to depart that very evening from the house, if not yet from London; I should be more alert and more composed in the morning, at the embarkation. We supped in silence"
+    },
+    {
+      "chapter": "Chapter Eight",
+      "paragraph": 14,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "ittà non conoscevano personalmente quelle venute dalle altre.... Qu",
+      "english": "Felice Orsini paced the room its full length and breadth. He was agitated, and upon his most mobile face thoughts pressed upon one another like lightning flashes. At last he planted himself before me, picked up and threw"
+    },
+    {
+      "chapter": "Chapter Eight",
+      "paragraph": 15,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "eri si incalzavano, come lampi. Finì per piantarmisi dinanzi.... pr",
+      "english": "With that refusal, he sealed his own destiny irrevocably."
+    },
+    {
+      "chapter": "Chapter Twelve",
+      "paragraph": 2,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "'uomo che vi stava seduto, la sommità del cranio e nulla più.... il",
+      "english": "Another writing-desk stood some four paces off along the right-hand wall. Its supports were set so high as to allow me to discern, of the man seated behind it, only the crown of his skull and nothing more — the skull of "
+    },
+    {
+      "chapter": "Chapter Twelve",
+      "paragraph": 2,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "ti ultimi, riconobbi un personaggio della famiglia imperiale.... Pl",
+      "english": "Another writing-desk stood some four paces off along the right-hand wall. Its supports were set so high as to allow me to discern, of the man seated behind it, only the crown of his skull and nothing more — the skull of "
+    },
+    {
+      "chapter": "Chapter Fifteen",
+      "paragraph": 11,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "tazione e i sentimenti che l'ispirarono all'attivo del Gomez.... ma",
+      "english": "Italians, reborn as a Nation, have the moral obligation to set such solicitude and the sentiments that inspired it to Gomez's credit — but, in the face of the French Police, could there be a more compromising document?"
+    },
+    {
+      "chapter": "Chapter Sixteen",
+      "paragraph": 7,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "metropoli, quasi anticipandovi le emozioni dei momenti epici....",
+      "english": "With an irony that seemed cruel, it was observed how Felice Orsini, on the eve of one of his desperate attempts in the Lunigiana, had carried his faith in success to the point of procuring for himself a general's uniform"
+    },
+    {
+      "chapter": "Chapter Sixteen",
+      "paragraph": 18,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "isciplinata trascina anche l'individuo più timido ed imbelle.... a ",
+      "english": "It is easy, for example, to display courage in the light of day, upon a field of battle. So easy, that I have known men transformed into heroes by a single spent bullet, who were incapable of standing without trembling b"
+    },
+    {
+      "chapter": "Chapter Sixteen",
+      "paragraph": 19,
+      "it_dots": 4,
+      "placed": true,
+      "italian": " uomini; nulla, neppure la memoria delle generose intenzioni.... Fe",
+      "english": "There is furthermore a trait which has escaped, so far as I am aware, all who have written of him hitherto, and which reveals a courage yet more refined and sublime. The seizure of his correspondence had, among other thi"
+    },
+    {
+      "chapter": "Chapter Nineteen",
+      "paragraph": 5,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "iù buio, di più silenzioso. \"Tanto meglio quanto più presto!....\" è",
+      "english": "Then, all at once, a great silence fell within my soul, and with it a kind of great darkness; but in that emptiness, life still manifested itself powerfully through an instinct that drove me to crave something yet darker"
+    },
+    {
+      "chapter": "Chapter Nineteen",
+      "paragraph": 23,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "ita. Ma proprio allora, la mia attenzione fu rivolta altrove.... l'",
+      "english": "A man on horseback had entered through the gate... he was dressed in civilian clothes, his chest covered with decorations. He dismounted from the saddle and guards and soldiers saluted him in military fashion. It was Mon"
+    },
+    {
+      "chapter": "Chapter Nineteen",
+      "paragraph": 32,
+      "it_dots": 4,
+      "placed": true,
+      "italian": " la lama della ghigliottina... le teste... il turpe canestro....",
+      "english": "The Count di Rudio, overcome by emotion, could not continue. The insufficiency of the heart, which was already undermining his robust old age, took away his breath. I knew that to observe him at such moments irritated hi"
+    },
+    {
+      "chapter": "Chapter Nineteen",
+      "paragraph": 34,
+      "it_dots": 4,
+      "placed": true,
+      "italian": " rossore sanguigno, la testa recisa di Felice Orsini apparve.... St",
+      "english": "My lips did not move, but my soul gave a cry: \"Oh, how dearly the Patria has cost us!\""
+    },
+    {
+      "chapter": "Chapter Twenty",
+      "paragraph": 2,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "al- Ero senza difesa alcuna nelle mani di nemici onnipotenti.... qu",
+      "english": "What was I to answer? For a couple of hours a profound reaction had been at work within me and, in place of that first, strange regret at the unexpected return to the sensations of the living, a desperate yearning toward"
+    },
+    {
+      "chapter": "Chapter Twenty",
+      "paragraph": 5,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "ell'esecuzione si diffonde a parlare del Pieri e dell'Orsini.... su",
+      "english": "I must note that the official account of the execution dwells at length upon Pieri and Orsini — concerning myself, not a word! I believe they did not wish to offend the susceptibilities of a people by implicitly acknowle"
+    },
+    {
+      "chapter": "Chapter Twenty",
+      "paragraph": 8,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "non preludiava ancora la primavera. Parlammo dei due martiri.... es",
+      "english": "We ended by leaning against a wall, as though to expose our limbs to the sun — a cheerless sun that gave no foretaste of spring. We spoke of the two martyrs — they who had shed no blood, they were the ones who had been b"
+    },
+    {
+      "chapter": "Chapter Twenty",
+      "paragraph": 10,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "tteri fini, che apparivano sulla busta, non erano dell'Elisa.... es",
+      "english": "I was brought directly before the superintendent, the Marchese Lassalle, who handed me a letter, furnishing me by that simple act with a threefold surprise. The first, because, contrary to the iron discipline of the plac"
+    },
+    {
+      "chapter": "Chapter Twenty",
+      "paragraph": 25,
+      "it_dots": 4,
+      "placed": true,
+      "italian": " trascorso. Ci abbracciammo e le sue lagrime riprincipiarono.... ma",
+      "english": "The quarter of an hour — how swiftly it passed! — was over. We embraced, and her tears began afresh — but I perceived clearly that they were tears of compassion, not of despair. Evidently she still placed all her trust i"
+    },
+    {
+      "chapter": "Chapter Twenty-One",
+      "paragraph": 39,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "nnone che mi venne assegnato era una cinquantina di galeotti.... fo",
+      "english": "In crossing a swamp, I had the misfortune to lose one of my clogs, and the stumps of the rushes, cut level with the water to facilitate the ford, cut into the sole of my foot. I was obliged to manage three miles of limpi"
+    },
+    {
+      "chapter": "Chapter Twenty-One",
+      "paragraph": 39,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "sul cui dosso era segnato, a grandi caratteri, il mio numero.... il",
+      "english": "In crossing a swamp, I had the misfortune to lose one of my clogs, and the stumps of the rushes, cut level with the water to facilitate the ford, cut into the sole of my foot. I was obliged to manage three miles of limpi"
+    },
+    {
+      "chapter": "Chapter Twenty-One",
+      "paragraph": 46,
+      "it_dots": 4,
+      "placed": true,
+      "italian": " quell'ore, un intreccio fantastico di ricami non più veduti.... fo",
+      "english": "It was in that forest and in those hours that I conceived my second attempt at escape. The plan to which I fixed myself definitively came to me from the primitive art of the Indians ranging through the southern regions o"
+    },
+    {
+      "chapter": "Chapter Twenty-One",
+      "paragraph": 58,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "giato. Bisognava arrampicarcisi e scavarlo stando aggrappati.... co",
+      "english": "That nocturnal enterprise of ours constitutes for me one of those incidents whose impression only death can efface. One was not in that land as a pioneer of civilization, and someone might even observe, ironically, that "
+    },
+    {
+      "chapter": "Chapter Twenty-One",
+      "paragraph": 67,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "parmiato cinquanta colpi di corda. Ma laggiù in quel baratro.... sa",
+      "english": "I lent a hand to bury, one by one, in that fashion, my eight accomplices in the attempt at escape, and others, and others still... I counted to well over a hundred; then I lost count and counted no more. Some poor wretch"
+    },
+    {
+      "chapter": "Chapter Twenty-Two",
+      "paragraph": 26,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "sservare che non eravamo farina da missionari. Ma l'ambiente.... oh",
+      "english": "That nocturnal enterprise of ours constitutes, for me, one of those incidents whose impression only death can efface. We were not in that land as pioneers of civilization, and someone might even remark, with irony, that "
+    },
+    {
+      "chapter": "Chapter Twenty-Five",
+      "paragraph": 1,
+      "it_dots": 4,
+      "placed": true,
+      "italian": " ai Francesi e, nell'uno e nell'altro caso, quali risultati?.... un",
+      "english": "Men of retrograde ideas and men of the new order had continued their fierce struggle for the conquest of the future, and great events had pressed upon one another and fixed themselves in History — though Orsini and Pieri"
+    },
+    {
+      "chapter": "Chapter Twenty-Five",
+      "paragraph": 1,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "un piccolo maggior cespite d'entrata per la vecchia dinastia.... ec",
+      "english": "Men of retrograde ideas and men of the new order had continued their fierce struggle for the conquest of the future, and great events had pressed upon one another and fixed themselves in History — though Orsini and Pieri"
+    },
+    {
+      "chapter": "Chapter Twenty-Five",
+      "paragraph": 4,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "fausta sarebbe se Napoleone vi fosse stato vinto e disfatto!.... Oh",
+      "english": "\"If Italy,\" I answered him, \"in order to rise, however little, to liberty, had absolute need to have recourse to foreign arms, I should have preferred to see descend from the Alps men whose wrists were not, as ours, heav"
+    },
+    {
+      "chapter": "Chapter Twenty-Five",
+      "paragraph": 15,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "otta e, in un baleno, la chiglia raschia e si ferma. \"Presto.... Pr",
+      "english": "They cursed; but, induced by the Cousin, who was in command of the little crew, they changed course, and in an instant the keel scraped and stopped. \"Quick — quick — what pay is there in it!\""
+    },
+    {
+      "chapter": "Chapter Twenty-Five",
+      "paragraph": 15,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "un baleno, la chiglia raschia e si ferma. \"Presto.... Presto.... qu",
+      "english": "They cursed; but, induced by the Cousin, who was in command of the little crew, they changed course, and in an instant the keel scraped and stopped. \"Quick — quick — what pay is there in it!\""
+    },
+    {
+      "chapter": "Chapter Twenty-Six",
+      "paragraph": 20,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "ostro sostegno. Vi entrammo infangati, sanguinanti, sfiniti!....",
+      "english": "It was our good fortune that the tide rose. The boat we had been sustaining ended by becoming our sustenance. We climbed back into her — begrimed with mud, bleeding, spent!"
+    },
+    {
+      "chapter": "Chapter Twenty-Seven",
+      "paragraph": 46,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "omanda alcuna gridò: \"Si è lui! il Conte di Rudio in persona.... pr",
+      "english": "The second warder enters and the denunciation is renewed."
+    },
+    {
+      "chapter": "Chapter Thirty-One",
+      "paragraph": 13,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "gere nuove Provincie alla risorgente Nazione, per integrarla.... la",
+      "english": "All at once the superior intellect that governed the fortunes of that Monarchy, with a master stroke, turned from devil to friar. I mean that Camillo Benso di Cavour, while deploring as the supreme affliction of Italy th"
+    },
+    {
+      "chapter": "Chapter Thirty-One",
+      "paragraph": 23,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "sicurare la rigenerazione politica e la grandezza del Popolo.... il",
+      "english": "The ship of State changed course abruptly. The edict perpetuating the exile of Giuseppe Mazzini was undermined; constitutional guarantees were respected; the extreme parties were encouraged to come together, to give conc"
+    },
+    {
+      "chapter": "Chapter Thirty-Three",
+      "paragraph": 5,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "a concluse coll'ingiungermi di ritornare il mattino seguente.... di",
+      "english": "— Not false, but simply incomplete. I said that my name is Carlo Nosadano; my full name is Carlo Camillo di Rudio dei Conti di Nosadano."
+    },
+    {
+      "chapter": "Chapter Thirty-Three",
+      "paragraph": 9,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "ncesi, colle quali, salvo errore, ha dei conti da aggiustare....",
+      "english": "Consul Corti was, on this point, perfectly right. The King of Italy and Napoleon III were bound together, and he who, under the Emperor’s pressure, had not hesitated to fire upon the man to whom he owed a crown, could no"
+    },
+    {
+      "chapter": "Chapter Thirty-Three",
+      "paragraph": 17,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "Io volevo dirgli: \"Lasciarla quando giunge l'ora del riposo.... pu",
+      "english": "Having been reassured on this point, he exclaimed: “How much it grieved me not to have known in time what you were plotting!”"
+    },
+    {
+      "chapter": "Chapter Thirty-Three",
+      "paragraph": 17,
+      "it_dots": 4,
+      "placed": false,
+      "italian": "a sua risurrezione, di lottare per assicurarle nuovi trionfi.... qu",
+      "english": "Having been reassured on this point, he exclaimed: “How much it grieved me not to have known in time what you were plotting!”"
+    },
+    {
+      "chapter": "Chapter Thirty-Three",
+      "paragraph": 20,
+      "it_dots": 4,
+      "placed": true,
+      "italian": "ospettato anche lontanamente... Ma nella faraggine d'impegni.... Ch",
+      "english": "He fell silent, and after brief reflection: “Be all that as it may, why should we contribute to a desperate cause an expenditure of energy and blood destined to remain sterile?”"
+    }
+  ]
+}
