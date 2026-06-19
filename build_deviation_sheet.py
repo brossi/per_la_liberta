@@ -111,7 +111,9 @@ dialog.zoom img{max-width:96vw;max-height:96vh}dialog.zoom::backdrop{background:
 <script>
 const DATA = __DATA__;
 const KEY = "pll_deviation_audit_v1";
-let store = JSON.parse(localStorage.getItem(KEY) || "{}");
+const SUGGEST = {restore:"restore", keep:"keep", review:"unsure"};
+let store = {};
+try { store = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e) { store = {}; }
 let filter = "all";
 function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 function ctxHTML(it){
@@ -219,7 +221,9 @@ document.getElementById("export").addEventListener("click",()=>{
   const a=document.createElement("a");a.href=URL.createObjectURL(blob);
   a.download="deviation_audit_results.json";a.click();
 });
-render();
+try { render(); }
+catch(e){ document.getElementById("main").innerHTML =
+  "<pre style='color:#9a2b2b;white-space:pre-wrap'>render error: "+(e&&e.message)+"\n"+(e&&e.stack)+"</pre>"; }
 </script>
 </body></html>
 """
