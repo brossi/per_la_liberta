@@ -63,3 +63,6 @@ state/concordance/
 
 # Harvard/Google copy scans rendered from the PDF (Copy B; regenerable via vision_review)
 assets/page_images_harvard/
+
+# Scan-adjudication cache (regenerable via scan_adjudicate.py)
+state/scan_adjudication/
