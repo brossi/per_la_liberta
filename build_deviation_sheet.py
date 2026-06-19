@@ -67,6 +67,8 @@ main{max-width:1180px;margin:0 auto;padding:1rem}
 .b.keep{background:var(--keep-bg);color:var(--keep)}
 .b.review{background:var(--review-bg);color:var(--review)}
 .b.cat{background:#eef;color:#446}.b.cap{background:#eee;color:#777}
+.b.flag{background:#f3e0c0;color:#7a5a12}
+.b.idtag{background:#e7e2d6;color:#555;font-family:'SF Mono',Menlo,monospace}
 .ctx{font-family:Georgia,serif;font-size:1.02rem;color:#2c2820;margin:.1rem 0 .55rem}
 .ctx b{color:#000;background:#fdf3df;padding:0 .15rem;border-radius:3px}
 .pair{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;font-family:'SF Mono',Menlo,monospace;
@@ -84,6 +86,7 @@ main{max-width:1180px;margin:0 auto;padding:1rem}
 .dec button.sel[data-d=restore]{background:var(--restore);color:#fff;border-color:var(--restore)}
 .dec button.sel[data-d=keep]{background:var(--keep);color:#fff;border-color:var(--keep)}
 .dec button.sel[data-d=unsure]{background:var(--muted);color:#fff;border-color:var(--muted)}
+.dec button.sel[data-d=flag]{background:var(--review);color:#fff;border-color:var(--review)}
 .notes{margin-top:.5rem;width:100%;font:inherit;font-size:.85rem;padding:.35rem .5rem;
   border:1px solid var(--line);border-radius:5px;resize:vertical;min-height:2rem}
 .typed{margin-top:.5rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
@@ -101,13 +104,20 @@ main{max-width:1180px;margin:0 auto;padding:1rem}
 .nobox{font-size:.74rem;color:var(--keep);margin-top:.3rem}
 dialog.zoom{border:none;padding:0;max-width:96vw;max-height:96vh;background:transparent}
 dialog.zoom img{max-width:96vw;max-height:96vh}dialog.zoom::backdrop{background:rgba(0,0,0,.85)}
+.lens{position:fixed;display:none;width:540px;height:380px;border:2px solid var(--accent);
+  border-radius:6px;box-shadow:0 8px 28px rgba(0,0,0,.38);background-repeat:no-repeat;
+  background-color:#fff;pointer-events:none;z-index:60}
+.lens.frozen{border-color:var(--restore);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.lens.frozen::after{content:"📌 frozen · Esc to release";position:absolute;top:-1.45rem;left:0;
+  font-size:.7rem;background:var(--restore);color:#fff;padding:1px 7px;border-radius:4px;white-space:nowrap}
 </style></head><body>
 <header>
   <h1>Deviation review &mdash; <i>Per la Libertà!</i> &nbsp;
     <span class="prog"><b id="ndone">0</b>/<span id="ntot">0</span> confirmed</span></h1>
   <div class="legend"><b>Original</b> = the 1913 printed page (ground truth) &nbsp;·&nbsp;
     <b>Derived</b> = our transcription (<code>output/italian_clean.md</code>) &nbsp;·&nbsp;
-    showing the items needing your judgment first; the confident restores are last.</div>
+    showing the items needing your judgment first; the confident restores are last.
+    &nbsp;·&nbsp; hover a scan to magnify; press <b>F</b> to freeze the loupe, <b>Esc</b> to release.</div>
   <div class="bar">
     <span class="chip on" data-f="low">Needs judgment</span>
     <span class="chip" data-f="med">Worth a check</span>
@@ -115,6 +125,7 @@ dialog.zoom img{max-width:96vw;max-height:96vh}dialog.zoom::backdrop{background:
     <span class="sep">|</span>
     <span class="chip" data-f="all">All</span>
     <span class="chip" data-f="undecided">Undecided</span>
+    <span class="chip" data-f="flagged">⚑ Flagged</span>
     <span class="chip" data-f="keep">Keep (source typo)</span>
     <span class="chip" data-f="review">Review</span>
     <span class="chip" data-f="omission">Omissions</span>
@@ -125,6 +136,7 @@ dialog.zoom img{max-width:96vw;max-height:96vh}dialog.zoom::backdrop{background:
 </header>
 <main id="main"></main>
 <dialog class="zoom" id="zoom"><img id="zoomimg" alt=""></dialog>
+<div class="lens" id="lens"></div>
 <script>
 const DATA = __DATA__;
 const KEY = "pll_deviation_audit_v1";
@@ -176,16 +188,18 @@ function matches(it){
   const v=store[it.key]||{};
   if(filter==="all") return true;
   if(filter==="undecided") return !v.decision;
+  if(filter==="flagged") return v.decision==="flag";
   if(filter==="nobox") return !it.is_crop;
   if(["low","med","high"].includes(filter)) return it.conf===filter;
   if(["restore","keep","review"].includes(filter)) return it.action===filter;
   return it.category===filter;
 }
 function card(it){
-  const v=store[it.key]||{}, sug=SUGGEST[it.action]||"unsure";
+  const v=store[it.key]||{}, sug=it.suggest_flag?"flag":(SUGGEST[it.action]||"unsure");
   const actbadge={restore:'<span class="b restore">restore</span>',
     keep:'<span class="b keep">keep · source typo</span>',
     review:'<span class="b review">review</span>'}[it.action]||'';
+  const phantom=it.suggest_flag?'<span class="b flag">likely false finding</span>':'';
   const cat=`<span class="b cat">${esc(it.category)}</span>`;
   const copy=it.scan_copy?`<span class="b cap">Copy ${esc(it.scan_copy)}${it.scan_confidence?' · '+esc(it.scan_confidence):''}</span>`:'';
   const sel=d=>v.decision===d?"sel":"";
@@ -216,7 +230,7 @@ function card(it){
     : `<span class="nobox">no box located — full page p.${it.page}; find <b>${esc(capWord)}</b></span>`;
   return `<div class="card ${v.decision?'done':''}" data-key="${esc(it.key)}">
     <div>
-      <div class="tags">${actbadge}${cat}${copy}</div>
+      <div class="tags"><span class="b idtag">#${it.id}</span>${actbadge}${phantom}${cat}${copy}</div>
       <div class="ctx">${ctxHTML(it)}</div>
       <div class="pair">${pairHTML}</div>
       <div class="reason">judge: ${esc(it.reason||"")}</div>
@@ -224,6 +238,7 @@ function card(it){
         <button data-d="restore" class="${sel('restore')} ${sug2('restore')}">${restoreLbl}</button>
         <button data-d="keep" class="${sel('keep')} ${sug2('keep')}">${keepLbl}</button>
         <button data-d="unsure" class="${sel('unsure')} ${sug2('unsure')}">? Unsure</button>
+        <button data-d="flag" class="${sel('flag')} ${sug2('flag')}">⚑ Flag</button>
       </div>
       <textarea class="notes" placeholder="custom correction / note (optional)…" data-note
         spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off">${esc(v.note||'')}</textarea>
@@ -275,6 +290,40 @@ document.addEventListener("click",e=>{
     document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("on",c===chip));render();return;}
 });
 document.getElementById("zoom").addEventListener("click",e=>{if(e.target.id==="zoom")e.target.close();});
+// hover magnifier — one reusable lens, delegated over every scan snippet & fallback page.
+// crops carry ~3x the displayed resolution, so 2.5x zoom resolves glyphs (c/e, i/r) crisply.
+const LENS=document.getElementById("lens"), ZOOM=2.5;
+let lensSrc=null, frozen=false;
+document.addEventListener("mousemove",e=>{
+  if(frozen) return;  // hold the loupe still so you can type while keeping the view
+  const img=e.target.closest(".scanwrap img");
+  if(!img){if(LENS.style.display!=="none")LENS.style.display="none";lensSrc=null;return;}
+  const r=img.getBoundingClientRect();
+  const fx=(e.clientX-r.left)/r.width, fy=(e.clientY-r.top)/r.height;
+  if(fx<0||fx>1||fy<0||fy>1){LENS.style.display="none";return;}
+  if(lensSrc!==img.src){LENS.style.backgroundImage='url("'+img.src+'")';lensSrc=img.src;}
+  const bw=r.width*ZOOM, bh=r.height*ZOOM;
+  // cap lens height at 2.5x the clipping (= the magnified image height) so short band
+  // crops don't float in white padding; full pages keep the default height.
+  LENS.style.height=Math.min(380,bh)+"px";
+  LENS.style.backgroundSize=bw+"px "+bh+"px";
+  const lw=LENS.offsetWidth, lh=LENS.offsetHeight;
+  // clamp so the lens never scrolls past the crop edges into blank padding
+  const bgx=Math.max(-(bw-lw),Math.min(0,-(fx*bw-lw/2)));
+  const bgy=Math.max(-(bh-lh),Math.min(0,-(fy*bh-lh/2)));
+  LENS.style.backgroundPosition=bgx+"px "+bgy+"px";
+  LENS.style.left=(e.clientX-lw/2)+"px";LENS.style.top=(e.clientY-lh/2)+"px";LENS.style.display="block";
+});
+function releaseLens(){frozen=false;LENS.classList.remove("frozen");LENS.style.display="none";lensSrc=null;}
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){if(frozen)releaseLens();return;}
+  const t=e.target;
+  if(t&&(t.tagName==="INPUT"||t.tagName==="TEXTAREA"))return;  // don't hijack typing
+  if(e.key==="f"||e.key==="F"){
+    if(frozen)releaseLens();
+    else if(LENS.style.display!=="none"){frozen=true;LENS.classList.add("frozen");}
+  }
+});
 document.addEventListener("input",e=>{
   const cardEl=e.target.closest(".card");if(!cardEl)return;
   const key=cardEl.dataset.key;store[key]=store[key]||{};
@@ -349,6 +398,8 @@ def main():
             "scan_text": it.get("scan_text", ""), "scan_copy": it.get("scan_copy", ""),
             "scan_confidence": it.get("scan_confidence", ""), "sentence": it.get("sentence", ""),
             "img": img, "is_crop": is_crop, "conf": confidence(it),
+            # verify_dittography.py: phantom dittography (no real duplication in derived) -> pre-flag
+            "suggest_flag": bool(it.get("suggest_flag")),
             # card shape: substitution (both sides), omission (Original has it, Derived dropped),
             # dittography (Derived repeats it, Original does not) — drives plain-English rendering
             "kind": ("dittography" if not (it.get("printed") or "").strip()

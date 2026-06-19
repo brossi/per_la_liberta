@@ -135,7 +135,9 @@
       "published": "\"Entri!",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
+      "dup_real": true,
+      "suggest_flag": false
     },
     {
       "id": 5,
@@ -308,7 +310,9 @@
       "published": "giorni felici...",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
+      "dup_real": true,
+      "suggest_flag": false
     },
     {
       "id": 12,
@@ -854,7 +858,9 @@
       "published": "sangue...",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
+      "dup_real": true,
+      "suggest_flag": false
     },
     {
       "id": 34,
@@ -1863,7 +1869,9 @@
       "published": "Fra quel caos,",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
+      "dup_real": true,
+      "suggest_flag": false
     },
     {
       "id": 75,
@@ -1936,7 +1944,9 @@
       "published": "io",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 78,
@@ -2289,7 +2299,9 @@
       "published": "volte",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 93,
@@ -3015,7 +3027,9 @@
       "published": "uscirono",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 123,
@@ -7410,7 +7424,9 @@
       "published": "Un contrabbandiere.",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
+      "dup_real": true,
+      "suggest_flag": false
     },
     {
       "id": 303,
@@ -7883,7 +7899,9 @@
       "published": "alla montagna.\"",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 322,
@@ -11922,7 +11940,9 @@
       "published": "lì tratta",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 487,
@@ -11944,7 +11964,9 @@
       "published": "Mi salutò con",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
+      "dup_real": true,
+      "suggest_flag": false
     },
     {
       "id": 488,
@@ -12333,7 +12355,9 @@
       "published": "e si avanzò verso di me, e",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 504,
@@ -12379,7 +12403,9 @@
       "published": "chiese",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 506,
@@ -12425,7 +12451,9 @@
       "published": "Egli comprende un po' la mia lingua.",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 508,
@@ -13328,7 +13356,9 @@
       "published": "erano",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 545,
@@ -15006,7 +15036,9 @@
       "published": "piove.",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 613,
@@ -15104,7 +15136,9 @@
       "published": "La scommessa!...",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
+      "dup_real": true,
+      "suggest_flag": false
     },
     {
       "id": 617,
@@ -18614,7 +18648,9 @@
       "published": "mai?",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 760,
@@ -18637,7 +18673,9 @@
       "published": "calunniate",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
+      "dup_real": true,
+      "suggest_flag": false
     },
     {
       "id": 761,
@@ -18708,7 +18746,9 @@
       "published": "confidarsi...",
       "category": "dittography",
       "action": "review",
-      "reason": "edition repeats a word the page does not — may be intentional"
+      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "dup_real": false,
+      "suggest_flag": true
     },
     {
       "id": 764,
