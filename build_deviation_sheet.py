@@ -86,6 +86,15 @@ main{max-width:1180px;margin:0 auto;padding:1rem}
 .dec button.sel[data-d=unsure]{background:var(--muted);color:#fff;border-color:var(--muted)}
 .notes{margin-top:.5rem;width:100%;font:inherit;font-size:.85rem;padding:.35rem .5rem;
   border:1px solid var(--line);border-radius:5px;resize:vertical;min-height:2rem}
+.typed{margin-top:.5rem;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+.typed .lab{flex-basis:100%;margin-bottom:.1rem}
+.typed input{flex:1;min-width:180px;font:inherit;font-size:.9rem;padding:.32rem .5rem;
+  border:1px solid var(--line);border-radius:5px;font-family:'SF Mono',Menlo,monospace}
+.typed input:focus{outline:none;border-color:var(--sel);box-shadow:0 0 0 2px rgba(58,110,165,.18)}
+.typed-fb{font-size:.78rem;color:var(--muted);white-space:nowrap}
+.typed-fb.ok-restore{color:var(--restore);font-weight:700}
+.typed-fb.ok-keep{color:var(--keep);font-weight:700}
+.typed-fb.nomatch{color:var(--accent)}
 .scanwrap img{width:100%;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:zoom-in;display:block}
 .scanwrap a{font-size:.78rem;color:var(--sel);text-decoration:none}
 .scanwrap .cap{font-size:.74rem;color:var(--muted);margin-top:.3rem}
@@ -123,6 +132,39 @@ const SUGGEST = {restore:"restore", keep:"keep", review:"unsure"};
 let store = {};
 try { store = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e) { store = {}; }
 let filter = "low";
+const byKey={}; for(const it of DATA) byKey[it.key]=it;
+// typed re-transcription -> which recorded form it matches (accent- & case-sensitive,
+// surrounding whitespace trimmed). Option 2: Original-match => restore, Derived-match => keep.
+// A single word cannot confirm a dittography (does the page REPEAT it?), so no autoselect there.
+const SIDE_DECISION={original:"restore", derived:"keep"};
+function typedSide(it,val){
+  const t=(val||"").trim();
+  if(!t||it.kind==="dittography") return null;
+  if(it.printed && t===String(it.printed).trim()) return "original";
+  if(it.published && t===String(it.published).trim()) return "derived";
+  return null;
+}
+function paintDecision(cardEl,d){
+  cardEl.querySelectorAll(".dec button").forEach(b=>b.classList.toggle("sel",b.dataset.d===d));
+  cardEl.classList.toggle("done",!!d);
+}
+function paintTyped(cardEl,it,val){
+  const fb=cardEl.querySelector(".typed-fb"); if(!fb) return null;
+  const t=(val||"").trim();
+  if(!t){fb.textContent="";fb.className="typed-fb";return null;}
+  if(it.kind==="dittography"){fb.textContent="noted — choose remove/keep above";fb.className="typed-fb nomatch";return null;}
+  const side=typedSide(it,val);
+  if(side==="original"){fb.textContent="✓ matches Original → restore";fb.className="typed-fb ok-restore";}
+  else if(side==="derived"){fb.textContent="✓ matches Derived → keep";fb.className="typed-fb ok-keep";}
+  else {fb.textContent="no match — saved as note";fb.className="typed-fb nomatch";}
+  return side;
+}
+function paintAllTyped(){
+  document.querySelectorAll(".card").forEach(cardEl=>{
+    const it=byKey[cardEl.dataset.key]; if(!it) return;
+    const v=store[it.key]||{}; if(v.typed) paintTyped(cardEl,it,v.typed);
+  });
+}
 function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 function ctxHTML(it){
   let c = esc(it.sentence||"");
@@ -190,6 +232,13 @@ function card(it){
       <img src="${esc(img)}" loading="lazy" alt="scan p.${it.page}" data-zoom="${esc(img)}">
       <a href="${esc(img)}" target="_blank">open ↗</a>
       <div class="cap">${cap}</div>
+      <div class="typed">
+        <span class="lab">Type what you see on the page</span>
+        <input type="text" data-typed value="${esc(v.typed||'')}"
+          placeholder="type the boxed word — an exact match auto-selects a decision"
+          spellcheck="false" autocorrect="off" autocapitalize="off" autocomplete="off">
+        <span class="typed-fb"></span>
+      </div>
     </div>
   </div>`;
 }
@@ -212,6 +261,7 @@ function render(){
   main.innerHTML=h||"<p style='color:#6f685c'>Nothing matches this filter.</p>";
   document.getElementById("ndone").textContent=Object.values(store).filter(v=>v.decision).length;
   document.getElementById("ntot").textContent=total;
+  paintAllTyped();
 }
 document.addEventListener("click",e=>{
   const z=e.target.closest("[data-zoom]");
@@ -226,16 +276,29 @@ document.addEventListener("click",e=>{
 });
 document.getElementById("zoom").addEventListener("click",e=>{if(e.target.id==="zoom")e.target.close();});
 document.addEventListener("input",e=>{
-  const card=e.target.closest(".card");if(!card)return;
-  const key=card.dataset.key;store[key]=store[key]||{};
+  const cardEl=e.target.closest(".card");if(!cardEl)return;
+  const key=cardEl.dataset.key;store[key]=store[key]||{};
+  if(e.target.matches("[data-typed]")){
+    const it=byKey[key],val=e.target.value;
+    store[key].typed=val;
+    const side=paintTyped(cardEl,it,val);
+    if(side){
+      store[key].decision=SIDE_DECISION[side];
+      paintDecision(cardEl,SIDE_DECISION[side]);
+      document.getElementById("ndone").textContent=Object.values(store).filter(v=>v.decision).length;
+    }
+  }
   if(e.target.matches("[data-note]"))store[key].note=e.target.value;
   localStorage.setItem(KEY,JSON.stringify(store));
 });
 document.getElementById("export").addEventListener("click",()=>{
-  const out=DATA.map(it=>{const v=store[it.key]||{};return{
+  const out=DATA.map(it=>{const v=store[it.key]||{};
+    const typed=v.typed||null, side=typed?typedSide(it,typed):null;
+    return{
     id:it.id,chapter:it.chapter,page:it.page,published:it.published,printed:it.printed,
     scan_text:it.scan_text,category:it.category,suggested_action:it.action,
-    decision:v.decision||null,note:v.note||null};});
+    decision:v.decision||null,typed:typed,typed_match:side,
+    note:v.note||null};});
   const blob=new Blob([JSON.stringify({generated_from:"blind_deviations_classified",findings:out},null,2)],{type:"application/json"});
   const a=document.createElement("a");a.href=URL.createObjectURL(blob);
   a.download="deviation_audit_results.json";a.click();
