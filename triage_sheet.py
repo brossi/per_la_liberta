@@ -30,6 +30,7 @@ from align import italian_window
 from comprehension import OUT_DIR, build_units, resolve_anchor
 
 FLAGS = os.path.join(OUT_DIR, "flags.jsonl")
+PROPOSALS = os.path.join(OUT_DIR, "proposals.jsonl")
 SHEET = os.path.join(OUT_DIR, "triage.html")
 
 # Terminal punctuation a complete passage is expected to end on. A target that
@@ -40,6 +41,18 @@ _TERMINAL = '.!?…"»\'’)'
 
 def load_clusters() -> list[dict]:
     return [json.loads(l) for l in open(FLAGS, encoding="utf-8")]
+
+
+def load_proposals() -> dict:
+    """Stage-2 proposals keyed by (chapter, idx, anchor) — may not exist yet."""
+    out: dict[tuple, dict] = {}
+    try:
+        for l in open(PROPOSALS, encoding="utf-8"):
+            r = json.loads(l)
+            out[(r["chapter"], r["idx"], r["anchor"])] = r
+    except FileNotFoundError:
+        pass
+    return out
 
 
 def maybe_split(target: str) -> bool:
@@ -67,6 +80,7 @@ def build(rows: list[dict]) -> list[dict]:
     """Join each cluster to its review window and shape it for the page."""
     units = {(u["chapter"], u["idx"]): u for u in build_units()}
     mt_cache = mt.load_cache()
+    proposals = load_proposals()
     out = []
     for rank, c in enumerate(rows, 1):
         u = units.get((c["chapter"], c["idx"]), {})
@@ -74,6 +88,7 @@ def build(rows: list[dict]) -> list[dict]:
         # one rationale entry per model read, newest model grouping preserved
         rats = [{"model": r["model"].split("-")[0], "sev": r["severity"],
                  "cat": r["category"], "why": r["why"]} for r in c.get("rationales", [])]
+        prop = proposals.get((c["chapter"], c["idx"], c["anchor"]))
         out.append({
             "id": f'{c["chapter"]}::{c["idx"]}::{c["anchor"][:48]}',
             "rank": rank, "score": c["score"], "breadth": c["breadth"],
@@ -84,6 +99,11 @@ def build(rows: list[dict]) -> list[dict]:
             "next": u.get("next") or "", "rationales": rats,
             "italian": italian_window(c["chapter"], c["idx"]),
             "mt": mt.cached((italian_window(c["chapter"], c["idx"], radius=0) or {}).get("text", ""), mt_cache),
+            "proposal": ({"verdict": prop["proposal"]["verdict"],
+                          "confidence": prop["proposal"]["confidence"],
+                          "draft": prop["proposal"]["draft"],
+                          "rationale": prop["proposal"]["rationale"],
+                          "check": prop["check"]} if prop else None),
         })
     return out
 
@@ -149,14 +169,31 @@ label.v-unsure:has(:checked){box-shadow:inset 0 0 0 2px var(--uns)}
  background:#fff;cursor:pointer}
 .btn:hover{background:#f0ece2}
 .hidden{display:none}
+.prop{margin:.7rem 0 0;padding:.55rem .7rem;border:1px solid #d8d0bf;border-radius:6px;background:#fbfaf3}
+.pmeta{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;font-size:.78rem;margin-bottom:.45rem}
+.grade{padding:.1rem .55rem;border-radius:999px;font-weight:700;color:#fff;white-space:nowrap}
+.g-ready{background:#3a7d44}
+.g-edit{background:#c87f0a}
+.g-need{background:#c0392b}
+.g-err{background:#777}
+.pverd{font-weight:600;background:#fff}
+.dissent{background:#5b2a86;color:#fff;border-color:#5b2a86;font-weight:600}
+.draft{width:100%;font:inherit;font-size:.9rem;padding:.4rem .5rem;border:1px solid var(--line);
+ border-radius:4px;resize:vertical;min-height:3.2rem;background:#fff}
+.accept{background:#2a6b8e;color:#fff;border-color:#2a6b8e;font-weight:600}
+.accept:hover{background:#22576f}
+.prop details{margin:.4rem 0 0}
+.prop summary{cursor:pointer;font-size:.78rem;color:var(--mut)}
+.cnote p,.prat p{font-size:.85rem;margin:.3rem 0;white-space:pre-wrap}
 </style></head><body>
 <header>
  <h1>Comprehension triage <span class="stat" id="hcount"></span></h1>
  <div class="bar">
   <input id="q" type="search" placeholder="search text / rationale…" style="min-width:12rem">
   <select id="fcat"></select><select id="fsev"></select><select id="fbrd"></select>
-  <select id="fch"></select><select id="fverd"></select>
+  <select id="fch"></select><select id="fverd"></select><select id="fgrade"></select>
   <label class="stat"><input type="checkbox" id="fsplit"> split-only</label>
+  <label class="stat"><input type="checkbox" id="fdissent"> dissent-only</label>
   <span style="flex:1"></span>
   <span class="stat" id="prog"></span>
   <button class="btn" id="exportBtn">Export verdicts</button>
@@ -170,6 +207,12 @@ const DATA = __DATA__;
 const KEY = "pll-triage-verdicts";
 const VS = [["retranslate","re-translate"],["gloss","gloss/footnote"],
  ["recoverable","recoverable"],["dismiss","dismiss (FP)"],["unsure","unsure — check source"]];
+// proposer verdict -> human verdict radio (the engine's "leave" = no edit = dismiss)
+const MAP = {leave:"dismiss"};
+// checker fix_needed -> [badge label, css class, grade-filter key]
+const GRADE = {none:["✓ ready","g-ready","ready"], minor:["› quick-edit","g-edit","quick-edit"],
+ major:["⚠ needs-you","g-need","needs-you"], error:["✗ error","g-err","error"]};
+const gradeKey = d => d.proposal ? (GRADE[d.proposal.check.fix]||["","","other"])[2] : "none";
 let V = JSON.parse(localStorage.getItem(KEY) || "{}");
 function save(){localStorage.setItem(KEY, JSON.stringify(V));}
 
@@ -183,7 +226,31 @@ opt(fsev, ["high","medium","low"], "severity: all");
 opt(fbrd, [3,2,1], "breadth: all");
 opt(fch, uniq("chapter").sort(), "chapter: all");
 opt(fverd, ["(none)","retranslate","gloss","recoverable","dismiss","unsure"], "verdict: all");
+opt(fgrade, ["ready","quick-edit","needs-you","none"], "proposal: all");
 
+function propBlock(d){
+ const p = d.proposal; if(!p) return "";
+ const ck = p.check || {};
+ const [glab,gcls] = GRADE[ck.fix] || ["proposal","g-edit"];
+ const dissent = ck.verdict_agree==="no" ? '<span class="pill dissent">checker dissents</span>' : '';
+ const v = V[d.id] || {};
+ const draft = v.draft!=null ? v.draft : (p.draft||"");
+ const hasDraft = p.draft && p.draft!=="-";
+ return `<div class="prop">
+  <div class="pmeta">
+   <span class="grade ${gcls}">${glab}</span>
+   <span class="pill pverd">proposes: ${p.verdict}</span>
+   <span class="pill">conf ${p.confidence}</span>
+   <span class="pill">faithful: ${ck.faithful||'?'}</span>
+   ${dissent}
+   <span style="flex:1"></span>
+   <button class="btn accept">Accept →</button>
+  </div>
+  ${hasDraft?`<textarea class="draft" placeholder="proposed English…">${esc(draft)}</textarea>`:''}
+  ${ck.note?`<details class="cnote"><summary>checker note</summary><p>${esc(ck.note)}</p></details>`:''}
+  ${p.rationale?`<details class="prat"><summary>proposer rationale</summary><p>${esc(p.rationale)}</p></details>`:''}
+ </div>`;
+}
 function card(d){
  const v = V[d.id] || {};
  const rats = d.rationales.map(r=>
@@ -205,6 +272,7 @@ function card(d){
    <p class="tgt">${d.target_html}</p>
    ${d.next?`<p class="ctx">${esc(d.next)}</p>`:''}
   </div>
+  ${propBlock(d)}
   ${d.italian?`<details class="src"><summary>Italian source ${d.italian.conf>0?'· conf '+d.italian.conf:'· positional'}${d.italian.drift?' · drift '+(d.italian.drift>0?'+':'')+d.italian.drift:''}</summary>
    <p class="it">${esc(d.italian.text)}</p>
    <p class="smeta">±1-paragraph window; aligned to Italian ¶${d.italian.it_idx}. Confirm before relying on it.</p></details>`:''}
@@ -224,6 +292,8 @@ function render(){
   if(fbrd.value && d.breadth!=+fbrd.value) return false;
   if(fch.value && d.chapter!==fch.value) return false;
   if(fsplit.checked && !d.split) return false;
+  if(fdissent.checked && !(d.proposal && d.proposal.check.verdict_agree==="no")) return false;
+  if(fgrade.value && gradeKey(d)!==fgrade.value) return false;
   const vv = (V[d.id]||{}).verdict || "(none)";
   if(fverd.value && vv!==fverd.value) return false;
   if(q){
@@ -239,7 +309,7 @@ function render(){
  prog.textContent = `${done}/${DATA.length} judged`;
 }
 const qf = {q};
-[q,fcat,fsev,fbrd,fch,fverd,fsplit].forEach(el=>el.addEventListener("input",render));
+[q,fcat,fsev,fbrd,fch,fverd,fgrade,fsplit,fdissent].forEach(el=>el.addEventListener("input",render));
 
 list.addEventListener("change",e=>{
  const card = e.target.closest(".card"); if(!card) return;
@@ -251,15 +321,30 @@ list.addEventListener("change",e=>{
  card.classList.toggle("done", !!V[id].verdict);
 });
 list.addEventListener("input",e=>{
- if(!e.target.classList.contains("note")) return;
- const id = e.target.closest(".card").dataset.id;
- V[id] = V[id]||{}; V[id].note = e.target.value; save();
+ const id = e.target.closest(".card")?.dataset.id; if(!id) return;
+ V[id] = V[id]||{};
+ if(e.target.classList.contains("note")) V[id].note = e.target.value;
+ else if(e.target.classList.contains("draft")) V[id].draft = e.target.value;
+ else return;
+ save();
+});
+list.addEventListener("click",e=>{
+ if(!e.target.classList.contains("accept")) return;
+ const card = e.target.closest(".card"); const id = card.dataset.id;
+ const d = DATA.find(x=>x.id===id); const p = d && d.proposal; if(!p) return;
+ V[id] = V[id]||{};
+ V[id].verdict = MAP[p.verdict] || p.verdict;
+ const ta = card.querySelector(".draft"); if(ta) V[id].draft = ta.value;
+ save(); render();
 });
 
 exportBtn.onclick=()=>{
- const out = DATA.filter(d=>V[d.id]).map(d=>({
+ const out = DATA.filter(d=>V[d.id] && V[d.id].verdict).map(d=>({
   chapter:d.chapter, idx:d.idx, anchor:d.anchor, category:d.category,
-  severity:d.severity, breadth:d.breadth, score:d.score, ...V[d.id]}));
+  severity:d.severity, breadth:d.breadth, score:d.score,
+  verdict:V[d.id].verdict, draft:V[d.id].draft||"", note:V[d.id].note||"",
+  proposed:d.proposal?d.proposal.verdict:null,
+  fix_needed:d.proposal?d.proposal.check.fix_needed:null}));
  const blob = new Blob([JSON.stringify(out,null,2)],{type:"application/json"});
  const a = document.createElement("a");
  a.href = URL.createObjectURL(blob); a.download = "triage_verdicts.json"; a.click();
@@ -268,7 +353,7 @@ importBtn.onclick=()=>file.click();
 file.onchange=async()=>{
  const txt = await file.files[0].text(); const arr = JSON.parse(txt);
  for(const r of arr){ const id = `${r.chapter}::${r.idx}::${r.anchor.slice(0,48)}`;
-  V[id] = {verdict:r.verdict, note:r.note||""}; }
+  V[id] = {verdict:r.verdict, note:r.note||"", draft:r.draft||""}; }
  save(); render();
 };
 render();

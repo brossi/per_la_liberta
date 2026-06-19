@@ -187,6 +187,8 @@ def main() -> None:
     ap.add_argument("--severity", choices=["high", "medium", "low"], default=None)
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--workers", type=int, default=WORKERS)
+    ap.add_argument("--refresh", action="store_true",
+                    help="re-propose flags already in proposals.jsonl (default: skip them)")
     args = ap.parse_args()
     load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
 
@@ -198,8 +200,20 @@ def main() -> None:
         rows = [r for r in rows if r["breadth"] >= args.breadth
                 and (not args.severity or r["severity"] == args.severity)]
         rows.sort(key=lambda r: r["score"], reverse=True)
+
+    # Resume: keep prior proposals and skip those flags, so successive runs extend
+    # the ledger instead of clobbering it. --limit then caps NEW work, not scope.
+    existing = {}
+    if os.path.exists(PROPOSALS):
+        for l in open(PROPOSALS, encoding="utf-8"):
+            r = json.loads(l)
+            existing[(r["chapter"], r["idx"], r["anchor"])] = r
+    if not args.refresh:
+        rows = [r for r in rows if (r["chapter"], r["idx"], r["anchor"]) not in existing]
     if args.limit:
         rows = rows[: args.limit]
+    print(f"{len(existing)} already proposed; {len(rows)} new flags this run"
+          + (" (--refresh on)" if args.refresh else ""))
 
     units = {(u["chapter"], u["idx"]): u for u in build_units()}
     results = [None] * len(rows)
@@ -220,13 +234,20 @@ def main() -> None:
             print(f"    draft: {p.get('draft','—')}")
             print(f"    check: faithful={ck.get('faithful','?')} agree={ck.get('verdict_agree','?')} fix={grade} — {ck.get('note','')[:150]}")
             print()
+    # Merge this run's results into the prior ledger (new flags override on --refresh),
+    # then rewrite the whole file. Order: prior entries first, then newly added flags.
+    merged = dict(existing)
+    for r in results:
+        merged[(r["chapter"], r["idx"], r["anchor"])] = r
     with open(PROPOSALS, "w", encoding="utf-8") as fh:
-        for r in results:
+        for r in merged.values():
             fh.write(json.dumps(r, ensure_ascii=False) + "\n")
     from collections import Counter
-    grades = Counter(r["check"].get("fix_needed", "?") for r in results)
-    print(f"wrote {len(results)} proposals → {PROPOSALS}")
-    print(f"  grades: ready={grades['none']}  quick-edit={grades['minor']}  needs-you={grades['major']}  error={grades['error']}")
+    new_grades = Counter(r["check"].get("fix_needed", "?") for r in results)
+    all_grades = Counter(r["check"].get("fix_needed", "?") for r in merged.values())
+    print(f"wrote {len(merged)} proposals → {PROPOSALS}  (+{len(results)} this run)")
+    print(f"  this run: ready={new_grades['none']}  quick-edit={new_grades['minor']}  needs-you={new_grades['major']}  error={new_grades['error']}")
+    print(f"  ledger  : ready={all_grades['none']}  quick-edit={all_grades['minor']}  needs-you={all_grades['major']}  error={all_grades['error']}")
 
 
 if __name__ == "__main__":
