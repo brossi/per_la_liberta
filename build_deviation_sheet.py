@@ -46,6 +46,7 @@ header h1{margin:0 0 .35rem;font-size:1.05rem;font-weight:600}
 .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:.18rem .7rem;
   font-size:.82rem;cursor:pointer;color:var(--muted)}
 .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.sep{color:var(--line)}
 button.act{margin-left:auto;border:1px solid var(--accent);background:var(--accent);color:#fff;
   border-radius:6px;padding:.35rem .8rem;font-size:.85rem;cursor:pointer}
 main{max-width:1180px;margin:0 auto;padding:1rem}
@@ -96,11 +97,15 @@ dialog.zoom img{max-width:96vw;max-height:96vh}dialog.zoom::backdrop{background:
   <h1>Deviation review &mdash; <i>Per la Libertà!</i> &nbsp;
     <span class="prog"><b id="ndone">0</b>/<span id="ntot">0</span> confirmed</span></h1>
   <div class="legend"><b>Original</b> = the 1913 printed page (ground truth) &nbsp;·&nbsp;
-    <b>Derived</b> = our transcription (<code>output/italian_clean.md</code>)</div>
+    <b>Derived</b> = our transcription (<code>output/italian_clean.md</code>) &nbsp;·&nbsp;
+    showing the items needing your judgment first; the confident restores are last.</div>
   <div class="bar">
-    <span class="chip on" data-f="all">All</span>
+    <span class="chip on" data-f="low">Needs judgment</span>
+    <span class="chip" data-f="med">Worth a check</span>
+    <span class="chip" data-f="high">Confident restores</span>
+    <span class="sep">|</span>
+    <span class="chip" data-f="all">All</span>
     <span class="chip" data-f="undecided">Undecided</span>
-    <span class="chip" data-f="restore">Restore</span>
     <span class="chip" data-f="keep">Keep (source typo)</span>
     <span class="chip" data-f="review">Review</span>
     <span class="chip" data-f="omission">Omissions</span>
@@ -117,7 +122,7 @@ const KEY = "pll_deviation_audit_v1";
 const SUGGEST = {restore:"restore", keep:"keep", review:"unsure"};
 let store = {};
 try { store = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e) { store = {}; }
-let filter = "all";
+let filter = "low";
 function esc(s){return (s||"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
 function ctxHTML(it){
   let c = esc(it.sentence||"");
@@ -130,6 +135,7 @@ function matches(it){
   if(filter==="all") return true;
   if(filter==="undecided") return !v.decision;
   if(filter==="nobox") return !it.is_crop;
+  if(["low","med","high"].includes(filter)) return it.conf===filter;
   if(["restore","keep","review"].includes(filter)) return it.action===filter;
   return it.category===filter;
 }
@@ -224,12 +230,30 @@ document.getElementById("export").addEventListener("click",()=>{
   const a=document.createElement("a");a.href=URL.createObjectURL(blob);
   a.download="deviation_audit_results.json";a.click();
 });
+for(const f of ["low","med","high"]){
+  const n=DATA.filter(d=>d.conf===f).length;
+  const c=document.querySelector('.chip[data-f="'+f+'"]');
+  if(c) c.textContent+=" ("+n+")";
+}
 try { render(); }
 catch(e){ document.getElementById("main").innerHTML =
   "<pre style='color:#9a2b2b;white-space:pre-wrap'>render error: "+(e&&e.message)+"\n"+(e&&e.stack)+"</pre>"; }
 </script>
 </body></html>
 """
+
+
+def confidence(it):
+    """Judgment confidence, so the sheet can lead with what needs a human eye.
+    low  = the judge/scan was unsure (review, uncertain, dittography, low-confidence scan)
+    med  = a reversal or third reading worth a glance (keep=source-typo, scan 'other')
+    high = a clear restore (modernization / misread / omission, confidently read)."""
+    sc = (it.get("scan_confidence") or "").lower()
+    if it["action"] == "review" or it["category"] == "uncertain" or sc == "low":
+        return "low"
+    if it["action"] == "keep" or it.get("scan_printed") == "other":
+        return "med"
+    return "high"
 
 
 def main():
@@ -251,11 +275,11 @@ def main():
             "published": it.get("published", ""), "printed": it.get("printed", ""),
             "scan_text": it.get("scan_text", ""), "scan_copy": it.get("scan_copy", ""),
             "scan_confidence": it.get("scan_confidence", ""), "sentence": it.get("sentence", ""),
-            "img": img, "is_crop": is_crop,
+            "img": img, "is_crop": is_crop, "conf": confidence(it),
         })
-    # order: within chapter, restore first, then review, then keep
-    order = {"restore": 0, "review": 1, "keep": 2}
-    items.sort(key=lambda it: (str(it["chapter"]), order.get(it["action"], 3), it["page"]))
+    # order: lowest-confidence first (lead with what needs judgment), then chapter/page
+    corder = {"low": 0, "med": 1, "high": 2}
+    items.sort(key=lambda it: (corder[it["conf"]], str(it["chapter"]), it["page"]))
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(PAGE_TMPL.replace("__DATA__", json.dumps(items, ensure_ascii=False)),
                    encoding="utf-8")
