@@ -1,0 +1,5569 @@
+{
+ "_note": "Candidate deviations from a whole-book low-thinking blind re-read aligned against italian_clean.md. NOT ground truth — each needs scan-adjudication or audit. 'artifacts' (spacing/dash/accent, same letters) are counted, not listed.",
+ "reader": "gemini-3.1-pro-preview",
+ "thinking_level": "low",
+ "pages": 256,
+ "sampled_chars": 631500,
+ "deviations": 926,
+ "artifacts_filtered": 405,
+ "accent_only": 392,
+ "rate_per_10k": 14.66,
+ "worklist": [
+  {
+   "page": 8,
+   "published": "Non",
+   "scan_blind": "Nol",
+   "context": "di Rudio maggiormente dilesse... Non feci. L'adulterare la parola"
+  },
+  {
+   "page": 9,
+   "published": "la tisi",
+   "scan_blind": "l'etisia",
+   "context": "Gli infelici, a cui la tisi rode il cavo petto,"
+  },
+  {
+   "page": 9,
+   "published": "accettano",
+   "scan_blind": "acettano",
+   "context": "qui diventa straordinariamente tenace, accettano come verità indiscutibile, la"
+  },
+  {
+   "page": 9,
+   "published": "Vanno",
+   "scan_blind": "Vanuo",
+   "context": "ogni colpo di tosse. Vanno a sedere all'ombra degli"
+  },
+  {
+   "page": 10,
+   "published": "",
+   "scan_blind": "M'avanzai",
+   "context": "dolorosa di un sepolcreto? Risolutamente... Prima d'alzare la"
+  },
+  {
+   "page": 10,
+   "published": "\"Entri!",
+   "scan_blind": "",
+   "context": "ma ella mi prevenne. \"Entri! Entri, entri! Questa è"
+  },
+  {
+   "page": 10,
+   "published": "amaryllis.",
+   "scan_blind": "amarillis.",
+   "context": "azzurro, un mazzo di amaryllis. La sala dava su"
+  },
+  {
+   "page": 11,
+   "published": "con l'altra",
+   "scan_blind": "coll'altra",
+   "context": "sue faccende... rimasi solo con l'altra signora. Sorseggiavo il caffè"
+  },
+  {
+   "page": 11,
+   "published": "riuscite",
+   "scan_blind": "riescite",
+   "context": "di ritardo le sarebbero riuscite fatali. Figli? Uno solo!"
+  },
+  {
+   "page": 11,
+   "published": "carriera",
+   "scan_blind": "carriere",
+   "context": "Samuele. Desiderava avviarlo alla carriera militare. A West Point,"
+  },
+  {
+   "page": 12,
+   "published": "amaryllis",
+   "scan_blind": "amarillis",
+   "context": "accomodare il mazzo di amaryllis che rosseggiava nel vaso"
+  },
+  {
+   "page": 12,
+   "published": "colle esercitazioni",
+   "scan_blind": "coll'esercitazioni",
+   "context": "armi e gli animi colle esercitazioni e coi frequenti ordini"
+  },
+  {
+   "page": 13,
+   "published": "giorni felici...",
+   "scan_blind": "",
+   "context": "melanconico rimpianto: \"Giorni felici, giorni felici... tramontati pur troppo. Per"
+  },
+  {
+   "page": 13,
+   "published": "celando,",
+   "scan_blind": "celiando,",
+   "context": "inaudito. La buona signora, celando, finì per condurmi nel"
+  },
+  {
+   "page": 14,
+   "published": "innalzato,",
+   "scan_blind": "inalzato,",
+   "context": "immani di un tempio innalzato, nella notte dei secoli,"
+  },
+  {
+   "page": 14,
+   "published": "le alte",
+   "scan_blind": "l'alte",
+   "context": "loro austera rigidezza! Ma le alte cime, adorne di un"
+  },
+  {
+   "page": 15,
+   "published": "scappata",
+   "scan_blind": "scapata",
+   "context": "pronipoti. Ad ogni nostra scappata un po' po', se"
+  },
+  {
+   "page": 15,
+   "published": "ritemprarti",
+   "scan_blind": "ritemprarci",
+   "context": "Biave. Papà, presumeva di ritemprarti in tal modo, nella"
+  },
+  {
+   "page": 15,
+   "published": "Nosaidana",
+   "scan_blind": "Nosadana",
+   "context": "ai pericoli. \"La famiglia Nosaidana vanta personaggi di alto"
+  },
+  {
+   "page": 15,
+   "published": "patrioti",
+   "scan_blind": "patriotti",
+   "context": "e le speranze dei patrioti italiani convergevano a Roma"
+  },
+  {
+   "page": 16,
+   "published": "pianta",
+   "scan_blind": "piantatosi",
+   "context": "caffè. Vede, freme, e pianta audacemente di fronte ai"
+  },
+  {
+   "page": 16,
+   "published": "birichinate",
+   "scan_blind": "biricchinate",
+   "context": "più per le mie birichinate che per le mie"
+  },
+  {
+   "page": 16,
+   "published": "accecato",
+   "scan_blind": "acciecato",
+   "context": "Domini, Colonnello dell'infanteria austriaca, accecato dall'affetto intenso, credeva di"
+  },
+  {
+   "page": 16,
+   "published": "delle idee",
+   "scan_blind": "dell'idee",
+   "context": "e per sottrarmi all'influenza delle idee liberali, che si erano"
+  },
+  {
+   "page": 17,
+   "published": "",
+   "scan_blind": "Metternich",
+   "context": "branco di pecore; perchè non avrebbe potuto fare"
+  },
+  {
+   "page": 17,
+   "published": "nulla altro.",
+   "scan_blind": "null'altro.",
+   "context": "tiranno, fosco tiranno e nulla altro. Nel 1814, quando la"
+  },
+  {
+   "page": 18,
+   "published": "Metternich",
+   "scan_blind": "Meternich",
+   "context": "per ammortizzare quel debito, Metternich ebbe cura di crearsi"
+  },
+  {
+   "page": 18,
+   "published": "nelle anticamere",
+   "scan_blind": "nell'anticamere",
+   "context": "nove milioni di franchi nelle anticamere del Congresso di Vienna."
+  },
+  {
+   "page": 18,
+   "published": "granducato",
+   "scan_blind": "grnducato",
+   "context": "fare la spia. Il granducato di Toscana ed il"
+  },
+  {
+   "page": 18,
+   "published": "\"boia\".",
+   "scan_blind": "\"boja\".",
+   "context": "suoi sudditi soprannominato il \"boia\". Maria Luisa, figlia dell'Imperatore"
+  },
+  {
+   "page": 18,
+   "published": "I.",
+   "scan_blind": "l.",
+   "context": "si assise Vittorio Emanuele I. L'Austria ritenne sotto il"
+  },
+  {
+   "page": 18,
+   "published": "colle armi,",
+   "scan_blind": "coll'armi,",
+   "context": "il diritto di intervenire, colle armi, negli affari d'ogni singolo"
+  },
+  {
+   "page": 19,
+   "published": "auspici",
+   "scan_blind": "auspice",
+   "context": "di Re cristianissimi collegati, auspici il Pontefice, in santa"
+  },
+  {
+   "page": 19,
+   "published": "coprì",
+   "scan_blind": "coperse",
+   "context": "lesa umanità che essa coprì nella notte dei suoi"
+  },
+  {
+   "page": 21,
+   "published": "correggendolo,",
+   "scan_blind": "sorreggendolo,",
+   "context": "mobili che i padri, correggendolo, gli avevano insegnato a"
+  },
+  {
+   "page": 21,
+   "published": "sangue...",
+   "scan_blind": "",
+   "context": "dell'uno e dell'altro sangue... sangue... ma ripercuotono l'imprecazione del"
+  },
+  {
+   "page": 21,
+   "published": "patrioti",
+   "scan_blind": "patriotti",
+   "context": "che trionfa. Mentre i patrioti combattono alle prime file,"
+  },
+  {
+   "page": 22,
+   "published": "seppellì",
+   "scan_blind": "sepellì",
+   "context": "trucidò vecchi e fanciulli, seppellì vivi i prigionieri; legò"
+  },
+  {
+   "page": 23,
+   "published": "arrampicandosi",
+   "scan_blind": "arrampicatosi",
+   "context": "ne uscì correndo e, arrampicandosi sulla verde rampa, si"
+  },
+  {
+   "page": 23,
+   "published": "aguzzini",
+   "scan_blind": "agozzini",
+   "context": "appena fu sopra, gli aguzzini d'Italia vibrarono un'altra baionettata"
+  },
+  {
+   "page": 24,
+   "published": "incagliare",
+   "scan_blind": "incagliarne",
+   "context": "Alberto, che incitava ad incagliare la ritirata, e decisero"
+  },
+  {
+   "page": 25,
+   "published": "ellittica.",
+   "scan_blind": "elittica.",
+   "context": "all'estremità di una piazza ellittica. E come i Croati,"
+  },
+  {
+   "page": 25,
+   "published": "con l'arme",
+   "scan_blind": "coll'arme",
+   "context": "dalla casa stessa, prorompere, con l'arme in pugno, il sozzo"
+  },
+  {
+   "page": 27,
+   "published": "avvivasse",
+   "scan_blind": "ravvivasse",
+   "context": "labbra, nell'inerte cadavere si avvivasse come un rimasuglio d'affetti."
+  },
+  {
+   "page": 27,
+   "published": "patriota",
+   "scan_blind": "patriotta",
+   "context": "quel momento, il giovine patriota cessasse totalmente di fremere."
+  },
+  {
+   "page": 28,
+   "published": "menomare",
+   "scan_blind": "menomarne",
+   "context": "i suoi figli. Dividerla, menomare la forza, era delitto."
+  },
+  {
+   "page": 28,
+   "published": "ingagliardito",
+   "scan_blind": "ringagliardito",
+   "context": "propri diritti, ebbro d'entusiasmo, ingagliardito dalla vittoria? Quali raggiri,"
+  },
+  {
+   "page": 28,
+   "published": "riuscirebbe",
+   "scan_blind": "riescirebbe",
+   "context": "Di quanta maggior gloria riuscirebbe anche oggi, la saggia,"
+  },
+  {
+   "page": 28,
+   "published": "scappata",
+   "scan_blind": "scapata",
+   "context": "egli vuole punito. La scappata è contemplata dai regolamenti"
+  },
+  {
+   "page": 28,
+   "published": "patriota",
+   "scan_blind": "patriotta",
+   "context": "stese la destra al patriota e mi diede una"
+  },
+  {
+   "page": 29,
+   "published": "firmato",
+   "scan_blind": "firmatc",
+   "context": "non mostrassero un permesso firmato dal comandante della Piazza."
+  },
+  {
+   "page": 29,
+   "published": "Oh le acque",
+   "scan_blind": "O' l'acque",
+   "context": "sono fuori di tiro. Oh le acque azzurre dell'Adriatico, oh i"
+  },
+  {
+   "page": 29,
+   "published": "trabiccoli",
+   "scan_blind": "trabaccoli",
+   "context": "azzurre dell'Adriatico, oh i trabiccoli bruni, dondolanti mollemente sulle"
+  },
+  {
+   "page": 29,
+   "published": "trabiccoli",
+   "scan_blind": "trabaccoli",
+   "context": "leggeri come gusci!.. i trabiccoli lambiti dall'ala dei gabbiani,"
+  },
+  {
+   "page": 29,
+   "published": "organizzatici",
+   "scan_blind": "organizzatisi",
+   "context": "rifiutò di arruolarci e organizzatici in manipolo, ci fece"
+  },
+  {
+   "page": 29,
+   "published": "indossata",
+   "scan_blind": "rindossata",
+   "context": "di bianco, che avevo indossata a Ravenna, e barattarla"
+  },
+  {
+   "page": 29,
+   "published": "frustano.",
+   "scan_blind": "frustagno.",
+   "context": "con un abito di frustano. Profondo fu il senso"
+  },
+  {
+   "page": 31,
+   "published": "rivoluzionari",
+   "scan_blind": "rivoluzionri",
+   "context": "sublime. I nostri moti rivoluzionari aprivano allora, o sembrava,"
+  },
+  {
+   "page": 33,
+   "published": "lo attorniavano",
+   "scan_blind": "l'attorniavano",
+   "context": "sua fede in quanti lo attorniavano e gli intellettuali e"
+  },
+  {
+   "page": 34,
+   "published": "stupire",
+   "scan_blind": "stupirne",
+   "context": "di disperato valore da stupire l'Europa ed il mondo,"
+  },
+  {
+   "page": 35,
+   "published": "ridiventare",
+   "scan_blind": "ridiventarne",
+   "context": "ci condusse ripetutamente, a ridiventare padroni; ma il mantenercisi"
+  },
+  {
+   "page": 35,
+   "published": "mantenercisi",
+   "scan_blind": "mantenervisi",
+   "context": "ridiventare padroni; ma il mantenercisi era per noi impresa"
+  },
+  {
+   "page": 35,
+   "published": "della",
+   "scan_blind": "dela",
+   "context": "sera. Quella superba manifestazione della rinascente, virile tempra italiana"
+  },
+  {
+   "page": 35,
+   "published": "spero",
+   "scan_blind": "spetro",
+   "context": "tremolava ancora il roseo spero della fratellanza tra i"
+  },
+  {
+   "page": 36,
+   "published": "nel",
+   "scan_blind": "quel",
+   "context": "sitibondi di vendetta, in nel cantuccio relativamente tranquillo, udii"
+  },
+  {
+   "page": 36,
+   "published": "altezza!",
+   "scan_blind": "alterez za!",
+   "context": "ferite, alteri della loro altezza! L'ordine aspettato non venne."
+  },
+  {
+   "page": 37,
+   "published": "e",
+   "scan_blind": "ed",
+   "context": "Pancrazio, sono mezzo rovinati e in fiamme; ma non"
+  },
+  {
+   "page": 37,
+   "published": "trascinandosi",
+   "scan_blind": "trscinandosi",
+   "context": "a cavallo sulla gradinata, trascinandosi dietro, sin sulla terrazza,"
+  },
+  {
+   "page": 37,
+   "published": "precipitò,",
+   "scan_blind": "precipita,",
+   "context": "dalla nostra febbre, si precipitò, rigurgita come un'ondata impetuosa,"
+  },
+  {
+   "page": 37,
+   "published": "un'ondata",
+   "scan_blind": "fiumana",
+   "context": "si precipitò, rigurgita come un'ondata impetuosa, tra i muri"
+  },
+  {
+   "page": 37,
+   "published": "su",
+   "scan_blind": "se",
+   "context": "il nostro braccio... Avrebbe, su non altro, dimostrato di"
+  },
+  {
+   "page": 37,
+   "published": "sacrifici. Né",
+   "scan_blind": "sacrifizi. Nè",
+   "context": "ma non senza enormi sacrifici. Né i nostri, spossati da"
+  },
+  {
+   "page": 38,
+   "published": "piantandosi",
+   "scan_blind": "piantatosi",
+   "context": "imminente la notte quand'egli, piantandosi di fronte al Reggimento"
+  },
+  {
+   "page": 38,
+   "published": "cartucce,",
+   "scan_blind": "cartuccie,",
+   "context": "sparare le mie ultime cartucce, quando mi vidi passare"
+  },
+  {
+   "page": 38,
+   "published": "8",
+   "scan_blind": "3",
+   "context": "di cervello francese. Il 8 Giugno fu giornata torrida..."
+  },
+  {
+   "page": 39,
+   "published": "intravide,",
+   "scan_blind": "intravvide,",
+   "context": "servo. E fu chi intravide, in quel tentato assassinio,"
+  },
+  {
+   "page": 40,
+   "published": "Fra quel caos,",
+   "scan_blind": "",
+   "context": "Tenebre, confusione, imprecazioni, rantoli... Fra quel caos, Fra quel caos, inciampo"
+  },
+  {
+   "page": 41,
+   "published": "incalzando,",
+   "scan_blind": "rincalzando,",
+   "context": "e dovere d'uccidere. E, incalzando, diceva ai miei giudici:"
+  },
+  {
+   "page": 41,
+   "published": "la",
+   "scan_blind": "l'identica",
+   "context": "canto suo, a fornire la prova... Militi e prigionieri"
+  },
+  {
+   "page": 42,
+   "published": "io",
+   "scan_blind": "",
+   "context": "barbarico; ma che allora io ritenevo non difettasse di"
+  },
+  {
+   "page": 43,
+   "published": "Rifiutai! Perchè?",
+   "scan_blind": "",
+   "context": "di sottotenente nei Bersaglieri. Rifiutai! Perchè? Rifiutai! Perchè? Le subitanee"
+  },
+  {
+   "page": 43,
+   "published": "un",
+   "scan_blind": "",
+   "context": "miei imbarazzi. Era morto un repubblicano di grido. I"
+  },
+  {
+   "page": 43,
+   "published": "riuscirono",
+   "scan_blind": "riescirono",
+   "context": "grido. I suoi funerali riuscirono memorabili per lo straordinario"
+  },
+  {
+   "page": 43,
+   "published": "all'obbiezione",
+   "scan_blind": "all’abbiezione",
+   "context": "acri, con aperte allusioni all'obbiezione monarchica ed alle speranze"
+  },
+  {
+   "page": 43,
+   "published": "subisso",
+   "scan_blind": "subbisso",
+   "context": "riposte nell'avvenire. Suscitarono un subisso di approvazioni. Ad un"
+  },
+  {
+   "page": 43,
+   "published": "accolse",
+   "scan_blind": "accoglie",
+   "context": "vivo a Genova, li accolse a sassate e li"
+  },
+  {
+   "page": 43,
+   "published": "inferocì.",
+   "scan_blind": "inferocisce.",
+   "context": "a sassate e li inferocì. Allora le vene dei"
+  },
+  {
+   "page": 44,
+   "published": "Tarragona.",
+   "scan_blind": "Terragona.",
+   "context": "a Saragozza, poi a Tarragona. Il Trolli diede prova"
+  },
+  {
+   "page": 44,
+   "published": "grucce",
+   "scan_blind": "gruccie",
+   "context": "sciancato che s'appoggiava sulle grucce e che sbarcava il"
+  },
+  {
+   "page": 44,
+   "published": "colori,",
+   "scan_blind": "colcri,",
+   "context": "aver dipinta, a vividi colori, la triste vita dell'esule,"
+  },
+  {
+   "page": 45,
+   "published": "odiandomi,",
+   "scan_blind": "odiandosi,",
+   "context": "un giorno, pur non odiandomi, si sono trovati di"
+  },
+  {
+   "page": 45,
+   "published": "Montpellier.",
+   "scan_blind": "Monpellier.",
+   "context": "si protrasse sino a Montpellier. La politica misteriosa, che"
+  },
+  {
+   "page": 46,
+   "published": "colle arti",
+   "scan_blind": "coll'arti",
+   "context": "Napoleone I e giungervi colle arti di Giulio Cesare. Lo"
+  },
+  {
+   "page": 48,
+   "published": "ricambiare",
+   "scan_blind": "ricambiarne",
+   "context": "le speranze, esserne compartecipi; ricambiare di schietto amore, l'amore;"
+  },
+  {
+   "page": 48,
+   "published": "dirozzare",
+   "scan_blind": "dirozzarne",
+   "context": "di schietto amore, l'amore; dirozzare fraternamente l'intelletto capace, ma"
+  },
+  {
+   "page": 48,
+   "published": "passo,",
+   "scan_blind": "",
+   "context": "2 Dicembre. Affrettando il passo, due Dicembre 1851, recandoci"
+  },
+  {
+   "page": 48,
+   "published": "ci fermammo.",
+   "scan_blind": "",
+   "context": "Bastiglia era occupata militarmente; ci fermammo. Fanteria e cannoni. I"
+  },
+  {
+   "page": 48,
+   "published": "botto",
+   "scan_blind": "Batignolle,",
+   "context": "fuori della barriera, di botto un via vai di"
+  },
+  {
+   "page": 48,
+   "published": "",
+   "scan_blind": "Municipali.",
+   "context": "una siepe di Guardie. Vedemmo i brutalmente paghi"
+  },
+  {
+   "page": 48,
+   "published": "brutalmente paghi",
+   "scan_blind": "compagni",
+   "context": "di Guardie. Vedemmo i brutalmente paghi addetti alla fabbricazione delle"
+  },
+  {
+   "page": 48,
+   "published": "Immantinente",
+   "scan_blind": "Inimantinenti",
+   "context": "come pecore, ad agire. Immantinente i mobili sono accatastati"
+  },
+  {
+   "page": 48,
+   "published": "innalzare",
+   "scan_blind": "inalzare",
+   "context": "si lavora febbrilmente ad innalzare una barricata. Un fazzoletto"
+  },
+  {
+   "page": 48,
+   "published": "volte",
+   "scan_blind": "",
+   "context": "due volte e due volte respinto. Al terzo, il"
+  },
+  {
+   "page": 49,
+   "published": "sbandarsi.",
+   "scan_blind": "sbandarci.",
+   "context": "nostro sacrificio? Decidemmo di sbandarsi. Il fazzoletto rosso, continuando"
+  },
+  {
+   "page": 49,
+   "published": "afferrandolo",
+   "scan_blind": "atterrandolo",
+   "context": "schernito, se ne vendicò afferrandolo con un calcio... non"
+  },
+  {
+   "page": 49,
+   "published": "folle",
+   "scan_blind": "colle",
+   "context": "la milizia faceva sgombrare, folle baionette, l'aula dell'Assemblea Nazionale"
+  },
+  {
+   "page": 50,
+   "published": "lì,",
+   "scan_blind": "",
+   "context": "grandezza. Furono visti affrontare lì, coi discorsi, i soldati"
+  },
+  {
+   "page": 50,
+   "published": "",
+   "scan_blind": "“Voi",
+   "context": "positiva. Alludo a Proudhon. \"Siete vittime delle vostre"
+  },
+  {
+   "page": 50,
+   "published": "così,",
+   "scan_blind": "coll'inazione,",
+   "context": "natura l'accoglierle; lo spianare, così, la via maestra al"
+  },
+  {
+   "page": 51,
+   "published": "tentacoli.",
+   "scan_blind": "succhioni.",
+   "context": "e dà forza ai tentacoli. Ma se nell'Assemblea fosse"
+  },
+  {
+   "page": 51,
+   "published": "innalzare",
+   "scan_blind": "inalzare",
+   "context": "il Popolo parigino ad innalzare le barricate, a combattere"
+  },
+  {
+   "page": 51,
+   "published": "vetri",
+   "scan_blind": "veltri",
+   "context": "silenzio, forzatamente immoti, quasi vetri al guinzaglio. D'improvviso, partito"
+  },
+  {
+   "page": 51,
+   "published": "innocuo",
+   "scan_blind": "inocuo",
+   "context": "caccia spietata al cittadino innocuo che attendeva quietamente ai"
+  },
+  {
+   "page": 51,
+   "published": "all'ubriacatura dell'alcool,",
+   "scan_blind": "all’ubbriacatura dell’alcool,",
+   "context": "di strage. Aggiuntasi presto, all'ubriacatura dell'alcool, quella del sangue, lo"
+  },
+  {
+   "page": 51,
+   "published": "infocare",
+   "scan_blind": "rinfocare",
+   "context": "fanciulli. Furon visti soldati infocare la smania dell'assassinio torturando"
+  },
+  {
+   "page": 52,
+   "published": "carnefice.",
+   "scan_blind": "carname.",
+   "context": "placa la smania del carnefice. Le prigioni rigurgitano di"
+  },
+  {
+   "page": 52,
+   "published": "tracce",
+   "scan_blind": "traccie",
+   "context": "umano, scorrendovi, lasci scarse tracce e non riveli l'enormità"
+  },
+  {
+   "page": 53,
+   "published": "campagnolo",
+   "scan_blind": "campagnuolo",
+   "context": "aveva l'aria di un campagnolo dabbene e senza fegato."
+  },
+  {
+   "page": 53,
+   "published": "dabbene",
+   "scan_blind": "dabben",
+   "context": "il suo trotto, il dabbene uomo ci domandò dove"
+  },
+  {
+   "page": 54,
+   "published": "\"Sacre coeur!\"",
+   "scan_blind": "\"Sacré cœur!\"",
+   "context": "duro sonno del contadino. \"Sacre coeur!\" esclamò dopo aver ficcato"
+  },
+  {
+   "page": 54,
+   "published": "Langres,",
+   "scan_blind": "Langre,",
+   "context": "sulla diligenza, sino a Langres, la località, ove le"
+  },
+  {
+   "page": 54,
+   "published": "Langres",
+   "scan_blind": "Langre",
+   "context": "sotto l'atrio dell'albergo di Langres e già mi avviavo"
+  },
+  {
+   "page": 54,
+   "published": "consegnargliela...",
+   "scan_blind": "consegnarglela....",
+   "context": "incarico io stessa di consegnargliela... nelle sue proprie mani."
+  },
+  {
+   "page": 54,
+   "published": "dinanzi",
+   "scan_blind": "d'innanzi",
+   "context": "seduto nella sala dell'albergo, dinanzi al caminetto e conversavo"
+  },
+  {
+   "page": 55,
+   "published": "",
+   "scan_blind": "d'altra parte l'ordine ricevuto era quello di sequestrare lo scritto",
+   "context": "contraria ai suoi difensori; e, seguiti dalla signora,"
+  },
+  {
+   "page": 55,
+   "published": "",
+   "scan_blind": "non d'arrestarne il latore. \"Andremo per istruzioni più precise.\" Uscirono,",
+   "context": "ai suoi difensori; e, seguiti dalla signora, scornata"
+  },
+  {
+   "page": 55,
+   "published": "uscirono",
+   "scan_blind": "",
+   "context": "e quasi in lagrime, uscirono e più non li"
+  },
+  {
+   "page": 55,
+   "published": "frangio,",
+   "scan_blind": "frangie,",
+   "context": "non si cristallizzava, in frangio, attorno al nostro cuore."
+  },
+  {
+   "page": 55,
+   "published": "sgambetto",
+   "scan_blind": "sgambietto",
+   "context": "e, involontariamente, dava lo sgambetto ad una guardia che"
+  },
+  {
+   "page": 55,
+   "published": "afferratelo",
+   "scan_blind": "afferratolo",
+   "context": "perdere la pazienza e afferratelo pel bavero se lo"
+  },
+  {
+   "page": 55,
+   "published": "con la",
+   "scan_blind": "colla",
+   "context": "vociai il mio saluto con la vivacità di un ragazzo"
+  },
+  {
+   "page": 56,
+   "published": "gagliardamente",
+   "scan_blind": "gagliardemente",
+   "context": "nei secoli andati, batteva gagliardamente tra le Alpi; ma"
+  },
+  {
+   "page": 56,
+   "published": "e",
+   "scan_blind": "ed",
+   "context": "strumento di malvagi, carne e anime vendute! L'egoismo è"
+  },
+  {
+   "page": 57,
+   "published": "buon",
+   "scan_blind": "suon",
+   "context": "luterani, per racimolare, a buon di baiocchi, il pugno"
+  },
+  {
+   "page": 57,
+   "published": "",
+   "scan_blind": "sacro",
+   "context": "rimpatriare un avversario del vecchiume!.. il mio duplice"
+  },
+  {
+   "page": 57,
+   "published": "avanzai",
+   "scan_blind": "scesi",
+   "context": "d'odio e d'amore. E avanzai quasi di corsa, col"
+  },
+  {
+   "page": 58,
+   "published": "lacrimando,",
+   "scan_blind": "lagrimando,",
+   "context": "di Giuseppe Mazzini e, lacrimando, ripresi la via dell'esilio."
+  },
+  {
+   "page": 59,
+   "published": "confessarli",
+   "scan_blind": "sconfessarli",
+   "context": "prepotenti, non avesse preferito confessarli e prestare anche mano"
+  },
+  {
+   "page": 59,
+   "published": "buon",
+   "scan_blind": "",
+   "context": "prisma del mondo romano buon al livello di Attilio"
+  },
+  {
+   "page": 59,
+   "published": "valuto",
+   "scan_blind": "voluto",
+   "context": "Scipioni, dei Gracchi avrebbe valuto inalzare l'intera nostra razza."
+  },
+  {
+   "page": 60,
+   "published": "or",
+   "scan_blind": "o",
+   "context": "uomo non ne fu, or tanto o quanto, vittima?"
+  },
+  {
+   "page": 60,
+   "published": "suscitarmi",
+   "scan_blind": "suscitarvi",
+   "context": "più non riescono a suscitarmi tempesta alcuna. Conosco audaci"
+  },
+  {
+   "page": 60,
+   "published": "mostrarsi",
+   "scan_blind": "mostrarsene",
+   "context": "per l'acre piacere di mostrarsi superiori. Ma quella era"
+  },
+  {
+   "page": 60,
+   "published": "incappai,",
+   "scan_blind": "incapai;",
+   "context": "impiccato!\" Nella forca non incappai, ma le passai, più"
+  },
+  {
+   "page": 60,
+   "published": "e",
+   "scan_blind": "ed",
+   "context": "riportata a villa Corsini) e a quel Winkler già"
+  },
+  {
+   "page": 61,
+   "published": "eccitamento.",
+   "scan_blind": "esaltamento.",
+   "context": "fu causa di piacevole eccitamento. Ma passato, coll'aiuto di"
+  },
+  {
+   "page": 61,
+   "published": "riconquistate",
+   "scan_blind": "riconquistatele",
+   "context": "sue armi, e l'altre riconquistate dall'armi alleate della Russia,"
+  },
+  {
+   "page": 61,
+   "published": "gratificare",
+   "scan_blind": "gratificarle",
+   "context": "esse un odio barbarico, gratificare delle più atroci vendette"
+  },
+  {
+   "page": 61,
+   "published": "e",
+   "scan_blind": "",
+   "context": "concentrata in un uomo, e sul suo capo, per"
+  },
+  {
+   "page": 62,
+   "published": "dovizia",
+   "scan_blind": "dovizie",
+   "context": "farlo, ne trovai a dovizia in ogni centro. La"
+  },
+  {
+   "page": 63,
+   "published": "intravide",
+   "scan_blind": "intravvide",
+   "context": "ignorava il perchè... egli intravide un nesso tra quei"
+  },
+  {
+   "page": 63,
+   "published": "",
+   "scan_blind": "glorioso",
+   "context": "a morte inumana il manipolo dei martiri di"
+  },
+  {
+   "page": 63,
+   "published": "e",
+   "scan_blind": "",
+   "context": "se non notizie vaghe, e con esse un soffio"
+  },
+  {
+   "page": 63,
+   "published": "nel",
+   "scan_blind": "n",
+   "context": "poter passare la notte nel proprio letto. Mi coricai"
+  },
+  {
+   "page": 63,
+   "published": "sgualciscono",
+   "scan_blind": "gualciscono",
+   "context": "prima giovinezza non si sgualciscono per passare degli anni."
+  },
+  {
+   "page": 64,
+   "published": "Piccando",
+   "scan_blind": "Ficcando",
+   "context": "quello della \"Regina d'Inghilterra.\" Piccando il viso in giù,"
+  },
+  {
+   "page": 64,
+   "published": "Lungo esse",
+   "scan_blind": "Lungh'esse",
+   "context": "disastro toccò alle tegole. Lungo esse strisciai e giunto all'orlo,"
+  },
+  {
+   "page": 64,
+   "published": "sguatteri",
+   "scan_blind": "guatteri",
+   "context": "cucina della \"Regina d'Inghilterra:\" sguatteri ed inservienti, affaccendati, non"
+  },
+  {
+   "page": 64,
+   "published": "sguattero.",
+   "scan_blind": "guattero.",
+   "context": "per l'amico di qualche sguattero. In pochi secondi mi"
+  },
+  {
+   "page": 65,
+   "published": "Coperto",
+   "scan_blind": "Coperchio",
+   "context": "e precisamente sotto il Coperto dei Figini, risuonò, nel"
+  },
+  {
+   "page": 65,
+   "published": "squagliarmela",
+   "scan_blind": "squagliarmi",
+   "context": "destra, lasciandomi libero di squagliarmela silenziosamente a sinistra. Ma"
+  },
+  {
+   "page": 67,
+   "published": "propriia",
+   "scan_blind": "propria",
+   "context": "quest'altra: \"Per acquistare la propriia indipendenza, per rivendicare i"
+  },
+  {
+   "page": 67,
+   "published": "propri",
+   "scan_blind": "proprii",
+   "context": "indipendenza, per rivendicare i propri diritti, nulla di meglio"
+  },
+  {
+   "page": 67,
+   "published": "",
+   "scan_blind": "a un dipresso",
+   "context": "di maturare gli eventi, come matura le zucche.\""
+  },
+  {
+   "page": 67,
+   "published": "giaciglio",
+   "scan_blind": "giacilio",
+   "context": "non di acconciarsi un giaciglio nei fatti compiuti e"
+  },
+  {
+   "page": 67,
+   "published": "maestrevolmente",
+   "scan_blind": "maestevolmente",
+   "context": "mai mentito, le saltano maestrevolmente di piè pari e"
+  },
+  {
+   "page": 68,
+   "published": "entro",
+   "scan_blind": "entre",
+   "context": "era, tra l'altro, insediata, entro le mura di Milano,"
+  },
+  {
+   "page": 68,
+   "published": "",
+   "scan_blind": "o",
+   "context": "le membra nel cortile, fumando nelle camerate. Alle"
+  },
+  {
+   "page": 68,
+   "published": "",
+   "scan_blind": "o",
+   "context": "avevano stanza cento sgherri giù di lì; ma"
+  },
+  {
+   "page": 68,
+   "published": "delle uniformi",
+   "scan_blind": "dell'uniformi",
+   "context": "da quel centro, vestite delle uniformi tolte d'addosso ai morti"
+  },
+  {
+   "page": 68,
+   "published": "riuscita;",
+   "scan_blind": "riescita;",
+   "context": "così maggiore probabilità di riuscita; agio maggiore i nostri"
+  },
+  {
+   "page": 69,
+   "published": "innalzava,",
+   "scan_blind": "inalzava,",
+   "context": "per proteggere chi le innalzava, si era impegnato a"
+  },
+  {
+   "page": 69,
+   "published": "ch'i",
+   "scan_blind": "che",
+   "context": "l'incarico a Fortunato Calvi ch'i meditò di impossessarsi del"
+  },
+  {
+   "page": 69,
+   "published": "barche",
+   "scan_blind": "barcaccie",
+   "context": "Persino i chiodi delle barche del loro Naviglio vennero"
+  },
+  {
+   "page": 70,
+   "published": "lì",
+   "scan_blind": "avvenuto",
+   "context": "nulla di insolito fosse lì che indicasse scoperti i"
+  },
+  {
+   "page": 70,
+   "published": "rivolgere",
+   "scan_blind": "rivolgerne",
+   "context": "Poi, rimorchiatele al largo, rivolgere le bocche omicide contro"
+  },
+  {
+   "page": 70,
+   "published": "provenenti",
+   "scan_blind": "provenienti",
+   "context": "l'armi e gli armati provenenti dal Piemonte, avrebbero trovato"
+  },
+  {
+   "page": 70,
+   "published": "e alpino",
+   "scan_blind": "ed opalino",
+   "context": "del paesaggio, tutto verde e alpino malgrado l'inverno, mi fece"
+  },
+  {
+   "page": 70,
+   "published": "caotiche",
+   "scan_blind": "esotiche",
+   "context": "l'assito; udii le voci caotiche uscire dal legno profondo"
+  },
+  {
+   "page": 71,
+   "published": "con",
+   "scan_blind": "colle",
+   "context": "sarebbe perso nell'indugiare; nell'accertare, con debite cautele, l'umore d'un"
+  },
+  {
+   "page": 71,
+   "published": "celermente",
+   "scan_blind": "celeramente",
+   "context": "piroscafo piemontese e ridiscendevo celermente il Verbano. Sander e"
+  },
+  {
+   "page": 71,
+   "published": "diacciato",
+   "scan_blind": "diaccio",
+   "context": "Alpi soffiava un vento diacciato che aveva come spazzata"
+  },
+  {
+   "page": 71,
+   "published": "imbaccuccata,",
+   "scan_blind": "imbacuccata,",
+   "context": "pendici. Trovai sull'Arno gente imbaccuccata, dall'aria egoisticamente pensosa; facce"
+  },
+  {
+   "page": 72,
+   "published": "della",
+   "scan_blind": "delia",
+   "context": "nome e le sofferenze della Patria? Risposi a me"
+  },
+  {
+   "page": 72,
+   "published": "un",
+   "scan_blind": "ur",
+   "context": "di sì e commisi un grave errore. Egli si"
+  },
+  {
+   "page": 72,
+   "published": "Egli",
+   "scan_blind": "Egii",
+   "context": "commisi un grave errore. Egli si era improvvisamente alzato"
+  },
+  {
+   "page": 72,
+   "published": "ubriachi,",
+   "scan_blind": "ubbriachi,",
+   "context": "parvero imbevuti, e quasi ubriachi, di commiserazione cretina e"
+  },
+  {
+   "page": 72,
+   "published": "",
+   "scan_blind": "I fratelli?",
+   "context": "su un tavolo. Ripresi: Tutti qui e nei"
+  },
+  {
+   "page": 72,
+   "published": "",
+   "scan_blind": "E Mazzini?",
+   "context": "l'armi ed il segnale. Ebbi sue nuove da"
+  },
+  {
+   "page": 74,
+   "published": "ballonzolava",
+   "scan_blind": "sballonzolava",
+   "context": "la nostra fragile imbarcazione ballonzolava all'impazzata. Mi accorsi presto"
+  },
+  {
+   "page": 74,
+   "published": "barcaioli,",
+   "scan_blind": "barcaiuoli,",
+   "context": "le spalle ai due barcaioli, dovetti rassegnarmi a tenere"
+  },
+  {
+   "page": 74,
+   "published": "scalfivano,",
+   "scan_blind": "scalifivano,",
+   "context": "di ghiaccio che la scalfivano, che mi tormentavano gli"
+  },
+  {
+   "page": 75,
+   "published": "raggranellato",
+   "scan_blind": "ragranellato",
+   "context": "sotto la sferza avevano raggranellato quell'oro... pane sottratto alla"
+  },
+  {
+   "page": 76,
+   "published": "riuscirmi",
+   "scan_blind": "riescirmi",
+   "context": "non altrettanto facile doveva riuscirmi l'essere presentato all'uomo. L'ambiente,"
+  },
+  {
+   "page": 76,
+   "published": "intravidi",
+   "scan_blind": "intravvidi",
+   "context": "avvicinò, curvo e sommesso, intravidi il cospiratore pronto a"
+  },
+  {
+   "page": 77,
+   "published": "esile",
+   "scan_blind": "esilo",
+   "context": "impeti, anche in un esile petto. Si suole ammonire:"
+  },
+  {
+   "page": 77,
+   "published": "oppressione,",
+   "scan_blind": "abbiezione,",
+   "context": "quando l'odio della presente oppressione, gli impulsi virili, il"
+  },
+  {
+   "page": 77,
+   "published": "col",
+   "scan_blind": "tol",
+   "context": "spettatori neghittosi? Dimostreremo noi, col nostro egoismo, al nemico"
+  },
+  {
+   "page": 78,
+   "published": "occorrendo,",
+   "scan_blind": "occorrrendo,",
+   "context": "un uomo che preferisca, occorrendo, morire coll'armi in pugno,"
+  },
+  {
+   "page": 78,
+   "published": "parricida",
+   "scan_blind": "parricide",
+   "context": "meglio per oppormi all'armi parricida di Napoleone. E Fortunato"
+  },
+  {
+   "page": 78,
+   "published": "quei",
+   "scan_blind": "quelli",
+   "context": "calanti in Lombardia e quei che, dal Regno, penetravano"
+  },
+  {
+   "page": 78,
+   "published": "immagini",
+   "scan_blind": "imagini",
+   "context": "in disparte, osservavo alcune immagini impastate alla parete. Poi"
+  },
+  {
+   "page": 78,
+   "published": "",
+   "scan_blind": "e si ribevette",
+   "context": "bevette alla salute reciproca e si bevette ancora."
+  },
+  {
+   "page": 80,
+   "published": "vistosi",
+   "scan_blind": "vistisi",
+   "context": "I pochi animosi appostati, vistosi in numero troppo esiguo,"
+  },
+  {
+   "page": 81,
+   "published": "\"blouse\"?",
+   "scan_blind": "''blouses''?",
+   "context": "far causa comune colle \"blouse\"? Non arrischiavano i figli"
+  },
+  {
+   "page": 82,
+   "published": "",
+   "scan_blind": "suoi",
+   "context": "sempre più cieca ai veri interessi, la risospinsero"
+  },
+  {
+   "page": 82,
+   "published": "dei",
+   "scan_blind": "degli",
+   "context": "nostri errori colla dinamica dei errori suoi, maggiori ed"
+  },
+  {
+   "page": 82,
+   "published": "",
+   "scan_blind": "Biasi,",
+   "context": "Saporiti, Pietro Colla, Angelo Benedetto Diotti, Alessandro Silva,"
+  },
+  {
+   "page": 82,
+   "published": "",
+   "scan_blind": "Angelo",
+   "context": "Benedetto Diotti, Alessandro Silva, Galimberti."
+  },
+  {
+   "page": 83,
+   "published": "amanuense,",
+   "scan_blind": "ammanuense,",
+   "context": "Fummo presentati al suo amanuense, certo Bardini padovano, studente"
+  },
+  {
+   "page": 83,
+   "published": "immagini",
+   "scan_blind": "imagini",
+   "context": "laboriosa era turbata da immagini terribili. L'Austria inferociva ed"
+  },
+  {
+   "page": 83,
+   "published": "una",
+   "scan_blind": "une",
+   "context": "allora, presso Regent's Circus, una specie di Corte. Trovai"
+  },
+  {
+   "page": 83,
+   "published": "questuanti",
+   "scan_blind": "questuati",
+   "context": "larghe cicatrici; figure incerte, questuanti col pretesto della Patria."
+  },
+  {
+   "page": 84,
+   "published": "nient'altro",
+   "scan_blind": "null'altro",
+   "context": "spezzato; ma sempre Kossuth, nient'altro che Kossuth! Finalmente fra"
+  },
+  {
+   "page": 84,
+   "published": "Finalmente",
+   "scan_blind": "Finalmnte",
+   "context": "Kossuth, nient'altro che Kossuth! Finalmente fra tanti simulacri, apparve"
+  },
+  {
+   "page": 84,
+   "published": "gettala,",
+   "scan_blind": "lettala,",
+   "context": "ritto sulla soglia e, gettala, trasse di tasca un"
+  },
+  {
+   "page": 84,
+   "published": "",
+   "scan_blind": "indarno",
+   "context": "cui nome vo cercando nei ripostigli della memoria."
+  },
+  {
+   "page": 85,
+   "published": "sul",
+   "scan_blind": "ogni",
+   "context": "versi: \"Mazzini è in sul loco ove si trema"
+  },
+  {
+   "page": 85,
+   "published": "opera",
+   "scan_blind": "spera",
+   "context": "ogni loco ove si opera \"Versar il sangue per"
+  },
+  {
+   "page": 86,
+   "published": "come ricompense...",
+   "scan_blind": "dalla ricompensa...",
+   "context": "riesce... saremo, probabilmente, pareggiati come ricompense... il martirio!\" Il mio"
+  },
+  {
+   "page": 86,
+   "published": "",
+   "scan_blind": "speciale",
+   "context": "Il mio incarico preliminare era quello di recarmi"
+  },
+  {
+   "page": 86,
+   "published": "Treviso",
+   "scan_blind": "Trevis",
+   "context": "recarmi nella vallata del Treviso e d'abboccarmi con certi"
+  },
+  {
+   "page": 86,
+   "published": "dalle Alpi...",
+   "scan_blind": "dall'Alpi...",
+   "context": "il segnale per scendere dalle Alpi... Fortunato Calvi, guidandoli, ne"
+  },
+  {
+   "page": 86,
+   "published": "diretto",
+   "scan_blind": "dirette",
+   "context": "Calvi, guidandoli, ne avrebbe diretto le sorti. Il colosso"
+  },
+  {
+   "page": 86,
+   "published": "Stefano,",
+   "scan_blind": "Stefane,",
+   "context": "vecchia chiesa di Santo Stefano, solido edificio eretto per"
+  },
+  {
+   "page": 86,
+   "published": "al",
+   "scan_blind": "alto",
+   "context": "si stende un parapetto al così che un uomo,"
+  },
+  {
+   "page": 86,
+   "published": "camminandoci",
+   "scan_blind": "camminandovi",
+   "context": "così che un uomo, camminandoci rasente e carponi, non"
+  },
+  {
+   "page": 86,
+   "published": "guardia;",
+   "scan_blind": "guardie. A",
+   "context": "ed era lasciato senza guardia; custodia dell'edificio, un esiguo"
+  },
+  {
+   "page": 86,
+   "published": "colpo",
+   "scan_blind": "corpo",
+   "context": "custodia dell'edificio, un esiguo colpo di militi, di stanza"
+  },
+  {
+   "page": 86,
+   "published": "agguato",
+   "scan_blind": "aguato",
+   "context": "pugno dei nostri, in agguato presso il portone; un"
+  },
+  {
+   "page": 86,
+   "published": "appiattirsi",
+   "scan_blind": "appiattarsi",
+   "context": "manipolo di patriotti doveva appiattirsi presso la Caserma dei"
+  },
+  {
+   "page": 86,
+   "published": "\"tourniquet\"",
+   "scan_blind": "“tourniquin”",
+   "context": "via circolare rampante; un \"tourniquet\" come lo chiamano gli"
+  },
+  {
+   "page": 86,
+   "published": "birichini.",
+   "scan_blind": "biricchini.",
+   "context": "di bambinaie e di birichini. Regola generale, quando suonava"
+  },
+  {
+   "page": 86,
+   "published": "",
+   "scan_blind": "gli",
+   "context": "autorità civili ed ecclesiastiche... ostaggi! Poi sequestriamo i"
+  },
+  {
+   "page": 86,
+   "published": "Osoppo",
+   "scan_blind": "Osopo,",
+   "context": "sino alla fortezza di Osoppo nel Friuli, facendo prigionieri"
+  },
+  {
+   "page": 87,
+   "published": "ventidue",
+   "scan_blind": "diventati",
+   "context": "latino prorompe. Sui baluardi, ventidue nostri, innalziamo la nostra"
+  },
+  {
+   "page": 87,
+   "published": "innalziamo",
+   "scan_blind": "inalberiamo",
+   "context": "Sui baluardi, ventidue nostri, innalziamo la nostra bandiera e"
+  },
+  {
+   "page": 87,
+   "published": "forse anche,",
+   "scan_blind": "fors'anche,",
+   "context": "Venezia, l'Ungheria, la Francia forse anche, assecondano il moto... oppressi"
+  },
+  {
+   "page": 87,
+   "published": "",
+   "scan_blind": "un'altra volta",
+   "context": "oppressi ed oppressori misurano le forze. Gli errori"
+  },
+  {
+   "page": 87,
+   "published": "",
+   "scan_blind": "proprie",
+   "context": "ed oppressori misurano le forze. Gli errori del"
+  },
+  {
+   "page": 87,
+   "published": "",
+   "scan_blind": "Se",
+   "context": "oppressori misurano le forze. Gli errori del passato"
+  },
+  {
+   "page": 89,
+   "published": "e tondetta",
+   "scan_blind": "cadorina",
+   "context": "di don Bastiano, bella e tondetta dai fianchi procaci e"
+  },
+  {
+   "page": 89,
+   "published": "imposte",
+   "scan_blind": "impannate",
+   "context": "poppe impertinenti. Aperse le imposte e sussurrò nella notte:"
+  },
+  {
+   "page": 89,
+   "published": "",
+   "scan_blind": "Novità forse?",
+   "context": "disperavo della tua salvezza.\" Se le sevizie degli"
+  },
+  {
+   "page": 89,
+   "published": "",
+   "scan_blind": "E papà e la famiglia?",
+   "context": "sia piovuto dal cielo! Salvi... anno a poche"
+  },
+  {
+   "page": 89,
+   "published": "anno",
+   "scan_blind": "sino",
+   "context": "piovuto dal cielo! Salvi... anno a poche ore or"
+  },
+  {
+   "page": 90,
+   "published": "ed andai...",
+   "scan_blind": "",
+   "context": "via di campo, uscii ed andai... Una grande oscurità, un"
+  },
+  {
+   "page": 90,
+   "published": "in autunno,",
+   "scan_blind": "l'autunno,",
+   "context": "fatte, in sua compagnia, in autunno, lungo l'Ardo, attraverso i"
+  },
+  {
+   "page": 90,
+   "published": "riuscirmi",
+   "scan_blind": "riescirmi",
+   "context": "a tal segno da riuscirmi penosissima. Decisi di troncarla."
+  },
+  {
+   "page": 90,
+   "published": "né fiori.",
+   "scan_blind": "nè onori.",
+   "context": "mi aspettavo né feste, né fiori. La sottomissione passiva non"
+  },
+  {
+   "page": 90,
+   "published": "disseppellire",
+   "scan_blind": "disepellire",
+   "context": "Fu deciso di non disseppellire le armi sinché l'animo"
+  },
+  {
+   "page": 90,
+   "published": "altare,",
+   "scan_blind": "alture,",
+   "context": "il piano confina colle altare, sorgeva un castagno secolare"
+  },
+  {
+   "page": 91,
+   "published": "mormora",
+   "scan_blind": "risparmiati da",
+   "context": "sangue e quanti rimorsi mormora un istante d'esitazione! Un'ombra"
+  },
+  {
+   "page": 92,
+   "published": "sono",
+   "scan_blind": "",
+   "context": "nostri amici, i migliori, sono arrestati; don Bastiano è"
+  },
+  {
+   "page": 92,
+   "published": "è anche lui",
+   "scan_blind": "",
+   "context": "sono arrestati; don Bastiano è anche lui arrestato. Tiriamo la somma:"
+  },
+  {
+   "page": 92,
+   "published": "Tiriamo la somma:",
+   "scan_blind": "",
+   "context": "è anche lui arrestato. Tiriamo la somma: il povero Achille ha"
+  },
+  {
+   "page": 92,
+   "published": "Achille ha lasciato l'ossa a Venezia; tu sei indubbiamente ricercato dalla Polizia.\"",
+   "scan_blind": "papà... arrestato!\"",
+   "context": "la somma: il povero Achille ha lasciato l'ossa a Venezia; tu sei indubbiamente ricercato dalla Polizia.\" E continuando, mi narrò"
+  },
+  {
+   "page": 92,
+   "published": "avvedercene",
+   "scan_blind": "avvedersene",
+   "context": "mamma avesse tempo di avvedercene e di reagire, l'avevo"
+  },
+  {
+   "page": 92,
+   "published": "abbracciatela",
+   "scan_blind": "abbracciatala",
+   "context": "la santa donna e abbracciatela le impressi sulla fronte"
+  },
+  {
+   "page": 92,
+   "published": "di Domenico. Quei",
+   "scan_blind": "",
+   "context": "si costruiva una casa di Domenico. Quei travi e mattoni accatastati"
+  },
+  {
+   "page": 93,
+   "published": "velo nero. Il soldato",
+   "scan_blind": "barbone, quando affrontavi le cannonate a Venezia ed a Roma?\" Dovetti,",
+   "context": "che sfavillavano sotto il velo nero. Il soldato in corpetto soffiò l'alito"
+  },
+  {
+   "page": 93,
+   "published": "rivelare la profondità di un cuore. Dovetti",
+   "scan_blind": "quell'ora,",
+   "context": "solo!.. ma bastò a rivelare la profondità di un cuore. Dovetti adoperarmi per calmare quella"
+  },
+  {
+   "page": 93,
+   "published": "con voce, nella quale vibrava la sorda minaccia",
+   "scan_blind": "non fu poca impresa. Vinsi a stento, insistendo sulla scorrettezza",
+   "context": "quella febbre giovanile e con voce, nella quale vibrava la sorda minaccia di un popolo intero,"
+  },
+  {
+   "page": 93,
+   "published": "",
+   "scan_blind": "di",
+   "context": "poco. Io non intendo lasciare i dintorni di"
+  },
+  {
+   "page": 93,
+   "published": "soggiunsi",
+   "scan_blind": "finii",
+   "context": "occorrendo, da intermediario?\" \"Orsù!\" soggiunsi per dire il suo"
+  },
+  {
+   "page": 93,
+   "published": "attentava",
+   "scan_blind": "attentasse",
+   "context": "al cadavere non si attentava di rifiatare. La situazione"
+  },
+  {
+   "page": 93,
+   "published": "era uniforme, aspettava un comando che",
+   "scan_blind": "",
+   "context": "di rifiatare. La situazione era uniforme, aspettava un comando che non ammette indugi. \"Io"
+  },
+  {
+   "page": 93,
+   "published": "e",
+   "scan_blind": "",
+   "context": "mano, voltai le spalle e lasciai il piano tenebroso."
+  },
+  {
+   "page": 93,
+   "published": "",
+   "scan_blind": "sotto,",
+   "context": "le spalle e lasciai il piano tenebroso. Nei"
+  },
+  {
+   "page": 93,
+   "published": "Nei campi all'aria frizzante,",
+   "scan_blind": "l'aria ingombra:",
+   "context": "lasciai il piano tenebroso. Nei campi all'aria frizzante, ritrovai quella purezza del"
+  },
+  {
+   "page": 93,
+   "published": "purezza del",
+   "scan_blind": "frizzante e pura, il",
+   "context": "all'aria frizzante, ritrovai quella purezza del cielo scintillante che dà"
+  },
+  {
+   "page": 93,
+   "published": "dà forza alle feroci emozioni.",
+   "scan_blind": "avvenne delle cure che mi turbavano? Io",
+   "context": "del cielo scintillante che dà forza alle feroci emozioni. Non avevo deposto, lungo"
+  },
+  {
+   "page": 93,
+   "published": "lanciarono",
+   "scan_blind": "lanciano",
+   "context": "dell'abituro, due bracchi si lanciarono abbaiando; ma rimisero tosto"
+  },
+  {
+   "page": 93,
+   "published": "annusandomi",
+   "scan_blind": "fiutandomi",
+   "context": "allungando il muso e annusandomi ansiosamente i polpacci. Una,"
+  },
+  {
+   "page": 93,
+   "published": "e",
+   "scan_blind": "",
+   "context": "quinta rimbombarono nel vano, e finalmente dalle sconnessure del"
+  },
+  {
+   "page": 94,
+   "published": "braci",
+   "scan_blind": "bragie",
+   "context": "situazione, egli tormentava le braci colle corna del soffietto"
+  },
+  {
+   "page": 94,
+   "published": "altura,",
+   "scan_blind": "spianata,",
+   "context": "salire quassù. Dalla nostra altura, si domina la valle"
+  },
+  {
+   "page": 94,
+   "published": "",
+   "scan_blind": "e",
+   "context": "il diavolo li aiuti ci capitassero addosso all'impensata..."
+  },
+  {
+   "page": 94,
+   "published": "",
+   "scan_blind": "eh,",
+   "context": "ci capitassero addosso all'impensata... c'è rimedio anche per"
+  },
+  {
+   "page": 94,
+   "published": "arnese",
+   "scan_blind": "arnesaccio",
+   "context": "un vecchio fucile, un arnese arrugginito, vi rovina il"
+  },
+  {
+   "page": 94,
+   "published": "aggiunse:",
+   "scan_blind": "soggiunse:",
+   "context": "momento come sospeso, poi aggiunse: \"Io dundolo e Lei"
+  },
+  {
+   "page": 94,
+   "published": "dundolo",
+   "scan_blind": "chiacchiero",
+   "context": "sospeso, poi aggiunse: \"Io dundolo e Lei ha bisogno"
+  },
+  {
+   "page": 94,
+   "published": "allestire",
+   "scan_blind": "allestirle",
+   "context": "giaciglio... penseremo poi ad allestire un letto un po'"
+  },
+  {
+   "page": 94,
+   "published": "d'essere",
+   "scan_blind": "d'esser",
+   "context": "E poiché io protestavo d'essere rotto a ben altre"
+  },
+  {
+   "page": 94,
+   "published": "\"E",
+   "scan_blind": "a mo' di",
+   "context": "sul vivo e disse: \"E scusa: nel nostro giaciglio..."
+  },
+  {
+   "page": 94,
+   "published": "della",
+   "scan_blind": "dela",
+   "context": "erano molto tristi. Un'invasione della polizia, una perquisizione in"
+  },
+  {
+   "page": 94,
+   "published": "alla",
+   "scan_blind": "nella",
+   "context": "gettò prestamente la lettera alla chitarra del babbo... gran"
+  },
+  {
+   "page": 94,
+   "published": "cantuecio",
+   "scan_blind": "cantuccio",
+   "context": "pure avevano frugato ogni cantuecio della casa ed ogni"
+  },
+  {
+   "page": 94,
+   "published": "angolo,",
+   "scan_blind": "ruga,",
+   "context": "della casa ed ogni angolo, non si erano curati"
+  },
+  {
+   "page": 94,
+   "published": "quel umile",
+   "scan_blind": "quell'umile",
+   "context": "si erano curati di quel umile strumento, appeso alla parata."
+  },
+  {
+   "page": 94,
+   "published": "parata.",
+   "scan_blind": "parete.",
+   "context": "umile strumento, appeso alla parata. Già essi si accingevano"
+  },
+  {
+   "page": 95,
+   "published": "greve",
+   "scan_blind": "grassa",
+   "context": "mi parve che l'aria greve del piano fosse salita"
+  },
+  {
+   "page": 95,
+   "published": "scritturante",
+   "scan_blind": "scritturale",
+   "context": "mattina per tempo, uno scritturante della Polizia, a cui"
+  },
+  {
+   "page": 95,
+   "published": "con l'ufficiale",
+   "scan_blind": "coll'ufficiale",
+   "context": "mente, il fortuito incontro con l'ufficiale austriaco e quanto mi"
+  },
+  {
+   "page": 96,
+   "published": "vagano",
+   "scan_blind": "vagan",
+   "context": "La sera, le volpi vagano per la montagna e"
+  },
+  {
+   "page": 96,
+   "published": "fiutano",
+   "scan_blind": "fiutan",
+   "context": "i bracchi, che le fiutano da lontano, con incessanti"
+  },
+  {
+   "page": 96,
+   "published": "campi,",
+   "scan_blind": "colti,",
+   "context": "invece di scorrere pei campi, essi ripiegavano verso la"
+  },
+  {
+   "page": 96,
+   "published": "",
+   "scan_blind": "il",
+   "context": "avversario capace di incutere rispetto. Tesi l'orecchio e"
+  },
+  {
+   "page": 96,
+   "published": "circondato",
+   "scan_blind": "circondata",
+   "context": "gli sgherri dell'Austria avevano circondato la casa. Dentro, le"
+  },
+  {
+   "page": 96,
+   "published": "once",
+   "scan_blind": "oncie",
+   "context": "l'ordine di cacciar quattro once di piombo nello stomaco"
+  },
+  {
+   "page": 96,
+   "published": "piantatela",
+   "scan_blind": "piantatala",
+   "context": "Afferrò una sedia e piantatela presso il prigioniero, vi"
+  },
+  {
+   "page": 97,
+   "published": "",
+   "scan_blind": "O",
+   "context": "Maestà l'Imperatore e Re... el paron o un"
+  },
+  {
+   "page": 97,
+   "published": "bella!\"",
+   "scan_blind": "fenìa!''",
+   "context": "gridò: \"Orsù! bisogna farla bella!\" E trinciò nell'aria uno"
+  },
+  {
+   "page": 97,
+   "published": "diritto",
+   "scan_blind": "virtù",
+   "context": "suoi gesti che avevano diritto d'infondere un impeto di"
+  },
+  {
+   "page": 97,
+   "published": "Io",
+   "scan_blind": "In",
+   "context": "in mezzo alla cucina. Io men che non si"
+  },
+  {
+   "page": 97,
+   "published": "posta",
+   "scan_blind": "punta",
+   "context": "sigaro e, tormentandone la posta tra le dita e"
+  },
+  {
+   "page": 97,
+   "published": "zoccoli",
+   "scan_blind": "zoccoloni",
+   "context": "lo lasciarono precipitare. Gli zoccoli batterono violentemente al suolo"
+  },
+  {
+   "page": 97,
+   "published": "piegarono",
+   "scan_blind": "piegarno",
+   "context": "le ginocchia gli si piegarono sotto, come se egli"
+  },
+  {
+   "page": 97,
+   "published": "intera",
+   "scan_blind": "interna",
+   "context": "per esprimere la sua intera soddisfazione. Ma Domenico si"
+  },
+  {
+   "page": 97,
+   "published": "hanno insozzato",
+   "scan_blind": "immerdano",
+   "context": "te, a quante carogne hanno insozzato il mio Paese!\" E"
+  },
+  {
+   "page": 97,
+   "published": "sgozzino.",
+   "scan_blind": "agozzino.",
+   "context": "sul petto del suo sgozzino. Questi ebbe uno scatto"
+  },
+  {
+   "page": 97,
+   "published": "bestemmie",
+   "scan_blind": "bestemme",
+   "context": "ed uno scroscio di bestemmie esotiche. Ma con uno"
+  },
+  {
+   "page": 97,
+   "published": "giocare",
+   "scan_blind": "giuocare",
+   "context": "qual pro? Decisi di giocare disperatamente l'ultima carta solo"
+  },
+  {
+   "page": 97,
+   "published": "irremmissibilmente",
+   "scan_blind": "irremissibilmente",
+   "context": "quando la partita fosse irremmissibilmente perduta. Il mio dolore"
+  },
+  {
+   "page": 97,
+   "published": "colmo",
+   "scan_blind": "scevra",
+   "context": "tortura di Domenico era colmo di apprensione. Conoscevo la"
+  },
+  {
+   "page": 98,
+   "published": "sopraccolta",
+   "scan_blind": "sovraccolta",
+   "context": "i santi. E quando, sopraccolta da repentino furore, fece"
+  },
+  {
+   "page": 98,
+   "published": "colle unghie,",
+   "scan_blind": "coll'unghie,",
+   "context": "fece atto di lanciarsi, colle unghie, sugli impassibili tormentatori e"
+  },
+  {
+   "page": 98,
+   "published": "sgranarlo...",
+   "scan_blind": "sgranarla...",
+   "context": "rosario e riprincipiò a sgranarlo... questa volta in ginocchio."
+  },
+  {
+   "page": 98,
+   "published": "pesta",
+   "scan_blind": "peste",
+   "context": "la certezza che la pesta maledetta fosse realmente giù"
+  },
+  {
+   "page": 98,
+   "published": "d'infra",
+   "scan_blind": "d'in tra",
+   "context": "la china; poi uscii d'infra l'edera e comparvi sulla"
+  },
+  {
+   "page": 98,
+   "published": "",
+   "scan_blind": "singhiozzando,",
+   "context": "labbra quel solco livido, ripetutamente glie lo baciai."
+  },
+  {
+   "page": 99,
+   "published": "rincuorare",
+   "scan_blind": "rincorare",
+   "context": "a caratteri indelebili. A rincuorare la mamma, Giustiniano le"
+  },
+  {
+   "page": 100,
+   "published": "sfavillavano",
+   "scan_blind": "sfavillano",
+   "context": "concentrato negli occhi che sfavillavano sotto il velo nero."
+  },
+  {
+   "page": 100,
+   "published": "ravviarono",
+   "scan_blind": "ravvivarono",
+   "context": "della fanciullezza e vi ravviarono la tramortita pietà. Per"
+  },
+  {
+   "page": 101,
+   "published": "quarantotto ore",
+   "scan_blind": "quarantott'ore",
+   "context": "quelle della natura. Eran quarantotto ore che non chiudevo occhio"
+  },
+  {
+   "page": 101,
+   "published": "ed io",
+   "scan_blind": "stesso",
+   "context": "D'improvviso, vidi nettamente me ed io cogli sbirri alle calcagna."
+  },
+  {
+   "page": 101,
+   "published": "Un contrabbandiere.",
+   "scan_blind": "",
+   "context": "un rimasuglio di vita. Un contrabbandiere. Un contrabbandiere pensai scambiato,"
+  },
+  {
+   "page": 101,
+   "published": "attrattivi",
+   "scan_blind": "attrattavi",
+   "context": "distretto rifluiva a Bolzano, attrattivi dalla fiera annuale. A"
+  },
+  {
+   "page": 102,
+   "published": "ombrelli",
+   "scan_blind": "ombrelle",
+   "context": "dolciumi, protette da enormi ombrelli e un pigia pigia"
+  },
+  {
+   "page": 102,
+   "published": "\"chellerina\"",
+   "scan_blind": "\"chellerima\"",
+   "context": "a faccia con una \"chellerina\" dal visetto roseo e"
+  },
+  {
+   "page": 102,
+   "published": "inutilmente,",
+   "scan_blind": "inutilmnnte,",
+   "context": "al burro. Cercai, ma inutilmente, quella di Francesco Giuseppe..."
+  },
+  {
+   "page": 102,
+   "published": "qualcosa",
+   "scan_blind": "qualeosa",
+   "context": "sin là. Ma trovai qualcosa di peggio. Presso l'uscio,"
+  },
+  {
+   "page": 102,
+   "published": "denunciarmi!...",
+   "scan_blind": "denunziarmi!...",
+   "context": "o vivo o morto... denunciarmi!... tenue fatica, dovere d'onesto"
+  },
+  {
+   "page": 102,
+   "published": "debil",
+   "scan_blind": "debol",
+   "context": "della Legge. Da che debil filo pendeva la mia"
+  },
+  {
+   "page": 103,
+   "published": "braghe.\"",
+   "scan_blind": "bragie.\"",
+   "context": "cascare dalla padella nelle braghe.\" E additando l'avviso: \"Che"
+  },
+  {
+   "page": 103,
+   "published": "l'uscio.",
+   "scan_blind": "l'uscita.",
+   "context": "schiena allo stipite, sbarrò l'uscio. Un altro ceffo si"
+  },
+  {
+   "page": 104,
+   "published": "Ma",
+   "scan_blind": "",
+   "context": "una sequela di \"Ma... Ma vi pare... ohibò!\" a"
+  },
+  {
+   "page": 104,
+   "published": "incalzare",
+   "scan_blind": "rincalzare",
+   "context": "vi pare... ohibò!\" a incalzare la donna, a usarle"
+  },
+  {
+   "page": 105,
+   "published": "trascinatemi",
+   "scan_blind": "trascinatomi",
+   "context": "per la manica e, trascinatemi dentro, in cucina, mi"
+  },
+  {
+   "page": 105,
+   "published": "le",
+   "scan_blind": "la",
+   "context": "Per tutta risposta, torse le labbra e puntò l'indice"
+  },
+  {
+   "page": 105,
+   "published": "purchè... poiché",
+   "scan_blind": "poichè",
+   "context": "d'una dimostrazione d'affetto fraterno; purchè... poiché il disertore usurpava, ai"
+  },
+  {
+   "page": 105,
+   "published": "quale",
+   "scan_blind": "quele",
+   "context": "diretta a Marano il quale aveva luogo a parecchie"
+  },
+  {
+   "page": 105,
+   "published": "cappello",
+   "scan_blind": "candelliere",
+   "context": "è necessario deposi il cappello su un tavolino e"
+  },
+  {
+   "page": 106,
+   "published": "candelieri",
+   "scan_blind": "candellieri",
+   "context": "tanto energicamente che i candelieri ne traballarono. Ed ecco"
+  },
+  {
+   "page": 106,
+   "published": "alla montagna.\"",
+   "scan_blind": "",
+   "context": "che eravate già lontano... alla montagna.\" \"Sono venuti per parlarmi?"
+  },
+  {
+   "page": 106,
+   "published": "accalcava",
+   "scan_blind": "calcava",
+   "context": "uno sciame umano si accalcava fuori, sul piccolo sagrato."
+  },
+  {
+   "page": 106,
+   "published": "stradicciole",
+   "scan_blind": "stradicciuole",
+   "context": "fra i campi, per stradicciole assiepate; poi presi la"
+  },
+  {
+   "page": 106,
+   "published": "cuculo.",
+   "scan_blind": "cuculio.",
+   "context": "era un orologio col cuculo. I gendarmi dell'Impero non"
+  },
+  {
+   "page": 107,
+   "published": "cuculo,",
+   "scan_blind": "cuculio,",
+   "context": "cercavo, coll'occhio, l'orologio col cuculo, quando la mia attenzione"
+  },
+  {
+   "page": 107,
+   "published": "dei",
+   "scan_blind": "del",
+   "context": "l'Austria destinava alla guardia dei confini. Fra essi, dolce"
+  },
+  {
+   "page": 108,
+   "published": "Buanvecchiato,",
+   "scan_blind": "Buonvecchiato,",
+   "context": "che la spia Felicità Buanvecchiato, sorpreso qualche brano di"
+  },
+  {
+   "page": 108,
+   "published": "pressochè",
+   "scan_blind": "pressocchè",
+   "context": "nostra rovina essa era pressochè superflua. Come io giungessi"
+  },
+  {
+   "page": 109,
+   "published": "quadrivio,",
+   "scan_blind": "quadrivi,",
+   "context": "l'Italia prodiga ai suoi quadrivio, sembreranno giocattoli da pigmei."
+  },
+  {
+   "page": 109,
+   "published": "immesso",
+   "scan_blind": "immurato",
+   "context": "Quando il Calvi venne immesso nel Castello di San"
+  },
+  {
+   "page": 109,
+   "published": "coll'ombra",
+   "scan_blind": "coll'applicazione",
+   "context": "sociale, già erano sottostati, coll'ombra del capestro, all'estremo insulto"
+  },
+  {
+   "page": 109,
+   "published": "canterellando",
+   "scan_blind": "cantarellando",
+   "context": "prigionia, tirandoseli d'attorno e canterellando le romanze allora più"
+  },
+  {
+   "page": 110,
+   "published": "messo",
+   "scan_blind": "messolo",
+   "context": "quando i suoi giudici, messo al confronto con un"
+  },
+  {
+   "page": 110,
+   "published": "meditare",
+   "scan_blind": "meditarne",
+   "context": "da lunghi anni a meditare gli orrori, il suo"
+  },
+  {
+   "page": 110,
+   "published": "amante del",
+   "scan_blind": "Argante",
+   "context": "Credo fermamente che egli, amante del \"più vero e maggiore\","
+  },
+  {
+   "page": 111,
+   "published": "famigerato",
+   "scan_blind": "famigeratto",
+   "context": "commosse persino un'iena, il famigerato custode Francesco Casati, che"
+  },
+  {
+   "page": 111,
+   "published": "impensierire",
+   "scan_blind": "impensierirne",
+   "context": "che essa suscitò, da impensierire gli oppressori. Il maresciallo"
+  },
+  {
+   "page": 112,
+   "published": "compatrioti",
+   "scan_blind": "compatriotti",
+   "context": "trovai un nucleo di compatrioti sottrattisi, coll'esilio, alla bufera"
+  },
+  {
+   "page": 112,
+   "published": "Locamo.",
+   "scan_blind": "Locarno.",
+   "context": "minima allusione all'incidente di Locamo. Mi recai a far"
+  },
+  {
+   "page": 112,
+   "published": "più",
+   "scan_blind": "piâ",
+   "context": "labbra si scambiavano frasi più spontanee, i fili misteriosi"
+  },
+  {
+   "page": 112,
+   "published": "Orioli",
+   "scan_blind": "Grioli",
+   "context": "la voce concitata dell'esule Orioli che diceva: \"Per Dio,"
+  },
+  {
+   "page": 112,
+   "published": "sentirmene",
+   "scan_blind": "sentirmente",
+   "context": "a loro. Finii per sentirmene disgustato e decisi di"
+  },
+  {
+   "page": 113,
+   "published": "intera",
+   "scan_blind": "interna",
+   "context": "rammarico; ma la sua intera sensazione non si tenne"
+  },
+  {
+   "page": 114,
+   "published": "abboniva",
+   "scan_blind": "abborriva",
+   "context": "Napoleone, a dargli retta, abboniva la guerra. Egli si"
+  },
+  {
+   "page": 115,
+   "published": "dalla",
+   "scan_blind": "dala",
+   "context": "III, anche vincitore, uscì dalla lotta cruenta, irremissibilmente sconfitto."
+  },
+  {
+   "page": 115,
+   "published": "rotta",
+   "scan_blind": "rottura",
+   "context": "guerra d'Italia, colla vergognosa rotta dei patti solennemente assunti."
+  },
+  {
+   "page": 116,
+   "published": "giocando",
+   "scan_blind": "giuocando",
+   "context": "della Prussia sull'Austria, Napoleone, giocando a partita doppia, offrendo"
+  },
+  {
+   "page": 116,
+   "published": "codardamente",
+   "scan_blind": "cordardemente",
+   "context": "si era mostrato più codardamente feroce appunto contro le"
+  },
+  {
+   "page": 116,
+   "published": "spagnola",
+   "scan_blind": "spagnuola",
+   "context": "Montijo, contessa di Teba, spagnola di bellezza impareggiabile, irrequieta,"
+  },
+  {
+   "page": 118,
+   "published": "manifestare",
+   "scan_blind": "manifestarne",
+   "context": "Non avevo che a manifestare il desiderio. Se poi"
+  },
+  {
+   "page": 118,
+   "published": "Nel",
+   "scan_blind": "Nei",
+   "context": "Rigirata la chiave, uscii. Nel corridoio mi sentii mettere"
+  },
+  {
+   "page": 118,
+   "published": "sospetti",
+   "scan_blind": "suspetti",
+   "context": "Ho avuto dei brutti sospetti e... perchè nascondertelo? ho"
+  },
+  {
+   "page": 118,
+   "published": "un'azionacela,",
+   "scan_blind": "un'azionaccia,",
+   "context": "perchè nascondertelo? ho commesso un'azionacela, ho posto l'orecchio all'uscio."
+  },
+  {
+   "page": 118,
+   "published": "",
+   "scan_blind": "—Poi",
+   "context": "in pasto ai pesci! Il Caronti vi avrebbe"
+  },
+  {
+   "page": 119,
+   "published": "ritrattazione",
+   "scan_blind": "rittrattazione",
+   "context": "e gli porsi la ritrattazione del Caronti. Allora egli"
+  },
+  {
+   "page": 119,
+   "published": "",
+   "scan_blind": "a Zurigo.",
+   "context": "perchè io non ritornassi. Il mio carattere irascibile,"
+  },
+  {
+   "page": 119,
+   "published": "Orioli",
+   "scan_blind": "Grioli",
+   "context": "di Maloggia. (1) Questo Orioli era il fratello del"
+  },
+  {
+   "page": 119,
+   "published": "Orioli,",
+   "scan_blind": "Grioli,",
+   "context": "sua scorta d'onore. Il Orioli, che vi apparteneva, n'ebbe,"
+  },
+  {
+   "page": 119,
+   "published": "all'aguzzino",
+   "scan_blind": "all'agozzino",
+   "context": "Disciplina al rendere omaggio all'aguzzino della Patria nostra. E"
+  },
+  {
+   "page": 120,
+   "published": "riuscito",
+   "scan_blind": "riescito",
+   "context": "non mi è mai riuscito ben chiaro. Non li"
+  },
+  {
+   "page": 120,
+   "published": "approvandolo,",
+   "scan_blind": "approvandoli,",
+   "context": "direttiva, implicitamente approvati? E approvandolo, non ne aveva assunta"
+  },
+  {
+   "page": 120,
+   "published": "Francesco,",
+   "scan_blind": "romagnolo,",
+   "context": "in ridicolo dal fiero Francesco, sono una variante di"
+  },
+  {
+   "page": 120,
+   "published": "Gelsi?\"",
+   "scan_blind": "Celsi?\"",
+   "context": "ricevute istruzioni: \"Dov'è Tito Gelsi?\" (1) In quali condizioni"
+  },
+  {
+   "page": 121,
+   "published": "ripiegarsi!",
+   "scan_blind": "ripiegarci!",
+   "context": "alle spalle su cui ripiegarsi! E le conseguenze dell'insuccesso?"
+  },
+  {
+   "page": 121,
+   "published": "Gelsi,",
+   "scan_blind": "Celsi,",
+   "context": "lettera. Era di Tito Gelsi, che ci comunicava imminente"
+  },
+  {
+   "page": 121,
+   "published": "Gelsi.",
+   "scan_blind": "Celsi.",
+   "context": "le istruzioni di Tito Gelsi. Eran l'armi che avrebbero"
+  },
+  {
+   "page": 121,
+   "published": "giaciglio",
+   "scan_blind": "giacilio",
+   "context": "lavoro alacremente. Sorgevamo dal giaciglio di erbe, al primo"
+  },
+  {
+   "page": 122,
+   "published": "viandanti",
+   "scan_blind": "viatori",
+   "context": "sospingeva a seconda dei viandanti che la sollevavano; ma"
+  },
+  {
+   "page": 122,
+   "published": "riusciva",
+   "scan_blind": "riesciva",
+   "context": "sollevavano; ma essa non riusciva a nascondermi lo scintillio"
+  },
+  {
+   "page": 122,
+   "published": "da fare",
+   "scan_blind": "d'affare",
+   "context": "lepri. Ebbi un gran da fare per persuadere il Fumagalli"
+  },
+  {
+   "page": 122,
+   "published": "a",
+   "scan_blind": "di",
+   "context": "l'altura. Egli voleva attendere a piè fermo e \"vender"
+  },
+  {
+   "page": 122,
+   "published": "dinanzi",
+   "scan_blind": "d'innanzi",
+   "context": "Al terzo ci comparve dinanzi con aria dimessa e"
+  },
+  {
+   "page": 122,
+   "published": "Gelsi",
+   "scan_blind": "Celsi",
+   "context": "ci annunziò che Tito Gelsi era stato arrestato. Soggiunse:"
+  },
+  {
+   "page": 122,
+   "published": "",
+   "scan_blind": "franchi",
+   "context": "il rotolo conteneva duecento in oro, il biglietto"
+  },
+  {
+   "page": 122,
+   "published": "Con l'aiuto",
+   "scan_blind": "Coll'aiuto",
+   "context": "una sola parola: \"Salvatevi!\" Con l'aiuto del fratello dell'oste di"
+  },
+  {
+   "page": 123,
+   "published": "disgrazia;",
+   "scan_blind": "dsgrazia;",
+   "context": "Prigionia, ma rispetto della disgrazia; osservanza dei regolamenti, ma"
+  },
+  {
+   "page": 123,
+   "published": "il",
+   "scan_blind": "li",
+   "context": "la pazienza. Non così il Fumagalli che, a quanto"
+  },
+  {
+   "page": 123,
+   "published": "lasciavo",
+   "scan_blind": "lnsciavo",
+   "context": "l'uscio, retrocedevo e mi lasciavo andare sulla panca con"
+  },
+  {
+   "page": 124,
+   "published": "Transilvania,",
+   "scan_blind": "Transylvania,",
+   "context": "arrestato ad Hermanstadt, nella Transilvania, venne rinviato a tappe"
+  },
+  {
+   "page": 124,
+   "published": "dalla",
+   "scan_blind": "dala",
+   "context": "definizione di \"commedia\" uscita dalla mente irosa di Felice"
+  },
+  {
+   "page": 124,
+   "published": "irrequietezza",
+   "scan_blind": "irriquietezza",
+   "context": "d'Europa, quell'affermazione della persistente irrequietezza degli Italiani, quella nuova"
+  },
+  {
+   "page": 124,
+   "published": "interdica",
+   "scan_blind": "interdiva",
+   "context": "la prepotenza che ci interdica di costituirci a Nazione,"
+  },
+  {
+   "page": 127,
+   "published": "",
+   "scan_blind": "SECONDA Capitolo Primo",
+   "context": "FINE DELLA PRIMA PARTE Come introduzione a questa"
+  },
+  {
+   "page": 127,
+   "published": "foggiare",
+   "scan_blind": "foggiarne",
+   "context": "maneggiare giunchi e di foggiare involti per bottiglie; servendosi,"
+  },
+  {
+   "page": 128,
+   "published": "civili,",
+   "scan_blind": "covili,",
+   "context": "pentola; descrivere gli angusti civili, parteggiati da una mezza"
+  },
+  {
+   "page": 128,
+   "published": "elisia;",
+   "scan_blind": "etisia;",
+   "context": "e gaudente; rantoli di elisia; cadaveri tagliati a pezzi"
+  },
+  {
+   "page": 128,
+   "published": "lacrimevoli,",
+   "scan_blind": "lagrimevoli,",
+   "context": "sfondo, a pennellate ora lacrimevoli, ora comiche, ora sublimi,"
+  },
+  {
+   "page": 128,
+   "published": "propri",
+   "scan_blind": "proprii",
+   "context": "dell'usuraio e impegna... i propri stivali. Né patiremmo difetto"
+  },
+  {
+   "page": 128,
+   "published": "sdruciti;",
+   "scan_blind": "sdrusciti;",
+   "context": "cuore attraverso i gomiti sdruciti; i lunghi digiuni dimenticati"
+  },
+  {
+   "page": 128,
+   "published": "commiserarti",
+   "scan_blind": "commiserarli",
+   "context": "dai pravi, cesserebbe dal commiserarti e dall'assecondarne moralmente le"
+  },
+  {
+   "page": 129,
+   "published": "sgombrare",
+   "scan_blind": "sgombare",
+   "context": "e intimò loro di sgombrare la sala... per non"
+  },
+  {
+   "page": 129,
+   "published": "sino",
+   "scan_blind": "sono",
+   "context": "sangue, il Bonacina indietreggiò sino alla finestra e, giurando"
+  },
+  {
+   "page": 129,
+   "published": "concittadini;",
+   "scan_blind": "concilladini;",
+   "context": "derideva gli strazi dei concittadini; che sputava sulla sua"
+  },
+  {
+   "page": 129,
+   "published": "concentrati.",
+   "scan_blind": "encentrati.",
+   "context": "una bottiglia... di raggi concentrati. Così chiamavano il prodotto"
+  },
+  {
+   "page": 129,
+   "published": "conquistatrice.\"",
+   "scan_blind": "conquistatrici.”",
+   "context": "in tono maggiore, irruenti, conquistatrice.\" E il Leoni, guardando"
+  },
+  {
+   "page": 130,
+   "published": "ananassa...\" Eccetto dattero, limone, ananassa",
+   "scan_blind": "ananasso",
+   "context": "femminile. Eccetto dattero, limone, ananassa...\" Eccetto dattero, limone, ananassa e fico! osservò un'altra"
+  },
+  {
+   "page": 130,
+   "published": "sovraccaricato",
+   "scan_blind": "sopraccaricato",
+   "context": "di Dei dell'Olimpo aveva sovraccaricato ogni mobile, ogni mensola,"
+  },
+  {
+   "page": 130,
+   "published": "le anime",
+   "scan_blind": "l’anime",
+   "context": "di se stessa. Amare le anime forti, schiuder loro, come"
+  },
+  {
+   "page": 131,
+   "published": "mantenercisi",
+   "scan_blind": "mantenervisi",
+   "context": "tutto il trasporto e mantenercisi fedele sino all'estremo; firmare"
+  },
+  {
+   "page": 131,
+   "published": "braccioli.",
+   "scan_blind": "bracciuoli.",
+   "context": "stessa l'ampia sedia a braccioli. Sara sedeva, per abitudine"
+  },
+  {
+   "page": 131,
+   "published": "soffrirono,",
+   "scan_blind": "soffersero,",
+   "context": "ne rimasero trasformate: sentirono, soffrirono, sperarono, vollero italianamente. Avvenne"
+  },
+  {
+   "page": 131,
+   "published": "suonerebbe",
+   "scan_blind": "stuonerebbe",
+   "context": "forse sente istintivamente quanto suonerebbe in quell'ambiente dalle tinte"
+  },
+  {
+   "page": 132,
+   "published": "invano",
+   "scan_blind": "indarno",
+   "context": "Il giorno che rovesciò invano tasche e taschini pensò,"
+  },
+  {
+   "page": 132,
+   "published": "dire",
+   "scan_blind": "diro",
+   "context": "precisamente rispose ma devo dire qualcosa che mi pesa."
+  },
+  {
+   "page": 133,
+   "published": "sue",
+   "scan_blind": "sulle",
+   "context": "sulla signora Mancherini e sue due gentili creature che"
+  },
+  {
+   "page": 133,
+   "published": "",
+   "scan_blind": "O",
+   "context": "delle sue critiche circostanze. Dunque che mistero era"
+  },
+  {
+   "page": 133,
+   "published": "arguire",
+   "scan_blind": "arguirne",
+   "context": "nostra mente, noi possiamo arguire a quali minimi termini"
+  },
+  {
+   "page": 134,
+   "published": "ventiquattro ore.",
+   "scan_blind": "ventiquattr'ore.",
+   "context": "e ben fornito, ogni ventiquattro ore. Il conte di Rudio"
+  },
+  {
+   "page": 134,
+   "published": "annodati,",
+   "scan_blind": "rannodati,",
+   "context": "coi capelli in parte annodati, in parte fluenti, stava"
+  },
+  {
+   "page": 135,
+   "published": "innaffiarlo",
+   "scan_blind": "inaffiarlo",
+   "context": "darle fastidi continueremo ad innaffiarlo noi. Elisa mi faceva"
+  },
+  {
+   "page": 135,
+   "published": "imbraca",
+   "scan_blind": "imbraga",
+   "context": "si affonda e si imbraca il nostro vivere civile,"
+  },
+  {
+   "page": 136,
+   "published": "prestatele",
+   "scan_blind": "prestatale",
+   "context": "cui pagine sfolgorava, coll'intensità prestatele dal genio, la condanna"
+  },
+  {
+   "page": 136,
+   "published": "Compagnia",
+   "scan_blind": "Campagnia",
+   "context": "il fatto che la Compagnia d'Assicurazione sborsò immediatamente il"
+  },
+  {
+   "page": 136,
+   "published": "vaiolo",
+   "scan_blind": "vaiuolo",
+   "context": "deformità del viso (il vaiolo gli aveva spuntato il"
+  },
+  {
+   "page": 136,
+   "published": "amanuense?\"",
+   "scan_blind": "ammanuense?\"",
+   "context": "Vuoi essere il mio amanuense?\" L'uomo avvezzo agli ardimenti,"
+  },
+  {
+   "page": 137,
+   "published": "amanuense.",
+   "scan_blind": "ammanuense.",
+   "context": "loro orbita il giovine amanuense. Il Pianciani intravvede nei"
+  },
+  {
+   "page": 137,
+   "published": "disvogliano",
+   "scan_blind": "dispogliano",
+   "context": "profondamente del genio; che disvogliano d'ogni fregio imperatori e"
+  },
+  {
+   "page": 137,
+   "published": "levarono",
+   "scan_blind": "levarano",
+   "context": "ogni lembo d'Europa, si levarono mai sempre contro i"
+  },
+  {
+   "page": 137,
+   "published": "raggiungere",
+   "scan_blind": "raggiugere",
+   "context": "affetti prestano l'ali a raggiungere le ardue vette! Ed"
+  },
+  {
+   "page": 138,
+   "published": "baluardo",
+   "scan_blind": "buluardo",
+   "context": "all'Impero moscovita, un grande baluardo di Stati liberi che"
+  },
+  {
+   "page": 138,
+   "published": "alle orde",
+   "scan_blind": "all'orde",
+   "context": "nostra indipendenza, combattere d'accanto alle orde croate, per mantenere sul"
+  },
+  {
+   "page": 138,
+   "published": "lacrimosa.",
+   "scan_blind": "lagrimosa.",
+   "context": "colla faccia pallida e lacrimosa. Fiori e ramoscelli verdi"
+  },
+  {
+   "page": 139,
+   "published": "in irrisione,",
+   "scan_blind": "un'irrisione,",
+   "context": "italiani!\" Qualsiasi bandiera è in irrisione, quando non stia come"
+  },
+  {
+   "page": 139,
+   "published": "È un'edizione",
+   "scan_blind": "E' un'edizioncella",
+   "context": "il di Rudio. L'accetti. È un'edizione economica, coi margini pieni"
+  },
+  {
+   "page": 139,
+   "published": "grillina.",
+   "scan_blind": "grullina.",
+   "context": "le tocchi è della grillina. Lo straniero misterioso è"
+  },
+  {
+   "page": 139,
+   "published": "discorsi",
+   "scan_blind": "coscritti",
+   "context": "capo... tanto che i discorsi e la letteratura e"
+  },
+  {
+   "page": 139,
+   "published": "farraginosa",
+   "scan_blind": "faragginosa",
+   "context": "chiasso e la scena farraginosa dell'imbarco e gli addii"
+  },
+  {
+   "page": 139,
+   "published": "immagini",
+   "scan_blind": "imagini",
+   "context": "quasi pallida rievocazione di immagini emergenti confusamente da tra"
+  },
+  {
+   "page": 139,
+   "published": "da tra",
+   "scan_blind": "d'intra",
+   "context": "di immagini emergenti confusamente da tra le nebbie di tempi"
+  },
+  {
+   "page": 139,
+   "published": "trascorsi.",
+   "scan_blind": "trapassati.",
+   "context": "le nebbie di tempi trascorsi. Una seconda sorpresa lo"
+  },
+  {
+   "page": 140,
+   "published": "",
+   "scan_blind": "O",
+   "context": "nati l'uno per l'altro, che ci vuol tanto?\""
+  },
+  {
+   "page": 140,
+   "published": "dalle insidie",
+   "scan_blind": "dall'insidie",
+   "context": "dallo spavento delle congiure, dalle insidie dell'armi, dallo stridore delle"
+  },
+  {
+   "page": 140,
+   "published": "scandagliare",
+   "scan_blind": "scandagliaro",
+   "context": "delle anime semplici, seppe scandagliare un'anima. Si espresse da"
+  },
+  {
+   "page": 140,
+   "published": "Lo",
+   "scan_blind": "Le",
+   "context": "ed a filar lana? Lo strazio dei cuori che"
+  },
+  {
+   "page": 141,
+   "published": "viene—\"",
+   "scan_blind": "venisse....",
+   "context": "che respira. Se quell'ora viene—\" Un ultimo abbraccio, uno"
+  },
+  {
+   "page": 141,
+   "published": "invano!",
+   "scan_blind": "indarno!",
+   "context": "affrettò a soffiare ma invano! Le forti vicissitudini di"
+  },
+  {
+   "page": 142,
+   "published": "romagnolo",
+   "scan_blind": "romagnuolo",
+   "context": "riscontrare e quando il romagnolo Foschini mi avvertì, in"
+  },
+  {
+   "page": 142,
+   "published": "acque torbide.",
+   "scan_blind": "marina torbida.",
+   "context": "rischio di navigare in acque torbide. Gli avventori diradarono e"
+  },
+  {
+   "page": 142,
+   "published": "romagnolo,",
+   "scan_blind": "romagnuolo,",
+   "context": "nostra immigrazione, quando il romagnolo, tratto un pugnale, diede"
+  },
+  {
+   "page": 142,
+   "published": "riuscivo",
+   "scan_blind": "riescivo",
+   "context": "in un ospedale. Non riuscivo a tenere gli occhi"
+  },
+  {
+   "page": 143,
+   "published": "patriota",
+   "scan_blind": "patriotta",
+   "context": "Ma egli era buon patriota e, benché il suo"
+  },
+  {
+   "page": 143,
+   "published": "che",
+   "scan_blind": "",
+   "context": "la stranezza del destino che in Europa prima, in"
+  },
+  {
+   "page": 143,
+   "published": "splendidamente",
+   "scan_blind": "spendidamente",
+   "context": "mortali! Il Foschini chiuse splendidamente i suoi giorni combattendo"
+  },
+  {
+   "page": 144,
+   "published": "cassette",
+   "scan_blind": "bassette",
+   "context": "la folla, colle sue cassette e i suoi baffi"
+  },
+  {
+   "page": 146,
+   "published": "scongiurare",
+   "scan_blind": "scongiurarne",
+   "context": "gli ordini necessari a scongiurare le conseguenze; finché non"
+  },
+  {
+   "page": 146,
+   "published": "dimane.",
+   "scan_blind": "domane.",
+   "context": "fronte, alle barricate della dimane. Ci lasciammo quella sera"
+  },
+  {
+   "page": 146,
+   "published": "riuscisse",
+   "scan_blind": "riescisse",
+   "context": "un moto vasto, che riuscisse salutare alla causa popolare"
+  },
+  {
+   "page": 147,
+   "published": "recapitata",
+   "scan_blind": "ricapitata",
+   "context": "del Novembre, mi venne recapitata una lettera, col timbro"
+  },
+  {
+   "page": 147,
+   "published": "alla",
+   "scan_blind": "sù mia",
+   "context": "e finì per gettare alla moglie uno sguardo turbato"
+  },
+  {
+   "page": 148,
+   "published": "comunicatemi",
+   "scan_blind": "comunicatami",
+   "context": "dir vero, la notizia comunicatemi da Simon Bernard, a"
+  },
+  {
+   "page": 149,
+   "published": "\"Bravo!",
+   "scan_blind": "",
+   "context": "letteralmente, in Simon Bernard. \"Bravo! Bravo! Vengo appunto da"
+  },
+  {
+   "page": 149,
+   "published": "attorno,",
+   "scan_blind": "",
+   "context": "mi erano venuti d'attorno, attorno, col Massarenti, parecchi altri"
+  },
+  {
+   "page": 150,
+   "published": "trascinarono",
+   "scan_blind": "tarscinarono",
+   "context": "avvenimenti precipitarono e mi trascinarono nel loro vortice prima"
+  },
+  {
+   "page": 150,
+   "published": "influenza",
+   "scan_blind": "influenzza",
+   "context": "il contributo della sua influenza e dell'ardente anima sua?"
+  },
+  {
+   "page": 150,
+   "published": "ai",
+   "scan_blind": "si",
+   "context": "noti a lui che ai congiunti della contessa. Il"
+  },
+  {
+   "page": 150,
+   "published": "romagnolo,",
+   "scan_blind": "romagnuolo,",
+   "context": "L'attentato di quell'altro ardito romagnolo, Giovanni Pianori, fallì perché"
+  },
+  {
+   "page": 150,
+   "published": "Redini,",
+   "scan_blind": "Rossini,",
+   "context": "il Galli ed il Redini, senz'ombra di processo. Fiere"
+  },
+  {
+   "page": 151,
+   "published": "",
+   "scan_blind": "Per dio, lo ammazzerei!",
+   "context": "disonorasse, se ti tradisse?\" Hai pronunciato la tua"
+  },
+  {
+   "page": 151,
+   "published": "senz'altro",
+   "scan_blind": "sez'altro",
+   "context": "la tua condanna! E senz'altro aggiungere, lo stese boccheggiante"
+  },
+  {
+   "page": 151,
+   "published": "pecorini",
+   "scan_blind": "pecorili",
+   "context": "costumi miti e sentimenti pecorini da gente avvezza allo"
+  },
+  {
+   "page": 151,
+   "published": "piccoletta,",
+   "scan_blind": "piccioletta,",
+   "context": "apparentemente sulla trentina, sottile, piccoletta, bruna, non bella, nel"
+  },
+  {
+   "page": 152,
+   "published": "innocua.",
+   "scan_blind": "inocua.",
+   "context": "dissimulata dall'altra trapunta ed innocua. Il giorno dopo, l'8"
+  },
+  {
+   "page": 152,
+   "published": "riuscivano",
+   "scan_blind": "riescivano",
+   "context": "quattro passi sulla piazza riuscivano indicatissimi. Né mi ero"
+  },
+  {
+   "page": 152,
+   "published": "tristemente",
+   "scan_blind": "tristamente",
+   "context": "una data nota. Sorrise tristemente e, con un filo"
+  },
+  {
+   "page": 152,
+   "published": "coperti",
+   "scan_blind": "copersi",
+   "context": "Mi inginocchiai e le coperti le mani di baci,"
+  },
+  {
+   "page": 155,
+   "published": "aiutata,",
+   "scan_blind": "avutala,",
+   "context": "del mio ritardo e, aiutata, disse \"Come ti ha"
+  },
+  {
+   "page": 155,
+   "published": "fu",
+   "scan_blind": "finiva,",
+   "context": "la cattiva ventura. Così fu all'atto pratico, quella prudente"
+  },
+  {
+   "page": 156,
+   "published": "nell'individuo,",
+   "scan_blind": "quell'individuo,",
+   "context": "Non è questo o nell'individuo, non questa o quella"
+  },
+  {
+   "page": 156,
+   "published": "E",
+   "scan_blind": "Tacque ed",
+   "context": "si compirà, si compirà!\" E io abbassai la testa"
+  },
+  {
+   "page": 156,
+   "published": "la",
+   "scan_blind": "le",
+   "context": "compirà!\" E io abbassai la testa e un fremito"
+  },
+  {
+   "page": 157,
+   "published": "eclissare",
+   "scan_blind": "eclissarne",
+   "context": "i difetti così da eclissare le belle e non"
+  },
+  {
+   "page": 157,
+   "published": "moltiplicarli",
+   "scan_blind": "moltiplicargli",
+   "context": "enfasi, non contribuivano a moltiplicarli d'attorno gli amici. Anche"
+  },
+  {
+   "page": 157,
+   "published": "ripagandoli",
+   "scan_blind": "ripagandolo",
+   "context": "che se ne vendica ripagandoli di baci mentiti e"
+  },
+  {
+   "page": 158,
+   "published": "riuscirà",
+   "scan_blind": "riescirà",
+   "context": "al peristilio che ti riuscirà possibile. Pieri si metterà"
+  },
+  {
+   "page": 158,
+   "published": "rigidezza",
+   "scan_blind": "frigidezza",
+   "context": "di espandersi e, alla rigidezza eccezionale della giornata, egli"
+  },
+  {
+   "page": 159,
+   "published": "immagini,",
+   "scan_blind": "imagini,",
+   "context": "calore di frasi, di immagini, di rievocazioni. In quella"
+  },
+  {
+   "page": 159,
+   "published": "dinanzi ad",
+   "scan_blind": "d'innanzi",
+   "context": "Mai mi ero trovato dinanzi ad amalgama tanto complesso di"
+  },
+  {
+   "page": 159,
+   "published": "",
+   "scan_blind": "Ma",
+   "context": "sodezza e di vanità. Di tutte le sue"
+  },
+  {
+   "page": 159,
+   "published": "proprio da lì",
+   "scan_blind": "dall'Inghilterra",
+   "context": "a Birmingham ed era proprio da lì che aveva preso le"
+  },
+  {
+   "page": 159,
+   "published": "chicchessia",
+   "scan_blind": "chichessia",
+   "context": "di emozioni che fanno chicchessia propenso al facile abbandono,"
+  },
+  {
+   "page": 159,
+   "published": "Gli",
+   "scan_blind": "Mi",
+   "context": "all'uscio di Felice Orsini. Gli bastò uno sguardo per"
+  },
+  {
+   "page": 159,
+   "published": "non",
+   "scan_blind": "nol",
+   "context": "più pensieroso che io non fossi. Ciò malgrado, insistetti"
+  },
+  {
+   "page": 159,
+   "published": "riuscivo,",
+   "scan_blind": "riescivo,",
+   "context": "diritto di precedenza? Se riuscivo, la nostra causa non"
+  },
+  {
+   "page": 159,
+   "published": "riuscirgli",
+   "scan_blind": "riescigli",
+   "context": "procurava (e non doveva riuscirgli difficile) un'uniforme da \"sargent"
+  },
+  {
+   "page": 159,
+   "published": "\"sargent",
+   "scan_blind": "\"sergent",
+   "context": "riuscirgli difficile) un'uniforme da \"sargent de ville\", io mi"
+  },
+  {
+   "page": 160,
+   "published": "Ma",
+   "scan_blind": "e nessuno si attenta di prevenirmi. Apro.... egli",
+   "context": "sportello. Sono un graduato. Ma scende! È questione di"
+  },
+  {
+   "page": 160,
+   "published": "dinanzi...",
+   "scan_blind": "d'innanzi....",
+   "context": "lampi. Finì per piantarmisi dinanzi... prese e gettò nuovamente"
+  },
+  {
+   "page": 161,
+   "published": "lì tratta",
+   "scan_blind": "",
+   "context": "la salvezza. E tratta lì tratta una borsa, ci contava"
+  },
+  {
+   "page": 161,
+   "published": "Mi salutò con",
+   "scan_blind": "",
+   "context": "Altro non vi dico.\" Mi salutò con Mi salutò con una"
+  },
+  {
+   "page": 161,
+   "published": "assale,",
+   "scan_blind": "assalse,",
+   "context": "di pensieri che mi assale, il sentimento del dovere"
+  },
+  {
+   "page": 162,
+   "published": "annodato,",
+   "scan_blind": "annodate,",
+   "context": "tenuto per le cocche annodato, avrebbe acquistato la forza"
+  },
+  {
+   "page": 162,
+   "published": "immaginava",
+   "scan_blind": "imaginava",
+   "context": "farmene parola. Egli si immaginava che un importuno affatto"
+  },
+  {
+   "page": 162,
+   "published": "innocuo",
+   "scan_blind": "inocuo",
+   "context": "che un importuno affatto innocuo si fosse attaccato alle"
+  },
+  {
+   "page": 163,
+   "published": "Moutijo",
+   "scan_blind": "Montijo",
+   "context": "la presenza di Eugenia Moutijo e il magico potere"
+  },
+  {
+   "page": 163,
+   "published": "d'avvoltoio,",
+   "scan_blind": "d'avoltoio,",
+   "context": "dal naso a becco d'avvoltoio, dalle vibrazioni estremamente ripulsive."
+  },
+  {
+   "page": 164,
+   "published": "Mi lanciai curvo,",
+   "scan_blind": "",
+   "context": "nero. Mi lanciai curvo, Mi lanciai curvo, a mascelle serrate, passando"
+  },
+  {
+   "page": 164,
+   "published": "lancio!...",
+   "scan_blind": "",
+   "context": "difendere. Pochi passi... lancio!... lancio!... il secondo baleno, il"
+  },
+  {
+   "page": 164,
+   "published": "e",
+   "scan_blind": "",
+   "context": "Ogni fanale è spento e una notte nera e"
+  },
+  {
+   "page": 166,
+   "published": "goccia",
+   "scan_blind": "goccie",
+   "context": "sempre bella e poche goccia di sangue le rigavano"
+  },
+  {
+   "page": 166,
+   "published": "il",
+   "scan_blind": "l'esile",
+   "context": "cadere sulla poltrona e il petto le ansava, come"
+  },
+  {
+   "page": 167,
+   "published": "coraggio,",
+   "scan_blind": "servaggio,",
+   "context": "nobili aspirazioni derise, il coraggio, la persecuzione, la miseria,"
+  },
+  {
+   "page": 167,
+   "published": "mi accomodai",
+   "scan_blind": "m'accomodai",
+   "context": "del mio arrivo, io mi accomodai presso un tavolino e"
+  },
+  {
+   "page": 167,
+   "published": "prigioniero",
+   "scan_blind": "prigionero",
+   "context": "portone. Dovevo considerarmi come prigioniero in quell'albergo? La padrona"
+  },
+  {
+   "page": 167,
+   "published": "immaginato",
+   "scan_blind": "imaginato",
+   "context": "ma non pel motivo immaginato forse dalla mia bella"
+  },
+  {
+   "page": 168,
+   "published": "basette",
+   "scan_blind": "bassette",
+   "context": "la faccia pallida, le basette nere, la testa fasciata..."
+  },
+  {
+   "page": 169,
+   "published": "una",
+   "scan_blind": "un",
+   "context": "allo scrittoio. Giunto in una quarta, sedetti a lungo"
+  },
+  {
+   "page": 169,
+   "published": "",
+   "scan_blind": "dall'entrata,",
+   "context": "era a quattro passi lungo la parete di"
+  },
+  {
+   "page": 169,
+   "published": "staffe",
+   "scan_blind": "scaffe",
+   "context": "di destra. Aveva le staffe tanto alte da lasciarmi"
+  },
+  {
+   "page": 169,
+   "published": "con gli occhi quelle uniformi chiassose,",
+   "scan_blind": "coll'occhio",
+   "context": "atteggiamenti e, mentre scorrevo con gli occhi quelle uniformi chiassose, or qua or là,"
+  },
+  {
+   "page": 169,
+   "published": "e si avanzò verso di me, e",
+   "scan_blind": "",
+   "context": "Giudice Istruttore si alzò e si avanzò verso di me, e la sua fisionomia non"
+  },
+  {
+   "page": 169,
+   "published": "fissero",
+   "scan_blind": "posero",
+   "context": "l'uscio, vennero e si fissero ritte ai miei fianchi."
+  },
+  {
+   "page": 169,
+   "published": "",
+   "scan_blind": "pacatamente",
+   "context": "il magistrato mi chiese le mie generalità ed"
+  },
+  {
+   "page": 169,
+   "published": "chiese",
+   "scan_blind": "",
+   "context": "ilare. Come può essere chiese Dormite con un individuo"
+  },
+  {
+   "page": 169,
+   "published": "",
+   "scan_blind": "Egli comprende un po' la mia lingua.",
+   "context": "da Calais a Parigi. Era la prima volta"
+  },
+  {
+   "page": 169,
+   "published": "Egli comprende un po' la mia lingua.",
+   "scan_blind": "",
+   "context": "camera con due letti. Egli comprende un po' la mia lingua. Spenderete meno.\" Accettai. Mi"
+  },
+  {
+   "page": 170,
+   "published": "",
+   "scan_blind": "a Parigi?",
+   "context": "cosa venivate a fare? A guadagnarmi il pane,"
+  },
+  {
+   "page": 170,
+   "published": "riaprì,",
+   "scan_blind": "riaperse,",
+   "context": "prigioniero\". Quando l'uscio si riaprì, sulla soglia comparve Felice"
+  },
+  {
+   "page": 170,
+   "published": "risponderò\".",
+   "scan_blind": "risponderei\".",
+   "context": "domandatemi altro, non vi risponderò\". Aveva trasfusa l'anima nelle"
+  },
+  {
+   "page": 170,
+   "published": "opporvisi.",
+   "scan_blind": "opporvivisi.",
+   "context": "soggiogati e non ardirono opporvisi. Fu, senz'altro, condotto altrove."
+  },
+  {
+   "page": 171,
+   "published": "immantinente",
+   "scan_blind": "immantinenti",
+   "context": "ad una guardia che immantinente partì. Ne dedussi che"
+  },
+  {
+   "page": 172,
+   "published": "e",
+   "scan_blind": "",
+   "context": "Nessuna obbiezione?\" Nessuna affatto, e specialmente se lo Stato"
+  },
+  {
+   "page": 172,
+   "published": "scuse.",
+   "scan_blind": "iscuse.",
+   "context": "Polizia francese profondersi in scuse. Gli alti personaggi, con"
+  },
+  {
+   "page": 172,
+   "published": "auguratemi",
+   "scan_blind": "auguratami",
+   "context": "mio. E il Giudice, auguratemi la buona notte, si"
+  },
+  {
+   "page": 172,
+   "published": "in portoghese:",
+   "scan_blind": "``Scortate",
+   "context": "sue ultime parole furono in portoghese: \"Monsieur da Sylva fuori"
+  },
+  {
+   "page": 172,
+   "published": "dei",
+   "scan_blind": "de' miei",
+   "context": "pensiero andava a ritroso dei passi e consideravo la"
+  },
+  {
+   "page": 172,
+   "published": "",
+   "scan_blind": "sonnecchia",
+   "context": "potenza dinamica. Tuttavia chi stanotte pensai potrebbe essere"
+  },
+  {
+   "page": 172,
+   "published": "né v'entrò né",
+   "scan_blind": "nè",
+   "context": "e Parigi è vasta, né v'entrò né vi mancò d'amici e"
+  },
+  {
+   "page": 173,
+   "published": "sfuggire",
+   "scan_blind": "crescere",
+   "context": "Gomez si era lasciato sfuggire il mio nome. Debbo"
+  },
+  {
+   "page": 173,
+   "published": "sua discolpa,",
+   "scan_blind": "quello smacco e incaricò l'agente Hebert,",
+   "context": "Debbo dire subito, a sua discolpa, che tanto il Pieri"
+  },
+  {
+   "page": 173,
+   "published": "tanto",
+   "scan_blind": "conosceva",
+   "context": "a sua discolpa, che tanto il Pieri quanto l'Orsini,"
+  },
+  {
+   "page": 173,
+   "published": "rifeci appuntino la storiella narrata al primo interrogatorio.",
+   "scan_blind": "narro queste cose così come le avvennero,",
+   "context": "giornata d'ieri\". Ed io rifeci appuntino la storiella narrata al primo interrogatorio. Ma, riflettendo ai coniugi"
+  },
+  {
+   "page": 174,
+   "published": "ogni nostra speranza:",
+   "scan_blind": "furtivamente,",
+   "context": "ingoiare e noi e ogni nostra speranza: La fanciullesca fiducia del"
+  },
+  {
+   "page": 174,
+   "published": "l'arresto; i nervi",
+   "scan_blind": "alle guardie",
+   "context": "facile loquela immediatamente dopo l'arresto; i nervi del Gomez. Aggiungasi (ne"
+  },
+  {
+   "page": 174,
+   "published": "Gomez. Aggiungasi (ne parlerò più tardi) il carattere",
+   "scan_blind": "sottobrigadiere Michat ehe,",
+   "context": "l'arresto; i nervi del Gomez. Aggiungasi (ne parlerò più tardi) il carattere di Felice Orsini poco"
+  },
+  {
+   "page": 174,
+   "published": "Felice Orsini poco",
+   "scan_blind": "piantone sui gradini del peristilio, avendo visto,",
+   "context": "tardi) il carattere di Felice Orsini poco o punto tagliato alla"
+  },
+  {
+   "page": 174,
+   "published": "punto tagliato alla vita del cospiratore e la buona fede",
+   "scan_blind": "meglio imaginandosi",
+   "context": "Felice Orsini poco o punto tagliato alla vita del cospiratore e la buona fede di una signorina inglese,"
+  },
+  {
+   "page": 174,
+   "published": "proprio eroismo per le vie",
+   "scan_blind": "non meno preteso padrone. Senza por tempo",
+   "context": "passeggiando tranquillamente, blaterando del proprio eroismo per le vie di Londra! La mattina"
+  },
+  {
+   "page": 174,
+   "published": "Londra!",
+   "scan_blind": "mezzo,",
+   "context": "per le vie di Londra! La mattina stessa del"
+  },
+  {
+   "page": 174,
+   "published": "mattina stessa",
+   "scan_blind": "Polizia vi si recava e, sulle indicazioni",
+   "context": "vie di Londra! La mattina stessa del mio arresto, dopo"
+  },
+  {
+   "page": 174,
+   "published": "sonno tormentoso ed altrettante",
+   "scan_blind": "tempo. Quale difesa ha il prigioniero, cui prema",
+   "context": "dopo poche ore di sonno tormentoso ed altrettante di veglia, spesa a"
+  },
+  {
+   "page": 174,
+   "published": "veglia, spesa a fantasticare sulle rivelazioni",
+   "scan_blind": "nascondere la verità, se non",
+   "context": "tormentoso ed altrettante di veglia, spesa a fantasticare sulle rivelazioni che il Gomez poteva"
+  },
+  {
+   "page": 175,
+   "published": "meno sorridendo: \"Carlo",
+   "scan_blind": "sa rimanere uccel",
+   "context": "giuoco e risposi, non meno sorridendo: \"Carlo di Rudio, per l'appunto!\""
+  },
+  {
+   "page": 175,
+   "published": "da quanto potevo arguire,",
+   "scan_blind": "rimase tale, benchè il laccio gli",
+   "context": "compromettere un uomo che da quanto potevo arguire, era già nei pasticci."
+  },
+  {
+   "page": 175,
+   "published": "imponesse",
+   "scan_blind": "consta",
+   "context": "delle vostre Leggi mi imponesse di mancare a questo"
+  },
+  {
+   "page": 175,
+   "published": "cavalleria.",
+   "scan_blind": "sollecitazioni per approfittarne.",
+   "context": "a questo dovere di cavalleria. E come va che"
+  },
+  {
+   "page": 175,
+   "published": "",
+   "scan_blind": "scarsa penetrazione, guardi!.....",
+   "context": "sapete a proposito di questo attentato\". Quel tanto"
+  },
+  {
+   "page": 175,
+   "published": "attentato\". Quel tanto che me ne hanno raccontato le guardie",
+   "scan_blind": "pugnale è lo stesso",
+   "context": "a proposito di questo attentato\". Quel tanto che me ne hanno raccontato le guardie che mi arrestarono. So"
+  },
+  {
+   "page": 175,
+   "published": "nulla",
+   "scan_blind": "",
+   "context": "voleva uccidere l'Imperatore e nulla più. Potrebbe darsi. Ad"
+  },
+  {
+   "page": 178,
+   "published": "",
+   "scan_blind": "Kim?",
+   "context": "ritte sulla soglia. Orbene! disse, dopo breve silenzio,"
+  },
+  {
+   "page": 179,
+   "published": "dinanzi",
+   "scan_blind": "d'innanzi",
+   "context": "quali mi sorgeva vivida dinanzi l'imagine d'Elisa e del"
+  },
+  {
+   "page": 179,
+   "published": "ogni sforzo",
+   "scan_blind": "l'incertezza della situazione",
+   "context": "addestrarmi alla difesa. Ma ogni sforzo irrideva ogni mia facoltà"
+  },
+  {
+   "page": 179,
+   "published": "all'irritazione",
+   "scan_blind": "all'irritazone",
+   "context": "ricostruzioni finivano a questo: all'irritazione nervosa, all'esaurimento. Allora non"
+  },
+  {
+   "page": 179,
+   "published": "o",
+   "scan_blind": "",
+   "context": "grande rimedio della giovinezza: o dormivo, in qualsiasi modo,"
+  },
+  {
+   "page": 179,
+   "published": "in qualsiasi modo, o rinunciavo all'azione.",
+   "scan_blind": "",
+   "context": "della giovinezza: o dormivo, in qualsiasi modo, o rinunciavo all'azione. Il primo indizio certo"
+  },
+  {
+   "page": 179,
+   "published": "sotto",
+   "scan_blind": "sotta",
+   "context": "avvolgermi, l'ebbi quando, condotto sotto buona scorta all'ufficio del"
+  },
+  {
+   "page": 179,
+   "published": "patriota",
+   "scan_blind": "patriotta",
+   "context": "Felice Orsini, più caldo patriota che prudente cospiratore, aveva"
+  },
+  {
+   "page": 180,
+   "published": "abitata,",
+   "scan_blind": "subita,",
+   "context": "disciplina, troppo a lungo abitata, non gli aveva reciso"
+  },
+  {
+   "page": 180,
+   "published": "mitologico:",
+   "scan_blind": "mitologco:",
+   "context": "il popolo parigino, nome mitologico: Saturno! L'altra guardia era"
+  },
+  {
+   "page": 180,
+   "published": "volentieri.",
+   "scan_blind": "volontieri.",
+   "context": "nel senso inverso. Sonnecchiava volentieri. Alla Conciergerie, ebbi il"
+  },
+  {
+   "page": 180,
+   "published": "della",
+   "scan_blind": "delle",
+   "context": "Ma perché il personale della Conciergerie si dava simile"
+  },
+  {
+   "page": 181,
+   "published": "permesso",
+   "scan_blind": "perinesso",
+   "context": "a cui si era permesso di alludere. Ora eccoci"
+  },
+  {
+   "page": 181,
+   "published": "sedeva",
+   "scan_blind": "siedeva",
+   "context": "scrivania, presso la finestra, sedeva il solito Giudice d'Istruzione"
+  },
+  {
+   "page": 182,
+   "published": "palesare",
+   "scan_blind": "pelesare",
+   "context": "che la esortava a palesare quanto sapeva, aveva risposto:"
+  },
+  {
+   "page": 182,
+   "published": "dinanzi",
+   "scan_blind": "d'innanzi",
+   "context": "non l'avevo mai fatto dinanzi al mio giudice e"
+  },
+  {
+   "page": 182,
+   "published": "riuscirvi,",
+   "scan_blind": "riescirvi,",
+   "context": "Felice Orsini e per riuscirvi, tradisce l'innocente!\" Avvenne ciò"
+  },
+  {
+   "page": 182,
+   "published": "Scotland",
+   "scan_blind": "Scottland",
+   "context": "capo dei detectives della Scotland Yard, che aveva accompagnato"
+  },
+  {
+   "page": 182,
+   "published": "riuscisse",
+   "scan_blind": "riescisse",
+   "context": "lingua di Shakespeare mi riuscisse difficile, diede ordine che"
+  },
+  {
+   "page": 183,
+   "published": "celermente",
+   "scan_blind": "celeramente",
+   "context": "Poi corsi via, tanto celermente che le guardie, venendomi"
+  },
+  {
+   "page": 184,
+   "published": "Noi",
+   "scan_blind": "Nol",
+   "context": "Bisogna prepararsi a morire\". Noi dissi, ma dentro, sentivo"
+  },
+  {
+   "page": 184,
+   "published": "le unghie",
+   "scan_blind": "l'unghie",
+   "context": "fu ben certa d'avermi le unghie strette alla gola. Egli"
+  },
+  {
+   "page": 184,
+   "published": "inutili",
+   "scan_blind": "inauditi",
+   "context": "il carnefice, avrei risparmiato inutili dolori a quegli infelici?"
+  },
+  {
+   "page": 185,
+   "published": "accecati",
+   "scan_blind": "acciecati",
+   "context": "di denigrazione ai malevoli, accecati sia da rancori personali,"
+  },
+  {
+   "page": 185,
+   "published": "erano",
+   "scan_blind": "",
+   "context": "silenzio! I miei complici erano presi nell'identica morsa, precipitati"
+  },
+  {
+   "page": 185,
+   "published": "conficcarsi",
+   "scan_blind": "conficcarci",
+   "context": "per sé stesse, a conficcarsi a perfetto tenore di"
+  },
+  {
+   "page": 185,
+   "published": "corroborare con le",
+   "scan_blind": "corroborarle colle",
+   "context": "tenore di Legge. Il corroborare con le ammissioni degli imputati avrebbe"
+  },
+  {
+   "page": 185,
+   "published": "giovane,",
+   "scan_blind": "giovine,",
+   "context": "che ero il più giovane, il suo sottile lavorìo;"
+  },
+  {
+   "page": 185,
+   "published": "colle",
+   "scan_blind": "insinuatesi",
+   "context": "di dissipare certe diffidenze colle nell'animo sospettoso del capo"
+  },
+  {
+   "page": 185,
+   "published": "ammobiliato",
+   "scan_blind": "ammobigliato",
+   "context": "volta, il piede nell'appartamento ammobiliato dell'Orsini, in via Monthabor"
+  },
+  {
+   "page": 185,
+   "published": "negazione?\"",
+   "scan_blind": "denegazione?”",
+   "context": "qual prò ostinarsi nella negazione?\" Dopo varie reticenze e"
+  },
+  {
+   "page": 186,
+   "published": "fandonie",
+   "scan_blind": "frangie",
+   "context": "ornamentare i fatti con fandonie fantastiche e di trarne"
+  },
+  {
+   "page": 186,
+   "published": "svisare",
+   "scan_blind": "svisarne",
+   "context": "deduzioni che tendessero a svisare la portata. \"Era venuto"
+  },
+  {
+   "page": 186,
+   "published": "manifestata",
+   "scan_blind": "manifestato",
+   "context": "barricate. E poiché aveva manifestata qualche dubbio sulla loro"
+  },
+  {
+   "page": 186,
+   "published": "avvedercene",
+   "scan_blind": "avvedersene",
+   "context": "Ebbe il merito di avvedercene a tempo. Allora, accampando"
+  },
+  {
+   "page": 186,
+   "published": "le",
+   "scan_blind": "la",
+   "context": "alcuna; che avrebbe confutato le accuse unicamente durante il"
+  },
+  {
+   "page": 186,
+   "published": "dinanzi",
+   "scan_blind": "d'innanzi",
+   "context": "processo vero e proprio; dinanzi a quelli che riteneva"
+  },
+  {
+   "page": 187,
+   "published": "Rievocherò",
+   "scan_blind": "Rivocherò",
+   "context": "eccoci al nostro capo. Rievocherò vecchie impressioni; esprimerò giudizi"
+  },
+  {
+   "page": 187,
+   "published": "anticipandovi",
+   "scan_blind": "anticipandosi",
+   "context": "vie della metropoli, quasi anticipandovi le emozioni dei momenti"
+  },
+  {
+   "page": 189,
+   "published": "facce",
+   "scan_blind": "faccie",
+   "context": "in tutte le molteplici facce del suo prisma, levigata"
+  },
+  {
+   "page": 189,
+   "published": "granite.",
+   "scan_blind": "grande.",
+   "context": "talora, un solo lato granite. Felice Orsini ne aveva"
+  },
+  {
+   "page": 189,
+   "published": "lanciare,",
+   "scan_blind": "lasciare,",
+   "context": "ridurlo a brani, senza lanciare, dell'opera sua, un atomo"
+  },
+  {
+   "page": 189,
+   "published": "il",
+   "scan_blind": "la",
+   "context": "prova di un coraggio il cui tempra oscura qualsiasi"
+  },
+  {
+   "page": 189,
+   "published": "imparagonabile",
+   "scan_blind": "impareggiabile",
+   "context": "pianure olezzanti, il cielo imparagonabile d'Italia; avrebbe cospirato e"
+  },
+  {
+   "page": 189,
+   "published": "splendido",
+   "scan_blind": "spendido",
+   "context": "per pusillanimi riguardi, lo splendido materiale che esse gli"
+  },
+  {
+   "page": 190,
+   "published": "prudentemente inserita",
+   "scan_blind": "insinua inavvertita",
+   "context": "ma tra le lusinghe prudentemente inserita la sorda minaccia. Una"
+  },
+  {
+   "page": 190,
+   "published": "",
+   "scan_blind": "L'impeto delle nobili passioni sollevò",
+   "context": "che egli ha tradito! Giulio Favre al disopra"
+  },
+  {
+   "page": 191,
+   "published": "immaginavano",
+   "scan_blind": "imaginavano",
+   "context": "li attorniava. Costoro si immaginavano forse d'essere l'Impero e"
+  },
+  {
+   "page": 191,
+   "published": "accecato",
+   "scan_blind": "acciecato",
+   "context": "sciocco si mostrerebbe chi, accecato dal prestigio inerente alla"
+  },
+  {
+   "page": 191,
+   "published": "della",
+   "scan_blind": "dela",
+   "context": "giudicarci. Dal primo svolgersi della Storia sino ai giorni"
+  },
+  {
+   "page": 191,
+   "published": "patrioti",
+   "scan_blind": "patriotti",
+   "context": "fosse accontentata d'impiccare i patrioti italiani. Essa li ha"
+  },
+  {
+   "page": 192,
+   "published": "servi",
+   "scan_blind": "vermi",
+   "context": "la fosca destrezza dei servi del secondo Impero. L'atto"
+  },
+  {
+   "page": 192,
+   "published": "sdrucito",
+   "scan_blind": "sdruscito",
+   "context": "egli gettò \"pietosamente\" sull'abito sdrucito del disinteresse, l'ampio mantello"
+  },
+  {
+   "page": 192,
+   "published": "repulsioni",
+   "scan_blind": "emulsioni",
+   "context": "le attrazioni e le repulsioni degli animi si avvicendavano"
+  },
+  {
+   "page": 192,
+   "published": "rovesciare.",
+   "scan_blind": "rovistare.",
+   "context": "difetto di melma da rovesciare. Così a Giuseppe Pieri,"
+  },
+  {
+   "page": 193,
+   "published": "presero,",
+   "scan_blind": "merendarono,",
+   "context": "tra scapigliati che si presero, a spese di un"
+  },
+  {
+   "page": 193,
+   "published": "prendesse",
+   "scan_blind": "premesse",
+   "context": "un mentitore a cui prendesse di far credere che"
+  },
+  {
+   "page": 194,
+   "published": "nel",
+   "scan_blind": "quel",
+   "context": "E non era, d'altronde, nel mio diniego, il mezzo"
+  },
+  {
+   "page": 194,
+   "published": "brodo",
+   "scan_blind": "broda",
+   "context": "lascia colare all'intelletto qualsiasi brodo senza filtrarlo, certo non"
+  },
+  {
+   "page": 194,
+   "published": "filtrarlo,",
+   "scan_blind": "filtrarla,",
+   "context": "all'intelletto qualsiasi brodo senza filtrarlo, certo non mancherà di"
+  },
+  {
+   "page": 194,
+   "published": "",
+   "scan_blind": "e pur goffe",
+   "context": "piena di queste sanguinose ironie! E perchè non"
+  },
+  {
+   "page": 194,
+   "published": "",
+   "scan_blind": "lì",
+   "context": "quella pena ne fu, per intero, letta la"
+  },
+  {
+   "page": 194,
+   "published": "intero,",
+   "scan_blind": "lì",
+   "context": "pena ne fu, per intero, letta la descrizione: \"condotti"
+  },
+  {
+   "page": 194,
+   "published": "incalzasse,",
+   "scan_blind": "rincalzasse,",
+   "context": "n'ebbi l'impressione che egli incalzasse, in quel momento, certa"
+  },
+  {
+   "page": 194,
+   "published": "spavalderia:",
+   "scan_blind": "spavalveria:",
+   "context": "Pareva dicesse, senz'ombra di spavalderia: \"la vostra miseria non"
+  },
+  {
+   "page": 195,
+   "published": "Saturno",
+   "scan_blind": "Suturno",
+   "context": "una quiete quasi famigliare. Saturno e l'altra guardia già"
+  },
+  {
+   "page": 195,
+   "published": "che",
+   "scan_blind": "ehe",
+   "context": "Kim e gli altri che avevano contribuito a salvare"
+  },
+  {
+   "page": 196,
+   "published": "ventiquattro ore.",
+   "scan_blind": "ventiquattr'ore.",
+   "context": "una visita almeno ogni ventiquattro ore. Era un ex capitano"
+  },
+  {
+   "page": 197,
+   "published": "",
+   "scan_blind": "lo",
+   "context": "come se una voragine trascinasse inesorabilmente nel cannoncino"
+  },
+  {
+   "page": 197,
+   "published": "",
+   "scan_blind": "e",
+   "context": "tomba di Felice Orsini; se Felice Orsini non"
+  },
+  {
+   "page": 197,
+   "published": "era",
+   "scan_blind": "eran",
+   "context": "o, se rispondeva, le era parole tratte dal profondo,"
+  },
+  {
+   "page": 197,
+   "published": "l'irruente romagnolo",
+   "scan_blind": "l'iracondo romagnuolo",
+   "context": "che nelle sue \"Memorie\" l'irruente romagnolo tratteggiava il Mazzini come"
+  },
+  {
+   "page": 197,
+   "published": "l'antico risentimento",
+   "scan_blind": "l'astio intenso",
+   "context": "bassi e venali. Ma l'antico risentimento contro il Maestro dilegua"
+  },
+  {
+   "page": 197,
+   "published": "dilegua",
+   "scan_blind": "dileguò",
+   "context": "risentimento contro il Maestro dilegua il giorno che le"
+  },
+  {
+   "page": 197,
+   "published": "il indomani",
+   "scan_blind": "l'indomani",
+   "context": "lui fatta dal \"Profeta\" il indomani dell'attentato, quando altri patrioti,"
+  },
+  {
+   "page": 197,
+   "published": "patrioti,",
+   "scan_blind": "patriotti,",
+   "context": "indomani dell'attentato, quando altri patrioti, meticolosi sui mezzi di"
+  },
+  {
+   "page": 197,
+   "published": "Patria,",
+   "scan_blind": "Patra,",
+   "context": "mezzi di redimere la Patria, lo avevano quasi stigmatizzato"
+  },
+  {
+   "page": 197,
+   "published": "nell'uomini,",
+   "scan_blind": "nell'Orsini,",
+   "context": "combattuta esistenza si andavano, nell'uomini, disintegrando e lasciavano riapparire,"
+  },
+  {
+   "page": 198,
+   "published": "rammolliti,",
+   "scan_blind": "rammolite,",
+   "context": "Silvio Pellico e d'altri, rammolliti, quasi, dai patimenti. Ma"
+  },
+  {
+   "page": 198,
+   "published": "nulla",
+   "scan_blind": "nulìa",
+   "context": "silenzio nulla attenua e nulla cancella. Ben si può"
+  },
+  {
+   "page": 198,
+   "published": "e",
+   "scan_blind": "",
+   "context": "capelli n'erano rapidamente incanutiti e più d'una tenue fibra"
+  },
+  {
+   "page": 198,
+   "published": "Patriota",
+   "scan_blind": "Patriotta",
+   "context": "verità filosofiche e morali. Patriota si disse, invece, e"
+  },
+  {
+   "page": 198,
+   "published": "soddisfacimento",
+   "scan_blind": "esaltamento",
+   "context": "e trarre il proprio soddisfacimento dalla sua rovina. Questa"
+  },
+  {
+   "page": 198,
+   "published": "avvalorata",
+   "scan_blind": "inasprita",
+   "context": "diffidenza era in me avvalorata da altre circostanze. A"
+  },
+  {
+   "page": 198,
+   "published": "immaginarsi",
+   "scan_blind": "imaginarsi",
+   "context": "fosse morta. E' facile immaginarsi le mie torture. Poi,"
+  },
+  {
+   "page": 198,
+   "published": "composti",
+   "scan_blind": "contesti",
+   "context": "forse se eran proprio composti di carne e d'ossa"
+  },
+  {
+   "page": 199,
+   "published": "Macan",
+   "scan_blind": "Magnan",
+   "context": "se fosse il generale Macan o il generale Roguet."
+  },
+  {
+   "page": 199,
+   "published": "volentieri",
+   "scan_blind": "volontieri",
+   "context": "quanto all'essere vittima ben volentieri avrei mutato panni con"
+  },
+  {
+   "page": 199,
+   "published": "commuovevano.",
+   "scan_blind": "commovevano.",
+   "context": "cui sventure profondamente lo commuovevano. Una volta messo su"
+  },
+  {
+   "page": 200,
+   "published": "aborrono",
+   "scan_blind": "abborrono",
+   "context": "sarei aspettate... gli Italiani aborrono i traditori!\" La mia"
+  },
+  {
+   "page": 200,
+   "published": "ho",
+   "scan_blind": "ha",
+   "context": "proprie dimissioni. Io non ho motivo alcuno per dubitare"
+  },
+  {
+   "page": 201,
+   "published": "Pieri, che mi precedeva",
+   "scan_blind": "Cristo. Il Consiglio",
+   "context": "attigua. Nell'entrarvi il Pieri, che mi precedeva di alcuni passi, si"
+  },
+  {
+   "page": 201,
+   "published": "alcuni passi, si volse e disse all'Orsini: \"Ebbene, vecchio mio?\" L'Orsini alzò",
+   "scan_blind": "Stato ed",
+   "context": "che mi precedeva di alcuni passi, si volse e disse all'Orsini: \"Ebbene, vecchio mio?\" L'Orsini alzò il capo, lo guardò"
+  },
+  {
+   "page": 201,
+   "published": "carnefice, damerino probabilmente,",
+   "scan_blind": "animo, che sapeva scanda gliare i caratteri",
+   "context": "specchiarsi e il suo carnefice, damerino probabilmente, malgrado il turpe mestiere,"
+  },
+  {
+   "page": 201,
+   "published": "",
+   "scan_blind": "le maschere, deve aver esultato sinistramente e forse, come",
+   "context": "carnefice, damerino probabilmente, malgrado il turpe mestiere, trasse"
+  },
+  {
+   "page": 203,
+   "published": "chicchessia,",
+   "scan_blind": "chichessia,",
+   "context": "di recar danno a chicchessia, dar libero sfogo al"
+  },
+  {
+   "page": 203,
+   "published": "della",
+   "scan_blind": "dela",
+   "context": "mie costole era cappellano della Casa dei Discoli. Fu"
+  },
+  {
+   "page": 203,
+   "published": "patrioti",
+   "scan_blind": "patriotti",
+   "context": "orgoglio, ribattendo che i patrioti italiani non avevan bisogno"
+  },
+  {
+   "page": 203,
+   "published": "incuranti",
+   "scan_blind": "non curanti",
+   "context": "alle guardie. I Regolamenti, incuranti delle coscienze, ci imponevano"
+  },
+  {
+   "page": 204,
+   "published": "riuscirono",
+   "scan_blind": "riescirono",
+   "context": "dirlo! Quei momenti mi riuscirono estremamente penosi. Da parecchi"
+  },
+  {
+   "page": 204,
+   "published": "piove.",
+   "scan_blind": "",
+   "context": "come aveva promesso, cantando!... piove. Sono nel cortile... piove"
+  },
+  {
+   "page": 204,
+   "published": "indarno",
+   "scan_blind": "indarmo",
+   "context": "provocavano tremiti che io indarno mi sforzavo di reprimere"
+  },
+  {
+   "page": 204,
+   "published": "irritandosi,",
+   "scan_blind": "irritandomi,",
+   "context": "reprimere e quell'apparente fiacchezza, irritandosi, mi induceva a mordere"
+  },
+  {
+   "page": 205,
+   "published": "delle anime,",
+   "scan_blind": "dell'anime,",
+   "context": "per una singolare corrispondenza delle anime, anche l'Orsini si voltò."
+  },
+  {
+   "page": 205,
+   "published": "La scommessa!...",
+   "scan_blind": "",
+   "context": "queste parole: \"La scommessa! La scommessa!... avete perso!... pagherete lo"
+  },
+  {
+   "page": 205,
+   "published": "",
+   "scan_blind": "xxx",
+   "context": "teste... il turpe canestro... Il Conte di Rudio,"
+  },
+  {
+   "page": 206,
+   "published": "californese,",
+   "scan_blind": "californiese,",
+   "context": "il capo... il sole californese, vicino al tramonto, spiava"
+  },
+  {
+   "page": 207,
+   "published": "al-",
+   "scan_blind": "all'Antecristo!",
+   "context": "lettere... all'Imperatore, al Papa, al- Ero senza difesa alcuna"
+  },
+  {
+   "page": 207,
+   "published": "rizzarsi",
+   "scan_blind": "rizzarmi",
+   "context": "a qualunque costo, per rizzarsi più fieramente a mani"
+  },
+  {
+   "page": 208,
+   "published": "Marchese",
+   "scan_blind": "Marchesse",
+   "context": "d'innanzi al soprintendente, il Marchese Lassalle, il quale mi"
+  },
+  {
+   "page": 209,
+   "published": "con l'animo",
+   "scan_blind": "coll'animo",
+   "context": "di famiglia patrizia, coraggioso, con l'animo nutrito a buoni ed"
+  },
+  {
+   "page": 209,
+   "published": "recapitate senz'essere",
+   "scan_blind": "ricapitate sen z'essere",
+   "context": "risposte, che le verrebbero recapitate senz'essere lette, né da esse"
+  },
+  {
+   "page": 209,
+   "published": "immaginaria,",
+   "scan_blind": "imaginaria,",
+   "context": "la mia apparizione. Non immaginaria, non mentita; ma vera"
+  },
+  {
+   "page": 209,
+   "published": "con l'irruenza",
+   "scan_blind": "coll'irruenza",
+   "context": "entrai, mi corse incontro con l'irruenza della passione e mi"
+  },
+  {
+   "page": 210,
+   "published": "riuscita",
+   "scan_blind": "riescita",
+   "context": "il mio consiglio, era riuscita ad interessare alla nostra"
+  },
+  {
+   "page": 210,
+   "published": "Nottingham,",
+   "scan_blind": "Nothingham,",
+   "context": "Walter, della sua stessa Nottingham, il quale era una"
+  },
+  {
+   "page": 210,
+   "published": "umana",
+   "scan_blind": "l'umana",
+   "context": "supplica, firmata poi, per umana influenza di Sir Richard"
+  },
+  {
+   "page": 210,
+   "published": "recapitata",
+   "scan_blind": "ricapitata",
+   "context": "perchè la supplica fosse recapitata personalmente all'Imperatrice Eugenia. L'Elisa"
+  },
+  {
+   "page": 210,
+   "published": "sorridendo",
+   "scan_blind": "sorriso",
+   "context": "parte del telegramma sorridendo... sorridendo tra le lagrime, sorriso"
+  },
+  {
+   "page": 210,
+   "published": "recapitata,",
+   "scan_blind": "ricapitata,",
+   "context": "sua mi era stata recapitata, così nessuna delle mie"
+  },
+  {
+   "page": 210,
+   "published": "con l'occhio",
+   "scan_blind": "coll'occhio",
+   "context": "un anno!\" Poi cercai con l'occhio il bimbo mio. Era"
+  },
+  {
+   "page": 212,
+   "published": "Tuie.",
+   "scan_blind": "Tule.",
+   "context": "dalla costa francese, l'ultima Tuie. Più studiavo il carattere"
+  },
+  {
+   "page": 212,
+   "published": "",
+   "scan_blind": "brevemente",
+   "context": "buon termine l'impresa. Dirò che il giorno della"
+  },
+  {
+   "page": 212,
+   "published": "ricevette",
+   "scan_blind": "ricevesse",
+   "context": "poi seppi, che ella ricevette da parte mia. Una"
+  },
+  {
+   "page": 213,
+   "published": "approdarono",
+   "scan_blind": "poggiarono",
+   "context": "bordo la pallida sovrana, approdarono a Tolone e vollero"
+  },
+  {
+   "page": 214,
+   "published": "esterrefatta,",
+   "scan_blind": "esterefatta,",
+   "context": "mi osservava con aria esterrefatta, come se fossi il"
+  },
+  {
+   "page": 215,
+   "published": "",
+   "scan_blind": "Che avvenne in seguito?",
+   "context": "sento, mio marito vive!\"\" Il prete sgualcì la"
+  },
+  {
+   "page": 215,
+   "published": "Durance.",
+   "scan_blind": "Durr.",
+   "context": "imbarcato sulla fregata La Durance. \"Voi andate a Cayenna"
+  },
+  {
+   "page": 216,
+   "published": "soverchio",
+   "scan_blind": "soverchie",
+   "context": "e non doveva nutrire soverchio antipatie per noi, non"
+  },
+  {
+   "page": 216,
+   "published": "(Carmarie)",
+   "scan_blind": "(Canarie)",
+   "context": "all'isola di Santa Cruz (Carmarie) per approvvigionarci d'acqua e"
+  },
+  {
+   "page": 216,
+   "published": "più",
+   "scan_blind": "pù",
+   "context": "saggi proponimenti svanissero non più tardi del giorno successivo."
+  },
+  {
+   "page": 217,
+   "published": "che",
+   "scan_blind": "",
+   "context": "una cinquantina di galeotti che formavano la mia squadra."
+  },
+  {
+   "page": 217,
+   "published": "\"boia",
+   "scan_blind": "\"bois",
+   "context": "sembrava leggero; ma era \"boia fer\" e quando l'ebbi"
+  },
+  {
+   "page": 217,
+   "published": "scritturare",
+   "scan_blind": "scritturale",
+   "context": "rapporto, dovette ricorrere allo scritturare dell'Ingegnere soprintendente: il quale,"
+  },
+  {
+   "page": 217,
+   "published": "chiama",
+   "scan_blind": "chiamò",
+   "context": "foresta, il guardiano mi chiama in disparte. \"Noi abbiamo"
+  },
+  {
+   "page": 217,
+   "published": "nel",
+   "scan_blind": "al",
+   "context": "in disparte. \"Noi abbiamo nel penitenziario certe stoffe!... Ma"
+  },
+  {
+   "page": 218,
+   "published": "innalzato",
+   "scan_blind": "inalzato",
+   "context": "aveva, con secolare energia, innalzato a sé stesso quel"
+  },
+  {
+   "page": 218,
+   "published": "immagine,",
+   "scan_blind": "imagine,",
+   "context": "anche d'Elisa!... La sua immagine, intensamente rievocata, mi dominava"
+  },
+  {
+   "page": 218,
+   "published": "foggiare",
+   "scan_blind": "foggiarne",
+   "context": "scavarlo in modo da foggiare una piroga capace. Con"
+  },
+  {
+   "page": 218,
+   "published": "veliero",
+   "scan_blind": "veliere",
+   "context": "meno fissi, arrivava un veliero con un carico di"
+  },
+  {
+   "page": 218,
+   "published": "sufficiente",
+   "scan_blind": "sufficente",
+   "context": "non gli concedeva profondità sufficiente ad ormeggiare presso la"
+  },
+  {
+   "page": 218,
+   "published": "veliero.",
+   "scan_blind": "veliere.",
+   "context": "cintola, sin presso il veliero. I buoi selvatici, inferociti,"
+  },
+  {
+   "page": 218,
+   "published": "compariva,",
+   "scan_blind": "compartiva,",
+   "context": "degli ufficiali, e le compariva, su una specie di"
+  },
+  {
+   "page": 219,
+   "published": "mella,",
+   "scan_blind": "gamella,",
+   "context": "egli mostrandomi, invece della mella, il pugno: \"Tais toi,"
+  },
+  {
+   "page": 219,
+   "published": "informato",
+   "scan_blind": "informatosi",
+   "context": "certo Cosson, accorre e informato della faccenda, mi domanda"
+  },
+  {
+   "page": 219,
+   "published": "innalzato",
+   "scan_blind": "inalzato",
+   "context": "risposta, mi avevano improvvisamente innalzato nel concetto di quei"
+  },
+  {
+   "page": 219,
+   "published": "arrampicarsi",
+   "scan_blind": "arrampicarvisi",
+   "context": "vi rimase appoggiato. Bisognava arrampicarsi e scavarlo stando aggrappati:"
+  },
+  {
+   "page": 220,
+   "published": "intero",
+   "scan_blind": "eterno",
+   "context": "giurato d'essere vigoroso ed intero come la vergine foresta."
+  },
+  {
+   "page": 220,
+   "published": "riuscimmo",
+   "scan_blind": "rie scimmo",
+   "context": "mesi, o poco più, riuscimmo a trascinare in una"
+  },
+  {
+   "page": 220,
+   "published": "tra",
+   "scan_blind": "tre",
+   "context": "fiume, e a nascondere tra le liane, un canotto"
+  },
+  {
+   "page": 220,
+   "published": "riuscita",
+   "scan_blind": "riescita",
+   "context": "si sforzasse, non era riuscita a spander una sola"
+  },
+  {
+   "page": 220,
+   "published": "dall'ubriachezza",
+   "scan_blind": "dall'ub briachezza",
+   "context": "si imbestialivano e passavano dall'ubriachezza al delirio; dal delirio"
+  },
+  {
+   "page": 220,
+   "published": "cessò",
+   "scan_blind": "cessa",
+   "context": "due figli ed egli cessò d'interessarsi della mia salute."
+  },
+  {
+   "page": 221,
+   "published": "",
+   "scan_blind": "ironia!",
+   "context": "quel baratro sarebbe parsa... Prestai mano a sepellire,"
+  },
+  {
+   "page": 221,
+   "published": "di sé",
+   "scan_blind": "li sè",
+   "context": "assolutamente invulnerabili; parecchi, ombre di sé stessi, mostravano d'esserne stati"
+  },
+  {
+   "page": 221,
+   "published": "d'un",
+   "scan_blind": "da",
+   "context": "trasformata la sua faccia d'un prete bonaccione! Tre soli"
+  },
+  {
+   "page": 221,
+   "published": "carnale",
+   "scan_blind": "carname",
+   "context": "funeste conseguenze, il vasto carnale a cui eravamo miracolosamente"
+  },
+  {
+   "page": 222,
+   "published": "tristemente",
+   "scan_blind": "tristamente",
+   "context": "stesso che divenne poi tristemente celebre pel losco dramma"
+  },
+  {
+   "page": 223,
+   "published": "entrati",
+   "scan_blind": "sventurati",
+   "context": "più solidarietà tra gli entrati che non tra i"
+  },
+  {
+   "page": 223,
+   "published": "trovò?",
+   "scan_blind": "trova? I tredici fuggitivi!",
+   "context": "sopraggiunge e chi vi trovò? Tre soltanto. I tre"
+  },
+  {
+   "page": 223,
+   "published": "figliuolo",
+   "scan_blind": "fratello",
+   "context": "dall'isolotto del Diavolo. Il figliuolo di Giacomo Pianori, precursore"
+  },
+  {
+   "page": 223,
+   "published": "e",
+   "scan_blind": "ad",
+   "context": "esposti al torrido Sole e alle pioggie torrenziali, esalarono"
+  },
+  {
+   "page": 223,
+   "published": "azzurriccola",
+   "scan_blind": "azzurrognola",
+   "context": "Un banco di terra azzurriccola che fa presa come"
+  },
+  {
+   "page": 223,
+   "published": "poco",
+   "scan_blind": "pò",
+   "context": "la zattera e quel poco che restava del Pianori"
+  },
+  {
+   "page": 224,
+   "published": "velatamente,",
+   "scan_blind": "celatamente,",
+   "context": "vendono, più o meno velatamente, a chiunque ne voglia"
+  },
+  {
+   "page": 224,
+   "published": "fare!",
+   "scan_blind": "dire!....",
+   "context": "non ce la può fare! Fui addetto all'officina dell'ancore."
+  },
+  {
+   "page": 224,
+   "published": "il riimossessarsene,",
+   "scan_blind": "l'impossessarsene,",
+   "context": "vela? Io calcolavo che il riimossessarsene, con un colpo di"
+  },
+  {
+   "page": 224,
+   "published": "provvisioni...",
+   "scan_blind": "provvigioni...",
+   "context": "maneggio e difettavano di provvisioni... bisognava dunque accaparrarsi la"
+  },
+  {
+   "page": 225,
+   "published": "sovrapponendosi",
+   "scan_blind": "sovrapponendovi",
+   "context": "il loro odio politico, sovrapponendosi quello privato; per aver"
+  },
+  {
+   "page": 226,
+   "published": "lo",
+   "scan_blind": "io",
+   "context": "altra delle circostanze che lo ritenni favorevoli e direi"
+  },
+  {
+   "page": 226,
+   "published": "pezzo",
+   "scan_blind": "pernio",
+   "context": "formazione quasi spontanea del pezzo che mi mancava; che"
+  },
+  {
+   "page": 226,
+   "published": "indaro,",
+   "scan_blind": "indarno,",
+   "context": "che mi mancava; che indaro, nelle mie lunghe meditazioni,"
+  },
+  {
+   "page": 226,
+   "published": "canottiere",
+   "scan_blind": "cannottiere",
+   "context": "della sera. Il Morbioli, canottiere a Roma, era addetto"
+  },
+  {
+   "page": 226,
+   "published": "fondali,",
+   "scan_blind": "sfondali,",
+   "context": "me stesso: \"Sfondali, pisellone; fondali, se puoi!\" Quella semplice"
+  },
+  {
+   "page": 226,
+   "published": "\"fondali!\"",
+   "scan_blind": "\"sfondali!\"",
+   "context": "puoi!\" Quella semplice parola \"fondali!\" mi guizzò nella mente"
+  },
+  {
+   "page": 226,
+   "published": "pioli",
+   "scan_blind": "piuoli",
+   "context": "alla sua scala a pioli e spennellava la facciata"
+  },
+  {
+   "page": 226,
+   "published": "purché riuscisse",
+   "scan_blind": "purchè riescisse",
+   "context": "al condannato l'immediata libertà purché riuscisse a coinvolgermi in qualche"
+  },
+  {
+   "page": 226,
+   "published": "muri ammazzato!\"",
+   "scan_blind": "ammazato!\"",
+   "context": "che tu possa murì... muri ammazzato!\" Coll'adesione del Morbioli, il"
+  },
+  {
+   "page": 228,
+   "published": "bagnato baciato",
+   "scan_blind": "Saluto",
+   "context": "giorni, approda all'isola del bagnato baciato la fregata \"Amazzone\" e"
+  },
+  {
+   "page": 228,
+   "published": "perchè,",
+   "scan_blind": "",
+   "context": "me ne rattristai. Perchè, perchè, che cosa vi scorgevo"
+  },
+  {
+   "page": 228,
+   "published": "lì?",
+   "scan_blind": "",
+   "context": "che cosa vi scorgevo lì? Il Re del Piemonte"
+  },
+  {
+   "page": 228,
+   "published": "dei",
+   "scan_blind": "de'",
+   "context": "aveva seguito la tattica dei suoi predecessori: valersi dei"
+  },
+  {
+   "page": 228,
+   "published": "insinuato,",
+   "scan_blind": "",
+   "context": "opportunismo, delle codarde tergiversazioni... insinuato, presentivo il profondo scetticismo"
+  },
+  {
+   "page": 228,
+   "published": "se.",
+   "scan_blind": "",
+   "context": "non aver saputo colpire se. Un ufficiale dell'Amazzone, impressionato"
+  },
+  {
+   "page": 229,
+   "published": "impiegarci",
+   "scan_blind": "impiegarvi",
+   "context": "con tanta circospezione, da impiegarci un paio di mesi."
+  },
+  {
+   "page": 230,
+   "published": "pollice",
+   "scan_blind": "police",
+   "context": "mostrando, stretto tra il pollice e l'indice, un pezzo"
+  },
+  {
+   "page": 230,
+   "published": "raschia",
+   "scan_blind": "sgretola",
+   "context": "un baleno, la chiglia raschia e si ferma. \"Presto..."
+  },
+  {
+   "page": 230,
+   "published": "\"Presto...",
+   "scan_blind": "",
+   "context": "raschia e si ferma. \"Presto... Presto... quanti spiccioli!\" Per"
+  },
+  {
+   "page": 230,
+   "published": "l'albero",
+   "scan_blind": "l'alberetto",
+   "context": "nascondiglio le provvigioni e l'albero e la vela, i"
+  },
+  {
+   "page": 230,
+   "published": "riuscivo",
+   "scan_blind": "riescivo",
+   "context": "con manovra, che non riuscivo a comprendere, il Cousin,"
+  },
+  {
+   "page": 230,
+   "published": "i calmi",
+   "scan_blind": "gli scalmi",
+   "context": "scende a bordo perchè i calmi sono in fondo al"
+  },
+  {
+   "page": 231,
+   "published": "nel",
+   "scan_blind": "il",
+   "context": "preme, colle braccia tese nel vuoto, quasi si sforzasse"
+  },
+  {
+   "page": 231,
+   "published": "i calmi",
+   "scan_blind": "gli scalmi",
+   "context": "grave d'onda, aveva raggiunto i calmi colà dove non giungeva"
+  },
+  {
+   "page": 231,
+   "published": "rovesciatevi",
+   "scan_blind": "rovesciativi",
+   "context": "intorbidate dai grandi fiumi rovesciatevi dal Continente e già"
+  },
+  {
+   "page": 232,
+   "published": "persero",
+   "scan_blind": "apersero",
+   "context": "la frase: \"E si persero le cataratte del cielo.\""
+  },
+  {
+   "page": 232,
+   "published": "scarpacce",
+   "scan_blind": "scarpaccie",
+   "context": "a loro portata: le scarpacce di legno. In simile"
+  },
+  {
+   "page": 232,
+   "published": "ormai",
+   "scan_blind": "d'ogni",
+   "context": "dal pericolo stesso. Sedata ormai intorno la burrasca, sorse"
+  },
+  {
+   "page": 233,
+   "published": "tristemente",
+   "scan_blind": "tristamente",
+   "context": "del cannibalismo balenarono allora tristemente nella nostra fantasia e"
+  },
+  {
+   "page": 233,
+   "published": "degradare",
+   "scan_blind": "degradarne",
+   "context": "nell'aria scoppiarono imprecazioni da degradare quelle che si attribuiscono"
+  },
+  {
+   "page": 233,
+   "published": "distendere",
+   "scan_blind": "distender",
+   "context": "e barili; quali a distendere reti. Altri, seduti sull'arena,"
+  },
+  {
+   "page": 233,
+   "published": "incalzando",
+   "scan_blind": "rincalzando",
+   "context": "i miei spiccioli e incalzando la prima domanda soggiunsi:"
+  },
+  {
+   "page": 233,
+   "published": "compari",
+   "scan_blind": "compagni",
+   "context": "a certa morte i compari del Pianori. I miei"
+  },
+  {
+   "page": 233,
+   "published": "",
+   "scan_blind": "propizio,",
+   "context": "il vento che spirava era saturo dei profumi"
+  },
+  {
+   "page": 233,
+   "published": "stantuffo.",
+   "scan_blind": "stantufo.",
+   "context": "ogni suo colpo di stantuffo. Cousin calcolava inoltre che"
+  },
+  {
+   "page": 233,
+   "published": "",
+   "scan_blind": "sull'onde,",
+   "context": "canotto scorreva tanto celeramente che il ritenere prossima"
+  },
+  {
+   "page": 233,
+   "published": "Ad",
+   "scan_blind": "An",
+   "context": "appariva più che ragionevole. Ad un tratto, la barca"
+  },
+  {
+   "page": 234,
+   "published": "stesso livello.",
+   "scan_blind": "sterno.",
+   "context": "alla cintola, l'acqua allo stesso livello. Le zanzare, fortunatamente, non"
+  },
+  {
+   "page": 234,
+   "published": "compatriota",
+   "scan_blind": "compatriotta",
+   "context": "pugnale di un mio compatriota ed ai luridi crostacei"
+  },
+  {
+   "page": 235,
+   "published": "sottrarvisi",
+   "scan_blind": "sottrarvici",
+   "context": "il solo pensare a sottrarvisi sarebbe stata follia. Ci"
+  },
+  {
+   "page": 235,
+   "published": "spalatura",
+   "scan_blind": "spalmatura",
+   "context": "calzoni che malgrado la spalatura di fango che li"
+  },
+  {
+   "page": 235,
+   "published": "richiederli,",
+   "scan_blind": "chiedergli,",
+   "context": "peripezie minutamente e di richiederli, a mo' di conclusione,"
+  },
+  {
+   "page": 235,
+   "published": "\"Well,",
+   "scan_blind": "",
+   "context": "sgangheratamente. Quando tacqui, incominciò: \"Well, well, well, well!...\" Ma"
+  },
+  {
+   "page": 235,
+   "published": "coccodrillo.",
+   "scan_blind": "cocodrillo.",
+   "context": "croste, con denti da coccodrillo. E la navicella scorre"
+  },
+  {
+   "page": 236,
+   "published": "Inoltrateci",
+   "scan_blind": "Inoltratici",
+   "context": "dirigere il nostro corso. Inoltrateci appena, ecco venire celermente"
+  },
+  {
+   "page": 236,
+   "published": "celermente",
+   "scan_blind": "celeramente",
+   "context": "Inoltrateci appena, ecco venire celermente verso noi una lancia,"
+  },
+  {
+   "page": 236,
+   "published": "basette canide.",
+   "scan_blind": "bassette candide.",
+   "context": "un vecchio dalle lunghe basette canide. Era attorniato da una"
+  },
+  {
+   "page": 236,
+   "published": "apparecchiarci",
+   "scan_blind": "apprestarci",
+   "context": "e, dato l'ordine di apparecchiarci una refezione sostanziale, alla"
+  },
+  {
+   "page": 236,
+   "published": "brage?",
+   "scan_blind": "bragie?",
+   "context": "miseramente dalla padella nelle brage? Per convincerli che non"
+  },
+  {
+   "page": 237,
+   "published": "onorevolmente",
+   "scan_blind": "",
+   "context": "domande che non fossero onorevolmente discrete; non vidi se"
+  },
+  {
+   "page": 237,
+   "published": "le",
+   "scan_blind": "e",
+   "context": "del nostro canotto. Troncai le conversazione e strette di"
+  },
+  {
+   "page": 237,
+   "published": "basette",
+   "scan_blind": "bassette",
+   "context": "vecchio Governatore dalle lunghe basette candide, era entrato silenziosamente"
+  },
+  {
+   "page": 237,
+   "published": "Stavo per replicare,",
+   "scan_blind": "",
+   "context": "morto.\" Stavo per replicare, Stavo per replicare, quando un giovane di"
+  },
+  {
+   "page": 237,
+   "published": "convento. Parlava l'italiano",
+   "scan_blind": "",
+   "context": "stata educata in un convento. Parlava l'italiano con dolcezza insolita in"
+  },
+  {
+   "page": 238,
+   "published": "in",
+   "scan_blind": "a",
+   "context": "l'italiano con dolcezza insolita in bocca straniera ed era"
+  },
+  {
+   "page": 238,
+   "published": "quelle agili",
+   "scan_blind": "quell'agili",
+   "context": "dalla posa del martire... quelle agili dita che, materialmente, scorrevano"
+  },
+  {
+   "page": 238,
+   "published": "smagnetizzatore.",
+   "scan_blind": "magnetizzatore.",
+   "context": "come quelle di un smagnetizzatore. Ed io provai la"
+  },
+  {
+   "page": 238,
+   "published": "ripercuotendosi,",
+   "scan_blind": "ripercotendosi,",
+   "context": "V'eran pur note che, ripercuotendosi, nel profondo, vi suscitavano"
+  },
+  {
+   "page": 238,
+   "published": "lagrimato, non",
+   "scan_blind": "lagrimato!Ma",
+   "context": "dalla speranza... Credo d'averne lagrimato, non ho a mente quante."
+  },
+  {
+   "page": 238,
+   "published": "a mente quante.",
+   "scan_blind": "un'attenuante.",
+   "context": "d'averne lagrimato, non ho a mente quante. Sentivo profondamente il magistero"
+  },
+  {
+   "page": 238,
+   "published": "Gousin",
+   "scan_blind": "Cousin",
+   "context": "La tattica adottata dal Gousin di spingere il nostro"
+  },
+  {
+   "page": 238,
+   "published": "destra",
+   "scan_blind": "dastra",
+   "context": "e, venendomi incontro a destra tesa, con un sorriso"
+  },
+  {
+   "page": 239,
+   "published": "immaginandosi",
+   "scan_blind": "imaginandosi",
+   "context": "entrare uno. Il quale, immaginandosi che io avessi mentito"
+  },
+  {
+   "page": 239,
+   "published": "ridiventi",
+   "scan_blind": "ridivenni",
+   "context": "prò degli ideali, io ridiventi improvvisamente fanciullo. Al capitano"
+  },
+  {
+   "page": 239,
+   "published": "le unghie",
+   "scan_blind": "l'unghie",
+   "context": "qualche precauzione; poiché se le unghie napoleoniche mi avessero, anche"
+  },
+  {
+   "page": 240,
+   "published": "Kandel,",
+   "scan_blind": "Randel,",
+   "context": "il \"John Romelly\", capitano Kandel, che avrebbe voluto salpare"
+  },
+  {
+   "page": 240,
+   "published": "tenermi malato",
+   "scan_blind": "tenda calata",
+   "context": "nella mia camera, a tenermi malato e, per meglio deludere"
+  },
+  {
+   "page": 241,
+   "published": "alberatura",
+   "scan_blind": "alberature",
+   "context": "scorgemmo traccie indubbie nelle alberatura uscenti, in più di"
+  },
+  {
+   "page": 241,
+   "published": "rinforzato ornato",
+   "scan_blind": "rinforcato",
+   "context": "del \"John Romelly\"; avevo rinforzato ornato i calzoni dell'ergastolo. Da"
+  },
+  {
+   "page": 242,
+   "published": "le invetriate,",
+   "scan_blind": "l'invetriate,",
+   "context": "per semplice curiosità, attraverso le invetriate, tra le tendine verdi,"
+  },
+  {
+   "page": 242,
+   "published": "Leicester",
+   "scan_blind": "Lester",
+   "context": "in modesti locali, sulla Leicester Square. Per salirvi, bisognava"
+  },
+  {
+   "page": 242,
+   "published": "squadratomi",
+   "scan_blind": "quadratomi",
+   "context": "a cui ne domandai, squadratomi dal capo ai piedi,"
+  },
+  {
+   "page": 242,
+   "published": "Leicester",
+   "scan_blind": "Lester",
+   "context": "saremmo trovati all'angolo della Leicester Square, per definire a"
+  },
+  {
+   "page": 243,
+   "published": "Leicester",
+   "scan_blind": "Lester",
+   "context": "All'ora stabilita scantono in Leicester Square e scorgo, tra"
+  },
+  {
+   "page": 243,
+   "published": "messoci",
+   "scan_blind": "messomi",
+   "context": "bottega da cartolaio e, messoci bruscamente tra loro, li"
+  },
+  {
+   "page": 243,
+   "published": "riuscivano",
+   "scan_blind": "riescivano",
+   "context": "le mie dita non riuscivano ad azzeccare un occhiello."
+  },
+  {
+   "page": 244,
+   "published": "lacrimando:",
+   "scan_blind": "lagrimando:",
+   "context": "quando rinvenne, baciandola e lacrimando: \"Elisa, Elisa! onesto qual'ero;"
+  },
+  {
+   "page": 245,
+   "published": "avvalorare",
+   "scan_blind": "avvalorarle",
+   "context": "sotterra; ma tentava di avvalorare sostenendo che io avevo"
+  },
+  {
+   "page": 245,
+   "published": "capitoletto",
+   "scan_blind": "capitaletto",
+   "context": "a suo favore, un capitoletto di mille e cento"
+  },
+  {
+   "page": 246,
+   "published": "mai?",
+   "scan_blind": "",
+   "context": "loro argomentazioni. Avvenne questo mai? Un tale Sherman, che"
+  },
+  {
+   "page": 246,
+   "published": "calunniate",
+   "scan_blind": "",
+   "context": "noto proverbio: \"Calunniate, calunniate, calunniate ecc.\" Tra i forzati,"
+  },
+  {
+   "page": 246,
+   "published": "riuscito",
+   "scan_blind": "riescito",
+   "context": "Da quest'ultima località, era riuscito ad evadere e a"
+  },
+  {
+   "page": 247,
+   "published": "fron-",
+   "scan_blind": "Torocfalda.",
+   "context": "di un Egassy di fron- Il quale possedeva, tra"
+  },
+  {
+   "page": 247,
+   "published": "luddite.",
+   "scan_blind": "liddite.",
+   "context": "qualcosa come la moderna luddite. Non volle rivelarne il"
+  },
+  {
+   "page": 247,
+   "published": "serviti",
+   "scan_blind": "servito",
+   "context": "perchè se ne sarebbero serviti diceva per perpetuare l'oppressione"
+  },
+  {
+   "page": 247,
+   "published": "",
+   "scan_blind": "di fronte",
+   "context": "e muti e ciechi alla questione, ben più"
+  },
+  {
+   "page": 247,
+   "published": "confidarsi...",
+   "scan_blind": "",
+   "context": "ricchezza. Seguire la corrente, confidarsi... chi avrebbe potuto biasimarlo?"
+  },
+  {
+   "page": 247,
+   "published": "",
+   "scan_blind": "Seguire la corrente... trionfare!",
+   "context": "una scintilla di grandezza! Aveva preferito morire d'indigenza"
+  },
+  {
+   "page": 249,
+   "published": "Houx,",
+   "scan_blind": "Roux,",
+   "context": "connazionali, ebbi dal Le Houx, l'ex galeotto francese. Il"
+  },
+  {
+   "page": 249,
+   "published": "col",
+   "scan_blind": "coll'imperturbabile",
+   "context": "dissimulare lo stato dell'animo col sorriso... quel sorriso mi"
+  },
+  {
+   "page": 250,
+   "published": "riusciva",
+   "scan_blind": "riesciva",
+   "context": "paragonarmi, la pecora mi riusciva il più detestabile. Carità"
+  },
+  {
+   "page": 250,
+   "published": "",
+   "scan_blind": "\"Per",
+   "context": "riusciva il più detestabile. Carità disse non facciamo"
+  },
+  {
+   "page": 250,
+   "published": "riuscire",
+   "scan_blind": "riescire",
+   "context": "anche a costo di riuscire importuno. Ad un mio"
+  },
+  {
+   "page": 250,
+   "published": "l'aerolita",
+   "scan_blind": "l'areolita",
+   "context": "il selvaggio che adora l'aerolita piovuto dal cielo. E"
+  },
+  {
+   "page": 251,
+   "published": "cupidigia",
+   "scan_blind": "cupidigie",
+   "context": "di superstizioni e di cupidigia che avrebbe presa la"
+  },
+  {
+   "page": 253,
+   "published": "ribella",
+   "scan_blind": "quella",
+   "context": "esercito vittorioso e concluso ribella pace di Villafranca che"
+  },
+  {
+   "page": 253,
+   "published": "piena conoscenza delle",
+   "scan_blind": "piega presa dalle",
+   "context": "imperiale erano dovute alla piena conoscenza delle manovre di Napoleone, in"
+  },
+  {
+   "page": 253,
+   "published": "resto",
+   "scan_blind": "regno",
+   "context": "la prepotenza imperiale: un resto centrale retto da Plon-plon"
+  },
+  {
+   "page": 253,
+   "published": "Presidenza",
+   "scan_blind": "Presidenzia",
+   "context": "in pillole, sotto la Presidenza di Pio IX; il"
+  },
+  {
+   "page": 253,
+   "published": "d'ingannare",
+   "scan_blind": "d'ingraziarsi",
+   "context": "dell'inutilità d'ogni suo tentativo d'ingannare gli Italiani, toglieva dall'animo"
+  },
+  {
+   "page": 253,
+   "published": "patrioti",
+   "scan_blind": "patriotti",
+   "context": "Italiani, toglieva dall'animo dei patrioti il nuovissimo incubo. Sull'esempio"
+  },
+  {
+   "page": 253,
+   "published": "dell'età",
+   "scan_blind": "d'Europa glie",
+   "context": "se le condizioni generali dell'età l'avessero consentito, egli si"
+  },
+  {
+   "page": 253,
+   "published": "i",
+   "scan_blind": "gli",
+   "context": "la propria volontà, e i armenti gallici avrebbero bevuta"
+  },
+  {
+   "page": 254,
+   "published": "questi aveva coll'Austria,",
+   "scan_blind": "coll’Austria",
+   "context": "interessi.\" Vittorio Emanuele II, questi aveva coll'Austria, assetata di vendetta, ben"
+  },
+  {
+   "page": 254,
+   "published": "",
+   "scan_blind": "più",
+   "context": "sogno di menti esaltate) non poteva più lusignrarsi"
+  },
+  {
+   "page": 254,
+   "published": "più lusignrarsi",
+   "scan_blind": "lusingarsi",
+   "context": "menti esaltate) non poteva più lusignrarsi di tentare novità, di"
+  },
+  {
+   "page": 254,
+   "published": "esclamò:",
+   "scan_blind": "intravvedendolo, amareggiato esclama:",
+   "context": "E Vittorio Emanuele II esclamò: \"Povera Italia!\" Ma era"
+  },
+  {
+   "page": 254,
+   "published": "evento",
+   "scan_blind": "avvenimento",
+   "context": "sua lamentata defezione un evento fausto negli annali d'Italia."
+  },
+  {
+   "page": 254,
+   "published": "contraddittorie",
+   "scan_blind": "contradditorie",
+   "context": "generale, le voci più contraddittorie e persino quella che"
+  },
+  {
+   "page": 254,
+   "published": "notizia,",
+   "scan_blind": "visione,",
+   "context": "A sperdere la truce notizia, venne l'annuncio della vittoria"
+  },
+  {
+   "page": 254,
+   "published": "da",
+   "scan_blind": "dai",
+   "context": "L'Inghilterra rimase come abbagliata da quei fasci di luce"
+  },
+  {
+   "page": 255,
+   "published": "annodano",
+   "scan_blind": "rannodano",
+   "context": "che incoraggiano i dubbiosi, annodano le sparse fila, distribuiscono"
+  },
+  {
+   "page": 255,
+   "published": "per debellare",
+   "scan_blind": "par debellarvi",
+   "context": "promessa, invade le Marche per debellare i mercenari della reazione."
+  },
+  {
+   "page": 255,
+   "published": "Napoleone",
+   "scan_blind": "Napoleon",
+   "context": "chiesto il consenso di Napoleone III, a cui mostrava"
+  },
+  {
+   "page": 255,
+   "published": "temeva.",
+   "scan_blind": "paven tava.",
+   "context": "tendenze repubblicane egli soverchiamente temeva. Monarchico sino al fanatismo,"
+  },
+  {
+   "page": 255,
+   "published": "30",
+   "scan_blind": "10",
+   "context": "alla famiglia italiana. Il 30 Novembre di quell'anno, ebbi,"
+  },
+  {
+   "page": 255,
+   "published": "altri",
+   "scan_blind": "aītri",
+   "context": "gloria del trionfo; agli altri quello d'averlo preparato e"
+  },
+  {
+   "page": 255,
+   "published": "accentuò",
+   "scan_blind": "acentuò",
+   "context": "di delinearsi. Napoleone III accentuò sempre più le sue"
+  },
+  {
+   "page": 255,
+   "published": "agguato",
+   "scan_blind": "aguato",
+   "context": "stretto di Messina, un agguato di ferro e di"
+  },
+  {
+   "page": 256,
+   "published": "statista,",
+   "scan_blind": "",
+   "context": "i sereni convincimenti. Vero statista, Vittorio Emanuele II veniva"
+  },
+  {
+   "page": 256,
+   "published": "scuotere",
+   "scan_blind": "scuoterne",
+   "context": "pianto sinceramente; benché, a scuotere la popolarità, già fosse"
+  },
+  {
+   "page": 256,
+   "published": "",
+   "scan_blind": "concretati",
+   "context": "al liberalismo inglese che, poi nella malaugurata \"Convenzione"
+  },
+  {
+   "page": 256,
+   "published": "accordandosi",
+   "scan_blind": "accordatosi",
+   "context": "l'intera Penisola. Ma quando, accordandosi con Garibaldi, il fiero"
+  },
+  {
+   "page": 256,
+   "published": "una",
+   "scan_blind": "un",
+   "context": "della collettività italiana, non una massa inerte, in balia"
+  },
+  {
+   "page": 256,
+   "published": "auspici",
+   "scan_blind": "auspice",
+   "context": "Diplomazia antiquata e menzognera, auspici Urbano Rattazzi, acuisce il"
+  },
+  {
+   "page": 256,
+   "published": "inflittale",
+   "scan_blind": "inflittele",
+   "context": "ancora le orribili ferite inflittale dalla belva Haynau, dovette"
+  },
+  {
+   "page": 256,
+   "published": "",
+   "scan_blind": "santo",
+   "context": "in un impeto di sdegno, lanciava in viso"
+  },
+  {
+   "page": 257,
+   "published": "",
+   "scan_blind": "dell'abbiezione",
+   "context": "polacchi. Né la misura era colma. Troncata la"
+  },
+  {
+   "page": 257,
+   "published": "tramandare",
+   "scan_blind": "tramandarne",
+   "context": "ragione di più per tramandare ai posteri il nome"
+  },
+  {
+   "page": 257,
+   "published": "fucilarli.",
+   "scan_blind": "freddarli.",
+   "context": "della Nazione... e voleva fucilarli. Ma Urbano Rattazzi, spaventato"
+  },
+  {
+   "page": 257,
+   "published": "patrioti,",
+   "scan_blind": "patriotti,",
+   "context": "nell'Italia meridionale fucila i patrioti, a favore del Papa."
+  },
+  {
+   "page": 258,
+   "published": "illusi",
+   "scan_blind": "iilusi",
+   "context": "i disonesti e gli illusi che gli furono sicari,"
+  },
+  {
+   "page": 258,
+   "published": "all'accrescimento",
+   "scan_blind": "all'esaltamento",
+   "context": "che mirando quasi esclusivamente all'accrescimento dell'esercito e onorando le"
+  },
+  {
+   "page": 258,
+   "published": "a",
+   "scan_blind": "di",
+   "context": "alti papaveri del Ministero a soffocare la voce solitaria"
+  },
+  {
+   "page": 259,
+   "published": "con l'opera,",
+   "scan_blind": "coll'opera,",
+   "context": "costantemente, col pensiero e con l'opera, alla realizzazione dei \"sogni\","
+  },
+  {
+   "page": 260,
+   "published": "scacciarli,",
+   "scan_blind": "scacciarnelo,",
+   "context": "i generosi insorti per scacciarli, come si scacciano i"
+  },
+  {
+   "page": 260,
+   "published": "alle anime",
+   "scan_blind": "all'anime",
+   "context": "ed ai doveri imposti alle anime virili. E quale Sovrano,"
+  },
+  {
+   "page": 260,
+   "published": "duro",
+   "scan_blind": "puro",
+   "context": "limpide come il più duro lembo di cielo, non"
+  },
+  {
+   "page": 260,
+   "published": "",
+   "scan_blind": "ho vinto!\"",
+   "context": "vostro son roba mia!\" Da quella sua servile"
+  },
+  {
+   "page": 260,
+   "published": "ricappare",
+   "scan_blind": "incappare",
+   "context": "serie di dogmi per ricappare in un'altra che la"
+  },
+  {
+   "page": 260,
+   "published": "Penisola",
+   "scan_blind": "Peninsula",
+   "context": "nostra è ora la Penisola dei due Pontefici! La"
+  },
+  {
+   "page": 260,
+   "published": "ferrivecchi",
+   "scan_blind": "ferravecchi",
+   "context": "La Monarchia gettando nei ferrivecchi il programma nazionale, mise"
+  },
+  {
+   "page": 260,
+   "published": "vincolarla",
+   "scan_blind": "vincolarsi",
+   "context": "ancora che pensasse a vincolarla colle alleanze palesi? Non"
+  },
+  {
+   "page": 260,
+   "published": "riuscirà",
+   "scan_blind": "riescirà",
+   "context": "e del sacrificio, non riuscirà ad altro se non"
+  },
+  {
+   "page": 260,
+   "published": "fetido",
+   "scan_blind": "feticcia",
+   "context": "nei raffinati dell'alta società, fetido ed indulgente; quanto tra"
+  },
+  {
+   "page": 260,
+   "published": "sopravvissute",
+   "scan_blind": "sopravvisute",
+   "context": "presente burrascoso, le Istituzioni sopravvissute al passato. Missione fatale..."
+  },
+  {
+   "page": 261,
+   "published": "prostrarsi",
+   "scan_blind": "prosternarsi",
+   "context": "scuola che insegna a prostrarsi al successo. I pensatori"
+  },
+  {
+   "page": 261,
+   "published": "intensa",
+   "scan_blind": "intesa",
+   "context": "si riversa tanto più intensa sulla setta nefasta che,"
+  },
+  {
+   "page": 261,
+   "published": "",
+   "scan_blind": "riesce",
+   "context": "ben definito! La sua figura riesce non da"
+  },
+  {
+   "page": 261,
+   "published": "riesce",
+   "scan_blind": "",
+   "context": "definito! La sua figura riesce non da parate trionfali,"
+  },
+  {
+   "page": 261,
+   "published": "connazionali,",
+   "scan_blind": "connazioonali,",
+   "context": "V'ha, tra i miei connazionali, chi si senta di"
+  },
+  {
+   "page": 261,
+   "published": "",
+   "scan_blind": "(Lungo silenzio).",
+   "context": "si senta di tentarla! Fu scritto che io"
+  },
+  {
+   "page": 261,
+   "published": "disegnandole,",
+   "scan_blind": "disdegnandole,",
+   "context": "consentono e sorpassa, quasi disegnandole, le rivendicazioni intermedie che"
+  },
+  {
+   "page": 261,
+   "published": "chicchessia.",
+   "scan_blind": "chichessia.",
+   "context": "non suscita l'invidia di chicchessia. E so che l'Austria"
+  },
+  {
+   "page": 262,
+   "published": "trasformazione.",
+   "scan_blind": "trsformazione.",
+   "context": "a subire una parziale trasformazione. Gli atti del regale"
+  },
+  {
+   "page": 262,
+   "published": "colla cresciuta",
+   "scan_blind": "coll'accresciuta",
+   "context": "mantenersi in equilibrio rintuzzando, colla cresciuta potenza della Chiesa, le"
+  },
+  {
+   "page": 262,
+   "published": "riuscirete",
+   "scan_blind": "riescirete",
+   "context": "in tal modo che riuscirete a dominarlo. Il passato"
+  },
+  {
+   "page": 263,
+   "published": "dell'uguaglianza",
+   "scan_blind": "dell'ugualianza",
+   "context": "al trionfo della Democrazia, dell'uguaglianza di fronte ai diritti,"
+  },
+  {
+   "page": 263,
+   "published": "",
+   "scan_blind": "\"Ma",
+   "context": "lungo, benedetto e glorioso. Nella politica estera le"
+  },
+  {
+   "page": 263,
+   "published": "del trionfo",
+   "scan_blind": "",
+   "context": "politica estera le traccie del trionfo della violenza patita dalla"
+  },
+  {
+   "page": 263,
+   "published": "",
+   "scan_blind": "non",
+   "context": "di fronte alla sua, come la ripiegano i"
+  },
+  {
+   "page": 263,
+   "published": "spiagge",
+   "scan_blind": "spiaggie",
+   "context": "un'Italia indipendente dall'Alpi all'estreme spiagge meridionali. La Monarchia, or"
+  },
+  {
+   "page": 263,
+   "published": "con l'uno",
+   "scan_blind": "coll'uno",
+   "context": "meridionali. La Monarchia, or con l'uno or con l'altro pretesto,"
+  },
+  {
+   "page": 263,
+   "published": "con l'altro",
+   "scan_blind": "coll'altro",
+   "context": "or con l'uno or con l'altro pretesto, si è sottratta"
+  },
+  {
+   "page": 263,
+   "published": "può sonnecchiare.",
+   "scan_blind": "ha sonnecchiato.",
+   "context": "la famigerata alleanza, non può sonnecchiare. Essa rinnova e moltiplica"
+  },
+  {
+   "page": 263,
+   "published": "",
+   "scan_blind": "essa",
+   "context": "e moltiplica le armi; affila l'unghie e accenna"
+  },
+  {
+   "page": 263,
+   "published": "affondare.",
+   "scan_blind": "affondarle.",
+   "context": "in quale carne anela affondare. Urge l'operare umanamente entro"
+  },
+  {
+   "page": 263,
+   "published": "",
+   "scan_blind": "1)",
+   "context": "equivoco, il trono d'Italia! Il Conte di Rudio"
+  },
+  {
+   "page": 264,
+   "published": "subordinandola",
+   "scan_blind": "subordinandole",
+   "context": "le sue belle qualità subordinandola troppo facilmente alla parola"
+  },
+  {
+   "page": 264,
+   "published": "vistosi",
+   "scan_blind": "vistomi",
+   "context": "fianco un tale che, vistosi entrare, gli sussurrò poche"
+  },
+  {
+   "page": 265,
+   "published": "",
+   "scan_blind": "cessa",
+   "context": "la bandiera del Re, la Rivoluzione e il"
+  },
+  {
+   "page": 265,
+   "published": "del mondo.",
+   "scan_blind": "angariati.",
+   "context": "sono tutti i popoli del mondo. Troverò dappertutto prepotenti da"
+  },
+  {
+   "page": 265,
+   "published": "il",
+   "scan_blind": "l'aver",
+   "context": "difendere.\" Ne conclusi che il tentato a vantaggio del"
+  },
+  {
+   "page": 265,
+   "published": "patriota",
+   "scan_blind": "patriotta",
+   "context": "la cooperazione di un patriota che se non era"
+  },
+  {
+   "page": 265,
+   "published": "dei",
+   "scan_blind": "de'",
+   "context": "accolto tra le file dei suoi difensori... ma anche"
+  },
+  {
+   "page": 265,
+   "published": "i patti",
+   "scan_blind": "l'impreveduto",
+   "context": "ma anche questa volta, i patti doveva essere più forte"
+  },
+  {
+   "page": 265,
+   "published": "nei",
+   "scan_blind": "nè",
+   "context": "rimase qualche secondo assorto nei suoi pensieri. Poi si"
+  },
+  {
+   "page": 266,
+   "published": "rassicurazione,",
+   "scan_blind": "l'assicurazione,",
+   "context": "e per amarsi. Avutane rassicurazione, esclamò: \"Quanto mi spiacque"
+  },
+  {
+   "page": 266,
+   "published": "anacronismo,",
+   "scan_blind": "anacronisma,",
+   "context": "schiavitù. Malgrado questo detestabile anacronismo, la Libertà ha profonde"
+  },
+  {
+   "page": 267,
+   "published": "vergare",
+   "scan_blind": "vergar lettere....",
+   "context": "e si accinse a vergare le lettere che dovevano"
+  },
+  {
+   "page": 267,
+   "published": "oggi",
+   "scan_blind": "oggidi,",
+   "context": "che, rinnovate, formerebbero anche oggi il vanto di qualsivoglia"
+  },
+  {
+   "page": 267,
+   "published": "chi gli osa",
+   "scan_blind": "che gioverebbe il",
+   "context": "di Giuseppe Mazzini a chi gli osa negarlo? noi urtiamo con"
+  },
+  {
+   "page": 267,
+   "published": "aberrazione,",
+   "scan_blind": "abberrazione,",
+   "context": "Mazzini, per una singolare aberrazione, consacrò tanta parte della"
+  },
+  {
+   "page": 268,
+   "published": "Poi",
+   "scan_blind": "Il Maestro",
+   "context": "le riesce meno molesta.\" Poi si alzò e mi"
+  },
+  {
+   "page": 268,
+   "published": "nel sottostrato",
+   "scan_blind": "nei sottostrati",
+   "context": "trionfo, un segreto dolore, nel sottostrato dell'animo persistette... la mia"
+  }
+ ]
+}

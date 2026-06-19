@@ -110,7 +110,7 @@ def harvard_window(loc_pages) -> list[int]:
 # --- readers: take labeled images so a caller can mix Copy A and Copy B ---
 
 def _read_gemini(images: list[tuple[str, bytes]], system: str, user: str, model: str,
-                 json_out: bool = True) -> str:
+                 json_out: bool = True, thinking: str | None = None) -> str:
     from google import genai
     from google.genai import types
 
@@ -125,6 +125,11 @@ def _read_gemini(images: list[tuple[str, bytes]], system: str, user: str, model:
     cfg = dict(system_instruction=system, max_output_tokens=8000)
     if json_out:
         cfg["response_mime_type"] = "application/json"
+    # thinking_level (low|medium|high) trades reasoning budget for cost. Transcription
+    # is insensitive to it (verified on a dense page), but hard glyph-adjudication on a
+    # small set benefits — so callers pick per regime; omit for the model default.
+    if thinking:
+        cfg["thinking_config"] = types.ThinkingConfig(thinking_level=thinking)
     resp = client.models.generate_content(
         model=model,
         contents=types.Content(role="user", parts=parts),
@@ -149,15 +154,16 @@ def _read_claude(images: list[tuple[str, bytes]], system: str, user: str, model:
 
 
 def read_images(images: list[tuple[str, bytes]], system: str, user: str, model: str = PRIMARY,
-                json_out: bool = True) -> str:
+                json_out: bool = True, thinking: str | None = None) -> str:
     """Raw model text for a vision question over labeled (label, jpeg_bytes) images.
 
     With json_out (default) Gemini is pinned to JSON; the user prompt must still ask
     for JSON for Claude, which only obeys the instruction. Pass json_out=False for a
     long plain-text transcription (JSON pinning truncates those — see _read_gemini).
+    `thinking` (Gemini only) sets the thinking_level; None uses the model default.
     """
     if model.startswith("gemini"):
-        return _read_gemini(images, system, user, model, json_out=json_out)
+        return _read_gemini(images, system, user, model, json_out=json_out, thinking=thinking)
     return _read_claude(images, system, user, model)
 
 
@@ -190,7 +196,7 @@ def read_json(pages, system: str, user: str, model: str = PRIMARY):
     return _parse(raw), raw
 
 
-def read_json_images(images, system: str, user: str, model: str = PRIMARY):
+def read_json_images(images, system: str, user: str, model: str = PRIMARY, thinking: str | None = None):
     """`read_images` + tolerant JSON parse. Returns (parsed, raw)."""
-    raw = read_images(images, system, user, model)
+    raw = read_images(images, system, user, model, thinking=thinking)
     return _parse(raw), raw

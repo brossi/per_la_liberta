@@ -66,3 +66,11 @@ assets/page_images_harvard/
 
 # Scan-adjudication cache (regenerable via scan_adjudicate.py)
 state/scan_adjudication/
+
+# Whole-book blind re-read cache (regenerable via blind_fullbook.py)
+state/blind_fullbook/
+# Targeted medium-thinking re-read cache (low-failure-page comparison; regenerable)
+state/blind_fullbook_medium/
+
+# Blind-deviation scan-adjudication cache (regenerable via scan_adjudicate.py --source blind)
+state/scan_adjudication_blind/
