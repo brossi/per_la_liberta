@@ -146,28 +146,37 @@ function card(it){
     review:'<span class="b review">review</span>'}[it.action]||'';
   const cat=`<span class="b cat">${esc(it.category)}</span>`;
   const copy=it.scan_copy?`<span class="b cap">Copy ${esc(it.scan_copy)}${it.scan_confidence?' · '+esc(it.scan_confidence):''}</span>`:'';
-  const printed = it.printed ? `<span class="frag printed">${esc(it.printed)}</span>`
-                             : `<span class="frag empty">(not in Original)</span>`;
-  const published = it.published ? `<span class="frag published">${esc(it.published)}</span>`
-                                 : `<span class="frag empty">(missing from Derived)</span>`;
   const sel=d=>v.decision===d?"sel":"";
   const sug2=d=>d===sug?"suggested":"";
-  const restoreLbl = it.printed ? `✓ Restore «${esc(it.printed)}»`
-                                : `✓ Insert «${esc(it.scan_text||it.printed)}»`;
-  const keepLbl = it.published ? `✗ Keep «${esc(it.published)}»` : `✗ Keep (omit)`;
+  // render each shape in plain English; decision values stay restore/keep/unsure
+  let pairHTML, restoreLbl, keepLbl, capWord, capLead;
+  if(it.kind==="dittography"){
+    pairHTML = `<span class="lab">Derived repeats</span><span class="frag published">${esc(it.published)}</span>`
+             + `<span class="arrow">—</span><span class="lab">Original does not</span>`;
+    restoreLbl = `✓ Remove the repeat`; keepLbl = `✗ Keep (intentional)`;
+    capWord = it.published; capLead = `does the page repeat`;
+  } else if(it.kind==="omission"){
+    pairHTML = `<span class="lab">Original has</span><span class="frag printed">${esc(it.printed)}</span>`
+             + `<span class="arrow">—</span><span class="lab">dropped from Derived</span>`;
+    restoreLbl = `✓ Insert «${esc(it.printed)}»`; keepLbl = `✗ Keep dropped`;
+    capWord = it.printed; capLead = `boxed`;
+  } else {
+    pairHTML = `<span class="lab">Original</span><span class="frag printed">${esc(it.printed)}</span>`
+             + `<span class="arrow">vs</span><span class="lab">Derived</span><span class="frag published">${esc(it.published)}</span>`;
+    restoreLbl = `✓ Restore «${esc(it.printed)}»`; keepLbl = `✗ Keep «${esc(it.published)}»`;
+    capWord = it.printed; capLead = `boxed`;
+  }
   const img = it.img;
   const cap = it.is_crop
-    ? `Copy ${esc(it.scan_copy||'A')} p.${it.page} — boxed: <b>${esc(it.printed)}</b>`
-    : `<span class="nobox">no box located — full page p.${it.page}; find <b>${esc(it.printed||it.published)}</b></span>`;
+    ? (it.kind==="dittography"
+        ? `Copy ${esc(it.scan_copy||'A')} p.${it.page} — ${capLead} «${esc(capWord)}»? (box marks one occurrence)`
+        : `Copy ${esc(it.scan_copy||'A')} p.${it.page} — ${capLead}: <b>${esc(capWord)}</b>`)
+    : `<span class="nobox">no box located — full page p.${it.page}; find <b>${esc(capWord)}</b></span>`;
   return `<div class="card ${v.decision?'done':''}" data-key="${esc(it.key)}">
     <div>
       <div class="tags">${actbadge}${cat}${copy}</div>
       <div class="ctx">${ctxHTML(it)}</div>
-      <div class="pair">
-        <span class="lab">Original</span>${printed}
-        <span class="arrow">vs</span>
-        <span class="lab">Derived</span>${published}
-      </div>
+      <div class="pair">${pairHTML}</div>
       <div class="reason">judge: ${esc(it.reason||"")}</div>
       <div class="dec">
         <button data-d="restore" class="${sel('restore')} ${sug2('restore')}">${restoreLbl}</button>
@@ -276,6 +285,11 @@ def main():
             "scan_text": it.get("scan_text", ""), "scan_copy": it.get("scan_copy", ""),
             "scan_confidence": it.get("scan_confidence", ""), "sentence": it.get("sentence", ""),
             "img": img, "is_crop": is_crop, "conf": confidence(it),
+            # card shape: substitution (both sides), omission (Original has it, Derived dropped),
+            # dittography (Derived repeats it, Original does not) — drives plain-English rendering
+            "kind": ("dittography" if not (it.get("printed") or "").strip()
+                     else "omission" if not (it.get("published") or "").strip()
+                     else "substitution"),
         })
     # order: lowest-confidence first (lead with what needs judgment), then chapter/page
     corder = {"low": 0, "med": 1, "high": 2}
