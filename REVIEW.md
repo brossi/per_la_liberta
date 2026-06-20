@@ -179,7 +179,7 @@ uv run python companion.py --check-links      # probe external links (network, o
 Unreferenced by any live code; kept under `archive/one_off_scripts/` for
 provenance, **not part of any track**:
 
-- `archive/one_off_scripts/write_ch3_synth.py`, `archive/one_off_scripts/write_ch6_synth.py`, `archive/one_off_scripts/write_ch8_synth.py`, `archive/one_off_scripts/write_ch6_out.py` — empty stubs / placeholders, never executed.
+- `archive/one_off_scripts/write_ch3_synth.py`, `archive/one_off_scripts/write_ch6_synth.py`, `archive/one_off_scripts/write_ch8_synth.py`, `archive/one_off_scripts/write_ch6_out.py`, `archive/one_off_scripts/write_ch32.py` — empty stubs / placeholders, never executed.
 - `archive/one_off_scripts/write_provenance.py` — one-off that hand-wrote one chapter's `provenance.json`.
 - `archive/one_off_scripts/write_ch20_synth.py` — one-off that wrote a single chapter's English to a hard-coded Desktop path.
 - `archive/one_off_scripts/extract_context.py` — per-chapter narrative-context extraction (run once, cached to `state/context_extractions/`); built for the multi-witness synthesis brief but not currently wired into it.
