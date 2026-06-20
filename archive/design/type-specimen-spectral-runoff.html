@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spectral runoff — Fraunces vs Recoleta (body) — Per la libertà!</title>
+
+<!-- Spectral + Fraunces from the Google CDN (OFL). Recoleta is COMMERCIAL (Latinotype) and not on
+     Google Fonts; this loads the free "Regular DEMO" weight from a public CDN for comparison only —
+     it cannot ship without a Latinotype license. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/recoleta" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#1a1714; --paper:#f7f3ec; --card:#fbf8f2;
+  --muted:#8a7f70; --rule:#d8cfbf; --accent:#7c2d12;
+  --display:"Spectral", serif;
+}
+*{box-sizing:border-box;}
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--paper); color:var(--ink); font-family:system-ui,sans-serif; }
+
+.intro{ max-width:46em; margin:2rem auto 0; padding:0 1.2rem; color:#403930; }
+.intro h1{ font-weight:600; font-size:1.6rem; margin:.2rem 0 .4rem; }
+.intro p{ font-size:.94rem; line-height:1.55; }
+.intro .warn{ background:#f6ece2; border:1px solid #e3c9b6; border-radius:8px;
+  padding:.7rem .9rem; font-size:.88rem; color:#6b4a2f; margin-top:.8rem; }
+.intro code{ background:#ece5d8; padding:.05em .35em; border-radius:4px; font-size:.85em; }
+
+/* ---------- capital-A close-up ---------- */
+.closeup{ max-width:64em; margin:2rem auto 0; padding:0 1.2rem; }
+.closeup h2{ font-size:1.05rem; color:var(--accent); margin:0 0 .2rem; }
+.closeup .sub{ font-size:.84rem; color:#5d5447; margin:0 0 1rem; }
+.aa-row{ display:flex; flex-wrap:wrap; gap:1.1rem; }
+.aa{ flex:1 1 16em; min-width:14em; background:var(--card); border:1px solid var(--rule);
+  border-radius:12px; padding:1rem 1.2rem 1.3rem; text-align:center; }
+.aa .who{ font-family:system-ui,sans-serif; font-size:.72rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--muted); margin:0 0 .5rem; }
+.aa .glyphs{ font-family:var(--bodyface); font-optical-sizing:auto; font-size:5.5rem;
+  line-height:1; color:var(--ink); margin:.1rem 0; }
+.aa .words{ font-family:var(--bodyface); font-optical-sizing:auto; font-size:1.7rem; color:#3a342c; }
+.aa .cap{ font-family:system-ui,sans-serif; font-size:.74rem; color:#5d5447; margin:.6rem 0 0; }
+
+/* ---------- reading panels ---------- */
+.panel{ border-top:1px solid var(--rule); margin-top:2.4rem; padding-top:1.3rem; }
+.panel-head{ max-width:64em; margin:0 auto; padding:0 1.2rem; }
+.panel-head h2{ font-size:1.15rem; color:var(--accent); margin:0; }
+.panel-head .note{ font-size:.86rem; color:#5d5447; margin:.25rem 0 0; }
+.cols{ display:flex; flex-wrap:wrap; gap:2rem 2.5rem; align-items:flex-start;
+  max-width:64em; margin:1.2rem auto 0; padding:0 1.2rem; }
+.desktop{ flex:1 1 30em; min-width:18em; }
+.label{ font-family:system-ui,sans-serif; font-size:.72rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted); margin:0 0 .8rem; }
+.phone-wrap{ flex:0 0 auto; }
+.phone{ width:390px; max-width:100%; background:var(--card); border:1px solid var(--rule);
+  border-radius:22px; box-shadow:0 10px 30px rgba(40,30,15,.10); padding:26px 22px 30px; overflow:hidden; }
+
+.reading{ max-width:34em; }
+.chno{ font-family:var(--display); text-align:center; text-transform:uppercase;
+  letter-spacing:.3em; font-size:.78rem; color:var(--muted); margin:0 0 .35rem; }
+.chtitle{ font-family:var(--display); text-align:center; font-weight:500;
+  font-size:clamp(1.6rem,3.4vw,2rem); line-height:1.08; margin:.1rem 0 1rem; }
+.phone .chtitle{ font-size:1.5rem; }
+.reading p{ font-family:var(--bodyface); font-optical-sizing:auto; font-size:1.15rem;
+  line-height:1.56; margin:0 0 .8em; text-align:left; }
+.phone .reading p{ font-size:1.0625rem; line-height:1.5; }
+.reading p.drop::first-letter{ font-family:var(--display); font-weight:600;
+  float:left; font-size:3.3em; line-height:.72; padding:.04em .08em 0 0; color:var(--accent); }
+.sc{ font-variant:small-caps; }
+
+footer{ max-width:46em; margin:3rem auto 4rem; padding:1.3rem 1.2rem 0;
+  border-top:1px solid var(--rule); font-size:.82rem; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="intro">
+  <h1>Spectral runoff — Fraunces vs Recoleta as the body</h1>
+  <p>Spectral sets the chapter number, title and drop cap in both columns; only the running body face
+  changes. The capital-<strong>A</strong> close-up is first, since that's the detail in question — then
+  real two-paragraph chapter text with capital A's in context (<em>America</em>, <em>Aspromonte</em>,
+  sentence openers).</p>
+  <p class="warn"><strong>License note:</strong> Recoleta is a commercial Latinotype face — <em>not</em>
+  OFL and not on Google Fonts. This is its free <code>Regular&nbsp;DEMO</code> weight (one weight, no
+  italic) loaded from a public CDN purely to look at. It <strong>cannot ship</strong> without a paid
+  Latinotype license; Fraunces (OFL) can. Judge shape here, not weight range.</p>
+</div>
+
+<!-- ---------- capital A close-up ---------- -->
+<section class="closeup">
+  <h2>The capital A, side by side</h2>
+  <p class="sub">Same size, same words. Fraunces's pointed/angular apex vs Recoleta's softer, evener apex.</p>
+  <div class="aa-row">
+    <div class="aa" style="--bodyface:'Fraunces';">
+      <p class="who">Fraunces &nbsp;·&nbsp; OFL</p>
+      <p class="glyphs">A a</p>
+      <p class="words">America · Aspromonte</p>
+      <p class="cap">angular, peaked apex; high contrast</p>
+    </div>
+    <div class="aa" style="--bodyface:'Recoleta';">
+      <p class="who">Recoleta &nbsp;·&nbsp; commercial (demo)</p>
+      <p class="glyphs">A a</p>
+      <p class="words">America · Aspromonte</p>
+      <p class="cap">softer, even apex; lower contrast</p>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- Spectral × Fraunces ---------- -->
+<section class="panel" id="fraunces">
+  <div class="panel-head">
+    <h2>Spectral × Fraunces</h2>
+    <p class="note">Your current favorite. Watch the inline capital A's at true reading size.</p>
+  </div>
+  <div class="cols">
+    <div class="desktop" style="--bodyface:'Fraunces';">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="drop"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>A rubber hose coiled in spirals upon the green grass was driving from its metal tip a fan of the finest droplets, which the sun was painting with the colors of the rainbow. A hummingbird, with its reflections of emerald, was attacking with swift and persistent flight a scarlet flower. Beyond the climbing plants, a man had sought refuge — one who represented the last, glorious remnants of an epoch, from the Roman Republic to Aspromonte and America.</p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading" style="--bodyface:'Fraunces';">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="drop"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which converge upon the shrine at Lourdes.</p>
+        <p>A hummingbird, with reflections of emerald, was attacking a scarlet flower. A man had sought refuge here — the last remnant of an epoch, from the Roman Republic to Aspromonte and America.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------- Spectral × Recoleta ---------- -->
+<section class="panel" id="recoleta">
+  <div class="panel-head">
+    <h2>Spectral × Recoleta <span style="font-weight:400;color:var(--muted);font-size:.85rem;">(demo weight)</span></h2>
+    <p class="note">The commercial near-twin. Single weight only — no bold/italic in the demo.</p>
+  </div>
+  <div class="cols">
+    <div class="desktop" style="--bodyface:'Recoleta';">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="drop"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>A rubber hose coiled in spirals upon the green grass was driving from its metal tip a fan of the finest droplets, which the sun was painting with the colors of the rainbow. A hummingbird, with its reflections of emerald, was attacking with swift and persistent flight a scarlet flower. Beyond the climbing plants, a man had sought refuge — one who represented the last, glorious remnants of an epoch, from the Roman Republic to Aspromonte and America.</p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading" style="--bodyface:'Recoleta';">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="drop"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which converge upon the shrine at Lourdes.</p>
+        <p>A hummingbird, with reflections of emerald, was attacking a scarlet flower. A man had sought refuge here — the last remnant of an epoch, from the Roman Republic to Aspromonte and America.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Throwaway decision tool — not in the build, not in <code>/docs</code>. Spectral + Fraunces are OFL
+  (shippable); Recoleta is a commercial Latinotype demo weight loaded for comparison only. The other
+  three specimens are unchanged.
+</footer>
+</body>
+</html>

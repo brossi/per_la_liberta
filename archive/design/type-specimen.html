@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Type Specimen — Per la libertà! body-face comparison</title>
+
+<!-- All faces pulled from the Google Fonts CDN for this throwaway comparison only.
+     Whatever wins gets vendored locally (OFL) like the existing Bodoni files. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Roboto+Serif:ital,opsz,wght@0,8..144,300..700;1,8..144,300..600&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Piazzolla:ital,opsz,wght@0,8..30,300..700;1,8..30,300..600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --display: "Bodoni Moda", serif;
+  --ink: #1a1714;
+  --paper: #f7f3ec;
+  --paper-phone: #fbf8f2;
+  --muted: #8a7f70;
+  --rule: #d8cfbf;
+  --accent: #7c2d12;
+  --reading-size: 1.20rem;   /* desktop body ~19px; toggled by the size buttons */
+  --reading-leading: 1.58;
+  --measure: 34em;           /* ~66ch cap — the research target */
+}
+*{box-sizing:border-box;}
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Source Serif 4", serif;
+  font-optical-sizing:auto;
+}
+
+/* ---- top bar ---------------------------------------------------------- */
+.bar{
+  position:sticky; top:0; z-index:10;
+  display:flex; flex-wrap:wrap; gap:.4rem .9rem; align-items:baseline;
+  padding:.7rem 1.1rem; background:rgba(247,243,236,.94);
+  backdrop-filter:blur(6px); border-bottom:1px solid var(--rule);
+  font-family:system-ui, sans-serif; font-size:.82rem;
+}
+.bar strong{ font-weight:600; letter-spacing:.02em; margin-right:.4rem; }
+.bar a{ color:var(--accent); text-decoration:none; }
+.bar a:hover{ text-decoration:underline; }
+.bar .sizes{ margin-left:auto; display:flex; gap:.35rem; }
+.bar button{
+  font:inherit; cursor:pointer; border:1px solid var(--rule);
+  background:#fff; color:var(--ink); border-radius:5px; padding:.2rem .6rem;
+}
+.bar button[aria-pressed="true"]{ background:var(--accent); color:#fff; border-color:var(--accent); }
+
+/* ---- page intro ------------------------------------------------------- */
+.intro{ max-width:42em; margin:2.2rem auto 0; padding:0 1.2rem;
+  font-family:system-ui, sans-serif; color:#403930; }
+.intro h1{ font-family:var(--display); font-weight:600; font-size:2rem; margin:.2rem 0 .4rem; }
+.intro p{ font-size:.95rem; line-height:1.55; }
+.intro code{ background:#ece5d8; padding:.05em .35em; border-radius:4px; font-size:.85em; }
+
+/* ---- per-face section ------------------------------------------------- */
+.face{ border-top:1px solid var(--rule); margin-top:2.6rem; padding-top:1.4rem; }
+.face-head{ max-width:64em; margin:0 auto; padding:0 1.2rem; font-family:system-ui, sans-serif; }
+.face-head h2{ font-size:1.15rem; margin:0; color:var(--accent); letter-spacing:.01em; }
+.face-head .note{ font-size:.88rem; color:#5d5447; margin:.25rem 0 0; max-width:52em; }
+.face-head .axis{ font-size:.78rem; color:var(--muted); margin:.2rem 0 0; }
+
+.cols{ display:flex; flex-wrap:wrap; gap:2rem 2.5rem; align-items:flex-start;
+  max-width:64em; margin:1.3rem auto 0; padding:0 1.2rem; }
+
+/* desktop reading column */
+.desktop{ flex:1 1 30em; min-width:18em; }
+.label{ font-family:system-ui, sans-serif; font-size:.72rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted); margin:0 0 .7rem; }
+
+/* phone frame */
+.phone-wrap{ flex:0 0 auto; }
+.phone{
+  width:390px; max-width:100%; background:var(--paper-phone);
+  border:1px solid var(--rule); border-radius:22px;
+  box-shadow:0 10px 30px rgba(40,30,15,.10);
+  padding:26px 20px 30px; overflow:hidden;
+}
+.phone .reading{ font-size:1.0625rem; line-height:1.5; --measure:none; }
+
+/* the actual reading typography (shared) */
+.reading{ font-family:var(--body, "Source Serif 4"), serif;
+  font-optical-sizing:auto; max-width:var(--measure); }
+.reading .chno{ font-family:var(--display); font-optical-sizing:auto;
+  text-align:center; letter-spacing:.34em; text-transform:uppercase;
+  font-size:.74rem; color:var(--muted); margin:.2rem 0 .1rem; }
+.reading .chtitle{ font-family:var(--display); font-optical-sizing:auto;
+  text-align:center; font-weight:500; font-size:1.9rem; line-height:1.1;
+  margin:.1rem 0 1.1rem; }
+.phone .reading .chtitle{ font-size:1.55rem; }
+.reading p{ font-size:var(--reading-size); line-height:var(--reading-leading);
+  margin:0 0 .85em; text-align:left; hanging-punctuation:first; }
+.phone .reading p{ font-size:1.0625rem; line-height:1.5; }
+.reading .dropcap::first-letter{
+  font-family:var(--display); font-optical-sizing:auto; font-weight:600;
+  float:left; font-size:3.4em; line-height:.74; padding:.04em .07em 0 0; color:var(--accent);
+}
+.reading .it{ margin-top:1.1em; }
+.reading .it::before{ content:"Italiano"; display:block;
+  font-family:system-ui,sans-serif; font-size:.66rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:.4em; }
+.reading .small{ font-size:.86em; color:#4a4239; margin-top:1.1em; }
+.reading em{ font-style:italic; }
+.reading .guille{ color:#2a2620; }
+
+footer{ max-width:42em; margin:3rem auto 4rem; padding:1.4rem 1.2rem 0;
+  border-top:1px solid var(--rule); font-family:system-ui,sans-serif;
+  font-size:.82rem; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <strong>Body face:</strong>
+  <a href="#bodoni">Bodoni (current)</a>
+  <a href="#newsreader">Newsreader</a>
+  <a href="#literata">Literata</a>
+  <a href="#fraunces">Fraunces</a>
+  <a href="#roboto">Roboto Serif</a>
+  <span style="color:var(--muted);">new&nbsp;›</span>
+  <a href="#garamond">EB Garamond</a>
+  <a href="#oldstandard">Old Standard</a>
+  <a href="#piazzolla">Piazzolla</a>
+  <span class="sizes">
+    <button data-size="1.0625rem">Compact</button>
+    <button data-size="1.20rem" aria-pressed="true">Comfort</button>
+    <button data-size="1.32rem">Large</button>
+  </span>
+</div>
+
+<div class="intro">
+  <h1>Choosing a body face</h1>
+  <p>Each block below sets a <em>real</em> passage from Chapter One. The chapter
+  number and title are <strong>Bodoni Moda</strong> (display) — that stays, per the
+  pairing decision — and the <strong>running body text changes</strong> per candidate.
+  Every face here is variable with an optical-size axis and <code>font-optical-sizing:auto</code>,
+  so the phone frame (390&nbsp;px) renders the genuine small-size cut, not a shrunk display cut.
+  The desktop column is capped at the research measure (<code>~66ch / 34em</code>).
+  Compare the <strong>phone frames</strong> first — that's where Bodoni fails and the decision is really made.</p>
+</div>
+
+<!-- ============ BODONI (current baseline) ============ -->
+<section class="face" id="bodoni" style="--body:'Bodoni Moda';">
+  <div class="face-head">
+    <h2>Bodoni Moda — current baseline (body + display)</h2>
+    <p class="note">What we ship today. A Didone: gorgeous at title size, but the hairline
+    serifs and extreme thick/thin contrast thin out and shimmer at reading size — worst on the phone.</p>
+    <p class="axis">opsz 6–96 · the same family stays for display in every option below</p>
+  </div>
+  <div class="cols">
+    <div class="desktop">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies — where, in summer, the sun prostrates men and herds alike, like withered grass.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose — dove il sole prostra, come erbe appassite, uomini e mandrie.</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente. <em>Tre quarti di secolo; un'incessante sequela di lotte, di pericoli, di patimenti…</em></p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSREADER ============ -->
+<section class="face" id="newsreader" style="--body:'Newsreader';">
+  <div class="face-head">
+    <h2>Newsreader</h2>
+    <p class="note">Scotch-Roman lineage — the legible descendant of the Didone. Keeps vertical
+    stress and a hint of modern contrast, so it harmonizes under a Bodoni head while staying sturdy on screen.</p>
+    <p class="axis">Production Type for Google · opsz 6–72 · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies — where, in summer, the sun prostrates men and herds alike, like withered grass.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose — dove il sole prostra, come erbe appassite, uomini e mandrie.</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente. <em>Tre quarti di secolo; un'incessante sequela di lotte, di pericoli, di patimenti…</em></p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LITERATA ============ -->
+<section class="face" id="literata" style="--body:'Literata';">
+  <div class="face-head">
+    <h2>Literata</h2>
+    <p class="note">The Google Play Books reading face. Warm, low-contrast, slightly slab —
+    maximally comfortable for long sessions; reads contemporary-cozy rather than period.</p>
+    <p class="axis">TypeTogether for Google · opsz 7–72 · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies — where, in summer, the sun prostrates men and herds alike, like withered grass.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose — dove il sole prostra, come erbe appassite, uomini e mandrie.</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente. <em>Tre quarti di secolo; un'incessante sequela di lotte, di pericoli, di patimenti…</em></p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FRAUNCES ============ -->
+<section class="face" id="fraunces" style="--body:'Fraunces';">
+  <div class="face-head">
+    <h2>Fraunces</h2>
+    <p class="note">Characterful old-style soft-serif. Its high-contrast display cut echoes the
+    Didone flavor — the most "period" of the candidates — but it is more mannered; the wonk auto-disables
+    below 18&nbsp;px so the phone cut stays sober.</p>
+    <p class="axis">Undercase Type for Google · opsz 9–144 · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies — where, in summer, the sun prostrates men and herds alike, like withered grass.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose — dove il sole prostra, come erbe appassite, uomini e mandrie.</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente. <em>Tre quarti di secolo; un'incessante sequela di lotte, di pericoli, di patimenti…</em></p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROBOTO SERIF ============ -->
+<section class="face" id="roboto" style="--body:'Roboto Serif';">
+  <div class="face-head">
+    <h2>Roboto Serif</h2>
+    <p class="note">Commissioned expressly for "an immersive piece of text that you read on your
+    phone." Low-contrast, very even color, the most engineered-for-mobile of the set — but the most
+    neutral/modern, least period.</p>
+    <p class="axis">Commercial Type for Google · opsz 8–144 + grade · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies — where, in summer, the sun prostrates men and herds alike, like withered grass.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose — dove il sole prostra, come erbe appassite, uomini e mandrie.</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente. <em>Tre quarti di secolo; un'incessante sequela di lotte, di pericoli, di patimenti…</em></p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<div class="intro" style="margin-top:3.4rem;">
+  <h1 style="font-size:1.45rem;">New directions — this round</h1>
+  <p>Source Serif is out. These three open registers the first four never touched: a warm
+  <strong>humanist/Garalde</strong> book hand, the actual <strong>1900s "Modern"</strong> a 1913
+  edition was set in, and an <strong>editorial transitional</strong> with a text optical.
+  Tradeoff to weigh: <strong>EB Garamond</strong> and <strong>Old Standard</strong> have <em>no</em>
+  optical-size axis, so they won't auto-thicken on the phone the way the variable faces do — judge
+  whether their period character is worth it at 390&nbsp;px.</p>
+</div>
+
+<!-- ============ EB GARAMOND ============ -->
+<section class="face" id="garamond" style="--body:'EB Garamond';">
+  <div class="face-head">
+    <h2>EB Garamond</h2>
+    <p class="note">The canonical humanist book face — Claude Garamond's 16th-c. types, warm and
+    calligraphic. Maximum literary prestige; a wholly different texture from anything above. Watch for
+    spindliness at phone size (no opsz, light Garalde) — Crimson Pro is the sturdier swap if it reads thin.</p>
+    <p class="axis">Georg Duffner · weight + italic, no opsz · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies — where, in summer, the sun prostrates men and herds alike, like withered grass.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose — dove il sole prostra, come erbe appassite, uomini e mandrie.</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente. <em>Tre quarti di secolo; un'incessante sequela di lotte, di pericoli, di patimenti…</em></p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OLD STANDARD TT ============ -->
+<section class="face" id="oldstandard" style="--body:'Old Standard TT';">
+  <div class="face-head">
+    <h2>Old Standard TT</h2>
+    <p class="note">A revival of the classicist "Modern" serifs used in late-19th / early-20th-c.
+    editions — the most historically honest face here for a 1913 book; it looks like the period.
+    Trades technical modernity for authenticity: static weights, no opsz, more dated spacing.</p>
+    <p class="axis">Alexey Kryukov · static (reg / bold / italic), no opsz · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies — where, in summer, the sun prostrates men and herds alike, like withered grass.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose — dove il sole prostra, come erbe appassite, uomini e mandrie.</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente. <em>Tre quarti di secolo; un'incessante sequela di lotte, di pericoli, di patimenti…</em></p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PIAZZOLLA ============ -->
+<section class="face" id="piazzolla" style="--body:'Piazzolla';">
+  <div class="face-head">
+    <h2>Piazzolla</h2>
+    <p class="note">An editorial transitional built for press — engineered for legibility at small
+    sizes via its optical axis, with more personality than a neutral workhorse but less of Fraunces's
+    mannerism. Keeps the auto-adapting mobile behavior the period faces give up.</p>
+    <p class="axis">Huerta Tipográfica (Juan Pablo del Peral) · opsz 8–30 + weight · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop">
+      <p class="label">Desktop · 34em measure</p>
+      <div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p>For the metropolis of Southern California, situated near the ocean, between the desert and the orange groves, is a great center of attraction for all those who have the misfortune to live beyond the Rockies — where, in summer, the sun prostrates men and herds alike, like withered grass.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose — dove il sole prostra, come erbe appassite, uomini e mandrie.</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente. <em>Tre quarti di secolo; un'incessante sequela di lotte, di pericoli, di patimenti…</em></p>
+      </div>
+    </div>
+    <div class="phone-wrap">
+      <p class="label">Phone · 390 px</p>
+      <div class="phone"><div class="reading">
+        <p class="chno">Chapter One</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="dropcap"><span style="font-variant:small-caps;">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="it">Perchè la metropoli della California meridionale, situata presso l'oceano, tra il deserto e gli aranceti, è un gran centro di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</p>
+        <p class="small"><span class="guille">«Che cosa desiderate?»</span> — domandò severamente.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Throwaway decision tool — not part of the build, not in <code>/docs</code>. Fonts load from the
+  Google CDN purely for comparison; the winner gets vendored locally (OFL) beside the Bodoni files.
+  Desktop column capped at 34em (~66ch); phone frame fixed at 390&nbsp;px with phone-grade padding and size.
+</footer>
+
+<script>
+const buttons = document.querySelectorAll('.bar button[data-size]');
+buttons.forEach(b => b.addEventListener('click', () => {
+  buttons.forEach(x => x.setAttribute('aria-pressed', 'false'));
+  b.setAttribute('aria-pressed', 'true');
+  document.documentElement.style.setProperty('--reading-size', b.dataset.size);
+}));
+</script>
+</body>
+</html>

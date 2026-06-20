@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drop-cap face comparison — Per la libertà!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Fraunces + Spectral (our families) and Bodoni Moda (the original's Didone) for comparison. -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Spectral:wght@400;600&family=Bodoni+Moda:opsz,wght@6..96,400..600&display=swap" rel="stylesheet">
+<style>
+:root{ --ink:#383028; --paper:#ece5d3; --rule:#cfc6b2; --muted:#8a7f6a; }
+*{ box-sizing:border-box; }
+body{ margin:0; background:#e9e2d0; color:var(--ink);
+  font-family:"Fraunces", Georgia, serif; font-optical-sizing:auto; }
+.intro{ max-width:46em; margin:1.6rem auto .5rem; padding:0 1.2rem; font-family:system-ui,sans-serif; }
+.intro h1{ font-size:1.4rem; margin:.2rem 0 .3rem; }
+.intro p{ font-size:.9rem; line-height:1.5; color:#4a4236; }
+.grid{ max-width:70em; margin:0 auto; padding:1rem 1.2rem 4rem;
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(30em,1fr)); gap:1.4rem; }
+.card{ background:var(--paper); border:1px solid var(--rule); border-radius:8px; padding:1.3rem 1.5rem; }
+.tag{ font-family:system-ui,sans-serif; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--muted); margin:0 0 .9rem; padding-bottom:.5rem; border-bottom:1px dotted var(--rule); }
+.tag b{ color:#5e5341; }
+.body{ font-size:1.15rem; line-height:1.55; margin:0; }
+.body p{ margin:0 0 .7em; }
+.body p:first-child{ text-indent:0; }
+/* Drop cap — same geometry as the edition; only the versal's font/weight varies. */
+.versal{ float:left; font-weight:var(--vw,600); font-family:var(--vf,"Spectral"), serif;
+  font-optical-sizing:auto; font-size:6.9em; line-height:0.66; margin:0.04em 0.12em 0 0; color:var(--ink); }
+.incipit{ font-variant:small-caps; letter-spacing:0.02em; }   /* stays Fraunces (body), as in the edition */
+</style>
+</head>
+<body>
+<div class="intro">
+  <h1>Drop-cap letterform — which face?</h1>
+  <p>The original is a high-contrast Didone (Bodoni). Same versal geometry in every card
+  (≈3 lines); only the initial's <b>face and weight</b> change. The incipit ("L&nbsp;PRESENTE")
+  and body stay Fraunces, exactly as the edition sets them. Compare the stroke contrast and
+  density of the "I" against the original.</p>
+</div>
+<div class="grid">
+
+  <div class="card">
+    <p class="tag"><b>Spectral SemiBold</b> — current (what you see now)</p>
+    <p class="body"><p><span class="versal" style="--vf:'Spectral';--vw:600;">I</span><span class="incipit">L PRESENTE</span> volume potrebbe portare qualche contributo alla Storia; ma non è storia nel senso in cui oggi essa si intende e si scrive… Qualcosa di meno per chi esigesse la metodica concatenazione dei fatti.</p></p>
+  </div>
+
+  <div class="card">
+    <p class="tag"><b>Spectral Regular</b> — lighter, but still moderate contrast</p>
+    <p class="body"><p><span class="versal" style="--vf:'Spectral';--vw:400;">I</span><span class="incipit">L PRESENTE</span> volume potrebbe portare qualche contributo alla Storia; ma non è storia nel senso in cui oggi essa si intende e si scrive… Qualcosa di meno per chi esigesse la metodica concatenazione dei fatti.</p></p>
+  </div>
+
+  <div class="card">
+    <p class="tag"><b>Fraunces SemiBold</b> — high display contrast, warm</p>
+    <p class="body"><p><span class="versal" style="--vf:'Fraunces';--vw:600;">I</span><span class="incipit">L PRESENTE</span> volume potrebbe portare qualche contributo alla Storia; ma non è storia nel senso in cui oggi essa si intende e si scrive… Qualcosa di meno per chi esigesse la metodica concatenazione dei fatti.</p></p>
+  </div>
+
+  <div class="card">
+    <p class="tag"><b>Fraunces Regular</b> — high display contrast, lighter</p>
+    <p class="body"><p><span class="versal" style="--vf:'Fraunces';--vw:400;">I</span><span class="incipit">L PRESENTE</span> volume potrebbe portare qualche contributo alla Storia; ma non è storia nel senso in cui oggi essa si intende e si scrive… Qualcosa di meno per chi esigesse la metodica concatenazione dei fatti.</p></p>
+  </div>
+
+  <div class="card" style="border-color:#b9a98a;">
+    <p class="tag"><b>Bodoni Moda</b> — the original's Didone (reintroduces a 3rd font, drop-caps only)</p>
+    <p class="body"><p><span class="versal" style="--vf:'Bodoni Moda';--vw:500;">I</span><span class="incipit">L PRESENTE</span> volume potrebbe portare qualche contributo alla Storia; ma non è storia nel senso in cui oggi essa si intende e si scrive… Qualcosa di meno per chi esigesse la metodica concatenazione dei fatti.</p></p>
+  </div>
+
+</div>
+</body>
+</html>

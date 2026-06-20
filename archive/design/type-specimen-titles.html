@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Title-face specimen — Per la libertà! display comparison</title>
+
+<!-- Display candidates + a neutral support face, from the Google CDN for comparison only. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Alegreya:ital,wght@0,400..800;1,400..700&family=Alegreya+SC:wght@400;500;700&family=Marcellus&family=Marcellus+SC&family=Cinzel:wght@400..700&family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --support: "Newsreader", serif;   /* neutral stand-in for body/subtitle — NOT under test */
+  --ink:#1a1714; --paper:#f7f3ec; --paper-phone:#fbf8f2;
+  --muted:#8a7f70; --rule:#d8cfbf; --accent:#7c2d12;
+}
+*{box-sizing:border-box;}
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--support); font-optical-sizing:auto; }
+
+.bar{ position:sticky; top:0; z-index:10; display:flex; flex-wrap:wrap;
+  gap:.4rem .9rem; align-items:baseline; padding:.7rem 1.1rem;
+  background:rgba(247,243,236,.94); backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--rule); font-family:system-ui,sans-serif; font-size:.82rem; }
+.bar strong{ font-weight:600; margin-right:.4rem; }
+.bar a{ color:var(--accent); text-decoration:none; }
+.bar a:hover{ text-decoration:underline; }
+
+.intro{ max-width:42em; margin:2.2rem auto 0; padding:0 1.2rem;
+  font-family:system-ui,sans-serif; color:#403930; }
+.intro h1{ font-family:var(--support); font-weight:600; font-size:1.7rem; margin:.2rem 0 .4rem; }
+.intro p{ font-size:.95rem; line-height:1.55; }
+.intro code{ background:#ece5d8; padding:.05em .35em; border-radius:4px; font-size:.85em; }
+
+.face{ border-top:1px solid var(--rule); margin-top:2.6rem; padding-top:1.4rem; }
+.face-head{ max-width:64em; margin:0 auto; padding:0 1.2rem; font-family:system-ui,sans-serif; }
+.face-head h2{ font-size:1.15rem; margin:0; color:var(--accent); }
+.face-head .note{ font-size:.88rem; color:#5d5447; margin:.25rem 0 0; max-width:54em; }
+.face-head .axis{ font-size:.78rem; color:var(--muted); margin:.2rem 0 0; }
+.face-head .level{ display:inline-block; font-size:.72rem; font-weight:600; letter-spacing:.04em;
+  padding:.08em .5em; border-radius:99px; margin-left:.5rem; vertical-align:.1em; }
+.level.high{ background:#f3d9d2; color:#7c2d12; }
+.level.mod{ background:#e7e0cf; color:#6b5d33; }
+.level.low{ background:#dce6dd; color:#33614a; }
+
+.cols{ display:flex; flex-wrap:wrap; gap:2rem 2.5rem; align-items:flex-start;
+  max-width:64em; margin:1.3rem auto 0; padding:0 1.2rem; }
+.desktop{ flex:1 1 30em; min-width:18em; }
+.label{ font-family:system-ui,sans-serif; font-size:.72rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted); margin:0 0 .8rem; }
+
+.phone-wrap{ flex:0 0 auto; }
+.phone{ width:390px; max-width:100%; background:var(--paper-phone);
+  border:1px solid var(--rule); border-radius:22px; box-shadow:0 10px 30px rgba(40,30,15,.10);
+  padding:26px 22px 30px; overflow:hidden; }
+
+/* ---- title-page block ---- */
+.titleblock{ text-align:center; padding:1.2rem 0 1.6rem; border-bottom:1px solid var(--rule); }
+.masthead{ font-family:var(--display); font-optical-sizing:auto; font-weight:600;
+  font-size:clamp(2.2rem, 5vw, 3.1rem); line-height:1.02; margin:.1rem 0 .5rem; color:var(--ink); }
+.phone .masthead{ font-size:2rem; }
+.subtitle{ font-family:var(--support); font-style:italic; font-size:1.02rem;
+  line-height:1.4; color:#4a4239; max-width:24em; margin:.2rem auto .9rem; }
+.phone .subtitle{ font-size:.92rem; }
+.author{ font-family:var(--display); font-optical-sizing:auto; letter-spacing:.04em;
+  font-size:1rem; color:var(--muted); margin:0; }
+
+/* ---- chapter head over body ---- */
+.chapter{ padding:1.5rem 0 .4rem; }
+.chno{ font-family:var(--display); font-optical-sizing:auto; text-align:center;
+  text-transform:uppercase; letter-spacing:.3em; font-size:.8rem; color:var(--muted); margin:0 0 .35rem; }
+.chtitle{ font-family:var(--display); font-optical-sizing:auto; text-align:center;
+  font-weight:500; font-size:clamp(1.5rem, 3.4vw, 2rem); line-height:1.08; margin:.1rem 0 1.1rem; color:var(--ink); }
+.phone .chtitle{ font-size:1.45rem; }
+.body{ font-family:var(--support); font-optical-sizing:auto; font-size:1.08rem;
+  line-height:1.55; margin:0; max-width:34em; }
+.phone .body{ font-size:1.0625rem; line-height:1.5; }
+.body::first-letter{ font-family:var(--display); font-optical-sizing:auto; font-weight:600;
+  float:left; font-size:3.2em; line-height:.74; padding:.04em .07em 0 0; color:var(--accent); }
+.sc{ font-variant:small-caps; }
+
+/* small-caps demo line */
+.scline{ font-family:var(--scfont, var(--display)); font-optical-sizing:auto;
+  text-align:center; letter-spacing:.05em; font-size:1.05rem; color:#4a4239;
+  margin:1rem 0 0; padding-top:.9rem; border-top:1px dotted var(--rule); }
+.scline small{ display:block; font-family:system-ui,sans-serif; font-size:.62rem;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:.35em; }
+
+footer{ max-width:42em; margin:3rem auto 4rem; padding:1.4rem 1.2rem 0;
+  border-top:1px solid var(--rule); font-family:system-ui,sans-serif; font-size:.82rem; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <strong>Title face:</strong>
+  <a href="#bodoni">Bodoni (current)</a>
+  <a href="#alegreya">Alegreya</a>
+  <a href="#spectral">Spectral</a>
+  <a href="#marcellus">Marcellus</a>
+  <a href="#cinzel">Cinzel</a>
+</div>
+
+<div class="intro">
+  <h1>Choosing a title / display face</h1>
+  <p>This judges the <strong>display face only</strong> — masthead, author line, chapter number,
+  chapter title, and the drop-cap initial all use the candidate; the <em>italic subtitle and body
+  text are a neutral stand-in</em> (Newsreader) so they don't distract. Each block shows a title-page
+  treatment and a chapter opening, at desktop scale and in a 390&nbsp;px phone frame. The pill marks
+  stroke contrast: we're moving <strong>away from Bodoni's <span class="level high">high</span></strong>
+  toward <span class="level mod">moderate</span> / <span class="level low">low</span>.
+  Five high-contrast Didone-adjacent faces (Libre Caslon Display, Cormorant, Newsreader Display,
+  Playfair, DM Serif) were checked and excluded — they'd repeat the problem.</p>
+</div>
+
+<!-- ============ BODONI (baseline) ============ -->
+<section class="face" id="bodoni" style="--display:'Bodoni Moda';">
+  <div class="face-head">
+    <h2>Bodoni Moda — current<span class="level high">high contrast</span></h2>
+    <p class="note">The Didone we have. Dramatic thick/thin modulation — beautiful, but the hairlines
+    are exactly the intensity you want to soften.</p>
+    <p class="axis">opsz 6–96 · variable · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop"><p class="label">Desktop</p>
+      <div class="titleblock">
+        <p class="masthead">Per la libertà!</p>
+        <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+        <p class="author">Cesare Crespi · 1913</p>
+      </div>
+      <div class="chapter">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="scline" style="--scfont:'Bodoni Moda';"><small>small caps</small>Felice Orsini · Pietro Fortunato Calvi</p>
+      </div>
+    </div>
+    <div class="phone-wrap"><p class="label">Phone · 390 px</p>
+      <div class="phone">
+        <div class="titleblock">
+          <p class="masthead">Per la libertà!</p>
+          <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+          <p class="author">Cesare Crespi · 1913</p>
+        </div>
+        <div class="chapter">
+          <p class="chno">Capitolo Primo</p>
+          <p class="chtitle">A Morning in Los Angeles</p>
+          <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which converge upon the shrine at Lourdes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALEGREYA ============ -->
+<section class="face" id="alegreya" style="--display:'Alegreya';">
+  <div class="face-head">
+    <h2>Alegreya<span class="level mod">moderate</span></h2>
+    <p class="note">A calligraphic old-style designed expressly for literature — warm, with a living
+    movement in the strokes. The most "literary book" of the set: presence and character without
+    Didone drama. True italic and a real small-caps companion (Alegreya SC).</p>
+    <p class="axis">Huerta Tipográfica · weight 400–900 variable + italic · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop"><p class="label">Desktop</p>
+      <div class="titleblock">
+        <p class="masthead">Per la libertà!</p>
+        <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+        <p class="author">Cesare Crespi · 1913</p>
+      </div>
+      <div class="chapter">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="scline" style="--scfont:'Alegreya SC';"><small>small caps · Alegreya SC</small>Felice Orsini · Pietro Fortunato Calvi</p>
+      </div>
+    </div>
+    <div class="phone-wrap"><p class="label">Phone · 390 px</p>
+      <div class="phone">
+        <div class="titleblock">
+          <p class="masthead">Per la libertà!</p>
+          <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+          <p class="author">Cesare Crespi · 1913</p>
+        </div>
+        <div class="chapter">
+          <p class="chno">Capitolo Primo</p>
+          <p class="chtitle">A Morning in Los Angeles</p>
+          <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which converge upon the shrine at Lourdes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPECTRAL ============ -->
+<section class="face" id="spectral" style="--display:'Spectral';">
+  <div class="face-head">
+    <h2>Spectral<span class="level mod">moderate</span></h2>
+    <p class="note">A sober, screen-tuned literary serif. Restrained and even — less voice than Alegreya,
+    but very clean and it would harmonize naturally with a screen-reading body face. Full case + italic.</p>
+    <p class="axis">Production Type · weights 200–800 + italic · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop"><p class="label">Desktop</p>
+      <div class="titleblock">
+        <p class="masthead">Per la libertà!</p>
+        <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+        <p class="author">Cesare Crespi · 1913</p>
+      </div>
+      <div class="chapter">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="scline" style="--scfont:'Spectral';"><small>small caps</small>Felice Orsini · Pietro Fortunato Calvi</p>
+      </div>
+    </div>
+    <div class="phone-wrap"><p class="label">Phone · 390 px</p>
+      <div class="phone">
+        <div class="titleblock">
+          <p class="masthead">Per la libertà!</p>
+          <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+          <p class="author">Cesare Crespi · 1913</p>
+        </div>
+        <div class="chapter">
+          <p class="chno">Capitolo Primo</p>
+          <p class="chtitle">A Morning in Los Angeles</p>
+          <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which converge upon the shrine at Lourdes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARCELLUS ============ -->
+<section class="face" id="marcellus" style="--display:'Marcellus';">
+  <div class="face-head">
+    <h2>Marcellus<span class="level low">low</span></h2>
+    <p class="note">A glyphic flared-serif on Roman inscriptional bones — quiet, even strokes, almost no
+    thick/thin. Understated classical elegance; has lowercase plus a small-caps companion (Marcellus SC).
+    A calm counterpoint to an ornate page.</p>
+    <p class="axis">ANRT / Brian J. Bonislawsky · single weight · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop"><p class="label">Desktop</p>
+      <div class="titleblock">
+        <p class="masthead">Per la libertà!</p>
+        <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+        <p class="author">Cesare Crespi · 1913</p>
+      </div>
+      <div class="chapter">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="scline" style="--scfont:'Marcellus SC';"><small>small caps · Marcellus SC</small>Felice Orsini · Pietro Fortunato Calvi</p>
+      </div>
+    </div>
+    <div class="phone-wrap"><p class="label">Phone · 390 px</p>
+      <div class="phone">
+        <div class="titleblock">
+          <p class="masthead">Per la libertà!</p>
+          <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+          <p class="author">Cesare Crespi · 1913</p>
+        </div>
+        <div class="chapter">
+          <p class="chno">Capitolo Primo</p>
+          <p class="chtitle">A Morning in Los Angeles</p>
+          <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which converge upon the shrine at Lourdes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CINZEL ============ -->
+<section class="face" id="cinzel" style="--display:'Cinzel';">
+  <div class="face-head">
+    <h2>Cinzel<span class="level low">low</span></h2>
+    <p class="note">Roman inscriptional capitals in the Trajan lineage — monumental, even-weight,
+    carved-in-stone gravitas. <strong>Caps-only</strong> (no lowercase, no italic), so it suits the
+    masthead and chapter numbers more than a mixed-case chapter title; here the title renders all-caps.</p>
+    <p class="axis">Natanael Gama · weight 400–900 variable · OFL</p>
+  </div>
+  <div class="cols">
+    <div class="desktop"><p class="label">Desktop</p>
+      <div class="titleblock">
+        <p class="masthead">Per la libertà!</p>
+        <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+        <p class="author">Cesare Crespi · 1913</p>
+      </div>
+      <div class="chapter">
+        <p class="chno">Capitolo Primo</p>
+        <p class="chtitle">A Morning in Los Angeles</p>
+        <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which, from every part of France, converge upon the shrine at Lourdes.</p>
+        <p class="scline" style="--scfont:'Cinzel';"><small>caps</small>Felice Orsini · Pietro Fortunato Calvi</p>
+      </div>
+    </div>
+    <div class="phone-wrap"><p class="label">Phone · 390 px</p>
+      <div class="phone">
+        <div class="titleblock">
+          <p class="masthead">Per la libertà!</p>
+          <p class="subtitle">Dalle mie conversazioni col Conte Carlo di Rudio, complice di Felice Orsini</p>
+          <p class="author">Cesare Crespi · 1913</p>
+        </div>
+        <div class="chapter">
+          <p class="chno">Capitolo Primo</p>
+          <p class="chtitle">A Morning in Los Angeles</p>
+          <p class="body"><span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived there but a few hours since, on a train that had put me in mind of those which converge upon the shrine at Lourdes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Throwaway decision tool — not part of the build, not in <code>/docs</code>. Fonts load from the
+  Google CDN for comparison; the winner gets vendored locally (OFL) beside the body face. The italic
+  subtitle and body text are a neutral stand-in (Newsreader) so only the title face is under judgment.
+</footer>
+</body>
+</html>

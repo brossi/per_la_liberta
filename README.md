@@ -173,6 +173,7 @@ state/                   # Translation progress, per-chapter files, revision sna
 assets/                  # Dictionaries + Harvard (Copy B) page renders; fonts and LOC page images live under docs/assets/
 static/                  # CSS (canonical bilingual.css)
 docs/                    # GitHub Pages site: index.html, scan.html, companion/, static/, assets/
+archive/                 # Historical audits, one-off scripts/data, and design specimens
 ```
 
 ## Source

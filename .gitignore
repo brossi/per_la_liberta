@@ -40,8 +40,9 @@ state/llm_batch.json
 # Claude Code local settings
 .claude/
 
-# Throwaway typeface decision specimens (repo-root scratch; one loads a commercial demo font via CDN)
-type-specimen*.html
+# Throwaway typeface decision specimens in the repo root. Archived specimens
+# under archive/design/ are tracked for provenance.
+/type-specimen*.html
 
 # Drop-cap analysis sheets (large glyph/context measurement scratch, regenerable)
 docs/assets/dropcaps/

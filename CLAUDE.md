@@ -298,9 +298,10 @@ docs/                             # GitHub Pages site (served from /docs on main
   companion/                      # Reader's Companion HTML pages + assets (step 9)
   static/bilingual.css            # Stylesheet (synced from static/)
   assets/fonts/                   # Spectral + Fraunces, self-hosted (OFL)
-  assets/page_images/             # Rendered PDF pages as PNG — Copy A / LOC (gitignored)
+  assets/page_images/             # Rendered PDF pages as PNG — Copy A / LOC (tracked site assets)
 static/
   bilingual.css                   # Typesetting stylesheet (canonical copy)
+archive/                          # Historical audits, retired one-offs, and design specimens
 ```
 
 ## Current Status

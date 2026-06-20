@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pairing matrix — display × body — Per la libertà!</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..700;1,400..600&family=Spectral:ital,wght@0,400;0,600;1,400&family=Marcellus&family=Cinzel:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Literata:opsz,wght@7..72,400..600&family=Fraunces:opsz,wght@9..144,400..600&family=Roboto+Serif:opsz,wght@8..144,400..600&family=EB+Garamond:ital,wght@0,400..600;1,400..500&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Piazzolla:opsz,wght@8..30,400..600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#1a1714; --paper:#f7f3ec; --card:#fbf8f2;
+  --muted:#8a7f70; --rule:#d8cfbf; --accent:#7c2d12;
+  --body-size:1.04rem; --body-leading:1.5;
+}
+*{box-sizing:border-box;}
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; background:var(--paper); color:var(--ink); font-family:system-ui,sans-serif; }
+
+.bar{ position:sticky; top:0; z-index:10; display:flex; flex-wrap:wrap; gap:.4rem .9rem;
+  align-items:baseline; padding:.7rem 1.1rem; background:rgba(247,243,236,.94);
+  backdrop-filter:blur(6px); border-bottom:1px solid var(--rule); font-size:.82rem; }
+.bar strong{ font-weight:600; margin-right:.3rem; }
+.bar a{ color:var(--accent); text-decoration:none; }
+.bar a:hover{ text-decoration:underline; }
+.bar .sizes{ margin-left:auto; display:flex; gap:.35rem; }
+.bar button{ font:inherit; cursor:pointer; border:1px solid var(--rule); background:#fff;
+  color:var(--ink); border-radius:5px; padding:.2rem .6rem; }
+.bar button[aria-pressed="true"]{ background:var(--accent); color:#fff; border-color:var(--accent); }
+
+.intro{ max-width:44em; margin:2rem auto 0; padding:0 1.2rem; color:#403930; }
+.intro h1{ font-weight:600; font-size:1.6rem; margin:.2rem 0 .4rem; }
+.intro p{ font-size:.94rem; line-height:1.55; }
+.intro code{ background:#ece5d8; padding:.05em .35em; border-radius:4px; font-size:.85em; }
+
+.group{ border-top:1px solid var(--rule); margin-top:2.4rem; padding-top:1.3rem; }
+.group-head{ max-width:74em; margin:0 auto; padding:0 1.2rem; }
+.group-head h2{ font-size:1.15rem; margin:0; color:var(--accent); }
+.group-head .note{ font-size:.86rem; color:#5d5447; margin:.25rem 0 0; max-width:56em; }
+.level{ display:inline-block; font-size:.7rem; font-weight:600; letter-spacing:.04em;
+  padding:.08em .5em; border-radius:99px; margin-left:.5rem; vertical-align:.12em; }
+.level.high{ background:#f3d9d2; color:#7c2d12; }
+.level.mod{ background:#e7e0cf; color:#6b5d33; }
+.level.low{ background:#dce6dd; color:#33614a; }
+
+.masthead{ font-family:var(--display); font-optical-sizing:auto; font-weight:600;
+  text-align:center; font-size:clamp(2rem,4.5vw,2.8rem); line-height:1.04;
+  margin:1rem auto .4rem; color:var(--ink); }
+
+.grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+  gap:1.1rem; max-width:74em; margin:1.2rem auto 0; padding:0 1.2rem; }
+body.phone .grid{ grid-template-columns:repeat(auto-fill,390px); justify-content:center; }
+body.phone{ --body-size:1.0rem; --body-leading:1.48; }
+
+.pair-card{ background:var(--card); border:1px solid var(--rule); border-radius:12px;
+  padding:1.1rem 1.2rem 1.3rem; overflow:hidden; }
+body.phone .pair-card{ width:390px; max-width:100%; }
+.pair-label{ font-size:.68rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--muted); margin:0 0 .8rem; padding-bottom:.5rem; border-bottom:1px dotted var(--rule); }
+.pair-label b{ color:#5d5447; }
+
+.chno{ font-family:var(--display); font-optical-sizing:auto; text-align:center;
+  text-transform:uppercase; letter-spacing:.28em; font-size:.72rem; color:var(--muted); margin:0 0 .3rem; }
+.chtitle{ font-family:var(--display); font-optical-sizing:auto; text-align:center;
+  font-weight:500; font-size:1.45rem; line-height:1.1; margin:.1rem 0 .9rem; color:var(--ink); }
+.ptext{ font-family:var(--body); font-optical-sizing:auto;
+  font-size:var(--body-size); line-height:var(--body-leading); margin:0; text-align:left; }
+.ptext::first-letter{ font-family:var(--display); font-optical-sizing:auto; font-weight:600;
+  float:left; font-size:3em; line-height:.74; padding:.04em .08em 0 0; color:var(--accent); }
+.ptext .it{ display:block; margin-top:.6em; color:#4a4239; }
+.sc{ font-variant:small-caps; }
+
+footer{ max-width:44em; margin:3rem auto 4rem; padding:1.3rem 1.2rem 0;
+  border-top:1px solid var(--rule); font-size:.82rem; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <strong>Display:</strong>
+  <a href="#alegreya">Alegreya</a>
+  <a href="#spectral">Spectral</a>
+  <a href="#marcellus">Marcellus</a>
+  <a href="#cinzel">Cinzel</a>
+  <span class="sizes">
+    <button data-mode="desktop" aria-pressed="true">Desktop</button>
+    <button data-mode="phone">Phone width</button>
+  </span>
+</div>
+
+<div class="intro">
+  <h1>Pairing matrix — every display face × every body face</h1>
+  <p>The two single-axis specimens still stand (<code>type-specimen.html</code> for body,
+  <code>type-specimen-titles.html</code> for display). This one crosses them: each of the four
+  moderate/low-contrast <strong>display</strong> faces is shown as a masthead and then over <em>every</em>
+  one of the seven <strong>body</strong> candidates — chapter number, chapter title and drop cap in the
+  display face, running text in the body face. Judge the <strong>harmony of each pair</strong>: does the
+  head feel of-a-piece with the text, or fighting it? Use <strong>Phone width</strong> to see each pair
+  in a 390&nbsp;px column.</p>
+</div>
+
+<div id="stage"></div>
+
+<footer>
+  Throwaway decision tool — not in the build, not in <code>/docs</code>. 28 pairings (4 display × 7 body),
+  fonts from the Google CDN for comparison only. Drop caps / heads = display face; body = body face.
+</footer>
+
+<script>
+const DISPLAYS = [
+  {id:'alegreya',  name:'Alegreya',  css:'Alegreya',  level:'mod', capsOnly:false,
+   note:'Calligraphic old-style for literature — warm, with movement. The most "literary" head.'},
+  {id:'spectral',  name:'Spectral',  css:'Spectral',  level:'mod', capsOnly:false,
+   note:'Sober, screen-tuned literary serif — restrained and even; pairs quietly.'},
+  {id:'marcellus', name:'Marcellus', css:'Marcellus', level:'low', capsOnly:false,
+   note:'Glyphic flared-serif on Roman inscriptional bones — low contrast, understated.'},
+  {id:'cinzel',    name:'Cinzel',    css:'Cinzel',    level:'low', capsOnly:true,
+   note:'Roman inscriptional capitals (Trajan lineage) — monumental, caps-only; titles render all-caps.'},
+];
+const BODIES = [
+  {name:'Newsreader',     css:'Newsreader'},
+  {name:'Literata',       css:'Literata'},
+  {name:'Fraunces',       css:'Fraunces'},
+  {name:'Roboto Serif',   css:'Roboto Serif'},
+  {name:'EB Garamond',    css:'EB Garamond'},
+  {name:'Old Standard',   css:'Old Standard TT'},
+  {name:'Piazzolla',      css:'Piazzolla'},
+];
+const LEVEL = {mod:['mod','moderate'], low:['low','low contrast'], high:['high','high contrast']};
+
+const BODY_HTML =
+  '<span class="sc">Los Angeles</span>, a splendid summer morning. I had arrived but a few hours ' +
+  'since, on a train that had put me in mind of those which, from every part of France, converge ' +
+  'upon the shrine at Lourdes.' +
+  '<span class="it">Perchè la metropoli della California meridionale è un gran centro ' +
+  'di attrazione per quanti hanno la disgrazia di vivere al di là delle Rocciose…</span>';
+
+const stage = document.getElementById('stage');
+for(const d of DISPLAYS){
+  const sec = document.createElement('section');
+  sec.className = 'group';
+  sec.id = d.id;
+  const [lvlClass, lvlText] = LEVEL[d.level];
+  let cards = '';
+  for(const b of BODIES){
+    cards +=
+      '<div class="pair-card" style="--display:\''+d.css+'\';--body:\''+b.css+'\';">' +
+        '<p class="pair-label"><b>'+d.name+'</b> &times; '+b.name+'</p>' +
+        '<p class="chno">Capitolo Primo</p>' +
+        '<p class="chtitle">A Morning in Los Angeles</p>' +
+        '<p class="ptext">'+BODY_HTML+'</p>' +
+      '</div>';
+  }
+  sec.innerHTML =
+    '<div class="group-head"><h2>'+d.name+' <span class="level '+lvlClass+'">'+lvlText+'</span></h2>' +
+    '<p class="note">'+d.note+'</p></div>' +
+    '<p class="masthead" style="--display:\''+d.css+'\';">Per la libertà!</p>' +
+    '<div class="grid">'+cards+'</div>';
+  stage.appendChild(sec);
+}
+
+const buttons = document.querySelectorAll('.bar button[data-mode]');
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  buttons.forEach(x => x.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true');
+  document.body.classList.toggle('phone', btn.dataset.mode === 'phone');
+}));
+</script>
+</body>
+</html>

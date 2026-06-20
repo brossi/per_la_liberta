@@ -27,7 +27,8 @@ Every track here ends at a **human decision**, never an auto-apply. Models read,
 
 Every track that looks at a scan goes through this module (8 callers). It standardizes native-resolution image handling and model selection. **Must run via `uv run`** — `google.genai` is absent from bare `python3`. Requires `GEMINI_API_KEY`.
 
-> **Scan prerequisites (manual, gitignored).** Copy B (Harvard/Google) is rendered from `harvard_perlalibertdall00cresgoog.pdf`, which must be placed at the repo root by hand (from [archive.org/details/perlalibertdall00cresgoog](https://archive.org/details/perlalibertdall00cresgoog)) — there is no auto-download. Copy A (LOC) pages come from `docs/assets/page_images/` (rendered from the LOC PDF, also gitignored). Without these, `build_concordance.py` and second-copy escalation cannot run.
+> **Scan prerequisites.** Copy B (Harvard/Google) is rendered from the gitignored local file `harvard_perlalibertdall00cresgoog.pdf`, which must be placed at the repo root by hand (from [archive.org/details/perlalibertdall00cresgoog](https://archive.org/details/perlalibertdall00cresgoog)) — there is no auto-download.
+> Copy A (LOC) pages are tracked site assets under `docs/assets/page_images/`. Without these, `build_concordance.py` and second-copy escalation cannot run.
 
 | Function | Returns | Purpose |
 |----------|---------|---------|
@@ -175,12 +176,14 @@ uv run python companion.py --check-links      # probe external links (network, o
 
 ## Dead / historical scripts
 
-Unreferenced by any live code; kept for provenance, **not part of any track**:
+Unreferenced by any live code; kept under `archive/one_off_scripts/` for
+provenance, **not part of any track**:
 
-- `write_ch3_synth.py`, `write_ch6_synth.py`, `write_ch8_synth.py`, `write_ch6_out.py` — empty stubs / placeholders, never executed.
-- `write_provenance.py` — one-off that hand-wrote one chapter's `provenance.json`.
-- `write_ch20_synth.py` — one-off that wrote a single chapter's English to a hard-coded Desktop path.
-- `extract_context.py` — per-chapter narrative-context extraction (run once, cached to `state/context_extractions/`); built for the multi-witness synthesis brief but not currently wired into it.
-- `fix_corrupted_passage.py` — one-off Sonnet-vs-Gemini OCR-correction comparison on the garbled p2_ch18 passage.
+- `archive/one_off_scripts/write_ch3_synth.py`, `archive/one_off_scripts/write_ch6_synth.py`, `archive/one_off_scripts/write_ch8_synth.py`, `archive/one_off_scripts/write_ch6_out.py` — empty stubs / placeholders, never executed.
+- `archive/one_off_scripts/write_provenance.py` — one-off that hand-wrote one chapter's `provenance.json`.
+- `archive/one_off_scripts/write_ch20_synth.py` — one-off that wrote a single chapter's English to a hard-coded Desktop path.
+- `archive/one_off_scripts/extract_context.py` — per-chapter narrative-context extraction (run once, cached to `state/context_extractions/`); built for the multi-witness synthesis brief but not currently wired into it.
+- `archive/one_off_scripts/fix_corrupted_passage.py` — one-off Sonnet-vs-Gemini OCR-correction comparison on the garbled p2_ch18 passage. Its saved text outputs are archived under `archive/one_off_data/`.
 
-These can be quarantined or removed without effect on any track.
+These archived files can stay out of the active root without effect on any
+track.
