@@ -687,7 +687,7 @@ Alzarci prima del Sole, sgambettare allegramente, riandando le passate vicende; 
 
 Alzarci prima del Sole, sgambettare allegramente, riandando le passate vicende; nutrirci con spartana frugalità; assoggettarci alla vita degli sfruttati, comprenderne i dolori e le speranze, esserne compartecipi; ricambiare di schietto amore, l'amore; dirozzare fraternamente l'intelletto capace, ma ottenebrato; prestar mano a prepararne la rivendicazione... tale la nostra vita sino al 2 Dicembre.
 
-Affrettando il passo, due Dicembre 1851, recandoci al solito convegno, avemmo occasione di rimanere grandemente sorpresi. La piazza della Bastiglia era occupata militarmente; ci fermammo. Fanteria e cannoni. I cannonieri colla miccia accesa, come se una battaglia fosse imminente. Altri soldati trovammo allineati sul "boulevard". Nel sobborgo, fuori della barriera, di botto un via vai di schiere procedenti gravemente..., il silenzio che sa di tempesta.
+Affrettando il passo, due Dicembre 1851, recandoci al solito convegno, avemmo occasione di rimanere grandemente sorpresi. La piazza della Bastiglia era occupata militarmente; ci fermammo. Fanteria e cannoni. I cannonieri colla miccia accesa, come se una battaglia fosse imminente. Altri soldati trovammo allineati sul "boulevard". Nel sobborgo, fuori della barriera di Batignolle, un via vai di schiere procedenti gravemente..., il silenzio che sa di tempesta.
 
 Affrettando il passo e lavorando di congetture, giungemmo presto all'imboccatura di via de la Paix. Qui ci fermammo di botto.
 

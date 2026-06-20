@@ -2624,7 +2624,7 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'Batignolle,' vs PUBLISHED 'botto'. These are completely different words. 'Batignolles' is a well-known Paris neighborhood (Barrière de Clichy area). The sentence 'fuori della barriera, di botto' uses 'botto' but PRINTED shows 'Batignolle' suggesting the original text may have read 'fuori della barriera di Batignolle' (outside the Batignolles barrier). This is a serious misread/substitution by the transcriber. Restore.",
+      "reason": "scan (native res p.48): 'fuori della barriera di Batignolle, un via vai'; derived 'di botto' is the misread (real 'di botto' is 3 lines below in 'ci fermammo di botto'). panel split resolved -> restore",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -2638,6 +2638,11 @@
           "reason": "\"Batignolle\" is a proper noun (a Paris neighborhood), and \"barriera di Batignolle\" is correct. The edition completely misread it."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "fuori della barriera, di botto un via vai",
+        "new": "fuori della barriera di Batignolle, un via vai"
       }
     },
     {

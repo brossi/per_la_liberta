@@ -731,7 +731,7 @@ The rooms of the Club were permanently occupied by some forty revolutionaries...
 
 To rise before the Sun, to go about our rounds cheerfully, revisiting the vicissitudes of the past; to nourish ourselves with Spartan frugality; to submit ourselves to the life of the exploited, to comprehend their sorrows and their hopes, to share in them; to return love for love with a frank and open heart; to refine fraternally the capable but benighted intellect; to lend a hand in preparing its vindication... such was our life until the 2nd of December.
 
-Quickening our step on the second of December 1851, as we made our way to our usual meeting-place, we had occasion to find ourselves greatly surprised. The Place de la Bastille was under military occupation; we halted. Infantry and cannon. The gunners with their match-cords lit, as though a battle were imminent. More soldiers we found drawn up along the boulevard. In the faubourg, beyond the barrière, a sudden coming and going of columns moving with grave deliberation..., the silence that presages a storm.
+Quickening our step on the second of December 1851, as we made our way to our usual meeting-place, we had occasion to find ourselves greatly surprised. The Place de la Bastille was under military occupation; we halted. Infantry and cannon. The gunners with their match-cords lit, as though a battle were imminent. More soldiers we found drawn up along the boulevard. In the faubourg, beyond the barrière de Batignolles, a coming and going of columns moving with grave deliberation..., the silence that presages a storm.
 
 Hastening our step and working upon our conjectures, we soon arrived at the mouth of the Rue de la Paix. Here we stopped short.
 
