@@ -1,0 +1,524 @@
+# Documentation Audit — Triage List
+
+This is a **documentation triage list** for the *Per la Libertà!* translation pipeline. It is the
+output of an **audit only**: every item below has been verified against the actual code and repo
+state, but **nothing has been changed**. No doc was edited. Each finding records the offending
+doc text, the problem, and a *suggested* triage that is **recorded, not performed**.
+
+Docs under review: `CLAUDE.md`, `README.md`, `PIPELINE.md`, `REVIEW.md` (primary);
+`1913-italian-ocr-normalization-reference.md`, `dictionary-agent_prompts.md` (secondary/reference).
+Ground truth is the repo's `*.py` scripts and the on-disk file tree.
+
+## Executive summary
+
+The dominant theme is **drift between the prose docs and the shipped code**: the PDF output is
+documented as a produced step-8 artifact but is commented out in `typeset.py`; the LLM-cleanup
+cache is described three different ways (populated / empty / 31-of-58) when it is empty on disk;
+and the PDF output is listed as a produced artifact though generation is disabled. (Note: an
+earlier draft of this summary claimed the typeface docs still name Bodoni — that is **incorrect**;
+CLAUDE.md was already corrected to Spectral/Fraunces in commit `b3f90fa`, and the lone remaining
+"Bodoni" mention correctly refers to the 1913 *source book's* type. See the struck §5 item.) A second
+cluster is **operational gaps**: required-but-gitignored source PDFs (LOC + Harvard), review-phase
+API keys (`OPENAI_API_KEY`, `DEEPL_API_KEY`), the `claude` Claude Code CLI dependency for
+multi-model synthesis, and undocumented pipeline steps (companion). A third cluster is the
+**README deploy section**, whose manual `cp` instructions are not just redundant but actively
+regressive because `typeset.py` already syncs `docs/` *with path rewrites* a naive copy omits. The
+two reference docs are pre-implementation design briefs that misattribute themselves to the Athanor
+project and prescribe libraries/models the pipeline never adopted. A handful of items flag
+**flattering language** ("calibrated", "best vision of the current crop", "honestly", "authoritative")
+that asserts quality/maturity the cited numbers don't support. Finally, a large **portability**
+section catalogs the many book-specific facts (chapter counts, IA identifiers, Bodoni confusion
+pairs, Italian linguistic layer, book-identity translation prompt) baked into code as constants —
+the chief obstacle to reusing this pipeline on another work.
+
+---
+
+## 1. Stale / inaccurate
+
+### High
+
+**PDF is documented as a produced step-8 output but generation is commented out**
+- `CLAUDE.md` — Build Pipeline Architecture table step 8 (line 33); File Structure `output/` (line 241); Typesetting section (line 215)
+- Claim: `Step 8 Typeset: 'Bilingual HTML/PDF with Loeb-style facing pages...'`; `'bilingual.pdf  # Bilingual print edition (step 8)'`; `'PDF: WeasyPrint (HTML→PDF). Render per-chapter then merge for performance (not yet implemented — currently single-pass).'`
+- Problem: PDF generation is disabled in `typeset.py` and no `output/bilingual.pdf` exists; the docs present PDF as a produced step-8 artifact and "currently single-pass" implies it runs.
+- Triage: Change step-8 "HTML/PDF" to "HTML"; annotate `output/bilingual.pdf` as disabled/not generated; rewrite the Typesetting bullet to state PDF generation is commented out (requires `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` for WeasyPrint) rather than "single-pass".
+- Verified: `typeset.py` PDF block (lines 1614-1623) is commented out, lead comment "PDF generation disabled — WeasyPrint requires DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib". `generate_pdf()` defined (line 1558) but never called. `ls output/` has no `bilingual.pdf`.
+
+**Current-Status claims the LLM-cleanup cache is populated; it is empty**
+- `CLAUDE.md` — Current Status line 276 vs Regeneration guard line 82
+- Claim: Line 276: `'LLM cleanup via Batch API: all 58 chapters corrected, full-text cache in state/llm_cleaned/'`. Line 82: the cache `'is now empty'`.
+- Problem: The two statements directly contradict; repo confirms `state/llm_cleaned/` is empty (0 files), so line 276 is factually wrong.
+- Triage: Update Current Status line 276 to say the full-text cache has since been cleared (gitignored/regenerable, currently empty), reconciling it with the regeneration-guard paragraph.
+- Verified: `ls state/llm_cleaned/` returns 0 files. Line 276's "full-text cache in state/llm_cleaned/" is false and contradicts line 82 within the same document. (Note: `pipeline.py` lines 23/43 add a third, separate stale claim — "31/58" — worth noting.)
+
+**README `cp static/bilingual.css` would break live font/image paths**
+- `README.md` / `PIPELINE.md` — README "Deploying to GitHub Pages" line 108; PIPELINE.md Step 8d lines 338, 340
+- Claim: README: `cp static/bilingual.css docs/static/bilingual.css`. PIPELINE.md Step 8d lists `static/bilingual.css → docs/static/bilingual.css` as a plain copy.
+- Problem: The docs CSS is **not** a plain copy — `typeset.py` line 1610 does `.replace("../docs/assets/", "../assets/")` before writing `docs/static/bilingual.css`. The canonical `static/bilingual.css:14` uses `url('../docs/assets/fonts/...')` while the deployed file uses `url('../assets/fonts/...')`. A literal `cp` would deploy `../docs/assets/...` paths into `docs/static/`, resolving to `docs/docs/assets/...` and breaking all self-hosted fonts/images on the live GitHub Pages site.
+- Triage: Drop the manual `cp` instructions (typeset already writes all three with correct rewrites); or, if documenting the rewrite, state the docs CSS is generated by typeset, not copied, and a manual cp breaks font/image paths.
+
+**Multi-model synthesis depends on the `claude` Claude Code CLI, undocumented**
+- `CLAUDE.md` / `PIPELINE.md` / `README.md` — CLAUDE.md Translation line 191 & step 7 line 31; PIPELINE.md Step 7c lines 244-248; README step 7 line 22; Env-vars CLAUDE.md lines 96-102
+- Claim: `'synthesize a final translation with Claude Opus, logging provenance'` / `'Claude Opus assembles one final translation per chapter'`. Env-var section lists only `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, `OPENAI_API_KEY`, `DEEPL_API_KEY`.
+- Problem: The synthesis step does not call the Anthropic API — it shells out to the `claude` CLI via `subprocess` (`claude -p ... --model opus --output-format json --allowedTools Read,Write,Bash(ls) --bare`). The `claude` CLI must be installed and on PATH (which `uv sync` does not provide), and the model is the CLI alias `'opus'`, not an API model id. A user with valid keys but no CLI cannot run the multi-model path that produced the live edition.
+- Triage: Document that `--multi-model` synthesis requires the Claude Code CLI (`claude`) installed and authenticated, separate from `ANTHROPIC_API_KEY`; note synthesis runs as a subprocess, not via the API.
+- Verified: `multi_translate.py:5` "synthesises ... via `claude -p`"; lines 507-523 `_run_claude_code` builds `cmd = ["claude", "-p", prompt, "--model", model, ...]` then `subprocess.run`. `synth_model` default `'opus'`.
+
+### Medium
+
+**README project-structure comment overstates typeset as HTML/PDF**
+- `README.md` — Project structure (line 136); Pipeline table step 8 (line 24)
+- Claim: Line 136: `'typeset.py  # Bilingual HTML/PDF generation'`. Line 24 step 8 (no PDF claim — correct).
+- Problem: "Bilingual HTML/PDF generation" overstates current behavior — PDF generation is commented out and no PDF is produced. Only line 136 is inaccurate.
+- Triage: Change line 136 to `'Bilingual HTML generation (PDF path present but disabled)'`.
+
+**README Source link points at the wrong IA copy (`cresuoft`)**
+- `README.md` — Source section, line 151
+- Claim: `Google/Harvard scan: archive.org/details/perlalibertdal00cresuoft`
+- Problem: The `cresuoft` identifier exists nowhere in the code and is the wrong copy. `download.py:7` fetches COPY2 from `perlalibertdall00cresgoog`; `vision_review.py:41` names the Harvard PDF `harvard_perlalibertdall00cresgoog.pdf` (double-L `dall`). `cresuoft` is the unrelated Toronto digitization. A reader following the link downloads the wrong scan.
+- Triage: Change the link to `archive.org/details/perlalibertdall00cresgoog` (the Google/Harvard copy actually used), or document that the repo uses the Google scan, not the uoft scan.
+
+**CLAUDE.md Typesetting/output still presents PDF as a real step-8 output; DYLD prereq undocumented**
+- `CLAUDE.md` — Typesetting bullet line 215 and File Structure line 241
+- Claim: `'PDF: WeasyPrint (HTML→PDF). Render per-chapter then merge ... currently single-pass.'` and `bilingual.pdf  # Bilingual print edition (step 8)`.
+- Problem: PDF generation is disabled (`write_pdf` commented out) and `output/bilingual.pdf` does not exist, yet the doc presents PDF as a produced output; the `DYLD_FALLBACK_LIBRARY_PATH` requirement is also undocumented.
+- Triage: Mark PDF as not currently generated; move `bilingual.pdf` out of produced-outputs or annotate "planned/disabled"; document the `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` requirement for re-enabling WeasyPrint. (PIPELINE.md step-8 outputs correctly omit the PDF — gap is specific to CLAUDE.md.)
+
+**Duplicate: bilingual.pdf listed as output / step 8 labeled HTML/PDF**
+- `CLAUDE.md` — File Structure `output/` line 241; step-8 table row line 33
+- Claim: `bilingual.pdf` listed as a step-8 output; step-8 labeled "Bilingual HTML/PDF"; Typesetting bullet calls PDF "not yet implemented".
+- Problem: No PDF is generated; the "not yet implemented" bullet contradicts the output listing.
+- Triage: Remove `bilingual.pdf` from the output list (or mark disabled); change the step-8 label from HTML/PDF to HTML. Align README line 136.
+
+**Three-way disagreement on the LLM-cleanup cache state (doc vs guard string vs reality)**
+- `pipeline.py` code-comment vs `CLAUDE.md` — pipeline.py lines 23 & 43 vs CLAUDE.md line 82
+- Claim: CLAUDE.md line 82: cache `'is now empty'`. pipeline.py line 23: `'holds only 31 of 58 chapters and some entries are stale'`; line 43 guard message: `'The local LLM-cleanup cache is incomplete (31/58) and partly stale.'`
+- Problem: Three-way disagreement on the same fact. CLAUDE.md says empty; the user-facing guard says 31/58; the directory has 0 files. Distinct from the L276-vs-L82 contradiction — this is doc vs shipped guard string vs reality.
+- Triage: Pick the true state (0 files) and make CLAUDE.md, the pipeline.py comment, and the guard message agree; update the "31/58" string in pipeline.py if stale.
+
+**Build translate models differ from review models; evaluator unnamed**
+- `PIPELINE.md` / `CLAUDE.md` — PIPELINE.md Step 7c "Evaluate" line 247; CLAUDE.md Translation line 191
+- Claim: `'Evaluate (parallel) — score each draft on six literary dimensions...'` — model unnamed; drafts said to be "Claude Sonnet 4.6 + Gemini Pro".
+- Problem: The evaluation phase is hard-coded to `gemini-2.5-flash` (not Sonnet, not "Gemini Pro"); the draft Gemini provider is `gemini-2.5-pro` and the default GPT is `gpt-4o` — all undocumented and an older generation than the review-phase models REVIEW.md cites (`gemini-3.1-pro`, `gpt-5.4`, `claude-opus-4-6/4-8`). A reader can't tell which model scores the drafts.
+- Triage: Name the evaluator (`gemini-2.5-flash`) and the concrete draft model ids in PIPELINE.md Step 7c; reconcile the build-vs-review model generations or note they differ deliberately.
+- Verified: `multi_translate.py:451 model="gemini-2.5-flash"`; `providers.py:142 "gemini-pro": "gemini-2.5-pro"`; `providers.py:238 model: str = "gpt-4o"`.
+
+**Reading edition defaults to single-language, not facing pages**
+- `README.md` / `CLAUDE.md` / `PIPELINE.md` — README Typesetting line 77 & "Loeb-style facing pages" throughout; CLAUDE.md Layout line 209; PIPELINE.md line 3 / Step 8
+- Claim: `'Loeb Classical Library-style facing pages (Italian left, English right)'` — described unconditionally as the layout across all three docs.
+- Problem: The edition does not default to facing pages. `typeset.py` defaults the language focus to English-only (`var lf = localStorage.getItem('langFocus') || 'en'` → `lang-en-only`), with a Both/IT/EN toggle to opt into the facing-page view. On a mobile-typography branch the single-language default is the primary experience, yet no doc says facing-page is opt-in. A reader expects a two-column edition out of the box.
+- Triage: Note the edition defaults to a single-language view (English) with a Both/IT/EN toggle; the facing-page (Both) layout is opt-in — important for the mobile narrative.
+- Verified: `typeset.py:173` default English-only; `:174-175` apply `lang-it-only`/`lang-en-only`; `:813-815` render the Both/IT/EN toggle.
+
+### Low
+
+**README deploy `cp` triplet is redundant and regressive vs the auto-sync**
+- `README.md` — Deploying to GitHub Pages (lines 103-110)
+- Claim: `cp output/bilingual.html docs/index.html` / `cp output/scan.html docs/scan.html` / `cp static/bilingual.css docs/static/bilingual.css`.
+- Problem: `typeset.py` auto-syncs all three into `docs/` at the end of every run, with path rewrites the manual cp omits — so the manual cp of `index.html` would reintroduce broken CSS/font paths.
+- Triage: Replace the manual cp instructions with a note that `--step typeset` already syncs `docs/`; reduce the deploy section to the git add/commit/push step.
+- Verified: `typeset.py:1599-1612` writes `docs/index.html` (with CSS-path rewrite), copies `scan.html`, and writes `docs/static/bilingual.css` (with font-path rewrite); prints "Synced to docs/".
+
+**Reconciliation prompt prescribes libraries the code never adopted**
+- `dictionary-agent_prompts.md` — Prompt 1: OCR Text Reconciliation (Key techniques + Dependencies)
+- Claim: `diff-match-patch` as primary aligner; `minineedle` Smith-Waterman fallback; `collatex` for transpositions; `pip install diff-match-patch rapidfuzz minineedle spacy unidecode`.
+- Problem: `reconcile.py` uses `difflib.SequenceMatcher` + `rapidfuzz`; it does not use diff-match-patch, minineedle, collatex, or unidecode, and none are in `pyproject.toml`. A pre-implementation design brief that misrepresents how reconciliation works.
+- Triage: Add a header noting this is a historical/aspirational design brief, not a description of the built pipeline (SequenceMatcher + rapidfuzz), or update the library references to match `reconcile.py`.
+
+**Normalization reference names the wrong project ("Athanor pipeline")**
+- `1913-italian-ocr-normalization-reference.md` — Context preamble (line 3)
+- Claim: `'Use this as a reference when building or refining punctuation/normalization passes in the Athanor pipeline.'`
+- Problem: Wrong project name — this file lives in the Per la Libertà repo and informs this project's `cleanup.py`; Athanor is the separate Kybalion pipeline.
+- Triage: Change "the Athanor pipeline" to "the Per la Libertà cleanup pipeline" (or "this pipeline").
+
+**dictionary-agent_prompts.md prescribes tools/model the shipped code did not follow**
+- `dictionary-agent_prompts.md` — Prompt 1 Dependencies (lines 38-42), Prompt 2, `it_core_news_sm` references
+- Claim: `pip install diff-match-patch rapidfuzz minineedle spacy unidecode`, `collatex`, `it_core_news_sm`; lookup uses `spacy.load('it_core_news_sm')`.
+- Problem: None of diff-match-patch/minineedle/collatex/it_core_news_sm are used (reconcile.py uses SequenceMatcher + rapidfuzz; model is `it_core_news_lg`); the doc describes a design the code did not follow with no caveat and is uncross-referenced.
+- Triage: Add a banner marking this as an early design prompt that does not match the shipped implementation, or cross-reference it from CLAUDE.md with that caveat.
+
+**`uv run serve.py` is inconsistent; PORT env var undocumented**
+- `README.md` — Setup section line 96
+- Claim: `'For local testing, start the dev server: uv run serve.py'`
+- Problem: Project elsewhere uses `uv run python <script>`; `uv run serve.py` is an inconsistent (though working) form, and the `PORT` env var serve.py honors (default 8000) is undocumented.
+- Triage: Use `uv run python serve.py` for consistency and document the `PORT` env var override.
+- Note (needs_nuance): `uv run serve.py` is not broken — uv runs a `.py` path as a script. The substance is purely stylistic plus the undocumented `PORT` default.
+
+**`it_core_news_lg` spacy-download step is redundant after `uv sync`**
+- `README.md` / `CLAUDE.md` — README Setup lines 28-33; CLAUDE.md Running section
+- Claim: Setup = `uv sync` then `uv run python -m spacy download it_core_news_lg`.
+- Problem: `pyproject.toml` declares `it_core_news_lg` as a pinned wheel dependency, so after `uv sync` the model is already installed and the separate download is redundant/confusing.
+- Triage: Note that `uv sync` already installs `it_core_news_lg` (pinned in pyproject) and the spacy download is a fallback only; or remove the redundant step.
+
+**Edgren default-on vs pipeline default-off for `--with-edgren`**
+- `CLAUDE.md` — Translation section line 196 vs pipeline.py multi-model branch
+- Claim: `'Both paths: ... Accept --with-edgren to enrich prompts with Edgren 1901 dictionary context.'`
+- Problem: The two paths default oppositely. `multi_translate`'s function default is `with_edgren=True`, but `pipeline.py` always passes `args.with_edgren` (a `store_true` flag defaulting False) — so via `pipeline.py --step translate --multi-model` Edgren is OFF unless `--with-edgren` is given. Line 278 also doesn't record whether the live edition was built with Edgren.
+- Triage: State that `--with-edgren` defaults off through `pipeline.py` (both paths) even though `multi_translate()`'s function default is True; clarify whether the live edition used Edgren context.
+- Verified: `multi_translate.py:762 with_edgren: bool = True`; `pipeline.py:280` passes `with_edgren=args.with_edgren` (`pipeline.py:129` is `store_true` → default False).
+
+**Translate prompt's markdown-asterisk italics convention undocumented**
+- `PIPELINE.md` — Step 7a line 224
+- Claim: `'System prompt: Loeb-style translation, preserve paragraph structure, italicize untranslatable Italian'`
+- Problem: `translate.py`'s prompt instructs rendering untranslatable Italian "in italics (using *asterisks*)" — literal markdown asterisks, not abstract italics — and only "with a brief inline gloss if needed". The asterisk convention is load-bearing because `typeset.py` later converts markdown italics to `<em>`; a reader auditing the prompt would not learn the asterisk requirement.
+- Triage: Note the prompt requires markdown `*asterisks*` for italics (so typeset's `*`→`<em>` conversion works) and that the gloss is conditional.
+- Verified: `translate.py:78 "in italics (using *asterisks*) with a brief inline gloss if needed"`.
+
+---
+
+## 2. Gaps / missing
+
+### Medium
+
+**README `.env` example omits review-phase keys**
+- `README.md` — Setup section, lines 35-40 (.env block)
+- Claim: `.env` lists only `ANTHROPIC_API_KEY` and `GEMINI_API_KEY`.
+- Problem: The review-phase scripts (via REVIEW.md) require `OPENAI_API_KEY` and `DEEPL_API_KEY`, so a user following only README hits missing-key failures.
+- Triage: Add `OPENAI_API_KEY` and `DEEPL_API_KEY` with a note they are review-phase only, or add a pointer to REVIEW.md's "Models/keys" line.
+- Note (needs_nuance): `DEEPL_API_KEY` appears in one file (`mt.py`), not three. The full key set is documented in **REVIEW.md** (~line 159), not CLAUDE.md — CLAUDE.md's Environment Variables section shares the same omission (only ANTHROPIC + GEMINI). Cross-reference target should be REVIEW.md.
+
+**README Setup never tells the user to obtain the LOC source PDF**
+- `README.md` — Setup (lines 27-40) and Pipeline table step 2 (line 16)
+- Claim: Setup is just `uv sync` + `spacy download` + a two-key `.env`. Step 2 OCR runs "on the LOC PDF scan".
+- Problem: The OCR step needs the LOC PDF on disk (`ocr.py DEFAULT_PDF`), which is gitignored and ~82MB; README's Setup never says this file must be obtained separately or from where.
+- Triage: Add a "Source files" prerequisite: the OCR step needs the LOC scan PDF saved at the repo root as `public-gdcmassbookdig-perlalibertdal00cres-perlalibertdal00cres.pdf` (gitignored, ~82MB), with the IA download URL; note OCR is skipped if absent.
+- Verified: `ocr.py:17 DEFAULT_PDF`; `pipeline.py:190-192`; `.gitignore` `*.pdf`. The only mention is CLAUDE.md line 279 (a status note, not an instruction).
+
+**Harvard PDF required for second-copy escalation, never listed as a prerequisite**
+- `REVIEW.md` — Ground terminology line 16 + Shared infrastructure (vision_review) line 28
+- Claim: Copy B is the Harvard/Google copy (rendered on demand from PDF). `vision_review.py` "Must run via uv run".
+- Problem: The Harvard PDF (`vision_review.py HARVARD_PDF`) is required for escalation but is gitignored and never listed as a setup prerequisite in any doc.
+- Triage: Add a prerequisite note (REVIEW.md + README setup) that second-copy escalation needs `harvard_perlalibertdall00cresgoog.pdf` at the repo root (gitignored), with the IA source URL.
+- Verified: `vision_review.py:41 HARVARD_PDF`, `:71 fitz.open(HARVARD_PDF)`. No doc names the filename or where to get it.
+
+**`claude` CLI dependency** — see High item in §1 (also a gap). Listed there.
+
+**Companion step (9) absent from README Usage and deploy**
+- `README.md` — Usage section (lines 42-54) and Pipeline table (line 25)
+- Claim: The Pipeline table lists step 9 Companion, but Usage's step list omits it, and Deploy never mentions committing `docs/companion/`.
+- Problem: `companion.py` (a real step) and its output `docs/companion/*.html` (61 tracked files, part of the live site) are absent from README Usage and from deploy instructions; a maintainer would build/deploy the edition but never the Reader's Companion.
+- Triage: Add `uv run python pipeline.py --step companion` to README Usage and include `docs/companion/` in the deploy step.
+- Verified: `pipeline.py:17-19` STEPS includes "companion"; `git ls-files docs/companion/` = 61 files. Typeset does NOT write `docs/companion/` — a real coverage gap, not duplicated by the typeset sync.
+
+### Low
+
+**Normalization reference is orphaned and wrongly attributed**
+- `1913-italian-ocr-normalization-reference.md` — whole file (header line 3, sections throughout)
+- Claim: `'Use this as a reference when building or refining punctuation/normalization passes in the Athanor pipeline.'`
+- Problem: A doc under review that is (a) not cross-referenced from any primary doc and (b) explicitly addresses "the Athanor pipeline" (a different project), so a maintainer can't tell whether its guidance was applied here.
+- Triage: Cross-reference it from CLAUDE.md/PIPELINE.md cleanup section with a note on which watchpoints `cleanup.py` implements, or relabel it as inherited Athanor background; fix the attribution.
+- Verified: line 3 names Athanor; `grep` for "normalization-reference" across primary docs returns no hits — the file is orphaned.
+
+**dictionary-agent_prompts.md unimplemented + orphaned (duplicate angle)**
+- `dictionary-agent_prompts.md` — Prompt 1 Dependencies (lines 38-42), Prompt 2, `it_core_news_sm` references
+- Claim: As above (diff-match-patch / minineedle / collatex / it_core_news_sm).
+- Problem: None used by the actual code; the doc describes a design the code did not follow with no aspirational note, and it is not cross-referenced from any primary doc.
+- Triage: Add a banner marking it as an early design prompt that does not match the shipped implementation, or cross-reference from CLAUDE.md with that caveat.
+
+**Undocumented repo-root files (styleguide, fix_corrupted_passage.py)**
+- `CLAUDE.md` / `README.md` / `PIPELINE.md` / `REVIEW.md` — no entry anywhere
+- Claim: (omission) None of the docs mention `crespi-1913-styleguide.html` or `fix_corrupted_passage.py`.
+- Problem: `crespi-1913-styleguide.html` is a tracked repo-root file with no documentation/code reference; REVIEW.md's dead-script section omits `fix_corrupted_passage.py`, so the dead-script inventory is presented as complete but isn't.
+- Triage: Document `crespi-1913-styleguide.html`'s status (authoritative vs. scratch) in CLAUDE.md, and add `fix_corrupted_passage.py` to REVIEW.md's dead/historical-scripts list.
+- Note (needs_nuance): `write_ch6_out.py` is **already listed** in REVIEW.md's dead-script section — drop it from this finding. The `type-specimen*.html` files are **untracked** (scratch) — also drop. Real residual: `crespi-1913-styleguide.html` and `fix_corrupted_passage.py`.
+
+**GPT draft path missing `OPENAI_API_KEY` prerequisite**
+- `PIPELINE.md` / `README.md` — PIPELINE.md Step 7c (lines 242-250); README Pipeline table line 22
+- Claim: Multi-witness synthesis uses `--multi-model` with `--draft-models` (default claude,gemini); GPT optional.
+- Problem: Neither doc states that GPT drafts require `OPENAI_API_KEY`; a maintainer running `--draft-models claude,gemini,gpt` has no documented prerequisite for the gpt path.
+- Triage: In PIPELINE.md Step 7c, note gpt drafts need `OPENAI_API_KEY`. **Do NOT** instruct installing an optional extra — `openai>=2.30.0` is already a base dependency (`pyproject.toml:16`); the `multi-translate` optional extra is vestigial/legacy.
+- Note (needs_nuance): The only real, actionable gap is the missing `OPENAI_API_KEY` note; the optional-dependency angle should be dropped.
+
+---
+
+## 3. Ambiguity / contradiction
+
+### High
+
+**Current-Status "all 58 chapters corrected, full-text cache" vs "is now empty"**
+- `CLAUDE.md` — Current Status line 276 vs Regeneration guard line 82
+- Claim: Line 276: `'all 58 chapters corrected, full-text cache in state/llm_cleaned/'`. Line 82: cache `'is now empty'`.
+- Problem: Directly contradict on whether the cache is populated; repo confirms empty (0 files), so line 276 is factually wrong.
+- Triage: Update line 276 to say the cache has since been cleared (gitignored/regenerable, currently empty), reconciling with the guard paragraph.
+- Note: pipeline.py's own comments are internally inconsistent too (line 23 "31 of 58", line 43 "(31/58)") — a third, separate stale claim.
+
+### Medium
+
+**Refine shown inline in the build arrow chain despite being manual-only**
+- `CLAUDE.md` — Arrow chain (line 20) vs step 7b table row (line 32) and Translation Refinement (line 200)
+- Claim: Chain lists `'...translate → refine → typeset → companion'` as if refine is sequential, but lines 32/200 say refine is "Manual-only step, never runs as part of --step all".
+- Problem: Including refine inline in the build arrow chain implies it runs during a normal build, contradicting the manual-only statements elsewhere in the same doc.
+- Triage: Render refine as an off-chain manual step in the arrow diagram (parenthesize or footnote it as "manual, not in --step all").
+- Verified: `pipeline.py:296` comment "Refine is manual-only", `:297 if args.step == "refine":` (excluded from every "all" branch).
+
+**Track 6 documented as bare `python`, contradicting the doc's own uv-run rule**
+- `REVIEW.md` — Track 6 Intention review, invocation column (lines 147-152) vs Shared infrastructure note (line 28)
+- Claim: Track 6 scripts documented as `python comprehension.py …`, `python stage2.py …`, `python mt.py …`, `python triage_sheet.py …`, while line 28 says google.genai modules must run via `uv run` and every other track uses `uv run python`.
+- Problem: `comprehension.py` imports google.genai (+ anthropic, openai); copying the bare-python commands produces `ModuleNotFoundError`. Track 6 contradicts both the stated rule and Tracks 1-5.
+- Triage: Prefix Track 6 invocations with `uv run` to match Tracks 1-5 and the stated rule.
+- Verified: REVIEW.md lines 147/149/151/152 bare python; line 28 uv-run rule; `comprehension.py:179 from google import genai`.
+
+### Low
+
+**`--with-edgren` default behavior** — see §1 Low (also a contradiction between function default and pipeline default).
+
+**Two chapter-id schemes hidden behind one placeholder**
+- `PIPELINE.md` — Step 5 (lines 121, 150, 158), Step 7a (line 227), Step 7b (lines 270-271)
+- Claim: Cleanup saves to `state/llm_cleaned/{chapter_id}.txt`; translate to `state/translations/{chapter_id}.md`; refine to `{ch_id}.md` — all the same placeholder.
+- Problem: The identical placeholder hides that `state/llm_cleaned/` + `chapter_pages.json` use the `p1_ch01` scheme while `state/translations/` uses the slug scheme `p1_capitolo_primo`; a reader can't tell `{ch_id}` resolves differently.
+- Triage: Annotate each path with its scheme; add a one-line note that the build uses two chapter-id schemes.
+- Note (needs_nuance): CLAUDE.md line 214 already documents the two schemes; PIPELINE.md just doesn't repeat it. Minor clarity nit; severity low.
+
+**Slug chapter-id example only valid for Part 2**
+- `CLAUDE.md` — Restored typography note, line 214
+- Claim: `'Keyed by the slug chapter id ... note this differs from the p1_ch18 scheme'` — but the slug scheme is itself inconsistent: Part-1 ordinals use underscores (`p1_capitolo_decimo_ottavo`) while Part-2 are elided (`p2_capitolo_decimottavo`). The example is only valid for Part 2.
+- Problem: A Part-1 reader inferring `p1_capitolo_decimottavo` from the example would mis-key.
+- Triage: Note the slug scheme is not uniform across parts; the canonical key is whatever `parse_italian_markdown` emits; point readers to the actual filenames in `state/translations`.
+- Verified: `state/translations/` contains both `p1_capitolo_decimo_ottavo.md` and `p2_capitolo_decimottavo.md`.
+
+**Stray-symbol set: CLAUDE.md lists a subset of PIPELINE.md/code**
+- `CLAUDE.md` — Stray symbol stripping, line 140 vs PIPELINE.md Step 5b item 2, line 127
+- Claim: CLAUDE.md lists `(■ • ^ | § ¶ £→E)`; PIPELINE.md lists ~17 chars; code strips the larger set.
+- Problem: CLAUDE.md is an incomplete subset; a cross-referencing reader sees a contradiction about which characters are removed.
+- Triage: Update CLAUDE.md line 140 to list the full class (or say "a set of OCR noise symbols — see PIPELINE.md / cleanup.py for the exact class").
+- Verified: `cleanup.py:571` strips the full ~17-char class.
+
+**`chapter_count` defined incompatibly across docs (58 vs 57)**
+- `CLAUDE.md` — Validation check 1, line 157 vs PIPELINE.md Step 6 item 1, line 195
+- Claim: CLAUDE.md: "verifies 58 chapters (prefazione + 24 P1 + 33 P2)". PIPELINE.md: "expects ≥3 ## headers + 57 ### headers".
+- Problem: `validate.py` asserts exactly 57 H3 + ≥3 H2 (so "58 chapters" is never the quantity checked); prefazione is an H2, not one of the 57 H3 chapters.
+- Triage: State precisely in both docs: "3 part-level ## headers (Prefazione, Parte Prima, Parte Seconda) + 57 ### chapter headers (24 + 33)". Avoid bare "58 chapters". Note `validate.py`'s own docstring shares the imprecise "58" framing.
+
+**Reference docs disagree with shipped code on project name + spaCy model**
+- `1913-italian-ocr-normalization-reference.md` / `dictionary-agent_prompts.md` — normalization-reference line 3; dictionary-agent_prompts lines 41, 69, 75, 122
+- Claim: (a) normalization-reference names "the Athanor pipeline"; (b) dictionary-agent_prompts prescribes `it_core_news_sm` while the code uses `it_core_news_lg`.
+- Problem: (a) reader unsure whether the doc applies here; (b) the reference docs disagree with shipped code on spaCy model size.
+- Triage: Add a header to both noting they are design-stage references for this repo (adapted from Athanor) and the shipped pipeline uses `it_core_news_lg`; or update the model name.
+
+**"Two OCR scans" undercounts the witness set**
+- `README.md` — Pipeline overview prose, line 11 vs CLAUDE.md OCR Strategy (lines 109-114) and README step-3 row (line 17)
+- Claim: `'reconciles two independent OCR scans'`.
+- Problem: CLAUDE.md headlines "Three independent OCR witnesses", PIPELINE.md says "Load all three raw texts", and README's own step-3 row references Copy 3 — internally inconsistent.
+- Triage: Reword to "two independent physical scans, OCR'd into three witnesses" or "three OCR witnesses".
+- Note (needs_nuance): "two independent scans" is literally true at the physical-scan level (two physical books); the imprecision is "OCR" — Copy 3 is a third OCR of one of those two scans.
+
+**Single-model `--step translate` shown as runnable despite the regeneration guard**
+- `CLAUDE.md` / `README.md` — CLAUDE.md step 7 line 31 & Translation line 190; README step 7 line 22 (Usage line 52, Running line 57)
+- Claim: Default single-model translate presented as a routine `--step translate` option.
+- Problem: `translate` is in the regeneration guard's blocked set and the `.claude/settings.local.json` deny list (CLAUDE.md says so at line 78). The single-model `uv run python pipeline.py --step translate` in README line 52 and CLAUDE.md line 57 has no caveat at the point of use; copying the Usage block hits a hard exit-code-2 abort.
+- Triage: Add a guard caveat at the README Usage and CLAUDE.md Running translate lines (or cross-reference the Regeneration guard).
+- Verified: CLAUDE.md:78 lists `--step translate` among guarded steps; README:52 and CLAUDE.md:57 show it as freely runnable.
+
+**Multi-model translate command not connected to the regeneration guard**
+- `CLAUDE.md` / `README.md` — CLAUDE.md Running line 58; README Pipeline table line 22
+- Claim: Both docs surface the multi-model translate command without noting `--step translate` is blocked by the guard and deny list.
+- Problem: A reader copying the line-58 command in a non-TTY context gets a hard abort (exit 2) with no in-place warning; the guard is documented in a separate section not connected to the advertised command.
+- Triage: Annotate the `--step translate` / `--multi-model` command lines with a pointer to the regeneration guard (e.g. "(guarded; requires interactive TTY + PER_LA_LIBERTA_ALLOW_REGEN=1)").
+- Note (needs_nuance): CLAUDE.md documents the guard in the very next subsection (line 76, adjacent to the command block), so it is connected by adjacency, not buried. README does not document the guard at all (a mild gap). This is a "cross-reference more tightly" nicety, not a true contradiction.
+
+**Track 6 bare-python (duplicate framing)**
+- `REVIEW.md` — Track 6 invocations (lines 147-152) vs Shared infrastructure note (line 28) and Tracks 1-5
+- Claim: Bare `python comprehension.py …` etc. while line 28 says google.genai modules must run via uv run.
+- Problem: `comprehension.py` imports google.genai; by the doc's own rule these need the uv environment, yet Track 6 documents bare python.
+- Triage: Normalize all Track-6 (and companion) invocations to `uv run python <script>`.
+- Note (needs_nuance): The fix is correct, but the rationale should be "these scripts depend on uv-managed packages" generally (anthropic/openai/httpx/dotenv live in the uv venv), with google.genai being the specific case for `comprehension`; it is not true that every listed script imports google.genai (e.g. `mt.py` uses httpx).
+
+---
+
+## 4. Optimistic / flattering language
+
+### Medium
+
+**"calibrated" asserted with only scale counts as evidence**
+- `REVIEW.md` — Track 6 Status, line 156
+- Claim: `'Status: Stage 1 complete and calibrated (1,967 passages, 11,802 calls, 5,661 ranked flag clusters).'`
+- Problem: "calibrated" is an evaluative claim of quality/maturity; the numbers describe scale, not calibration. No precision/recall against ground truth is cited in the doc.
+- Triage: Either cite the calibration evidence inline (e.g. "calibrated against N hand-labeled flags: X% true-positive") or reword to "Stage 1 complete (1,967 passages, 11,802 calls, 5,661 ranked flag clusters)".
+- Verified: The only supporting number (98% TP on a breadth-3/high slice) lives in user memory, not in REVIEW.md.
+
+**"best vision of the current crop" — unsubstantiated superlative**
+- `REVIEW.md` — vision_review.py table, line 39
+- Claim: `'Primary model: gemini-3.1-pro-preview (best vision of the current crop).'`
+- Problem: An unsubstantiated superlative / marketing claim; no benchmark is cited and it will date quickly.
+- Triage: Reword to factual: "Primary model: gemini-3.1-pro-preview (the configured PRIMARY vision model)." Drop the "best ... of the current crop" claim or cite evidence / time-box it.
+- Verified: `vision_review.py:44` comment "best vision of the current crop (2026-06)" — the doc drops even the date tag, making it read as a standing fact.
+
+### Low
+
+**"validated" overstates maturity (build vs source-fidelity)**
+- `CLAUDE.md` — Current Status, line 275
+- Claim: `'All build steps (1–9) complete and validated; bilingual HTML deployed via GitHub Pages'`
+- Problem: "validated" refers narrowly to validate.py's 7 automated checks, not correctness against the 1913 source, which REVIEW.md documents as still under active review.
+- Triage: Qualify "validated" as the automated-checks pass: "validate.py's 7 automated checks pass; the published text is still under review (see REVIEW.md)".
+- Note (needs_nuance): The next section already splits "Build phase — complete" vs "Review phase — ongoing", so the doc does not paper over the in-flight work; the residual is the single word "validated" read in isolation. Severity low.
+
+**"zero / zero / zero" cadence reads as a clean-text boast**
+- `CLAUDE.md` — Current Status, line 277
+- Claim: `'Validation passes all 7 checks: zero high-severity garble, zero stray symbols, zero LLM instruction leaks'`
+- Problem: The triple-zero framing implies the text is clean, but the checks are coarse heuristics (word_quality only flags words ≥4 chars with dictionary/pattern misses, NER-filtered); REVIEW.md shows hundreds of real deviations the checks did not catch.
+- Triage: State plainly: "validate.py reports no high-severity flags on its 7 checks (heuristic OCR-garble checks, not a fidelity guarantee)." A one-clause qualifier is the better fix.
+- Note (needs_nuance): The counts are factually accurate output of the checks, not fabrication; the defect is tone/implication. Severity low.
+
+**"authoritative" / "fragile" in LLM Cleanup Architecture**
+- `CLAUDE.md` — LLM Cleanup Architecture, line 123
+- Claim: `'the authoritative corrected text per chapter. This replaces the earlier corrections.json context-window approach which was fragile'`
+- Problem: "authoritative" overstates given the same doc says cleanup corrupts the text and the cache is empty.
+- Triage: Soften "authoritative" to "the precedence source when present".
+- Note (needs_nuance): The "fragile" half is a false positive — the sentence immediately states the mechanism ("any change to clean_text() would invalidate the 40-char context strings, causing corrections to silently fail to apply"), which is exactly the substantive description requested. Only soften "authoritative"; leave "fragile" as-is.
+
+**"honestly" — editorial adverb**
+- `REVIEW.md` — Track 4 Sampling estimate, line 116
+- Claim: `'sample_estimate.py measures that residual rate honestly: blind-read a random sample of pages ... and extrapolate a misread rate with a 95% CI'`
+- Problem: "honestly" reads as an editorial adverb; methods are not honest or dishonest.
+- Triage: Delete "honestly" (optional).
+- Note (needs_nuance): "honestly" is grounded — it means "measures the blind spot honestly", confronting the one error class the rest of the review provably cannot catch (the code says the same at `sample_estimate.py:5`). The opposite of flattery; a low-severity word-choice nit at most.
+
+**"prime offender"**
+- `REVIEW.md` — Track 2 Cleanup-corruption review, line 88
+- Claim: `'(symspell dictionary "corrections" being the prime offender)'`
+- Problem: "prime offender" is colorful editorializing and asserts a ranking (single largest source) without a cited count.
+- Triage: Reword to "(the symspell dictionary-correction pass is a frequent source of these)". Cite a count if a ranking is intended.
+- Note (needs_nuance): Not fabricated — consistent with the project's own diagnosis (cleanup_corruption memory); the narrow defect is that "prime offender" implies a measured #1 ranking the doc doesn't quantify.
+
+**"strong on" / "confidently a real period form"**
+- `README.md` — Reference dictionaries, lines 118-120
+- Claim: `'a third period authority, strong on archaic/literary/technical vocabulary ... a word recognized by ≥2 of the three is confidently a real period form'`
+- Problem: "confidently a real period form" editorializes the heuristic's reliability — the 2-of-3 rule is a membership oracle, not a confidence guarantee.
+- Triage: Drop "confidently" (or replace with "is treated as"). "strong on" can stay — it is a fair conventional characterization of Hoare 1915.
+- Note (needs_nuance): The same "confidently" phrasing recurs in CLAUDE.md line 184 and REVIEW.md line 20 (house phrasing).
+
+**"one deliberate sweep"**
+- `CLAUDE.md` / `REVIEW.md` — CLAUDE.md line 284; REVIEW.md line 10
+- Claim: `'deferred to one deliberate sweep after the Italian pass completes'`
+- Problem: "deliberate" implies methodical intent; the neutral fact is that English-matching is deferred to a single later pass.
+- Triage: Reword to "deferred to a single later pass after the Italian pass completes." Drop "deliberate" (or replace with "planned").
+- Note (needs_nuance): "deliberate" carries a small justificatory meaning (intentional sequencing to avoid orphaning revision annotations), so it is not pure self-praise. Low-severity word-choice nit.
+
+---
+
+## 5. Book-specific / not portable
+
+> Reuse goal: each item is tagged **BOOK DATA (→ config)**, **PROCESS LOGIC (→ re-engineer)**, or
+> **DESCRIBED-IN-BOOK-TERMS** to show what kind of work reuse on another work would require.
+
+### High
+
+**Chapter-count / part-structure hard-coded in validate.py** — BOOK DATA (→ config)
+- `CLAUDE.md` — Validation check 1 "chapter_count" (and Current Status / Validate section)
+- Claim: `'chapter_count — verifies 58 chapters (prefazione + 24 P1 + 33 P2)'`
+- Problem: The chapter total (58), the part split (24 + 33), and the prefazione+two-parts structure are book-specific facts hard-coded into `validate.py`.
+- Triage: Move the expected chapter count and part structure into a per-book config consumed by `validate.py`; doc the check as "verifies the configured chapter structure".
+- Verified: `validate.py:9` docstring "prefazione + 24 Part 1 + 33 Part 2 = 58"; `:17-21` hard-codes `if h2_count < 3` and `if h3_count != 57`.
+
+**Two IA identifiers hard-coded in download.py (+ README/code mismatch)** — BOOK DATA (→ config)
+- `README.md` — Source (lines 150-151) and Step 1 Download table row
+- Claim: `LOC: archive.org/details/perlalibertdal00cres`; `Google/Harvard: archive.org/details/perlalibertdal00cresuoft`; "Fetches 2 DJVU text copies".
+- Problem: The two IA identifiers are hard-coded as module constants in `download.py` and are book-specific. Plus a doc/code mismatch: README says `perlalibertdal00cresuoft` but `download.py` uses `perlalibertdall00cresgoog`.
+- Triage: Parameterize the two IA identifiers via CLI args or a book manifest instead of module constants; fix the README's second identifier to match the code and present both as example values.
+- Verified: `download.py:6 COPY1_URL` `.../perlalibertdal00cres/...`; `:7 COPY2_URL` `.../perlalibertdall00cresgoog/...`. README's "cresuoft" matches neither.
+
+**Bodoni-specific i→r / i→e boundary substitutions hard-coded** — PROCESS LOGIC (→ re-engineer)
+- `CLAUDE.md` — Dehyphenation section (pass 2)
+- Claim: `'OCR boundary substitution — try i→r and i→e ... These are the dominant Bodoni typeface confusions.'`
+- Problem: The substitutions are justified by the 1913 source being set in Bodoni and are hard-coded in `cleanup.py`. A different face has different confusion pairs.
+- Triage: Extract the confusion-pair table into a per-source typography profile keyed by typeface; document the i→r/i→e set as a Bodoni preset, not a general rule.
+- Verified: `cleanup.py:79-86 BOUNDARY_SUBSTITUTIONS = {'i': ['r', 'e']}` with Bodoni-specific comments.
+
+**Italian-only cleanup/validate linguistic layer** — DESCRIBED-IN-BOOK-TERMS (inherently general, language-specific instances)
+- `CLAUDE.md` — Italian Linguistic Handling (multiple bullets) and PIPELINE.md Step 5/6
+- Claim: NER via spaCy `it_core_news_lg`; contraction-aware tokenization; accento facoltativo rule; ~708K-entry `it_combined.txt`; Italian consonant-cluster word_quality rule.
+- Problem: The entire cleanup/validate linguistic layer is Italian-only (spaCy model, dictionary, accent-skip logic, consonant-cluster rule) and does not transfer to another language.
+- Triage: Parameterize language (spaCy model name, dictionary path, accent rule, consonant-cluster rule) via a language profile; doc them as "the Italian profile of" each step.
+- Note (needs_nuance): The layer is centralized — one `spacy.load` (in `cleanup.py`, reused via `_get_ner_nlp`), one dictionary (`cleanup.py:60`), with `validate.py` consuming it plus its own Italian consonant rule (`:234-235`). Parameterizing the one cleanup-level language profile would cover most of it. (The original "4 spaCy-load sites" framing was inaccurate.)
+
+**Italian chapter-title translation driven by hard-coded ordinal maps** — PROCESS LOGIC (→ re-engineer)
+- `PIPELINE.md` — Step 7 Translate (assembly) and translate.py title map; CLAUDE.md Translation
+- Claim: `'Translate Italian chapter titles to English (Capitolo Primo → Chapter One, etc.)'`
+- Problem: Chapter-title translation is driven by hard-coded Italian ordinal maps and `Capitolo`/`Parte`/`Prefazione` literals in `translate.py` and `utils.py`; none works for another language or heading convention.
+- Triage: Abstract chapter-detection and title-translation into a language/heading profile (heading keywords + ordinal table + part labels).
+- Verified: `translate.py:297 _ITALIAN_NUMBERS`, `:314 _ITALIAN_ORDINAL_PARTS`, `:333 re.match(r'Capitolo\s+(.+)')`; `utils.py` ORDINALS/ORDINAL_FIXES/COMPOUND_ORDINALS + PREFAZIONE/PARTE detectors.
+
+**Book identity hard-coded into the translation system prompt** — BOOK DATA (→ config) + DESCRIBED-IN-BOOK-TERMS
+- `CLAUDE.md` — Translation section (system prompt content); PIPELINE.md Step 7
+- Claim: `'System prompt: Loeb-style translation, preserve paragraph structure, italicize untranslatable Italian'`
+- Problem: `translate.py`'s system prompt hard-codes the book's identity/subject ("Per la Libertà!", Risorgimento, Orsini conspiracy against Napoleon III) and names specific entities (Orsini, Mazzini, Radetzky); for another work this injects false context.
+- Triage: Lift book title/era/subject/proper-noun examples into a per-book translation-config block fed into the prompt template; document the prompt as a template with book-specific slots.
+- Verified: `translate.py:64-78` SYSTEM_PROMPT names the book, era, subject, and Orsini/Mazzini/Radetzky.
+
+**This book's bibliographic metadata hard-coded in typeset.py** — BOOK DATA (→ config)
+- `PIPELINE.md` — Step 8 Typeset (Title page / Colophon); CLAUDE.md Typesetting
+- Claim: `'Title page: facing-page layout with title, subtitle, author ... Colophon: production metadata, source links, typeface info'`
+- Problem: `typeset.py` hard-codes this book's subtitle, author "Cesare Crespi (1913)", colophon "Canessa Printing Co., San Francisco", and `IA_ITEM_ID='perlalibertdal00cres'` (source links + scan deep-links).
+- Triage: Move title/subtitle/author/publisher/IA-item-id into a per-book metadata config consumed by `typeset.py`.
+- Verified: `typeset.py:13 IA_ITEM_ID` (reused at :405, :887, :1068, :1127); `:841` subtitle; `:842/847` author; `:1053` "Canessa Printing Co., San Francisco".
+
+### Medium
+
+**Three Italian period dictionaries pinned, IA URLs hard-coded** — BOOK DATA (→ config) + DESCRIBED-IN-BOOK-TERMS (oracle pattern is general)
+- `CLAUDE.md` / `README.md` / `REVIEW.md` — dictionary sections; REVIEW.md 3-dictionary oracle (line 20)
+- Claim: `'a word found in ≥2 of {Zingarelli 1922, Edgren 1901, Hoare 1915} is confidently a real period word'`
+- Problem: All three are Italian/Italian-English pinned to ~1900-1922; their IA download URLs are hard-coded (`edgren.py cu31924019173982`; `hoare.py italiandictionar00hoaruoft`). Another language/era needs different dictionaries; the ≥2-of-3 oracle and spaCy-Italian lemmatization do not transfer.
+- Triage: Make the dictionary set configurable keyed to language+era; document as "pick N period dictionaries for the source language/era" rather than the fixed Italian trio. The oracle PATTERN is general.
+
+**Review phase presupposes two specific physical copies + concordance + Bodoni rationale** — BOOK DATA (→ config) + PROCESS LOGIC (→ re-engineer)
+- `REVIEW.md` — Ground terminology / Shared infrastructure (vision_review.py, build_concordance.py); Native-resolution rule (lines 16-20)
+- Claim: `'Copy A is the Library of Congress scan; Copy B is the Harvard/Google copy ... Native-resolution rule ... c/e, i/r ... second-copy escalation via page_concordance.json'`
+- Problem: The review phase presupposes two specific physical copies, a hard-coded Harvard PDF filename, and a verified LOC↔Harvard concordance; the native-res rationale cites Bodoni-specific c/e, i/r confusions. None generalizes unless another book also has two digitized copies in the same typeface.
+- Triage: Make the two copies / PDF path / concordance into inputs; document two-copy escalation as available only when a second copy is configured; parameterize the PDF path and concordance file.
+- Verified: `vision_review.py:40 PAGE_DIR`, `:41 HARVARD_PDF`, `:77 CONCORDANCE`; REVIEW.md:16-19.
+
+**Normalization reference is entirely Italian-typography-specific + misattributed** — DESCRIBED-IN-BOOK-TERMS
+- `1913-italian-ocr-normalization-reference.md` — whole document (title + every section) and line 3
+- Claim: `'1913 Italian Typography — OCR Normalization Reference ... reference ... in the Athanor pipeline.'`
+- Problem: The entire reference is Italian-typography-specific (grave/acute on final -e, virgolette caporali, f-ligatures, circumflex ii-contraction). It also misattributes itself to the "Athanor pipeline" (the Kybalion project).
+- Triage: Scope-label it as an Italian/early-20thC normalization reference, factor language-neutral guidance from Italian-only rules, and fix the "Athanor pipeline" attribution.
+
+**dictionary-agent_prompts written for one vintage Italian book + one Italian dictionary** — DESCRIBED-IN-BOOK-TERMS (general method, Italian-specific terms)
+- `dictionary-agent_prompts.md` — Prompt 1 (reconciliation, lines 7-54) and Prompt 2; Dependencies blocks
+- Claim: Prompt 1: `'two OCR text files of the same vintage Italian book'`; Prompt 2 uses Edgren 1901 at `archive.org/.../cu31924019173982_djvu.txt`; `python -m spacy download it_core_news_sm`.
+- Problem: Written for a vintage Italian book and a single Italian dictionary; hard-codes the Edgren IA URL; instructs `it_core_news_sm` (disagreeing with production's `it_core_news_lg`); bakes Italian-specific OCR confusion pairs (rn→m, cl→d, li→h, fi-ligature) into the method.
+- Triage: Rewrite as language-parameterized prompts (source language, dictionary URL, spaCy model, confusion-pair table as inputs); reconcile the `it_core_news_sm` vs production `it_core_news_lg` discrepancy.
+
+**chapter_pages.json + page-image set tied to this LOC PDF** — BOOK DATA (→ config; partly already a per-book artifact)
+- `CLAUDE.md` — `data/chapter_pages.json` and Typesetting page-citation description; PIPELINE.md Step 3/8
+- Claim: `'chapter_pages.json — Chapter → PDF page mapping ... Page citations ... Clicking the label opens the source scan overlay'`
+- Problem: The chapter→PDF-page concordance and the page-image set (`docs/assets/page_images/page_000N.png`) are specific to this 82MB LOC PDF; multiple modules consume `chapter_pages.json` as ground truth.
+- Triage: Ensure the source PDF path and page-image naming (`page_NNNN.png`) are inputs, not constants.
+- Note (needs_nuance): `chapter_pages.json` and the page images are genuinely pipeline-produced per-book artifacts (already documented under `data/`). The actionable portability gap is narrower: the **PDF path and page-image filename scheme are hard-coded constants** (e.g. `DEFAULT_PDF`), not the data files themselves.
+
+### Low
+
+**~~Bodoni typeface justified by this book's source aesthetic (and stale vs Spectral/Fraunces)~~ — STRUCK (false positive)**
+- ~~`CLAUDE.md` — Typesetting ("Typeface: Bodoni Moda ... matches 1913 Italian Didone aesthetic")~~
+- **CORRECTION:** This finding is **invalid**. CLAUDE.md line 208 already reads "Typeface: **Spectral** (display) + **Fraunces** (body) ... This replaced the original Bodoni Moda" — corrected in commit `b3f90fa`. The agent read pre-commit content. The only "Bodoni" left in CLAUDE.md (line 148, dehyphenation) correctly describes the *1913 source book's* type, not the web edition's font, and is accurate.
+- Residual (low, valid): the edition-typeface choice could be documented as an editorial per-book decision (DESCRIBED-IN-BOOK-TERMS), but there is no staleness to fix.
+
+**Scan-specific page-marker artifact patterns hard-coded** — PROCESS LOGIC (→ re-engineer)
+- `PIPELINE.md` — Step 5 clean_text() (page-marker removal) and Step 6 check 5 "no_ascii_remnants"
+- Claim: `'Remove inline page markers — residual OCR patterns like "165 3E:", "dEE o 5E" ... no_ascii_remnants — no page marker artifacts'`
+- Problem: The patterns (`165 3E:`, `dEE o 5E`, regex `\d+\s+[35][EI]:?`) are specific OCR signatures of this scan's running heads/page numbers, hard-coded in `validate.py` and cleanup. A different scan produces different artifacts.
+- Triage: Treat header/footer/page-marker artifact patterns as a per-scan tunable noise profile; document the check as configurable patterns rather than the fixed `3E:`/`5E` signatures.
+- Verified: `validate.py:171-174` and `cleanup.py:600-603` both match `\d+\s+[35][EI]:?`.
+
+**Ellipsis-restoration track + IT→EN DeepL MT tied to this work** — DESCRIBED-IN-BOOK-TERMS (ellipsis) + BOOK DATA/config (MT languages)
+- `REVIEW.md` — Track 5 Ellipsis restoration (lines 127-133); Track 6 Stage 2 (mt.py DeepL)
+- Claim: `'Crespi's 1913 printing uses multi-dot suspension points... cleanup flattened them all to three... [Stage 2] neutral DeepL MT'`
+- Problem: Track 5 is motivated by a quirk of Crespi's 1913 printing and operates on this book's dot-run inventory (~167/189). The DeepL MT in Track 6 (`mt.py`) is fixed to Italian→English. Both are standing tracks tied to this work.
+- Triage: For ellipsis — document the restore-from-OCR-counts technique as general but the motivation/inventory as book-specific (an optional, source-dependent track). For MT — parameterize DeepL source/target languages; document them as the IT→EN instance.
+- Verified: `restore_ellipses.py:1` docstring "Restore Crespi's period multi-dot suspension points"; `mt.py:34 SRC, TGT = "IT", "EN-US"`.
+
+**SUBSTITUTION_RULES is an Italian-word-specific OCR fix table** — PROCESS LOGIC (→ re-engineer)
+- `CLAUDE.md` — Regex pre-filters / clean_text() (Italian Linguistic Handling) and PIPELINE.md Step 5
+- Claim: `'Apply regex pre-filters — high-confidence substitutions: piii→più, cbe→che, eolla→colla, etc. (case-preserving)'`
+- Problem: `SUBSTITUTION_RULES` in `cleanup.py` is a list of ~20 Italian-word-specific OCR fixes meaningless for any other language; the "c↔e Copy 1 scanner artifact" comment ties it to this specific scan.
+- Triage: Move the word-level substitution table into a per-language/per-source data file; document it as a tunable Italian preset rather than a pipeline-general step.
+- Verified: `cleanup.py:20-47 SUBSTITUTION_RULES` (~22 Italian-word entries) with "Systematic c↔e OCR confusion (Copy 1 scanner artifact)" comment.
+
+---
+
+## Cross-cutting notes
+
+- **`assets/` directory comment is wrong** — `README.md` line 143: `'assets/  # Fonts, dictionaries, page images'`. Only dictionaries + Harvard (Copy B) page renders live in `assets/`; fonts and LOC page images live under `docs/assets/`. Most accurate correction: `'assets/  # Dictionaries + Harvard (Copy B) page renders; fonts and LOC page images live under docs/assets/'`. (low / Stale-inaccurate; folded here to avoid a near-duplicate single-line section)
+- **README deploy `cd docs && git ...`** — `README.md` line 109: `docs/` has no nested `.git`; `cd docs` misframes it as a standalone repo and `-A` stages the whole tree. Triage: run git from the repo root (`git add docs && git commit && git push`); optionally note `/docs` is part of the main repo, not a submodule. (low / Stale-inaccurate)
+- **Zingarelli does NOT auto-download** — `README.md` line 120: `'All are public domain OCR from Internet Archive, downloaded automatically on first use.'` True for Edgren/Hoare (both have `download_*()` fetchers) but `adjudicate.py` reads Zingarelli chunks only from disk with no fallback. Triage: qualify that Edgren/Hoare auto-download; the Zingarelli chunks are committed. (low / Stale-inaccurate)
+- **Pipeline step count: 9 vs 11** — `CLAUDE.md` line 20 headline says "11-step pipeline" while the table numbers top out at 9 (5b/7b as sub-steps). `pipeline.py` STEPS = 11 real steps, so "11" is defensible; the residual is a headline-vs-table numbering inconsistency. Triage: pick one convention ("9-step pipeline plus sub-steps 5b/7b" or number the table 1..11) and mirror in README line 11. (low / needs_nuance — the prior "10-step"/"9 vs 11" framing is itself stale)
