@@ -1,6 +1,14 @@
 # 1913 Italian Typography — OCR Normalization Reference
 
-Context: These are verified concerns for OCR cleanup of early 20th-century Italian printed books. Use this as a reference when building or refining punctuation/normalization passes in the Athanor pipeline.
+Context: These are verified concerns for OCR cleanup of early 20th-century Italian printed books. Use this as general background when building or refining punctuation/normalization passes in the Per la Libertà cleanup pipeline (`cleanup.py`).
+
+> **Status — inherited/general reference, not an implementation spec.** This file
+> is language-level background, not a description of what `cleanup.py` actually
+> does. It omits the repo's *dominant* OCR-confusion class — the Bodoni/Didone
+> `i↔r` and `e↔i` boundary substitutions handled in `cleanup.py` (see CLAUDE.md →
+> Dehyphenation) — while elevating f-ligature misreads. The Section 6 watchpoints
+> (circumflex ii-contraction, long-s, thin spaces before punctuation) are **not**
+> wired into `cleanup.py`. Verify each rule against the code before relying on it.
 
 ---
 

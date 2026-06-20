@@ -20,9 +20,10 @@ STEPS = [
 ]
 
 # Steps that overwrite committed, hand-tuned text. The local LLM-cleanup cache
-# (state/llm_cleaned/) holds only 31 of 58 chapters and some entries are stale,
-# so re-running these regenerates output/*.md and state/translations/ from
-# degraded inputs. They are complete; regenerating is a rare, deliberate act
+# (state/llm_cleaned/) is transient and gitignored; it is currently absent (the
+# former contents are parked in state/_llm_cleaned.stale-2026-04-03/), so
+# re-running these regenerates output/*.md and state/translations/ from scratch
+# or degraded inputs. They are complete; regenerating is a rare, deliberate act
 # that must never happen unattended (agents, CI, the auto-mode overseer).
 REGEN_STEPS = {"cleanup", "translate"}
 
@@ -40,10 +41,10 @@ def _require_human_regen_consent(step: str) -> None:
         "============================================================\n"
         f"  REFUSING --step {step}: this OVERWRITES committed text.\n"
         "------------------------------------------------------------\n"
-        "  The local LLM-cleanup cache is incomplete (31/58) and\n"
-        "  partly stale. Regenerating DEGRADES output/*.md and\n"
-        "  state/translations/. These steps are done -- to typeset,\n"
-        "  use --step typeset only.\n"
+        "  The local LLM-cleanup cache is absent (its former\n"
+        "  contents are parked aside, gitignored). Regenerating\n"
+        "  DEGRADES output/*.md and state/translations/. These\n"
+        "  steps are done -- to typeset, use --step typeset only.\n"
         "============================================================\n"
     )
     print(banner, file=sys.stderr)
@@ -101,7 +102,12 @@ def main():
     )
     parser.add_argument(
         "--chapter",
-        help="Run reconcile/cleanup on specific chapters, comma-separated (e.g. p1_ch01,p1_ch02)",
+        help=(
+            "Scope to specific chapters, comma-separated; accepts short (p1_ch01) "
+            "or long (p1_capitolo_primo) ids. Honored by reconcile, cleanup, "
+            "--multi-model translate, and refine; the single-model translate path "
+            "ignores it."
+        ),
     )
     parser.add_argument(
         "--skip-ocr",

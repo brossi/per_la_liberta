@@ -51,7 +51,7 @@ Runs twice: once with Gemini Flash (fast page mapping), once with Gemini Pro (qu
 
 ### 3a. Preprocessing
 
-1. Load all three raw texts
+1. Load Copy 1 and Copy 2 (required); load Copy 3 if present (prefer `copy3_raw.txt`, fall back to `copy3_flash.txt`) — otherwise run in 2-way mode
 2. Strip boilerplate (cover pages, title pages) from each copy
 3. Collapse multiple spaces
 4. Split each copy into chapters by heading detection
@@ -69,7 +69,7 @@ For each chapter (58 total):
 3. **Word-level reconciliation:** For each aligned paragraph:
    - If 3 copies available: `reconcile_words_3way()` — majority vote with `score_word()` tiebreaking
    - If 2 copies: `reconcile_words()` — score-based selection
-   - Word scoring: penalizes `*` (-10), brackets (-8), mid-word caps (-4); rewards accents (+5), all-alpha (+2)
+   - Word scoring: penalizes `*` (-10), brackets (-8), inner non-letter chars (-5), mid-word caps (-4), doubled `ii` (-3); rewards accents (+5), all-alpha (+2)
    - Disagreements within 2 score points → flagged for triage
 4. **Near-duplicate filtering:** `_is_near_duplicate()` via rapidfuzz (threshold 75%) removes paragraphs that appear in both copies due to alignment drift
 5. **Incremental save** after each chapter (allows resume)
@@ -78,9 +78,9 @@ For each chapter (58 total):
 
 1. Write `data/reconciled_chapters.json` — structured JSON: `{id, title, part, text}`
 2. Write `data/flagged_segments.json` — word-level disagreements for triage
-3. Build `data/chapter_pages.json` — chapter → PDF page number mapping from Copy 3 page markers
+3. Build `data/chapter_pages.json` — chapter → PDF page number mapping from Copy 3 page markers (**only in 3-way mode**, when Copy 3 is present and has page markers; not produced in 2-way mode)
 
-**Outputs:** `data/reconciled_chapters.json`, `data/flagged_segments.json`, `data/chapter_pages.json`
+**Outputs:** `data/reconciled_chapters.json`, `data/flagged_segments.json`, `data/chapter_pages.json` (the last only in 3-way mode)
 
 ---
 
@@ -165,7 +165,7 @@ For each chapter (58 total):
 3. Merge new corrections into `data/corrections.json`
 4. Write `data/review_flags.json` (unresolved items for adjudication)
 
-**Outputs:** `output/italian_clean.md`, `data/review_flags.json`, `data/corrections.json`, `state/llm_cleaned/*.txt`
+**Outputs:** `output/italian_clean.md`, `data/review_flags.json`, `data/corrections.json`, `state/llm_cleaned/*.txt`, and `data/review_flags_remaining.json` (the `*.txt` cache and the remaining-flags file appear only with `--llm-cleanup`; `reconcile_flags()` runs after cleanup to write the remaining flags)
 
 ---
 
@@ -175,7 +175,7 @@ For each chapter (58 total):
 
 For each flagged token from step 5:
 
-1. **Noise detection** — skip tokens with <3 alphabetic chars
+1. **Noise detection** — skip tokens with <3 alphabetic chars, or tokens longer than 3 chars whose alphabetic/length ratio is below 0.5
 2. **NER check** — if both hyphen parts are capitalized and not in Zingarelli → classify as proper noun
 3. **Compound check** — if both parts found in Zingarelli (≥4 chars each) → classify as valid compound
 4. **Correction attempt** — try dehyphenation passes against Zingarelli: simple join, OCR substitutions, boundary char fixes
@@ -221,10 +221,10 @@ For each chapter not already completed:
 2. **If `--with-edgren`:** extract content words → batch lookup in Edgren 1901 dictionary → format as context block
 3. Send to Claude Sonnet 4.6:
    - Extended thinking enabled (default 4096 token budget)
-   - System prompt: Loeb-style translation, preserve paragraph structure, italicize untranslatable Italian
+   - System prompt: Loeb-style translation, preserve paragraph structure; render untranslatable Italian in markdown italics (literal `*asterisks*`, so typeset's `*`→`<em>` conversion works) with a brief inline gloss only if needed
    - User message: Italian text + Edgren context (if enabled)
 4. Reinsert page markers at top of translated text
-5. Save to `state/translations/{chapter_id}.md`
+5. Save to `state/translations/{chapter_id}.md` (the long `parse_italian_markdown` id, e.g. `p1_capitolo_primo` — distinct from the short `p1_ch18` ids `state/llm_cleaned/` and `chapter_pages.json` use; see CLAUDE.md)
 6. **Truncation detection:** flag if `stop_reason == "max_tokens"` or output < 30% of input length
 7. Update `state/translation_progress.json`
 
@@ -243,9 +243,11 @@ If `--workers > 1`: translate chapters in parallel via ThreadPoolExecutor.
 
 `--step translate` runs the single-model path above by default. With `--multi-model` it instead runs a three-phase synthesis (this is the path that produced the live edition, April 2026):
 
-1. **Draft** (parallel) — translate each chapter independently with multiple models (`--draft-models`, default Claude Sonnet 4.6 + Gemini Pro, optionally GPT) via the `providers.py` abstraction; page markers stripped first.
-2. **Evaluate** (parallel) — score each draft on six literary dimensions (tone, cultural context, accuracy, literary quality, grammar, consistency).
-3. **Synthesize** (sequential, for continuity) — Claude Opus assembles one final translation per chapter from a single synthesis brief (source + scored drafts + Edgren + narrative context + previous chapter), writing `provenance.json` (what was incorporated from where) and `synthesis_integrity.json` (deterministic omission guard: dropped carry-overs, missing ALL-CAPS names, gross shrinkage).
+1. **Draft** (parallel) — translate each chapter independently with multiple models (`--draft-models`, default Claude Sonnet 4.6 + Gemini Pro [`gemini-2.5-pro`], optionally GPT [`gpt-4o`]) via the `providers.py` abstraction; page markers stripped first.
+2. **Evaluate** (parallel) — `gemini-2.5-flash` scores each draft on six literary dimensions (tone, cultural context, accuracy, literary quality, grammar, consistency).
+3. **Synthesize** (sequential, for continuity) — Claude Opus assembles one final translation per chapter from a single synthesis brief (source + scored drafts + Edgren + narrative context + previous chapter), writing `provenance.json` (what was incorporated from where) and `synthesis_integrity.json` (deterministic omission guard: dropped carry-overs, missing ALL-CAPS names, gross shrinkage). Synthesis shells out to the **`claude` Claude Code CLI** (`claude -p … --model opus` — the CLI alias, not an API model id; `--synth-model sonnet` switches it); the CLI must be installed and authenticated on PATH, separate from `ANTHROPIC_API_KEY`.
+
+These build-path model ids (`gemini-2.5-pro`, `gemini-2.5-flash`, `gpt-4o`, CLI `opus`) are an earlier generation than the review-phase models named in `REVIEW.md`.
 
 **Working state:** `state/multi_drafts/{ch}/` (drafts, evals, brief, provenance, integrity). **Resume:** `state/multi_translate_progress.json`. **Final output:** `state/translations/*.md` → assembled into `output/english_translation.md` (same as the single-model path).
 
@@ -286,6 +288,8 @@ Manual-only step (never runs as part of `--step all`).
 
 **Entry:** `typeset(output_dir, state_dir, site_base)`
 
+`site_base` is supplied via `--site-base` (or `--local`, which sets `http://localhost:8000`); it controls only the QR/scan deep-link base URL. A missing `output/english_translation.md` is **not** an error — typeset warns and emits an Italian-only edition (the Italian markdown is passed in place of the English).
+
 ### 8a. Parse and align
 
 1. Parse Italian markdown → list of chapters with `{title, level, page_range, paragraphs}`
@@ -293,6 +297,7 @@ Manual-only step (never runs as part of `--step all`).
 3. Align Italian/English chapter pairs by position
 4. Load revision change metadata (for marginalia)
 5. Load source pages mapping (for page citations)
+6. Load `data/typography.json` via `typography.py` — the scan-verified sidecar that restores OCR-flattened italic/bold/small-caps/verse
 
 ### 8b. Generate HTML
 
@@ -310,6 +315,7 @@ Manual-only step (never runs as part of `--step all`).
      - Clickable "Source pp. X–Y" link (opens scan overlay)
      - QR icon button (opens centered viewport dialog with scannable QR code)
      - QR encodes URL to standalone scan viewer (`scan.html#START-END`)
+   - **Restored typography:** apply the `typography.json` sidecar per parsed paragraph to **both** languages (`apply_typography`), rendering italic→`<em>`, bold→`<strong>` (via `⟦b⟧`), and small-caps/verse via `⟦sc⟧`/`⟦verse⟧` sentinels → `<span class="sc">`/`<span class="verse">`; any sidecar fragment that matches nowhere is logged
    - **Italian paragraphs:** verso column, markdown italics → `<em>`
    - **English paragraphs:** recto column, with revision marginalia:
      - For each revision change: wrap changed text in `<span class="revised">`, add `<span class="marginalia">` with old text + reason
@@ -332,10 +338,10 @@ Generate `scan.html` — standalone page for QR code targets:
 
 ### 8d. Docs sync
 
-Copy to `docs/` for GitHub Pages deployment:
-- `output/bilingual.html` → `docs/index.html` (fix CSS path)
+Auto-syncs to `docs/` for GitHub Pages on every run, with relative-path rewrites a plain `cp` would omit:
+- `output/bilingual.html` → `docs/index.html` — rewrites the stylesheet href (`../static/bilingual.css` → `static/bilingual.css`) and the page-image path (`../docs/assets/page_images` → `assets/page_images`)
 - `output/scan.html` → `docs/scan.html`
-- `static/bilingual.css` → `docs/static/bilingual.css`
+- `static/bilingual.css` → `docs/static/bilingual.css` — rewrites font asset paths (`../docs/assets/` → `../assets/`)
 
 **Outputs:** `output/bilingual.html`, `output/scan.html`, `docs/index.html`, `docs/scan.html`, `docs/static/bilingual.css`
 
@@ -350,13 +356,14 @@ Pure HTML renderer, **no model calls**. The hand-authored `output/companion/*.md
 1. Render each `output/companion/*.md` → `docs/companion/*.html`, sharing the edition's CSS/theme
 2. Linkify chapter citations (deep-link into `docs/index.html#ch-…`), source URLs (Wikipedia/Britannica/etc.), and auto-link person names
 3. Wrap the summary page's H3/H4 outline into nested `<details>` disclosures
-4. Mirror `output/companion/images/` → `docs/companion/images/`
-5. Auto-generate `docs/companion/sources/index.html` from the transcribed primary sources
-6. Emit two Phase-2 indexes: `data/companion_entity_index.json` (personae + glossary, with anchors + chapter citations) and `data/companion_citation_map.json` (part:chapter → anchor + page ranges)
-7. Validate that every chapter-citation anchor exists in the edition and every internal cross-link resolves
+4. Mirror **every** non-markdown asset under `output/companion/` (images, etc.) → `docs/companion/`, preserving the tree
+5. Sync `docs/static/bilingual.css` (with the `../docs/assets/` → `../assets/` font-path rewrite) so the companion pages share the edition stylesheet
+6. Auto-generate `docs/companion/sources/index.html` from the transcribed primary sources
+7. Emit two Phase-2 indexes: `data/companion_entity_index.json` (personae + glossary, with anchors + chapter citations) and `data/companion_citation_map.json` (part:chapter → anchor + page ranges)
+8. Validate that every chapter-citation anchor exists in the edition and every internal cross-link resolves
 
 `--check-links` runs an on-demand, network-bound probe of external links (not part of the build).
 
-**Outputs:** `docs/companion/*.html`, `docs/companion/sources/index.html`, `docs/companion/images/*`, `data/companion_entity_index.json`, `data/companion_citation_map.json`
+**Outputs:** `docs/companion/*.html`, `docs/companion/sources/index.html`, mirrored `docs/companion/` assets, `docs/static/bilingual.css`, `data/companion_entity_index.json`, `data/companion_citation_map.json`
 
 > Phase 2 (in-text entity popovers + per-chapter orientation drawers) is pending; the indexes above are the hook. See `REVIEW.md`.

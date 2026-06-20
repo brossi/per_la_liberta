@@ -227,9 +227,9 @@ class GeminiProvider:
 
 
 class OpenAIProvider:
-    """GPT-4o via the OpenAI Chat Completions API.
+    """GPT models via the OpenAI Chat Completions API (default gpt-4o).
 
-    Requires the `openai` package (install via: uv sync --extra multi-translate).
+    The `openai` package is a base dependency, installed by `uv sync`.
     """
 
     def __init__(
@@ -241,8 +241,8 @@ class OpenAIProvider:
             import openai
         except ImportError:
             raise ImportError(
-                "OpenAI provider requires the openai package. "
-                "Install with: uv sync --extra multi-translate"
+                "OpenAI provider requires the openai package "
+                "(a base dependency). Install with: uv sync"
             )
 
         self.name = f"gpt ({model})"

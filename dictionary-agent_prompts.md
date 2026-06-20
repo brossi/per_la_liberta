@@ -1,5 +1,16 @@
 # Agent Prompts: Vintage Italian Book Digitization Pipeline
 
+> **⚠️ Superseded design sketch — not the shipped pipeline.** This is an early,
+> pre-implementation planning brief written for a *two-witness* design. The built
+> *Per la Libertà* pipeline diverges from it in most specifics: it reconciles
+> **three** OCR witnesses (`reconcile.py`), aligns with `difflib.SequenceMatcher` +
+> `rapidfuzz` (not diff-match-patch / minineedle / collatex / unidecode), corrects
+> with `symspellpy`, lemmatizes with **`it_core_news_lg`** (not `it_core_news_sm`),
+> uses the three-dictionary oracle (Zingarelli 1922 / Edgren 1901 / Hoare 1915, not
+> Edgren alone), and resolves witness disagreements at the triage stage rather than
+> via inline `<ed1>/<ed2>` tags. See `CLAUDE.md` and `PIPELINE.md` for the actual
+> 11-step architecture. Kept for provenance; do not treat as current guidance.
+
 ---
 
 ## Prompt 1: OCR Text Reconciliation
