@@ -32,7 +32,7 @@
     {
       "name": "word_quality",
       "passed": true,
-      "total_flagged": 444,
+      "total_flagged": 448,
       "high_severity": 0,
       "by_chapter": {
         "Prefazione": [
@@ -702,6 +702,13 @@
               "not in dictionary"
             ],
             "context": "fu da noi palpata, contata e ricontata appunto a Perpignano, ci avev"
+          },
+          {
+            "word": "odiandosi",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "to più se, un giorno, pur non odiandosi, si sono trovati di fronte."
           },
           {
             "word": "internarci",
@@ -1787,6 +1794,13 @@
             "context": "o era socchiuso; avrei potuto serrarlo dall'interno, col catenaccio."
           },
           {
+            "word": "candellieri",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ino tanto energicamente che i candellieri ne traballarono."
+          },
+          {
             "word": "chiesuola",
             "reasons": [
               "not in dictionary"
@@ -1890,6 +1904,13 @@
               "not in dictionary"
             ],
             "context": "gne d'Argent, si mangiava per decurie. Il capo riceveva in consegna"
+          },
+          {
+            "word": "compartiva",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "lazione degli ufficiali, e le compartiva, su una specie di tavola, nel"
           },
           {
             "word": "informatosi",
@@ -2074,6 +2095,13 @@
               "not in dictionary"
             ],
             "context": "gne d'Argent, si mangiava per decurie. Il capo riceveva in consegna"
+          },
+          {
+            "word": "compartiva",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "lazione degli ufficiali, e le compartiva, su una specie di tavola, nel"
           },
           {
             "word": "affaticandosi",
@@ -3238,7 +3266,7 @@
         "Capitolo Decimottavo: 8 flagged",
         "Capitolo Dodicesimo: 7 flagged",
         "Capitolo Nono: 16 flagged",
-        "Capitolo Ottavo: 18 flagged",
+        "Capitolo Ottavo: 19 flagged",
         "Capitolo Primo: 15 flagged",
         "Capitolo Quarto: 5 flagged",
         "Capitolo Quattordicesimo: 9 flagged",
@@ -3258,10 +3286,10 @@
         "Capitolo Ventesimo: 15 flagged",
         "Capitolo Ventesimo Nono: 6 flagged",
         "Capitolo Ventesimo Ottavo: 13 flagged",
-        "Capitolo Ventesimo Primo: 30 flagged",
+        "Capitolo Ventesimo Primo: 32 flagged",
         "Capitolo Ventesimo Quarto: 5 flagged",
         "Capitolo Ventesimo Quinto: 7 flagged",
-        "Capitolo Ventesimo Secondo: 23 flagged",
+        "Capitolo Ventesimo Secondo: 24 flagged",
         "Capitolo Ventesimo Sesto: 4 flagged",
         "Capitolo Ventesimo Settimo: 11 flagged",
         "Capitolo Ventesimo Terzo: 5 flagged",
@@ -3270,14 +3298,14 @@
         "Prefazione: 1 flagged"
       ],
       "issues": [
-        "444 total unique flagged words across 41 chapters"
+        "448 total unique flagged words across 41 chapters"
       ]
     },
     {
       "name": "word_count_preservation",
       "passed": true,
       "reconciled_words": 136452,
-      "cleaned_words": 119972,
+      "cleaned_words": 119971,
       "retention_pct": 87.9,
       "issues": []
     }

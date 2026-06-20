@@ -534,7 +534,7 @@ Poco dopo, uscimmo di soppiatto dalla casa Giacometti. Eravamo in dodici. Strisc
 
 Ritornai ultimo alla casa Giacometti... quattro dei nostri non tornarono più. E mentre narro ai commilitoni in qual modo me la fossi cavata, v'ha chi grida: "Gesù... che puzza!" Avevo la manica dell'uniforme tutta impiastricciata di cervello francese.
 
-Il 8 Giugno fu giornata torrida... Stetti qualche secondo in silenzio, pensando alla triste trasformazione subita, in breve ora, dal sublime organo del pensiero umano, sotto i baci dello splendido sole di Roma!
+Il 3 Giugno fu giornata torrida... Stetti qualche secondo in silenzio, pensando alla triste trasformazione subita, in breve ora, dal sublime organo del pensiero umano, sotto i baci dello splendido sole di Roma!
 
 
 ### Capitolo Settimo
@@ -654,7 +654,7 @@ E mi abbracciava.
 
 Nella sala... silenzio profondo. Mi sentii sospinto, con amorevole violenza, verso il gruppo degli ufficiali.
 
-— Vi voglio presentare ai miei commilitoni. La destra del soldato francese stringe sempre cordialmente quella dei valorosi tanto più se, un giorno, pur non odiandomi, si sono trovati di fronte.
+— Vi voglio presentare ai miei commilitoni. La destra del soldato francese stringe sempre cordialmente quella dei valorosi tanto più se, un giorno, pur non odiandosi, si sono trovati di fronte.
 
 Era il mio prigioniero della villa Corsini, l'ufficiale a cui avevo scongiurato un salto mortale nel Tevere. Quella sera, cenammo lietamente in quartiere. E poiché conversando, palesammo il nostro proposito di internarci nel territorio della Repubblica, si volle che, onorati come ospiti, accompagnassimo il Reggimento, che era il 10mo Fanteria Leggera, sino a Marsiglia, ove si recava per imbarcarsi alla volta dell'Africa.
 
@@ -786,9 +786,9 @@ Egli se la piglia — vedete un po' la giustizia del mondo! — col cavallo, che
 
 Mezz'ora dopo, egli si coricava per poter ripartire per tempo. Io e il Trolli uscimmo all'aperto. Riscaldati di dentro e di fuori, affrontammo nuovamente le tenebre della campagna e quelle ancora più dense dell'ignoto.
 
-La nostra Società sovversiva avvolgeva l'intera Francia in una rete le cui file si riannodavano anche a Troy, così che non ci riuscì difficile lo stringervi conoscenze e l'ottenere un passaggio, sulla diligenza, sino a Langres, la località, ove le maglie, ricongiungendosi, formavano il nodo successivo.
+La nostra Società sovversiva avvolgeva l'intera Francia in una rete le cui file si riannodavano anche a Troy, così che non ci riuscì difficile lo stringervi conoscenze e l'ottenere un passaggio, sulla diligenza, sino a Langre, la località, ove le maglie, ricongiungendosi, formavano il nodo successivo.
 
-I cavalli scalpitavano ancora sotto l'atrio dell'albergo di Langres e già mi avviavo frettolosamente all'abitazione dell'Ufficiale Postale. Una commendatizia, pochi segni convenzionali ed egli ci avrebbe procurato i mezzi di proseguire il viaggio. Tirai il campanello e subito apparve sulla soglia una signora d'età incerta, ma non priva di bellezza.
+I cavalli scalpitavano ancora sotto l'atrio dell'albergo di Langre e già mi avviavo frettolosamente all'abitazione dell'Ufficiale Postale. Una commendatizia, pochi segni convenzionali ed egli ci avrebbe procurato i mezzi di proseguire il viaggio. Tirai il campanello e subito apparve sulla soglia una signora d'età incerta, ma non priva di bellezza.
 
 — Mio marito non è in casa, né so quando sarà di ritorno.
 
@@ -1727,7 +1727,7 @@ Mi separai dai gendarmi, con grandi strette di mano; ma, giunto appena nel corri
 
 Erano molte notti che non mi coricavo lungo, disteso, su un materasso soffice, con una buona coperta sulle gambe. Quando mi risvegliai il sole, già alto sull'orizzonte, mi batteva in pieno viso.
 
-Maledetta l'ostessa! Scesi coll'animo in tumulto e l'orecchio intento.... l'albergo sembrava deserto. Ond'io, concentrata la rabbia nella nocca delle dita, picchiai sul tavolino tanto energicamente che i candelieri ne traballarono.
+Maledetta l'ostessa! Scesi coll'animo in tumulto e l'orecchio intento.... l'albergo sembrava deserto. Ond'io, concentrata la rabbia nella nocca delle dita, picchiai sul tavolino tanto energicamente che i candellieri ne traballarono.
 
 Ed ecco la vecchia padrona sbucare dalla cucina, col viso incorniciato nella sua cuffia. Era linda, vestita a festa. Al vedermi, rimase sui due piedi, colla bocca spalancata. Si lasciò aggredire da una tempesta di rimbrotti; poi, con tutta calma: "Gran Dio! di chi la colpa? La chiave della vostra camera era lì sul gancio ed io ne ho concluso che già eravate in viaggio per la montagna. Se non mi credete, domandatelo ai vostri due amici di ieri sera. Sono capitati qui appunto attorno alle quattro. Volevano parlarvi." — "Scusatemi, me ne dispiace. Ho detto loro che eravate già lontano... alla montagna." — "Sono venuti per parlarmi? Preparate una buona colazione per tre. Li vado a cercare."
 
@@ -1798,7 +1798,7 @@ Si affermava, ai miei tempi, che il Calvi venisse pregato a sollecitare quella s
 
 Ma leggenda certo non è l'atteggiamento dignitoso col quale affrontò la morte. Mosse incontro al patibolo come a meta prevista sin dall'inizio della sua eroica lotta coll'oppressore e parve che, avvezzo da lunghi anni a meditare gli orrori, il suo animo ne fosse diventato refrattario.
 
-Passato il ponte di San Giorgio, sporse il capo dalla carrozza funebre e contemplò, con sguardo triste, la città e la campagna. Credo fermamente che egli, amante del "più vero e maggiore", si rammaricasse, in quel momento, di non aver potuto realizzare l'anelito della sua vita. Su quelle terre non vide inalberati i colori santi della redenzione; non vide, sparsi pei colti e lietamente affaccendati, uomini liberi.
+Passato il ponte di San Giorgio, sporse il capo dalla carrozza funebre e contemplò, con sguardo triste, la città e la campagna. Credo fermamente che egli, Argante "più vero e maggiore", si rammaricasse, in quel momento, di non aver potuto realizzare l'anelito della sua vita. Su quelle terre non vide inalberati i colori santi della redenzione; non vide, sparsi pei colti e lietamente affaccendati, uomini liberi.
 
 Si ritrasse e ritornò alle profonde meditazioni dell'oltre tomba che egli, malgrado lo strascico lasciatogli nell'animo da scuole sinistramente reazionarie, si era sempre figurato ellenicamente sereno.
 
@@ -2201,7 +2201,7 @@ E tra quelle figure moderne passano, ora miti e sorridenti, ora corruschi di luc
 
 Tuttavia nella mente, fatta come turgida da quel vasto intreccio, sorgono, ad ora ad ora, due figure semplici e sorridenti che lo agitano più profondamente del genio; che disvogliano d'ogni fregio imperatori e pontefici, che li ricacciano nella loro volgarità. Esse gli appariscono costantemente adorne di rose, il bel fiore emblema della sua famiglia ed un senso di sereno lo pervade e resta: un senso che attenua il lezzo delle orgie vaticane; che toglie orrore alle maledizioni che, da ogni lembo d'Italia, da ogni lembo d'Europa, si levarono mai sempre contro i ladroni che trafficarono la Patria, l'umanità, il Cristo.
 
-Il Conte di Rudio ora non le discute più; esse sono diventate come parte di lui stesso. Non già che le sue idee siano, a questo proposito, nette e ben determinate. L'amore, non dimentico delle usate arti, dissimula tuttora la propria vigoria al riparo di altri affetti più anticamente radicati ed in pieno sviluppo. Ma egli è persuaso, ormai, d'aver trovato sul suo sentiero il bello, il buono, il casto stupendamente incarnati. Vederle, assorbirne le irradiazioni, elevarsi... sentirsi meno infelice! Egli si abbandonò alla nuovissima sensazione senz'alcun sospetto. Quando la bufera rivoluzionaria lo riprenderà, la festa del sentimento verrà bruscamente troncata; ma egli porterà nei cimenti maggior tesoro di care rimembranze: i nobili affetti prestano l'ali a raggiungere le ardue vette!
+Il Conte di Rudio ora non le discute più; esse sono diventate come parte di lui stesso. Non già che le sue idee siano, a questo proposito, nette e ben determinate. L'amore, non dimentico delle usate arti, dissimula tuttora la propria vigoria al riparo di altri affetti più anticamente radicati ed in pieno sviluppo. Ma egli è persuaso, ormai, d'aver trovato sul suo sentiero il bello, il buono, il casto stupendamente incarnati. Vederle, assorbirne le irradiazioni, elevarsi... sentirsi meno infelice! Egli si abbandonò alla nuovissima sensazione senz'alcun sospetto. Quando la bufera rivoluzionaria lo riprenderà, la festa del sentimento verrà bruscamente troncata; ma egli porterà nei cimenti maggior tesoro di care rimembranze: i nobili affetti prestano l'ali a raggiugere le ardue vette!
 
 Ed anela, con ansietà sempre più intensa, il giorno in cui, ottenuto il compenso delle sue fatiche, potrà presentarsi a fronte alta alla signora Mancherini, pagare da galantuomo i propri debiti, riprendere il corso delle interrotte lezioni; abbeverarsi nuovamente a quel bello, a quel buono, a quel casto, cattivando sempre più le sue giovani amiche al culto dei martiri e degli eroi!
 
@@ -3041,7 +3041,7 @@ Il resoconto ufficiale afferma che, contrariamente ai miei tre compagni, unanimi
 
 L'abboccamento di Francesco Crispi coll'Orsini? Mentirei se dicessi che non l'ho negato. Ma bisogna rammentare che l'Orsini stesso aveva, pochi secondi prima dichiarato non essere l'Italiano dalla terza bomba conosciuto dai suoi complici, neppure dal Pieri; che egli non ne aveva rivelato l'esistenza ad alcuno; che nessuno di noi non lo aveva sospettato.
 
-Non era questo un suggerirmi, quasi apertamente, la mia linea di condotta? E non era, d'altronde, nel mio diniego, il mezzo più spiccio per evitare interrogazioni subdole e raggiri che avrebbero potuto compromettere un uomo rimasto insospettato e libero?
+Non era questo un suggerirmi, quasi apertamente, la mia linea di condotta? E non era, d'altronde, quel mio diniego, il mezzo più spiccio per evitare interrogazioni subdole e raggiri che avrebbero potuto compromettere un uomo rimasto insospettato e libero?
 
 Se i ciurmadori dell'Impero non avessero sentito nell'animo lo spavento della verità, non avrebbero imposto ai giornali di attenersi strettamente, nei loro resoconti, a quanto pubblicavano Le Droit e La Gazzetta dei Tribunali. Non è più verità la verità dimezzata e la ragion di Stato che non si perita di adulterarla assottigliandola, non può trattenersi per scrupoli quando giovi l'ornarla come una baldracca, o il soppannarle la veste con qualche menzognetta tendenziosa.
 
@@ -3393,7 +3393,7 @@ Anche in questo caso, la mia buona stella, più che la mia saggezza, mi venne in
 
 Il penitenziario riceveva le sue provvigioni di carne fresca dal Brasile. A periodi, più o meno fissi, arrivava un veliero con un carico di bestie bovine. La spiaggia, che moriva gradatamente nell'Oceano, non gli concedeva profondità sufficiente ad ormeggiare presso la terra ferma, così che l'ancora veniva gettata al largo, ad una distanza di circa tre miglia. Il guardiano sceglieva allora un galeotto ogni decuria e ne formava una squadra speciale che recavasi penosamente, coll'acqua oltre la cintola, sin presso il veliero. I buoi selvatici, inferociti, venivano gettati a mare e gli uomini li sospingevano, con grandi urli e con grandi sferzate, sin entro uno stecconato, nel penitenziario.
 
-Incominciato quel lavoro, si procedeva, senz'interruzione, sino a scarico compiuto, saltando, all'uopo, anche qualche pasto. Alla Montagne d'Argent, si mangiava per decurie. Il capo riceveva in consegna le vettovaglie, assottigliate dalla sordida speculazione degli ufficiali, e le compariva, su una specie di tavola, nelle dieci gamelle. Ogni galeotto correva alla sua e si divorava, seduti su qualche gradino, o su un tronco d'albero, o sulla nuda terra. Nei giorni di scarico, al capo della decuria correva l'obbligo di custodire la razione del galeotto assente e di consegnargliela al suo ritorno.
+Incominciato quel lavoro, si procedeva, senz'interruzione, sino a scarico compiuto, saltando, all'uopo, anche qualche pasto. Alla Montagne d'Argent, si mangiava per decurie. Il capo riceveva in consegna le vettovaglie, assottigliate dalla sordida speculazione degli ufficiali, e le compartiva, su una specie di tavola, nelle dieci gamelle. Ogni galeotto correva alla sua e si divorava, seduti su qualche gradino, o su un tronco d'albero, o sulla nuda terra. Nei giorni di scarico, al capo della decuria correva l'obbligo di custodire la razione del galeotto assente e di consegnargliela al suo ritorno.
 
 Scelto a prestar mano a quel lavoro indiavolato, un giorno feci il mio ritorno definitivo alle otto della sera, quando la mia decuria già russava nelle amache. La fame, inasprita dalla incessante ginnastica, dal lungo bagno, dall'aspra brezza del mare, era diventata feroce. Scuoto il capo della decuria, sollevo un mezzo subbuglio, ed egli mostrandomi, invece della gamella, il pugno: "Tais toi, Italien de m..." (La parola di Cambronne).
 
@@ -3472,7 +3472,7 @@ Tutto questo non si poteva neppure iniziare senza l'aiuto di parecchi complici. 
 
 Anche in questo caso, la mia buona stella, più che la mia saggezza, mi venne in aiuto. Il penitenziario riceveva le sue provvigioni di carne fresca dal Brasile. A periodi, più o meno fissi, arrivava un veliero con un carico di bestie bovine. La spiaggia, che moriva gradatamente nell'Oceano, non gli concedeva profondità sufficiente ad ormeggiare presso la terra ferma, così che l'ancora veniva gettata al largo, ad una distanza di circa tre miglia. Il guardiano sceglieva allora un galeotto ogni decuria e ne formava una squadra speciale che recavasi penosamente, coll'acqua oltre la cintola, sin presso il veliero. I buoi selvatici, inferociti, venivano gettati a mare e gli uomini li sospingevano, con grandi urli e con grandi sferzate, sin entro uno stecconato, nel penitenziario.
 
-Incominciato quel lavoro, si procedeva, senz'interruzione, sino a scarico compiuto, saltando, all'uopo, anche qualche pasto. Alla Montagne d'Argent, si mangiava per decurie. Il capo riceveva in consegna le vettovaglie, assottigliate dalla sordida speculazione degli ufficiali, e le compariva, su una specie di tavola, nelle dieci gamelle. Ogni galeotto correva alla sua e si divorava, seduti su qualche gradino, o su un tronco d'albero, o sulla nuda terra. Nei giorni di scarico, al capo della decuria correva l'obbligo di custodire la razione del galeotto assente e di consegnargliela al suo ritorno.
+Incominciato quel lavoro, si procedeva, senz'interruzione, sino a scarico compiuto, saltando, all'uopo, anche qualche pasto. Alla Montagne d'Argent, si mangiava per decurie. Il capo riceveva in consegna le vettovaglie, assottigliate dalla sordida speculazione degli ufficiali, e le compartiva, su una specie di tavola, nelle dieci gamelle. Ogni galeotto correva alla sua e si divorava, seduti su qualche gradino, o su un tronco d'albero, o sulla nuda terra. Nei giorni di scarico, al capo della decuria correva l'obbligo di custodire la razione del galeotto assente e di consegnargliela al suo ritorno.
 
 Scelto a prestar mano a quel lavoro indiavolato, un giorno feci il mio ritorno definitivo alle otto della sera, quando la mia decuria già russava nelle amache. La fame, inasprita dalla incessante ginnastica, dal lungo bagno, dall'aspra brezza del mare, era diventata feroce. Scuoto il capo della decuria, sollevo un mezzo subbuglio, ed egli mostrandomi, invece della mella, il pugno: "Tais toi, Italien de m..." (La parola di Cambronne).
 
@@ -3606,7 +3606,7 @@ Una sera, uscito dall'officina, mi incamminavo verso la mia baracca, che ne dist
 
 Il Morbioli, canottiere a Roma, era addetto alla loro pulizia. Quante volte l'avevo visto affaccendarsi d'attorno a quei gingilli che erano il mio incubo! Ma ora soltanto, per una singolare disposizione del mio animo, quei suoi molli strofinamenti, che mi sapevano di carezza, suscitano una gran stizza e grido entro me stesso: "Sfondali, pisellone; fondali, se puoi!"
 
-Quella semplice parola "fondali!" mi guizzò nella mente a guisa di lampo che rischiari una notte tenebrosa. Fu tutta una rivelazione e n'ebbi i brividi.
+Quella semplice parola "sfondali!" mi guizzò nella mente a guisa di lampo che rischiari una notte tenebrosa. Fu tutta una rivelazione e n'ebbi i brividi.
 
 Mi avvicinai al Morbioli e credo che la mia faccia rivelasse il segreto sussulto, perchè, egli mi guardò con evidente inquietudine e disse: "Che cosa c'è di guasto!" — Morbioli, quand'io ero laggiù alla
 
@@ -4061,7 +4061,7 @@ Assuntasi la cacciata degli austriaci dal Ticino all'Adriatico per un compenso c
 
 Così il patto d'alleanza veniva stracciato sulla faccia stessa di Vittorio Emanuele II che, a maggiore insulto, non ebbe, nella discussione dell'armistizio e della pace che ne seguì, neppure un voto prò forma e consultivo.
 
-Quel mutamento di fronte, quella fede mancata, quella subitanea manifestazione del dispetto imperiale erano dovute alla piena conoscenza delle manovre di Napoleone, in parte confessate, in parte anche troppo, per sé stesse, palesi. Napoleone era sceso nella valle del Po per sostituire la propria all'influenza austriaca. Un Piemonte ingrandito, ma debole, ma senza difesa contro la prepotenza imperiale: un resto centrale retto da Plon-plon e vassallo della Francia; un Murat a Napoli; un'Italia ancora in pillole, sotto la Presidenza di Pio IX; il Papa protetto e fatto strumento dell'uomo a cui doveva lo scettro... era, in modo più o meno larvato, ma pur sempre sostanziale, la conquista dell'intera Penisola... le pagine più tristi della nostra Storia riattivate in pieno secolo decimonono!
+Quel mutamento di fronte, quella fede mancata, quella subitanea manifestazione del dispetto imperiale erano dovute alla piena conoscenza delle manovre di Napoleone, in parte confessate, in parte anche troppo, per sé stesse, palesi. Napoleone era sceso nella valle del Po per sostituire la propria all'influenza austriaca. Un Piemonte ingrandito, ma debole, ma senza difesa contro la prepotenza imperiale: un resto centrale retto da Plon-plon e vassallo della Francia; un Murat a Napoli; un'Italia ancora in pillole, sotto la Presidenzia di Pio IX; il Papa protetto e fatto strumento dell'uomo a cui doveva lo scettro... era, in modo più o meno larvato, ma pur sempre sostanziale, la conquista dell'intera Penisola... le pagine più tristi della nostra Storia riattivate in pieno secolo decimonono!
 
 Il patriottismo unitario dei Toscani, l'accortezza di Bettino Ricasoli, che ne fu il massimo esponente, irrisero il mercimonio che aveva fatto genero del Re il volgare Plon-plon e persuadendo quest'ultimo dell'inutilità d'ogni suo tentativo d'ingannare gli Italiani, toglieva dall'animo dei patrioti il nuovissimo incubo.
 

@@ -1981,8 +1981,8 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "PRINTED '3' is clearly a misprint for '8' given the context ('Il 8 Giugno'); the edition rightly corrected the numeral.",
+      "action": "restore",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -1996,6 +1996,11 @@
           "reason": "The article 'Il' proves the original number was '3'. Changing it to '8' creates the ungrammatical phrase 'Il 8' instead of 'L'8'."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Il 8 Giugno",
+        "new": "Il 3 Giugno"
       }
     },
     {
@@ -2445,7 +2450,7 @@
       "votes_published": 0,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'odiandosi' (reflexive, 3rd person) vs PUBLISHED 'odiandomi' (1st person). The sentence 'pur non odiandomi' makes grammatical sense with first person. 'odiandosi' is a valid word but changes meaning. This looks like a transcription misread of 'i' vs 'o'. The context suggests first person is correct, so PUBLISHED may be right — but PRINTED could also be correct with a different subject. Given the ambiguity and that both are valid words, this is uncertain.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -2459,6 +2464,11 @@
           "reason": "\"odiandosi\" makes perfect grammatical sense with the plural \"si sono trovati\"."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "pur non odiandomi,",
+        "new": "pur non odiandosi,"
       }
     },
     {
@@ -3169,8 +3179,8 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'Langre' is missing the final 's' of the correct French city name 'Langres'; a genuine 1913 misprint the edition rightly corrected.",
+      "action": "restore",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -3184,6 +3194,11 @@
           "reason": "\"Langre\" is the printed form, a valid Italianized or phonetic spelling of the French town \"Langres\"."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "sino a Langres, la località",
+        "new": "sino a Langre, la località"
       }
     },
     {
@@ -3208,8 +3223,8 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "Same as 116: 'Langre' is a misprint for 'Langres'.",
+      "action": "restore",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -3223,6 +3238,11 @@
           "reason": "Like the previous instance, \"Langre\" is what was printed and changing it to \"Langres\" is over-modernization."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "albergo di Langres e già",
+        "new": "albergo di Langre e già"
       }
     },
     {
@@ -8820,8 +8840,8 @@
       "votes_printed": 0,
       "votes_published": 1,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'candellieri' with double 'l' is a misspelling of standard 'candelieri'; not a recognised period variant, dict confirms published form correct.",
+      "action": "restore",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -8835,6 +8855,11 @@
           "reason": "\"candellieri\" is a typographical error (double 'l') for \"candelieri\"."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "i candelieri ne traballarono",
+        "new": "i candellieri ne traballarono"
       }
     },
     {
@@ -9184,7 +9209,7 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'Argante' is clearly a misread/mistranscription of 'amante del' — however PRINTED is ground truth from the scan. If the scan truly shows 'Argante', this would be a source_typo or OCR error in the edition. Most likely the printed page shows 'amante del' and the reported PRINTED value is wrong, making this uncertain.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -9198,6 +9223,11 @@
           "reason": "\"Argante\" is a valid literary reference (from Tasso) making perfect sense; the edition rewrote it improperly to \"amante del\"."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "egli, amante del ",
+        "new": "egli, Argante "
       }
     },
     {
@@ -10452,7 +10482,7 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'irriquietezza' appears to be a misprint of 'irrequietezza' (wrong vowel 'i' instead of 'e'). The edition correctly restored 'irrequietezza'.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: edition correct (page form is non-word typo / no real deviation)",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -10466,7 +10496,8 @@
           "reason": "\"irriquietezza\" is a legitimate period spelling and recognized phonetic variant that was common in early 20th-century Italian texts."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 382,
@@ -11421,8 +11452,8 @@
       "votes_printed": 0,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'Raggiugere' (missing 'n') is a misprint for 'raggiungere'; unrecognised in period dictionaries, clearly a typographical error.",
+      "action": "restore",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -11436,6 +11467,11 @@
           "reason": "'Raggiugere' is a typo missing the 'n' for 'raggiungere' (or 'raggiugnere')."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "a raggiungere le ardue vette",
+        "new": "a raggiugere le ardue vette"
       }
     },
     {
@@ -15594,7 +15630,7 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'quel' misread as 'nel'; 'non era in quel mio diniego' vs 'nel mio diniego' — both possible, but PRINTED 'quel' is the actual text.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -15608,6 +15644,11 @@
           "reason": "'quel mio diniego' makes perfect grammatical and semantic sense as the subject; the edition incorrectly altered it to 'nel'."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "d'altronde, nel mio diniego",
+        "new": "d'altronde, quel mio diniego"
       }
     },
     {
@@ -16647,7 +16688,7 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'indarmo' (with 'm') is unrecognised (dict=0) and is clearly a misprint for 'indarno' (dict=3); the edition rightly corrected it.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: edition correct (page form is non-word typo / no real deviation)",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -16661,7 +16702,8 @@
           "reason": "\"indarmo\" is a straightforward misprint for the word \"indarno\" (meaning \"in vain\"), resulting from confusing 'm' and 'n'."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 615,
@@ -17759,7 +17801,7 @@
       "votes_published": 2,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'compartiva' is a different word from 'compariva'; context ('compariva' = appeared) shows the edition corrected what looks like a typographical misread — but PRINTED could itself be a source typo. Given 'compariva' makes clear contextual sense and 'compartiva' does not, this is likely a source typo fixed by the edition.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -17773,6 +17815,11 @@
           "reason": "Context requires 'compariva' (appeared); 'compartiva' (divided/shared) is a typo caused by an extra 't'."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "e le compariva, su una specie",
+        "new": "e le compartiva, su una specie"
       }
     },
     {
@@ -18606,7 +18653,7 @@
       "votes_published": 1,
       "category": "misread",
       "action": "restore",
-      "reason": "Same as 686: 'sfondali!' is the word actually used in the internal dialogue; edition replaced it incorrectly.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -18620,6 +18667,11 @@
           "reason": "'sfondali!' (smash them!) is a valid imperative and fits the context of a sudden command perfectly well."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "semplice parola \"fondali!\" mi",
+        "new": "semplice parola \"sfondali!\" mi"
       }
     },
     {
@@ -18901,7 +18953,7 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'police' is a clear 1913 typesetting omission of a letter from 'pollice'; the edition rightly corrected it.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: edition correct (page form is non-word typo / no real deviation)",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -18915,7 +18967,8 @@
           "reason": "'police' is an older/dialectal spelling of 'pollice' derived from Latin 'pollex', attested in period dictionaries."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 699,
@@ -21073,8 +21126,8 @@
       "votes_printed": 0,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'Presidenzia' is not a recognised period form (dict 0); 'Presidenza' is correct Italian (dict 2). The 1913 setting has a typo.",
+      "action": "restore",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: page prints the restored form",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -21088,6 +21141,11 @@
           "reason": "'Presidenzia' is a valid archaic or variant spelling of 'presidenza', correct for the period. It should not be modernized."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "la Presidenza di Pio IX",
+        "new": "la Presidenzia di Pio IX"
       }
     },
     {
@@ -22424,7 +22482,7 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'chichessia' vs 'chicchessia' — the correct standard form is 'chicchessia'; 'chichessia' appears to be a period/typographical variant with one fewer 'c', but 'chicchessia' is the established spelling recognized by more dictionaries.",
+      "reason": "panel split resolved by native-res scan + 3-dict oracle: edition correct (page form is non-word typo / no real deviation)",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -22438,7 +22496,8 @@
           "reason": "PRINTED 'chichessia' is a valid historical/period spelling variant (without the doubled consonant) and should not be modernized."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 830,
