@@ -24,8 +24,3 @@ dependencies = [
     "symspellpy>=6.9.0",
 ]
 
-[project.optional-dependencies]
-multi-translate = [
-    "openai>=1.40.0",
-]
-
