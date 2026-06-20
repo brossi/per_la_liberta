@@ -1660,7 +1660,7 @@ body.companion {
 }
 .companion-next a:hover { border-bottom-color: var(--color-accent); }
 
-/* === Print / PDF (WeasyPrint paged media) === */
+/* === Print stylesheet === */
 @media print {
   /* Force the light palette on paper regardless of the screen theme selected. */
   :root, :root[data-theme] {

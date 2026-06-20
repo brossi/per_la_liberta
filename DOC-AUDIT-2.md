@@ -4,24 +4,24 @@
 
 ## Executive Summary
 
-64 findings.
+63 findings.
 
 By dimension:
 
 | Dimension | Count |
 |-----------|-------|
-| Stale / Inaccurate | 14 |
+| Stale / Inaccurate | 13 |
 | Gaps | 26 |
 | Ambiguity | 14 |
 | Tone | 4 |
-| Portability / Book-Specific | 9 (1 also tagged GENERALIZABLE-BUT-HARDCODED under stale — see note) |
+| Portability / Book-Specific | 9 |
 
 By severity:
 
 | Severity | Count |
 |----------|-------|
 | High | 14 |
-| Medium | 30 |
+| Medium | 29 |
 | Low | 20 |
 
 Notes on counting and merges:
@@ -79,13 +79,6 @@ Notes on counting and merges:
 - Triage: pick one accurate description (incomplete/empty, directory moved aside) and use it consistently in the regeneration-guard section, Current Status, and `pipeline.py:23`/`:43`. Note the cache is transient and gitignored.
 - Code evidence: `pipeline.py:22-24` comment; `pipeline.py:43` banner; `ls state/llm_cleaned/` absent; `state/_llm_cleaned.stale-2026-04-03/` = 31 files; `.gitignore:36-37`.
 - Portability tag on the `pipeline.py:23,43` filing: BOOK-DATA.
-
-**S-pdf — `CLAUDE.md:33, CLAUDE.md:215, CLAUDE.md:241; README.md:136` (PDF output)**
-- Verbatim: "**PDF**: WeasyPrint (HTML→PDF). Render per-chapter then merge for performance (not yet implemented — currently single-pass)." plus the table "HTML/PDF", File-Structure `bilingual.pdf`, and README "Bilingual HTML/PDF generation".
-- Problem: PDF generation is disabled in code; no `bilingual.pdf` is produced. "currently single-pass" implies it runs single-pass; it does not run at all. `PIPELINE.md` Step 8 Outputs already omits PDF, so the docs contradict each other.
-- Triage: mark PDF as not-currently-generated (disabled pending `DYLD_FALLBACK_LIBRARY_PATH`); drop `bilingual.pdf` from step-8 outputs or annotate as not produced; reword `CLAUDE.md:215` so it doesn't imply PDF runs.
-- Code evidence: `typeset.py:1614` disable comment + `generate_pdf()` call block (1616-1623) commented out; `ls output/` shows no `bilingual.pdf`; `PIPELINE.md:340` lists HTML/scan/css only.
-- Portability tag: GENERALIZABLE-BUT-HARDCODED (the `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` constant).
 
 **S-rev1 — `REVIEW.md:107` (`audit_divergences.py` output path)**
 - Verbatim: the table row listing Outputs as "`data/divergence_audit_candidates.json`, `state/audit/report.md`".
@@ -622,10 +615,10 @@ Generalizable mechanism shape, but the prompt text / rules / keywords are couple
 
 Portable mechanism with a transient/tuned constant baked in.
 
-**P-page-offset — `PIPELINE.md:309-312` (PDF_PAGE_OFFSET=6)**
+**P-page-offset — `PIPELINE.md:309-312` (`SCAN_LEAF_OFFSET=6`)**
 - Verbatim: 'Clickable "Source pp. X–Y" link (opens scan overlay)'.
-- Problem: the page-citation rendering silently depends on a hard-coded `PDF_PAGE_OFFSET=6` mapping this scan's PDF page numbers to printed page numbers. The offset is book/scan-specific (driven by this copy's front-matter length) and is not mentioned in the step description.
-- Triage: note the `PDF_PAGE_OFFSET=6` scan-to-printed-page constant in `typeset.py` is book-specific and governs the displayed page citations.
+- Problem: the page-citation rendering silently depends on a hard-coded `SCAN_LEAF_OFFSET=6` mapping this scan's leaf numbers to printed page numbers. The offset is book/scan-specific (driven by this copy's front-matter length) and is not mentioned in the step description.
+- Triage: note the `SCAN_LEAF_OFFSET=6` source-scan-to-printed-page constant in `typeset.py` is book-specific and governs the displayed page citations.
 - Code evidence: `typeset.py:17,888-890,404,1095` (offset reused).
 
 **P-vision-model — `REVIEW.md:39` (pinned vision model)**
@@ -646,5 +639,3 @@ Portable mechanism with a transient/tuned constant baked in.
 - Corrected claim: REVIEW.md is a review-phase run log documenting a panel that has already executed and whose outputs are committed; the model ids are material provenance for interpreting the panel's agreement/severity scores, not a reusable spec implying re-selection. The doc accurately matches the code, so this is at most a minor freshness caveat, not a documentation accuracy defect.
 - Triage: tag the panel-pattern as portable; treat the specific ids as recorded provenance (transient).
 - Code evidence: `comprehension.py:46,172/183/193/200`; `stage2.py:127,135`.
-
-*(The PDF disable finding (Stale §S-pdf) also carries a GENERALIZABLE-BUT-HARDCODED tag for its `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` constant.)*

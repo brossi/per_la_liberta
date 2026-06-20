@@ -11,11 +11,9 @@ Ground truth is the repo's `*.py` scripts and the on-disk file tree.
 
 ## Executive summary
 
-The dominant theme is **drift between the prose docs and the shipped code**: the PDF output is
-documented as a produced step-8 artifact but is commented out in `typeset.py`; the LLM-cleanup
-cache is described three different ways (populated / empty / 31-of-58) when it is empty on disk;
-and the PDF output is listed as a produced artifact though generation is disabled. (Note: an
-earlier draft of this summary claimed the typeface docs still name Bodoni — that is **incorrect**;
+The dominant theme is **drift between the prose docs and the shipped code**: the LLM-cleanup
+cache is described three different ways (populated / empty / 31-of-58) when it is empty on disk.
+(Note: an earlier draft of this summary claimed the typeface docs still name Bodoni — that is **incorrect**;
 CLAUDE.md was already corrected to Spectral/Fraunces in commit `b3f90fa`, and the lone remaining
 "Bodoni" mention correctly refers to the 1913 *source book's* type. See the struck §5 item.) A second
 cluster is **operational gaps**: required-but-gitignored source PDFs (LOC + Harvard), review-phase
@@ -36,13 +34,6 @@ the chief obstacle to reusing this pipeline on another work.
 ## 1. Stale / inaccurate
 
 ### High
-
-**PDF is documented as a produced step-8 output but generation is commented out**
-- `CLAUDE.md` — Build Pipeline Architecture table step 8 (line 33); File Structure `output/` (line 241); Typesetting section (line 215)
-- Claim: `Step 8 Typeset: 'Bilingual HTML/PDF with Loeb-style facing pages...'`; `'bilingual.pdf  # Bilingual print edition (step 8)'`; `'PDF: WeasyPrint (HTML→PDF). Render per-chapter then merge for performance (not yet implemented — currently single-pass).'`
-- Problem: PDF generation is disabled in `typeset.py` and no `output/bilingual.pdf` exists; the docs present PDF as a produced step-8 artifact and "currently single-pass" implies it runs.
-- Triage: Change step-8 "HTML/PDF" to "HTML"; annotate `output/bilingual.pdf` as disabled/not generated; rewrite the Typesetting bullet to state PDF generation is commented out (requires `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` for WeasyPrint) rather than "single-pass".
-- Verified: `typeset.py` PDF block (lines 1614-1623) is commented out, lead comment "PDF generation disabled — WeasyPrint requires DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib". `generate_pdf()` defined (line 1558) but never called. `ls output/` has no `bilingual.pdf`.
 
 **Current-Status claims the LLM-cleanup cache is populated; it is empty**
 - `CLAUDE.md` — Current Status line 276 vs Regeneration guard line 82
@@ -66,29 +57,11 @@ the chief obstacle to reusing this pipeline on another work.
 
 ### Medium
 
-**README project-structure comment overstates typeset as HTML/PDF**
-- `README.md` — Project structure (line 136); Pipeline table step 8 (line 24)
-- Claim: Line 136: `'typeset.py  # Bilingual HTML/PDF generation'`. Line 24 step 8 (no PDF claim — correct).
-- Problem: "Bilingual HTML/PDF generation" overstates current behavior — PDF generation is commented out and no PDF is produced. Only line 136 is inaccurate.
-- Triage: Change line 136 to `'Bilingual HTML generation (PDF path present but disabled)'`.
-
 **README Source link points at the wrong IA copy (`cresuoft`)**
 - `README.md` — Source section, line 151
 - Claim: `Google/Harvard scan: archive.org/details/perlalibertdal00cresuoft`
 - Problem: The `cresuoft` identifier exists nowhere in the code and is the wrong copy. `download.py:7` fetches COPY2 from `perlalibertdall00cresgoog`; `vision_review.py:41` names the Harvard PDF `harvard_perlalibertdall00cresgoog.pdf` (double-L `dall`). `cresuoft` is the unrelated Toronto digitization. A reader following the link downloads the wrong scan.
 - Triage: Change the link to `archive.org/details/perlalibertdall00cresgoog` (the Google/Harvard copy actually used), or document that the repo uses the Google scan, not the uoft scan.
-
-**CLAUDE.md Typesetting/output still presents PDF as a real step-8 output; DYLD prereq undocumented**
-- `CLAUDE.md` — Typesetting bullet line 215 and File Structure line 241
-- Claim: `'PDF: WeasyPrint (HTML→PDF). Render per-chapter then merge ... currently single-pass.'` and `bilingual.pdf  # Bilingual print edition (step 8)`.
-- Problem: PDF generation is disabled (`write_pdf` commented out) and `output/bilingual.pdf` does not exist, yet the doc presents PDF as a produced output; the `DYLD_FALLBACK_LIBRARY_PATH` requirement is also undocumented.
-- Triage: Mark PDF as not currently generated; move `bilingual.pdf` out of produced-outputs or annotate "planned/disabled"; document the `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` requirement for re-enabling WeasyPrint. (PIPELINE.md step-8 outputs correctly omit the PDF — gap is specific to CLAUDE.md.)
-
-**Duplicate: bilingual.pdf listed as output / step 8 labeled HTML/PDF**
-- `CLAUDE.md` — File Structure `output/` line 241; step-8 table row line 33
-- Claim: `bilingual.pdf` listed as a step-8 output; step-8 labeled "Bilingual HTML/PDF"; Typesetting bullet calls PDF "not yet implemented".
-- Problem: No PDF is generated; the "not yet implemented" bullet contradicts the output listing.
-- Triage: Remove `bilingual.pdf` from the output list (or mark disabled); change the step-8 label from HTML/PDF to HTML. Align README line 136.
 
 **Three-way disagreement on the LLM-cleanup cache state (doc vs guard string vs reality)**
 - `pipeline.py` code-comment vs `CLAUDE.md` — pipeline.py lines 23 & 43 vs CLAUDE.md line 82

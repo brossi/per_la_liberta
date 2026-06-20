@@ -133,7 +133,7 @@ validate.py              # Assertion checks on cleaned output
 translate.py             # Claude API translation with resume
 refine.py                # Edgren-based translation refinement + version tracking
 edgren.py                # Edgren 1901 dictionary integration
-typeset.py               # Bilingual HTML/PDF generation
+typeset.py               # Bilingual HTML generation
 companion.py             # Reader's Companion HTML rendering
 utils.py                 # Shared utilities
 

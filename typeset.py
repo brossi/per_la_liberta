@@ -1,4 +1,4 @@
-"""Step 8: Typeset bilingual edition as HTML and PDF.
+"""Step 8: Typeset bilingual edition as HTML.
 
 Produces a Loeb Classical Library-style facing-page layout:
 Italian on the left (verso), English on the right (recto),
@@ -12,9 +12,9 @@ from pathlib import Path
 
 IA_ITEM_ID = "perlalibertdal00cres"
 SITE_BASE = "https://brossi.github.io/PER_LA_LIBERTA"
-# Offset between PDF leaf numbers and printed book page numbers.
-# PDF leaf 7 = book page 1 (leaves 1-6 are cover + front matter).
-PDF_PAGE_OFFSET = 6
+# Offset between source-scan leaf numbers and printed book page numbers.
+# Source-scan leaf 7 = book page 1 (leaves 1-6 are cover + front matter).
+SCAN_LEAF_OFFSET = 6
 FONT_DIR = Path(__file__).parent / "assets" / "fonts"
 CSS_PATH = Path(__file__).parent / "static" / "bilingual.css"
 
@@ -401,7 +401,7 @@ def _generate_scan_viewer(output_path: Path) -> None:
   <button id="next">Next &rsaquo;</button>
 </div>
 <script>
-const OFFSET = {PDF_PAGE_OFFSET};
+const OFFSET = {SCAN_LEAF_OFFSET};
 const IA_ITEM = '{IA_ITEM_ID}';
 const m = location.hash.match(/^#(\\d+)-(\\d+)$/);
 if (!m) {{ document.body.innerHTML = '<p style="padding:2em;color:#999">No page range specified. URL should be scan.html#START-END</p>'; }}
@@ -885,8 +885,8 @@ def generate_html(
             ia_url = source_pages.get((start, end), "")
             if not ia_url:
                 ia_url = f"https://archive.org/details/{IA_ITEM_ID}/page/n{start - 1}/mode/1up"
-            book_start = start - PDF_PAGE_OFFSET
-            book_end = end - PDF_PAGE_OFFSET
+            book_start = start - SCAN_LEAF_OFFSET
+            book_end = end - SCAN_LEAF_OFFSET
             page_label = f"Source pp. {book_start}\u2013{book_end}"
             _base = site_base or SITE_BASE
             qr_url = f"{_base}/scan.html#{start}-{end}"
@@ -895,7 +895,7 @@ def generate_html(
                 f'<span class="page-cite">'
                 f'<a href="#" class="page-citation" '
                 f'data-page-start="{start}" data-page-end="{end}" '
-                f'data-page-offset="{PDF_PAGE_OFFSET}" '
+                f'data-page-offset="{SCAN_LEAF_OFFSET}" '
                 f'data-ia-url="{ia_url}" '
                 f'data-img-dir="{page_img_rel}" '
                 f'title="View original scan">{page_label}</a>'
@@ -1092,7 +1092,7 @@ def generate_html(
         "  const body = document.querySelector('.page-overlay-body');",
         "  let zoomLevel = 1;",
         "  const ZOOM_STEP = 1.3, ZOOM_MAX = 5;",
-        "  let currentPage = 0, imgDir = '', pageOffset = " + str(PDF_PAGE_OFFSET) + ";",
+        "  let currentPage = 0, imgDir = '', pageOffset = " + str(SCAN_LEAF_OFFSET) + ";",
         "",
         "  // Populate chapter select with optgroup separators",
         "  let curGroup = null;",
@@ -1555,18 +1555,8 @@ def generate_html(
     return output_path
 
 
-def generate_pdf(html_path: Path, output_path: Path) -> Path:
-    """Render bilingual HTML to PDF via WeasyPrint."""
-    from weasyprint import HTML
-
-    HTML(filename=str(html_path), base_url=str(html_path.parent)).write_pdf(str(output_path))
-    size_mb = output_path.stat().st_size / (1024 * 1024)
-    print(f"  PDF: {output_path} ({size_mb:.1f} MB)")
-    return output_path
-
-
 def typeset(output_dir: Path, state_dir: Path | None = None, site_base: str | None = None) -> None:
-    """Generate bilingual HTML and PDF from Italian + English markdown."""
+    """Generate bilingual HTML from Italian + English markdown."""
     italian_path = output_dir / "italian_clean.md"
     english_path = output_dir / "english_translation.md"
     source_pages_path = output_dir / "source_pages.json"
@@ -1610,17 +1600,6 @@ def typeset(output_dir: Path, state_dir: Path | None = None, site_base: str | No
         docs_css = CSS_PATH.read_text(encoding="utf-8").replace("../docs/assets/", "../assets/")
         (docs_dir / "static" / "bilingual.css").write_text(docs_css, encoding="utf-8")
         print(f"  Synced to docs/")
-
-    # PDF generation disabled — WeasyPrint requires DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib
-    # To re-enable, uncomment the block below.
-    # pdf_path = output_dir / "bilingual.pdf"
-    # try:
-    #     generate_pdf(html_path, pdf_path)
-    # except ImportError:
-    #     print("  Warning: weasyprint not installed — skipping PDF generation")
-    #     print("  Install with: uv add weasyprint")
-    # except Exception as e:
-    #     print(f"  PDF generation failed: {e}")
 
 
 if __name__ == "__main__":

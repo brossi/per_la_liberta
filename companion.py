@@ -25,7 +25,7 @@ from markdown_it.token import Token
 import translate
 from typeset import (
     CSS_PATH,
-    PDF_PAGE_OFFSET,
+    SCAN_LEAF_OFFSET,
     SITE_BASE,
     _font_controls_block,
     _font_size_js,
@@ -272,7 +272,7 @@ def build_citation_map() -> dict[str, dict]:
             entry = {"anchor": anchor, "title": title}
             if scan:
                 entry["scan_pages"] = [scan[0], scan[-1]]
-                entry["book_pages"] = [scan[0] - PDF_PAGE_OFFSET, scan[-1] - PDF_PAGE_OFFSET]
+                entry["book_pages"] = [scan[0] - SCAN_LEAF_OFFSET, scan[-1] - SCAN_LEAF_OFFSET]
             cmap[f"{part}:{idx}"] = entry
     return cmap
 

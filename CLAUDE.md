@@ -30,7 +30,7 @@ The project has two phases:
 | 6. Validate | `validate.py` | 7 checks: structure, word count, quotes, char coverage, ASCII remnants, word quality (NER-aware), content preservation |
 | 7. Translate | `translate.py` (default) / `multi_translate.py` (`--multi-model`) | Default: single-model Claude Sonnet 4.6, extended thinking, per-chapter with resume. `--multi-model`: multi-witness synthesis (Sonnet + Gemini drafts → scored evaluation → Opus synthesis). **The live edition was produced by the multi-witness path** (April 2026), then refined. |
 | 7b. Refine | `refine.py` | Post-hoc translation refinement with Edgren 1901 dictionary context + version tracking |
-| 8. Typeset | `typeset.py` | Bilingual HTML/PDF with Loeb-style facing pages, slide-in source scan overlay, revision marginalia |
+| 8. Typeset | `typeset.py` | Bilingual HTML with Loeb-style facing pages, slide-in source scan overlay, revision marginalia |
 | 9. Companion | `companion.py` | Renders the hand-authored Reader's Companion (`output/companion/*.md`) to standalone HTML under `docs/companion/` + entity/citation JSON indexes. Runs after typeset so its deep-links can be checked against the fresh `docs/index.html`. |
 
 ## Running
@@ -212,7 +212,6 @@ Both paths:
 - **TOC**: Slide-in chapter index with collapsible Part 1/Part 2 `<details>/<summary>` sections
 - **CSS variables**: All colors, borders, shadows, and backgrounds defined in `:root` — no hardcoded hex values outside `:root` and `@media print`
 - **Restored typography** (`data/typography.json` + `typography.py`): OCR flattens the 1913 printing's italics, bold, small caps, and set-off verse lines to plain roman. A hand-curated, scan-verified sidecar restores them. It is the **sole source of truth** and is applied at **one** site — `typeset.py`, per parsed paragraph, just before HTML conversion — so `output/*.md` stay clean text (and `validate.py`, which reads `italian_clean.md`, is unaffected). Each entry has a `style` (`italic` | `bold` | `small-caps` | `verse`) and verbatim `it`/`en` fragments; for `verse`, include the quotation marks in the fragment. Because there is no stable per-paragraph id, a word that recurs in a chapter is disambiguated by an optional `<lang>_anchor` (a longer verbatim context containing the fragment — the target is styled only inside the first anchor instance) and/or `occurrences` (`first` default | `all` | 1-based int); the anchor is part of the entry's identity so two same-word entries and bad anchors are reported independently in the `unmatched` count. The 1913 printer's conventions: italic for set-off verse; **bold** for concept-emphasis (e.g. Mazzini's "Popolo"); guillemets `«»`/quotes for foreign/special terms (already in the text — nothing to restore); drop-cap + opening-word small caps at chapter heads (excluded, see below). Capture any other convention encountered (e.g. letter-spaced *spaziato*) rather than dropping it — easier to prune later than to miss. Keyed by the **slug** chapter id (`parse_italian_markdown` scheme: `prefazione`, `p2_capitolo_decimottavo`) that `typeset.py` uses — note this differs from the `p1_ch18` scheme `cleanup.py`/`chapter_pages.json` use. Detection requires **native-resolution crops** of the page scans (the full-page reads downsample and hide weight/slant); page N in `chapter_pages.json` maps directly to `docs/assets/page_images/page_000N.png`. Rendering: `italic`→`<em>`; `bold`→`<strong>` (via `⟦b⟧`); `small-caps`/`verse` via `⟦sc⟧`/`⟦verse⟧` sentinels → `<span class="sc">`/`<span class="verse">` (`.verse` is a centered italic `display:block` span, kept inline so it doesn't shift the paragraph numbering provenance/revision matching relies on). `typeset` logs any sidecar fragment that matched nowhere. Because it is semantic, the same sidecar will drive a future InDesign print export. The chapter-opening drop cap / first-paragraph no-indent / opening-word small caps are separate, already handled by `_wrap_dropcap` + `.versal`/`.incipit`.
-- **PDF**: WeasyPrint (HTML→PDF). Render per-chapter then merge for performance (not yet implemented — currently single-pass).
 
 ## File Structure
 
@@ -238,7 +237,6 @@ output/
   italian_clean.md                # Cleaned Italian markdown (step 5)
   english_translation.md          # English translation (step 7)
   bilingual.html                  # Bilingual web edition (step 8)
-  bilingual.pdf                   # Bilingual print edition (step 8)
   source_pages.json               # Chapter → IA page URLs (step 7)
   companion/                      # Hand-authored Reader's Companion markdown — source of truth (step 9)
 state/

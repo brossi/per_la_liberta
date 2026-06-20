@@ -22,7 +22,6 @@ dependencies = [
     "segno>=1.6.6",
     "spacy>=3.8.14",
     "symspellpy>=6.9.0",
-    "weasyprint>=68.1",
 ]
 
 [project.optional-dependencies]

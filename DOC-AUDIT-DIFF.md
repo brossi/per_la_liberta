@@ -12,8 +12,8 @@ ordering, and prose). It records where the runs **converge** (high-confidence fi
 run had **blind spots** the other caught, and the one substantive **disagreement**. Like the source
 artifacts, this is audit-only: nothing here changes any doc.
 
-Counts: Run 1 = 69 findings; Run 2 = 64 findings. Convergent core ≈ 25 findings; each run surfaced
-~6–8 *material* items the other missed entirely.
+Resolved findings that no longer apply to the codebase have been pruned from this artifact.
+Convergent core ≈ 24 findings; each run surfaced ~6–8 *material* items the other missed entirely.
 
 ---
 
@@ -23,33 +23,32 @@ Highest-confidence findings: independently surfaced by both runs. Triage these f
 
 | # | Finding | Run 1 | Run 2 |
 |---|---------|-------|-------|
-| C1 | PDF documented as a produced step-8 output, but generation is commented out in `typeset.py` | §1 High + Med + dup | S-pdf |
-| C2 | LLM-cleanup cache described three contradictory ways (CLAUDE.md "empty" vs `pipeline.py` "31/58" vs "all 58 corrected"); dir absent on disk | §1/§3 (multiple) | S1 / A1 |
-| C3 | README deploy `cp` block clobbers typeset's path-rewritten `docs/` auto-sync | §1 High (CSS) + Low + cross-cut | S11 / A2 / G-readme-deploy |
-| C4 | `cd docs && git add -A` stages the whole tree, not just the site | cross-cutting note | A-gitaddall |
-| C5 | `README.md:151` cites the wrong IA identifier (`…cresuoft` vs code's `…cresgoog`) | §1 Med + §5 High | S13 / P-ia-ids |
-| C6 | `1913-italian-ocr-normalization-reference.md` names the wrong project ("the Athanor pipeline") | §1 Low + §3 Low + §5 Med | S-norm-athanor |
-| C7 | `dictionary-agent_prompts.md` prescribes unshipped libs (diff-match-patch, minineedle, unidecode, collatex) | §1 Low + §2 Low | S-dict1 / S-dict2 / S-dict3 |
-| C8 | `dictionary-agent_prompts.md` prescribes `it_core_news_sm`; code uses `it_core_news_lg` | §3 Low | S-dict6 / S-dict7 |
-| C9 | Reference docs are pre-implementation design briefs with no "superseded" banner | §1/§2 Low | A-dict-status |
-| C10 | LOC source PDF required, gitignored, undocumented as a prerequisite | §2 Med | G-readme-ocrpdf |
-| C11 | Harvard PDF required for second-copy escalation, never listed as a prerequisite | §2 Med | G-readme-harvard-pdf |
-| C12 | Review-phase API keys (`OPENAI_API_KEY`, `DEEPL_API_KEY`) absent from README `.env` | §2 Med | G-readme-openai-env (partial — frames OPENAI as optional) |
-| C13 | `serve.py` invocation style / `PORT` / what it serves | §1 Low | G-claude-serve / A-serve-docs |
-| C14 | Track 6 documented as bare `python …`, contradicting the `uv run` rule | §3 Med + Low | A-track6-uvrun |
-| C15 | `fix_corrupted_passage.py` missing from REVIEW.md's dead-script list | §2 Low | G-rev-deadscript |
-| C16 | "calibrated" (REVIEW.md:156) asserted with only scale counts as evidence | §4 Med | T-comprehension-calibrated |
-| C17 | "best vision of the current crop" — unsubstantiated/time-bound superlative | §4 Med | P-vision-model (reframed as transient pin) |
-| C18 | Bodoni `i→r`/`i→e` boundary substitutions are typeface-specific (portability) | §5 High | P-dehyphenate |
-| C19 | Italian chapter-title ordinal maps hard-coded (portability) | §5 High | P-titles |
-| C20 | Pinned Italian dictionary trio + oracle is language/era-specific (portability) | §5 Med | G-dict-oracle (reframed as gap) |
-| C21 | Review phase presupposes two specific physical copies + concordance (portability) | §5 Med | P-panel-models / G-readme-harvard-pdf |
-| C22 | Zingarelli has no auto-download path (README "downloaded automatically" overstates) | cross-cutting note | A-dict-membership / README:120 note |
-| C23 | Pipeline step-count headline: 9 (table) vs 11 (prose) | cross-cutting note | A-11step |
-| C24 | Two chapter-id schemes (`p1_ch18` vs slug) hidden behind one placeholder / the "slug" wording | §3 Low (slug, two schemes) | A-slug / A-chapter-schemes (rated High) |
-| C25 | Book-identity hard-coded into translation prompt(s) (portability) | §5 High (`translate.py` SYSTEM_PROMPT) | P-multiwitness-rubric (`multi_translate.py` rubric — related, different site) |
+| C1 | LLM-cleanup cache described three contradictory ways (CLAUDE.md "empty" vs `pipeline.py` "31/58" vs "all 58 corrected"); dir absent on disk | §1/§3 (multiple) | S1 / A1 |
+| C2 | README deploy `cp` block clobbers typeset's path-rewritten `docs/` auto-sync | §1 High (CSS) + Low + cross-cut | S11 / A2 / G-readme-deploy |
+| C3 | `cd docs && git add -A` stages the whole tree, not just the site | cross-cutting note | A-gitaddall |
+| C4 | `README.md:151` cites the wrong IA identifier (`…cresuoft` vs code's `…cresgoog`) | §1 Med + §5 High | S13 / P-ia-ids |
+| C5 | `1913-italian-ocr-normalization-reference.md` names the wrong project ("the Athanor pipeline") | §1 Low + §3 Low + §5 Med | S-norm-athanor |
+| C6 | `dictionary-agent_prompts.md` prescribes unshipped libs (diff-match-patch, minineedle, unidecode, collatex) | §1 Low + §2 Low | S-dict1 / S-dict2 / S-dict3 |
+| C7 | `dictionary-agent_prompts.md` prescribes `it_core_news_sm`; code uses `it_core_news_lg` | §3 Low | S-dict6 / S-dict7 |
+| C8 | Reference docs are pre-implementation design briefs with no "superseded" banner | §1/§2 Low | A-dict-status |
+| C9 | LOC source PDF required, gitignored, undocumented as a prerequisite | §2 Med | G-readme-ocrpdf |
+| C10 | Harvard PDF required for second-copy escalation, never listed as a prerequisite | §2 Med | G-readme-harvard-pdf |
+| C11 | Review-phase API keys (`OPENAI_API_KEY`, `DEEPL_API_KEY`) absent from README `.env` | §2 Med | G-readme-openai-env (partial — frames OPENAI as optional) |
+| C12 | `serve.py` invocation style / `PORT` / what it serves | §1 Low | G-claude-serve / A-serve-docs |
+| C13 | Track 6 documented as bare `python …`, contradicting the `uv run` rule | §3 Med + Low | A-track6-uvrun |
+| C14 | `fix_corrupted_passage.py` missing from REVIEW.md's dead-script list | §2 Low | G-rev-deadscript |
+| C15 | "calibrated" (REVIEW.md:156) asserted with only scale counts as evidence | §4 Med | T-comprehension-calibrated |
+| C16 | "best vision of the current crop" — unsubstantiated/time-bound superlative | §4 Med | P-vision-model (reframed as transient pin) |
+| C17 | Bodoni `i→r`/`i→e` boundary substitutions are typeface-specific (portability) | §5 High | P-dehyphenate |
+| C18 | Italian chapter-title ordinal maps hard-coded (portability) | §5 High | P-titles |
+| C19 | Pinned Italian dictionary trio + oracle is language/era-specific (portability) | §5 Med | G-dict-oracle (reframed as gap) |
+| C20 | Review phase presupposes two specific physical copies + concordance (portability) | §5 Med | P-panel-models / G-readme-harvard-pdf |
+| C21 | Zingarelli has no auto-download path (README "downloaded automatically" overstates) | cross-cutting note | A-dict-membership / README:120 note |
+| C22 | Pipeline step-count headline: 9 (table) vs 11 (prose) | cross-cutting note | A-11step |
+| C23 | Two chapter-id schemes (`p1_ch18` vs slug) hidden behind one placeholder / the "slug" wording | §3 Low (slug, two schemes) | A-slug / A-chapter-schemes (rated High) |
+| C24 | Book-identity hard-coded into translation prompt(s) (portability) | §5 High (`translate.py` SYSTEM_PROMPT) | P-multiwitness-rubric (`multi_translate.py` rubric — related, different site) |
 
-Note on severity: C24 is a useful calibration check — Run 1 rated the chapter-id ambiguity **Low**;
+Note on severity: C23 is a useful calibration check — Run 1 rated the chapter-id ambiguity **Low**;
 Run 2 rated it **High**. Run 2's verifier downgraded the "wrong-id harm" claim to needs_nuance but
 kept the finding, so the true severity is probably **Medium**.
 
@@ -71,7 +70,7 @@ Ordered by consequence.
   57 H3 + ≥3 H2 actually checked) and the portability angle (chapter total / part split as constants).
   Run 2 has **neither**.
 - **R1-d — Bibliographic metadata hard-coded in `typeset.py`** (title/subtitle/author/colophon,
-  `IA_ITEM_ID`). Portability. Run 2 isolated `PDF_PAGE_OFFSET` but not the colophon/identity constants.
+  `IA_ITEM_ID`). Portability. Run 2 isolated the source-scan page offset but not the colophon/identity constants.
 - **R1-e — `assets/` directory comment is wrong** (`README.md:143`): fonts + LOC page images actually
   live under `docs/assets/`.
 - **R1-f — `refine` shown inline in the build arrow-chain** despite being documented manual-only.
@@ -117,9 +116,9 @@ Ordered by consequence.
 - **R2-g — `1913-italian-ocr-normalization-reference.md` omits the Bodoni `i↔r`/`e↔i` confusion**
   (the repo's dominant OCR failure mode) while elevating f-ligature misreads (G-norm-ligatures).
 - **R2-h — Python `>=3.13` requirement** unflagged in Setup (`.python-version` enforces it silently).
-- **R2-i — GENERALIZABLE-BUT-HARDCODED isolation**: `PDF_PAGE_OFFSET=6`, the cluster-scoring weight
-  formula (`8·breadth + 2·consistency + 6·severity + 1·confidence`), pinned model ids, and the
-  `DYLD_FALLBACK_LIBRARY_PATH` constant — a portability tag Run 1 did not separate out.
+- **R2-i — GENERALIZABLE-BUT-HARDCODED isolation**: the source-scan page offset
+  (`SCAN_LEAF_OFFSET=6`), the cluster-scoring weight formula (`8·breadth + 2·consistency + 6·severity + 1·confidence`),
+  and pinned model ids — a portability tag Run 1 did not separate out.
 - **R2-j — Italian structural keywords in `utils.py`** (PREFAZIONE/INDICE/Capitolo/PARTE SECONDA…)
   drive "generic heading detection" (P-structure-keywords). Related to Run 1's title finding but a
   distinct site.

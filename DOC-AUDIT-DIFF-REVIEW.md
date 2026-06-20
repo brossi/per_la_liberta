@@ -17,7 +17,6 @@ not with tone or portability cleanup.
 
 The diff is strongest on these material issues:
 
-- disabled PDF generation being documented as a real output;
 - `state/llm_cleaned/` state contradictions;
 - README deploy commands clobbering typeset's path-rewritten `docs/` output;
 - wrong Google/Harvard Internet Archive identifier;
@@ -36,14 +35,6 @@ IDs for the translate/refine path.
 ## Confirmed High-Value Findings
 
 These should keep their high or material priority.
-
-### PDF Output Is Not Currently Produced
-
-Confirmed. `typeset.py` defines `generate_pdf()`, but the call is commented out
-with a `DYLD_FALLBACK_LIBRARY_PATH=/opt/homebrew/lib` note at `typeset.py:1614`.
-No `output/bilingual.pdf` exists. `CLAUDE.md` and `README.md` still describe
-HTML/PDF generation in places. The diff's recommendation is accurate and should
-be acted on early.
 
 ### LLM Cleanup Cache State Is Contradictory
 
@@ -146,7 +137,7 @@ direct script CLIs may be stricter than `pipeline.py`.
 ### Portability Findings: Useful Backlog, Not First Triage
 
 The diff is right that many constants are book-, scan-, language-, or
-typeface-specific: `PDF_PAGE_OFFSET=6`, IA identifiers, Italian heading words,
+typeface-specific: `SCAN_LEAF_OFFSET=6`, IA identifiers, Italian heading words,
 Italian ordinal maps, the dictionary trio, Bodoni `i/r` and `i/e` confusion
 pairs, and the translation prompt's book identity.
 
@@ -255,8 +246,8 @@ worker knob. This should be corrected because it is operational, not just tone.
 ## Recommended Triage Order
 
 1. Fix docs that can cause wrong commands or broken output:
-   README deploy block, regeneration guard in README Usage, PDF output claims,
-   wrong IA identifier, `audit_divergences.py` handoff.
+   README deploy block, regeneration guard in README Usage, wrong IA identifier,
+   `audit_divergences.py` handoff.
 
 2. Document missing prerequisites and runtime dependencies:
    LOC PDF, Harvard PDF, `claude` CLI, Python `>=3.13`, optional GPT/OpenAI
