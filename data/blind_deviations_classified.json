@@ -39,7 +39,12 @@
       "votes_published": 1,
       "category": "modernization",
       "action": "restore",
-      "reason": "'l'etisia' is a period/archaic Italian term for consumption/phthisis (etisia), elided with the article; the published form 'la tisi' substitutes a different word entirely, making this also a misread, but the elided archaic form should be restored."
+      "reason": "'l'etisia' is a period/archaic Italian term for consumption/phthisis (etisia), elided with the article; the published form 'la tisi' substitutes a different word entirely, making this also a misread, but the elided archaic form should be restored.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "a cui la tisi rode",
+        "new": "a cui l'etisia rode"
+      }
     },
     {
       "id": 1,
@@ -103,7 +108,8 @@
           "reason": "\"Vanuo\" is an obvious typographic error (a turned 'n') for \"Vanno\", correctly fixed in the modern edition."
         },
         "consensus": "keep"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 3,
@@ -151,7 +157,12 @@
       "action": "review",
       "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
       "dup_real": true,
-      "suggest_flag": false
+      "suggest_flag": false,
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "\"Entri! Entri, entri!",
+        "new": "\"Entri, entri!"
+      }
     },
     {
       "id": 5,
@@ -340,7 +351,12 @@
       "action": "review",
       "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
       "dup_real": true,
-      "suggest_flag": false
+      "suggest_flag": false,
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "\"Giorni felici, giorni felici... tramontati",
+        "new": "\"Giorni felici... tramontati"
+      }
     },
     {
       "id": 12,
@@ -490,7 +506,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "'Nosadana' vs 'Nosaidana' is a proper name where both forms have zero dictionary attestation; impossible to determine which is correct without further source evidence."
+      "reason": "'Nosadana' vs 'Nosaidana' is a proper name where both forms have zero dictionary attestation; impossible to determine which is correct without further source evidence.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "La famiglia Nosaidana vanta",
+        "new": "La famiglia Nosadana vanta"
+      }
     },
     {
       "id": 18,
@@ -565,7 +586,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "'biricchinate' vs 'birichinate': both have zero dictionary attestation; could be a dialectal/period variant or a misprint, insufficient evidence to decide."
+      "reason": "'biricchinate' vs 'birichinate': both have zero dictionary attestation; could be a dialectal/period variant or a misprint, insufficient evidence to decide.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "le mie birichinate che",
+        "new": "le mie biricchinate che"
+      }
     },
     {
       "id": 21,
@@ -702,7 +728,8 @@
           "reason": "\"Meternich\" is a typographical error missing the double 't' for the historical figure Metternich."
         },
         "consensus": "keep"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 26,
@@ -766,7 +793,8 @@
           "reason": "\"grnducato\" is a clear misprint missing an 'a'. The published edition correctly fixes this."
         },
         "consensus": "keep"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 28,
@@ -830,7 +858,8 @@
           "reason": "The lowercase \"l.\" is a printing error for the Roman numeral \"I.\" (Vittorio Emanuele I), which the edition fixes."
         },
         "consensus": "keep"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 30,
@@ -930,7 +959,12 @@
       "action": "review",
       "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
       "dup_real": true,
-      "suggest_flag": false
+      "suggest_flag": false,
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "altro sangue... sangue... ma ripercuotono",
+        "new": "altro sangue... ma ripercuotono"
+      }
     },
     {
       "id": 34,
@@ -2011,7 +2045,12 @@
       "action": "review",
       "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
       "dup_real": true,
-      "suggest_flag": false
+      "suggest_flag": false,
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Fra quel caos,\n\nFra quel caos, inciampo",
+        "new": "Fra quel caos, inciampo"
+      }
     },
     {
       "id": 75,
@@ -2240,7 +2279,12 @@
       "votes_published": 0,
       "category": "modernization",
       "action": "restore",
-      "reason": "PRINTED includes leading '...' before 'Rifiutai!' which PUBLISHED omitted; the ellipsis is part of the original text punctuation."
+      "reason": "PRINTED includes leading '...' before 'Rifiutai!' which PUBLISHED omitted; the ellipsis is part of the original text punctuation.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Bersaglieri. Rifiutai! Perchè? Rifiutai!\n\nPerchè?\n\nLe subitanee",
+        "new": "Bersaglieri... Rifiutai! Perchè? Le subitanee"
+      }
     },
     {
       "id": 84,
@@ -2263,7 +2307,12 @@
       "votes_published": 2,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED '***' (asterisks, a section separator or redaction mark) was transcribed as 'un' — clearly a misread/substitution of a typographical device."
+      "reason": "PRINTED '***' (asterisks, a section separator or redaction mark) was transcribed as 'un' — clearly a misread/substitution of a typographical device.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Era morto un repubblicano di grido",
+        "new": "Era morto *** repubblicano di grido"
+      }
     },
     {
       "id": 85,
@@ -2302,6 +2351,11 @@
           "reason": "'Terragona' is a known historical Italian spelling for the Spanish city Tarragona, not a simple typo. The edition over-modernized the toponym."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "poi a Tarragona. Il Trolli",
+        "new": "poi a Terragona. Il Trolli"
       }
     },
     {
@@ -3638,7 +3692,12 @@
       "votes_published": 3,
       "category": "uncertain",
       "action": "review",
-      "reason": "PRINTED shows '...' indicating illegible/missing text in the scan; cannot verify whether 'buon' belongs here."
+      "reason": "PRINTED shows '...' indicating illegible/missing text in the scan; cannot verify whether 'buon' belongs here.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "del mondo romano buon al livello",
+        "new": "del mondo romano... al livello"
+      }
     },
     {
       "id": 136,
@@ -3752,7 +3811,8 @@
           "reason": "The context requires \"incappai\" (stumbled upon/fell into). \"incapai\" is a typo missing a 'p'."
         },
         "consensus": "keep"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 140,
@@ -3791,6 +3851,11 @@
           "reason": "\"ea\" is an obvious misprint caused by a missing space for \"e a\"."
         },
         "consensus": "keep"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "villa Corsini) e a quel Winkler",
+        "new": "villa Corsini) ed a quel Winkler"
       }
     },
     {
@@ -3891,7 +3956,8 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "PRINTED shows '....' indicating illegible text; cannot confirm 'e' is the correct reading."
+      "reason": "PRINTED shows '....' indicating illegible text; cannot confirm 'e' is the correct reading.",
+      "resolved": "applied"
     },
     {
       "id": 145,
@@ -5277,7 +5343,12 @@
       "votes_published": 2,
       "category": "uncertain",
       "action": "review",
-      "reason": "PRINTED has double quotes and plural 'blouses' vs PUBLISHED single word 'blouse'. Typographic and form difference; context unclear without more information."
+      "reason": "PRINTED has double quotes and plural 'blouses' vs PUBLISHED single word 'blouse'. Typographic and form difference; context unclear without more information.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "colle \"blouse\"? Non",
+        "new": "colle \"blouses\"? Non"
+      }
     },
     {
       "id": 195,
@@ -5408,6 +5479,11 @@
           "reason": "'ammanuense' is a misspelling (hypercorrection of consonants) of 'amanuense'."
         },
         "consensus": "keep"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "suo amanuense, certo Bardini",
+        "new": "suo ammanuense, certo Bardini"
       }
     },
     {
@@ -5592,7 +5668,8 @@
           "reason": "The printed word is missing an 'e' ('Finalmnte'); the edition correctly fixes this obvious typo."
         },
         "consensus": "keep"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 206,
@@ -5681,7 +5758,8 @@
           "reason": "'spera' (hopes) correctly governs the following infinitive ('spera versare' makes sense); 'opera' is likely an OCR error or misreading in the edition."
         },
         "consensus": "restore"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 209,
@@ -5791,7 +5869,8 @@
           "reason": "'Trevis' is a clear typo or truncated word for 'Treviso'; the edition corrects it."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 213,
@@ -5855,7 +5934,8 @@
           "reason": "'dirette' agrees with the feminine plural object 'le sorti', a correct and common grammatical construction in older Italian that was over-modernized."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 215,
@@ -5894,7 +5974,8 @@
           "reason": "'Stefane' is a clear typo for 'Stefano' in 'Santo Stefano'. The edition correctly fixes it."
         },
         "consensus": "keep"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 216,
@@ -5933,6 +6014,11 @@
           "reason": "'alto così che' makes perfect sense, whereas 'al così che' is ungrammatical."
         },
         "consensus": "restore"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "si stende un parapetto al così che",
+        "new": "si stende un parapetto alto così che"
       }
     },
     {
@@ -5997,6 +6083,11 @@
           "reason": "'senza guardie. A custodia...' restores the original syntax, which was lost in the edition."
         },
         "consensus": "restore"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "lasciato senza guardia; custodia dell'edificio",
+        "new": "lasciato senza guardie. A custodia dell'edificio"
       }
     },
     {
@@ -6022,7 +6113,12 @@
       "votes_published": 3,
       "category": "uncertain",
       "action": "review",
-      "reason": "PRINTED 'corpo' vs PUBLISHED 'colpo': the sentence 'un esiguo colpo di militi' (a small detachment of soldiers) requires 'colpo' as a military term. 'corpo' is a plausible misread (OCR c-o-r-p-o vs c-o-l-p-o). However 'corpo di militi' also makes sense (corps of militia). Given dict scores are equal and both work, this is uncertain."
+      "reason": "PRINTED 'corpo' vs PUBLISHED 'colpo': the sentence 'un esiguo colpo di militi' (a small detachment of soldiers) requires 'colpo' as a military term. 'corpo' is a plausible misread (OCR c-o-r-p-o vs c-o-l-p-o). However 'corpo di militi' also makes sense (corps of militia). Given dict scores are equal and both work, this is uncertain.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "un esiguo colpo di militi",
+        "new": "un esiguo corpo di militi"
+      }
     },
     {
       "id": 220,
@@ -6161,7 +6257,12 @@
       "votes_published": 1,
       "category": "modernization",
       "action": "restore",
-      "reason": "Hyphenated line-break 'biric-chini' is standard period typography for 'birichini'; should be restored."
+      "reason": "Hyphenated line-break 'biric-chini' is standard period typography for 'birichini'; should be restored.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "bambinaie e di birichini. Regola",
+        "new": "bambinaie e di biricchini. Regola"
+      }
     },
     {
       "id": 225,
@@ -6261,6 +6362,11 @@
           "reason": "'diventati nostri' (having become ours) makes clear semantic sense; 'ventidue nostri' is an OCR or transcription error."
         },
         "consensus": "restore"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Sui baluardi, ventidue nostri",
+        "new": "Sui baluardi, diventati nostri"
       }
     },
     {
@@ -8118,7 +8224,12 @@
       "action": "review",
       "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
       "dup_real": true,
-      "suggest_flag": false
+      "suggest_flag": false,
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "di vita. Un contrabbandiere.\n\nUn contrabbandiere — pensai —",
+        "new": "di vita... Un contrabbandiere — pensai —"
+      }
     },
     {
       "id": 303,
@@ -10269,7 +10380,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "'Transylvania' vs 'Transilvania': both are period spellings of the place name (English-influenced vs Italian form); neither is clearly a typo. Needs review to determine which the author used consistently."
+      "reason": "'Transylvania' vs 'Transilvania': both are period spellings of the place name (English-influenced vs Italian form); neither is clearly a typo. Needs review to determine which the author used consistently.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "nella Transilvania, venne",
+        "new": "nella Transylvania, venne"
+      }
     },
     {
       "id": 380,
@@ -12514,7 +12630,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both 'tristamente' and 'tristemente' are plausible; neither is confirmed by dictionaries (both score 0). Could be a period variant or a typo; insufficient evidence to decide."
+      "reason": "Both 'tristamente' and 'tristemente' are plausible; neither is confirmed by dictionaries (both score 0). Could be a period variant or a typo; insufficient evidence to decide.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Sorrise tristemente e,",
+        "new": "Sorrise tristamente e,"
+      }
     },
     {
       "id": 463,
@@ -13126,7 +13247,12 @@
       "action": "review",
       "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
       "dup_real": true,
-      "suggest_flag": false
+      "suggest_flag": false,
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Mi salutò con\n\nMi salutò con una poderosa",
+        "new": "Mi salutò con una poderosa"
+      }
     },
     {
       "id": 488,
@@ -13284,7 +13410,8 @@
       "votes_published": 3,
       "category": "uncertain",
       "action": "review",
-      "reason": "The difference is one extra period (four vs three ellipsis dots); minor punctuation variant, cannot determine which is authorially intended."
+      "reason": "The difference is one extra period (four vs three ellipsis dots); minor punctuation variant, cannot determine which is authorially intended.",
+      "resolved": "applied"
     },
     {
       "id": 494,
@@ -14536,7 +14663,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both 'celeramente' and 'celermente' are plausible period adverb forms; neither is confirmed by dictionaries. Cannot determine which is printed with confidence."
+      "reason": "Both 'celeramente' and 'celermente' are plausible period adverb forms; neither is confirmed by dictionaries. Cannot determine which is printed with confidence.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "tanto celermente che le guardie",
+        "new": "tanto celeramente che le guardie"
+      }
     },
     {
       "id": 541,
@@ -16574,7 +16706,12 @@
       "action": "review",
       "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
       "dup_real": true,
-      "suggest_flag": false
+      "suggest_flag": false,
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "\"La scommessa! La scommessa!... avete",
+        "new": "\"La scommessa!... avete"
+      }
     },
     {
       "id": 617,
@@ -16645,7 +16782,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both 'californiese' and 'californese' have dict=0; neither form is clearly standard. Cannot determine which is the correct period form without more evidence."
+      "reason": "Both 'californiese' and 'californese' have dict=0; neither form is clearly standard. Cannot determine which is the correct period form without more evidence.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "il sole californese, vicino",
+        "new": "il sole californiese, vicino"
+      }
     },
     {
       "id": 620,
@@ -17057,7 +17199,12 @@
       "votes_published": 1,
       "category": "uncertain",
       "action": "review",
-      "reason": "Tule vs Tuie: both have equal dictionary support (1 each). Tule could be the correct proper noun (Thule) while Tuie looks like a misread; but without more context it is hard to be certain which is the misprint."
+      "reason": "Tule vs Tuie: both have equal dictionary support (1 each). Tule could be the correct proper noun (Thule) while Tuie looks like a misread; but without more context it is hard to be certain which is the misprint.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "l'ultima Tuie. Più studiavo",
+        "new": "l'ultima Tule. Più studiavo"
+      }
     },
     {
       "id": 636,
@@ -18540,7 +18687,12 @@
       "votes_published": 3,
       "category": "uncertain",
       "action": "review",
-      "reason": "Printed fragment appears to be a line-break hyphenation of 'ammazzato'; 'muri' is a separate word not visible in the printed snippet — context insufficient."
+      "reason": "Printed fragment appears to be a line-break hyphenation of 'ammazzato'; 'muri' is a separate word not visible in the printed snippet — context insufficient.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "tu possa murì... muri ammazzato!",
+        "new": "tu possa.... murì amazzato!"
+      }
     },
     {
       "id": 691,
@@ -18564,7 +18716,12 @@
       "votes_published": 2,
       "category": "uncertain",
       "action": "review",
-      "reason": "'Saluto' and 'bagnato baciato' are entirely different; context is unclear and cannot be resolved from this evidence alone."
+      "reason": "'Saluto' and 'bagnato baciato' are entirely different; context is unclear and cannot be resolved from this evidence alone.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "all'isola del bagnato baciato la fregata",
+        "new": "all'isola del Saluto la fregata"
+      }
     },
     {
       "id": 692,
@@ -18709,7 +18866,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "'impiegarvi' vs 'impiegarci' — both plausible pronoun forms; cannot determine which is correct from context alone."
+      "reason": "'impiegarvi' vs 'impiegarci' — both plausible pronoun forms; cannot determine which is correct from context alone.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "da impiegarci un paio di mesi",
+        "new": "da impiegarvi un paio di mesi"
+      }
     },
     {
       "id": 698,
@@ -20093,7 +20255,12 @@
       "votes_published": 2,
       "category": "uncertain",
       "action": "review",
-      "reason": "'alberature' (plural) vs 'alberatura' (singular/collective); grammatical number with 'nelle' is ambiguous and dictionary support differs."
+      "reason": "'alberature' (plural) vs 'alberatura' (singular/collective); grammatical number with 'nelle' is ambiguous and dictionary support differs.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "nelle alberatura uscenti",
+        "new": "nelle alberature uscenti"
+      }
     },
     {
       "id": 750,
@@ -20409,7 +20576,12 @@
       "action": "review",
       "reason": "duplicated in the derived text — real; remove the repeat or keep if intentional",
       "dup_real": true,
-      "suggest_flag": false
+      "suggest_flag": false,
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Calunniate, calunniate, calunniate ecc.",
+        "new": "Calunniate, calunniate ecc."
+      }
     },
     {
       "id": 761,
@@ -20635,7 +20807,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both 'Le Roux' and 'Le Houx' are plausible French surnames; insufficient context to determine which is the correct proper name."
+      "reason": "Both 'Le Roux' and 'Le Houx' are plausible French surnames; insufficient context to determine which is the correct proper name.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "dal Le Houx, l'ex galeotto",
+        "new": "dal Le Roux, l'ex galeotto"
+      }
     },
     {
       "id": 769,
@@ -21539,7 +21716,12 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both 'inflittele' and 'inflittale' are archaic pronoun-clitic forms (le vs. la referring to the subject); cannot determine which is the original without more context."
+      "reason": "Both 'inflittele' and 'inflittale' are archaic pronoun-clitic forms (le vs. la referring to the subject); cannot determine which is the original without more context.",
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "ferite inflittale dalla belva",
+        "new": "ferite inflittele dalla belva"
+      }
     },
     {
       "id": 804,

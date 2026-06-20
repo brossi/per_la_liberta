@@ -32,7 +32,7 @@
     {
       "name": "word_quality",
       "passed": true,
-      "total_flagged": 417,
+      "total_flagged": 444,
       "high_severity": 0,
       "by_chapter": {
         "Prefazione": [
@@ -160,6 +160,13 @@
             "context": "quattordici figli. Io fui il quintogenito."
           },
           {
+            "word": "biricchinate",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "credo lo fossi più per le mie biricchinate che per le mie virtù. Il mio"
+          },
+          {
             "word": "salmodie",
             "reasons": [
               "not in dictionary"
@@ -172,6 +179,13 @@
               "not in dictionary"
             ],
             "context": "lgermi, la fiera tempesta che addensatasi nel Settentrione, passò l'Alp"
+          },
+          {
+            "word": "riescito",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "o di Napoleone il Grande, era riescito a saltargli alla gola e ad af"
           },
           {
             "word": "dappoi",
@@ -228,6 +242,13 @@
               "not in dictionary"
             ],
             "context": "e la strage era cercato colla pertinacia di chi spinge la smania di do"
+          },
+          {
+            "word": "armaiuoli",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "oggia, arrugginiti; a cui gli armaiuoli, vuotando le loro botteghe, a"
           },
           {
             "word": "loquela",
@@ -418,6 +439,13 @@
             "context": "ali erano i suoi piani per il dappoi?"
           },
           {
+            "word": "riescito",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "pubblicani e monarchici è già riescito fatale al Popolo italiano; la"
+          },
+          {
             "word": "strame",
             "reasons": [
               "not in dictionary"
@@ -539,6 +567,13 @@
             "context": "mi gettò le braccia al collo, mormorandomi dolcemente all'orecchio: \"Car"
           },
           {
+            "word": "tristamente",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "amente una data nota. Sorrise tristamente e, con un filo di voce, che p"
+          },
+          {
             "word": "alzatasi",
             "reasons": [
               "not in dictionary"
@@ -559,7 +594,7 @@
             "reasons": [
               "not in dictionary"
             ],
-            "context": "quasi di sorpresa, delle mura pontificie... la nostra difesa è ridotta"
+            "context": "quasi di sorpresa, delle mura pontificie.... la nostra difesa è ridott"
           },
           {
             "word": "scambievolmente",
@@ -739,6 +774,13 @@
             "context": "gno di lode. Ma vorresti, dio birbettone! che la più bella, la più nob"
           },
           {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "o alla via Rossini, troverà i patriotti che sapranno inviargli il sal"
+          },
+          {
             "word": "sodezza",
             "reasons": [
               "not in dictionary"
@@ -750,7 +792,7 @@
             "reasons": [
               "not in dictionary"
             ],
-            "context": "lzavano, come lampi. Finì per piantarmisi dinanzi... prese e gettò nuov"
+            "context": "lzavano, come lampi. Finì per piantarmisi dinanzi.... prese e gettò nuo"
           }
         ],
         "Capitolo Nono": [
@@ -904,11 +946,11 @@
             "context": "potuto trattenersi dal ridere sgangheratamente. Dovetti protestare con tutta"
           },
           {
-            "word": "gambucce",
+            "word": "gambuccie",
             "reasons": [
               "not in dictionary"
             ],
-            "context": "era diede un gemito, voltò le gambucce all'aria e rimase stecchita."
+            "context": "era diede un gemito, voltò le gambuccie all'aria e rimase stecchita."
           },
           {
             "word": "convalli",
@@ -955,11 +997,11 @@
             "context": "i, dei Gracchi avrebbe valuto inalzare l'intera nostra razza. Durant"
           },
           {
-            "word": "sopannava",
+            "word": "soppannava",
             "reasons": [
               "not in dictionary"
             ],
-            "context": "do e senza darsene l'aria, mi sopannava il cervello di episodi eroici"
+            "context": "do e senza darsene l'aria, mi soppannava il cervello di episodi eroici"
           },
           {
             "word": "inoltratomi",
@@ -974,6 +1016,13 @@
               "not in dictionary"
             ],
             "context": "uaso di compiere una missione affidatagli da Dio, Francesco Giuseppe no"
+          },
+          {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ia ad ammucchiare cadaveri di patriotti. Tutto questo par cancellato,"
           },
           {
             "word": "vituperevole",
@@ -1048,6 +1097,13 @@
             "context": "iorni, per le pessime notizie giuntegli da Mantova, approvò la mia de"
           },
           {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ia determinazione. E tra quei patriotti, trovai anche chi, spontaneo,"
+          },
+          {
             "word": "obiadìtt",
             "reasons": [
               "not in dictionary"
@@ -1064,6 +1120,13 @@
         ],
         "Capitolo Tredicesimo": [
           {
+            "word": "propriia",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "est'altra: \"Per acquistare la propriia indipendenza, per rivendicare"
+          },
+          {
             "word": "maestrevolmente",
             "reasons": [
               "not in dictionary"
@@ -1071,11 +1134,25 @@
             "context": "on ha mai mentito, le saltano maestrevolmente di piè pari e continuano ad e"
           },
           {
+            "word": "armaiuoli",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ia, dodici mila fucili. I due armaiuoli che, giornalmente li ispezion"
+          },
+          {
             "word": "Aggiungasi",
             "reasons": [
               "not in dictionary"
             ],
             "context": "Aggiungasi che gli studenti di Pavia, se"
+          },
+          {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "o aver battuto alla porta dei patriotti più facoltosi — in tale occas"
           },
           {
             "word": "rinsanguamento",
@@ -1218,6 +1295,13 @@
               "not in dictionary"
             ],
             "context": "atto dinanzi al mio giudice e rivoltomi alla mia accusatrice: \"Lei te"
+          },
+          {
+            "word": "celeramente",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "Poi corsi via, tanto celeramente che le guardie, venendomi app"
           }
         ],
         "Capitolo Decimo Quinto": [
@@ -1231,6 +1315,20 @@
         ],
         "Capitolo Decimo Sesto": [
           {
+            "word": "armaiuoli",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "stello e si abboccava coi due armaiuoli. Li trovò saldi alla data par"
+          },
+          {
+            "word": "blouses",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ra di far causa comune colle \"blouses\"? Non arrischiavano i figli d"
+          },
+          {
             "word": "sospingerci",
             "reasons": [
               "not in dictionary"
@@ -1243,6 +1341,13 @@
               "not in dictionary"
             ],
             "context": "itare, vennero dichiarati una balordaggine più che puerile. E non si ebb"
+          },
+          {
+            "word": "proprii",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "e altrui rinnegando persino i proprii martiri. A questo si giunse:"
           }
         ],
         "Capitolo Decimo Settimo": [
@@ -1252,6 +1357,13 @@
               "not in dictionary"
             ],
             "context": "dell'intelletto modificando e rimodificando il giardino della sua villa.."
+          },
+          {
+            "word": "ammanuense",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "noi. Fummo presentati al suo ammanuense, certo Bardini padovano, stud"
           },
           {
             "word": "accordandogli",
@@ -1273,6 +1385,13 @@
               "not in dictionary"
             ],
             "context": "i irrompa nel covo e i trenta ammanettatori che vi dormono passino, forza"
+          },
+          {
+            "word": "biricchini",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "vo favorito di bambinaie e di biricchini. Regola generale, quando suon"
           },
           {
             "word": "vibratamente",
@@ -1412,11 +1531,11 @@
             "context": "iverberò la luce all'ingiro e accortosi di Caterina che, lasciata cad"
           },
           {
-            "word": "straèsi",
+            "word": "strassi",
             "reasons": [
               "not in dictionary"
             ],
-            "context": "n falò de la tua casa e di to straèsi. — La segreta, el baston sul."
+            "context": "n falò de la tua casa e di to strassi. — La segreta, el baston sul."
           },
           {
             "word": "tormentandone",
@@ -1568,6 +1687,13 @@
             "context": "lettera al marchese Lassalle osservandogli, ironicamente, che se certe c"
           },
           {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "o presa alcuna sull'animo dei patriotti italiani. Il marchese Lassall"
+          },
+          {
             "word": "malcerti",
             "reasons": [
               "not in dictionary"
@@ -1579,7 +1705,7 @@
             "reasons": [
               "not in dictionary"
             ],
-            "context": "abbracciammo e le sue lagrime riprincipiarono... ma io ben m'accorsi che es"
+            "context": "abbracciammo e le sue lagrime riprincipiarono.... ma io ben m'accorsi che e"
           },
           {
             "word": "rincalzai",
@@ -1609,7 +1735,7 @@
             "reasons": [
               "not in dictionary"
             ],
-            "context": "le carni del caduto, quasi a ricercarvi un rimasuglio di vita. Un con"
+            "context": "le carni del caduto, quasi a ricercarvi un rimasuglio di vita... Un c"
           },
           {
             "word": "chellerina",
@@ -1647,6 +1773,13 @@
             "context": "io di sinistra, udivansi voci alternantisi in brevi dialoghi indistinti"
           },
           {
+            "word": "riescito",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ttorie avessi girato, non ero riescito a trovar letto, anche offrend"
+          },
+          {
             "word": "serrarlo",
             "reasons": [
               "not in dictionary"
@@ -1672,7 +1805,7 @@
             "reasons": [
               "not in dictionary"
             ],
-            "context": "miliazione di Sebastopoli. Si proffersero di elargirci una somma di dan"
+            "context": "miliazione di Sebastopoli. Si proffersero di elargirmi una somma di dan"
           },
           {
             "word": "Uggiato",
@@ -1798,7 +1931,7 @@
             "reasons": [
               "not in dictionary"
             ],
-            "context": "quanto si sforzasse, non era riescita a scander una sola goccia d'a"
+            "context": "quanto si sforzasse, non era riescita a spander una sola goccia d'a"
           }
         ],
         "Capitolo Ventesimo Secondo": [
@@ -1817,6 +1950,13 @@
             "context": "e calandosi colle lenzuola e storpiandosi un piede, riacquistare la lib"
           },
           {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "N. 9, ove con parecchi altri patriotti, era mio padre. Egli mi narra"
+          },
+          {
             "word": "concaptivi",
             "reasons": [
               "not in dictionary"
@@ -1831,11 +1971,18 @@
             "context": "arezze della lunga prigionia, tirandoseli d'attorno e canterellando le"
           },
           {
+            "word": "pàtriotta",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "toglievano ogni prestigio al pàtriotta malcauto.... vivere fisiologi"
+          },
+          {
             "word": "malcauto",
             "reasons": [
               "not in dictionary"
             ],
-            "context": "no ogni prestigio al patriota malcauto... vivere fisiologicamente, m"
+            "context": "o ogni prestigio al pàtriotta malcauto.... vivere fisiologicamente,"
           },
           {
             "word": "lasciatogli",
@@ -2080,6 +2227,13 @@
         ],
         "Capitolo Ventesimoquarto": [
           {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ersamente stavano le cose pei patriotti italiani costretti ad imperni"
+          },
+          {
             "word": "attanagliarti",
             "reasons": [
               "not in dictionary"
@@ -2150,13 +2304,6 @@
               "not in dictionary"
             ],
             "context": "sott'occhio una commendatizia rilasciatagli dal Pieri, diretta all'Orsini"
-          },
-          {
-            "word": "insinuatesi",
-            "reasons": [
-              "not in dictionary"
-            ],
-            "context": "di dissipare certe diffidenze insinuatesi nell'animo sospettoso del cap"
           },
           {
             "word": "promessogli",
@@ -2243,13 +2390,6 @@
               "not in dictionary"
             ],
             "context": "ttato ancora per essa; poteva lusingarsi di assistere al suo terzo rin"
-          },
-          {
-            "word": "trassuderà",
-            "reasons": [
-              "not in dictionary"
-            ],
-            "context": "faccerà i mancati giuramenti, trassuderà l'ira perenne di una razza sa"
           }
         ],
         "Capitolo Decimosettimo": [
@@ -2447,11 +2587,11 @@
             "context": "tentezza nell'animo e volesse sbocconcellarla e darcene parte. Scoperse la"
           },
           {
-            "word": "californese",
+            "word": "californiese",
             "reasons": [
               "not in dictionary"
             ],
-            "context": "Torsi il capo... il sole californese, vicino al tramonto, spiava a"
+            "context": "Torsi il capo... il sole californiese, vicino al tramonto, spiava a"
           }
         ],
         "Capitolo Ventesimo Terzo": [
@@ -2481,7 +2621,7 @@
             "reasons": [
               "not in dictionary"
             ],
-            "context": "non dovesse riuscire impresa soverchiamente difficile ad uomini di tempra"
+            "context": "non dovesse riescire impresa soverchiamente difficile ad uomini di tempra"
           },
           {
             "word": "provvisioni",
@@ -2535,6 +2675,13 @@
               "not in dictionary"
             ],
             "context": "gli Austriaci e spazzar via i tirannelli che ingombrano la Penisola; a"
+          },
+          {
+            "word": "impiegarvi",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ò con tanta circospezione, da impiegarvi un paio di mesi. Al 1 Dicembr"
           },
           {
             "word": "canonnières",
@@ -2711,6 +2858,13 @@
             "context": "aveva calmato le mie febbri, suscitandomi nel petto larga onda di poesi"
           },
           {
+            "word": "alberature",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "rgemmo traccie indubbie nelle alberature uscenti, in più di una locali"
+          },
+          {
             "word": "inonorati",
             "reasons": [
               "not in dictionary"
@@ -2753,6 +2907,13 @@
             "context": "io gli ebbi risposto, con una rifioritura di insolenze, che non avevo a"
           },
           {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ondra tanti amici miei, tanti patriotti, li aveva ormai, come voragin"
+          },
+          {
             "word": "tirannicamente",
             "reasons": [
               "not in dictionary"
@@ -2788,6 +2949,13 @@
               "not in dictionary"
             ],
             "context": "ori, impazzì e, \"si vera sunt exposita\", morì in un manicomio. La re"
+          },
+          {
+            "word": "fron",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": ", dei muscoli di un Egassy di fron-"
           },
           {
             "word": "pecoraggine",
@@ -2899,6 +3067,20 @@
             "context": "centuò sempre più le sue mire italofobe e Vittorio Emanuele II apparv"
           },
           {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "dell'armi e dell'arresto dei patriotti. Brescia, non rimarginate anc"
+          },
+          {
+            "word": "inflittele",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "ate ancora le orribili ferite inflittele dalla belva Haynau, dovette s"
+          },
+          {
             "word": "apertele",
             "reasons": [
               "not in dictionary"
@@ -2934,6 +3116,13 @@
               "not in dictionary"
             ],
             "context": "artato una serie di dogmi per ricappare in un'altra che la equivale;"
+          },
+          {
+            "word": "patriotti",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "iarlo; appresta le manette ai patriotti che non si rassegnano a consi"
           },
           {
             "word": "antecessore",
@@ -3005,7 +3194,7 @@
             "reasons": [
               "not in dictionary"
             ],
-            "context": "nche lontanamente... Ma nella faraggine d'impegni... Che vuoi? C'è un"
+            "context": "nche lontanamente... Ma nella faraggine d'impegni.... Che vuoi? C'è u"
           },
           {
             "word": "distogliermene",
@@ -3042,53 +3231,53 @@
         "Capitolo Decimo Nono: 24 flagged",
         "Capitolo Decimo Ottavo: 5 flagged",
         "Capitolo Decimo Quinto: 1 flagged",
-        "Capitolo Decimo Sesto: 2 flagged",
-        "Capitolo Decimo Settimo: 6 flagged",
+        "Capitolo Decimo Sesto: 5 flagged",
+        "Capitolo Decimo Settimo: 8 flagged",
         "Capitolo Decimonono: 12 flagged",
         "Capitolo Decimosettimo: 8 flagged",
         "Capitolo Decimottavo: 8 flagged",
-        "Capitolo Dodicesimo: 6 flagged",
+        "Capitolo Dodicesimo: 7 flagged",
         "Capitolo Nono: 16 flagged",
-        "Capitolo Ottavo: 17 flagged",
+        "Capitolo Ottavo: 18 flagged",
         "Capitolo Primo: 15 flagged",
         "Capitolo Quarto: 5 flagged",
-        "Capitolo Quattordicesimo: 8 flagged",
-        "Capitolo Quindicesimo: 8 flagged",
-        "Capitolo Quinto: 10 flagged",
-        "Capitolo Secondo: 16 flagged",
-        "Capitolo Sedicesimo: 9 flagged",
-        "Capitolo Sesto: 15 flagged",
+        "Capitolo Quattordicesimo: 9 flagged",
+        "Capitolo Quindicesimo: 7 flagged",
+        "Capitolo Quinto: 11 flagged",
+        "Capitolo Secondo: 19 flagged",
+        "Capitolo Sedicesimo: 8 flagged",
+        "Capitolo Sesto: 16 flagged",
         "Capitolo Settimo: 12 flagged",
         "Capitolo Terzo: 9 flagged",
-        "Capitolo Tredicesimo: 14 flagged",
+        "Capitolo Tredicesimo: 17 flagged",
         "Capitolo Trentesimo: 8 flagged",
-        "Capitolo Trentesimo Primo: 7 flagged",
-        "Capitolo Trentesimo Secondo: 13 flagged",
+        "Capitolo Trentesimo Primo: 9 flagged",
+        "Capitolo Trentesimo Secondo: 14 flagged",
         "Capitolo Trentesimo Terzo: 5 flagged",
-        "Capitolo Undicesimo: 10 flagged",
-        "Capitolo Ventesimo: 14 flagged",
-        "Capitolo Ventesimo Nono: 5 flagged",
-        "Capitolo Ventesimo Ottavo: 11 flagged",
-        "Capitolo Ventesimo Primo: 29 flagged",
+        "Capitolo Undicesimo: 11 flagged",
+        "Capitolo Ventesimo: 15 flagged",
+        "Capitolo Ventesimo Nono: 6 flagged",
+        "Capitolo Ventesimo Ottavo: 13 flagged",
+        "Capitolo Ventesimo Primo: 30 flagged",
         "Capitolo Ventesimo Quarto: 5 flagged",
-        "Capitolo Ventesimo Quinto: 6 flagged",
-        "Capitolo Ventesimo Secondo: 21 flagged",
+        "Capitolo Ventesimo Quinto: 7 flagged",
+        "Capitolo Ventesimo Secondo: 23 flagged",
         "Capitolo Ventesimo Sesto: 4 flagged",
         "Capitolo Ventesimo Settimo: 11 flagged",
         "Capitolo Ventesimo Terzo: 5 flagged",
-        "Capitolo Ventesimoquarto: 7 flagged",
+        "Capitolo Ventesimoquarto: 8 flagged",
         "Capitolo Ventesimoterzo: 18 flagged",
         "Prefazione: 1 flagged"
       ],
       "issues": [
-        "417 total unique flagged words across 41 chapters"
+        "444 total unique flagged words across 41 chapters"
       ]
     },
     {
       "name": "word_count_preservation",
       "passed": true,
       "reconciled_words": 136452,
-      "cleaned_words": 119997,
+      "cleaned_words": 119972,
       "retention_pct": 87.9,
       "issues": []
     }
