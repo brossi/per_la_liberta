@@ -32,7 +32,7 @@
     {
       "name": "word_quality",
       "passed": true,
-      "total_flagged": 448,
+      "total_flagged": 452,
       "high_severity": 0,
       "by_chapter": {
         "Prefazione": [
@@ -953,6 +953,13 @@
             "context": "potuto trattenersi dal ridere sgangheratamente. Dovetti protestare con tutta"
           },
           {
+            "word": "sgambietto",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "e, involontariamente, dava lo sgambietto ad una guardia che vi transit"
+          },
+          {
             "word": "gambuccie",
             "reasons": [
               "not in dictionary"
@@ -965,6 +972,13 @@
               "not in dictionary"
             ],
             "context": ", su quelle balze, tra quelle convalli, vivono in pace popoli divers"
+          },
+          {
+            "word": "gagliardemente",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "a, nei secoli andati, batteva gagliardemente tra le Alpi; ma invano! Come"
           },
           {
             "word": "giogaie",
@@ -2689,6 +2703,13 @@
             "context": "lla quale lustrava, con tutta placidezza, gli ottoni. Le cannoniere er"
           },
           {
+            "word": "cannottiere",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "Il Morbioli, cannottiere a Roma, era addetto alla loro"
+          },
+          {
             "word": "strofinamenti",
             "reasons": [
               "not in dictionary"
@@ -2950,6 +2971,13 @@
           }
         ],
         "Capitolo Ventesimo Nono": [
+          {
+            "word": "capitaletto",
+            "reasons": [
+              "not in dictionary"
+            ],
+            "context": "accogliendo, a suo favore, un capitaletto di mille e cento sterline. Da"
+          },
           {
             "word": "fissatole",
             "reasons": [
@@ -3255,7 +3283,7 @@
         ]
       },
       "chapter_summary": [
-        "Capitolo Decimo: 11 flagged",
+        "Capitolo Decimo: 13 flagged",
         "Capitolo Decimo Nono: 24 flagged",
         "Capitolo Decimo Ottavo: 5 flagged",
         "Capitolo Decimo Quinto: 1 flagged",
@@ -3284,10 +3312,10 @@
         "Capitolo Trentesimo Terzo: 5 flagged",
         "Capitolo Undicesimo: 11 flagged",
         "Capitolo Ventesimo: 15 flagged",
-        "Capitolo Ventesimo Nono: 6 flagged",
+        "Capitolo Ventesimo Nono: 7 flagged",
         "Capitolo Ventesimo Ottavo: 13 flagged",
         "Capitolo Ventesimo Primo: 32 flagged",
-        "Capitolo Ventesimo Quarto: 5 flagged",
+        "Capitolo Ventesimo Quarto: 6 flagged",
         "Capitolo Ventesimo Quinto: 7 flagged",
         "Capitolo Ventesimo Secondo: 24 flagged",
         "Capitolo Ventesimo Sesto: 4 flagged",
@@ -3298,7 +3326,7 @@
         "Prefazione: 1 flagged"
       ],
       "issues": [
-        "448 total unique flagged words across 41 chapters"
+        "452 total unique flagged words across 41 chapters"
       ]
     },
     {

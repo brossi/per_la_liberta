@@ -261,8 +261,8 @@
       "votes_printed": 1,
       "votes_published": 1,
       "category": "misread",
-      "action": "restore",
-      "reason": "'carriere' (plural) was misread/substituted as 'carriera' (singular); the sentence context ('avviarlo alla carriera militare') actually fits singular, but the printed form 'carriere' may reflect the original text's wording and should be restored.",
+      "action": "keep",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -276,7 +276,8 @@
           "reason": "\"carriere\" creates a grammatical mismatch with the singular \"alla... militare\". It is a typo for \"carriera\"."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 9,
@@ -3415,8 +3416,8 @@
       "votes_printed": 0,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'sgambietto' is unattested (0 dict) while 'sgambetto' is the correct standard form; likely a 1913 typesetting error.",
+      "action": "restore",
+      "reason": "panel split: page form confirmed by own native-res crop read -> restore",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -3430,6 +3431,11 @@
           "reason": "\"sgambietto\" is a valid dialectal or archaic variant of \"sgambetto\" and should not be modernized."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "dava lo sgambetto ad una guardia",
+        "new": "dava lo sgambietto ad una guardia"
       }
     },
     {
@@ -3504,8 +3510,8 @@
       "votes_printed": 0,
       "votes_published": 1,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'gagliardemente' is unrecognized (0 dict) while 'gagliardamente' is the correct adverbial form; a genuine 1913 typesetting error.",
+      "action": "restore",
+      "reason": "panel split: page form confirmed by own native-res crop read -> restore",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -3519,6 +3525,11 @@
           "reason": "\"gagliardemente\" is a clear typographical error for the correct adverb \"gagliardamente\"."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "batteva gagliardamente tra le Alpi",
+        "new": "batteva gagliardemente tra le Alpi"
       }
     },
     {
@@ -4267,7 +4278,7 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Coperchio' is a clear misprint for the well-known Milan arcade 'Coperto dei Figini'; the edition correctly restores the toponym.",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -4281,7 +4292,8 @@
           "reason": "The historical location is \"Coperto dei Figini\"; \"Coperchio\" is a factual error or misprint corrected by the edition."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 156,
@@ -4306,7 +4318,7 @@
       "votes_published": 0,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'squagliarmi' is a plausible period form but differs meaningfully from 'squagliarmela'; however the idiomatic phrase 'squagliarsela' (to slip away) requires the pronominal 'la', making 'squagliarmi' a likely transcription error or the edition corrected a misprint. Given 'squagliarmela' is the correct idiom and PRINTED lacks the 'la', this looks like a source typo the edition fixed.",
+      "reason": "panel split: page form confirmed by own native-res crop read -> restore",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -4320,6 +4332,11 @@
           "reason": "Squagliarmi is a perfectly valid reflexive verb meaning 'to slip away'. The edition needlessly changed it to squagliarmela."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "di squagliarmela silenziosamente",
+        "new": "di squagliarmi silenziosamente"
       }
     },
     {
@@ -8686,7 +8703,7 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "Context requires 'le labbra' (feminine plural); printed 'la' is a misprint of 'le' before 'labbra'.",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -8700,7 +8717,8 @@
           "reason": "'la labbra' is grammatically incorrect for the plural 'labbra'. The edition correctly fixed the typo to 'le'."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 318,
@@ -8957,8 +8975,8 @@
       "votes_printed": 3,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "'del' was printed but the sentence requires 'dei' (plural 'dei confini'); this is a transcription misread — but wait, PRINTED='del' and PUBLISHED='dei', and the sentence uses 'dei'. PRINTED 'del' appears to be a source typo or misread. The sentence clearly needs 'dei'; likely source_typo_fixed.",
+      "action": "keep",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -8972,7 +8990,8 @@
           "reason": "\"del confini\" is grammatically incorrect (singular article, plural noun); the edition correctly fixes the typo to \"dei\"."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 327,
@@ -9644,7 +9663,7 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'manifestarne il desiderio' is grammatically awkward here; 'manifestare' fits the syntax better, suggesting 'manifestarne' was a 1913 typesetting error",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -9658,7 +9677,8 @@
           "reason": "PRINTED 'manifestarne' (to express the desire *for it*) is grammatically correct and fits perfectly; the edition wrongly dropped the enclitic 'ne'."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 352,
@@ -13825,8 +13845,8 @@
       "votes_printed": 2,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'un' was misread as 'una'; 'in un quarta' may be a typo but the gender change suggests a transcription error — 'una quarta' (a quarter-hour) is contextually correct, so this may be source_typo_fixed.",
+      "action": "keep",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -13840,7 +13860,8 @@
           "reason": "'una' correctly agrees in gender with the feminine 'quarta', fixing the ungrammatical misprint 'un'."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 509,
@@ -18058,8 +18079,8 @@
       "votes_printed": 3,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'cessa' (present tense) vs PUBLISHED 'cessò' (past tense); context of narrative past requires 'cessò'. This appears to be a source typo (wrong tense) corrected by the edition.",
+      "action": "keep",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -18073,7 +18094,8 @@
           "reason": "'cessa' (present tense) is perfectly grammatical. The editor likely over-modernized or smoothed the tense to the past ('cessò')."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 665,
@@ -18590,8 +18612,8 @@
       "votes_printed": 0,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'cannottiere' with double-n is a clear misprint; 'canottiere' is the correct standard spelling.",
+      "action": "restore",
+      "reason": "panel split: page form confirmed by own native-res crop read -> restore",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -18605,6 +18627,11 @@
           "reason": "'cannottiere' is a valid, well-attested period/variant spelling of 'canottiere'. It should not have been modernized."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "Morbioli, canottiere a Roma",
+        "new": "Morbioli, cannottiere a Roma"
       }
     },
     {
@@ -20567,8 +20594,8 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'capitoletto' (small chapter) is the correct word; 'capitaletto' is a typographical error in the 1913 printing.",
+      "action": "restore",
+      "reason": "panel split: page form confirmed by own native-res crop read -> restore",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -20582,6 +20609,11 @@
           "reason": "'Capitaletto' (a small capital/sum of money) perfectly fits the context of 'mille e cento', unlike 'capitoletto' (small chapter)."
         },
         "consensus": "split"
+      },
+      "resolved": "applied",
+      "applied_edit": {
+        "old": "un capitoletto di mille e cento",
+        "new": "un capitaletto di mille e cento"
       }
     },
     {
@@ -22378,8 +22410,8 @@
       "votes_printed": 3,
       "votes_published": 2,
       "category": "misread",
-      "action": "restore",
-      "reason": "'intesa' (intense/directed) vs 'intensa' — printed 'intesa' makes sense in context ('si riversa tanto più intesa') as an archaic/literary usage, but more likely a misread of 'intensa'; however 'intesa' is a different word entirely. Given context requires 'intensa' for sense, this looks like a source typo fixed.",
+      "action": "keep",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -22393,7 +22425,8 @@
           "reason": "PRINTED 'intesa' is likely a typo missing the 'n' for 'intensa' given the verb 'riversa'."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 827,
@@ -23052,8 +23085,8 @@
       "votes_printed": 1,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'nè' (archaic/elided form) was misread as 'nei'; the sentence with 'nei suoi pensieri' fits 'nei' contextually, but PRINTED shows 'nè', suggesting a different sentence fragment was captured — likely a misread of the printed text.",
+      "action": "keep",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "restore",
         "opus": {
@@ -23067,7 +23100,8 @@
           "reason": "'nè' is a valid archaic/poetic spelling for 'ne i' (nei), fitting perfectly in context."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 852,
@@ -23142,7 +23176,7 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'anacronisma' is a misspelling of the standard Italian 'anacronismo'; the edition correctly fixes this genuine typographical error in the 1913 setting.",
+      "reason": "panel split: sentence context shows edition is correct; page reading is a misread/typo -> keep",
       "re_audit": {
         "original_action": "keep",
         "opus": {
@@ -23156,7 +23190,8 @@
           "reason": "'anacronisma' is a masculine period variant recognized by at least one historical dictionary."
         },
         "consensus": "split"
-      }
+      },
+      "resolved": "applied"
     },
     {
       "id": 855,
