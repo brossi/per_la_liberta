@@ -30,7 +30,9 @@ from dotenv import load_dotenv
 import vision_review as vr
 
 ROOT = Path(__file__).parent
-CANDIDATES = ROOT / "data" / "divergence_audit_candidates.json"
+# audit_divergences.py writes the candidate set here; read it from the same path
+# so the audit→re-adjudication handoff needs no manual copy.
+CANDIDATES = ROOT / "state" / "audit" / "divergence_candidates.json"
 PRIOR = ROOT / "data" / "divergence_audit_verdicts.json"
 PAGES = ROOT / "data" / "chapter_pages.json"
 OUT = ROOT / "data" / "divergence_audit_verdicts_gemini.json"
