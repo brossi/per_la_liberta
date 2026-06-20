@@ -89,7 +89,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Vanuo' is clearly a misprint for 'Vanno' (transposition/substitution of 'u' for 'n'); not a plausible period spelling variant."
+      "reason": "'Vanuo' is clearly a misprint for 'Vanno' (transposition/substitution of 'u' for 'n'); not a plausible period spelling variant.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Vanuo' is not a word; 'Vanno' (they go) is correct verb form."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"Vanuo\" is an obvious typographic error (a turned 'n') for \"Vanno\", correctly fixed in the modern edition."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 3,
@@ -237,7 +251,21 @@
       "votes_published": 1,
       "category": "misread",
       "action": "restore",
-      "reason": "'carriere' (plural) was misread/substituted as 'carriera' (singular); the sentence context ('avviarlo alla carriera militare') actually fits singular, but the printed form 'carriere' may reflect the original text's wording and should be restored."
+      "reason": "'carriere' (plural) was misread/substituted as 'carriera' (singular); the sentence context ('avviarlo alla carriera militare') actually fits singular, but the printed form 'carriere' may reflect the original text's wording and should be restored.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'carriera militare' singular correct; but printed 'carriere' plural mismatch—actually published reads correctly singular."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"carriere\" creates a grammatical mismatch with the singular \"alla... militare\". It is a typo for \"carriera\"."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 9,
@@ -660,7 +688,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Meternich' is a clear misprint of the proper name 'Metternich' (missing one 't'); the edition correctly restores the standard spelling."
+      "reason": "'Meternich' is a clear misprint of the proper name 'Metternich' (missing one 't'); the edition correctly restores the standard spelling.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Meternich' misspelled; proper name is Metternich."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"Meternich\" is a typographical error missing the double 't' for the historical figure Metternich."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 26,
@@ -710,7 +752,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'grnducato' is an obvious typesetting misprint (missing 'a') for 'granducato'; the edition rightly corrects it."
+      "reason": "'grnducato' is an obvious typesetting misprint (missing 'a') for 'granducato'; the edition rightly corrects it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'grnducato' is typo; 'granducato' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"grnducato\" is a clear misprint missing an 'a'. The published edition correctly fixes this."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 28,
@@ -760,7 +816,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "Printed 'l.' is a misprint for the Roman numeral 'I.' (Vittorio Emanuele I.); the edition correctly restores the numeral."
+      "reason": "Printed 'l.' is a misprint for the Roman numeral 'I.' (Vittorio Emanuele I.); the edition correctly restores the numeral.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "Vittorio Emanuele I, Roman numeral; 'l.' is OCR error."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The lowercase \"l.\" is a printing error for the Roman numeral \"I.\" (Vittorio Emanuele I), which the edition fixes."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 30,
@@ -1254,7 +1324,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'firmatc' is clearly a misprint for 'firmato' (final 'o' misread/set as 'c'); zero dictionary recognition confirms it is not a valid word. Edition correctly fixes the typo."
+      "reason": "'firmatc' is clearly a misprint for 'firmato' (final 'o' misread/set as 'c'); zero dictionary recognition confirms it is not a valid word. Edition correctly fixes the typo.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'firmatc' nonsense; 'firmato' correct past participle."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"firmatc\" is a clear typographical error ('c' instead of 'o') for \"firmato\", correctly amended by the edition."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 50,
@@ -1402,7 +1486,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'rivoluzionri' is a clear typesetting error (transposed/dropped letters) for 'rivoluzionari'; zero dictionary recognition confirms it is a misprint the edition rightly corrected."
+      "reason": "'rivoluzionri' is a clear typesetting error (transposed/dropped letters) for 'rivoluzionari'; zero dictionary recognition confirms it is a misprint the edition rightly corrected.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'rivoluzionri' missing letter, typo; 'rivoluzionari' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED is an obvious typo missing an 'a'. The edition correctly fixes it to 'rivoluzionari'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 56,
@@ -1550,7 +1648,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'dela' is an obvious misprint for 'della'; the edition correctly restored the standard form."
+      "reason": "PRINTED 'dela' is an obvious misprint for 'della'; the edition correctly restored the standard form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'dela' is misprint; 'della' correct for context."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'dela' is a clear typo for 'della' in this context. The edition correctly fixes the missing 'l'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 62,
@@ -1650,7 +1762,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'trscinandosi' is a clear typesetting error (missing 'a') for 'trascinandosi'; zero dictionary recognition confirms it is a misprint the edition rightly corrected."
+      "reason": "'trscinandosi' is a clear typesetting error (missing 'a') for 'trascinandosi'; zero dictionary recognition confirms it is a misprint the edition rightly corrected.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'trscinandosi' missing 'a', typo; 'trascinandosi' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED is missing a vowel ('a'), making it unpronounceable. It is a clear typo that the edition correctly fixes."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 66,
@@ -1822,7 +1948,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED '3' is clearly a misprint for '8' given the context ('Il 8 Giugno'); the edition rightly corrected the numeral."
+      "reason": "PRINTED '3' is clearly a misprint for '8' given the context ('Il 8 Giugno'); the edition rightly corrected the numeral.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "Date digit; cannot verify, edition's '8' plausible correction."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "The article 'Il' proves the original number was '3'. Changing it to '8' creates the ungrammatical phrase 'Il 8' instead of 'L'8'."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 73,
@@ -1944,9 +2084,11 @@
       "published": "io",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan corroborates phrase on the page — blind-read omission, not a deviation",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": true,
+      "resolved": "phantom"
     },
     {
       "id": 78,
@@ -1992,7 +2134,21 @@
       "votes_published": 2,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'all'abbiezione' and PUBLISHED 'all'obbiezione' are distinct forms; 'abbiezione' (abjection) vs 'obbiezione' (objection) have different meanings. Given context (monarchical objection), 'obbiezione' may be correct — but PRINTED 'abbiezione' could also be intentional. Marking as uncertain given semantic difference."
+      "reason": "PRINTED 'all'abbiezione' and PUBLISHED 'all'obbiezione' are distinct forms; 'abbiezione' (abjection) vs 'obbiezione' (objection) have different meanings. Given context (monarchical objection), 'obbiezione' may be correct — but PRINTED 'abbiezione' could also be intentional. Marking as uncertain given semantic difference.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'abbiezione' (abjection) is valid period spelling; fits 'monarchica' allusions better than 'obbiezione'."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'Abbiezione' (abjection/degradation) makes perfect sense historically in this republican political context. The edition improperly altered a valid original word."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 80,
@@ -2132,7 +2288,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'Terragona' is a misprint of the city name 'Tarragona' (Spain); the edition correctly restored the proper spelling."
+      "reason": "PRINTED 'Terragona' is a misprint of the city name 'Tarragona' (Spain); the edition correctly restored the proper spelling.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Terragona' misspelling; 'Tarragona' is correct Spanish city name."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'Terragona' is a known historical Italian spelling for the Spanish city Tarragona, not a simple typo. The edition over-modernized the toponym."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 86,
@@ -2181,8 +2351,22 @@
       "votes_printed": 0,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "'colcri' is a clear OCR misread of 'colori'; the printed text almost certainly reads 'colori' but was scanned as 'colcri'. However, since the task says PRINTED is ground truth from the scan, and 'colcri' has 0 dict matches while 'colori' fits perfectly, this is a misread in the transcription — the edition correctly shows 'colori' but we must treat the scan reading; actually the printed word was likely 'colori' misread as 'colcri'. This is a transcription misread by the modern editor of the scan — but wait, the PUBLISHED version has 'colori' which is correct. The scan shows 'colcri' which is a printing artifact or misread. Given context, the edition fixed a genuine scan ambiguity correctly. ACTION keep."
+      "action": "keep",
+      "reason": "'colcri' is a clear OCR misread of 'colori'; the printed text almost certainly reads 'colori' but was scanned as 'colcri'. However, since the task says PRINTED is ground truth from the scan, and 'colcri' has 0 dict matches while 'colori' fits perfectly, this is a misread in the transcription — the edition correctly shows 'colori' but we must treat the scan reading; actually the printed word was likely 'colori' misread as 'colcri'. This is a transcription misread by the modern editor of the scan — but wait, the PUBLISHED version has 'colori' which is correct. The scan shows 'colcri' which is a printing artifact or misread. Given context, the edition fixed a genuine scan ambiguity correctly. ACTION keep.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'colcri' is nonsense; 'colori' (colors) fits 'a vividi colori'."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"colcri\" is an obvious misprint for \"colori\"."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 88,
@@ -2207,7 +2391,21 @@
       "votes_published": 0,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'odiandosi' (reflexive, 3rd person) vs PUBLISHED 'odiandomi' (1st person). The sentence 'pur non odiandomi' makes grammatical sense with first person. 'odiandosi' is a valid word but changes meaning. This looks like a transcription misread of 'i' vs 'o'. The context suggests first person is correct, so PUBLISHED may be right — but PRINTED could also be correct with a different subject. Given the ambiguity and that both are valid words, this is uncertain."
+      "reason": "PRINTED 'odiandosi' (reflexive, 3rd person) vs PUBLISHED 'odiandomi' (1st person). The sentence 'pur non odiandomi' makes grammatical sense with first person. 'odiandosi' is a valid word but changes meaning. This looks like a transcription misread of 'i' vs 'o'. The context suggests first person is correct, so PUBLISHED may be right — but PRINTED could also be correct with a different subject. Given the ambiguity and that both are valid words, this is uncertain.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "'odiandomi' (not hating me) fits reflexive narrative; 'odiandosi' less coherent."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "\"odiandosi\" makes perfect grammatical sense with the plural \"si sono trovati\"."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 89,
@@ -2299,9 +2497,11 @@
       "published": "volte",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan corroborates phrase on the page — blind-read omission, not a deviation",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": true,
+      "resolved": "phantom"
     },
     {
       "id": 93,
@@ -2370,7 +2570,21 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'Batignolle,' vs PUBLISHED 'botto'. These are completely different words. 'Batignolles' is a well-known Paris neighborhood (Barrière de Clichy area). The sentence 'fuori della barriera, di botto' uses 'botto' but PRINTED shows 'Batignolle' suggesting the original text may have read 'fuori della barriera di Batignolle' (outside the Batignolles barrier). This is a serious misread/substitution by the transcriber. Restore."
+      "reason": "PRINTED 'Batignolle,' vs PUBLISHED 'botto'. These are completely different words. 'Batignolles' is a well-known Paris neighborhood (Barrière de Clichy area). The sentence 'fuori della barriera, di botto' uses 'botto' but PRINTED shows 'Batignolle' suggesting the original text may have read 'fuori della barriera di Batignolle' (outside the Batignolles barrier). This is a serious misread/substitution by the transcriber. Restore.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Batignolle' is a placename, nonsensical here; 'di botto' (suddenly) fits."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "\"Batignolle\" is a proper noun (a Paris neighborhood), and \"barriera di Batignolle\" is correct. The edition completely misread it."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 96,
@@ -2415,8 +2629,22 @@
       "votes_printed": 0,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'Inimantinenti' vs PUBLISHED 'Immantinente'. 'Immantinente' (immediately) is the correct standard form (3 dict hits). PRINTED looks like a misprint/variant 'Inimantinenti' (0 dict hits). However, this could be a genuine 1913 misprint in the setting. Given 0 dict hits for printed form and it looks like a garbled version of 'Immantinente', this is likely a source typo fixed by the edition. Keep."
+      "action": "keep",
+      "reason": "PRINTED 'Inimantinenti' vs PUBLISHED 'Immantinente'. 'Immantinente' (immediately) is the correct standard form (3 dict hits). PRINTED looks like a misprint/variant 'Inimantinenti' (0 dict hits). However, this could be a genuine 1913 misprint in the setting. Given 0 dict hits for printed form and it looks like a garbled version of 'Immantinente', this is likely a source typo fixed by the edition. Keep.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Inimantinenti' is misprint; 'Immantinente' (at once) correct period word."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"Inimantinenti\" is a clear typographical error for \"Immantinenti\" or \"Immantinente\"."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 98,
@@ -2883,7 +3111,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Langre' is missing the final 's' of the correct French city name 'Langres'; a genuine 1913 misprint the edition rightly corrected."
+      "reason": "'Langre' is missing the final 's' of the correct French city name 'Langres'; a genuine 1913 misprint the edition rightly corrected.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "'Langres' is the correct French town spelling; 'Langre' dropped letter."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "\"Langre\" is the printed form, a valid Italianized or phonetic spelling of the French town \"Langres\"."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 117,
@@ -2908,7 +3150,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "Same as 116: 'Langre' is a misprint for 'Langres'."
+      "reason": "Same as 116: 'Langre' is a misprint for 'Langres'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "Same place, correct spelling is 'Langres'; printed misses final s."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "Like the previous instance, \"Langre\" is what was printed and changing it to \"Langres\" is over-modernization."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 118,
@@ -3027,9 +3283,11 @@
       "published": "uscirono",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan corroborates phrase on the page — blind-read omission, not a deviation",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": true,
+      "resolved": "phantom"
     },
     {
       "id": 123,
@@ -3079,7 +3337,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'sgambietto' is unattested (0 dict) while 'sgambetto' is the correct standard form; likely a 1913 typesetting error."
+      "reason": "'sgambietto' is unattested (0 dict) while 'sgambetto' is the correct standard form; likely a 1913 typesetting error.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "sgambietto unattested; sgambetto is correct form, dictionaries confirm published."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "\"sgambietto\" is a valid dialectal or archaic variant of \"sgambetto\" and should not be modernized."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 125,
@@ -3154,7 +3426,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'gagliardemente' is unrecognized (0 dict) while 'gagliardamente' is the correct adverbial form; a genuine 1913 typesetting error."
+      "reason": "'gagliardemente' is unrecognized (0 dict) while 'gagliardamente' is the correct adverbial form; a genuine 1913 typesetting error.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "gagliardemente is valid period variant adverb of gagliardo; fits context."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"gagliardemente\" is a clear typographical error for the correct adverb \"gagliardamente\"."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 128,
@@ -3452,7 +3738,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'incapai' is a clear 1913 typesetting error for 'incappai'; the edition correctly restores the standard form."
+      "reason": "'incapai' is a clear 1913 typesetting error for 'incappai'; the edition correctly restores the standard form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "incapai is misprint; incappai (run into) is correct verb here."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The context requires \"incappai\" (stumbled upon/fell into). \"incapai\" is a typo missing a 'p'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 140,
@@ -3477,7 +3777,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'ea' is a typesetting artifact or OCR noise for the conjunction 'e'; the edition correctly reads 'e'."
+      "reason": "'ea' is a typesetting artifact or OCR noise for the conjunction 'e'; the edition correctly reads 'e'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "'ea a quel' ungrammatical; 'e a quel' is correct conjunction."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"ea\" is an obvious misprint caused by a missing space for \"e a\"."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 141,
@@ -3697,8 +4011,22 @@
       "votes_printed": 2,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'gualciscono' lacks the standard prefix 's-'; 'sgualciscono' is the correct form and the edition rightly restores it."
+      "action": "restore",
+      "reason": "'gualciscono' lacks the standard prefix 's-'; 'sgualciscono' is the correct form and the edition rightly restores it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "gualciscono valid period form recognized by two dictionaries; reflexive si fits."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "\"gualciscono\" is a perfectly valid synonym; changing it to \"sgualciscono\" is an unnecessary editorial modernization."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 150,
@@ -3848,7 +4176,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Coperchio' is a clear misprint for the well-known Milan arcade 'Coperto dei Figini'; the edition correctly restores the toponym."
+      "reason": "'Coperchio' is a clear misprint for the well-known Milan arcade 'Coperto dei Figini'; the edition correctly restores the toponym.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "Coperchio is real word but Coperto dei Figini is the Milan landmark; actually published correct... reconsider."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The historical location is \"Coperto dei Figini\"; \"Coperchio\" is a factual error or misprint corrected by the edition."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 156,
@@ -3873,7 +4215,21 @@
       "votes_published": 0,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'squagliarmi' is a plausible period form but differs meaningfully from 'squagliarmela'; however the idiomatic phrase 'squagliarsela' (to slip away) requires the pronominal 'la', making 'squagliarmi' a likely transcription error or the edition corrected a misprint. Given 'squagliarmela' is the correct idiom and PRINTED lacks the 'la', this looks like a source typo the edition fixed."
+      "reason": "PRINTED 'squagliarmi' is a plausible period form but differs meaningfully from 'squagliarmela'; however the idiomatic phrase 'squagliarsela' (to slip away) requires the pronominal 'la', making 'squagliarmi' a likely transcription error or the edition corrected a misprint. Given 'squagliarmela' is the correct idiom and PRINTED lacks the 'la', this looks like a source typo the edition fixed.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "squagliarmela (reflexive+la) fits idiom 'squagliarsela'; squagliarmi lacks pronoun, less idiomatic here"
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "Squagliarmi is a perfectly valid reflexive verb meaning 'to slip away'. The edition needlessly changed it to squagliarmela."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 157,
@@ -3946,7 +4302,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'giacilio' is clearly a misprint for 'giaciglio' (transposition of 'l' and 'g'). The edition correctly restores the proper word."
+      "reason": "PRINTED 'giacilio' is clearly a misprint for 'giaciglio' (transposition of 'l' and 'g'). The edition correctly restores the proper word.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "giaciglio is correct word; giacilio is misprint, not recognized"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Giacilio is a typographical error missing the 'g'; the edition correctly restores the standard giaciglio (bed/pallet)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 160,
@@ -4016,8 +4386,22 @@
       "votes_printed": 1,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'entre' could be a period/French-influenced form but 'entro' is the correct Italian word. With dict_printed=1 vs dict_published=3, this looks like a misread/OCR error substituting 'entro' for 'entre'; however 'entre' is not a plausible Italian period form here — more likely a source typo fixed by the edition."
+      "action": "keep",
+      "reason": "PRINTED 'entre' could be a period/French-influenced form but 'entro' is the correct Italian word. With dict_printed=1 vs dict_published=3, this looks like a misread/OCR error substituting 'entro' for 'entre'; however 'entre' is not a plausible Italian period form here — more likely a source typo fixed by the edition.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "entro le mura correct; entre is misprint"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Entre is a misprint for the required preposition entro (within) in the phrase 'entro le mura'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 163,
@@ -4363,7 +4747,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'delia' is a misprint for 'della' (the 'l' split into 'li'). The edition correctly reads 'della'."
+      "reason": "PRINTED 'delia' is a misprint for 'della' (the 'l' split into 'li'). The edition correctly reads 'della'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "della Patria correct; delia is OCR/typo for della"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Delia is a clear typographical error (i for l) for the preposition della (of the)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 177,
@@ -4388,7 +4786,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'ur' is a clear misprint for 'un' (likely type error). The edition correctly shows 'un'."
+      "reason": "PRINTED 'ur' is a clear misprint for 'un' (likely type error). The edition correctly shows 'un'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "un grave errore correct; ur is typo"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Ur is an obvious misprint for the indefinite article un."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 178,
@@ -4413,7 +4825,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'Egii' is a misprint for 'Egli' (transposition/substitution of 'i' and 'i' — likely 'gl' misread as 'gi' or type error). The edition correctly shows 'Egli'."
+      "reason": "PRINTED 'Egii' is a misprint for 'Egli' (transposition/substitution of 'i' and 'i' — likely 'gl' misread as 'gi' or type error). The edition correctly shows 'Egli'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Egli correct; Egii is OCR misprint"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Egii is a clear typographical error (i instead of l) for the pronoun Egli."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 179,
@@ -4506,8 +4932,22 @@
       "votes_printed": 0,
       "votes_published": 1,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'scalifivano' appears to be a misread of 'scalfivano' (transposed letters). The edition correctly shows 'scalfivano'. This is a source typo fixed by the edition."
+      "action": "keep",
+      "reason": "PRINTED 'scalifivano' appears to be a misread of 'scalfivano' (transposed letters). The edition correctly shows 'scalfivano'. This is a source typo fixed by the edition.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "scalifivano not a word; scalfivano (scratched) is correct verb."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'scalifivano' is a typo for the correct verb 'scalfivano' (from scalfire)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 183,
@@ -4602,8 +5042,22 @@
       "votes_printed": 1,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'esilo' is not a valid word here; 'esile' (slender/thin) is correct and dict-attested (3). Likely a misread of final -e as -o. This is a source typo the edition rightly corrected."
+      "action": "keep",
+      "reason": "PRINTED 'esilo' is not a valid word here; 'esile' (slender/thin) is correct and dict-attested (3). Likely a misread of final -e as -o. This is a source typo the edition rightly corrected.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "esile petto correct; esilo is misprint."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'esilo' is a typo for the correct adjective 'esile'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 187,
@@ -4697,7 +5151,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'occorrrendo' has an obvious triple-r typo; 'occorrendo' is the correct form. The edition rightly corrected this misprint."
+      "reason": "PRINTED 'occorrrendo' has an obvious triple-r typo; 'occorrendo' is the correct form. The edition rightly corrected this misprint.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "occorrrendo triple-r typo; occorrendo correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'occorrrendo' contains three 'r's and is a clear typo for 'occorrendo'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 191,
@@ -4721,7 +5189,21 @@
       "votes_published": 2,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'parricide' vs PUBLISHED 'parricida' — 'parricide' could be the French/Latin form or a misprint. In Italian context 'parricida' is correct. Likely a source typo the edition fixed, but 'parricide' is also a valid Italian plural noun. Given the sentence uses it as an adjective modifying 'armi' (feminine plural), 'parricide' (feminine plural of 'parricida') is actually grammatically correct. ACTION restore."
+      "reason": "PRINTED 'parricide' vs PUBLISHED 'parricida' — 'parricide' could be the French/Latin form or a misprint. In Italian context 'parricida' is correct. Likely a source typo the edition fixed, but 'parricide' is also a valid Italian plural noun. Given the sentence uses it as an adjective modifying 'armi' (feminine plural), 'parricide' (feminine plural of 'parricida') is actually grammatically correct. ACTION restore.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "parricida agrees with armi (fem); but armi parricida... actually 'parricide' archaic plural fits armi plural."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'parricide' correctly agrees in gender and number with the plural feminine noun 'armi'."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 192,
@@ -4912,7 +5394,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'ammanuense' (double m) is not recognized by period dicts (0); 'amanuense' is the correct standard form (dict score 3). The extra 'm' is a misprint in the 1913 setting."
+      "reason": "PRINTED 'ammanuense' (double m) is not recognized by period dicts (0); 'amanuense' is the correct standard form (dict score 3). The extra 'm' is a misprint in the 1913 setting.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "amanuense correct spelling; ammanuense misprint with double-m."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "'ammanuense' is a misspelling (hypercorrection of consonants) of 'amanuense'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 200,
@@ -4957,8 +5453,22 @@
       "votes_printed": 2,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'une' vs PUBLISHED 'una' — 'une' could be French influence or a misprint for 'una'. Given the Italian context and that 'una' fits perfectly, 'une' is likely a source typo the edition corrected."
+      "action": "keep",
+      "reason": "PRINTED 'une' vs PUBLISHED 'una' — 'une' could be French influence or a misprint for 'una'. Given the Italian context and that 'una' fits perfectly, 'une' is likely a source typo the edition corrected.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "una specie correct Italian; 'une' is French/typo."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'une' is a typo for the feminine singular article 'una'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 202,
@@ -4980,8 +5490,22 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'questuati' vs PUBLISHED 'questuanti' — 'questuanti' (begging, present participle) fits the context ('questuanti col pretesto della Patria'). 'Questuati' would be a past participle and makes less sense. The edition likely corrected a source typo."
+      "action": "keep",
+      "reason": "PRINTED 'questuati' vs PUBLISHED 'questuanti' — 'questuanti' (begging, present participle) fits the context ('questuanti col pretesto della Patria'). 'Questuati' would be a past participle and makes less sense. The edition likely corrected a source typo.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "'questuanti' (begging, soliciting) fits; 'questuati' is past participle, ungrammatical here."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The printed word lacks the 'n' for the present participle 'questuanti', making it a grammatical error (typo) in context."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 203,
@@ -5054,7 +5578,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'Finalmnte' is clearly a typographical omission of 'e', not a period spelling variant. PUBLISHED correctly restores 'Finalmente'."
+      "reason": "PRINTED 'Finalmnte' is clearly a typographical omission of 'e', not a period spelling variant. PUBLISHED correctly restores 'Finalmente'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Finalmnte' is obvious typo missing 'e'; 'Finalmente' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The printed word is missing an 'e' ('Finalmnte'); the edition correctly fixes this obvious typo."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 206,
@@ -5128,8 +5666,22 @@
       "votes_printed": 3,
       "votes_published": 3,
       "category": "misread",
-      "action": "keep",
-      "reason": "PRINTED 'spera' makes no sense in context 'ogni loco ove si opera'; 'opera' is clearly correct. This is a source typo (misprint of 'opera' as 'spera') that the edition rightly corrected."
+      "action": "restore",
+      "reason": "PRINTED 'spera' makes no sense in context 'ogni loco ove si opera'; 'opera' is clearly correct. This is a source typo (misprint of 'opera' as 'spera') that the edition rightly corrected.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'ogni loco ove si spera' reads sensibly; both words valid, printed page authoritative."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'spera' (hopes) correctly governs the following infinitive ('spera versare' makes sense); 'opera' is likely an OCR error or misreading in the edition."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 209,
@@ -5225,7 +5777,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'Trevis' appears to be a truncated misprint of 'Treviso' (proper noun). The edition correctly restores the full place name."
+      "reason": "PRINTED 'Trevis' appears to be a truncated misprint of 'Treviso' (proper noun). The edition correctly restores the full place name.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "low",
+          "reason": "'Trevis' could be a dialectal/abbreviated form on page; context ambiguous, page wins."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Trevis' is a clear typo or truncated word for 'Treviso'; the edition corrects it."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 213,
@@ -5275,7 +5841,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'dirette' vs PUBLISHED 'diretto': the sentence 'ne avrebbe diretto le sorti' requires masculine singular 'diretto' agreeing with the subject. 'dirette' (feminine plural) is a misread/typo; however this could be a source typo. Given context demands 'diretto', this is a source_typo_fixed."
+      "reason": "PRINTED 'dirette' vs PUBLISHED 'diretto': the sentence 'ne avrebbe diretto le sorti' requires masculine singular 'diretto' agreeing with the subject. 'dirette' (feminine plural) is a misread/typo; however this could be a source typo. Given context demands 'diretto', this is a source_typo_fixed.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'avrebbe diretto' requires masculine participle; 'dirette' ungrammatical."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'dirette' agrees with the feminine plural object 'le sorti', a correct and common grammatical construction in older Italian that was over-modernized."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 215,
@@ -5300,7 +5880,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'Stefane' is a misprint of the proper noun 'Stefano' (Santo Stefano). The edition correctly restores the proper name."
+      "reason": "PRINTED 'Stefane' is a misprint of the proper noun 'Stefano' (Santo Stefano). The edition correctly restores the proper name.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Santo Stefane' is typo; correct name is 'Stefano'."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Stefane' is a clear typo for 'Stefano' in 'Santo Stefano'. The edition correctly fixes it."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 216,
@@ -5324,8 +5918,22 @@
       "votes_printed": 3,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "PRINTED 'alto' vs PUBLISHED 'al': the sentence 'si stende un parapetto al così che' requires 'al' not 'alto'. 'alto' appears to be a misread expanding 'al' with extra letters, or a source typo. Given 'alto' doesn't fit grammatically, this is source_typo_fixed."
+      "action": "restore",
+      "reason": "PRINTED 'alto' vs PUBLISHED 'al': the sentence 'si stende un parapetto al così che' requires 'al' not 'alto'. 'alto' appears to be a misread expanding 'al' with extra letters, or a source typo. Given 'alto' doesn't fit grammatically, this is source_typo_fixed.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'parapetto alto' (high parapet) makes sense; 'parapetto al' is incomplete and ungrammatical."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'alto così che' makes perfect sense, whereas 'al così che' is ungrammatical."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 217,
@@ -5374,8 +5982,22 @@
       "votes_printed": 3,
       "votes_published": 3,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "PRINTED 'guardie. A' vs PUBLISHED 'guardia;': the sentence 'era lasciato senza guardia; custodia dell'edificio' requires 'guardia' (singular). PRINTED 'guardie. A' represents a misread of punctuation and word form. This is a source_typo_fixed or misread; the edition's 'guardia;' is contextually correct."
+      "action": "restore",
+      "reason": "PRINTED 'guardie. A' vs PUBLISHED 'guardia;': the sentence 'era lasciato senza guardia; custodia dell'edificio' requires 'guardia' (singular). PRINTED 'guardie. A' represents a misread of punctuation and word form. This is a source_typo_fixed or misread; the edition's 'guardia;' is contextually correct.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "PRINTED 'senza guardie. A custodia' reads coherently; published 'guardia;' awkward with following 'custodia'."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'senza guardie. A custodia...' restores the original syntax, which was lost in the edition."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 219,
@@ -5450,7 +6072,21 @@
       "votes_published": 0,
       "category": "modernization",
       "action": "restore",
-      "reason": "PRINTED 'appiattarsi' (dict score 2) is a valid period verb form alongside 'appiattirsi'. The edition modernised to 'appiattirsi' (dict score 0, actually less attested). Restore the printed form."
+      "reason": "PRINTED 'appiattarsi' (dict score 2) is a valid period verb form alongside 'appiattirsi'. The edition modernised to 'appiattirsi' (dict score 0, actually less attested). Restore the printed form.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'appiattarsi' (to flatten/hide oneself) is correct standard Italian; 'appiattirsi' unrecognized."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'appiattarsi' (to hide) is the correct period verb here, wrongly modernized or misread as 'appiattirsi'."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 222,
@@ -5610,8 +6246,22 @@
       "votes_printed": 2,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "PRINTED 'diventati' vs PUBLISHED 'ventidue': the sentence 'Sui baluardi, ventidue nostri' requires the numeral 'ventidue'. 'diventati' is a completely different word and is clearly a misread of the printed text. Restore PRINTED 'diventati'... wait — PRINTED is 'diventati' but PUBLISHED is 'ventidue'. Since PUBLISHED 'ventidue' fits the sentence and PRINTED 'diventati' does not, this is a misread of the printed page (the transcriber misread 'ventidue' as 'diventati'). ACTION: keep published 'ventidue'."
+      "action": "restore",
+      "reason": "PRINTED 'diventati' vs PUBLISHED 'ventidue': the sentence 'Sui baluardi, ventidue nostri' requires the numeral 'ventidue'. 'diventati' is a completely different word and is clearly a misread of the printed text. Restore PRINTED 'diventati'... wait — PRINTED is 'diventati' but PUBLISHED is 'ventidue'. Since PUBLISHED 'ventidue' fits the sentence and PRINTED 'diventati' does not, this is a misread of the printed page (the transcriber misread 'ventidue' as 'diventati'). ACTION: keep published 'ventidue'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'ventidue nostri' odd; 'diventati nostri' (become ours) fits baluardi context better."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'diventati nostri' (having become ours) makes clear semantic sense; 'ventidue nostri' is an OCR or transcription error."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 229,
@@ -5634,7 +6284,21 @@
       "votes_published": 0,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'inalberiamo' vs PUBLISHED 'innalziamo': 'inalberiamo' (we hoist/raise a flag) is actually the more precise term for raising a flag on a mast/bastion, and is a valid Italian word. PUBLISHED 'innalziamo' is a synonym. This looks like a transcription substitution. Restore printed 'inalberiamo'."
+      "reason": "PRINTED 'inalberiamo' vs PUBLISHED 'innalziamo': 'inalberiamo' (we hoist/raise a flag) is actually the more precise term for raising a flag on a mast/bastion, and is a valid Italian word. PUBLISHED 'innalziamo' is a synonym. This looks like a transcription substitution. Restore printed 'inalberiamo'.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'inalberiamo la bandiera' (to hoist a flag) is idiomatic and correct; published is over-modernization."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'inalberiamo' correctly means to hoist (a flag), wrongly replaced by the more generic 'innalziamo'."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 230,
@@ -5878,7 +6542,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'disepellire' is a misprint lacking the standard double-s and double-p; 'disseppellire' is the correct form."
+      "reason": "'disepellire' is a misprint lacking the standard double-s and double-p; 'disseppellire' is the correct form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'disseppellire' is correct standard form; 'disepellire' is a misprint, recognized by no dictionary."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'disepellire' is an obvious misprint for 'disseppellire', correctly fixed in the edition."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 240,
@@ -7181,7 +7859,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'bestiemme' is a vowel-transposition misprint of 'bestemmie'; 0 dict support confirms it is not a valid period form."
+      "reason": "'bestiemme' is a vowel-transposition misprint of 'bestemmie'; 0 dict support confirms it is not a valid period form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'bestiemme' is misspelling; correct plural is 'bestemmie'."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'bestiemme' is a clear typographical error for 'bestemmie' (blasphemies/curses). The edition correctly fixed it."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 293,
@@ -7500,8 +8192,22 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'attrattavi' appears to be a misprint of 'attrattivi' (masc. pl. past participle agreeing with masculine subject); 0 dict support for 'attrattavi'."
+      "action": "restore",
+      "reason": "'attrattavi' appears to be a misprint of 'attrattivi' (masc. pl. past participle agreeing with masculine subject); 0 dict support for 'attrattavi'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'attrattavi' (attratti+vi) means 'attracted there', fits people drawn by fair; 'attrattivi' is adjective, wrong."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'attrattavi' is 'attratta' + 'vi' (attracted there), which is grammatically correct. The edition introduced an error with 'attrattivi'."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 306,
@@ -7551,7 +8257,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'chellerima' is a misprint of the known term 'chellerina' (café waitress); the final syllable is garbled."
+      "reason": "'chellerima' is a misprint of the known term 'chellerina' (café waitress); the final syllable is garbled.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "'chellerina' (Kellnerin, waitress) is intended; 'chellerima' is typo."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'chellerima' is a misprint for 'chellerina' (Italianized from German 'Kellnerin', waitress). The edition corrected the typo."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 308,
@@ -7576,7 +8296,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'qualeosa' is an obvious misprint (extra 'e') of 'qualcosa'; 0 dict support confirms it is not a valid form."
+      "reason": "'qualeosa' is an obvious misprint (extra 'e') of 'qualcosa'; 0 dict support confirms it is not a valid form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'qualeosa' is OCR/typo; 'qualcosa' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'qualeosa' is a typo for 'qualcosa' (an 'e' printed instead of a 'c'). The published edition correctly fixed it."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 309,
@@ -7675,8 +8409,22 @@
       "votes_printed": 1,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "The idiom is 'cascare dalla padella nelle braghe' (frying pan into fire); 'bragie' (embers) disrupts the fixed phrase and is a misprint of 'braghe'."
+      "action": "restore",
+      "reason": "The idiom is 'cascare dalla padella nelle braghe' (frying pan into fire); 'bragie' (embers) disrupts the fixed phrase and is a misprint of 'braghe'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "Idiom 'dalla padella nella brace' (bragie); 'braghe' wrong, alters meaning."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'bragie' is an archaic spelling of 'braci' (embers) completing the idiom. 'braghe' (trousers) is an absurd over-correction by the edition."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 313,
@@ -7751,7 +8499,8 @@
       "votes_published": 1,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both PRINTED and PUBLISHED show 'Ma' — no actual difference detected; may be a data entry issue."
+      "reason": "printed and published are identical — no actual deviation (false candidate)",
+      "resolved": "no_difference"
     },
     {
       "id": 316,
@@ -7801,7 +8550,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "Context requires 'le labbra' (feminine plural); printed 'la' is a misprint of 'le' before 'labbra'."
+      "reason": "Context requires 'le labbra' (feminine plural); printed 'la' is a misprint of 'le' before 'labbra'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'torse le labbra' twisted lips, plural feminine needs 'le'; printed 'la' wrong—wait, published has 'le'."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'la labbra' is grammatically incorrect for the plural 'labbra'. The edition correctly fixed the typo to 'le'."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 318,
@@ -7826,7 +8589,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'quele' is a misprint missing 'a' from 'quale'; not a valid period form."
+      "reason": "'quele' is a misprint missing 'a' from 'quale'; not a valid period form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'quele' is not valid; 'quale' fits 'il quale' correctly."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"quele\" is an obvious typographical error for the grammatically correct \"quale\"."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 319,
@@ -7899,9 +8676,11 @@
       "published": "alla montagna.\"",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan corroborates phrase on the page — blind-read omission, not a deviation",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": true,
+      "resolved": "phantom"
     },
     {
       "id": 322,
@@ -7926,7 +8705,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'candellieri' with double 'l' is a misspelling of standard 'candelieri'; not a recognised period variant, dict confirms published form correct."
+      "reason": "'candellieri' with double 'l' is a misspelling of standard 'candelieri'; not a recognised period variant, dict confirms published form correct.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'candellieri' is valid period spelling with double-l; fits grammatically."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"candellieri\" is a typographical error (double 'l') for \"candelieri\"."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 323,
@@ -8024,7 +8817,21 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "'del' was printed but the sentence requires 'dei' (plural 'dei confini'); this is a transcription misread — but wait, PRINTED='del' and PUBLISHED='dei', and the sentence uses 'dei'. PRINTED 'del' appears to be a source typo or misread. The sentence clearly needs 'dei'; likely source_typo_fixed."
+      "reason": "'del' was printed but the sentence requires 'dei' (plural 'dei confini'); this is a transcription misread — but wait, PRINTED='del' and PUBLISHED='dei', and the sentence uses 'dei'. PRINTED 'del' appears to be a source typo or misread. The sentence clearly needs 'dei'; likely source_typo_fixed.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'guardia del confine' singular reads correctly; both valid words, printed plausible."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"del confini\" is grammatically incorrect (singular article, plural noun); the edition correctly fixes the typo to \"dei\"."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 327,
@@ -8147,7 +8954,21 @@
       "votes_published": 1,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'coll'applicazione' and PUBLISHED 'coll'ombra' are completely different phrases; 'coll'ombra del capestro' in the sentence matches PUBLISHED, suggesting PRINTED is the misread or the sentence quote belongs to published. Likely the printed text reads 'coll'ombra' and 'coll'applicazione' is a transcription error — but PRINTED is ground truth. Flagging as uncertain."
+      "reason": "PRINTED 'coll'applicazione' and PUBLISHED 'coll'ombra' are completely different phrases; 'coll'ombra del capestro' in the sentence matches PUBLISHED, suggesting PRINTED is the misread or the sentence quote belongs to published. Likely the printed text reads 'coll'ombra' and 'coll'applicazione' is a transcription error — but PRINTED is ground truth. Flagging as uncertain.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'coll'applicazione del capestro' reads sensibly; printed page word fits context."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "\"coll'applicazione\" is contextually valid and significantly different from \"coll'ombra\". The edition unjustifiably rewrote the original text."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 332,
@@ -8247,7 +9068,21 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'Argante' is clearly a misread/mistranscription of 'amante del' — however PRINTED is ground truth from the scan. If the scan truly shows 'Argante', this would be a source_typo or OCR error in the edition. Most likely the printed page shows 'amante del' and the reported PRINTED value is wrong, making this uncertain."
+      "reason": "PRINTED 'Argante' is clearly a misread/mistranscription of 'amante del' — however PRINTED is ground truth from the scan. If the scan truly shows 'Argante', this would be a source_typo or OCR error in the edition. Most likely the printed page shows 'amante del' and the reported PRINTED value is wrong, making this uncertain.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Argante' nonsense in context; 'amante del' fits the quotation grammatically."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "\"Argante\" is a valid literary reference (from Tasso) making perfect sense; the edition rewrote it improperly to \"amante del\"."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 336,
@@ -8272,7 +9107,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'famigeratto' with double 't' is a clear misprint of 'famigerato'; not a period spelling variant, the edition correctly fixes it."
+      "reason": "'famigeratto' with double 't' is a clear misprint of 'famigerato'; not a period spelling variant, the edition correctly fixes it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'famigeratto' double-t is a misprint; 'famigerato' is correct standard form."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"famigeratto\" is an obvious misprint for \"famigerato\"."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 337,
@@ -8412,7 +9261,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'sentirmente' is a nonsense form; 'sentirmene' is the grammatically correct pronominal form, fixing a 1913 typesetting error"
+      "reason": "'sentirmente' is a nonsense form; 'sentirmene' is the grammatically correct pronominal form, fixing a 1913 typesetting error",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'sentirmente' is nonsense; 'sentirmene' (sentirsene) fits reflexive context."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'sentirmente' is an obvious misprint for 'sentirmene' (sentire + me + ne)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 343,
@@ -8635,7 +9498,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'manifestarne il desiderio' is grammatically awkward here; 'manifestare' fits the syntax better, suggesting 'manifestarne' was a 1913 typesetting error"
+      "reason": "'manifestarne il desiderio' is grammatically awkward here; 'manifestare' fits the syntax better, suggesting 'manifestarne' was a 1913 typesetting error",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "'manifestare il desiderio' is correct; 'manifestarne' would need partitive lacking here."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "PRINTED 'manifestarne' (to express the desire *for it*) is grammatically correct and fits perfectly; the edition wrongly dropped the enclitic 'ne'."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 352,
@@ -8758,7 +9635,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'rittrattazione' with double-t is a clear 1913 typesetting error; 'ritrattazione' is the correct form"
+      "reason": "'rittrattazione' with double-t is a clear 1913 typesetting error; 'ritrattazione' is the correct form",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'rittrattazione' double-t is misprint; 'ritrattazione' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'rittrattazione' contains an extraneous double 't'; the edition correctly fixed the typo to 'ritrattazione'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 357,
@@ -8878,8 +9769,22 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'approvandoli' (plural) contradicts the singular 'ne aveva assunta'; 'approvandolo' (singular) is grammatically correct, fixing a 1913 error"
+      "action": "restore",
+      "reason": "'approvandoli' (plural) contradicts the singular 'ne aveva assunta'; 'approvandolo' (singular) is grammatically correct, fixing a 1913 error",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'approvati' plural antecedent; 'approvandoli' agrees better than singular 'approvandolo'."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "PRINTED 'approvandoli' correctly agrees with the preceding plural participle 'approvati'; the edition wrongly changed it to singular 'approvandolo'."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 362,
@@ -9024,8 +9929,22 @@
       "votes_printed": 0,
       "votes_published": 2,
       "category": "misread",
-      "action": "restore",
-      "reason": "'giacilio' is a misprint/misread of 'giaciglio'; the edition correctly restores 'giaciglio'. This is a source typo fixed by the edition."
+      "action": "keep",
+      "reason": "'giacilio' is a misprint/misread of 'giaciglio'; the edition correctly restores 'giaciglio'. This is a source typo fixed by the edition.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'giacilio' misprint; 'giaciglio' (bed of straw) is correct word."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'giacilio' is a typo (missing 'g') for 'giaciglio'; the edition corrects it."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 368,
@@ -9248,7 +10167,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'dsgrazia' is a clear typographical misprint (missing 'i') of 'disgrazia'. The edition correctly restored 'disgrazia'."
+      "reason": "'dsgrazia' is a clear typographical misprint (missing 'i') of 'disgrazia'. The edition correctly restored 'disgrazia'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'dsgrazia' missing vowel typo; 'disgrazia' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'dsgrazia' is missing the 'i', an obvious typo corrected in the edition."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 377,
@@ -9298,7 +10231,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'lnsciavo' is a clear typographical misprint (l instead of la) of 'lasciavo'. The edition correctly restored 'lasciavo'."
+      "reason": "'lnsciavo' is a clear typographical misprint (l instead of la) of 'lasciavo'. The edition correctly restored 'lasciavo'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'lnsciavo' is OCR/typo nonsense; 'lasciavo' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"lnsciavo\" is an obvious typographical error for \"lasciavo\" ('n' instead of 'a'). The modern edition correctly fixes it."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 379,
@@ -9346,7 +10293,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'dala' is a clear typographical misprint (single 'l') of 'dalla'. The edition correctly restored 'dalla'."
+      "reason": "'dala' is a clear typographical misprint (single 'l') of 'dalla'. The edition correctly restored 'dalla'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'dala' is typo; 'dalla' required by grammar."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The context requires the articulated preposition \"dalla\". \"dala\" is a clear typographical error missing a consonant."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 381,
@@ -9370,7 +10331,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'irriquietezza' appears to be a misprint of 'irrequietezza' (wrong vowel 'i' instead of 'e'). The edition correctly restored 'irrequietezza'."
+      "reason": "'irriquietezza' appears to be a misprint of 'irrequietezza' (wrong vowel 'i' instead of 'e'). The edition correctly restored 'irrequietezza'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "'irriquietezza' is misspelling; 'irrequietezza' standard form."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "\"irriquietezza\" is a legitimate period spelling and recognized phonetic variant that was common in early 20th-century Italian texts."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 382,
@@ -9642,8 +10617,22 @@
       "votes_printed": 0,
       "votes_published": 2,
       "category": "misread",
-      "action": "restore",
-      "reason": "'concilladini' is not a real word (dict=0); 'concittadini' is clearly correct. This is a typographic misprint in the 1913 setting that the edition rightly corrected — but since it's printed as 'concilladini', it's a source typo."
+      "action": "keep",
+      "reason": "'concilladini' is not a real word (dict=0); 'concittadini' is clearly correct. This is a typographic misprint in the 1913 setting that the edition rightly corrected — but since it's printed as 'concilladini', it's a source typo.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'concilladini' is typo; 'concittadini' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"concilladini\" is a clear misprint for \"concittadini\", resulting from an obvious typographic confusion between 'tt' and 'll'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 393,
@@ -9668,7 +10657,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'encentrati' (dict=0) is clearly a misprint of 'concentrati' (dict=2). The 1913 typesetter dropped the initial 'c'. The edition correctly fixes it."
+      "reason": "'encentrati' (dict=0) is clearly a misprint of 'concentrati' (dict=2). The 1913 typesetter dropped the initial 'c'. The edition correctly fixes it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'encentrati' is typo; 'concentrati' fits context."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"encentrati\" is a nonsensical typographical error. The edition correctly restores the intended word \"concentrati\"."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 394,
@@ -10133,7 +11136,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Campagnia' is a clear misprint for 'Compagnia'; the published correction is warranted."
+      "reason": "'Campagnia' is a clear misprint for 'Compagnia'; the published correction is warranted.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Campagnia' is typo; 'Compagnia d'Assicurazione' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"Campagnia\" is a clear misspelling of \"Compagnia\". \"Compagnia d'Assicurazione\" is the standard term for an insurance company."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 413,
@@ -10181,7 +11198,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Ammanuense' is a misprint for the correct 'amanuense'; unrecognised by all three period dictionaries while 'amanuense' scores 3."
+      "reason": "'Ammanuense' is a misprint for the correct 'amanuense'; unrecognised by all three period dictionaries while 'amanuense' scores 3.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "ammanuense double-m is misprint; amanuense correct standard form."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The double 'm' in 'ammanuense' is a typo for the correct 'amanuense', which the edition correctly fixes."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 415,
@@ -10231,7 +11262,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Levarano' is a non-standard form (incorrect past tense); 'levarono' is the correct passato remoto. Likely a 1913 typesetting error."
+      "reason": "'Levarano' is a non-standard form (incorrect past tense); 'levarono' is the correct passato remoto. Likely a 1913 typesetting error.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "levarano wrong conjugation; levarono correct passato remoto."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The correct passato remoto form is 'levarono', making 'levarano' a clear misprint."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 417,
@@ -10256,7 +11301,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Raggiugere' (missing 'n') is a misprint for 'raggiungere'; unrecognised in period dictionaries, clearly a typographical error."
+      "reason": "'Raggiugere' (missing 'n') is a misprint for 'raggiungere'; unrecognised in period dictionaries, clearly a typographical error.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "raggiugere is valid archaic/literary variant of raggiungere, fits 1913 page."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Raggiugere' is a typo missing the 'n' for 'raggiungere' (or 'raggiugnere')."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 418,
@@ -10281,7 +11340,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Buluardo' is a misprint for 'baluardo'; unrecognised by any period dictionary, clearly a typographical error."
+      "reason": "'Buluardo' is a misprint for 'baluardo'; unrecognised by any period dictionary, clearly a typographical error.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "buluardo is misprint; baluardo correct word for bulwark."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Buluardo' is a clear typographical error for 'baluardo'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 419,
@@ -10600,8 +11673,22 @@
       "votes_printed": 0,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "'scandagliaro' is a plausible archaic/dialect infinitive or past form; 'scandagliare' is the standard form. However, given context 'seppe scandagliare' (infinitive needed), 'scandagliaro' could be an archaic infinitive variant or a typo. Given it scores 0 vs 3 in dictionaries, this looks like a source typo fixed by the edition."
+      "action": "keep",
+      "reason": "'scandagliaro' is a plausible archaic/dialect infinitive or past form; 'scandagliare' is the standard form. However, given context 'seppe scandagliare' (infinitive needed), 'scandagliaro' could be an archaic infinitive variant or a typo. Given it scores 0 vs 3 in dictionaries, this looks like a source typo fixed by the edition.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "scandagliaro nonsense; scandagliare correct infinitive."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The sentence requires an infinitive ('scandagliare') after 'seppe'; 'scandagliaro' is a misprint."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 432,
@@ -10817,7 +11904,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'spendidamente' (missing 'l') is a clear typographical error in the 1913 printing for 'splendidamente'; the published edition correctly fixed it."
+      "reason": "'spendidamente' (missing 'l') is a clear typographical error in the 1913 printing for 'splendidamente'; the published edition correctly fixed it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "spendidamente missing l; splendidamente correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Spendidamente' is missing an 'l'; it is a typo for 'splendidamente'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 441,
@@ -10840,8 +11941,22 @@
       "votes_printed": 0,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED '!' appears to be a misidentification; the printed character was likely 'che' misread as '!', or vice versa. Given context requires 'che', the printed '!' seems an OCR error in reading the scan — the published 'che' is likely correct, making this a source_typo or misread scenario. Classifying as misread of printed text."
+      "action": "keep",
+      "reason": "PRINTED '!' appears to be a misidentification; the printed character was likely 'che' misread as '!', or vice versa. Given context requires 'che', the printed '!' seems an OCR error in reading the scan — the published 'che' is likely correct, making this a source_typo or misread scenario. Classifying as misread of printed text.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED '!' is nonsense; 'che' fits as relative pronoun."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'che' is syntactically necessary for the relative clause; '!' is a clear misprint or OCR error."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 442,
@@ -11039,7 +12154,8 @@
       "votes_published": 2,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both PRINTED and PUBLISHED are identical ('\"Bravo!'), so no actual difference exists. No action needed."
+      "reason": "printed and published are identical — no actual deviation (false candidate)",
+      "resolved": "no_difference"
     },
     {
       "id": 450,
@@ -11089,7 +12205,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'tarscinarono' is a clear typographical transposition (a/r swap) for 'trascinarono'; not a period spelling variant. The edition correctly fixes this misprint."
+      "reason": "'tarscinarono' is a clear typographical transposition (a/r swap) for 'trascinarono'; not a period spelling variant. The edition correctly fixes this misprint.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'tarscinarono' is misprint; 'trascinarono' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'tarscinarono' is a clear typographical error (transposition) for the correct 'trascinarono'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 452,
@@ -11114,7 +12244,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'influenzza' is an obvious double-z typo for 'influenza'. The edition rightly corrects it."
+      "reason": "'influenzza' is an obvious double-z typo for 'influenza'. The edition rightly corrects it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'influenzza' double-z typo; 'influenza' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'influenzza' contains an accidental double consonant; 'influenza' is the correct spelling."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 453,
@@ -11237,7 +12381,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'sez'altro' is a clear typo missing the 'n' in 'senz'altro'. The edition correctly restores 'senz'altro'."
+      "reason": "'sez'altro' is a clear typo missing the 'n' in 'senz'altro'. The edition correctly restores 'senz'altro'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'sez'altro' typo for 'senz'altro'."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'sez'altro' is a typo missing the 'n' for the standard phrase 'senz'altro'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 458,
@@ -11940,9 +13098,11 @@
       "published": "lì tratta",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan presence-query unreliable for this fragment — cleared on text evidence",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": false,
+      "resolved": "phantom"
     },
     {
       "id": 487,
@@ -12085,8 +13245,22 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "The correct historical name is 'Montijo' (Eugenia de Montijo). 'Moutijo' in the published text is itself an error; but PRINTED 'Montijo' is correct. Actually the edition introduced an error — this is a misread. The printed 'Montijo' is correct and published 'Moutijo' is wrong."
+      "action": "restore",
+      "reason": "The correct historical name is 'Montijo' (Eugenia de Montijo). 'Moutijo' in the published text is itself an error; but PRINTED 'Montijo' is correct. Actually the edition introduced an error — this is a misread. The printed 'Montijo' is correct and published 'Moutijo' is wrong.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "Eugenia de Montijo is correct name; 'Moutijo' is OCR/typo error."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'Montijo' is the correct historical name (Eugenia de Montijo); the modern edition introduced an OCR/reading error ('u' for 'n')."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 493,
@@ -12355,9 +13529,11 @@
       "published": "e si avanzò verso di me, e",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan presence-query unreliable for this fragment — cleared on text evidence",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": false,
+      "resolved": "phantom"
     },
     {
       "id": 504,
@@ -12403,9 +13579,11 @@
       "published": "chiese",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan corroborates phrase on the page — blind-read omission, not a deviation",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": true,
+      "resolved": "phantom"
     },
     {
       "id": 506,
@@ -12451,9 +13629,11 @@
       "published": "Egli comprende un po' la mia lingua.",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan corroborates phrase on the page — blind-read omission, not a deviation",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": true,
+      "resolved": "phantom"
     },
     {
       "id": 508,
@@ -12478,7 +13658,21 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'un' was misread as 'una'; 'in un quarta' may be a typo but the gender change suggests a transcription error — 'una quarta' (a quarter-hour) is contextually correct, so this may be source_typo_fixed."
+      "reason": "PRINTED 'un' was misread as 'una'; 'in un quarta' may be a typo but the gender change suggests a transcription error — 'una quarta' (a quarter-hour) is contextually correct, so this may be source_typo_fixed.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'una quarta' (a fourth/room) fits; PRINTED 'un' could fit too but published changed wrongly—context favors restore."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'una' correctly agrees in gender with the feminine 'quarta', fixing the ungrammatical misprint 'un'."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 509,
@@ -12908,7 +14102,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'all'irritazone' is clearly a misprint of 'all'irritazione' (missing 'i'); the edition correctly fixed this genuine typographical error in the 1913 setting."
+      "reason": "'all'irritazone' is clearly a misprint of 'all'irritazione' (missing 'i'); the edition correctly fixed this genuine typographical error in the 1913 setting.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'irritazone' missing 'i', clear typo; published correct"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The printed word is missing the 'i' in the suffix '-zione'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 527,
@@ -12933,7 +14141,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'sotta' is an obvious misprint for 'sotto'; the edition correctly restored the intended word."
+      "reason": "'sotta' is an obvious misprint for 'sotto'; the edition correctly restored the intended word.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'sotta buona scorta' wrong; 'sotto' correct"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Sotto' is an invariable preposition in this context; 'sotta' is a typo."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 528,
@@ -13008,7 +14230,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Mitologco' is an obvious misprint for 'mitologico' (missing 'i'); the edition correctly fixed this typographical error."
+      "reason": "'Mitologco' is an obvious misprint for 'mitologico' (missing 'i'); the edition correctly fixed this typographical error.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'mitologco' missing 'i', typo; 'mitologico' correct"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Mitologco' is a misprint missing an 'i'; the published edition corrects it to 'mitologico'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 531,
@@ -13083,7 +14319,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Perinesso' is a clear misprint for 'permesso' (garbled letter sequence); the edition correctly restored the intended word."
+      "reason": "'Perinesso' is a clear misprint for 'permesso' (garbled letter sequence); the edition correctly restored the intended word.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'perinesso' nonsense; 'permesso' correct"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Perinesso' is a typo (resembling an OCR error or misprint of 'm' as 'in') for 'permesso'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 534,
@@ -13133,7 +14383,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Pelesare' is a clear misprint for 'palesare' (transposition of vowels); the edition correctly fixed this typographical error."
+      "reason": "'Pelesare' is a clear misprint for 'palesare' (transposition of vowels); the edition correctly fixed this typographical error.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'pelesare' misprint; 'palesare' correct verb"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Pelesare' is a typo for 'palesare'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 536,
@@ -13208,7 +14472,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Scottland' is a misspelling of the proper noun 'Scotland Yard'; the edition correctly fixes the typo."
+      "reason": "'Scottland' is a misspelling of the proper noun 'Scotland Yard'; the edition correctly fixes the typo.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Scottland' misspelling; 'Scotland Yard' correct proper noun"
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Scottland' is a misspelling of 'Scotland' in 'Scotland Yard'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 539,
@@ -13356,9 +14634,11 @@
       "published": "erano",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan presence-query unreliable for this fragment — cleared on text evidence",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": false,
+      "resolved": "phantom"
     },
     {
       "id": 545,
@@ -13833,7 +15113,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'spendido' is missing the 'l' — a clear misprint for 'splendido' (3 dict); the edition correctly restored it."
+      "reason": "PRINTED 'spendido' is missing the 'l' — a clear misprint for 'splendido' (3 dict); the edition correctly restored it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "spendido missing l, splendido correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'spendido' is a clear typographical error for 'splendido'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 564,
@@ -13956,7 +15250,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'dela' is a clear misprint for 'della' (dropped 'l'); the edition correctly restored it."
+      "reason": "PRINTED 'dela' is a clear misprint for 'della' (dropped 'l'); the edition correctly restored it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "dela missing l, della correct article."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'dela' is a misprint for 'della'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 569,
@@ -14149,7 +15457,21 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'quel' misread as 'nel'; 'non era in quel mio diniego' vs 'nel mio diniego' — both possible, but PRINTED 'quel' is the actual text."
+      "reason": "PRINTED 'quel' misread as 'nel'; 'non era in quel mio diniego' vs 'nel mio diniego' — both possible, but PRINTED 'quel' is the actual text.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'quel mio diniego' awkward; 'nel mio diniego' fits 'non era... il mezzo'."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'quel mio diniego' makes perfect grammatical and semantic sense as the subject; the edition incorrectly altered it to 'nel'."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 577,
@@ -14245,7 +15567,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'spavalveria' is a clear misprint (transposition/intrusion of 'v') for 'spavalderia' (2 dict); the edition correctly restored it."
+      "reason": "PRINTED 'spavalveria' is a clear misprint (transposition/intrusion of 'v') for 'spavalderia' (2 dict); the edition correctly restored it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "spavalveria nonsense, spavalderia correct word."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'spavalveria' is an obvious misprint for 'spavalderia'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 581,
@@ -14293,7 +15629,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'Suturno' is a clear misprint for the planet name 'Saturno'; the edition correctly restores it."
+      "reason": "PRINTED 'Suturno' is a clear misprint for the planet name 'Saturno'; the edition correctly restores it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Suturno misprint, Saturno is the proper name."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Suturno' is a typo for 'Saturno'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 583,
@@ -14317,7 +15667,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'ehe' is an obvious OCR/typesetting misprint for 'che'; the edition rightly corrects it."
+      "reason": "PRINTED 'ehe' is an obvious OCR/typesetting misprint for 'che'; the edition rightly corrects it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "ehe is OCR/typo for relative pronoun che."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'ehe' is a common misprint for 'che'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 584,
@@ -14563,7 +15927,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'Patra' is a clear typesetting misprint for 'Patria'; the edition correctly restores it."
+      "reason": "PRINTED 'Patra' is a clear typesetting misprint for 'Patria'; the edition correctly restores it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Patra is misprint; Patria correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"Patra\" is a clear typographical error for \"Patria\" in the fixed Italian expression \"redimere la Patria\"."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 594,
@@ -14638,7 +16016,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'nulìa' with an accent is a clear misprint for 'nulla'; the edition correctly restores it."
+      "reason": "PRINTED 'nulìa' with an accent is a clear misprint for 'nulla'; the edition correctly restores it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "nulìa nonsense; nulla correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"nulìa\" is an obvious misprint for \"nulla\" (nothing), likely caused by damaged type or a typesetting error."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 597,
@@ -14887,8 +16279,22 @@
       "votes_printed": 2,
       "votes_published": 2,
       "category": "misread",
-      "action": "restore",
-      "reason": "The sentence context ('Io non ho motivo') requires 'ho'; 'ha' in the printed text is likely a misread by the transcriber — but actually the PRINTED reads 'ha' and PUBLISHED reads 'ho'. The sentence says 'Io non ho motivo' (first person), so 'ha' (third person) would be wrong in context. This is a genuine source typo fixed by the edition."
+      "action": "keep",
+      "reason": "The sentence context ('Io non ho motivo') requires 'ho'; 'ha' in the printed text is likely a misread by the transcriber — but actually the PRINTED reads 'ha' and PUBLISHED reads 'ho'. The sentence says 'Io non ho motivo' (first person), so 'ha' (third person) would be wrong in context. This is a genuine source typo fixed by the edition.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Io non ha is ungrammatical; ho correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "The subject is first-person (\"Io\"), which requires the verb \"ho\". \"Io non ha\" is grammatically incorrect, making \"ha\" a misprint."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 607,
@@ -14962,8 +16368,22 @@
       "votes_printed": 2,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "'dela' with one 'l' is almost certainly a misread of 'della'; however dict_printed=2 suggests it may be a recognised elided form. More likely a transcription misread of 'della' — but given dict support, uncertain. Actually 'dela' as elision of 'della' is not standard; this looks like a source typo or OCR error. Classifying as source_typo_fixed."
+      "action": "keep",
+      "reason": "'dela' with one 'l' is almost certainly a misread of 'della'; however dict_printed=2 suggests it may be a recognised elided form. More likely a transcription misread of 'della' — but given dict support, uncertain. Actually 'dela' as elision of 'della' is not standard; this looks like a source typo or OCR error. Classifying as source_typo_fixed.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "dela misprint; della correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"dela\" is a standard typographical error missing a double consonant for the articulated preposition \"della\"."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 610,
@@ -15036,9 +16456,11 @@
       "published": "piove.",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan presence-query unreliable for this fragment — cleared on text evidence",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": false,
+      "resolved": "phantom"
     },
     {
       "id": 613,
@@ -15088,7 +16510,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'indarmo' (with 'm') is unrecognised (dict=0) and is clearly a misprint for 'indarno' (dict=3); the edition rightly corrected it."
+      "reason": "'indarmo' (with 'm') is unrecognised (dict=0) and is clearly a misprint for 'indarno' (dict=3); the edition rightly corrected it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "indarno/indarmo both archaic 'in vain'; indarmo valid period variant, restore."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"indarmo\" is a straightforward misprint for the word \"indarno\" (meaning \"in vain\"), resulting from confusing 'm' and 'n'."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 615,
@@ -15284,7 +16720,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Marchesse' (double s) is unrecognised (dict=0) and is a clear misprint for 'Marchese' (dict=3); the edition rightly corrected it."
+      "reason": "'Marchesse' (double s) is unrecognised (dict=0) and is a clear misprint for 'Marchese' (dict=3); the edition rightly corrected it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Marchesse misspelled; Marchese correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "\"Marchesse\" is an obvious typographical error with an erroneous double 's' for the title \"Marchese\" (Marquis)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 623,
@@ -15430,7 +16880,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "Nothingham is a clear misprint of the English proper noun Nottingham; the edition rightly corrects it."
+      "reason": "Nothingham is a clear misprint of the English proper noun Nottingham; the edition rightly corrects it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Nothingham is misspelling; Nottingham is correct place name."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Nothingham' is a genuine typographical error for 'Nottingham', correctly fixed in the edition."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 629,
@@ -15643,7 +17107,21 @@
       "votes_published": 2,
       "category": "misread",
       "action": "restore",
-      "reason": "poggiarono (they put in/touched) is a valid nautical verb meaning to make for shore; approdarono is a synonym but is a substitution, not a correction of a misprint."
+      "reason": "poggiarono (they put in/touched) is a valid nautical verb meaning to make for shore; approdarono is a synonym but is a substitution, not a correction of a misprint.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'poggiarono' (nautical: bore away/landed) reads acceptably; valid period word, edition over-modernized."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'Poggiarono' is a valid nautical term meaning to land or steer towards; the edition wrongly altered it to 'approdarono'."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 638,
@@ -15668,7 +17146,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "esterefatta (one r) is a misprint of esterrefatta (double r), not a recognised period variant; dictionary support 0 vs 2 confirms the edition's correction."
+      "reason": "esterefatta (one r) is a misprint of esterrefatta (double r), not a recognised period variant; dictionary support 0 vs 2 confirms the edition's correction.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "esterefatta is misprint; esterrefatta (terrified) is correct double-r spelling."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Esterefatta' is a misspelling of 'esterrefatta' (missing a double consonant), correctly fixed by the edition."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 639,
@@ -15787,7 +17279,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "pù is a misprint of più (missing the accent/letter i); the edition correctly restores più."
+      "reason": "pù is a misprint of più (missing the accent/letter i); the edition correctly restores più.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'pù' is a typo; 'più' is correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'pù' is an obvious typo for 'più'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 644,
@@ -16036,8 +17542,22 @@
       "votes_printed": 1,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'sufficente' (missing 'i') is a clear misprint for 'sufficiente'; only 1 dictionary recognises it and it is not a period spelling variant but a typographical error."
+      "action": "restore",
+      "reason": "'sufficente' (missing 'i') is a clear misprint for 'sufficiente'; only 1 dictionary recognises it and it is not a period spelling variant but a typographical error.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'sufficente' is common period spelling variant, fits sentence."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'Sufficente' is a valid period variant spelling of 'sufficiente' and should be maintained."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 654,
@@ -16087,7 +17607,21 @@
       "votes_published": 2,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'compartiva' is a different word from 'compariva'; context ('compariva' = appeared) shows the edition corrected what looks like a typographical misread — but PRINTED could itself be a source typo. Given 'compariva' makes clear contextual sense and 'compartiva' does not, this is likely a source typo fixed by the edition."
+      "reason": "PRINTED 'compartiva' is a different word from 'compariva'; context ('compariva' = appeared) shows the edition corrected what looks like a typographical misread — but PRINTED could itself be a source typo. Given 'compariva' makes clear contextual sense and 'compartiva' does not, this is likely a source typo fixed by the edition.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'compartiva' (imparted/bestowed) reads sensibly with 'su una specie di'; valid word."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Context requires 'compariva' (appeared); 'compartiva' (divided/shared) is a typo caused by an extra 't'."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 656,
@@ -16236,8 +17770,22 @@
       "votes_printed": 3,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'tre' and PUBLISHED 'tra' are different words; context ('nascondere tra le liane') requires 'tra' (among/between). 'tre' (three) makes no sense here; this is a source typo the edition rightly corrected."
+      "action": "keep",
+      "reason": "PRINTED 'tre' and PUBLISHED 'tra' are different words; context ('nascondere tra le liane') requires 'tra' (among/between). 'tre' (three) makes no sense here; this is a source typo the edition rightly corrected.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'tre le liane' is nonsense; 'tra le liane' (among) is correct; 'tre'/'tra' typo."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'tre le liane' is ungrammatical in Italian. The edition correctly fixes the obvious misprint of 'tra' (among)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 662,
@@ -16312,7 +17860,21 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'cessa' (present tense) vs PUBLISHED 'cessò' (past tense); context of narrative past requires 'cessò'. This appears to be a source typo (wrong tense) corrected by the edition."
+      "reason": "PRINTED 'cessa' (present tense) vs PUBLISHED 'cessò' (past tense); context of narrative past requires 'cessò'. This appears to be a source typo (wrong tense) corrected by the edition.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "Past narrative requires 'cessò'; 'cessa' present tense breaks tense agreement with 'ebbe/era'."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'cessa' (present tense) is perfectly grammatical. The editor likely over-modernized or smoothed the tense to the past ('cessò')."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 665,
@@ -16458,7 +18020,8 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both PRINTED and PUBLISHED show 'tristemente' with 0 dictionary hits each; no difference detected between the two forms, yet they are flagged as different. Requires manual check of the scan."
+      "reason": "printed and published are identical — no actual deviation (false candidate)",
+      "resolved": "no_difference"
     },
     {
       "id": 671,
@@ -16829,7 +18392,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'cannottiere' with double-n is a clear misprint; 'canottiere' is the correct standard spelling."
+      "reason": "'cannottiere' with double-n is a clear misprint; 'canottiere' is the correct standard spelling.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'cannottiere' double-n is misprint; 'canottiere' is correct standard spelling, dictionary-attested."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'cannottiere' is a valid, well-attested period/variant spelling of 'canottiere'. It should not have been modernized."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 686,
@@ -16877,7 +18454,21 @@
       "votes_published": 1,
       "category": "misread",
       "action": "restore",
-      "reason": "Same as 686: 'sfondali!' is the word actually used in the internal dialogue; edition replaced it incorrectly."
+      "reason": "Same as 686: 'sfondali!' is the word actually used in the internal dialogue; edition replaced it incorrectly.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "Context echoes 'fondali!'; 'sfondali' (smash through) not attested, likely setting error."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'sfondali!' (smash them!) is a valid imperative and fits the context of a sudden command perfectly well."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 688,
@@ -17143,7 +18734,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'police' is a clear 1913 typesetting omission of a letter from 'pollice'; the edition rightly corrected it."
+      "reason": "'police' is a clear 1913 typesetting omission of a letter from 'pollice'; the edition rightly corrected it.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'police' nonsense in Italian; 'pollice' (thumb) correct with 'indice'."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'police' is an older/dialectal spelling of 'pollice' derived from Latin 'pollex', attested in period dictionaries."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 699,
@@ -17458,7 +19063,8 @@
       "votes_published": 0,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both printed and published are identical; no deviation to classify."
+      "reason": "printed and published are identical — no actual deviation (false candidate)",
+      "resolved": "no_difference"
     },
     {
       "id": 712,
@@ -17558,7 +19164,21 @@
       "votes_published": 2,
       "category": "misread",
       "action": "restore",
-      "reason": "'Compagni' (companions) and 'compari' (accomplices) are distinct words; context about Pianori's accomplices favours 'compari', suggesting 'compagni' in print may be misread, but printed is the ground truth — restoring printed form."
+      "reason": "'Compagni' (companions) and 'compari' (accomplices) are distinct words; context about Pianori's accomplices favours 'compari', suggesting 'compagni' in print may be misread, but printed is the ground truth — restoring printed form.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "low",
+          "reason": "'compagni del Pianori' reads fine grammatically; both attested, printed plausible."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'compagni' (companions) is a completely valid word that makes perfect sense here. The edition unnecessarily changed it."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 716,
@@ -17583,7 +19203,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Stantufo' with single 'f' is a clear 1913 typesetting error; 'stantuffo' is the correct standard Italian word (piston), recognised by all three dictionaries."
+      "reason": "'Stantufo' with single 'f' is a clear 1913 typesetting error; 'stantuffo' is the correct standard Italian word (piston), recognised by all three dictionaries.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "stantuffo correct spelling; stantufo unrecognized misprint."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'stantufo' is a clear typographical error for 'stantuffo' (piston)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 717,
@@ -17608,7 +19242,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'An un tratto' is a typesetting error; the correct phrase is 'Ad un tratto'. 'Ad' before a vowel is the standard Italian form."
+      "reason": "'An un tratto' is a typesetting error; the correct phrase is 'Ad un tratto'. 'Ad' before a vowel is the standard Italian form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Ad un tratto' correct; 'An' is nonsense."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'An' is a typo for 'Ad' in the standard phrase 'Ad un tratto'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 718,
@@ -17958,7 +19606,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'basette' (sideburns) is the correct Italian form recognised by all three dictionaries; 'bassette' with double-s is a misprint in the 1913 setting."
+      "reason": "'basette' (sideburns) is the correct Italian form recognised by all three dictionaries; 'bassette' with double-s is a misprint in the 1913 setting.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "basette correct; bassette is misprint."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'bassette' is a misspelling of 'basette' (sideburns) in this context."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 732,
@@ -18058,7 +19720,21 @@
       "votes_published": 1,
       "category": "misread",
       "action": "restore",
-      "reason": "The printed 'a' makes no grammatical sense here; 'in' is required. However the printed form 'a' suggests a transcription/OCR error introduced by the edition — but actually the PUBLISHED text has 'in' which is correct and the PRINTED 'a' appears to be the 1913 misprint. Given 'in bocca straniera' is the correct idiomatic phrase, the 1913 page likely reads 'in' and PUBLISHED is correct. Marking as source_typo_fixed."
+      "reason": "The printed 'a' makes no grammatical sense here; 'in' is required. However the printed form 'a' suggests a transcription/OCR error introduced by the edition — but actually the PUBLISHED text has 'in' which is correct and the PRINTED 'a' appears to be the 1913 misprint. Given 'in bocca straniera' is the correct idiomatic phrase, the 1913 page likely reads 'in' and PUBLISHED is correct. Marking as source_typo_fixed.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'dolcezza insolita a bocca straniera' acceptable period usage; edition over-modernized."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'insolita a bocca straniera' (unusual for a foreign mouth) is grammatically and semantically correct; the edition over-modernized."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 736,
@@ -18232,8 +19908,22 @@
       "votes_printed": 1,
       "votes_published": 3,
       "category": "misread",
-      "action": "restore",
-      "reason": "PRINTED 'dastra' appears to be a misprint or OCR artifact; 'destra' is the correct word. Given that 'destra' is recognised by all dictionaries and 'dastra' by only one, this is likely a 1913 misprint corrected in PUBLISHED — source_typo_fixed."
+      "action": "keep",
+      "reason": "PRINTED 'dastra' appears to be a misprint or OCR artifact; 'destra' is the correct word. Given that 'destra' is recognised by all dictionaries and 'dastra' by only one, this is likely a 1913 misprint corrected in PUBLISHED — source_typo_fixed.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'mano destra tesa' correct; dastra nonsense misprint."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'dastra' is an obvious misprint for 'destra' (right hand)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 743,
@@ -18527,8 +20217,22 @@
       "votes_printed": 0,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "Context requires plural reflexive 'messoci' (placing ourselves among them); 'messomi' (singular) is grammatically wrong and a 1913 misprint."
+      "action": "restore",
+      "reason": "Context requires plural reflexive 'messoci' (placing ourselves among them); 'messomi' (singular) is grammatically wrong and a 1913 misprint.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'messomi tra loro' reflexive first-person fits narrator; both unattested but messomi reads correctly."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'messomi' (having put myself) is perfectly correct for a first-person narrator stepping between people."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 755,
@@ -18600,8 +20304,22 @@
       "votes_printed": 0,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "Grammatically 'avvalorare' (infinitive) is required; 'avvalorarle' with an unwarranted clitic does not fit the sentence and is a 1913 misprint."
+      "action": "restore",
+      "reason": "Grammatically 'avvalorare' (infinitive) is required; 'avvalorarle' with an unwarranted clitic does not fit the sentence and is a 1913 misprint.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'avvalorarle' with clitic object fits 'tentava di avvalorarle sostenendo'; published drops needed object pronoun."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "The enclitic 'le' (avvalorarle) provides a necessary object ('validate them') which was wrongly omitted by the edition."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 758,
@@ -18625,7 +20343,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'capitoletto' (small chapter) is the correct word; 'capitaletto' is a typographical error in the 1913 printing."
+      "reason": "'capitoletto' (small chapter) is the correct word; 'capitaletto' is a typographical error in the 1913 printing.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'capitoletto' (small chapter/sum) fits; 'capitaletto' is a misprint."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'Capitaletto' (a small capital/sum of money) perfectly fits the context of 'mille e cento', unlike 'capitoletto' (small chapter)."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 759,
@@ -18648,9 +20380,11 @@
       "published": "mai?",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan presence-query unreliable for this fragment — cleared on text evidence",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": false,
+      "resolved": "phantom"
     },
     {
       "id": 760,
@@ -18746,9 +20480,11 @@
       "published": "confidarsi...",
       "category": "dittography",
       "action": "review",
-      "reason": "no duplication in the derived text — likely a blind-read artifact, not a real deviation",
+      "reason": "text: no duplication in the edition; scan presence-query unreliable for this fragment — cleared on text evidence",
       "dup_real": false,
-      "suggest_flag": true
+      "suggest_flag": true,
+      "scan_present": false,
+      "resolved": "phantom"
     },
     {
       "id": 764,
@@ -18820,8 +20556,22 @@
       "votes_printed": 1,
       "votes_published": 0,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "'luddite' is the correct English loanword; 'liddite' is a typographical misprint in 1913."
+      "action": "restore",
+      "reason": "'luddite' is the correct English loanword; 'liddite' is a typographical misprint in 1913.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'liddite' is recognized period spelling; published 'luddite' unrecognized."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'Liddite' refers to Lyddite, a high explosive, which makes perfect sense contextually. 'Luddite' is an error by the edition."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 767,
@@ -18846,7 +20596,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'se ne sarebbero serviti' requires plural past participle agreement; 'servito' (singular) is a 1913 misprint."
+      "reason": "'se ne sarebbero serviti' requires plural past participle agreement; 'servito' (singular) is a 1913 misprint.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "plural 'serviti' agrees with implied subject; 'servito' singular mismatches."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "With the plural auxiliary 'sarebbero', the participle must agree in number ('serviti'), making the printed 'servito' a grammatical error."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 768,
@@ -19013,8 +20777,22 @@
       "votes_printed": 0,
       "votes_published": 2,
       "category": "source_typo_fixed",
-      "action": "keep",
-      "reason": "Grammatically the sentence requires singular 'cupidigia'; 'cupidigie' (plural) breaks the syntax and is a 1913 misprint."
+      "action": "restore",
+      "reason": "Grammatically the sentence requires singular 'cupidigia'; 'cupidigie' (plural) breaks the syntax and is a 1913 misprint.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'cupidigie' plural parallels 'superstizioni'; valid period plural fits coordination."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "The plural 'cupidigie' matches the preceding plural 'superstizioni'. The edition unnecessarily singularized it."
+        },
+        "consensus": "restore"
+      }
     },
     {
       "id": 775,
@@ -19114,7 +20892,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'Presidenzia' is not a recognised period form (dict 0); 'Presidenza' is correct Italian (dict 2). The 1913 setting has a typo."
+      "reason": "'Presidenzia' is not a recognised period form (dict 0); 'Presidenza' is correct Italian (dict 2). The 1913 setting has a typo.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'Presidenza' correct; 'Presidenzia' is misprint."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'Presidenzia' is a valid archaic or variant spelling of 'presidenza', correct for the period. It should not be modernized."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 779,
@@ -19562,7 +21354,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'aitri' is a clear typesetting error (transposed letters) for 'altri'. PUBLISHED correctly shows 'altri'."
+      "reason": "PRINTED 'aitri' is a clear typesetting error (transposed letters) for 'altri'. PUBLISHED correctly shows 'altri'.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'aitri' is a typo; 'altri' correct in context."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'aitri' is a clear typographical error for 'altri'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 797,
@@ -19856,7 +21662,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'iilusi' has an extra 'i' — clear typesetting error. PUBLISHED 'illusi' is the correct form."
+      "reason": "PRINTED 'iilusi' has an extra 'i' — clear typesetting error. PUBLISHED 'illusi' is the correct form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'iilusi' is a typo; 'illusi' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'iilusi' is an obvious misprint for 'illusi' (double i instead of il)."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 809,
@@ -20204,7 +22024,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'sopravvisute' appears to be a misprint for 'sopravvissute' (past participle of sopravvivere); the double 's' is required and the printed form is unrecognized."
+      "reason": "'sopravvisute' appears to be a misprint for 'sopravvissute' (past participle of sopravvivere); the double 's' is required and the printed form is unrecognized.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'sopravvisute' misspelled; correct is 'sopravvissute'."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'sopravvisute' is missing an 's', a typo for 'sopravvissute'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 823,
@@ -20300,7 +22134,21 @@
       "votes_published": 2,
       "category": "misread",
       "action": "restore",
-      "reason": "'intesa' (intense/directed) vs 'intensa' — printed 'intesa' makes sense in context ('si riversa tanto più intesa') as an archaic/literary usage, but more likely a misread of 'intensa'; however 'intesa' is a different word entirely. Given context requires 'intensa' for sense, this looks like a source typo fixed."
+      "reason": "'intesa' (intense/directed) vs 'intensa' — printed 'intesa' makes sense in context ('si riversa tanto più intesa') as an archaic/literary usage, but more likely a misread of 'intensa'; however 'intesa' is a different word entirely. Given context requires 'intensa' for sense, this looks like a source typo fixed.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'intesa' is a valid word; could fit, page word adopted."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "medium",
+          "reason": "PRINTED 'intesa' is likely a typo missing the 'n' for 'intensa' given the verb 'riversa'."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 827,
@@ -20325,7 +22173,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'connazioonali' is a clear typographical error (extra 'o') in the 1913 printing; 'connazionali' is the correct form."
+      "reason": "'connazioonali' is a clear typographical error (extra 'o') in the 1913 printing; 'connazionali' is the correct form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'connazioonali' double-o typo; 'connazionali' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "PRINTED 'connazioonali' contains an erroneous double 'o'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 828,
@@ -20375,7 +22237,21 @@
       "votes_published": 3,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'chichessia' vs 'chicchessia' — the correct standard form is 'chicchessia'; 'chichessia' appears to be a period/typographical variant with one fewer 'c', but 'chicchessia' is the established spelling recognized by more dictionaries."
+      "reason": "'chichessia' vs 'chicchessia' — the correct standard form is 'chicchessia'; 'chichessia' appears to be a period/typographical variant with one fewer 'c', but 'chicchessia' is the established spelling recognized by more dictionaries.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'chichessia' misprint; 'chicchessia' standard form."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "PRINTED 'chichessia' is a valid historical/period spelling variant (without the doubled consonant) and should not be modernized."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 830,
@@ -20400,7 +22276,8 @@
       "votes_published": 2,
       "category": "uncertain",
       "action": "review",
-      "reason": "Both printed and published show 'riesce' — no actual difference; possibly a data entry artifact."
+      "reason": "printed and published are identical — no actual deviation (false candidate)",
+      "resolved": "no_difference"
     },
     {
       "id": 831,
@@ -20424,7 +22301,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'trsformazione' is a clear misprint (missing 'a') in the 1913 text; 'trasformazione' is the correct form."
+      "reason": "'trsformazione' is a clear misprint (missing 'a') in the 1913 text; 'trasformazione' is the correct form.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'trsformazione' missing 'a', clear typo; edition fixes correctly."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'trsformazione' is a clear typographical error missing the letter 'a'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 832,
@@ -20584,7 +22475,21 @@
       "votes_published": 1,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "'ugualianza' is a misspelling of 'uguaglianza' (missing 'g'); the published form is correct."
+      "reason": "'ugualianza' is a misspelling of 'uguaglianza' (missing 'g'); the published form is correct.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'ugualianza' is misspelling; 'uguaglianza' correct standard form."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'ugualianza' is a valid period spelling variant recognized by dictionaries."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 839,
@@ -20902,7 +22807,21 @@
       "votes_published": 3,
       "category": "misread",
       "action": "restore",
-      "reason": "PRINTED 'nè' (archaic/elided form) was misread as 'nei'; the sentence with 'nei suoi pensieri' fits 'nei' contextually, but PRINTED shows 'nè', suggesting a different sentence fragment was captured — likely a misread of the printed text."
+      "reason": "PRINTED 'nè' (archaic/elided form) was misread as 'nei'; the sentence with 'nei suoi pensieri' fits 'nei' contextually, but PRINTED shows 'nè', suggesting a different sentence fragment was captured — likely a misread of the printed text.",
+      "re_audit": {
+        "original_action": "restore",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'nè suoi pensieri' ungrammatical; 'nei suoi pensieri' correct."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "high",
+          "reason": "'nè' is a valid archaic/poetic spelling for 'ne i' (nei), fitting perfectly in context."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 852,
@@ -20977,7 +22896,21 @@
       "votes_published": 2,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'anacronisma' is a misspelling of the standard Italian 'anacronismo'; the edition correctly fixes this genuine typographical error in the 1913 setting."
+      "reason": "PRINTED 'anacronisma' is a misspelling of the standard Italian 'anacronismo'; the edition correctly fixes this genuine typographical error in the 1913 setting.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'anacronisma' wrong; masculine 'anacronismo' is correct Italian word."
+        },
+        "gemini": {
+          "action": "restore",
+          "confidence": "medium",
+          "reason": "'anacronisma' is a masculine period variant recognized by at least one historical dictionary."
+        },
+        "consensus": "split"
+      }
     },
     {
       "id": 855,
@@ -21049,7 +22982,21 @@
       "votes_published": 0,
       "category": "source_typo_fixed",
       "action": "keep",
-      "reason": "PRINTED 'abberrazione' (double b) is a misspelling of standard 'aberrazione'; neither form is recognised by the dictionaries, but the double-b is a clear typographical error that the edition rightly corrects."
+      "reason": "PRINTED 'abberrazione' (double b) is a misspelling of standard 'aberrazione'; neither form is recognised by the dictionaries, but the double-b is a clear typographical error that the edition rightly corrects.",
+      "re_audit": {
+        "original_action": "keep",
+        "opus": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'abberrazione' double-b misspelling; 'aberrazione' correct."
+        },
+        "gemini": {
+          "action": "keep",
+          "confidence": "high",
+          "reason": "'abberrazione' is a misspelling of 'aberrazione' (from Latin aberratio) with a spurious double 'b'."
+        },
+        "consensus": "keep"
+      }
     },
     {
       "id": 858,

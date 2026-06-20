@@ -47,6 +47,11 @@ header h1{margin:0 0 .35rem;font-size:1.05rem;font-weight:600}
   font-size:.82rem;cursor:pointer;color:var(--muted)}
 .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 .sep{color:var(--line)}
+.palette{display:flex;flex-wrap:wrap;gap:.25rem;align-items:center;margin-top:.45rem}
+.palette .plabel{font-size:.75rem;color:var(--muted);margin-right:.15rem}
+.palette button{border:1px solid var(--line);background:#fff;border-radius:5px;
+  padding:.1rem .5rem;font-size:.95rem;cursor:pointer;font-family:Georgia,serif;min-width:1.7rem}
+.palette button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 button.act{margin-left:auto;border:1px solid var(--accent);background:var(--accent);color:#fff;
   border-radius:6px;padding:.35rem .8rem;font-size:.85rem;cursor:pointer}
 main{max-width:1180px;margin:0 auto;padding:1rem}
@@ -69,6 +74,8 @@ main{max-width:1180px;margin:0 auto;padding:1rem}
 .b.cat{background:#eef;color:#446}.b.cap{background:#eee;color:#777}
 .b.flag{background:#f3e0c0;color:#7a5a12}
 .b.idtag{background:#e7e2d6;color:#555;font-family:'SF Mono',Menlo,monospace}
+.b.reaudit{background:#dfeaf6;color:#2c5582}
+.b.split{background:#efe2f3;color:#6a3d82}
 .ctx{font-family:Georgia,serif;font-size:1.02rem;color:#2c2820;margin:.1rem 0 .55rem}
 .ctx b{color:#000;background:#fdf3df;padding:0 .15rem;border-radius:3px}
 .pair{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;font-family:'SF Mono',Menlo,monospace;
@@ -126,6 +133,8 @@ dialog.zoom img{max-width:96vw;max-height:96vh}dialog.zoom::backdrop{background:
     <span class="chip" data-f="all">All</span>
     <span class="chip" data-f="undecided">Undecided</span>
     <span class="chip" data-f="flagged">⚑ Flagged</span>
+    <span class="chip" data-f="split">⚖ Panel split</span>
+    <span class="chip" data-f="reaudited">Re-audited</span>
     <span class="chip" data-f="keep">Keep (source typo)</span>
     <span class="chip" data-f="review">Review</span>
     <span class="chip" data-f="omission">Omissions</span>
@@ -133,6 +142,7 @@ dialog.zoom img{max-width:96vw;max-height:96vh}dialog.zoom::backdrop{background:
     <span class="chip" data-f="nobox">No box</span>
     <button class="act" id="export">Export verdicts JSON</button>
   </div>
+  <div class="palette" id="palette"><span class="plabel">insert →</span></div>
 </header>
 <main id="main"></main>
 <dialog class="zoom" id="zoom"><img id="zoomimg" alt=""></dialog>
@@ -189,17 +199,29 @@ function matches(it){
   if(filter==="all") return true;
   if(filter==="undecided") return !v.decision;
   if(filter==="flagged") return v.decision==="flag";
+  if(filter==="split") return it.re_audit && it.re_audit.consensus==="split";
+  if(filter==="reaudited") return it.re_audit && it.re_audit.consensus
+    && it.re_audit.consensus!=="split" && it.re_audit.consensus!==it.re_audit.original_action;
   if(filter==="nobox") return !it.is_crop;
   if(["low","med","high"].includes(filter)) return it.conf===filter;
   if(["restore","keep","review"].includes(filter)) return it.action===filter;
   return it.category===filter;
 }
 function card(it){
-  const v=store[it.key]||{}, sug=it.suggest_flag?"flag":(SUGGEST[it.action]||"unsure");
+  const v=store[it.key]||{}, ra=it.re_audit;
+  let sug=it.suggest_flag?"flag":(SUGGEST[it.action]||"unsure");
+  if(ra&&ra.consensus==="split") sug="";   // panel split — don't pre-star, you decide
   const actbadge={restore:'<span class="b restore">restore</span>',
     keep:'<span class="b keep">keep · source typo</span>',
     review:'<span class="b review">review</span>'}[it.action]||'';
   const phantom=it.suggest_flag?'<span class="b flag">likely false finding</span>':'';
+  let rabadge='';
+  if(ra){
+    if(ra.consensus==="split")
+      rabadge=`<span class="b split" title="opus: ${esc((ra.opus||{}).action||'?')} · gemini: ${esc((ra.gemini||{}).action||'?')}">⚖ panel split</span>`;
+    else if(ra.consensus&&ra.consensus!==ra.original_action)
+      rabadge=`<span class="b reaudit">re-audited: ${esc(ra.original_action)}→${esc(ra.consensus)}</span>`;
+  }
   const cat=`<span class="b cat">${esc(it.category)}</span>`;
   const copy=it.scan_copy?`<span class="b cap">Copy ${esc(it.scan_copy)}${it.scan_confidence?' · '+esc(it.scan_confidence):''}</span>`:'';
   const sel=d=>v.decision===d?"sel":"";
@@ -230,10 +252,11 @@ function card(it){
     : `<span class="nobox">no box located — full page p.${it.page}; find <b>${esc(capWord)}</b></span>`;
   return `<div class="card ${v.decision?'done':''}" data-key="${esc(it.key)}">
     <div>
-      <div class="tags"><span class="b idtag">#${it.id}</span>${actbadge}${phantom}${cat}${copy}</div>
+      <div class="tags"><span class="b idtag">#${it.id}</span>${actbadge}${phantom}${rabadge}${cat}${copy}</div>
       <div class="ctx">${ctxHTML(it)}</div>
       <div class="pair">${pairHTML}</div>
       <div class="reason">judge: ${esc(it.reason||"")}</div>
+      ${ra?`<div class="reason">panel — opus: ${esc((ra.opus||{}).reason||'—')} · gemini: ${esc((ra.gemini||{}).reason||'—')}</div>`:''}
       <div class="dec">
         <button data-d="restore" class="${sel('restore')} ${sug2('restore')}">${restoreLbl}</button>
         <button data-d="keep" class="${sel('keep')} ${sug2('keep')}">${keepLbl}</button>
@@ -357,6 +380,32 @@ for(const f of ["low","med","high"]){
   const c=document.querySelector('.chip[data-f="'+f+'"]');
   if(c) c.textContent+=" ("+n+")";
 }
+// accent palette — insert common Italian characters into the field you're typing in,
+// so you don't need the OS key combos. Inserts at the cursor; fires input so the typed
+// matcher and note-save run normally.
+const ACCENTS = ["à","è","é","ì","í","ò","ó","ù","ú","À","È","É","Ì","Ò","Ù","«","»"];
+let lastField = null;
+document.addEventListener("focusin", e => {
+  if (e.target.matches("[data-typed],[data-note]")) lastField = e.target;
+});
+(function(){
+  const pal = document.getElementById("palette");
+  for (const ch of ACCENTS) {
+    const b = document.createElement("button");
+    b.type = "button"; b.textContent = ch; b.title = "insert " + ch;
+    b.addEventListener("mousedown", e => e.preventDefault());   // keep field focus + selection
+    b.addEventListener("click", () => {
+      const el = lastField;
+      if (!el || !document.body.contains(el)) return;
+      const s = el.selectionStart ?? el.value.length, e2 = el.selectionEnd ?? el.value.length;
+      el.value = el.value.slice(0, s) + ch + el.value.slice(e2);
+      el.selectionStart = el.selectionEnd = s + ch.length;
+      el.focus();
+      el.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+    pal.appendChild(b);
+  }
+})();
 try { render(); }
 catch(e){ document.getElementById("main").innerHTML =
   "<pre style='color:#9a2b2b;white-space:pre-wrap'>render error: "+(e&&e.message)+"\n"+(e&&e.stack)+"</pre>"; }
@@ -371,6 +420,8 @@ def confidence(it):
     med  = a reversal or third reading worth a glance (keep=source-typo, scan 'other')
     high = a clear restore (modernization / misread / omission, confidently read)."""
     sc = (it.get("scan_confidence") or "").lower()
+    if (it.get("re_audit") or {}).get("consensus") == "split":   # models disagree -> your call
+        return "low"
     if it["action"] == "review" or it["category"] == "uncertain" or sc == "low":
         return "low"
     if it["action"] == "keep" or it.get("scan_printed") == "other":
@@ -386,7 +437,11 @@ def main():
         manifest = {m["id"]: m for m in json.loads(mpath.read_text(encoding="utf-8"))}
 
     items = []
+    cleared = 0
     for it in data:
+        if it.get("resolved"):   # text-cleared false finding (phantom dittography / no-difference)
+            cleared += 1
+            continue
         m = manifest.get(it["id"], {})
         is_crop = bool(m.get("box") and m.get("crop"))
         img = m["crop"] if is_crop else PAGE_REL.format(it["page"])
@@ -400,6 +455,7 @@ def main():
             "img": img, "is_crop": is_crop, "conf": confidence(it),
             # verify_dittography.py: phantom dittography (no real duplication in derived) -> pre-flag
             "suggest_flag": bool(it.get("suggest_flag")),
+            "re_audit": it.get("re_audit"),   # re_audit.py: panel re-verdict (corrected / split)
             # card shape: substitution (both sides), omission (Original has it, Derived dropped),
             # dittography (Derived repeats it, Original does not) — drives plain-English rendering
             "kind": ("dittography" if not (it.get("printed") or "").strip()
@@ -413,7 +469,8 @@ def main():
     OUT.write_text(PAGE_TMPL.replace("__DATA__", json.dumps(items, ensure_ascii=False)),
                    encoding="utf-8")
     boxed = sum(1 for it in items if it["is_crop"])
-    print(f"{len(items)} deviations ({boxed} boxed, {len(items)-boxed} full-page fallback) -> {OUT}")
+    print(f"{len(items)} deviations ({boxed} boxed, {len(items)-boxed} full-page fallback; "
+          f"{cleared} resolved phantoms cleared) -> {OUT}")
 
 
 if __name__ == "__main__":
