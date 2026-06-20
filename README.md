@@ -8,7 +8,7 @@ Published by Canessa Printing Co., 708 Montgomery St., San Francisco.
 
 ## Pipeline
 
-A 10-step pipeline reconciles two independent OCR scans from Internet Archive, cleans artifacts via dictionary validation and LLM correction, translates with Claude Sonnet 4.6, and typesets a bilingual Loeb-style facing-page edition.
+An 11-step **build** pipeline reconciles two independent OCR scans from Internet Archive, cleans artifacts via dictionary validation and LLM correction, translates with a multi-model synthesis, and typesets a bilingual Loeb-style facing-page edition with a Reader's Companion. A separate, ongoing **review** phase (deviation/vision/intention review) audits the finished edition against the 1913 scans — see [`REVIEW.md`](REVIEW.md). Step-by-step detail is in [`PIPELINE.md`](PIPELINE.md).
 
 | Step | File | What it does |
 |------|------|-------------|
@@ -18,10 +18,11 @@ A 10-step pipeline reconciles two independent OCR scans from Internet Archive, c
 | 4. Triage | `triage.py` | LLM categorization + resolution of remaining disagreements |
 | 5. Cleanup | `cleanup.py` | Noise removal, dehyphenation, symspellpy correction, spaCy NER protection |
 | 5b. Adjudicate | `adjudicate.py` | Classifies unresolved hyphens via Zingarelli 1922 dictionary |
-| 6. Validate | `validate.py` | 6 assertion checks on cleaned output |
-| 7. Translate | `translate.py` | Claude Sonnet 4.6 with extended thinking, per-chapter with resume |
+| 6. Validate | `validate.py` | 7 assertion checks on cleaned output |
+| 7. Translate | `translate.py` / `multi_translate.py` | Single-model (Claude Sonnet 4.6) or multi-witness synthesis (`--multi-model`); the live edition used the latter |
 | 7b. Refine | `refine.py` | Post-hoc refinement with Edgren 1901 dictionary context + version tracking |
 | 8. Typeset | `typeset.py` | Bilingual HTML with facing pages, source scan overlay, revision marginalia |
+| 9. Companion | `companion.py` | Renders the hand-authored Reader's Companion to standalone HTML pages |
 
 ## Setup
 
@@ -110,12 +111,13 @@ cd docs && git add -A && git commit -m "Update edition" && git push
 
 ## Reference dictionaries
 
-Two period-appropriate dictionaries complement the pipeline:
+Three period-appropriate dictionaries complement the pipeline:
 
 - **Zingarelli 1922** (*Vocabolario della Lingua Italiana*, 2nd ed.) — validates Italian word existence during cleanup and adjudication. Chunked in `assets/dictionary/zingarelli_1922/`.
 - **Edgren 1901** (*Italian and English Dictionary*) — provides period-appropriate Italian-to-English translations for the refine and translate steps. Chunked in `assets/dictionary/edgren_1901/`.
+- **Hoare 1915** (*An Italian Dictionary*, Cambridge) — a third period authority, strong on archaic/literary/technical vocabulary. Chunked in `assets/dictionary/hoare_1915/`.
 
-Both are public domain OCR from Internet Archive, downloaded automatically on first use.
+Together they form a membership oracle used in the review phase: a word recognized by ≥2 of the three is confidently a real period form. All are public domain OCR from Internet Archive, downloaded automatically on first use.
 
 ## Project structure
 
@@ -132,6 +134,7 @@ translate.py             # Claude API translation with resume
 refine.py                # Edgren-based translation refinement + version tracking
 edgren.py                # Edgren 1901 dictionary integration
 typeset.py               # Bilingual HTML/PDF generation
+companion.py             # Reader's Companion HTML rendering
 utils.py                 # Shared utilities
 
 data/                    # Working files (downloads, intermediate outputs)

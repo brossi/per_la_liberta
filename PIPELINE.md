@@ -1,6 +1,6 @@
 # Pipeline Reference: Step-by-Step Execution Flow
 
-Detailed substep documentation for every stage of the Per la Libertà translation pipeline. Generated from source code analysis.
+Detailed substep documentation for every stage of the Per la Libertà **build** pipeline. The post-build, human-in-the-loop QA effort (deviation review, vision review, intention review, sampling estimate, ellipsis restoration) is documented separately in `REVIEW.md`.
 
 ---
 
@@ -239,6 +239,16 @@ If `--workers > 1`: translate chapters in parallel via ThreadPoolExecutor.
 
 **Outputs:** `output/english_translation.md`, `output/source_pages.json`, `state/translation_progress.json`, `state/translations/*.md`
 
+### 7c. Multi-witness synthesis path (`multi_translate.py`, `--multi-model`)
+
+`--step translate` runs the single-model path above by default. With `--multi-model` it instead runs a three-phase synthesis (this is the path that produced the live edition, April 2026):
+
+1. **Draft** (parallel) — translate each chapter independently with multiple models (`--draft-models`, default Claude Sonnet 4.6 + Gemini Pro, optionally GPT) via the `providers.py` abstraction; page markers stripped first.
+2. **Evaluate** (parallel) — score each draft on six literary dimensions (tone, cultural context, accuracy, literary quality, grammar, consistency).
+3. **Synthesize** (sequential, for continuity) — Claude Opus assembles one final translation per chapter from a single synthesis brief (source + scored drafts + Edgren + narrative context + previous chapter), writing `provenance.json` (what was incorporated from where) and `synthesis_integrity.json` (deterministic omission guard: dropped carry-overs, missing ALL-CAPS names, gross shrinkage).
+
+**Working state:** `state/multi_drafts/{ch}/` (drafts, evals, brief, provenance, integrity). **Resume:** `state/multi_translate_progress.json`. **Final output:** `state/translations/*.md` → assembled into `output/english_translation.md` (same as the single-model path).
+
 ---
 
 ## Step 7b: Refine (`refine.py`)
@@ -328,3 +338,25 @@ Copy to `docs/` for GitHub Pages deployment:
 - `static/bilingual.css` → `docs/static/bilingual.css`
 
 **Outputs:** `output/bilingual.html`, `output/scan.html`, `docs/index.html`, `docs/scan.html`, `docs/static/bilingual.css`
+
+---
+
+## Step 9: Companion (`companion.py`)
+
+**Entry:** `build()` — runs after typeset (in `--step all`) so its chapter deep-links can be validated against the freshly written `docs/index.html`.
+
+Pure HTML renderer, **no model calls**. The hand-authored `output/companion/*.md` is the single source of truth.
+
+1. Render each `output/companion/*.md` → `docs/companion/*.html`, sharing the edition's CSS/theme
+2. Linkify chapter citations (deep-link into `docs/index.html#ch-…`), source URLs (Wikipedia/Britannica/etc.), and auto-link person names
+3. Wrap the summary page's H3/H4 outline into nested `<details>` disclosures
+4. Mirror `output/companion/images/` → `docs/companion/images/`
+5. Auto-generate `docs/companion/sources/index.html` from the transcribed primary sources
+6. Emit two Phase-2 indexes: `data/companion_entity_index.json` (personae + glossary, with anchors + chapter citations) and `data/companion_citation_map.json` (part:chapter → anchor + page ranges)
+7. Validate that every chapter-citation anchor exists in the edition and every internal cross-link resolves
+
+`--check-links` runs an on-demand, network-bound probe of external links (not part of the build).
+
+**Outputs:** `docs/companion/*.html`, `docs/companion/sources/index.html`, `docs/companion/images/*`, `data/companion_entity_index.json`, `data/companion_citation_map.json`
+
+> Phase 2 (in-text entity popovers + per-chapter orientation drawers) is pending; the indexes above are the hook. See `REVIEW.md`.

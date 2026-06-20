@@ -8,9 +8,16 @@ English translation of *"Per la libertà! (Dalle mie conversazioni col conte Car
 
 Single repo at `brossi/PER_LA_LIBERTA`. GitHub Pages serves from `/docs` on `main` branch.
 
-## Pipeline Architecture
+## Project Phases
 
-**10-step pipeline** (`pipeline.py`): download → ocr → reconcile → triage → cleanup → adjudicate → validate → translate → refine → typeset
+The project has two phases:
+
+- **Build** — `pipeline.py` reconciles the OCR, cleans it, translates it, and typesets the bilingual edition. Documented below and step-by-step in `PIPELINE.md`.
+- **Review** — a human-in-the-loop QA phase that runs *against the finished edition* to catch residual OCR/cleanup deviations and translation-fidelity problems (deviation review, vision review, intention review), plus the Reader's Companion. Documented in `REVIEW.md`. This phase is ongoing.
+
+## Build Pipeline Architecture
+
+**11-step pipeline** (`pipeline.py`): download → ocr → reconcile → triage → cleanup → adjudicate → validate → translate → refine → typeset → companion
 
 | Step | File | What it does |
 |------|------|-------------|
@@ -21,9 +28,10 @@ Single repo at `brossi/PER_LA_LIBERTA`. GitHub Pages serves from `/docs` on `mai
 | 5. Cleanup | `cleanup.py` | Noise removal, regex pre-filters, dehyphenation, symspellpy correction, spaCy NER protection, LLM correction |
 | 5b. Adjudicate | `adjudicate.py` | Classifies unresolved hyphens via Zingarelli 1922 dictionary: compound / NER / unknown |
 | 6. Validate | `validate.py` | 7 checks: structure, word count, quotes, char coverage, ASCII remnants, word quality (NER-aware), content preservation |
-| 7. Translate | `translate.py` | Claude Sonnet 4.6 with extended thinking (32K budget), per-chapter with resume |
+| 7. Translate | `translate.py` (default) / `multi_translate.py` (`--multi-model`) | Default: single-model Claude Sonnet 4.6, extended thinking, per-chapter with resume. `--multi-model`: multi-witness synthesis (Sonnet + Gemini drafts → scored evaluation → Opus synthesis). **The live edition was produced by the multi-witness path** (April 2026), then refined. |
 | 7b. Refine | `refine.py` | Post-hoc translation refinement with Edgren 1901 dictionary context + version tracking |
 | 8. Typeset | `typeset.py` | Bilingual HTML/PDF with Loeb-style facing pages, slide-in source scan overlay, revision marginalia |
+| 9. Companion | `companion.py` | Renders the hand-authored Reader's Companion (`output/companion/*.md`) to standalone HTML under `docs/companion/` + entity/citation JSON indexes. Runs after typeset so its deep-links can be checked against the fresh `docs/index.html`. |
 
 ## Running
 
@@ -46,12 +54,14 @@ uv run python pipeline.py --step cleanup --llm-cleanup --batch      # batch API 
 uv run python pipeline.py --step cleanup --llm-cleanup --chapter p1_ch18  # re-run specific chapter
 uv run python pipeline.py --step adjudicate
 uv run python pipeline.py --step validate
-uv run python pipeline.py --step translate
+uv run python pipeline.py --step translate                          # single-model (translate.py)
+uv run python pipeline.py --step translate --multi-model            # multi-witness synthesis (multi_translate.py)
 uv run python pipeline.py --step translate --with-edgren  # with Edgren 1901 dictionary context
 uv run python pipeline.py --step refine --chapter p1_capitolo_primo  # refine specific chapters
 uv run python pipeline.py --step refine                              # refine all chapters
 uv run python pipeline.py --step refine --revert-to 1                # revert to snapshot version
 uv run python pipeline.py --step typeset
+uv run python pipeline.py --step companion                          # render the Reader's Companion (unguarded)
 
 # OCR with parallel workers (4x speedup for Pro)
 uv run python ocr.py --model pro --workers 4
@@ -66,9 +76,14 @@ uv run python pipeline.py --no-triage    # majority vote only, skip LLM triage
 ### Regeneration guard (cleanup / translate / all)
 
 `--step cleanup`, `--step translate`, and `--step all` overwrite committed,
-hand-tuned text. The local LLM-cleanup cache (`state/llm_cleaned/`) holds only
-31/58 chapters and some are stale, so re-running these **degrades**
-`output/*.md` and `state/translations/`. `pipeline.py` blocks them: each prints
+hand-tuned text. `output/italian_clean.md` carries scan-grounded deviation-review
+fixes applied by hand, and `state/translations/` is the multi-witness synthesis
+plus later refinements; neither is reproducible from a fresh run. The local
+LLM-cleanup cache (`state/llm_cleaned/`) is now empty, so `--step cleanup` would
+regenerate from scratch — and the cleanup stage is itself known to corrupt
+source-faithful OCR (the pre-cleanup reconciled text is the better witness). So
+re-running these **degrades** `output/*.md` and `state/translations/`.
+`pipeline.py` blocks them: each prints
 a warning and requires a human to type `regenerate <step>` at an interactive
 TTY. There is no TTY for agents, CI, or the auto-mode overseer, so they
 hard-abort with exit code 2 — and the same three commands are in the `deny`
@@ -79,8 +94,10 @@ regenerate can set `PER_LA_LIBERTA_ALLOW_REGEN=1`. Typesetting needs only
 ## Environment Variables
 
 Set in `.env` (gitignored, loaded automatically by `pipeline.py` via `python-dotenv`):
-- `ANTHROPIC_API_KEY` — for cleanup LLM pass, triage, and translation
-- `GEMINI_API_KEY` — for OCR (Gemini Flash/Pro)
+- `ANTHROPIC_API_KEY` — cleanup LLM pass, triage, translation, and the review-phase Claude readers/judges
+- `GEMINI_API_KEY` — OCR (Gemini Flash/Pro) and all review-phase vision reading (`vision_review.py`)
+- `OPENAI_API_KEY` — review-phase only: the GPT-5.4 member of the intention-review comprehension panel and the Stage-2 checker
+- `DEEPL_API_KEY` — review-phase only: neutral machine-translation reference (`mt.py`) for intention-review triage
 
 Keys can also be passed via `--api-key` / `--gemini-api-key` flags, but `.env` is preferred.
 
@@ -167,11 +184,16 @@ OCR text of *An Italian Dictionary* by Alfred Hoare (Cambridge Univ. Press, 1915
 - Third member of the period-dictionary membership oracle: a word found in ≥2 of {Zingarelli 1922, Edgren 1901, Hoare 1915} is confidently a real period word — used to tell a cleanup *corruption* of a valid 1913 form from a legitimate fix of OCR garble.
 
 ### Translation
-- Claude Sonnet 4.6 with 128K max_tokens and 32K thinking budget
-- Page provenance markers (`<!-- pages:N-M -->`) extracted before translation, reinserted after
-- Truncation detection: flags `stop_reason == "max_tokens"` or output < 30% of input length
-- Resumable via `state/translation_progress.json`
-- Optional `--with-edgren` flag enriches prompts with Edgren 1901 dictionary context
+
+Two paths share `--step translate`:
+
+- **Single-model** (`translate.py`, the default): Claude Sonnet 4.6, `max_tokens=128000`, extended-thinking budget configurable via `--thinking-budget` (**default 4096**, *not* 32K), `--no-thinking` to disable.
+- **Multi-witness synthesis** (`multi_translate.py`, `--multi-model`): per chapter, draft independently with multiple models (Sonnet + Gemini Pro, optionally GPT), score each draft on six literary dimensions, then synthesize a final translation with Claude Opus, logging provenance (`provenance.json`) and a deterministic omission guard (`synthesis_integrity.json`). Drafts/evals/briefs land in `state/multi_drafts/{ch}/`; resume via `state/multi_translate_progress.json`. **This is the path that produced the live `state/translations/` and `output/english_translation.md`** (April 2026), subsequently refined.
+
+Both paths:
+- Extract page provenance markers (`<!-- pages:N-M -->`) before translation, reinsert after
+- Detect truncation (`stop_reason == "max_tokens"` or output < 30% of input length)
+- Accept `--with-edgren` to enrich prompts with Edgren 1901 dictionary context
 
 ### Translation Refinement
 - Post-hoc review of existing translations against Edgren 1901 dictionary evidence
@@ -183,7 +205,7 @@ OCR text of *An Italian Dictionary* by Alfred Hoare (Cambridge Univ. Press, 1915
 - Changes visualized as marginalia in the bilingual HTML (toggle via ✎ button)
 
 ### Typesetting
-- **Typeface**: Bodoni Moda (variable font with optical size axis) — matches 1913 Italian Didone aesthetic
+- **Typeface**: **Spectral** (display — titles, chapter heads) + **Fraunces** (body — running text, both languages), both OFL, self-hosted under `docs/assets/fonts/`. Fraunces ships as a variable file per slope; Spectral as static weights. This replaced the original Bodoni Moda in the Spectral/Fraunces mobile-typography pass — Spectral is screen-tuned and Fraunces is a warm old-style face, a more legible pairing on phones than the high-contrast Didone while staying period-sympathetic.
 - **Layout**: Loeb Classical Library-style facing pages (Italian left, English right)
 - **Page citations**: Positioned in the right marginalia gutter (same column as revision annotations), aligned with first paragraph of each chapter. Clicking the label opens the source scan overlay. QR code icon reveals a centered viewport dialog for scanning to another device.
 - **Source scan overlay**: Slide-in panel from left showing original PDF page images, navigable with arrow keys
@@ -209,43 +231,57 @@ data/
   adjudication_results.json       # Zingarelli-classified tokens (step 5b)
   validation_report.json          # Validation results (step 6)
   typography.json                 # Scan-verified italics/small-caps/verse, applied at typeset (step 8)
+  companion_entity_index.json     # Companion personae/glossary index (step 9, Phase-2 hook)
+  companion_citation_map.json     # Companion chapter→anchor/page map (step 9, Phase-2 hook)
+  # Review-phase artifacts (blind_deviations*, cleanup_*, sample_estimate, etc.) — see REVIEW.md
 output/
   italian_clean.md                # Cleaned Italian markdown (step 5)
   english_translation.md          # English translation (step 7)
   bilingual.html                  # Bilingual web edition (step 8)
   bilingual.pdf                   # Bilingual print edition (step 8)
   source_pages.json               # Chapter → IA page URLs (step 7)
+  companion/                      # Hand-authored Reader's Companion markdown — source of truth (step 9)
 state/
-  translation_progress.json       # Per-chapter translation status
-  translations/                   # Individual chapter .md files
+  translation_progress.json       # Per-chapter status (single-model translate.py)
+  multi_translate_progress.json   # Per-chapter status (multi-witness multi_translate.py)
+  translations/                   # Individual chapter .md files (the live English)
+  multi_drafts/                   # Per-chapter drafts, evals, synthesis briefs, provenance (step 7 --multi-model)
   translation_revisions/          # Revision tracking (step 7b)
     revision_log.json             # Version history + snapshot references
     changes/                      # Per-version per-chapter change metadata
     snapshots/                    # Full chapter snapshots by timestamp
   llm_cleaned/                    # Full-text LLM cache per chapter (gitignored)
   llm_batch.json                  # Batch API state (gitignored)
+  # Review-phase state (comprehension/, deviation_crops/, scan_adjudication/, etc.) — see REVIEW.md
 assets/
   dictionary/zingarelli_1922/     # Chunked 1922 Italian dictionary
   dictionary/edgren_1901/         # Chunked 1901 Italian-English dictionary
-  fonts/Bodoni_Moda/              # Variable + static font files (SIL OFL)
-  fonts/Bodoni_Moda_SC/           # Small caps variant
-  page_images/                    # Rendered PDF pages as PNG (gitignored)
+  dictionary/hoare_1915/          # Chunked 1915 Italian-English dictionary (3rd oracle member)
+  page_images_harvard/            # Copy B (Harvard) pages rendered from PDF on demand (gitignored)
 docs/                             # GitHub Pages site (served from /docs on main)
   index.html                      # Bilingual web edition (synced from output/)
   scan.html                       # Standalone scan viewer for QR codes
+  companion/                      # Reader's Companion HTML pages + assets (step 9)
   static/bilingual.css            # Stylesheet (synced from static/)
-  assets/                         # Fonts + page images for web
+  assets/fonts/                   # Spectral + Fraunces, self-hosted (OFL)
+  assets/page_images/             # Rendered PDF pages as PNG — Copy A / LOC (gitignored)
 static/
   bilingual.css                   # Typesetting stylesheet (canonical copy)
 ```
 
 ## Current Status
 
-- All pipeline steps (1-8) complete and validated
-- LLM cleanup via Batch API: all 58 chapters corrected, full-text cache populated in `state/llm_cleaned/`
-- Validation passes all 7 checks: zero high-severity garble patterns, zero stray symbols, zero LLM instruction leaks
-- Translation (step 7) and typesetting (step 8) complete — bilingual HTML deployed via GitHub Pages
+**Build phase — complete and deployed:**
+- All build steps (1–9) complete and validated; bilingual HTML deployed via GitHub Pages
+- LLM cleanup via Batch API: all 58 chapters corrected, full-text cache in `state/llm_cleaned/`
+- Validation passes all 7 checks: zero high-severity garble, zero stray symbols, zero LLM instruction leaks
+- Live English is the multi-witness synthesis (step 7 `--multi-model`), since refined; Reader's Companion Phase 1 published under `docs/companion/`
 - The PDF on disk is the LOC scan: `public-gdcmassbookdig-perlalibertdal00cres-perlalibertdal00cres.pdf` (82MB, gitignored)
+
+**Review phase — ongoing** (see `REVIEW.md` for the full state):
+- Deviation review: scan-grounded adjudication of OCR/cleanup deviations, worked down via an exported review sheet and applied directly to `output/italian_clean.md`
+- Intention review: Stage 1 (blind comprehension panel) complete; Stage 2 (bilingual proposals) partial
+- English-matching of Italian deviation fixes is deferred to one deliberate sweep after the Italian pass completes
 
 ## Related Project
 
