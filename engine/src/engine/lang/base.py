@@ -16,6 +16,11 @@ from collections.abc import Iterable, Sequence
 from ..util.chapterids import ChapterIdentity
 from ..util.text import slug
 
+#: Process-wide spaCy pipeline cache, keyed by (model, disabled-components). Shared across
+#: plugin instances (the registry makes a fresh instance per call), keyed by model so
+#: languages never collide. Mirrors the live pipeline's function-attribute singletons.
+_SPACY_PIPELINES: dict[tuple, object] = {}
+
 
 def _as_range(value) -> tuple[int, int] | None:
     """Normalise a sidecar [start, end] (list/tuple) to a 2-tuple, or None."""
@@ -60,6 +65,30 @@ class LanguagePlugin(ABC):
     # ------------------------------------------------------------------ #
     # Shared mechanics (language-agnostic)
     # ------------------------------------------------------------------ #
+    def load_spacy(self, model: str, *, disable: Sequence[str] = ()):
+        """Load and cache a spaCy pipeline for ``model``, disabling ``disable`` components.
+
+        Cached by ``(model, disable)`` so an NER-only pipeline (``disable=["parser",
+        "lemmatizer"]``, as cleanup/validate use) and a lemmatizer-bearing one for
+        dictionary lookup never share the wrong pipeline (plan §"spaCy per-language
+        packaging"). The model name comes from config (``cfg.language.spacy_model``), so a
+        book can override it without touching code.
+        """
+        import spacy
+
+        key = (model, tuple(disable))
+        nlp = _SPACY_PIPELINES.get(key)
+        if nlp is None:
+            try:
+                nlp = spacy.load(model, disable=list(disable))
+            except OSError as exc:
+                raise OSError(
+                    f"spaCy model {model!r} is not installed; install the book's language "
+                    f"extra (e.g. `uv sync --extra it`)."
+                ) from exc
+            _SPACY_PIPELINES[key] = nlp
+        return nlp
+
     def chapter_identities(
         self,
         markdown_text: str,

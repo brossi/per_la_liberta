@@ -2,7 +2,7 @@
   "language_id": "it",
   "spacy_model": "it_core_news_lg",
   "spacy_distribution": "it-core-news-lg",
-  "frequency_dictionary": "dictionary/it_combined.txt",
+  "frequency_dictionary": "frequency/it_combined.txt",
   "english_markers": [
     "the", "and", "this", "that", "with", "from", "have", "will",
     "correct", "errors", "chapter", "text", "following", "here",

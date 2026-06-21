@@ -25,6 +25,10 @@ dependencies = [
     "segno>=1.6.6",
     "spacy>=3.8.14",
     "symspellpy>=6.9.0",
+    # spaCy's __init__ imports spacy.cli, which does `from click import ...`, but spaCy
+    # declares only typer — and this typer resolution doesn't pull click transitively, so
+    # `import spacy` fails without it. Pin click directly so the env is importable.
+    "click>=8.4.1",
 ]
 
 [project.scripts]

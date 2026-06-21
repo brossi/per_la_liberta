@@ -14,6 +14,25 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+# paths.py -> engine(pkg) -> src -> engine/ (project root)
+ENGINE_ROOT = Path(__file__).resolve().parents[2]
+
+#: Root for read-only heavy assets. During dev these are symlinks into the live tree
+#: (``assets/dictionary`` → period dicts, ``assets/frequency`` → the frequency dict,
+#: ``assets/fonts`` → OFL fonts); at extraction they become real copies. Resolving every
+#: asset path through here keeps symlink-vs-copy invisible to step code (plan §"Heavy assets").
+ASSETS_ROOT = ENGINE_ROOT / "assets"
+
+
+def asset_path(rel: str) -> Path:
+    """Resolve an assets-relative path (e.g. ``"frequency/it_combined.txt"``) to absolute.
+
+    Does not assert existence — callers that require the file present check it (and
+    ``tests/unit/test_assets.py`` asserts every config-referenced asset resolves).
+    """
+    return ASSETS_ROOT / rel
+
+
 _AREAS = ("data", "output", "state")
 
 
