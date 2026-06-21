@@ -1,0 +1,33 @@
+# Engine-local CI. This workflow travels with `git subtree split --prefix=engine`
+# so the extracted standalone repo has working CI from its first commit (M7).
+# While engine/ lives inside the parent repo it is NOT executed here (GitHub only
+# runs workflows under the repo-root .github/); the parent runs the mirror at
+# ../../.github/workflows/engine.yml instead.
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Sync (no per-language extras — unit tests need no spaCy model)
+        run: uv sync
+
+      - name: Unit tests
+        run: uv run pytest tests/unit -q
+
+      - name: No top-level pipeline imports leak into the package
+        run: |
+          ! grep -rEn \
+            'from (download|ocr|reconcile|triage|cleanup|adjudicate|validate|translate|multi_translate|refine|typeset|companion|pipeline|utils|providers|typography|edgren|hoare|vision_review|adjudicate) import|^[[:space:]]*import (pipeline|utils|providers)$' \
+            src tests
