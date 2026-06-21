@@ -46,8 +46,8 @@ tests/{unit,golden,fixtures}
 ```bash
 cd engine
 uv sync --extra it          # installs the engine + Italian spaCy model
-uv run pytest tests/unit    # fast unit tests
-uv run pytest tests/golden  # golden reproduction tests (slow; -m golden)
+uv run pytest tests/unit    # focused unit checks
+uv run pytest tests/golden  # golden reproduction checks
 ```
 
 The framework **never writes outside `books/<id>/work/`**. `paths.BookWorkspace`

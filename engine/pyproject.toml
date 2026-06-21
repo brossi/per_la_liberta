@@ -62,11 +62,11 @@ packages = ["src/engine"]
 # pythonpath = src is belt-and-suspenders alongside the editable install: it keeps
 # `import engine.*` resolving to this package even if the install is stale. testpaths
 # is scoped to engine/tests so a run launched from the parent repo never collects
-# top-level pipeline tests. Golden/integration tests (spaCy-backed, HTML-diff, full
-# OCR) are marked so they can be deselected for fast unit iteration.
+# top-level pipeline tests. Golden/integration tests are marked by purpose and scope
+# so CI and local runs can choose the right suite explicitly.
 pythonpath = ["src"]
 testpaths = ["tests"]
 markers = [
-    "golden: reproduces a committed live PLL artifact from frozen inputs (slow)",
-    "integration: exercises a full step end-to-end (slow)",
+    "golden: reproduces a committed live PLL artifact from frozen inputs",
+    "integration: exercises a full step end-to-end",
 ]

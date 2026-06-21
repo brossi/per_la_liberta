@@ -302,8 +302,9 @@ is the proven spine; everything else fans out from it.
 - Companion and the bulk of the review phase are intentionally out of scope (per decisions).
 - **Import shadowing** is a nested-development risk; true src layout plus strict pytest
   rootdir/pythonpath must ensure imports resolve to engine modules, not top-level twins.
-- **Golden fixture size and runtime** may slow iteration; spaCy-backed, full-OCR, and HTML-diff tests
-  should be marked `golden`/`integration` and separated from fast unit tests.
+- **Golden fixture scope and cadence** should stay explicit; spaCy-backed, full-OCR, and HTML-diff
+  tests should be marked `golden`/`integration` so CI and local workflows run the intended suite
+  deliberately and consistently.
 - **Model/version drift** should be recorded in run metadata/manifests without presenting current
   frontier model IDs as stable defaults for future books.
 - **Step-contract drift** is likely unless sidecar schemas are versioned and tested.
