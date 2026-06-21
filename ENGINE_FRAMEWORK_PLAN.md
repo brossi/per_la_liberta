@@ -235,13 +235,17 @@ per-step tests proving each output satisfies the next step's input contract.
 ### Heavy assets & extraction
 
 - **During dev:** frozen copies for golden inputs; symlink only large read-only assets. From
-  `engine/assets/`, use corrected targets `../../assets/dictionary` and `../../docs/assets/fonts`.
-  The loader resolves assets via an `ASSETS_ROOT` so symlink-vs-copy is invisible to code. Golden
+  `engine/assets/`, three symlink roots: `dictionary` → `../../assets/dictionary` (period dicts),
+  `frequency` → `../../data/dictionaries` (the `it_combined.txt` frequency dict, which lives under
+  `data/`, not `assets/`, in the live tree), and `fonts` → `../../docs/assets/fonts`. `paths.asset_path`
+  resolves against `ASSETS_ROOT` (`engine/assets/`) so symlink-vs-copy is invisible to code; golden
   tests hash live roots before/after and assert they are untouched.
 - **At extraction:** replace symlinks with real copies of the three period-dictionary chunk dirs
-  (+ index/headwords, not the gitignored `raw.txt`), `it_combined.txt`, OFL fonts, font OFL files
+  (+ index/headwords, not the gitignored `raw.txt`) under `assets/dictionary/`, `it_combined.txt`
+  under `assets/frequency/` (mirroring the dev root), OFL fonts under `assets/fonts/`, font OFL files
   (`docs/assets/fonts/{Fraunces,Spectral}/OFL.txt` exist), and dictionary provenance notes (IA URLs
-  + rights status).
+  + rights status). `tests/unit/test_assets.py` then verifies every config-referenced asset resolves
+  against the copies.
 - **Mechanism:** `git subtree split --prefix=engine <branch>` → fresh repo (history-preserving).
   Gate on a CI grep proving no `from <toplevel_module> import …` under `engine/` and the isolation test.
 

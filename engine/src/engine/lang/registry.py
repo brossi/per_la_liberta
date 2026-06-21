@@ -9,6 +9,14 @@ from __future__ import annotations
 from .base import LanguagePlugin
 from .italian import ItalianLanguagePlugin
 
+class UnknownLanguageError(Exception):
+    """A manifest names a language id with no registered ``LanguagePlugin``.
+
+    A plain ``Exception`` (not ``KeyError``) so its ``str`` is the bare message — the CLI
+    surfaces it as a clean exit-1 config error rather than a quote-wrapped traceback.
+    """
+
+
 _REGISTRY: dict[str, type[LanguagePlugin]] = {
     ItalianLanguagePlugin.language_id: ItalianLanguagePlugin,
 }
@@ -20,8 +28,8 @@ def get_language_plugin(language_id: str) -> LanguagePlugin:
         cls = _REGISTRY[language_id]
     except KeyError:
         known = ", ".join(sorted(_REGISTRY)) or "(none)"
-        raise KeyError(
-            f"No LanguagePlugin registered for language id {language_id!r}; known: {known}"
+        raise UnknownLanguageError(
+            f"no LanguagePlugin registered for language id {language_id!r}; known: {known}"
         ) from None
     return cls()
 

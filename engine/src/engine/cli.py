@@ -20,7 +20,7 @@ from pathlib import Path
 
 from engine import STEPS
 from engine.config.loader import ConfigError, load_book
-from engine.lang.registry import get_language_plugin
+from engine.lang.registry import UnknownLanguageError, get_language_plugin
 from engine.paths import BookWorkspace
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
@@ -70,11 +70,11 @@ def _run_step(step: str, book: str) -> int:
     """
     try:
         cfg = load_book(book, books_dir=BOOKS_DIR)
-    except ConfigError as exc:
+        lang = get_language_plugin(cfg.language_id)
+    except (ConfigError, UnknownLanguageError) as exc:
         print(f"engine: {exc}", file=sys.stderr)
         return 1
 
-    lang = get_language_plugin(cfg.language_id)
     workspace = BookWorkspace.for_book(book, BOOKS_DIR)
 
     module = importlib.import_module(f"engine.steps.{step}")

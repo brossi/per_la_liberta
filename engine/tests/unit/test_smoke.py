@@ -53,3 +53,21 @@ def test_cli_resolves_real_book_then_hits_stub():
 def test_cli_unknown_book_is_a_config_error():
     # A missing manifest is a clean ConfigError → exit 1, not a traceback.
     assert cli.main(["--step", "validate", "--book", "no_such_book"]) == 1
+
+
+def test_registry_unknown_language_raises_clean_error():
+    from engine.lang.registry import UnknownLanguageError, get_language_plugin
+
+    with pytest.raises(UnknownLanguageError, match="no LanguagePlugin"):
+        get_language_plugin("zz")
+
+
+def test_cli_unknown_language_is_exit_1(monkeypatch):
+    # A manifest whose language has no plugin resolves cleanly to exit 1, not a traceback.
+    from engine.lang.registry import UnknownLanguageError
+
+    def _raise(_lid):
+        raise UnknownLanguageError("no plugin for test")
+
+    monkeypatch.setattr(cli, "get_language_plugin", _raise)
+    assert cli.main(["--step", "validate", "--book", "per_la_liberta"]) == 1

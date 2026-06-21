@@ -99,3 +99,66 @@ def test_override_replaces_profile_field(tmp_path):
 def test_missing_book_is_a_clean_error(tmp_path):
     with pytest.raises(ConfigError, match="not found"):
         load_book("nonexistent", books_dir=tmp_path, profiles_dir=REAL_PROFILES)
+
+
+def _real_manifest() -> dict:
+    return json.loads((REAL_BOOKS / "per_la_liberta" / "manifest.json").read_text())
+
+
+def test_language_id_mismatch_is_rejected(tmp_path):
+    # Manifest declares 'fr' but the referenced profile is 'it' — the loader guard fires.
+    m = _real_manifest()
+    m["language"] = "fr"
+    books = _write_book(tmp_path, "mm", m)
+    with pytest.raises(ConfigError, match="language mismatch"):
+        load_book("mm", books_dir=books, profiles_dir=REAL_PROFILES)
+
+
+def test_missing_profile_ref_is_a_clean_error(tmp_path):
+    m = _real_manifest()
+    m["profiles"]["language"] = "no_such_profile"
+    books = _write_book(tmp_path, "mp", m)
+    with pytest.raises(ConfigError, match="not found"):
+        load_book("mp", books_dir=books, profiles_dir=REAL_PROFILES)
+
+
+def test_profile_schema_guards_its_builder(tmp_path):
+    # A malformed *profile* (not just the manifest) must fail validation — the only test
+    # that exercises the profile-level schema path. A language profile missing oracle_min
+    # would otherwise KeyError in the builder; the schema turns it into a clean ConfigError.
+    prof = tmp_path / "profiles" / "languages"
+    prof.mkdir(parents=True)
+    lang = json.loads((REAL_PROFILES / "languages" / "italian_1900_1922.json").read_text())
+    del lang["oracle_min"]
+    (prof / "italian_1900_1922.json").write_text(json.dumps(lang), encoding="utf-8")
+    books = _write_book(tmp_path, "bp", _real_manifest())
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("bp", books_dir=books, profiles_dir=tmp_path / "profiles")
+
+
+def test_override_is_validated_after_merge(tmp_path):
+    # An override that violates the schema is caught — proving override happens before,
+    # not after, validation.
+    m = _real_manifest()
+    m["id"] = "ovrbad"
+    m["overrides"] = {"language": {"oracle_min": "two"}}  # wrong type
+    books = _write_book(tmp_path, "ovrbad", m)
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("ovrbad", books_dir=books, profiles_dir=REAL_PROFILES)
+
+
+def test_override_replaces_list_field_wholesale(tmp_path):
+    # The documented shallow-replace semantics: overriding a list swaps it whole, it does
+    # not append. (This is the tradeoff vs the deferred per-field deep merge.)
+    m = _real_manifest()
+    m["id"] = "ovrlist"
+    m["overrides"] = {
+        "language": {
+            "period_dictionaries": [
+                {"name": "Only One", "kind": "monolingual", "dir": "dictionary/only_one"}
+            ]
+        }
+    }
+    books = _write_book(tmp_path, "ovrlist", m)
+    cfg = load_book("ovrlist", books_dir=books, profiles_dir=REAL_PROFILES)
+    assert [d.name for d in cfg.language.period_dictionaries] == ["Only One"]
