@@ -19,6 +19,9 @@ import sys
 from pathlib import Path
 
 from engine import STEPS
+from engine.config.loader import ConfigError, load_book
+from engine.lang.registry import get_language_plugin
+from engine.paths import BookWorkspace
 
 PACKAGE_ROOT = Path(__file__).resolve().parent
 ENGINE_ROOT = PACKAGE_ROOT.parents[1]  # engine/ (src/engine/cli.py -> engine/)
@@ -58,10 +61,25 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def _run_step(step: str, book: str) -> int:
-    """Dispatch to the named step module. M0: surfaces the stub's NotImplementedError."""
+    """Resolve the book, then dispatch to the named step module.
+
+    M1 wires real resolution: the book's manifest + profiles become a ``ResolvedConfig``,
+    its language id selects the ``LanguagePlugin``, and an isolated ``BookWorkspace`` is
+    derived. Steps are ported milestone by milestone; until then their stubs raise
+    ``NotImplementedError`` (surfaced as exit 2) even though resolution now succeeds.
+    """
+    try:
+        cfg = load_book(book, books_dir=BOOKS_DIR)
+    except ConfigError as exc:
+        print(f"engine: {exc}", file=sys.stderr)
+        return 1
+
+    lang = get_language_plugin(cfg.language_id)
+    workspace = BookWorkspace.for_book(book, BOOKS_DIR)
+
     module = importlib.import_module(f"engine.steps.{step}")
     try:
-        module.run(book=book)
+        module.run(workspace=workspace, cfg=cfg, lang=lang)
     except NotImplementedError as exc:
         print(f"engine: {exc}", file=sys.stderr)
         return 2

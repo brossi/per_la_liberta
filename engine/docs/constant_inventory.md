@@ -27,15 +27,15 @@ M1 time; they are anchors, not contracts.
 | `SCAN_LEAF_OFFSET` (typeset.py:17) | int | scan leaf − book page = 6 | `manifest.scan` |
 | `_last_scan_page` fallback (typeset.py:731, dflt 278) | int | last scan leaf | `manifest.scan` (the one scalar inside `chapter_start_pages.json`) |
 
-## Scan-noise profile (reusable source-typeface OCR profile → `profiles/typefaces/bodoni_didone.json`, the `ScanProfile`)
+## Scan-noise profile (reusable source-typeface OCR profile → `profiles/source_noise/bodoni_didone.json`, the `SourceNoiseProfile`)
 
 | Constant (file:line) | Type | Encodes | → Destination |
 |---|---|---|---|
-| `SUBSTITUTION_RULES` (cleanup.py:20–47, 21 entries) | list[tuple] | Italian-word OCR fix table | `ScanProfile` *(plan §"Scan/typeface noise"; not period_dictionaries)* |
-| `BOUNDARY_SUBSTITUTIONS` (cleanup.py:76–78) | dict | Bodoni `i→r`,`i→e` hyphen-boundary subs | `ScanProfile` |
-| `NOISE_LINE_PATTERN` (cleanup.py:14–16) | regex | OCR noise-line filter | `ScanProfile` |
-| `PAGE_MARKER` (ocr.py:20), page-marker regex (cleanup.py/validate.py `\d+\s+[35][EI]:?`) | str/regex | page-marker artifact shape | `ScanProfile` |
-| `BOUNDARY_SUBS` (adjudicate.py:22) | dict | dup of cleanup boundary subs | `ScanProfile` (single source) |
+| `SUBSTITUTION_RULES` (cleanup.py:20–47, 21 entries) | list[tuple] | Italian-word OCR fix table | `SourceNoiseProfile` *(plan §"Scan/typeface noise"; not period_dictionaries)* |
+| `BOUNDARY_SUBSTITUTIONS` (cleanup.py:76–78) | dict | Bodoni `i→r`,`i→e` hyphen-boundary subs | `SourceNoiseProfile` |
+| `NOISE_LINE_PATTERN` (cleanup.py:14–16) | regex | OCR noise-line filter | `SourceNoiseProfile` |
+| `PAGE_MARKER` (ocr.py:20), page-marker regex (cleanup.py/validate.py `\d+\s+[35][EI]:?`) | str/regex | page-marker artifact shape | `SourceNoiseProfile` |
+| `BOUNDARY_SUBS` (adjudicate.py:22) | dict | dup of cleanup boundary subs | `SourceNoiseProfile` (single source) |
 
 `NOISE_LINE_PATTERN`, `_HYPHEN_TOKEN_RE`, `_ACCENT_MAP`, `PAGE_MARKER_RE`, `MID_NOISE`,
 `MID_CAPS`, `CONSONANT_CLUSTER` mechanics are **code defaults** — only their *data* (the
@@ -116,7 +116,7 @@ asserts the plugin reproduces them without calling live top-level code at test t
 
 The sub-agent inventory flagged a few items as "ambiguous"; the plan already decides them,
 so M1 follows the plan, not a re-litigation:
-- `SUBSTITUTION_RULES`/boundary subs → **ScanProfile** (plan §"Scan/typeface noise"), not a dictionary.
+- `SUBSTITUTION_RULES`/boundary subs → **SourceNoiseProfile** (plan §"Scan/typeface noise"), not a dictionary.
 - ordinal OCR-garble fixes (`qyinto`…) → **`lang/italian.py`** with the canonical ordinals (plan line 127), even though they are observed-scan data; the plugin owns them.
 - `SITE_BASE` → **manifest top-level** deploy field (plan line 119).
 - validate structure counts/thresholds → **`manifest.structure`** (plan line 120).

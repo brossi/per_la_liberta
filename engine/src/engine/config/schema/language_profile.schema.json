@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Language profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "language_id", "spacy_model", "spacy_distribution", "frequency_dictionary",
+    "english_markers", "skip_words", "consonant_alphabet", "accent_optional",
+    "period_dictionaries", "oracle_min"
+  ],
+  "properties": {
+    "language_id": {"type": "string", "minLength": 1},
+    "spacy_model": {"type": "string", "minLength": 1},
+    "spacy_distribution": {"type": "string", "minLength": 1},
+    "frequency_dictionary": {"type": "string", "minLength": 1},
+    "english_markers": {"type": "array", "items": {"type": "string"}},
+    "skip_words": {"type": "array", "items": {"type": "string"}},
+    "consonant_alphabet": {"type": "string", "minLength": 1},
+    "accent_optional": {"type": "boolean"},
+    "period_dictionaries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "kind", "dir"],
+        "properties": {
+          "name": {"type": "string"},
+          "kind": {"type": "string", "enum": ["monolingual", "bilingual"]},
+          "dir": {"type": "string"}
+        }
+      }
+    },
+    "oracle_min": {"type": "integer", "minimum": 1}
+  }
+}

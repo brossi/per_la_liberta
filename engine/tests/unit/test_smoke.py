@@ -42,3 +42,14 @@ def test_cli_parser_builds_and_lists_steps():
 def test_cli_main_with_no_step_is_a_noop_error():
     # No --step and no --list-books → usage error exit code, not a crash.
     assert cli.main([]) == 1
+
+
+def test_cli_resolves_real_book_then_hits_stub():
+    # M1 wiring: a real --step run resolves PLL's manifest + profiles + plugin +
+    # workspace (no crash), then surfaces the not-yet-ported step stub as exit 2.
+    assert cli.main(["--step", "validate", "--book", "per_la_liberta"]) == 2
+
+
+def test_cli_unknown_book_is_a_config_error():
+    # A missing manifest is a clean ConfigError → exit 1, not a traceback.
+    assert cli.main(["--step", "validate", "--book", "no_such_book"]) == 1

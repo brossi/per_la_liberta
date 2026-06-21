@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source-noise (source-typeface OCR-noise) profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name", "substitution_rules", "boundary_substitutions",
+    "page_marker_artifact_pattern", "page_marker_format"
+  ],
+  "properties": {
+    "name": {"type": "string", "minLength": 1},
+    "substitution_rules": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {"type": "string"},
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "boundary_substitutions": {
+      "type": "object",
+      "additionalProperties": {"type": "array", "items": {"type": "string"}}
+    },
+    "page_marker_artifact_pattern": {"type": "string", "minLength": 1},
+    "page_marker_format": {"type": "string", "minLength": 1}
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Bodoni / Didone (source typeface)",
+  "substitution_rules": [
+    ["piii", "più"],
+    ["pili", "più"],
+    ["piìi", "più"],
+    ["piiì", "più"],
+    ["cbe", "che"],
+    ["cbi", "chi"],
+    ["eolla", "colla"],
+    ["eol", "col"],
+    ["eome", "come"],
+    ["eosa", "cosa"],
+    ["eosì", "così"],
+    ["eosl", "così"],
+    ["eui", "cui"],
+    ["easa", "casa"],
+    ["earo", "caro"],
+    ["ealdo", "caldo"],
+    ["eentro", "centro"],
+    ["eontro", "contro"],
+    ["bo", "ho"],
+    ["salla", "sulla"],
+    ["5AN", "SAN"]
+  ],
+  "boundary_substitutions": {
+    "i": ["r", "e"]
+  },
+  "page_marker_artifact_pattern": "\\d+\\s+[35][EI]:?",
+  "page_marker_format": "⟨PAGE:{}⟩"
+}

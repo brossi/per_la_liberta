@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Book manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "id", "title", "language", "profiles",
+    "sources", "scan", "structure", "edition", "prompt_context"
+  ],
+  "properties": {
+    "schema_version": {"type": "integer", "const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "language": {"type": "string", "minLength": 1},
+    "profiles": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["language", "source_noise", "typeface"],
+      "properties": {
+        "language": {"type": "string", "minLength": 1},
+        "source_noise": {"type": "string", "minLength": 1},
+        "typeface": {"type": "string", "minLength": 1}
+      }
+    },
+    "overrides": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "language": {"type": "object"},
+        "source_noise": {"type": "object"},
+        "typeface": {"type": "object"}
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "label", "ia_item_id"],
+        "properties": {
+          "role": {"type": "string"},
+          "label": {"type": "string"},
+          "ia_item_id": {"type": "string"},
+          "url": {"type": "string"}
+        }
+      }
+    },
+    "scan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["pdf", "page_image_template", "leaf_offset", "last_scan_page_default"],
+      "properties": {
+        "pdf": {"type": "string"},
+        "page_image_template": {"type": "string"},
+        "leaf_offset": {"type": "integer"},
+        "last_scan_page_default": {"type": "integer"}
+      }
+    },
+    "structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "h2_min", "h3_count", "parts", "content_units",
+        "retention_min", "foreign_char_max", "word_quality_high_severity_max"
+      ],
+      "properties": {
+        "h2_min": {"type": "integer", "minimum": 0},
+        "h3_count": {"type": "integer", "minimum": 0},
+        "parts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "chapters"],
+            "properties": {
+              "name": {"type": "string"},
+              "chapters": {"type": "integer", "minimum": 0}
+            }
+          }
+        },
+        "content_units": {"type": "integer", "minimum": 0},
+        "retention_min": {"type": "number", "minimum": 0, "maximum": 1},
+        "foreign_char_max": {"type": "number", "minimum": 0, "maximum": 1},
+        "word_quality_high_severity_max": {"type": "integer", "minimum": 0}
+      }
+    },
+    "edition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title_it", "subtitle_it", "subtitle_en", "author",
+        "colophon", "ia_item_id", "site_base"
+      ],
+      "properties": {
+        "title_it": {"type": "string"},
+        "subtitle_it": {"type": "string"},
+        "subtitle_en": {"type": "string"},
+        "author": {"type": "string"},
+        "colophon": {"type": "string"},
+        "ia_item_id": {"type": "string"},
+        "site_base": {"type": "string"}
+      }
+    },
+    "prompt_context": {"type": "object"}
+  }
+}
