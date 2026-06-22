@@ -123,6 +123,7 @@ def _build_language(data: dict) -> LanguageProfile:
         english_markers=tuple(data["english_markers"]),
         skip_words=tuple(data["skip_words"]),
         consonant_alphabet=data["consonant_alphabet"],
+        accented_letters=data["accented_letters"],
         accent_optional=data["accent_optional"],
         period_dictionaries=tuple(
             PeriodDictionary(name=d["name"], kind=d["kind"], dir=d["dir"])

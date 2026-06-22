@@ -5,8 +5,8 @@
   "additionalProperties": false,
   "required": [
     "language_id", "spacy_model", "spacy_distribution", "frequency_dictionary",
-    "english_markers", "skip_words", "consonant_alphabet", "accent_optional",
-    "period_dictionaries", "oracle_min"
+    "english_markers", "skip_words", "consonant_alphabet", "accented_letters",
+    "accent_optional", "period_dictionaries", "oracle_min"
   ],
   "properties": {
     "language_id": {"type": "string", "minLength": 1},
@@ -16,6 +16,7 @@
     "english_markers": {"type": "array", "items": {"type": "string"}},
     "skip_words": {"type": "array", "items": {"type": "string"}},
     "consonant_alphabet": {"type": "string", "minLength": 1},
+    "accented_letters": {"type": "string"},
     "accent_optional": {"type": "boolean"},
     "period_dictionaries": {
       "type": "array",

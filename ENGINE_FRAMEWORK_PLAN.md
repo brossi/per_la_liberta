@@ -213,9 +213,10 @@ Golden tests (`tests/golden/`, inputs under `books/per_la_liberta/inputs/` as fr
 - `test_chapterids_golden` — `LanguagePlugin` chapter identities match a frozen expected JSON
   fixture for all forms (`short`, `parse_md`, `html_slug`, page range). It does not call live
   top-level code at test time. (Tripwire for the hardest refactor.)
-- `test_validate_golden` — parameterized validate on a copy of `output/italian_clean.md` reproduces
-  `data/validation_report.json` per-check pass/fail + key counts (h2≥3, h3==57, ≥60% retention,
-  <0.5% foreign, zero high-severity word-quality).
+- `test_validate_golden` — parameterized validate on a frozen copy of the live cleaned text
+  (`books/per_la_liberta/inputs/clean.md`) reproduces `data/validation_report.json` per-check
+  pass/fail + key counts (h2≥3, h3==57, ≥60% retention, <0.5% foreign, zero high-severity
+  word-quality), modulo the one generalised label `italian_char_coverage` → `char_coverage`.
 - `test_reconcile_golden` — reconcile on copies of `data/copy{1,2,3}_raw.txt` reproduces
   `reconciled_chapters.json`, `flagged_segments.json`, and `chapter_pages.json`.
 - `test_typeset_golden` — typeset on copies of the clean/translation/typography inputs matches

@@ -44,6 +44,7 @@ def test_resolves_real_pll_constants():
     assert "the" in lp.english_markers and "correct" in lp.english_markers
     assert "il" in lp.skip_words
     assert lp.consonant_alphabet == "bcdfghjklmnpqrstvwxyz"
+    assert lp.accented_letters == "àèìòùéÀÈÌÒÙÉ"
     assert lp.accent_optional is True
     assert lp.oracle_min == 2
     assert {d.name for d in lp.period_dictionaries} == {

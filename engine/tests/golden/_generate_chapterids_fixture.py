@@ -105,8 +105,9 @@ def main() -> int:
     INPUTS_DIR.mkdir(parents=True, exist_ok=True)
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    # Freeze the inputs the engine reproduces from.
-    shutil.copyfile(LIVE_CLEAN, INPUTS_DIR / "italian_clean.md")
+    # Freeze the inputs the engine reproduces from (the live ``italian_clean.md`` becomes the
+    # engine's generic ``clean.md``).
+    shutil.copyfile(LIVE_CLEAN, INPUTS_DIR / "clean.md")
     shutil.copyfile(LIVE_START_PAGES, INPUTS_DIR / "chapter_start_pages.json")
 
     expected = build_expected()

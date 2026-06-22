@@ -2,7 +2,7 @@
 
 The ``ItalianLanguagePlugin`` must reproduce every chapter-id form the live pipeline
 produces (short / parse_md / html_slug / english_title / part / number / page_range),
-for all 58 PLL content units, from a frozen copy of ``italian_clean.md`` —  *without*
+for all 58 PLL content units, from a frozen copy of the cleaned text (``clean.md``) —  *without*
 importing any top-level pipeline code. The expected JSON was frozen from the live tree by
 ``_generate_chapterids_fixture.py``; if the plugin and live code ever disagree, this fails.
 """
@@ -41,7 +41,7 @@ def _page_ranges(start_pages: dict) -> dict[str, tuple[int, int]]:
 
 
 def _load_identities():
-    text = (INPUTS / "italian_clean.md").read_text(encoding="utf-8")
+    text = (INPUTS / "clean.md").read_text(encoding="utf-8")
     start_pages = json.loads((INPUTS / "chapter_start_pages.json").read_text(encoding="utf-8"))
     plugin = ItalianLanguagePlugin()
     return plugin.chapter_identities(text, page_ranges=_page_ranges(start_pages))

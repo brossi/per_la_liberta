@@ -24,7 +24,7 @@ from engine.lang.italian import ItalianLanguagePlugin
 # test_sidecar_contracts.py -> unit -> tests -> engine
 INPUTS = Path(__file__).resolve().parents[2] / "books" / "per_la_liberta" / "inputs"
 SIDECAR = INPUTS / "chapter_start_pages.json"
-CLEAN = INPUTS / "italian_clean.md"
+CLEAN = INPUTS / "clean.md"
 
 pytestmark = pytest.mark.skipif(
     not SIDECAR.is_file(), reason="frozen PLL sidecar not present"
