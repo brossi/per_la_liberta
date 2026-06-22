@@ -97,13 +97,28 @@ class PeriodDictionary:
 
 
 @dataclass(frozen=True, slots=True)
+class CoverageSpec:
+    """What counts as *in-script* for validate's char-coverage check — a literal-character
+    allowlist, deliberately **not** a regex. ``ascii_letters``/``digits`` toggle the a–zA–Z /
+    0–9 ranges (a non-Latin script turns ASCII off); ``letters`` and ``punctuation`` are
+    verbatim character lists (the script's letters beyond ASCII, and the tolerated typographic
+    punctuation). The check turns this into a ``frozenset`` and tests membership, so there is no
+    regex syntax, escaping, or accidental-range surface for a book author to get wrong.
+    Whitespace is always in-script (the check filters it before testing)."""
+
+    ascii_letters: bool
+    digits: bool
+    letters: str
+    punctuation: str
+
+
+@dataclass(frozen=True, slots=True)
 class LanguageProfile:
     """Language knowledge shared across books in the same language/era.
 
     The word-quality fields (``english_markers``, ``skip_words``, ``consonant_alphabet``),
-    ``accented_letters`` (char-coverage), and ``spacy_model``/``frequency_dictionary`` are
-    read by M2 ``validate``; the period dictionaries + ``oracle_min`` feed the M6 membership
-    oracle.
+    ``coverage`` (char-coverage), and ``spacy_model``/``frequency_dictionary`` are read by M2
+    ``validate``; the period dictionaries + ``oracle_min`` feed the M6 membership oracle.
     """
 
     language_id: str
@@ -113,10 +128,7 @@ class LanguageProfile:
     english_markers: tuple[str, ...]
     skip_words: tuple[str, ...]
     consonant_alphabet: str
-    # The language's orthographic letters *beyond* ASCII a–z (Italian's accented vowels,
-    # both cases). validate's char-coverage check treats ASCII letters + these + generic
-    # typographic punctuation as in-script; everything else counts toward the foreign ratio.
-    accented_letters: str
+    coverage: CoverageSpec
     accent_optional: bool
     period_dictionaries: tuple[PeriodDictionary, ...]
     oracle_min: int

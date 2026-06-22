@@ -6,16 +6,17 @@ workspace and leaves the live PLL tree (repo-root ``data/``/``output/``/``state/
 — so the engine can never overwrite the hand-tuned live edition. Snapshotting those trees
 before and after a run is the direct evidence that ``run`` has no path to them.
 
-``integration``: the synthetic run loads the real spaCy model (word_quality). The book is
-tiny, so the NER pass is fast.
+Containment is independent of what spaCy does (it is purely about *where* writes go), so this
+injects a no-op NER stub instead of loading the model. That keeps the safety check in the
+*fast* suite — run on every invocation, not gated behind ``integration`` — while the real
+spaCy path is exercised by the golden and synthetic-book tests.
 """
 
 from __future__ import annotations
 
+import json
 import os
 from pathlib import Path
-
-import pytest
 
 from engine.config.loader import load_book
 from engine.lang.registry import get_language_plugin
@@ -28,6 +29,14 @@ SYNTHETIC_INPUTS = ENGINE_ROOT / "books" / "synthetic" / "inputs"
 
 # The live pipeline's protected output seam (pipeline.py DATA_DIR/OUTPUT_DIR/STATE_DIR).
 PROTECTED = ("data", "output", "state")
+
+
+class _StubDoc:
+    ents = ()
+
+
+def _stub_nlp(_text):
+    return _StubDoc()
 
 
 def _snapshot(root: Path) -> dict[str, tuple[int, int]]:
@@ -49,10 +58,11 @@ def _snapshot(root: Path) -> dict[str, tuple[int, int]]:
     return snap
 
 
-@pytest.mark.integration
-def test_validate_leaves_live_tree_untouched(tmp_path):
+def test_validate_leaves_live_tree_untouched(tmp_path, monkeypatch):
     cfg = load_book("synthetic")
     lang = get_language_plugin(cfg.language_id)
+    # Containment doesn't depend on real NER — stub it so this stays a fast, always-run check.
+    monkeypatch.setattr(lang, "load_spacy", lambda *a, **k: _stub_nlp)
 
     ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
     (ws.output / validate.CLEAN_FILE).write_text(
@@ -69,8 +79,10 @@ def test_validate_leaves_live_tree_untouched(tmp_path):
 
     assert before == after, "validate wrote into the live PLL tree"
 
-    # And the report did land — inside the workspace, under tmp_path, not the repo.
+    # And the report did land — inside the workspace, under tmp_path, not the repo. (The
+    # verdict isn't asserted: containment is about *where* the write goes, not the outcome.)
     written = ws.data / validate.REPORT_FILE
-    assert written.is_file() and report["overall"] == "pass"
+    assert written.is_file()
+    assert json.loads(written.read_text(encoding="utf-8")) == report
     assert tmp_path in written.parents
     assert REPO_ROOT not in written.parents

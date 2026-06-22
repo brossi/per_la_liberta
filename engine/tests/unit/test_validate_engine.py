@@ -17,7 +17,7 @@ from pathlib import Path
 import pytest
 
 from engine.config.loader import load_book
-from engine.config.models import PartStructure, Structure
+from engine.config.models import CoverageSpec, PartStructure, Structure
 from engine.lang.registry import get_language_plugin
 from engine.paths import BookWorkspace
 from engine.steps import validate
@@ -55,14 +55,28 @@ def test_chapter_count_reads_declared_structure():
     assert "57" in wrong["issues"][0] and "Parte Prima" in wrong["issues"][0]
 
 
-def test_char_coverage_reads_language_alphabet_and_threshold():
-    text = "Frühaufsteher"  # contains 'ü', outside the Italian accented set
-    # 'ü' declared in the alphabet → accepted → no foreign chars.
-    ok = validate.check_char_coverage(text, accented_letters="ü", foreign_char_max=0.005)
+def test_char_coverage_reads_coverage_set_and_threshold():
+    text = "Frühaufsteher"  # contains 'ü'
+    with_u = validate._coverage_set(
+        CoverageSpec(ascii_letters=True, digits=False, letters="ü", punctuation="")
+    )
+    ok = validate.check_char_coverage(text, with_u, foreign_char_max=0.005)
     assert ok["passed"] and ok["foreign_char_ratio"] == 0.0
-    # Same text, 'ü' not in the alphabet → flagged as foreign over a zero tolerance.
-    bad = validate.check_char_coverage(text, accented_letters="", foreign_char_max=0.0)
+    # Drop 'ü' from the allowlist → it's foreign over a zero tolerance. The whole in-script set
+    # is config (CoverageSpec); nothing about which chars count is hardcoded in the check.
+    without_u = validate._coverage_set(
+        CoverageSpec(ascii_letters=True, digits=False, letters="", punctuation="")
+    )
+    bad = validate.check_char_coverage(text, without_u, foreign_char_max=0.0)
     assert not bad["passed"] and bad["foreign_char_ratio"] > 0
+
+
+def test_coverage_set_honours_toggles():
+    # The ascii_letters / digits toggles are real: a non-Latin script can exclude a–z / 0–9.
+    spec = CoverageSpec(ascii_letters=False, digits=False, letters="абв", punctuation=".")
+    allowed = validate._coverage_set(spec)
+    assert "а" in allowed and "." in allowed
+    assert "a" not in allowed and "5" not in allowed
 
 
 def test_no_ascii_remnants_reads_page_marker_pattern():
@@ -131,6 +145,25 @@ def test_word_quality_high_severity_fails_and_reads_its_ceiling():
     lax = validate.check_word_quality(text, high_severity_max=5, **kw)
     assert lax["passed"] is True
     assert lax["high_severity"] == 3
+
+
+def test_mid_word_noise_is_unreachable_faithful_to_live():
+    # Pins the documented dead branch (validate.py _MID_NOISE note): _WORD_RE captures
+    # letters only, so a token with embedded noise splits at the noise and "mid-word noise"
+    # never fires — matching the live validate.py. If a future _WORD_RE change makes it
+    # reachable, this flips and forces a deliberate decision (and a golden refresh).
+    text = "### Capitolo\n\nun com2rare guasto qui\n"
+    result = validate.check_word_quality(
+        text,
+        word_set=frozenset({"un", "guasto", "qui", "com", "rare"}),
+        nlp=_no_ner,
+        english_markers=set(),
+        skip_words=set(),
+        consonant_alphabet="bcdfghjklmnpqrstvwxyz",
+        high_severity_max=0,
+    )
+    all_reasons = [r for flags in result["by_chapter"].values() for f in flags for r in f["reasons"]]
+    assert "mid-word noise" not in all_reasons
 
 
 def test_word_quality_capitalised_cluster_is_not_high_severity():

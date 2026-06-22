@@ -22,6 +22,7 @@ import jsonschema
 
 from .models import (
     BookManifest,
+    CoverageSpec,
     Edition,
     LanguageProfile,
     PartStructure,
@@ -123,7 +124,12 @@ def _build_language(data: dict) -> LanguageProfile:
         english_markers=tuple(data["english_markers"]),
         skip_words=tuple(data["skip_words"]),
         consonant_alphabet=data["consonant_alphabet"],
-        accented_letters=data["accented_letters"],
+        coverage=CoverageSpec(
+            ascii_letters=data["coverage"]["ascii_letters"],
+            digits=data["coverage"]["digits"],
+            letters=data["coverage"]["letters"],
+            punctuation=data["coverage"]["punctuation"],
+        ),
         accent_optional=data["accent_optional"],
         period_dictionaries=tuple(
             PeriodDictionary(name=d["name"], kind=d["kind"], dir=d["dir"])

@@ -14,7 +14,12 @@
     "ne", "al", "ai", "ha", "ho", "fu", "fa", "va", "oh", "ah"
   ],
   "consonant_alphabet": "bcdfghjklmnpqrstvwxyz",
-  "accented_letters": "àèìòùéÀÈÌÒÙÉ",
+  "coverage": {
+    "ascii_letters": true,
+    "digits": true,
+    "letters": "àèìòùéÀÈÌÒÙÉ",
+    "punctuation": ".,;:!?-—–'’‘\"«»“”()[]/…"
+  },
   "accent_optional": true,
   "period_dictionaries": [
     {"name": "Zingarelli 1922", "kind": "monolingual", "dir": "dictionary/zingarelli_1922"},

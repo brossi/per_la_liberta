@@ -1,5 +1,6 @@
 {
   "overall": "pass",
+  "issues": [],
   "checks": [
     {
       "name": "chapter_count",

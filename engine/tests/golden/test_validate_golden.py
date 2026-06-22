@@ -61,6 +61,8 @@ def test_validate_reproduces_frozen_report(tmp_path):
     assert [c["name"] for c in report["checks"]] == [c["name"] for c in expected["checks"]], (
         "check order or naming drifted from the live report"
     )
-    # Compare per-check so a divergence names the offending check, not a giant blob.
+    # Compare per-check so a divergence names the offending check, not a giant blob...
     for want in expected["checks"]:
         assert got[want["name"]] == want, f"check {want['name']!r} diverged from the golden"
+    # ...then assert the whole report (catches top-level schema drift, e.g. the issues channel).
+    assert report == expected

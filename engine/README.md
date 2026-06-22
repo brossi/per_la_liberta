@@ -9,9 +9,10 @@ of the core into a **per-book manifest** + **shared profiles**, so the same mach
 can build future books in other languages without touching — or risking — the live
 *Per la Libertà!* edition.
 
-> **Status: scaffold (M0).** The package imports cleanly and ships a runnable (empty)
-> test suite; the step modules are stubs that raise `NotImplementedError` until ported.
-> See `../ENGINE_FRAMEWORK_PLAN.md` for the staged build (M0–M7) and the design rationale.
+> **Status: M2.** The config model + Italian `LanguagePlugin` (M1) and the first ported
+> step, `validate` (M2, reproducing the live `data/validation_report.json`), are done. The
+> remaining step modules are stubs that raise `NotImplementedError` until ported. See
+> `../ENGINE_FRAMEWORK_PLAN.md` for the staged build (M0–M7) and the design rationale.
 
 ## Governance
 
@@ -27,7 +28,7 @@ fixtures under `books/per_la_liberta/inputs/` from live (read-only).
 src/engine/        importable package (true src layout) — names no book; reads cfg + LanguagePlugin
   cli.py           orchestrator (replaces pipeline.py)
   paths.py         BookWorkspace — all artifacts under books/<id>/work/ only
-  config/          BookManifest / LanguageProfile / ScanProfile / TypefaceProfile + JSON-schema validation
+  config/          BookManifest / LanguageProfile / SourceNoiseProfile / TypefaceProfile + JSON-schema validation
   prompts/         Jinja2 StrictUndefined templating
   lang/            LanguagePlugin ABC + Italian impl (ordinals, headings, ChapterIdentity)
   steps/           the ported pipeline steps
@@ -36,10 +37,20 @@ src/engine/        importable package (true src layout) — names no book; reads
   util/            generic helpers ported from utils.py, split by concern
   contracts/       versioned sidecar schemas + id/path-shape assertions
 profiles/          SHARED reusable knowledge (languages / typefaces / prompt templates)
-books/<id>/        per-book manifest + hand-curated sidecars + isolated work/{data,output,state}
+books/<id>/        per-book config + fixtures + runtime workspace:
+  manifest.json    profile refs, structure contract, edition metadata, scan facts
+  inputs/          frozen upstream artifacts (clean text, reconciled, sidecars) — committed
+                   test fixtures, refreshed read-only from live by tests/golden/_generate_*
+  work/            runtime workspace, gitignored; {data,output,state} — steps write only here
 assets/            dev-time symlinks to read-only heavy assets (real copies at extraction)
 tests/{unit,golden,fixtures}
 ```
+
+A step reads its inputs from, and writes its outputs to, `work/` — never `inputs/`. `inputs/`
+holds *frozen* copies of what upstream steps would produce, used to drive golden tests; a step
+run consumes whatever the *previous* step left in `work/`. So on a fresh checkout `work/` is
+empty and running a step in isolation (e.g. `validate`) reports an error until its predecessors
+have populated the workspace (the golden tests seed `work/` from `inputs/` to bridge this).
 
 ## Develop
 

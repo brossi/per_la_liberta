@@ -52,11 +52,17 @@ def build_expected() -> dict:
         shutil.copyfile(INPUTS_DIR / "reconciled_chapters.json", tmp / "reconciled_chapters.json")
         report = live.validate(tmp, tmp)
 
-    # The single documented label generalisation.
+    # Transform the live report to the engine's contract: (1) generalise the one language
+    # label italian_char_coverage -> char_coverage; (2) uniform schema {overall, issues,
+    # checks} with a top-level report-level ``issues`` channel (empty on this passing run).
     for check in report["checks"]:
         if check["name"] == "italian_char_coverage":
             check["name"] = "char_coverage"
-    return report
+    return {
+        "overall": report["overall"],
+        "issues": report.get("issues", []),
+        "checks": report["checks"],
+    }
 
 
 def main() -> int:

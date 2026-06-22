@@ -5,7 +5,7 @@ script hardcoded now comes from ``cfg`` / ``lang``:
 
   - chapter-structure counts + thresholds       → ``cfg.structure.*``
   - part names (structural-header skip)          → ``cfg.structure.parts[].name``
-  - the in-script character set                  → ``cfg.language.accented_letters`` (+ generic punct)
+  - the in-script character set                  → ``cfg.language.coverage`` (literal-char allowlist)
   - the page-marker artifact pattern             → ``cfg.source_noise.page_marker_artifact_pattern``
   - the frequency word set / spaCy NER model     → ``cfg.language.frequency_dictionary`` / ``spacy_model``
   - English-leak markers, function-word skips,   → ``cfg.language.english_markers`` / ``skip_words`` /
@@ -23,10 +23,11 @@ and the report written to ``ws.data/<REPORT_FILE>`` via the containment-checked 
 from __future__ import annotations
 
 import re
+import string
 from collections.abc import Sequence
 from pathlib import Path
 
-from ..config.models import ResolvedConfig, Structure
+from ..config.models import CoverageSpec, ResolvedConfig, Structure
 from ..dictionaries.frequency import load_word_set
 from ..lang.base import LanguagePlugin
 from ..paths import BookWorkspace, asset_path
@@ -55,13 +56,15 @@ WORD_QUALITY_TOTAL_WARN = 200
 # spaCy max_length guard — chunk the NER pass so large texts stay under the model limit.
 _NER_CHUNK = 500_000
 
-# Generic typographic punctuation the char-coverage check tolerates in any Latin-script text
-# (digits, whitespace, ASCII + smart quotes, guillemets, dashes, brackets, ellipsis). Held
-# verbatim from the live pattern; only the alphabet (a–z + the language's accented letters)
-# is parameterised. A non-Latin script would extend this — deferred until such a book exists.
-_COVERAGE_PUNCT = r"0-9\s.,;:!?\-—–''’‘\"«»“”()\[\]/…"
-
-# Word + mid-word-noise patterns: Latin-script mechanics, language-neutral. Verbatim ports.
+# Word + mid-word patterns: Latin-script mechanics, language-neutral. Verbatim ports.
+#
+# _MID_NOISE is a faithful port of a branch that is *unreachable* in the live validate.py too:
+# _WORD_RE captures letters + apostrophes only, so a matched ``word`` can never contain a noise
+# char (digit / bracket / <> / ^ \ |) for _MID_NOISE to find — the token simply splits at the
+# noise instead, and "mid-word noise" therefore never appears in reasons. Kept for 1:1 fidelity
+# with the live check list. Making it fire (e.g. scanning the raw line span) would flag tokens
+# the live code does not and break the golden — an improvement *over* live for a deliberate
+# later pass, not a silent change here.
 _WORD_RE = re.compile(r"\b([a-zA-ZÀ-ÿ]+(?:['''][a-zA-ZÀ-ÿ]+)?)\b")
 _MID_NOISE = re.compile(r"[a-zA-Z][(\)\[\]{}^\\|<>0-9][a-zA-Z]")
 _MID_CAPS = re.compile(r"[a-z][A-Z][a-z]")
@@ -134,16 +137,27 @@ def check_quote_balance(text: str) -> dict:
     return {"name": "quote_balance", "passed": len(issues) == 0, "issues": issues}
 
 
-def check_char_coverage(text: str, accented_letters: str, foreign_char_max: float) -> dict:
-    """Flag if more than ``foreign_char_max`` of non-whitespace chars fall outside the
-    language's script (ASCII letters + its accented letters + generic punctuation)."""
-    pattern = re.compile("[a-zA-Z" + accented_letters + _COVERAGE_PUNCT + "]")
+def _coverage_set(spec: CoverageSpec) -> frozenset[str]:
+    """Build the in-script character allowlist from the language's ``CoverageSpec``. A plain
+    set — no regex — so there is no syntax/escaping/range surface to get wrong; a forgotten
+    character simply shows up as foreign (visible), never a silent mis-parse."""
+    allowed: set[str] = set(spec.letters) | set(spec.punctuation)
+    if spec.ascii_letters:
+        allowed |= set(string.ascii_letters)
+    if spec.digits:
+        allowed |= set(string.digits)
+    return frozenset(allowed)
 
+
+def check_char_coverage(text: str, allowed: frozenset[str], foreign_char_max: float) -> dict:
+    """Flag if more than ``foreign_char_max`` of non-whitespace chars fall outside the
+    language's in-script set. ``allowed`` is the literal-character allowlist from
+    ``_coverage_set`` (whitespace is excluded below, so it need not be in the set)."""
     non_ws_chars = [c for c in text if not c.isspace()]
     if not non_ws_chars:
         return {"name": "char_coverage", "passed": True, "issues": []}
 
-    foreign_chars = [c for c in non_ws_chars if not pattern.match(c)]
+    foreign_chars = [c for c in non_ws_chars if c not in allowed]
     ratio = len(foreign_chars) / len(non_ws_chars)
 
     issues = []
@@ -242,7 +256,7 @@ def check_word_quality(
 
                 reasons = []
 
-                if _MID_NOISE.search(word):
+                if _MID_NOISE.search(word):  # unreachable (see _MID_NOISE note); faithful to live
                     reasons.append("mid-word noise")
 
                 if _MID_CAPS.search(core):
@@ -380,6 +394,8 @@ def _print_summary(report: dict) -> None:
         print(f"  {status} {check['name']}")
         for issue in check.get("issues", []):
             print(f"      {issue}")
+    for issue in report.get("issues", []):  # report-level/fatal issues
+        print(f"  ! {issue}")
     print(f"\n  Overall: {report['overall'].upper()}")
 
 
@@ -388,18 +404,22 @@ def run(
     workspace: BookWorkspace,
     cfg: ResolvedConfig,
     lang: LanguagePlugin,
-    **opts,
 ) -> dict:
     """Validate the cleaned text in ``workspace`` and write ``validation_report.json``.
 
-    Returns the report dict. Reads ``ws.output/clean.md`` (required) and
-    ``ws.data/reconciled_chapters.json`` (the word-count witness; degraded check if absent).
+    Returns the report dict — uniform schema ``{overall, issues, checks}`` on every path
+    (top-level ``issues`` carries report-level/fatal errors; per-check issues live in each
+    check). Reads ``ws.output/clean.md`` (required) and ``ws.data/reconciled_chapters.json``
+    (the word-count witness; degraded check if absent).
     """
     ws = workspace
     clean_path = ws.output / CLEAN_FILE
     if not clean_path.is_file():
-        report = {"overall": "error", "checks": [],
-                  "issues": [f"{CLEAN_FILE} not found at {clean_path}"]}
+        # Uniform schema: every report carries top-level overall / issues / checks. Here the
+        # report-level ``issues`` channel holds the fatal preflight error and checks is empty.
+        report = {"overall": "error",
+                  "issues": [f"{CLEAN_FILE} not found at {clean_path}"],
+                  "checks": []}
         _print_summary(report)
         return report
 
@@ -415,7 +435,7 @@ def run(
         check_chapter_count(text, structure),
         check_no_empty_chapters(text, [p.name for p in structure.parts]),
         check_quote_balance(text),
-        check_char_coverage(text, lp.accented_letters, structure.foreign_char_max),
+        check_char_coverage(text, _coverage_set(lp.coverage), structure.foreign_char_max),
         check_no_ascii_remnants(text, cfg.source_noise.page_marker_artifact_pattern),
         check_word_quality(
             text,
@@ -440,7 +460,9 @@ def run(
         })
 
     overall = "pass" if all(c["passed"] for c in checks) else "fail"
-    report = {"overall": overall, "checks": checks}
+    # Top-level ``issues`` is the report-level/fatal channel (per-check issues live in each
+    # check); empty on a normal run. Present on every report so the schema is uniform.
+    report = {"overall": overall, "issues": [], "checks": checks}
 
     _print_summary(report)
 

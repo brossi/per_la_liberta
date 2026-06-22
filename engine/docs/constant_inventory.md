@@ -77,7 +77,7 @@ consonant set is `LanguageProfile`; the regex shape stays code.
 | accento-facoltativo accent-skip rule | accent-only-change skip | `LanguageProfile` |
 | `ENGLISH_MARKERS`/`SKIP_WORDS` (validate.py:221–232) | leak markers + function-word skips | `LanguageProfile` |
 | consonant-cluster alphabet (validate.py:235) | Italian cluster set | `LanguageProfile.consonant_alphabet` |
-| char-coverage alphabet (validate.py:134, accented vowels `àèìòùéÀÈÌÒÙÉ`) | language's non-ASCII orthographic letters (the rest of the coverage class is generic punctuation, code) | `LanguageProfile.accented_letters` |
+| char-coverage set (validate.py, literal-char allowlist) | the entire in-script character set as a structured `CoverageSpec` (ascii_letters/digits toggles + literal letters/punctuation) — configurable per language, no regex | `LanguageProfile.coverage` |
 | Zingarelli/Edgren/Hoare dirs + IA URLs (adjudicate.py:19, edgren.py:16–23, hoare.py:30–39) + ≥2-of-3 oracle | period dictionaries | `LanguageProfile.period_dictionaries[]` + `oracle_min` |
 
 ## LanguagePlugin code (`lang/italian.py` — Italian, not data-only)

@@ -44,7 +44,10 @@ def test_resolves_real_pll_constants():
     assert "the" in lp.english_markers and "correct" in lp.english_markers
     assert "il" in lp.skip_words
     assert lp.consonant_alphabet == "bcdfghjklmnpqrstvwxyz"
-    assert lp.accented_letters == "àèìòùéÀÈÌÒÙÉ"
+    # coverage is a structured literal-character allowlist (no regex).
+    assert lp.coverage.ascii_letters is True and lp.coverage.digits is True
+    assert "à" in lp.coverage.letters and "É" in lp.coverage.letters
+    assert "«" in lp.coverage.punctuation and "…" in lp.coverage.punctuation
     assert lp.accent_optional is True
     assert lp.oracle_min == 2
     assert {d.name for d in lp.period_dictionaries} == {
@@ -200,6 +203,20 @@ def test_typeface_schema_is_enforced(tmp_path):
     books = _write_book(tmp_path, "tf", _real_manifest())
     with pytest.raises(ConfigError, match="schema validation"):
         load_book("tf", books_dir=books, profiles_dir=prof)
+
+
+def test_malformed_coverage_fails_schema(tmp_path):
+    # The coverage object's shape is schema-enforced — a missing required sub-field is a clean
+    # ConfigError, not a KeyError in the builder. (The set-membership design has no regex to be
+    # malformed, so there is nothing deeper to guard.)
+    prof = _stage_profiles(tmp_path)
+    lp = prof / "languages" / "italian_1900_1922.json"
+    data = json.loads(lp.read_text())
+    del data["coverage"]["letters"]
+    lp.write_text(json.dumps(data), encoding="utf-8")
+    books = _write_book(tmp_path, "bad_cov", _real_manifest())
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("bad_cov", books_dir=books, profiles_dir=prof)
 
 
 def test_unimplemented_but_consistent_language_reaches_unknown_language_error(tmp_path):

@@ -25,6 +25,7 @@ from engine.lang.italian import ItalianLanguagePlugin
 INPUTS = Path(__file__).resolve().parents[2] / "books" / "per_la_liberta" / "inputs"
 SIDECAR = INPUTS / "chapter_start_pages.json"
 CLEAN = INPUTS / "clean.md"
+RECONCILED = INPUTS / "reconciled_chapters.json"
 
 pytestmark = pytest.mark.skipif(
     not SIDECAR.is_file(), reason="frozen PLL sidecar not present"
@@ -85,3 +86,18 @@ def test_content_chapter_ids_resolve_to_real_chapters():
     assert content, "expected content-chapter ids in the sidecar"
     missing = [cid for cid in content if cid not in known]
     assert not missing, f"sidecar content ids absent from text structure: {missing}"
+
+
+def test_reconciled_chapters_well_formed():
+    # reconciled_chapters.json is validate's word-count witness, frozen as an M2 input. The
+    # golden exercises it only on the happy path; this pins its shape so a malformed or
+    # truncated freeze fails here with a clear message, not a deep KeyError/TypeError inside
+    # word_count_preservation. (Hard, not skipped: the file is committed and required.)
+    assert RECONCILED.is_file(), f"frozen reconciled witness missing: {RECONCILED}"
+    data = json.loads(RECONCILED.read_text(encoding="utf-8"))
+    assert isinstance(data, list) and data, "reconciled_chapters.json must be a non-empty list"
+    for ch in data:
+        assert isinstance(ch.get("id"), str) and ch["id"], ch
+        assert isinstance(ch.get("title"), str), ch
+        assert isinstance(ch.get("part"), int), ch
+        assert isinstance(ch.get("text"), str) and ch["text"].strip(), ch
