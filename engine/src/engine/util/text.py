@@ -40,3 +40,33 @@ def slug(text: str, sep: str) -> str:
     Both are ``re.sub(r"[^a-z0-9]", sep, text.lower()).strip(sep)``.
     """
     return re.sub(r"[^a-z0-9]", sep, text.lower()).strip(sep)
+
+
+def rejoin_lines(text: str) -> str:
+    """Rejoin short OCR lines into paragraphs; blank lines separate. utils.rejoin_lines.
+
+    A line-end hyphen is healed only when the next line starts lowercase (a word broken across
+    the break); a trailing hyphen before an uppercase word is kept (a real compound).
+    """
+    paragraphs: list[str] = []
+    current: list[str] = []
+
+    for line in text.split("\n"):
+        stripped = line.strip()
+        if not stripped:
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+        else:
+            if current and current[-1].endswith("-"):
+                if stripped[0].islower():
+                    current[-1] = current[-1][:-1] + stripped
+                else:
+                    current.append(stripped)
+            else:
+                current.append(stripped)
+
+    if current:
+        paragraphs.append(" ".join(current))
+
+    return "\n\n".join(paragraphs)

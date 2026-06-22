@@ -101,6 +101,7 @@ def _build_manifest(data: dict) -> BookManifest:
             retention_min=structure["retention_min"],
             foreign_char_max=structure["foreign_char_max"],
             word_quality_high_severity_max=structure["word_quality_high_severity_max"],
+            running_heads=tuple(structure["running_heads"]),
         ),
         edition=Edition(
             title_it=edition["title_it"],
@@ -124,6 +125,7 @@ def _build_language(data: dict) -> LanguageProfile:
         english_markers=tuple(data["english_markers"]),
         skip_words=tuple(data["skip_words"]),
         consonant_alphabet=data["consonant_alphabet"],
+        word_score_accents=data["word_score_accents"],
         coverage=CoverageSpec(
             ascii_letters=data["coverage"]["ascii_letters"],
             digits=data["coverage"]["digits"],

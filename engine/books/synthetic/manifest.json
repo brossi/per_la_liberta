@@ -26,7 +26,8 @@
     "content_units": 3,
     "retention_min": 0.60,
     "foreign_char_max": 0.005,
-    "word_quality_high_severity_max": 0
+    "word_quality_high_severity_max": 0,
+    "running_heads": []
   },
   "edition": {
     "title_it": "Libro di Prova",

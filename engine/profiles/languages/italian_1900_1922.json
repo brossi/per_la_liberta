@@ -14,6 +14,7 @@
     "ne", "al", "ai", "ha", "ho", "fu", "fa", "va", "oh", "ah"
   ],
   "consonant_alphabet": "bcdfghjklmnpqrstvwxyz",
+  "word_score_accents": "àèìòùéÀÈÌÒÙ",
   "coverage": {
     "ascii_letters": true,
     "digits": true,

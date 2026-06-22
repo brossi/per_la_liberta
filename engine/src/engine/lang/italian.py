@@ -2,9 +2,15 @@
 
 Faithful ports of the language-specific logic the live pipeline scatters across
 ``utils.py`` (ordinals, heading detection, boilerplate bounds) and ``translate.py``
-(title → English). The data tables are reproduced verbatim — the OCR-garble fixes
-(``qyinto`` …) are observed-scan data the plugin owns, per the plan's parameterization
-map (which routes all four ordinal tables here).
+(title → English). The data tables are reproduced verbatim.
+
+Caveat (recorded as **BR-006**): the OCR-garble fixes (``ORDINAL_FIXES``, ``WORD_FIXES``, the
+garble entries in ``_ITALIAN_NUMBERS``, and ``_HEADING_RE``'s ``[GC]…pitolo`` tolerance) are
+PLL's Bodoni *scan-noise*, not Italian-language facts — they live here by the plan's
+parameterization map, but their cleaner home is the ``source_noise`` profile. Moving them is
+deferred until a second Italian/same-typeface book gives a concrete seam to design against; they
+are inert (not wrong) for a book that doesn't share the garbles. The book *title* that the live
+code also kept here was lifted to ``manifest.structure.running_heads`` (BR-004).
 """
 
 from __future__ import annotations
@@ -76,6 +82,14 @@ COMPOUND_ORDINALS = {
 # "Capitolo" with OCR garbles (Gtpitolo, …). utils.py:209.
 _HEADING_RE = re.compile(r"(?:[GC][a-z]*pitolo|Capitolo)\s+(.+)", re.IGNORECASE)
 _HEADING_NOISE_RE = re.compile(r"[^a-zA-ZàèìòùéÀÈÌÒÙÈ\s]")
+
+# Structural markers in the raw OCR (utils.py:249-266) — these are Italian structural *words*
+# (preface / part divisions), genuinely cross-title, so the plugin owns them. The running head
+# the live code also dropped here was the book *title* ("PER LA LIBERTÀ!"); it is book-level and
+# now comes from ``cfg.structure.running_heads`` via ``split_raw_chapters`` (BR-004).
+_PREFAZIONE_RE = re.compile(r"\s*PREFAZIONE\s*$")
+_PARTE_SECONDA_RE = re.compile(r"\s*PARTE\s+SECONDA\s*$")
+_FINE_PRIMA_PARTE_RE = re.compile(r"\s*FINE\s+DELLA\s+PRIMA\s+PARTE\s*$")
 
 # --- title → English (translate.py:297-361) -------------------------------- #
 
@@ -222,3 +236,65 @@ class ItalianLanguagePlugin(LanguagePlugin):
                 end = i
                 break
         return "\n".join(lines[start:end])
+
+    def split_raw_chapters(
+        self, text: str, *, running_heads: Sequence[str] = ()
+    ) -> list[dict]:
+        """Port of utils.split_into_chapters — raw OCR → chapters with short ids.
+
+        PREFAZIONE opens the preface (part 0); PARTE SECONDA flips to part 2; FINE DELLA PRIMA
+        PARTE and any ``running_heads`` line (the book title, from the manifest) are dropped;
+        every other line accrues to the current chapter. Chapter heads are found via
+        ``is_chapter_heading``.
+        """
+        # Book-level page-furniture patterns (e.g. the title running head), anchored like the
+        # Italian structural markers. Empty for a book without running heads.
+        running_head_res = [
+            re.compile(r"\s*(?:" + body + r")\s*$") for body in running_heads
+        ]
+
+        lines = text.split("\n")
+        chapters: list[dict] = []
+        current_part = 1
+        current_chapter: dict | None = None
+        current_lines: list[str] = []
+        in_prefazione = False
+
+        for line in lines:
+            stripped = line.strip()
+
+            if _PREFAZIONE_RE.match(stripped) and not in_prefazione:
+                in_prefazione = True
+                current_chapter = {"id": "prefazione", "title": "PREFAZIONE", "part": 0}
+                current_lines = []
+                continue
+            if _PARTE_SECONDA_RE.match(stripped):
+                current_part = 2
+                continue
+            if _FINE_PRIMA_PARTE_RE.match(stripped):
+                continue
+            if any(rh.match(stripped) for rh in running_head_res):
+                continue
+
+            ch_info = self.is_chapter_heading(stripped)
+            if ch_info is not None:
+                ch_num, raw_title = ch_info
+                if current_chapter is not None:
+                    current_chapter["text"] = "\n".join(current_lines)
+                    chapters.append(current_chapter)
+                current_chapter = {
+                    "id": f"p{current_part}_ch{ch_num:02d}",
+                    "title": raw_title,
+                    "part": current_part,
+                    "text": "",
+                }
+                current_lines = []
+                continue
+
+            current_lines.append(line)
+
+        if current_chapter is not None:
+            current_chapter["text"] = "\n".join(current_lines)
+            chapters.append(current_chapter)
+
+        return chapters

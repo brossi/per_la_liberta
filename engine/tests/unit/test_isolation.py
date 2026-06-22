@@ -1,15 +1,23 @@
 """Workspace containment, proven end-to-end — the forward-fork's core safety property.
 
 ``test_workspace`` proves the *guard* (``BookWorkspace.resolve`` rejects ``..``/absolute
-escapes). This proves the *step uses it*: a real ``validate`` run writes only inside its
-workspace and leaves the live PLL tree (repo-root ``data/``/``output/``/``state/``) untouched
-— so the engine can never overwrite the hand-tuned live edition. Snapshotting those trees
-before and after a run is the direct evidence that ``run`` has no path to them.
+escapes). This proves each *ported step uses it*: a real ``run`` writes only inside its
+workspace and leaves every live PLL tree untouched — so the engine can never overwrite the
+hand-tuned live edition. Snapshotting those trees before and after a run is the direct evidence
+that ``run`` has no path to them. Each ported step earns a function here as it lands (validate
+M2, reconcile M3, adjudicate M3).
 
-Containment is independent of what spaCy does (it is purely about *where* writes go), so this
-injects a no-op NER stub instead of loading the model. That keeps the safety check in the
-*fast* suite — run on every invocation, not gated behind ``integration`` — while the real
-spaCy path is exercised by the golden and synthetic-book tests.
+The protected set is the *five* repo-root trees the engine must never write: the live
+pipeline's ``data``/``output``/``state`` seam (``pipeline.py``) **plus** the published-edition
+``docs``/``static`` (typeset's live targets, currently deploy-held). Even steps that only write
+``ws.data`` are checked against all five — the guarantee is that *no* step can reach *any* live
+tree, not merely the one it happens to use.
+
+Containment is independent of what spaCy does (it is purely about *where* writes go), so the
+validate case injects a no-op NER stub instead of loading the model, and adjudicate injects a
+fake dictionary oracle. That keeps the safety check in the *fast* suite — run on every
+invocation, not gated behind ``integration`` — while the real model/dictionary paths are
+exercised by the golden and synthetic-book tests.
 """
 
 from __future__ import annotations
@@ -21,14 +29,15 @@ from pathlib import Path
 from engine.config.loader import load_book
 from engine.lang.registry import get_language_plugin
 from engine.paths import BookWorkspace
-from engine.steps import validate
+from engine.steps import adjudicate, reconcile, validate
 
 ENGINE_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = ENGINE_ROOT.parent
 SYNTHETIC_INPUTS = ENGINE_ROOT / "books" / "synthetic" / "inputs"
 
-# The live pipeline's protected output seam (pipeline.py DATA_DIR/OUTPUT_DIR/STATE_DIR).
-PROTECTED = ("data", "output", "state")
+# The five live trees the engine must never write: the pipeline output seam
+# (data/output/state) plus the published edition (docs/static, typeset's targets).
+PROTECTED = ("data", "output", "state", "docs", "static")
 
 
 class _StubDoc:
@@ -84,5 +93,63 @@ def test_validate_leaves_live_tree_untouched(tmp_path, monkeypatch):
     written = ws.data / validate.REPORT_FILE
     assert written.is_file()
     assert json.loads(written.read_text(encoding="utf-8")) == report
+    assert tmp_path in written.parents
+    assert REPO_ROOT not in written.parents
+
+
+_RECONCILE_INPUTS = (
+    "copy1_raw.txt", "copy2_raw.txt", "copy3_raw.txt", "copy3_flash_page_map.json",
+)
+
+
+def test_reconcile_leaves_live_tree_untouched(tmp_path):
+    # reconcile needs no spaCy/network — it only reads the OCR copies and writes ws.data. The
+    # snapshot still covers all five trees: the proof is that it *cannot* reach any of them.
+    cfg = load_book("synthetic")
+    lang = get_language_plugin(cfg.language_id)
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+    for name in _RECONCILE_INPUTS:
+        (ws.data / name).write_text(
+            (SYNTHETIC_INPUTS / name).read_text(encoding="utf-8"), encoding="utf-8"
+        )
+
+    before = _snapshot(REPO_ROOT)
+    reconcile.run(workspace=ws, cfg=cfg, lang=lang)
+    after = _snapshot(REPO_ROOT)
+
+    assert before == after, "reconcile wrote into a live PLL tree"
+
+    written = ws.data / reconcile.RECONCILED_FILE
+    assert written.is_file()
+    assert tmp_path in written.parents
+    assert REPO_ROOT not in written.parents
+
+
+class _FakeOracle:
+    """A no-knowledge membership oracle — containment is about *where* writes go, not the
+    dictionary, so this keeps adjudicate's isolation check fast (no 13 MB asset load)."""
+
+    name = "FakeDict"
+
+    def __call__(self, word):
+        return False, []
+
+
+def test_adjudicate_leaves_live_tree_untouched(tmp_path):
+    cfg = load_book("synthetic")
+    lang = get_language_plugin(cfg.language_id)
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+    (ws.data / adjudicate.REVIEW_FLAGS_FILE).write_text(
+        (SYNTHETIC_INPUTS / "review_flags.json").read_text(encoding="utf-8"), encoding="utf-8"
+    )
+
+    before = _snapshot(REPO_ROOT)
+    adjudicate.run(workspace=ws, cfg=cfg, lang=lang, oracle=_FakeOracle())
+    after = _snapshot(REPO_ROOT)
+
+    assert before == after, "adjudicate wrote into a live PLL tree"
+
+    written = ws.data / adjudicate.RESULTS_FILE
+    assert written.is_file()
     assert tmp_path in written.parents
     assert REPO_ROOT not in written.parents

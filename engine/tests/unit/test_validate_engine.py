@@ -35,6 +35,7 @@ def _structure(**kw) -> Structure:
         retention_min=0.60,
         foreign_char_max=0.005,
         word_quality_high_severity_max=0,
+        running_heads=(),  # reconcile-facing; validate ignores it
     )
     base.update(kw)
     return Structure(**base)

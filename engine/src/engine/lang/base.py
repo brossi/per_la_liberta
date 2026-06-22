@@ -62,6 +62,21 @@ class LanguagePlugin(ABC):
     def strip_boilerplate(self, text: str) -> str:
         """Trim front/back matter outside the book's content bounds."""
 
+    @abstractmethod
+    def split_raw_chapters(
+        self, text: str, *, running_heads: Sequence[str] = ()
+    ) -> list[dict]:
+        """Segment *raw OCR text* into chapters via structural markers + chapter headings.
+
+        Returns ``[{"id", "title", "part", "text"}]`` with short ids
+        (``prefazione`` / ``p1_ch01`` / ``p2_ch01``). Used by reconcile — distinct from
+        ``chapter_identities``, which parses finished ``##``/``###`` markdown.
+
+        ``running_heads`` are **book-level** regex bodies (from ``cfg.structure.running_heads``,
+        passed by the caller) for page-furniture lines — typically the repeated book title — that
+        must be dropped, not treated as content. They live in the book manifest, not the language
+        plugin, so the plugin stays cross-title (BR-004)."""
+
     # ------------------------------------------------------------------ #
     # Shared mechanics (language-agnostic)
     # ------------------------------------------------------------------ #

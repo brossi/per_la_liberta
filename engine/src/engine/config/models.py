@@ -47,7 +47,18 @@ class PartStructure:
 
 @dataclass(frozen=True, slots=True)
 class Structure:
-    """Header-count contract + validation thresholds (``manifest.structure``; M2 ``validate``)."""
+    """Header-count contract + validation thresholds (``manifest.structure``; M2 ``validate``),
+    plus the book's raw-OCR ``running_heads`` (M3 ``reconcile``).
+
+    ``running_heads`` are regex bodies for page-furniture lines (e.g. the repeated book title)
+    that segmentation must drop — **book-level** data, deliberately *not* in the cross-title
+    language plugin (BR-004). Each body is anchored by the plugin as ``\\s*(?:<body>)\\s*$``.
+
+    It is a **required** manifest field with no default (an empty ``[]`` means "this book has no
+    running heads", explicitly — distinct from a forgotten field). The rationale: segmentation
+    behavior stays visible in the manifest and is never implicit, matching the other ``structure``
+    fields, which are all required. Full decision record in BR-004.
+    """
 
     h2_min: int
     h3_count: int
@@ -56,6 +67,7 @@ class Structure:
     retention_min: float
     foreign_char_max: float
     word_quality_high_severity_max: int
+    running_heads: tuple[str, ...]
 
 
 @dataclass(frozen=True, slots=True)
@@ -118,7 +130,8 @@ class LanguageProfile:
 
     The word-quality fields (``english_markers``, ``skip_words``, ``consonant_alphabet``),
     ``coverage`` (char-coverage), and ``spacy_model``/``frequency_dictionary`` are read by M2
-    ``validate``; the period dictionaries + ``oracle_min`` feed the M6 membership oracle.
+    ``validate``; ``word_score_accents`` feeds M3 reconcile's OCR word scorer; the period
+    dictionaries + ``oracle_min`` feed the M6 membership oracle.
     """
 
     language_id: str
@@ -128,6 +141,7 @@ class LanguageProfile:
     english_markers: tuple[str, ...]
     skip_words: tuple[str, ...]
     consonant_alphabet: str
+    word_score_accents: str
     coverage: CoverageSpec
     accent_optional: bool
     period_dictionaries: tuple[PeriodDictionary, ...]
@@ -147,6 +161,13 @@ class SourceNoiseProfile:
     and ``page_marker_format`` are consumed by reconcile/cleanup in M3–M4b.
     ``noise_line_pattern`` is intentionally deferred to M4b (cleanup) — its only consumer —
     to avoid carrying an unverified escaped regex through M1.
+
+    Note (BR-007): the two substitution fields are different *kinds*. ``boundary_substitutions``
+    is a language-neutral *character-confusion* model (``i→r/e``), applied generatively and
+    dictionary-validated. ``substitution_rules`` are *literal* garble→word pairs that bake a
+    character confusion together with a specific Italian word (``eolla→colla``) — so they are
+    language-bound, not pure typeface. Factoring the char-confusion part into a layered
+    {general + per-typeface} model is deferred (BR-007) until a 2nd typeface/language exists.
     """
 
     name: str

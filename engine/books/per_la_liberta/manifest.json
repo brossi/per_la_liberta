@@ -38,7 +38,8 @@
     "content_units": 58,
     "retention_min": 0.60,
     "foreign_char_max": 0.005,
-    "word_quality_high_severity_max": 0
+    "word_quality_high_severity_max": 0,
+    "running_heads": ["PER\\s+LA\\s+LIBERT[AÀ]!?"]
   },
   "edition": {
     "title_it": "Per la libertà!",
