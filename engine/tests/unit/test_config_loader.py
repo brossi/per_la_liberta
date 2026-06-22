@@ -9,11 +9,14 @@ No live PLL artifacts are touched; the inputs are the committed engine config fi
 from __future__ import annotations
 
 import json
+import shutil
+from pathlib import Path
 
 import pytest
 
 from engine.config import loader
 from engine.config.loader import ConfigError, load_book
+from engine.lang.registry import UnknownLanguageError, get_language_plugin
 
 REAL_BOOKS = loader.DEFAULT_BOOKS_DIR
 REAL_PROFILES = loader.DEFAULT_PROFILES_DIR
@@ -162,3 +165,56 @@ def test_override_replaces_list_field_wholesale(tmp_path):
     books = _write_book(tmp_path, "ovrlist", m)
     cfg = load_book("ovrlist", books_dir=books, profiles_dir=REAL_PROFILES)
     assert [d.name for d in cfg.language.period_dictionaries] == ["Only One"]
+
+
+def _stage_profiles(tmp_path) -> Path:
+    """Copy the real profile tree into tmp so a single profile can be corrupted in place."""
+    dst = tmp_path / "profiles"
+    for sub in ("languages", "source_noise", "typefaces"):
+        (dst / sub).mkdir(parents=True)
+        for f in (REAL_PROFILES / sub).glob("*.json"):
+            shutil.copy(f, dst / sub / f.name)
+    return dst
+
+
+def test_source_noise_schema_is_enforced(tmp_path):
+    # Proves load_book validates the source-noise profile, not only the language one.
+    prof = _stage_profiles(tmp_path)
+    p = prof / "source_noise" / "bodoni_didone.json"
+    data = json.loads(p.read_text())
+    del data["substitution_rules"]
+    p.write_text(json.dumps(data), encoding="utf-8")
+    books = _write_book(tmp_path, "sn", _real_manifest())
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("sn", books_dir=books, profiles_dir=prof)
+
+
+def test_typeface_schema_is_enforced(tmp_path):
+    # ...and the typeface profile (the third _validate call).
+    prof = _stage_profiles(tmp_path)
+    p = prof / "typefaces" / "spectral_fraunces.json"
+    data = json.loads(p.read_text())
+    del data["display_family"]
+    p.write_text(json.dumps(data), encoding="utf-8")
+    books = _write_book(tmp_path, "tf", _real_manifest())
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("tf", books_dir=books, profiles_dir=prof)
+
+
+def test_unimplemented_but_consistent_language_reaches_unknown_language_error(tmp_path):
+    # The real joined path (not the monkeypatched CLI half): the loader is plugin-agnostic,
+    # so a manifest+profile both declaring 'xx' load cleanly; the missing plugin only
+    # surfaces at get_language_plugin.
+    prof = _stage_profiles(tmp_path)
+    lp = prof / "languages" / "italian_1900_1922.json"
+    data = json.loads(lp.read_text())
+    data["language_id"] = "xx"
+    lp.write_text(json.dumps(data), encoding="utf-8")
+    m = _real_manifest()
+    m["language"] = "xx"
+    books = _write_book(tmp_path, "xx", m)
+
+    cfg = load_book("xx", books_dir=books, profiles_dir=prof)
+    assert cfg.language_id == "xx"
+    with pytest.raises(UnknownLanguageError):
+        get_language_plugin(cfg.language_id)
