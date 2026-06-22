@@ -139,7 +139,17 @@ than by reproducing one committed output from a lost input. Port the code behind
 interface so M6 can later re-express it on the ≥2-of-N oracle — that fork goes in the **branch
 register**; the door is closed deliberately at M6, not now.
 
-## Open decisions (please audit inline)
+## Decisions (resolved 2026-06-22 — go with recommendations)
+
+- **D1 ✓** golden = generated reference over frozen inputs (not the hand-edited `data/`).
+- **D2 ✓** new `LanguageProfile.word_score_accents`, seeded with the exact live set `àèìòùéÀÈÌÒÙ`.
+- **D3 ✓** (b) — adjudicate ported with unit tests; equivalence golden deferred (BR-001).
+- **D4 ✓** golden-assert `reconciled_raw.txt` too.
+- **D5 ✓** (earlier) governance canonical in `engine/docs/port_discipline.md` + framework plan.
+
+Original recommendations + alternatives retained below for the record.
+
+### Original options (for the record)
 
 **D1 (confirm).** reconcile golden target generated from live code over frozen inputs,
 asserting `engine == that`; **not** diffed against the hand-edited `data/` file (same
@@ -199,6 +209,84 @@ a "Port discipline (governance)" decision, the reframed "Validation strategy"). 
 - **Isolation (cross-cutting invariant, not a tier):** `reconcile.run` against a temp workspace;
   protected roots (`data/output/state/docs/static`) unchanged before/after (fast tier — reconcile
   needs no spaCy, so it runs without the integration marker).
+
+## Implementation status (2026-06-22 — all required tiers green)
+
+Full engine suite is green with **0 skips** — no silently-skipped tests (verify with
+`uv run --directory engine pytest`). The required tiers map to their tests below; an absolute
+pass-count is intentionally **not** tracked here — it is a cumulative whole-suite number that goes
+stale every milestone, and the tier→test map is the durable coverage record.
+
+**reconcile** (`engine/src/engine/steps/reconcile.py`) — all four required tiers:
+- *equivalence* — `tests/golden/test_reconcile_golden.py` (frozen copies → freshly generated
+  reference; F1 drift logged by the generator). ✓
+- *property/contract* — `tests/unit/test_reconcile_engine.py`: `score_word` exact values +
+  ordering + the accent-set seam; `align_paragraphs` all four opcodes; `reconcile_words` 2-way
+  merge+flag; `reconcile_words_3way` unanimous / 2-of-3 / copy1-copy3 / all-differ; near-dup;
+  `_strip_page_markers`; `split_paragraphs`; `split_raw_chapters` structural-marker segmentation;
+  **reconcile→validate** word-count contract (closes the M2 inversion). ✓
+- *separability* — `test_reconcile_runs_end_to_end_on_synthetic_book` over new synthetic
+  `copy{1,2,3}_raw.txt` + `copy3_flash_page_map.json` (3 content units, not PLL's 58). ✓
+- *isolation* — `tests/unit/test_isolation.py::test_reconcile_leaves_live_tree_untouched`, now
+  snapshotting **five** roots (data/output/state **+ docs/static**). ✓
+
+**adjudicate** (`engine/src/engine/steps/adjudicate.py`) — required tiers (no equivalence golden,
+F2/D3):
+- *property/unit* — `tests/unit/test_adjudicate_engine.py`: every classification branch on a fake
+  oracle; the real `DictionaryOracle` on a temp chunk dir (membership, <3-char floor, accent
+  retry, word-boundary search, lookup/context); `_try_corrections` per pass; the boundary table
+  read from `source_noise`; `_build_oracle` resolving the monolingual dictionary; real-Zingarelli
+  end-to-end (`integration`). ✓
+- *isolation* — `test_adjudicate_leaves_live_tree_untouched` (fake oracle → fast). ✓
+- BR-001 seam realized: membership is the injected `DictionaryOracle`; M6 swaps it for the
+  ≥2-of-N oracle without touching `classify_flags`. The cleanup LLM-context helpers
+  (`DictionaryOracle.lookup`, `dictionary_context_for_flags`) are ported as oracle-bound methods,
+  ready for M4b's cleanup to receive the oracle from config.
+
+**Substrate added:** `util/text.rejoin_lines`; `ItalianLanguagePlugin.split_raw_chapters` (+
+Italian structural-marker constants); `LanguageProfile.word_score_accents` and
+`Structure.running_heads` (both through models/loader/schema/manifest).
+
+**Two contract decisions (resolved with the user 2026-06-22):**
+1. **adjudicate result contract → BR-005.** `run` always writes a self-describing envelope
+   `{"input_present", "tokens", "stats", "results"}`; a missing `review_flags.json` is an
+   **explicit** no-input envelope (`input_present: false`), never the live script's ambiguous
+   empty `{}` (which could equally signal an upstream failure). Recorded as a one-way-door
+   step-contract decision in the branch register, not the divergence ledger (orchestration
+   contract, not a ground-truth-licensed algorithm change). Tests:
+   `test_run_without_flags_declares_no_input`, `test_run_with_injected_oracle_*`.
+2. **running head lifted out of the language plugin → BR-004 (resolved).** The book title was
+   hardcoded as a structural marker in `ItalianLanguagePlugin`; it now comes from book-level
+   `manifest.structure.running_heads` (PLL: `["PER\\s+LA\\s+LIBERT[AÀ]!?"]`; synthetic: `[]`),
+   so the language plugin/config stays a cross-title resource. Equivalence preserved (golden
+   reproduces); proven config-driven by `test_running_head_drop_is_book_config_not_plugin_baked`.
+
+### Audit pass (2026-06-22)
+
+Adversarial review against the port discipline. **Confirmed:**
+- adjudicate's classification logic is byte-faithful to live `adjudicate.py` (diffed
+  `classify_flags`/`_try_corrections`/`__call__`/`_is_noise`/`_search_chunk`/`_confident`/
+  `_ACCENT_MAP`); the only differences are the injected oracle/boundary seams, the BR-005 envelope,
+  and `Zingarelli` → `oracle.name` in human-readable `detail` strings.
+- the reconcile golden is non-circular: `_generate_reconcile_fixture.py` imports the *live* script,
+  single-owns the frozen inputs, never touches the validate-owned witness.
+- every new config binding (`word_score_accents`, `running_heads`, `boundary_substitutions`,
+  monolingual `period_dictionaries` dir) resolves and is consumed — no dead config.
+- both steps write only via `ws.resolve`; the isolation test covers 5 protected roots × both steps.
+- outputs are order-deterministic (sorted ids / `sorted(pages)`); rapidfuzz is lock-pinned (3.14.5)
+  with the golden as the drift tripwire.
+
+**Fixed:** added the **2-way mode** test (the `--skip-ocr` fallback was born-untested); removed the
+brittle absolute pass-counts from these plan docs — they go stale every milestone, so the tier→test
+map is the durable coverage record.
+
+**Known residuals (noted, not blockers):**
+- the single-source chapter branch (`copy{1,2,3}_only`) is exercised only if PLL triggers it; not
+  separately pinned.
+- `reconcile.run` raises a bare `FileNotFoundError` on missing copies (vs. validate/adjudicate's
+  graceful degrade). Deferred to **M4a**: the inputs don't exist until download/ocr are ported, and
+  the CLI's exception taxonomy (it currently catches only `NotImplementedError`) is best built out
+  alongside steps that fail in varied ways.
 
 ## Out of scope (explicit)
 

@@ -1,8 +1,11 @@
 # Engine Framework — Implementation Plan
 
-> **Status:** In execution on branch `engine-framework`. M0–M2 complete (scaffold; config model +
-> Italian LanguagePlugin; `validate` ported with golden reproduction). M3 (`reconcile` + `adjudicate`)
-> in planning — see `ENGINE_M3_PLAN.md`. **Amended 2026-06-22** to carry the *port discipline*: see the
+> **Status:** In execution on branch `engine-framework`. M0–M3 complete (scaffold; config model +
+> Italian LanguagePlugin; `validate` ported with golden reproduction; `reconcile` + `adjudicate`
+> ported — all required tiers green, full suite passing with 0 skips). See `ENGINE_M3_PLAN.md` for
+> the M3 port + its "Implementation status" section; `typeset` is split out
+> as M3b (task #9). **Amended
+> 2026-06-22** to carry the *port discipline*: see the
 > "Port discipline (governance)" decision below and the reframed "Validation strategy" section; the
 > canonical statement is `engine/docs/port_discipline.md`. The review-pass decisions that produced the
 > original plan live in the project conversation history.
