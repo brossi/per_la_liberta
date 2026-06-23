@@ -17,6 +17,16 @@ def strip_accents(text: str) -> str:
     return "".join(c for c in nfkd if not unicodedata.combining(c))
 
 
+def build_fold_table(fold: dict) -> dict:
+    """Build a ``str.translate`` table from a config accent-fold ``{"from", "to"}`` pair.
+
+    The fixed accent→base fold cleanup uses (``cfg.language.accent_fold``), made generic here so
+    no step hand-rolls ``str.maketrans``. Deliberately distinct from ``strip_accents`` (NFKD): the
+    two diverge on non-Italian Latin glyphs (e.g. ``ç``/``ñ``), and cleanup's detcore golden is
+    pinned to this fixed table, so the difference is load-bearing (M4b-D1)."""
+    return str.maketrans(fold["from"], fold["to"])
+
+
 def normalize_for_comparison(text: str) -> str:
     """Lowercase, strip accents, drop non-[a-z]. utils.normalize_for_comparison.
 

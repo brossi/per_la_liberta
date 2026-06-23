@@ -26,6 +26,16 @@
   "boundary_substitutions": {
     "i": ["r", "e"]
   },
+  "ligature_substitutions": [
+    ["u", "fi"],
+    ["n", "fi"],
+    ["ri", "fi"],
+    ["d", "fl"],
+    ["tl", "fl"],
+    ["tf", "ff"],
+    ["tt", "ff"]
+  ],
+  "noise_line_pattern": "^[\\s\\d\\^IElE\\-\\*\\(\\)fr»iiim3S5ZBP\\.,:;!?~`@#$%&=+<>{}|\\[\\]\\\\/'\\\"\\•\\·\\°]+$",
   "page_marker_artifact_pattern": "\\d+\\s+[35][EI]:?",
   "page_marker_format": "⟨PAGE:{}⟩"
 }

@@ -136,6 +136,9 @@ def _build_language(data: dict) -> LanguageProfile:
             punctuation=data["coverage"]["punctuation"],
         ),
         accent_optional=data["accent_optional"],
+        accent_fold={"from": data["accent_fold"]["from"], "to": data["accent_fold"]["to"]},
+        accented_letters=data["accented_letters"],
+        word_letter_class=data["word_letter_class"],
         period_dictionaries=tuple(
             PeriodDictionary(name=d["name"], kind=d["kind"], dir=d["dir"])
             for d in data["period_dictionaries"]
@@ -149,6 +152,8 @@ def _build_source_noise(data: dict) -> SourceNoiseProfile:
         name=data["name"],
         substitution_rules=tuple((r[0], r[1]) for r in data["substitution_rules"]),
         boundary_substitutions={k: list(v) for k, v in data["boundary_substitutions"].items()},
+        ligature_substitutions=tuple((r[0], r[1]) for r in data["ligature_substitutions"]),
+        noise_line_pattern=data["noise_line_pattern"],
         page_marker_artifact_pattern=data["page_marker_artifact_pattern"],
         page_marker_format=data["page_marker_format"],
     )

@@ -7,7 +7,8 @@
     "language_id", "display_name", "spacy_model", "frequency_dictionary",
     "english_markers", "skip_words", "consonant_alphabet", "word_score_accents",
     "accent_inventory", "coverage",
-    "accent_optional", "period_dictionaries", "oracle_min"
+    "accent_optional", "accent_fold", "accented_letters", "word_letter_class",
+    "period_dictionaries", "oracle_min"
   ],
   "properties": {
     "language_id": {"type": "string", "minLength": 1},
@@ -31,6 +32,18 @@
       }
     },
     "accent_optional": {"type": "boolean"},
+    "accent_fold": {
+      "$comment": "Fixed accent->base fold table cleanup uses (M4b-D1). Parallel equal-length strings; NOT NFKD (byte-stable on non-folded glyphs).",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from", "to"],
+      "properties": {
+        "from": {"type": "string", "minLength": 1},
+        "to": {"type": "string", "minLength": 1}
+      }
+    },
+    "accented_letters": {"type": "string", "minLength": 1},
+    "word_letter_class": {"type": "string", "minLength": 1},
     "period_dictionaries": {
       "type": "array",
       "$comment": "adjudicate._build_oracle binds the membership oracle to a monolingual member; enforce ≥1 here so a profile lacking one fails at config-load (ConfigError), not later as a bare ValueError traceback from adjudicate.",

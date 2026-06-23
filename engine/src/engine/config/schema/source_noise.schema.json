@@ -5,6 +5,7 @@
   "additionalProperties": false,
   "required": [
     "name", "substitution_rules", "boundary_substitutions",
+    "ligature_substitutions", "noise_line_pattern",
     "page_marker_artifact_pattern", "page_marker_format"
   ],
   "properties": {
@@ -22,6 +23,17 @@
       "type": "object",
       "additionalProperties": {"type": "array", "items": {"type": "string"}}
     },
+    "ligature_substitutions": {
+      "$comment": "Typeface fi/fl/ff ligature confusions cleanup flags (D3). Required-and-explicit (BR-004): a profile without them declares [], never omits the key.",
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {"type": "string"},
+        "minItems": 2,
+        "maxItems": 2
+      }
+    },
+    "noise_line_pattern": {"type": "string", "minLength": 1},
     "page_marker_artifact_pattern": {"type": "string", "minLength": 1},
     "page_marker_format": {"type": "string", "minLength": 1}
   }

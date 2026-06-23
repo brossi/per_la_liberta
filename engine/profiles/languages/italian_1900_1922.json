@@ -23,6 +23,12 @@
     "punctuation": ".,;:!?-—–'’‘\"«»“”()[]/…"
   },
   "accent_optional": true,
+  "accent_fold": {
+    "from": "àáâèéêìíîòóôùúûÀÁÂÈÉÊÌÍÎÒÓÔÙÚÛ",
+    "to": "aaaeeeiiiooouuuAAAEEEIIIOOOUUU"
+  },
+  "accented_letters": "àèìòùéÀÈÌÒÙÉ",
+  "word_letter_class": "a-zA-ZÀ-ÿ",
   "period_dictionaries": [
     {"name": "Zingarelli 1922", "kind": "monolingual", "dir": "dictionary/zingarelli_1922"},
     {"name": "Edgren 1901", "kind": "bilingual", "dir": "dictionary/edgren_1901"},

@@ -155,6 +155,22 @@ class LanguageProfile:
     language fact can no longer vary book-to-book (BR-008). ``accent_inventory`` is a
     prompt-display set, deliberately separate from ``word_score_accents`` (the scorer's set,
     which mixes case) and ``coverage.letters`` (char-coverage's set).
+
+    The three M4b-D1 fields keep cleanup's *step code* free of any Italian character literal —
+    every accent/letter set it parameterises on is sourced here, not baked (the BR-002 code-
+    neutrality half; proven by ``test_cleanup_neutrality``):
+      - ``accent_fold`` — the fixed accent→base translation cleanup folds with (``{"from","to"}``
+        parallel strings → ``str.maketrans``). Deliberately the verbatim live ``_ACCENT_MAP``, NOT
+        ``util.text.strip_accents`` (NFKD): the two diverge on non-Italian glyphs (``ç``/``ñ``) a
+        foreign name could surface, which would move the detcore golden.
+      - ``accented_letters`` — the presumed-canonical superset of the language's accented letters,
+        used wherever cleanup's regexes enumerate "a real accented letter" (the live code spelled a
+        slightly different restrictive subset at each site; the superset is golden-validated, so any
+        site where it changes output turns the golden red rather than passing silently).
+      - ``word_letter_class`` — the permissive "any word letter" regex char-class fragment
+        (``a-zA-ZÀ-ÿ``) cleanup's tokenisation regexes use. A *script* fact (a non-Latin book needs
+        a different class), so config not code — the one documented exception to ``CoverageSpec``'s
+        no-regex rule, because its consumer is a compiled regex, not a membership set.
     """
 
     language_id: str
@@ -168,6 +184,9 @@ class LanguageProfile:
     accent_inventory: tuple[str, ...]
     coverage: CoverageSpec
     accent_optional: bool
+    accent_fold: dict           # {"from": "àá…", "to": "aa…"} — fixed fold table (M4b-D1)
+    accented_letters: str       # canonical superset of accented letters (M4b-D1)
+    word_letter_class: str      # "any word letter" regex class fragment (M4b-D1)
     period_dictionaries: tuple[PeriodDictionary, ...]
     oracle_min: int
 
@@ -181,22 +200,27 @@ class SourceNoiseProfile:
     nothing to do with how the *edition* is rendered (that is ``TypefaceProfile``). The
     engine ships no opinion here — a book supplies the noise profile matching its own scan.
 
-    ``page_marker_artifact_pattern`` is read by M2 ``validate``; the substitution tables
-    and ``page_marker_format`` are consumed by reconcile/cleanup in M3–M4b.
-    ``noise_line_pattern`` is intentionally deferred to M4b (cleanup) — its only consumer —
-    to avoid carrying an unverified escaped regex through M1.
+    ``page_marker_artifact_pattern`` is read by M2 ``validate``; the substitution tables,
+    ``noise_line_pattern``, ``ligature_substitutions`` and ``page_marker_format`` are consumed
+    by reconcile/cleanup in M3–M4b. ``noise_line_pattern`` (the full-line OCR-decoration regex
+    cleanup drops) and ``ligature_substitutions`` (the typeface fi/fl/ff ligature confusions
+    cleanup flags, D3/BR-007) were the M4b forward-reservations realised here.
 
-    Note (BR-007): the two substitution fields are different *kinds*. ``boundary_substitutions``
+    Note (BR-007): the substitution fields are three different *kinds*. ``boundary_substitutions``
     is a language-neutral *character-confusion* model (``i→r/e``), applied generatively and
-    dictionary-validated. ``substitution_rules`` are *literal* garble→word pairs that bake a
-    character confusion together with a specific Italian word (``eolla→colla``) — so they are
-    language-bound, not pure typeface. Factoring the char-confusion part into a layered
-    {general + per-typeface} model is deferred (BR-007) until a 2nd typeface/language exists.
+    dictionary-validated. ``ligature_substitutions`` is likewise a generative, dictionary-validated
+    char-confusion (``fi``→``u``/``n``/``ri`` etc.) but for the typeface's ligatures. ``substitution_rules``
+    are *literal* garble→word pairs that bake a character confusion together with a specific Italian
+    word (``eolla→colla``) — so they are language-bound, not pure typeface. Factoring the
+    char-confusion part into a layered {general + per-typeface} model is deferred (BR-007) until a
+    2nd typeface/language exists.
     """
 
     name: str
     substitution_rules: tuple[tuple[str, str], ...]
     boundary_substitutions: dict  # {"i": ["r", "e"]}
+    ligature_substitutions: tuple[tuple[str, str], ...]  # [("u", "fi"), ...] (D3)
+    noise_line_pattern: str
     page_marker_artifact_pattern: str
     page_marker_format: str
 
