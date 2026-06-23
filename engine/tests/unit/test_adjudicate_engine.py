@@ -155,12 +155,15 @@ def test_try_corrections_covers_each_pass():
 
 # --- the real DictionaryOracle over a tiny temp chunk dir ------------------------------- #
 
+_FOLD = str.maketrans("àáâèéêìíîòóôùúûÀÁÂÈÉÊÌÍÎÒÓÔÙÚÛ", "aaaeeeiiiooouuuAAAEEEIIIOOOUUU")
+
+
 def _temp_dict(tmp_path: Path) -> adjudicate.DictionaryOracle:
     (tmp_path / "c.txt").write_text(
         "casa, s. f. house, home.\ncaro, a. dear, expensive.\ncosi, av. thus, so.\n",
         encoding="utf-8",
     )
-    return adjudicate.DictionaryOracle("Test Dict", tmp_path, "a-zA-ZÀ-ÿ")
+    return adjudicate.DictionaryOracle("Test Dict", tmp_path, "a-zA-ZÀ-ÿ", _FOLD)
 
 
 def test_dictionary_oracle_membership_and_floor(tmp_path):

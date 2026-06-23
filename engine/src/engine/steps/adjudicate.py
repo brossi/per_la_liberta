@@ -44,18 +44,10 @@ from ..config.models import ResolvedConfig
 from ..lang.base import LanguagePlugin
 from ..paths import BookWorkspace, require_asset
 from ..util.jsonio import atomic_write_json, read_json
+from ..util.text import build_fold_table
 
 REVIEW_FLAGS_FILE = "review_flags.json"
 RESULTS_FILE = "adjudication_results.json"
-
-# Accent-folding for picking a word's dictionary chunk + an accent-insensitive retry. Ported
-# verbatim from live ``adjudicate._ACCENT_MAP`` — a fixed Latin translation table, kept as-is
-# (it is *not* identical to ``util.text.strip_accents``, which is NFKD over all combining marks).
-_ACCENT_MAP = str.maketrans("àáâèéêìíîòóôùúû", "aaaeeeiiiooouu" + "u")
-
-
-def _strip_accents(text: str) -> str:
-    return text.translate(_ACCENT_MAP)
 
 
 def _is_noise(token: str) -> bool:
@@ -94,10 +86,15 @@ class DictionaryOracle:
     dictionary in LLM prompt context. The chunk cache is per-oracle (one instance per run).
     """
 
-    def __init__(self, name: str, dict_dir: Path, word_letter_class: str) -> None:
+    def __init__(
+        self, name: str, dict_dir: Path, word_letter_class: str, fold_table: dict
+    ) -> None:
         self.name = name
         self._dir = Path(dict_dir)
         self._word_letter_class = word_letter_class
+        # Accent fold for chunk selection + the accent-insensitive retry. Sourced from
+        # ``cfg.language.accent_fold`` (the shared fixed table), not a duplicate in-step literal.
+        self._fold_table = fold_table
         self._chunks: dict[str, str] = {}
 
     def _load_chunk(self, letter: str) -> str:
@@ -114,12 +111,12 @@ class DictionaryOracle:
         if not word or len(word) < 3:
             return False, []
 
-        base = _strip_accents(word[0].lower())
+        base = word[0].lower().translate(self._fold_table)
         chunk = self._load_chunk(base)
         matches = _search_chunk(word, chunk, self._word_letter_class)
 
         if not matches:  # accent-insensitive retry
-            stripped = _strip_accents(word)
+            stripped = word.translate(self._fold_table)
             if stripped != word:
                 matches = _search_chunk(stripped, chunk, self._word_letter_class)
 
@@ -130,7 +127,7 @@ class DictionaryOracle:
         API). Port of live ``zingarelli_lookup``; the consumer (cleanup) lands in M4b."""
         found, matches = self(word)
         if not found:
-            stripped = _strip_accents(word)
+            stripped = word.translate(self._fold_table)
             if stripped != word:
                 _, matches = self(stripped)
         if matches:
@@ -334,7 +331,10 @@ def _build_oracle(cfg: ResolvedConfig) -> DictionaryOracle:
         )
     pd = mono[0]
     return DictionaryOracle(
-        pd.name, require_asset(pd.dir, kind="dir"), cfg.language.word_letter_class
+        pd.name,
+        require_asset(pd.dir, kind="dir"),
+        cfg.language.word_letter_class,
+        build_fold_table(cfg.language.accent_fold),
     )
 
 
