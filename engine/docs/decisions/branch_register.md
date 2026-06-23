@@ -30,6 +30,16 @@
   steps resolves *what it must exercise*, so a later fixture is built to differ where it matters.
 - **Revisit:** after the language-config-heavy steps are ported (M4b cleanup is the largest
   consumer); at the latest before M7 extraction, which claims portability.
+- **Resolved (code-neutrality half) at M4b cleanup (2026-06-23):** the obligation split as the plan
+  recommended. The **code-neutrality half is done**: cleanup's step code holds no Italian/source-noise
+  literal — the accent-fold table, the accented-letter superset (`accented_letters`), and the
+  permissive `word_letter_class` are all sourced from `cfg.language`; every OCR-noise pattern from
+  `cfg.source_noise`. Proven statically by `test_cleanup_neutrality` (forbids any `À-ÿ`/`£` in
+  functional code, docstrings/comments excluded) and behaviourally by the detcore golden (every
+  relocation is byte-neutral). The **full non-Italian fixture stays re-deferred to M7** (it needs a
+  second registered `LanguagePlugin` + a non-Italian frequency dict + spaCy model — the semantic axis
+  no single speculative fixture can pre-design). Adjudicate's identical in-step accent map was
+  reconciled to the same `cfg.language.accent_fold` source in the same pass.
 
 ## BR-003 — re-baseline-cites-ledger enforcement: automate now vs. review-enforce
 - **Opened:** 2026-06-22 (governance review).
@@ -122,6 +132,12 @@
   seam against.
 - **Revisit:** when a second Italian/same-typeface book is added, or at M7 extraction (which claims
   portability). Pairs with BR-004 (book-identity lift, done) and BR-002 (non-Italian fixture).
+- **Re-read at M4b cleanup (2026-06-23) — re-deferred, unchanged:** `ENGINE_M4_PLAN.md` expected
+  cleanup to *consume* these ordinal garbles; reading both confirms it **does not** (they feed
+  `parse_chapter_number` in reconcile, ported M3, and `title_to_english` in translate, M4c — never
+  cleanup). cleanup consumes a *different* table, `source_noise.substitution_rules` (BR-007's
+  subject). So M4b is not BR-006's consumer; disposition unchanged. M4c re-reads it as translate's
+  title path is a real consumer.
 
 ## BR-007 — source_noise: literal word-fixes vs. a layered character-confusion model
 - **Opened:** 2026-06-22 (M3; `source_noise` audit extending BR-006, user discussion).
@@ -157,6 +173,16 @@
 - **Revisit:** when a 2nd typeface and/or language is added, and/or during M4b cleanup (where the
   confusion→dictionary mechanism lives). Pairs with BR-002 (non-Italian fixture) and BR-006
   (scan-noise homing).
+- **Sharpened at M4b cleanup (2026-06-23) — placement done, layering still deferred:** cleanup is the
+  consumer BR-007 named, and now visibly applies **both** kinds, already config-resident in
+  `bodoni_didone.json` — `boundary_substitutions` + the new `ligature_substitutions` (the clean
+  char-confusion forms, generative + dictionary-validated) and `substitution_rules` (literal
+  word-fixes). So the **placement** worry is resolved: cleanup reads them from `cfg.source_noise`,
+  nothing baked. M4b also relocated the remaining source-noise literals (`£→E` →
+  `char_substitutions`; the noise-line regexes → `noise_line_patterns`; the page-marker class →
+  `page_marker_line_pattern`; the inline markers → `inline_page_marker_patterns`). What stays open is
+  only the **layering** (factor a typeface-neutral char-confusion layer from the per-typeface
+  literals) — re-deferred, needs a 2nd typeface/language to tell "universal" from "Bodoni-specific".
 
 ## BR-008 — prompt-context contract: the book-identity vs. language-fact boundary (one-way door)
 - **Opened:** 2026-06-22 (M4 planning; decided with the user, `ENGINE_M4_PLAN.md` D2).
@@ -345,6 +371,14 @@
   refusal is the mechanism.
 - **Revisit:** M4b (cleanup) and M4c (translate/refine) — each decides its guard before its first run
   that can overwrite expensive/hand-tuned output. Pairs with the live regen-guard rationale (CLAUDE.md).
+- **Resolved at M4b cleanup (2026-06-23) — M4b-D2 (b):** detection-based refusal, as the mechanism
+  note settled. `cleanup.run` checks `ws.output/clean.md` at top-of-run (before any model load); if it
+  exists and the override is absent → `RegenerationGuardError` (new `EngineError`, exit code 6, message
+  naming the escape). **Override form = `allow_regen` kwarg + global `ENGINE_ALLOW_REGEN=1` env, no CLI
+  flag** — the env mirrors the live `PER_LA_LIBERTA_ALLOW_REGEN`; a CLI flag's only value over the env
+  is typing convenience (future-need-only, YAGNI) and discoverability is handled by the error message.
+  Negative + positive controls in `test_cleanup_engine` (`_check_regen_guard` + a `run`-level refusal).
+  Reused unchanged by `cleanup`'s LLM path and, at M4c, by `translate`/`refine`.
 
 ## BR-013 — `inputs/` fixture lifecycle: the frozen-fixture vs. engine-producible shadow
 - **Opened:** 2026-06-22 (M4 planning; `ENGINE_M4_PLAN.md` D7 follow-up, user-raised).
@@ -379,3 +413,32 @@
   `reconciled` (evaluable now; F1 hand-edits make it non-trivial), then M4b `cleanup`'s outputs;
   **final coherence enforced at M7.** Pairs with the framework plan's "Duplication/divergence" risk
   and `port_discipline.md` §5 "Input refresh."
+- **M4b cleanup (2026-06-23) — no new frozen fixture; reuses validate's:** cleanup's detcore golden
+  isolates `clean_text` **per chapter** (`cleanup_detcore_expected.json` under `tests/golden/data/`,
+  not `inputs/`), reading the **same** frozen `inputs/reconciled_chapters.json` the validate golden
+  froze (read, never re-frozen — both goldens stay pinned to one input). So M4b adds **no** new
+  shadow-risky `inputs/` fixture: the golden output lives in `tests/golden/data/` (a fixture, not a
+  step-input), and `chapter_pages.json` is deliberately not frozen (the golden tests the algorithm,
+  not the config-driven wrapper). The wrapper is property-tested on the synthetic book instead.
+
+## BR-014 — M4b chat seam: minimal per-step injectable `Chat` vs. the unified `providers.py`
+- **Opened:** 2026-06-23 (M4b porting; the M4b sibling of BR-009's deferred half).
+- **Context:** triage and cleanup-LLM each cross a text→text model boundary that must be injectable
+  for offline property/separability tests. M5 separately plans a unified `providers.py`
+  *TranslationProvider*. BR-009 settled the **acquisition** seams (M4a) but explicitly left open
+  whether the **chat** calls (triage / cleanup-LLM / translate / refine) should share the abstraction
+  `providers.py` will generalize — deferring that to M4c "with all the chat consumers in front of it".
+- **Taken now:** a **minimal per-step `Chat` seam** for each — `triage.Chat.classify(*, system, tool,
+  user) → list[dict]` (tool-use classification) and `cleanup.Chat.correct(*, system, user) → str`
+  (single-model correction) — each a `typing.Protocol` co-located with its step, defaulting to the
+  real Anthropic client (`AnthropicChat`), injected via `run(*, …, chat=None)`. Mirrors M4a's
+  acquisition seams (BR-009) and M3's `DictionaryOracle` (BR-001). cleanup's Batch-API path stays
+  default-only (anthropic-direct), with its deterministic request-building (`build_batch_requests`)
+  property-tested.
+- **Not taken:** pull `providers.py` (M5) forward and route triage/cleanup chat through it now.
+- **Why decide now (not defer):** the seam is needed *this milestone* (offline tests), and standing
+  up the unifying translation abstraction against only triage+cleanup — before translate/refine are
+  in front of it — is the single-fixture blind spot. Two small per-step seams now is the same
+  "siblings, not a premature unification" logic M4a used; they are cheap two-way doors.
+- **Revisit:** **M4c** decides whether triage/cleanup/translate/refine share one `ChatBackend` that
+  M5's `providers.py` generalizes (BR-009's open half). Until then each step owns its minimal seam.

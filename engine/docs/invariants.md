@@ -82,7 +82,8 @@ The decision record (divergence ledger, branch register, this file, `port_discip
 committed code: no stale counts, scrubbed terms, or dangling test references.
 - **Conclusion underwritten:** the governance docs are trustworthy enough to reason from without re-reading all the code.
 - **Positive / Negative:** partly mechanized — I3 keeps the ledger coherent; I4 keeps scrubbed terms out of core; referenced test names can be checked to resolve.
-- **Residual risk (documented probe):** most of I6 is human cross-check performed at each milestone close (the post-M4a audit was one). Mechanizing "every doc claim still matches code" is open; until then it is an explicit per-milestone probe, not a test. The mechanizable sliver — assert every doc-cited test name resolves, no stale scrubbed terms — is scheduled for M4b.
+- **Positive (mechanized sliver, M4b):** `test_invariants_controls::test_governance_docs_cite_only_resolvable_test_names` — every `test_*` name cited in `docs/` + `docs/decisions/` resolves to a real test module/function (exact or family prefix), so a rename/removal can no longer leave a dangling doc reference.
+- **Residual risk (documented probe):** the rest of I6 — "every doc *claim* (count, behaviour) still matches code" — stays a human cross-check at each milestone close (the post-M4a audit was one); only the doc-cited-test-name sliver is mechanized.
 
 ### I7 — Workspace write-containment (the safety property)
 Every step writes only inside `books/<id>/work/`; no step can reach the parent repo's live trees
@@ -109,8 +110,8 @@ produce byte-identical output across runs, independent of `PYTHONHASHSEED` — d
 can match its golden once yet be hash-order-nondeterministic, so a later regeneration silently flips it.
 - **Conclusion underwritten:** the frozen goldens are stable and meaningful; a regeneration reproduces them.
 - **Positive:** verified by source inspection (post-M4a audit) — every set/dict value reaching written output is `sorted()` or membership-only; module-level constant dicts; no `time`/`random`/`uuid`. Partially guarded already: a hash-order-nondeterministic output would intermittently break the I3 goldens.
-- **Negative (NOT YET BUILT — scheduled for M4b):** a run-twice-under-different-`PYTHONHASHSEED` idempotency test asserting identical output. Currently holds by inspection only.
-- **Residual risk:** until the run-twice test exists (M4b), a future unsorted-set-to-output write is caught only by inspection or a flaky golden, not reliably.
+- **Negative (BUILT — M4b):** `test_invariants_controls::test_m4b_deterministic_surfaces_are_hashseed_independent` runs the deterministic surfaces (triage's resolution passes + cleanup's text/flag generation) in two subprocesses under different `PYTHONHASHSEED` and asserts byte-identical output. The heavy dictionary-correction path is stubbed (it is membership-only — no set→output leak) and its determinism is underwritten by the detcore golden's stability.
+- **Residual risk:** the run-twice control covers the M4b surfaces + triage; reconcile/adjudicate/validate determinism still holds by inspection (post-M4a audit) plus their goldens, not yet by an explicit run-twice driver.
 
 ### I10 — Config honesty
 Every field declared in a schema and parsed into a model has a real consumer, or is a documented
@@ -156,3 +157,9 @@ Append one line per audit: date — scope — invariants run — result (finding
   completeness controls exhausted; cadence returns to per-milestone (M4b) — no further immediate loop.
 - 2026-06-23 — two unrun controls folded into **M4b** (agreed): I9's run-twice idempotency test and
   the I6 doc-ref mechanization sliver. They remain listed as open controls above until M4b builds them.
+- 2026-06-23 — **M4b cleanup landed**: both folded controls **built and green**
+  (`test_invariants_controls`). I9 run-twice now guards the M4b deterministic surfaces (cleanup
+  detcore + triage resolution); I6 doc-ref now fails on any dangling `test_*` citation in `docs/`.
+  cleanup's neutrality is additionally guarded by `test_cleanup_neutrality` (I4 sibling: no Italian/
+  source-noise *literal* in the step) and its equivalence by the detcore golden (I3). Stop reason:
+  M4b controls exhausted; cadence returns per-milestone.

@@ -546,3 +546,46 @@ Two findings, verified against the live tree:
 **Next:** write `steps/cleanup.py` (deterministic core + wrapper) + the source_noise config additions
 (§4 above) + the detcore golden generator/test + the neutrality test, as one unit so the golden
 validates every relocation on arrival; then the LLM path + reconcile_flags; then the regen-guard.
+
+---
+
+## 12. M4b cleanup — LANDED (2026-06-23)
+
+The cleanup step is ported, tested, and green (**219-test suite**, was 190). Everything in the
+"Next:" directive above is done, in that order:
+
+**Config relocations (all golden-validated as byte-neutral):**
+- `source_noise.noise_line_pattern` (singular) → **`noise_line_patterns`** (list: the
+  NOISE_LINE_PATTERN + separator + `Disp.` furniture, collapsed to one order-independent `any()`).
+- **New** `source_noise.page_marker_line_pattern`, `char_substitutions` (`£→E`),
+  `inline_page_marker_patterns` — schema + loader + models + `bodoni_didone.json` all updated.
+
+**Step (`steps/cleanup.py`):** `CleanupRules` bundle (`build_rules(cfg)` compiles every accent/letter
+class from `cfg.language` + every noise pattern from `cfg.source_noise` — no baked literal); the
+deterministic core (`clean_text` + helpers, parameterised on the bundle); the config-driven
+`render_markdown` wrapper (`_sort_chapters` stable on `part`); the LLM path (`Chat` seam BR-014 →
+`AnthropicChat`; `cleanup_correct.txt.j2`; cache `ws.state/llm_cleaned/`; Batch via
+`build_batch_requests` + default-only submit/poll); `reconcile_flags` (D5); the regen-guard
+(`RegenerationGuardError` exit 6 + `allow_regen` kwarg + `ENGINE_ALLOW_REGEN` env, D2). Oracle reused
+from `steps.adjudicate` (F6).
+
+**Tests (29 new):** `test_cleanup_golden` (detcore equivalence, 58 chapters byte-identical via
+`_generate_cleanup_fixture.py`); `test_cleanup_neutrality` (no `À-ÿ`/`£` in functional code,
+docstrings/comments excluded); `test_cleanup_engine` (wrapper, sort, LLM helpers, batch, regen-guard,
+leakage, separability + LLM integration); `test_isolation::test_cleanup_leaves_live_tree_untouched`;
+`test_invariants_controls` (**I9** run-twice idempotency on the M4b deterministic surfaces; **I6**
+doc-cited test names resolve). Smoke `PORTED` += cleanup.
+
+**Governance updated:** BR-002 (code-neutrality half resolved; full fixture → M7), BR-006 (re-read,
+re-deferred), BR-007 (placement done, layering deferred), BR-012 (resolved, D2 (b)), BR-013 (no new
+`inputs/` fixture), **BR-014 new** (chat seam); invariants.md I6/I9 controls marked built + audit-log
+line.
+
+**Deliberate scope note (logged):** `cleanup.run` does **not** load `corrections.json` (the live
+deprecated manual-override mechanism — stale per the live tree, superseded by the full-text LLM
+cache). `apply_corrections` is ported + property-tested for a future per-book overrides input, but no
+engine workspace has that input today (YAGNI). The universal mid-text noise-glyph strip (`■•¶§` etc.)
++ `^` strip stay in code as engine-general OCR mechanics (no language/typeface opinion); a future
+2nd-scan need would relocate them alongside BR-007's deferred layering.
+
+**Remaining in M4b:** none. M4c (translate + refine) is next.
