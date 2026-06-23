@@ -82,7 +82,7 @@ The decision record (divergence ledger, branch register, this file, `port_discip
 committed code: no stale counts, scrubbed terms, or dangling test references.
 - **Conclusion underwritten:** the governance docs are trustworthy enough to reason from without re-reading all the code.
 - **Positive / Negative:** partly mechanized — I3 keeps the ledger coherent; I4 keeps scrubbed terms out of core; referenced test names can be checked to resolve.
-- **Residual risk (documented probe):** most of I6 is human cross-check performed at each milestone close (the post-M4a audit was one). Mechanizing "every doc claim still matches code" is open; until then it is an explicit per-milestone probe, not a test.
+- **Residual risk (documented probe):** most of I6 is human cross-check performed at each milestone close (the post-M4a audit was one). Mechanizing "every doc claim still matches code" is open; until then it is an explicit per-milestone probe, not a test. The mechanizable sliver — assert every doc-cited test name resolves, no stale scrubbed terms — is scheduled for M4b.
 
 ### I7 — Workspace write-containment (the safety property)
 Every step writes only inside `books/<id>/work/`; no step can reach the parent repo's live trees
@@ -109,8 +109,8 @@ produce byte-identical output across runs, independent of `PYTHONHASHSEED` — d
 can match its golden once yet be hash-order-nondeterministic, so a later regeneration silently flips it.
 - **Conclusion underwritten:** the frozen goldens are stable and meaningful; a regeneration reproduces them.
 - **Positive:** verified by source inspection (post-M4a audit) — every set/dict value reaching written output is `sorted()` or membership-only; module-level constant dicts; no `time`/`random`/`uuid`. Partially guarded already: a hash-order-nondeterministic output would intermittently break the I3 goldens.
-- **Negative (NOT YET BUILT — listed, not claimed):** a run-twice-under-different-`PYTHONHASHSEED` idempotency test asserting identical output. Currently holds by inspection only.
-- **Residual risk:** until the run-twice test exists, a future unsorted-set-to-output write is caught only by inspection or a flaky golden, not reliably.
+- **Negative (NOT YET BUILT — scheduled for M4b):** a run-twice-under-different-`PYTHONHASHSEED` idempotency test asserting identical output. Currently holds by inspection only.
+- **Residual risk:** until the run-twice test exists (M4b), a future unsorted-set-to-output write is caught only by inspection or a flaky golden, not reliably.
 
 ### I10 — Config honesty
 Every field declared in a schema and parsed into a model has a real consumer, or is a documented
@@ -154,3 +154,5 @@ Append one line per audit: date — scope — invariants run — result (finding
   probes: I3 git-history (one envelope-regen golden edit @ `93b5aa7`, exempt under the **narrowed**
   anti-cheat rule — F2); I6 doc-refs (all catalog test names resolve). DL-001 declined. Stop reason:
   completeness controls exhausted; cadence returns to per-milestone (M4b) — no further immediate loop.
+- 2026-06-23 — two unrun controls folded into **M4b** (agreed): I9's run-twice idempotency test and
+  the I6 doc-ref mechanization sliver. They remain listed as open controls above until M4b builds them.
