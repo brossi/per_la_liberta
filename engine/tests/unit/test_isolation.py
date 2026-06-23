@@ -29,7 +29,7 @@ from pathlib import Path
 from engine.config.loader import load_book
 from engine.lang.registry import get_language_plugin
 from engine.paths import BookWorkspace
-from engine.steps import adjudicate, download, ocr, reconcile, validate
+from engine.steps import adjudicate, download, ocr, reconcile, triage, validate
 
 ENGINE_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = ENGINE_ROOT.parent
@@ -164,6 +164,39 @@ def test_ocr_leaves_live_tree_untouched(tmp_path, monkeypatch, acq):
     written = ws.data / "copy3_raw.txt"
     assert written.is_file()
     assert tmp_path in written.parents and REPO_ROOT not in written.parents
+
+
+class _FakeTriageChat:
+    """A ``triage.Chat`` double — containment is about *where* writes go, not the model, so the
+    canned verdict keeps this check fast and offline."""
+
+    def classify(self, *, system, tool, user):
+        return [{"category": "ocr_confusion", "proposed_reading": "comune",
+                 "confidence": "high", "reasoning": "x", "needs_human": False}]
+
+
+def test_triage_leaves_live_tree_untouched(tmp_path, monkeypatch):
+    # triage mutates ws.data/reconciled_chapters.json via an injected chat (no network). The
+    # snapshot still covers all five trees: the proof is it cannot reach any of them.
+    monkeypatch.setattr(triage, "_BATCH_DELAY", 0)
+    cfg = load_book("synthetic")
+    lang = get_language_plugin(cfg.language_id)
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+    for name in ("reconciled_chapters.json", "flagged_segments.json"):
+        (ws.data / name).write_text(
+            (SYNTHETIC_INPUTS / name).read_text(encoding="utf-8"), encoding="utf-8"
+        )
+
+    before = _snapshot(REPO_ROOT)
+    triage.run(workspace=ws, cfg=cfg, lang=lang, chat=_FakeTriageChat())
+    after = _snapshot(REPO_ROOT)
+
+    assert before == after, "triage wrote into a live PLL tree"
+
+    written = ws.data / "triage_resolved.json"
+    assert written.is_file()
+    assert tmp_path in written.parents
+    assert REPO_ROOT not in written.parents
 
 
 class _FakeOracle:
