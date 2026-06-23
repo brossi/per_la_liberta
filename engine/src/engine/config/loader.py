@@ -153,7 +153,10 @@ def _build_source_noise(data: dict) -> SourceNoiseProfile:
         substitution_rules=tuple((r[0], r[1]) for r in data["substitution_rules"]),
         boundary_substitutions={k: list(v) for k, v in data["boundary_substitutions"].items()},
         ligature_substitutions=tuple((r[0], r[1]) for r in data["ligature_substitutions"]),
-        noise_line_pattern=data["noise_line_pattern"],
+        noise_line_patterns=tuple(data["noise_line_patterns"]),
+        page_marker_line_pattern=data["page_marker_line_pattern"],
+        char_substitutions=tuple((r[0], r[1]) for r in data["char_substitutions"]),
+        inline_page_marker_patterns=tuple(data["inline_page_marker_patterns"]),
         page_marker_artifact_pattern=data["page_marker_artifact_pattern"],
         page_marker_format=data["page_marker_format"],
     )

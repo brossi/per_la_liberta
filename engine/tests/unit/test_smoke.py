@@ -26,7 +26,7 @@ def test_package_imports_and_has_version():
 
 # Steps ported to a real run(); the rest are still scaffold stubs. As each lands in its
 # milestone, it moves here and its behaviour is covered by a golden/unit test instead.
-PORTED = {"validate", "reconcile", "adjudicate", "download", "ocr", "triage"}  # M2, M3, M4a, M4b
+PORTED = {"validate", "reconcile", "adjudicate", "download", "ocr", "triage", "cleanup"}  # M2, M3, M4a, M4b
 
 
 @pytest.mark.parametrize("step", [s for s in engine.STEPS if s not in PORTED])

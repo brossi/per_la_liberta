@@ -47,3 +47,16 @@ class BackendError(EngineError):
     degrades to an ``[OCR_ERROR]`` sentinel; this is the whole-document / transcription case."""
 
     exit_code = 5
+
+
+class RegenerationGuardError(EngineError):
+    """A step refused to overwrite an existing protectable output without an explicit override.
+
+    ``cleanup`` (and, at M4c, ``translate``/``refine``) writes an artifact a human may have
+    hand-tuned inside ``work/``; a silent re-run would clobber it. The guard refuses unless
+    ``allow_regen=True`` (kwarg) or ``ENGINE_ALLOW_REGEN=1`` (env) is set — deliberate friction
+    mirroring the live ``PER_LA_LIBERTA_ALLOW_REGEN`` escape (BR-012/M4b-D2). The override form is
+    a kwarg + env, no CLI flag; the error message names the escape for discoverability.
+    """
+
+    exit_code = 6

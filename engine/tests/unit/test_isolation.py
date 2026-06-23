@@ -29,7 +29,7 @@ from pathlib import Path
 from engine.config.loader import load_book
 from engine.lang.registry import get_language_plugin
 from engine.paths import BookWorkspace
-from engine.steps import adjudicate, download, ocr, reconcile, triage, validate
+from engine.steps import adjudicate, cleanup, download, ocr, reconcile, triage, validate
 
 ENGINE_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = ENGINE_ROOT.parent
@@ -224,6 +224,58 @@ def test_adjudicate_leaves_live_tree_untouched(tmp_path):
     assert before == after, "adjudicate wrote into a live PLL tree"
 
     written = ws.data / adjudicate.RESULTS_FILE
+    assert written.is_file()
+    assert tmp_path in written.parents
+    assert REPO_ROOT not in written.parents
+
+
+class _StubTok:
+    def __init__(self, i: int, text: str, ws: str) -> None:
+        self.i, self.text, self.whitespace_, self.pos_ = i, text, ws, "X"
+
+
+class _StubFullDoc:
+    """A whitespace-tokenising spaCy-doc stand-in exposing the surface cleanup's dictionary
+    correction touches (``.ents`` + iterable tokens with ``.i/.pos_/.text/.whitespace_``).
+    Containment is about *where* writes go, not what NER does, so this keeps the check fast."""
+
+    ents = ()
+
+    def __init__(self, line: str) -> None:
+        toks = line.split(" ")
+        self._toks = [_StubTok(i, t, " " if i < len(toks) - 1 else "") for i, t in enumerate(toks)]
+
+    def __iter__(self):
+        return iter(self._toks)
+
+
+class _StubSym:
+    def lookup(self, *a, **k):
+        return []
+
+
+def test_cleanup_leaves_live_tree_untouched(tmp_path, monkeypatch):
+    # cleanup writes ws.output/clean.md + ws.data/review_flags.json. Stub the heavy resources
+    # (word set / symspell / spaCy) so containment stays a fast, always-run check — what they
+    # compute is irrelevant to *where* the writes land.
+    cfg = load_book("synthetic")
+    lang = get_language_plugin(cfg.language_id)
+    monkeypatch.setattr(lang, "load_spacy", lambda *a, **k: (lambda line: _StubFullDoc(line)))
+    monkeypatch.setattr(cleanup, "load_word_set", lambda *a, **k: frozenset())
+    monkeypatch.setattr(cleanup, "load_symspell", lambda *a, **k: _StubSym())
+
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+    (ws.data / cleanup.RECONCILED_FILE).write_text(
+        (SYNTHETIC_INPUTS / "reconciled_chapters.json").read_text(encoding="utf-8"), encoding="utf-8"
+    )
+
+    before = _snapshot(REPO_ROOT)
+    cleanup.run(workspace=ws, cfg=cfg, lang=lang)
+    after = _snapshot(REPO_ROOT)
+
+    assert before == after, "cleanup wrote into a live PLL tree"
+
+    written = ws.output / cleanup.CLEAN_FILE
     assert written.is_file()
     assert tmp_path in written.parents
     assert REPO_ROOT not in written.parents

@@ -201,10 +201,23 @@ class SourceNoiseProfile:
     engine ships no opinion here — a book supplies the noise profile matching its own scan.
 
     ``page_marker_artifact_pattern`` is read by M2 ``validate``; the substitution tables,
-    ``noise_line_pattern``, ``ligature_substitutions`` and ``page_marker_format`` are consumed
-    by reconcile/cleanup in M3–M4b. ``noise_line_pattern`` (the full-line OCR-decoration regex
-    cleanup drops) and ``ligature_substitutions`` (the typeface fi/fl/ff ligature confusions
-    cleanup flags, D3/BR-007) were the M4b forward-reservations realised here.
+    ``noise_line_patterns``, ``ligature_substitutions`` and ``page_marker_format`` are consumed
+    by reconcile/cleanup in M3–M4b.
+
+    The five fields cleanup reads keep its *step code* free of any source-noise literal — every
+    OCR-noise pattern it parameterises on is sourced here, not baked (the BR-002/refinement-#4
+    relocation; proven by ``test_cleanup_neutrality``):
+      - ``noise_line_patterns`` — full-line OCR-decoration regexes; a line matching ANY is dropped
+        (``is_noise_line`` :234/:248/:251). The M4b singular ``noise_line_pattern`` folded into this
+        list, joined by the separator + ``Disp.``-furniture patterns; per-pattern flags ride inline
+        (e.g. ``(?i)``).
+      - ``page_marker_line_pattern`` — the compound page-marker noise class (``is_noise_line`` :241);
+        the surrounding len/real-word/has-digit guard stays in code.
+      - ``char_substitutions`` — ``[regex, replacement]`` confusions whose *replacement* is
+        typeface/language opinion (``£→E``, a source-scan misread of a capital E). Distinct from
+        the next field, which deletes noise (a neutral space, decided in code).
+      - ``inline_page_marker_patterns`` — mid-text page-marker artifact regexes cleanup removes
+        (cleanup.py :601-603).
 
     Note (BR-007): the substitution fields are three different *kinds*. ``boundary_substitutions``
     is a language-neutral *character-confusion* model (``i→r/e``), applied generatively and
@@ -220,7 +233,10 @@ class SourceNoiseProfile:
     substitution_rules: tuple[tuple[str, str], ...]
     boundary_substitutions: dict  # {"i": ["r", "e"]}
     ligature_substitutions: tuple[tuple[str, str], ...]  # [("u", "fi"), ...] (D3)
-    noise_line_pattern: str
+    noise_line_patterns: tuple[str, ...]                 # full-line OCR-decoration regexes (M4b)
+    page_marker_line_pattern: str                        # compound page-marker noise class (M4b)
+    char_substitutions: tuple[tuple[str, str], ...]      # [("£(?!\\d)", "E"), ...] (M4b)
+    inline_page_marker_patterns: tuple[str, ...]         # mid-text page-marker artifacts (M4b)
     page_marker_artifact_pattern: str
     page_marker_format: str
 
