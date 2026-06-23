@@ -33,7 +33,7 @@ from ..contracts.markers import PAGE_MARKER_RE
 from ..errors import MissingInputError
 from ..lang.base import LanguagePlugin
 from ..paths import BookWorkspace
-from ..util.jsonio import atomic_write_json
+from ..util.jsonio import atomic_write_json, atomic_write_text
 from ..util.text import collapse_spaces, normalize_for_comparison, rejoin_lines
 
 # Pipeline artifact names — the live data/ filenames, now workspace-relative.
@@ -710,9 +710,7 @@ def run(
         output_lines.append(f"=== {ch['id']} | {ch['title']} ===")
         output_lines.append(ch["text"])
         output_lines.append("")
-    ws.resolve("data", RECONCILED_RAW_FILE).write_text(
-        "\n".join(output_lines), encoding="utf-8"
-    )
+    atomic_write_text(ws.resolve("data", RECONCILED_RAW_FILE), "\n".join(output_lines))
 
     atomic_write_json(ws.resolve("data", RECONCILED_FILE), reconciled_chapters)
     atomic_write_json(ws.resolve("data", FLAGGED_FILE), all_flagged)

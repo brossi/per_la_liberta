@@ -19,6 +19,7 @@ from ..config.models import ResolvedConfig, Source
 from ..errors import AcquisitionError
 from ..lang.base import LanguagePlugin
 from ..paths import BookWorkspace
+from ..util.jsonio import atomic_write_text
 
 
 class Fetcher(Protocol):
@@ -90,7 +91,7 @@ def run(
                 f"failed to fetch {source.role} ({source.label}) from {url}: {exc}"
             ) from exc
 
-        target.write_text(text, encoding="utf-8")
+        atomic_write_text(target, text)
         print(f"  {source.label}: saved ({len(text):,} chars)")
         summary[source.role] = {"path": str(target), "chars": len(text), "skipped": False}
 

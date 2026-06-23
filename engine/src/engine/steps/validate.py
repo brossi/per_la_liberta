@@ -30,7 +30,7 @@ from pathlib import Path
 from ..config.models import CoverageSpec, ResolvedConfig, Structure
 from ..dictionaries.frequency import load_word_set
 from ..lang.base import LanguagePlugin
-from ..paths import BookWorkspace, asset_path
+from ..paths import BookWorkspace, require_asset
 from ..util.jsonio import atomic_write_json, read_json
 from ..util.text import strip_accents
 
@@ -429,7 +429,7 @@ def run(
     structure = cfg.structure
     lp = cfg.language
     nlp = lang.load_spacy(lp.spacy_model, disable=["parser", "lemmatizer"])
-    word_set = load_word_set(asset_path(lp.frequency_dictionary))
+    word_set = load_word_set(require_asset(lp.frequency_dictionary, kind="file"))
 
     checks = [
         check_chapter_count(text, structure),

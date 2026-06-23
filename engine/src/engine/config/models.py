@@ -160,7 +160,6 @@ class LanguageProfile:
     language_id: str
     display_name: str
     spacy_model: str
-    spacy_distribution: str
     frequency_dictionary: str
     english_markers: tuple[str, ...]
     skip_words: tuple[str, ...]

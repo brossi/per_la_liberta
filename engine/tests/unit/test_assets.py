@@ -15,6 +15,7 @@ import pytest
 
 from engine import paths
 from engine.config.loader import load_book
+from engine.errors import MissingInputError
 from engine.lang import base
 from engine.lang.italian import ItalianLanguagePlugin
 
@@ -30,6 +31,37 @@ def test_period_dictionaries_resolve_to_dirs():
     for d in cfg.language.period_dictionaries:
         p = paths.asset_path(d.dir)
         assert p.is_dir(), f"period dictionary {d.name!r} not found at {p}"
+
+
+# --- invariant I1 negative controls: a missing/typo'd asset is a *typed* failure, not a bare
+# FileNotFoundError. The two tests above are positive controls (the real book's assets resolve);
+# these exercise the failure branch require_asset closes (engine/docs/invariants.md, I1).
+
+def test_require_asset_missing_file_is_typed_not_bare():
+    with pytest.raises(MissingInputError) as exc:
+        paths.require_asset("does/not/exist/freq.txt", kind="file")
+    assert exc.value.exit_code == 3
+    assert "does/not/exist/freq.txt" in str(exc.value)
+
+
+def test_require_asset_missing_dir_is_typed_not_bare():
+    with pytest.raises(MissingInputError) as exc:
+        paths.require_asset("dictionary/no_such_dir", kind="dir")
+    assert exc.value.exit_code == 3
+
+
+def test_require_asset_kind_mismatch_does_not_pass_silently():
+    # The real frequency dictionary is a file; requesting it as a dir must still fail typed,
+    # not return a path that a downstream dir-walk would choke on.
+    cfg = load_book("per_la_liberta")
+    with pytest.raises(MissingInputError):
+        paths.require_asset(cfg.language.frequency_dictionary, kind="dir")
+
+
+def test_require_asset_returns_resolved_path_when_present():
+    cfg = load_book("per_la_liberta")
+    p = paths.require_asset(cfg.language.frequency_dictionary, kind="file")
+    assert p.is_file() and p == paths.asset_path(cfg.language.frequency_dictionary)
 
 
 def test_spacy_model_is_installed():

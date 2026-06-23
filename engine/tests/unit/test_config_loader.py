@@ -40,7 +40,6 @@ def test_resolves_real_pll_constants():
     lp = cfg.language
     assert cfg.language_id == "it" == lp.language_id
     assert lp.spacy_model == "it_core_news_lg"
-    assert lp.spacy_distribution == "it-core-news-lg"
     assert "the" in lp.english_markers and "correct" in lp.english_markers
     assert "il" in lp.skip_words
     assert lp.consonant_alphabet == "bcdfghjklmnpqrstvwxyz"

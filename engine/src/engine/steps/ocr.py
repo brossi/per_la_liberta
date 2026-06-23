@@ -40,7 +40,7 @@ from ..errors import BackendError, MissingInputError
 from ..lang.base import LanguagePlugin
 from ..paths import BookWorkspace
 from ..prompts.templating import PromptTemplate, build_prompt_context
-from ..util.jsonio import atomic_write_json, read_json
+from ..util.jsonio import atomic_write_json, atomic_write_text, read_json
 
 # Output filenames reconcile reads: pro → copy3_raw.txt (quality witness), flash → copy3_flash.txt.
 _OUTPUT_NAMES = {"pro": "copy3_raw.txt", "flash": "copy3_flash.txt"}
@@ -341,7 +341,7 @@ def run(
 
     output_path = ws.resolve("data", _OUTPUT_NAMES[model])
     page_map_path = ws.resolve("data", f"copy3_{model}_page_map.json")
-    output_path.write_text(full_text, encoding="utf-8")
+    atomic_write_text(output_path, full_text)
     atomic_write_json(page_map_path, page_map)
     print(f"  OCR text: {output_path.name} ({len(full_text):,} chars); "
           f"page map: {page_map_path.name} ({len(page_map)} pages)")

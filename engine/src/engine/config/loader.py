@@ -123,7 +123,6 @@ def _build_language(data: dict) -> LanguageProfile:
         language_id=data["language_id"],
         display_name=data["display_name"],
         spacy_model=data["spacy_model"],
-        spacy_distribution=data["spacy_distribution"],
         frequency_dictionary=data["frequency_dictionary"],
         english_markers=tuple(data["english_markers"]),
         skip_words=tuple(data["skip_words"]),

@@ -42,7 +42,7 @@ from pathlib import Path
 
 from ..config.models import ResolvedConfig
 from ..lang.base import LanguagePlugin
-from ..paths import BookWorkspace, asset_path
+from ..paths import BookWorkspace, require_asset
 from ..util.jsonio import atomic_write_json, read_json
 
 REVIEW_FLAGS_FILE = "review_flags.json"
@@ -330,7 +330,7 @@ def _build_oracle(cfg: ResolvedConfig) -> DictionaryOracle:
             f"{cfg.language.language_id!r} declares none"
         )
     pd = mono[0]
-    return DictionaryOracle(pd.name, asset_path(pd.dir))
+    return DictionaryOracle(pd.name, require_asset(pd.dir, kind="dir"))
 
 
 def _write_envelope(ws: BookWorkspace, *, input_present: bool, results: dict, stats: dict) -> dict:

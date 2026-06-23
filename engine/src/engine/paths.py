@@ -14,6 +14,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+from .errors import MissingInputError
+
 # paths.py -> engine(pkg) -> src -> engine/ (project root)
 ENGINE_ROOT = Path(__file__).resolve().parents[2]
 
@@ -27,10 +29,27 @@ ASSETS_ROOT = ENGINE_ROOT / "assets"
 def asset_path(rel: str) -> Path:
     """Resolve an assets-relative path (e.g. ``"frequency/it_combined.txt"``) to absolute.
 
-    Does not assert existence — callers that require the file present check it (and
-    ``tests/unit/test_assets.py`` asserts every config-referenced asset resolves).
+    Does not assert existence — callers that require the file present use ``require_asset``
+    (and ``tests/unit/test_assets.py`` asserts every config-referenced asset resolves).
     """
     return ASSETS_ROOT / rel
+
+
+def require_asset(rel: str, *, kind: str = "file") -> Path:
+    """Resolve an assets-relative path and assert it exists, else raise ``MissingInputError``.
+
+    The typed counterpart to ``asset_path`` for callers that *need* the asset present. A
+    config that names a missing/typo'd dictionary or dir is a known, user-facing failure, so
+    it exits cleanly (``MissingInputError``, code 3) naming the offending path — not a bare
+    ``FileNotFoundError`` traceback from deep in a loader (invariant I1; plan F7). ``kind`` is
+    ``"file"`` or ``"dir"``, and the check matches the kind so a file where a dir is expected
+    (or vice versa) is caught rather than passing silently.
+    """
+    path = asset_path(rel)
+    present = path.is_dir() if kind == "dir" else path.is_file()
+    if not present:
+        raise MissingInputError(f"required {kind} asset not found: {rel!r} (resolved to {path})")
+    return path
 
 
 _AREAS = ("data", "output", "state")
