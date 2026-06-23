@@ -55,7 +55,8 @@
     "title_it": "Libro di Prova",
     "subtitle_it": "Edizione sintetica per i test del motore",
     "subtitle_en": "Synthetic edition for engine tests",
-    "author": "Test Fixture",
+    "author": "Autore Sintetico",
+    "year": 1901,
     "colophon": "n/a",
     "ia_item_id": "synthetic_book",
     "site_base": "https://example.com/synthetic"

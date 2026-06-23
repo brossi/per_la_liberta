@@ -107,7 +107,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "title_it", "subtitle_it", "subtitle_en", "author",
+        "title_it", "subtitle_it", "subtitle_en", "author", "year",
         "colophon", "ia_item_id", "site_base"
       ],
       "properties": {
@@ -115,6 +115,7 @@
         "subtitle_it": {"type": "string"},
         "subtitle_en": {"type": "string"},
         "author": {"type": "string"},
+        "year": {"type": "integer"},
         "colophon": {"type": "string"},
         "ia_item_id": {"type": "string"},
         "site_base": {"type": "string"}

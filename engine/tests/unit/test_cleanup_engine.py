@@ -70,7 +70,7 @@ def test_render_markdown_is_config_driven():
 
     assert md.startswith("# Libro di Prova")                       # edition.title_it
     assert "*Edizione sintetica per i test del motore*" in md      # edition.subtitle_it
-    assert "**Test Fixture**" in md                                # edition.author
+    assert "**Autore Sintetico** (1901)" in md                     # byline: author bold, year outside
     assert "## Prefazione" in md                                   # part 0 → H2, title from data
     assert "## Parte Prima" in md                                  # part header from structure.parts
     assert "### Capitolo Primo" in md                              # part ≥ 1 → H3

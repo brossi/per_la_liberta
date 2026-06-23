@@ -58,11 +58,39 @@ def test_resolves_real_pll_constants():
     assert ("cbe", "che") in cfg.source_noise.substitution_rules
     assert cfg.source_noise.boundary_substitutions == {"i": ["r", "e"]}
 
-    # edition + typeface (M3)
-    assert cfg.manifest.edition.author == "Cesare Crespi (1913)"
+    # edition + typeface (M3). author + year are separate fields (year not fused into author).
+    assert cfg.manifest.edition.author == "Cesare Crespi"
+    assert cfg.manifest.edition.year == 1913
     assert cfg.manifest.edition.site_base.endswith("/PER_LA_LIBERTA")
     assert cfg.typeface.display_family == "Spectral"
     assert cfg.typeface.body_family == "Fraunces"
+
+
+def test_cleanup_accented_letters_is_the_full_canonical_set():
+    """Config-contract guard complementing the cleanup equivalence golden (Audit 1).
+
+    ``cfg.language.accented_letters`` is the enumerated set cleanup interpolates into its two
+    is_noise "real word" classes (``real_word_short_re`` / ``real_word_3_re``, ``build_rules``). A
+    single-letter deletion is a plausible hand-edit of the language profile — and the equivalence
+    golden (``test_cleanup_golden``) only *individually* binds 3 of the 12 letters on the frozen
+    corpus (``ì``, ``é``, ``Ì`` flip a line's noise classification there; the other nine never land
+    in a ≤4-char / page-marker line that changes output, so dropping one slips past the golden,
+    confirmed by the Audit-1 per-letter mutation sweep). This asserts the whole canonical set
+    directly — corpus-independent — so a dropped letter fails *here* instead of shipping silently.
+
+    The set is the Italian accented-vowel inventory: grave ``à è ì ò ù`` + acute ``é``, each in both
+    cases. It is a strict superset of the live restrictive class (``cleanup.py`` :231/:244,
+    ``àèìòùéÀÈÌÒÙ``) by exactly ``É`` — the deliberate M4b-D1 superset, proven inert on the corpus.
+    """
+    lp = load_book("per_la_liberta").language
+    canonical = set("àèìòùéÀÈÌÒÙÉ")
+    assert set(lp.accented_letters) == canonical, (
+        "accented_letters drifted from the canonical Italian set "
+        f"(symmetric diff: {set(lp.accented_letters) ^ canonical})"
+    )
+    assert len(lp.accented_letters) == len(canonical), "duplicate letter in accented_letters"
+    # Tie to Audit 1: the live restrictive subset plus exactly the proven-inert +É extension.
+    assert set(lp.accented_letters) - set("àèìòùéÀÈÌÒÙ") == {"É"}
 
 
 def _write_book(tmp_path, name, manifest: dict):
@@ -145,6 +173,35 @@ def test_language_id_mismatch_is_rejected(tmp_path):
     books = _write_book(tmp_path, "mm", m)
     with pytest.raises(ConfigError, match="language mismatch"):
         load_book("mm", books_dir=books, profiles_dir=REAL_PROFILES)
+
+
+@pytest.mark.parametrize(
+    "ed_key, drifted",
+    [("title_it", "Per la Libertà!"), ("author", "Cesare Crespi (1913)"), ("year", 1914)],
+)
+def test_bibliographic_drift_across_namespaces_is_rejected(tmp_path, ed_key, drifted):
+    # title/author/year live in BOTH edition and prompt_context (two consumers, BR-008). The loader
+    # guard requires them identical, so a hand-edit to one view and not the other — e.g. re-fusing
+    # the year into author, or a case-only title drift like libertà→Libertà — fails at load instead
+    # of shipping silently. Exercises each guarded field's failure branch.
+    m = _real_manifest()
+    m["id"] = "bibdrift"
+    m["edition"][ed_key] = drifted  # diverge edition's view; prompt_context keeps the real value
+    books = _write_book(tmp_path, "bibdrift", m)
+    with pytest.raises(ConfigError, match="bibliographic facts disagree"):
+        load_book("bibdrift", books_dir=books, profiles_dir=REAL_PROFILES)
+
+
+def test_missing_edition_year_is_a_schema_error_before_the_consistency_check(tmp_path):
+    # year is now a required edition field; dropping it is a schema error (a clean ConfigError),
+    # raised before the consistency check — proving the schema gates the new field, not a KeyError
+    # in _check_bibliographic_consistency.
+    m = _real_manifest()
+    m["id"] = "noyear"
+    del m["edition"]["year"]
+    books = _write_book(tmp_path, "noyear", m)
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("noyear", books_dir=books, profiles_dir=REAL_PROFILES)
 
 
 def test_missing_profile_ref_is_a_clean_error(tmp_path):

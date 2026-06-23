@@ -583,7 +583,8 @@ def render_markdown(rendered: list[tuple[dict, str]], cfg: ResolvedConfig, chapt
     """
     ed = cfg.manifest.edition
     parts = cfg.structure.parts
-    md = [f"# {ed.title_it}", "", f"*{ed.subtitle_it}*", "", f"**{ed.author}**", "", "---", ""]
+    byline = f"**{ed.author}** ({ed.year})"      # author bold, year outside the bold span
+    md = [f"# {ed.title_it}", "", f"*{ed.subtitle_it}*", "", byline, "", "---", ""]
 
     current_part = 0
     for ch, text in rendered:

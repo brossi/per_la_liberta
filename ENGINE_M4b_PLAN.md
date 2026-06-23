@@ -589,3 +589,97 @@ engine workspace has that input today (YAGNI). The universal mid-text noise-glyp
 2nd-scan need would relocate them alongside BR-007's deferred layering.
 
 **Remaining in M4b:** none. M4c (translate + refine) is next.
+
+## 13. M4b cleanup — probing audits (post-landing, 2026-06-23)
+
+Two user-requested audits of the (complex) cleanup port. **Audit 1 — does the detcore golden
+genuinely *bind* each relocated config value? — DONE.** Method: reproduce the golden as baseline
+(0/58 diverging — basis valid), then mutate each relocated config value (`dataclasses.replace` →
+rebuild `CleanupRules` → re-run 58 chapters) and check the golden goes red.
+
+- **8 of 11 mutations DIVERGED (bound):** `char_substitutions £→E`, all three `noise_line_patterns`,
+  `page_marker_line_pattern`, `inline_page_marker_patterns[0]`, `word_letter_class`, and the accented
+  class collectively (drop-all → 7 ch).
+- **3 SILENT (golden can't catch the corruption), each accounted for — none an infidelity:**
+  - `inline_page_marker_patterns[1]/[2]` — byte-identical to live `cleanup.py:602-603`; they match the
+    raw corpus (14×/1×) but fire **0×** at their pipeline position (confirmed by counting shims), even
+    reordered to run first → the spans are consumed **upstream** (`is_noise_line` drops the whole
+    page-marker line before the inline stage). Redundant-on-this-corpus, live-identical.
+  - `accented_letters` drop `É` — the logically-*required* dual of the green baseline (engine-with-É ≡
+    live-without-É forces drop-É → no change); corpus scan = **0** É trigger sites. Proven-inert superset.
+- **Per-letter caveat tested + quantified:** dropping each accented letter individually, only **3 of
+  12** are individually golden-bound (`ì`, `é`, `Ì` — the OCR-garble-heavy ones, in page-marker
+  furniture); the other **9** (`à è ò ù À È Ò Ù É`) are SILENT — a single-letter profile typo would
+  slip past the golden. **Guard added:** `test_config_loader.py::test_cleanup_accented_letters_is_the_full_canonical_set`
+  asserts the loaded `accented_letters` equals the canonical Italian set directly (corpus-independent,
+  binds all 12) — verified to discriminate on any deletion/addition. **Suite now 220** (was 219).
+  Inspection confirmed the engine `accented_letters` non-É portion + `word_letter_class` are
+  byte-identical to live's classes at `:231/:244/:83/:257/:327/:329/:645/:680`.
+
+**Audit 2 — faithfulness of the surfaces the golden does NOT cover — DONE.** Side-by-side diff of
+each non-golden surface against the live `cleanup.py`. Verdict: **every divergence is intentional and
+consistent with the design (book/source-noise neutralization + workspace protection + testability);
+no unintended infidelity.** Detail:
+
+- **`render_markdown` wrapper** — structure faithful (Parte Prima with no rule before, Parte Seconda
+  with `---` before, `###` chapters, `<!-- pages -->` markers). `_sort_chapters` (stable-by-`part`)
+  reproduces live's parsed `(part, ch_num)` order **exactly** on this corpus (input is pre-ordered
+  within parts; verified). Three *config-driven cosmetic* divergences from the live hardcoded title
+  block, all **validate-safe** (the structural checks count `^## `/`^### ` and never match header
+  text/casing — `validate.py:78`): (a) title `# Per la libertà!` (canonical config) vs live
+  `# Per la Libertà!` (hardcoded capital-L stylization); (b) author `**Cesare Crespi (1913)**`
+  (opaque single `edition.author` field, all bold) vs live `**Cesare Crespi** (1913)` (year outside
+  bold); (c) prefazione heading `## PREFAZIONE` (the data's actual `title`) vs live `## Prefazione`
+  (a book-specific retitle). The config values are the canonical forms; reproducing live's exact
+  stylization would re-bake book opinion. Immaterial now (live edition frozen + regen-guarded); only
+  surfaces if the engine ever regenerates a fresh PLL title block (M3b/typeset territory).
+- **LLM correction path** — same mechanism; prompt **deliberately neutralized** (no byte-golden is
+  possible for non-deterministic LLM output). `cleanup_correct.txt.j2` generalizes live
+  `_LLM_CORRECT_SYSTEM` via `{{ book.* }}`/`{{ language.* }}` and drops the book SUBJECT/entities
+  clause + the Bodoni-specific OCR-confusion examples (same neutralization philosophy as triage).
+  `build_user_content` drops "Italian"→generic and "Zingarelli 1922"→"period-dictionary" (the
+  language constraint stays in the system prompt). `build_batch_requests` is faithful to live
+  `_build_batch_requests` with system+oracle **injected** instead of module constants. Cache
+  precedence matches ("cache wins over clean_text"). Two deliberate drops vs live: the per-chapter
+  `time.sleep(1)` sync-path rate-limit (Tier-4 + `retry_api_call` make it moot) and the
+  manual-corrections-on-cache step (part of the corrections.json omission).
+- **`reconcile_flags`** — logic byte-identical to live (`cleanup.py:1459-1497`, context-or-token
+  substring search); two intentional interface changes: output name `clean.md` (generic) and a
+  returned summary dict (vs `None`) for testability.
+- **`corrections.json` omission** — confirmed intentional (deprecated/stale, superseded by the
+  full-text cache): `run()` does not load/apply/merge it. The two helpers are ported **byte-faithful**
+  to live (`apply_corrections` :1129-1177, `extract_corrections_from_diff` :1180-1220) and
+  property-tested, but unwired (YAGNI until a per-book overrides input exists).
+
+**Audit 2 produced no port-faithfulness code changes** (a confirmation pass). The title-casing
+`libertà`/`Libertà` is *not* an engine hardcode — `render_markdown` pulls from config; the config's
+canonical lowercase is kept (the engine is more correct than live here). But the audit's author-bold
+finding surfaced an adjacent **structural** smell, addressed in §14.
+
+## 14. Post-audit follow-up — de-conflate bibliographic facts + drift guard (2026-06-23)
+
+Audit 2's "year fused into `edition.author`" finding was a symptom: the publication **year** appeared
+3× (`prompt_context.year`, fused in `edition.author`, in `colophon` prose) and the **author** twice,
+disagreeing (`edition` "Cesare Crespi (1913)" vs `prompt_context` "Cesare Crespi"). The prompts
+already separated author/year correctly; only the `edition` display field conflated them. Chosen fix
+(user: *de-conflate + load guard*):
+
+- **De-conflation:** new structured `edition.year` (int); `edition.author` → `"Cesare Crespi"`;
+  `render_markdown` byline now `**{author}** ({year})` → `**Cesare Crespi** (1913)` (also matches the
+  live byline). Schema (`year` required+integer), `Edition` model field, loader build, both manifests
+  (PLL + synthetic — the synthetic fixture was itself inconsistent: `author` "Test Fixture" vs
+  "Autore Sintetico", no year; now well-formed).
+- **Drift guard:** `loader._check_bibliographic_consistency` asserts the three facts duplicated
+  across the two namespaces (`edition.title_it`/`author`/`year` == `prompt_context`
+  `book_title`/`author`/`year`) are identical, else `ConfigError` at load. Keeps the deliberate
+  BR-008 split (prompt identity vs typeset metadata) while making the drift the casing-divergence
+  warned about impossible to ship silently. Runs after schema validation (a missing field is still a
+  schema error first).
+- **Tests:** `test_bibliographic_drift_across_namespaces_is_rejected` (parametrised over title/author/
+  year — each field's failure branch), `test_missing_edition_year_is_a_schema_error_before_the_consistency_check`,
+  updated PLL constants + the synthetic byline property assertion.
+
+Left as-is (deliberate): the LOC `ia_item_id` duplicated across `sources[0]` ↔ `edition` (distinct
+roles — download witness vs typeset scan-link — same value), and the year embedded in `colophon`
+prose (display text, not a parsed field). Both are weaker than the bibliographic-identity case and
+not worth structuring now.

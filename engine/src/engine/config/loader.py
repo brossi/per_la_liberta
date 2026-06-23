@@ -110,6 +110,7 @@ def _build_manifest(data: dict) -> BookManifest:
             subtitle_it=edition["subtitle_it"],
             subtitle_en=edition["subtitle_en"],
             author=edition["author"],
+            year=edition["year"],
             colophon=edition["colophon"],
             ia_item_id=edition["ia_item_id"],
             site_base=edition["site_base"],
@@ -183,6 +184,35 @@ def _load_profile(
     return data
 
 
+#: Bibliographic facts that legitimately appear in BOTH ``edition`` (typeset metadata) and
+#: ``prompt_context`` (LLM-prompt identity). The two namespaces are kept separate by design
+#: (BR-008: book identity for prompts vs typed display metadata), so the same fact is declared
+#: in each — and must agree. Pairs are ``(edition_key, prompt_context_key)``.
+_BIBLIOGRAPHIC_PAIRS = (("title_it", "book_title"), ("author", "author"), ("year", "year"))
+
+
+def _check_bibliographic_consistency(book_id: str, manifest_data: dict) -> None:
+    """Guard against drift between the two views of the shared bibliographic facts.
+
+    ``edition`` and ``prompt_context`` each carry the title/author/year (one for typeset, one for
+    the prompts). They are duplicated on purpose but must stay identical — a hand-edit to one and
+    not the other would otherwise ship silently (e.g. an ``author`` with a fused year, or a title
+    that disagrees case-for-case). This turns that drift into a load-time ``ConfigError``.
+    """
+    edition = manifest_data["edition"]
+    prompt_context = manifest_data["prompt_context"]
+    mismatches = [
+        f"edition.{ek}={edition[ek]!r} != prompt_context.{pk}={prompt_context[pk]!r}"
+        for ek, pk in _BIBLIOGRAPHIC_PAIRS
+        if edition[ek] != prompt_context[pk]
+    ]
+    if mismatches:
+        raise ConfigError(
+            f"bibliographic facts disagree across edition and prompt_context in {book_id!r} "
+            f"(they must be identical): " + "; ".join(mismatches)
+        )
+
+
 # --- public API ------------------------------------------------------------ #
 
 def load_book(
@@ -217,6 +247,8 @@ def load_book(
             f"{manifest_data['language']!r} but profile {refs['language']!r} is "
             f"{lang_data['language_id']!r}"
         )
+
+    _check_bibliographic_consistency(book_id, manifest_data)
 
     return ResolvedConfig(
         book_id=book_id,

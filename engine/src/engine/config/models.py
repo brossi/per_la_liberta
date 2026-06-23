@@ -85,12 +85,20 @@ class Structure:
 
 @dataclass(frozen=True, slots=True)
 class Edition:
-    """Bibliographic metadata + deploy base (``manifest.edition``; consumed by typeset in M3)."""
+    """Bibliographic metadata + deploy base (``manifest.edition``; consumed by typeset in M3).
+
+    ``author`` and ``year`` are distinct fields: the publication year is a first-class fact (it
+    also feeds the prompts as ``prompt_context.year``), so it is *not* fused into the ``author``
+    display string. ``render_markdown`` composes the title-block byline as ``**{author}** ({year})``.
+    The loader cross-checks ``title_it``/``author``/``year`` against ``prompt_context`` so the two
+    views of these shared facts cannot silently drift apart.
+    """
 
     title_it: str
     subtitle_it: str
     subtitle_en: str
     author: str
+    year: int
     colophon: str
     ia_item_id: str
     site_base: str
