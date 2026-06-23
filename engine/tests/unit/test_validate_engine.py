@@ -135,6 +135,7 @@ def test_word_quality_high_severity_fails_and_reads_its_ceiling():
         english_markers={"the"},
         skip_words=set(),
         consonant_alphabet="bcdfghjklmnpqrstvwxyz",
+        word_letter_class="a-zA-ZÀ-ÿ",
     )
 
     strict = validate.check_word_quality(text, high_severity_max=0, **kw)
@@ -149,9 +150,9 @@ def test_word_quality_high_severity_fails_and_reads_its_ceiling():
 
 
 def test_mid_word_noise_is_unreachable_faithful_to_live():
-    # Pins the documented dead branch (validate.py _MID_NOISE note): _WORD_RE captures
+    # Pins the documented dead branch (validate.py _MID_NOISE note): the word regex captures
     # letters only, so a token with embedded noise splits at the noise and "mid-word noise"
-    # never fires — matching the live validate.py. If a future _WORD_RE change makes it
+    # never fires — matching the live validate.py. If a future word-regex change makes it
     # reachable, this flips and forces a deliberate decision (and a golden refresh).
     text = "### Capitolo\n\nun com2rare guasto qui\n"
     result = validate.check_word_quality(
@@ -161,6 +162,7 @@ def test_mid_word_noise_is_unreachable_faithful_to_live():
         english_markers=set(),
         skip_words=set(),
         consonant_alphabet="bcdfghjklmnpqrstvwxyz",
+        word_letter_class="a-zA-ZÀ-ÿ",
         high_severity_max=0,
     )
     all_reasons = [r for flags in result["by_chapter"].values() for f in flags for r in f["reasons"]]
@@ -179,6 +181,7 @@ def test_word_quality_capitalised_cluster_is_not_high_severity():
         english_markers=set(),
         skip_words=set(),
         consonant_alphabet="bcdfghjklmnpqrstvwxyz",
+        word_letter_class="a-zA-ZÀ-ÿ",
         high_severity_max=0,
     )
     assert result["high_severity"] == 0

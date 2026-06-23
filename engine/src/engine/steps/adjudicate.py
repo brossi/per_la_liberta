@@ -64,15 +64,17 @@ def _is_noise(token: str) -> bool:
     return alpha < 3 or (len(token) > 3 and alpha / len(token) < 0.5)
 
 
-def _search_chunk(word: str, chunk_text: str) -> list[str]:
+def _search_chunk(word: str, chunk_text: str, word_letter_class: str) -> list[str]:
     """Lines where ``word`` appears as a standalone token (word-boundary match, ≤5 lines).
 
     Verbatim from live ``_search_chunk`` — boundary anchors stop ``fl`` matching inside ``ffle``.
+    ``word_letter_class`` is the language's "any word letter" regex fragment (config, not an inline
+    À-ÿ literal — sourced like cleanup/validate), so the boundary anchors are script-correct.
     """
     if not word or not chunk_text or len(word) < 3:
         return []
     pattern = re.compile(
-        r"(?<![a-zA-ZÀ-ÿ])" + re.escape(word) + r"(?![a-zA-ZÀ-ÿ])",
+        rf"(?<![{word_letter_class}])" + re.escape(word) + rf"(?![{word_letter_class}])",
         re.IGNORECASE,
     )
     matches = []
@@ -92,9 +94,10 @@ class DictionaryOracle:
     dictionary in LLM prompt context. The chunk cache is per-oracle (one instance per run).
     """
 
-    def __init__(self, name: str, dict_dir: Path) -> None:
+    def __init__(self, name: str, dict_dir: Path, word_letter_class: str) -> None:
         self.name = name
         self._dir = Path(dict_dir)
+        self._word_letter_class = word_letter_class
         self._chunks: dict[str, str] = {}
 
     def _load_chunk(self, letter: str) -> str:
@@ -113,12 +116,12 @@ class DictionaryOracle:
 
         base = _strip_accents(word[0].lower())
         chunk = self._load_chunk(base)
-        matches = _search_chunk(word, chunk)
+        matches = _search_chunk(word, chunk, self._word_letter_class)
 
         if not matches:  # accent-insensitive retry
             stripped = _strip_accents(word)
             if stripped != word:
-                matches = _search_chunk(stripped, chunk)
+                matches = _search_chunk(stripped, chunk, self._word_letter_class)
 
         return bool(matches), matches
 
@@ -330,7 +333,9 @@ def _build_oracle(cfg: ResolvedConfig) -> DictionaryOracle:
             f"{cfg.language.language_id!r} declares none"
         )
     pd = mono[0]
-    return DictionaryOracle(pd.name, require_asset(pd.dir, kind="dir"))
+    return DictionaryOracle(
+        pd.name, require_asset(pd.dir, kind="dir"), cfg.language.word_letter_class
+    )
 
 
 def _write_envelope(ws: BookWorkspace, *, input_present: bool, results: dict, stats: dict) -> dict:

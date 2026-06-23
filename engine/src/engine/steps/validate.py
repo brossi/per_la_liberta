@@ -56,16 +56,17 @@ WORD_QUALITY_TOTAL_WARN = 200
 # spaCy max_length guard — chunk the NER pass so large texts stay under the model limit.
 _NER_CHUNK = 500_000
 
-# Word + mid-word patterns: Latin-script mechanics, language-neutral. Verbatim ports.
+# Mid-word patterns: Latin-script mechanics, language-neutral (ASCII-only). Verbatim ports. The
+# word regex itself is built per-run from ``cfg.language.word_letter_class`` (the "any word letter"
+# script fact, sourced from config like cleanup/adjudicate — no longer an inline À-ÿ literal).
 #
 # _MID_NOISE is a faithful port of a branch that is *unreachable* in the live validate.py too:
-# _WORD_RE captures letters + apostrophes only, so a matched ``word`` can never contain a noise
-# char (digit / bracket / <> / ^ \ |) for _MID_NOISE to find — the token simply splits at the
+# the word regex captures letters + apostrophes only, so a matched ``word`` can never contain a
+# noise char (digit / bracket / <> / ^ \ |) for _MID_NOISE to find — the token simply splits at the
 # noise instead, and "mid-word noise" therefore never appears in reasons. Kept for 1:1 fidelity
-# with the live check list. Making it fire (e.g. scanning the raw line span) would flag tokens
-# the live code does not and break the golden — an improvement *over* live for a deliberate
-# later pass, not a silent change here.
-_WORD_RE = re.compile(r"\b([a-zA-ZÀ-ÿ]+(?:['''][a-zA-ZÀ-ÿ]+)?)\b")
+# with the live check list. Making it fire (e.g. scanning the raw line span) would flag tokens the
+# live code does not and break the golden — an improvement *over* live for a deliberate later pass,
+# not a silent change here.
 _MID_NOISE = re.compile(r"[a-zA-Z][(\)\[\]{}^\\|<>0-9][a-zA-Z]")
 _MID_CAPS = re.compile(r"[a-z][A-Z][a-z]")
 
@@ -205,6 +206,7 @@ def check_word_quality(
     english_markers: set[str],
     skip_words: set[str],
     consonant_alphabet: str,
+    word_letter_class: str,
     high_severity_max: int,
 ) -> dict:
     """Per-word OCR quality scan: dictionary lookup + pattern-based garble detection.
@@ -212,8 +214,11 @@ def check_word_quality(
     Flags words absent from the frequency dictionary, mid-word noise/capitals, impossible
     consonant clusters, and English-marker words (possible LLM instruction leaks). spaCy NER
     over the full text supplies a proper-noun allowlist so place/person names aren't flagged.
+    ``word_letter_class`` is the language's "any word letter" regex fragment (config, not an inline
+    À-ÿ literal) — the tokeniser that splits the text into candidate words.
     """
     consonant_cluster = re.compile(f"[{consonant_alphabet}]{{4,}}", re.IGNORECASE)
+    word_re = re.compile(rf"\b([{word_letter_class}]+(?:['''][{word_letter_class}]+)?)\b")
 
     # Proper-noun allowlist: legitimate names absent from the frequency dictionary.
     known_entities: set[str] = set()
@@ -241,7 +246,7 @@ def check_word_quality(
             if not line.strip():
                 continue
 
-            for m in _WORD_RE.finditer(line):
+            for m in word_re.finditer(line):
                 word = m.group(1)
                 if "'" in word:
                     core = word.split("'")[0]
@@ -444,6 +449,7 @@ def run(
             english_markers=set(lp.english_markers),
             skip_words=set(lp.skip_words),
             consonant_alphabet=lp.consonant_alphabet,
+            word_letter_class=lp.word_letter_class,
             high_severity_max=structure.word_quality_high_severity_max,
         ),
     ]

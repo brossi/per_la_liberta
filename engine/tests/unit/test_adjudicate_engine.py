@@ -160,7 +160,7 @@ def _temp_dict(tmp_path: Path) -> adjudicate.DictionaryOracle:
         "casa, s. f. house, home.\ncaro, a. dear, expensive.\ncosi, av. thus, so.\n",
         encoding="utf-8",
     )
-    return adjudicate.DictionaryOracle("Test Dict", tmp_path)
+    return adjudicate.DictionaryOracle("Test Dict", tmp_path, "a-zA-ZÀ-ÿ")
 
 
 def test_dictionary_oracle_membership_and_floor(tmp_path):
@@ -191,8 +191,8 @@ def test_dictionary_oracle_lookup_and_context(tmp_path):
 def test_search_chunk_respects_word_boundaries(tmp_path):
     # 'cas' must not match inside 'casa' — the boundary anchors are why 'fl' won't hit 'ffle'.
     chunk = "casa, s. f. house.\n"
-    assert adjudicate._search_chunk("casa", chunk)
-    assert not adjudicate._search_chunk("cas", chunk)
+    assert adjudicate._search_chunk("casa", chunk, "a-zA-ZÀ-ÿ")
+    assert not adjudicate._search_chunk("cas", chunk, "a-zA-ZÀ-ÿ")
 
 
 # --- config binding: _build_oracle resolves the real monolingual dictionary ------------- #
