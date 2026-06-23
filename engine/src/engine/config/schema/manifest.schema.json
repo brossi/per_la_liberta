@@ -120,6 +120,15 @@
         "site_base": {"type": "string"}
       }
     },
-    "prompt_context": {"type": "object"}
+    "prompt_context": {
+      "type": "object",
+      "$comment": "The keys a prompt template consumes are pinned as they gain a consumer. The OCR template (profiles/prompts/ocr.txt.j2) requires book_title/author/year; subject/entities are carried for the later triage/translate prompts and pinned when those land. Left extensible (additionalProperties open) on purpose.",
+      "required": ["book_title", "author", "year"],
+      "properties": {
+        "book_title": {"type": "string", "minLength": 1},
+        "author": {"type": "string", "minLength": 1},
+        "year": {"type": "integer"}
+      }
+    }
   }
 }

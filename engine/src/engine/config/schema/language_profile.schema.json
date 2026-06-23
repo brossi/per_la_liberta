@@ -34,6 +34,9 @@
     "accent_optional": {"type": "boolean"},
     "period_dictionaries": {
       "type": "array",
+      "$comment": "adjudicate._build_oracle binds the membership oracle to a monolingual member; enforce ≥1 here so a profile lacking one fails at config-load (ConfigError), not later as a bare ValueError traceback from adjudicate.",
+      "minItems": 1,
+      "contains": {"properties": {"kind": {"const": "monolingual"}}, "required": ["kind"]},
       "items": {
         "type": "object",
         "additionalProperties": false,

@@ -17,7 +17,7 @@ monolingual dictionary:
     re-express it on the ≥2-of-N period-dictionary oracle (branch register **BR-001**) without
     touching the classifier, which depends only on the oracle's ``(found, matches)`` contract.
   - the OCR boundary substitutions used by the correction passes come from
-    ``cfg.source_noise.boundary_substitutions`` (the Bodoni ``i→r``/``i→e`` confusions).
+    ``cfg.source_noise.boundary_substitutions`` (the source scan's ``i→r``/``i→e`` confusions).
 
 **No equivalence golden (F2/D3).** ``adjudicate``'s paired input (``review_flags.json``) is
 unrecoverable for the committed output, so the classification *branches* are pinned by unit

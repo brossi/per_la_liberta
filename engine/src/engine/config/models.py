@@ -176,7 +176,7 @@ class LanguageProfile:
 @dataclass(frozen=True, slots=True)
 class SourceNoiseProfile:
     """How the *source scan* degrades — the OCR-noise fingerprint of the typeface the
-    original book was printed in (e.g. Bodoni/Didone's ``c``/``e`` ambiguity).
+    original book was printed in (e.g. a face that blurs ``c`` and ``e``).
 
     This is an **input** concern: it drives cleanup's correction of OCR errors, and has
     nothing to do with how the *edition* is rendered (that is ``TypefaceProfile``). The

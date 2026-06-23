@@ -214,6 +214,14 @@
   that the accent list then legitimately appears, and "fixed" it by splitting the tier into two and
   declaring the accent list "not a leak" — a measurement change, not the decided design. Reverted:
   the fixture, not the test, was the thing to fix.)*
+- **Follow-up (2026-06-23, post-M4a audit):** the manifest schema now **pins** the prompt-context
+  keys the OCR template actually consumes — `prompt_context` gained `required: [book_title, author,
+  year]` — so a forgotten key fails at config-**load** with a clean `ConfigError`, not a late
+  `jinja2.UndefinedError` at render (which escaped the F7 CLI exception taxonomy as a raw traceback).
+  `prompt_context` stays **extensible**: keys are pinned incrementally *as each later prompt becomes
+  their consumer*; `subject`/`entities` are carried now and pinned when triage/translate (M4b/M4c)
+  bind them. This ratifies in the schema what `StrictUndefined` already enforced at render
+  (`test_config_loader.py::test_prompt_context_requires_the_ocr_template_keys`).
 - **Revisit:** only if a later prompt needs a fact that fits neither layer (e.g. a scan /
   source-noise fact) — extend the namespaced context with a *third* source rather than collapsing
   the boundary.

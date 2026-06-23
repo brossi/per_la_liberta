@@ -89,6 +89,33 @@ def test_schema_rejects_wrong_type(tmp_path):
         load_book("bad", books_dir=books, profiles_dir=REAL_PROFILES)
 
 
+@pytest.mark.parametrize("missing", ["book_title", "author", "year"])
+def test_prompt_context_requires_the_ocr_template_keys(tmp_path, missing):
+    # The OCR template (profiles/prompts/ocr.txt.j2) hard-references book.book_title/author/year
+    # under StrictUndefined. Pinning them in the manifest schema turns a forgotten key into a
+    # clean ConfigError at *load* — not a late jinja2.UndefinedError at render time, which escapes
+    # the CLI exception taxonomy as a raw traceback (the gap this closes).
+    m = _real_manifest()
+    m["id"] = "pc"
+    del m["prompt_context"][missing]
+    books = _write_book(tmp_path, "pc", m)
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("pc", books_dir=books, profiles_dir=REAL_PROFILES)
+
+
+def test_prompt_context_stays_extensible_beyond_the_required_three(tmp_path):
+    # Only the three keys the OCR template consumes are required; prompt_context stays open for
+    # the later prompts (subject/entities feed triage/translate, pinned when they land). Dropping
+    # a non-OCR key still loads — proving the requirement is exactly the three, not over-tightened.
+    m = _real_manifest()
+    m["id"] = "pcx"
+    del m["prompt_context"]["subject"]
+    books = _write_book(tmp_path, "pcx", m)
+    cfg = load_book("pcx", books_dir=books, profiles_dir=REAL_PROFILES)
+    assert "subject" not in cfg.manifest.prompt_context
+    assert cfg.manifest.prompt_context["book_title"] == "Per la libertà!"
+
+
 def test_override_replaces_profile_field(tmp_path):
     # A sibling book reusing the Italian profile but swapping the oracle threshold —
     # the one realistic override case the shallow-replace mode is built for.
@@ -217,6 +244,26 @@ def test_malformed_coverage_fails_schema(tmp_path):
     books = _write_book(tmp_path, "bad_cov", _real_manifest())
     with pytest.raises(ConfigError, match="schema validation"):
         load_book("bad_cov", books_dir=books, profiles_dir=prof)
+
+
+def test_language_profile_requires_a_monolingual_period_dictionary(tmp_path):
+    # adjudicate._build_oracle binds its membership oracle to a *monolingual* period dictionary
+    # and raises if none — a bare ValueError that escapes the CLI exception taxonomy as a raw
+    # traceback. The schema now enforces ≥1 monolingual member, so a profile declaring only
+    # bilingual dicts fails at LOAD (ConfigError) instead. (Same defect class as the prompt_context
+    # fix: a consumer requirement the contract didn't guarantee, failing late.) This also empirically
+    # confirms the installed jsonschema enforces draft-2020-12 `contains`.
+    prof = _stage_profiles(tmp_path)
+    lp = prof / "languages" / "italian_1900_1922.json"
+    data = json.loads(lp.read_text())
+    data["period_dictionaries"] = [
+        d for d in data["period_dictionaries"] if d["kind"] != "monolingual"
+    ]
+    assert data["period_dictionaries"], "fixture must keep bilingual dicts — testing 'no monolingual', not 'empty'"
+    lp.write_text(json.dumps(data), encoding="utf-8")
+    books = _write_book(tmp_path, "nomono", _real_manifest())
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("nomono", books_dir=books, profiles_dir=prof)
 
 
 def test_unimplemented_but_consistent_language_reaches_unknown_language_error(tmp_path):

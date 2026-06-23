@@ -118,6 +118,70 @@ def test_failing_backend_yields_ocr_error_sentinel_then_drops_body(tmp_path, mon
     assert "vision-down" not in text
 
 
+def test_unreadable_pdf_page_count_failure_is_a_backend_error(tmp_path, acq):
+    # A present-but-corrupt PDF (page_count raises) is a whole-document failure → typed BackendError
+    # (exit 5), not a raw fitz traceback. Distinct from the missing-PDF MissingInputError (exit 3).
+    from engine.errors import BackendError
+
+    cfg, lang = _cfg_lang()
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+
+    class _UnreadableDoc:
+        def page_count(self, pdf_path):
+            raise RuntimeError("cannot open broken document")
+
+        def render(self, pdf_path, page, *, dpi):
+            raise AssertionError("render must not be reached — page_count failed first")
+
+    with pytest.raises(BackendError) as ei:
+        ocr.run(
+            workspace=ws, cfg=cfg, lang=lang, model="pro",
+            renderer=_UnreadableDoc(), backend=acq.Backend({}),
+        )
+    assert ei.value.exit_code == 5
+    assert "could not read the source scan PDF" in str(ei.value)
+
+
+def test_per_page_render_failure_becomes_a_sentinel_and_the_run_continues(tmp_path, monkeypatch):
+    # A torn leaf (render raises for one page) does not abort the scan: that page becomes a
+    # render-failure [OCR_ERROR] sentinel (no retry — non-transient) while the rest transcribe
+    # normally, mirroring the transcription-failure policy. Marker kept, failure body dropped.
+    monkeypatch.setattr(ocr, "_PAGE_DELAY", 0)
+    cfg, lang = _cfg_lang()
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+
+    renders: list[int] = []
+
+    class _TornLeafRenderer:
+        def page_count(self, pdf_path):
+            return 2
+
+        def render(self, pdf_path, page, *, dpi):
+            renders.append(page)
+            if page == 1:
+                raise RuntimeError("torn leaf")
+            return str(page).encode()
+
+    class _Backend:
+        def transcribe(self, image_bytes, prompt):
+            return f"page {int(image_bytes.decode())} text"
+
+    ocr.run(
+        workspace=ws, cfg=cfg, lang=lang, model="pro", pages=(1, 2),
+        renderer=_TornLeafRenderer(), backend=_Backend(),
+    )
+
+    pf1 = read_json(ws.state / "ocr_pro_pages" / "page_0001.json")
+    assert pf1["text"].startswith(SENTINEL_OCR_ERROR_PREFIX)
+    assert "render failed" in pf1["text"]
+    assert renders.count(1) == 1, "a render failure is non-transient → not retried"
+
+    text = (ws.data / "copy3_raw.txt").read_text(encoding="utf-8")
+    assert PAGE_MARKER_TEMPLATE.format(1) in text and PAGE_MARKER_TEMPLATE.format(2) in text
+    assert "torn leaf" not in text          # the failure detail never leaks into copy3
+    assert "page 2 text" in text            # the good page transcribed normally
+
+
 def test_resume_skips_completed_pages(tmp_path, monkeypatch, acq):
     monkeypatch.setattr(ocr, "_PAGE_DELAY", 0)
     cfg, lang = _cfg_lang()

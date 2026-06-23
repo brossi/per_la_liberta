@@ -157,17 +157,27 @@ def _ocr_single_page(
     progress_dir: Path,
     dpi: int,
 ) -> int:
-    """Render + transcribe one page with retry, persisting the result for resume. Returns ``page``.
+    """Render + transcribe one page, persisting the result for resume. Returns ``page``.
 
-    Verbatim from live ``_ocr_single_page``: a present progress file short-circuits (resume); on
-    transcription failure after the backoff retries the page text becomes an ``[OCR_ERROR: …]``
-    sentinel so stitching can drop the body without losing the page marker.
+    A present progress file short-circuits (resume). A **render** failure is non-transient, so it
+    gets no retry — the page becomes an ``[OCR_ERROR: render failed: …]`` sentinel and the run
+    continues. A **transcription** failure is retried with ``_RETRY_BACKOFF``, then falls back to an
+    ``[OCR_ERROR: …]`` sentinel. Either sentinel lets stitching drop the body without losing the
+    page marker. (Extends live ``_ocr_single_page``, which left a render failure unguarded; the
+    transcription path is unchanged.)
     """
     page_file = progress_dir / f"page_{page:04d}.json"
     if page_file.exists():
         return page
 
-    img_bytes = renderer.render(pdf_path, page, dpi=dpi)
+    try:
+        img_bytes = renderer.render(pdf_path, page, dpi=dpi)
+    except Exception as exc:  # non-transient → no retry (a corrupt page renders the same each time)
+        atomic_write_json(
+            page_file,
+            {"page": page, "text": f"{SENTINEL_OCR_ERROR_PREFIX}: render failed: {exc}]"},
+        )
+        return page
 
     text: str | None = None
     for attempt in range(len(_RETRY_BACKOFF)):
@@ -300,7 +310,10 @@ def run(
 
     prompt = _render_ocr_prompt(cfg)
 
-    total_pages = renderer.page_count(pdf_path)
+    try:
+        total_pages = renderer.page_count(pdf_path)
+    except Exception as exc:  # a present-but-unreadable PDF is a whole-document backend failure
+        raise BackendError(f"could not read the source scan PDF {pdf_path}: {exc}") from exc
     start, end = 1, total_pages
     if pages:
         start, end = pages

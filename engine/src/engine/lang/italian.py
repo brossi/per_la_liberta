@@ -6,7 +6,7 @@ Faithful ports of the language-specific logic the live pipeline scatters across
 
 Caveat (recorded as **BR-006**): the OCR-garble fixes (``ORDINAL_FIXES``, ``WORD_FIXES``, the
 garble entries in ``_ITALIAN_NUMBERS``, and ``_HEADING_RE``'s ``[GC]…pitolo`` tolerance) are
-the source book's Bodoni *scan-noise*, not Italian-language facts — they live here by the plan's
+the source book's typeface *scan-noise*, not Italian-language facts — they live here by the plan's
 parameterization map, but their cleaner home is the ``source_noise`` profile. Moving them is
 deferred until a second Italian/same-typeface book gives a concrete seam to design against; they
 are inert (not wrong) for a book that doesn't share the garbles. The book *title* that the live

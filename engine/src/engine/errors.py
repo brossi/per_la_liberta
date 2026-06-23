@@ -9,7 +9,8 @@ CLI; the step failures below start at ``3``.
 Current raisers (M4a):
   - ``MissingInputError`` — ``reconcile`` (OCR copies absent) / ``ocr`` (source scan PDF absent);
   - ``AcquisitionError`` — ``download`` network/HTTP failure;
-  - ``BackendError``     — ``ocr`` transcription-backend failure.
+  - ``BackendError``     — ``ocr`` rendering or transcription backend failure (an unreadable scan
+    PDF at page-count, the vision-model call, or a missing key).
 """
 
 from __future__ import annotations
@@ -34,6 +35,8 @@ class AcquisitionError(EngineError):
 
 
 class BackendError(EngineError):
-    """``ocr``'s transcription backend failed (e.g. the vision-model call or missing key)."""
+    """``ocr``'s rendering or transcription backend failed (an unreadable scan PDF at page-count,
+    the vision-model call, or a missing key). A *per-page* render failure does not raise — it
+    degrades to an ``[OCR_ERROR]`` sentinel; this is the whole-document / transcription case."""
 
     exit_code = 5
