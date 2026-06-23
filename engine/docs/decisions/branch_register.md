@@ -164,8 +164,8 @@
   templates"). M4a's OCR template is the **first consumer** → it fixes the first keys and the
   render-context contract every later prompt (triage / cleanup / translate / refine /
   multi-eval / synthesis / provenance) inherits. The live `OCR_PROMPT` (`ocr.py:27-38`)
-  interpolates a *mix* of book facts (title, author, year) and language facts (the language name
-  "Italian"; the accent inventory `à è ì ò ù é`) from one flat blob; the seeded PLL
+  **hardcodes — as literal text, not interpolated —** a *mix* of book facts (title, author, year) and
+  language facts (the language name "Italian"; the accent inventory `à è ì ò ù é`) in one flat blob; the seeded PLL
   `prompt_context` likewise carries `language_name` beside book identity — a latent redundancy
   (`language_name` is already implied by `language_id`) and a blurred layer boundary.
 - **Taken now:** a clean **two-layer, namespaced** boundary (three layers counting the
@@ -174,8 +174,10 @@
     `subject`, `entities`) → `{{ book.* }}`;
   - the **language profile** = cross-title **language facts** (a human-readable display name; the
     accent inventory) → `{{ language.* }}`;
-  - render context = the namespaced merge; templates are engine-owned and book-neutral (D2a),
-    rendered with **Jinja2 `StrictUndefined`** (a missing key is a hard error, not silent empty).
+  - render context = the namespaced merge; the template *files* are book-neutral and
+    profile-resident (`engine/profiles/prompts/`), rendered by the engine-owned Jinja2 machinery
+    (`src/engine/prompts/templating.py`) with **`StrictUndefined`** (a missing key is a hard error,
+    not silent empty).
   Mirrors **BR-004** (which lifted the book *title* out of the language plugin): book facts in the
   book layer, language facts in the language layer.
 - **Not taken:** keep `prompt_context` as the live flat blob (`language_name` beside book identity)
@@ -186,9 +188,10 @@
   prompt accent inventory is **single-sourced from the profile** (likely the lowercase run of
   `word_score_accents`, or a dedicated prompt-facing field — decided at porting). The *boundary* is
   the one-way door; the field names are not.
-- **Why decide now (not defer):** the OCR template is the first consumer and freezes the contract
-  five later prompts read; deciding the boundary before they bind to a blurred one is the point of
-  maximum leverage. The user called it.
+- **Why decide now (not defer):** the OCR template is the first consumer and freezes the
+  render-context contract every later prompt reads (the M4b/M4c prompts triage/cleanup/translate/refine
+  plus M5's multi-eval/synthesis/provenance); deciding the boundary before they bind to a blurred one
+  is the point of maximum leverage. The user called it.
 - **Revisit:** only if a later prompt needs a fact that fits neither layer (e.g. a scan /
   source-noise fact) — extend the namespaced context with a *third* source rather than collapsing
   the boundary.
@@ -289,8 +292,13 @@
   without an explicit override) — a **two-way door** that forecloses nothing and is cheap to add when
   its consumer is concrete.
 - **Mechanism note (for M4b/M4c, not decided now):** the engine's guard is **workspace-internal**
-  (detect protectable output in `work/` → refuse without override), **not** a copy of the live
-  TTY / deny-list / `PER_LA_LIBERTA_ALLOW_REGEN` mechanism (a live-tree + Claude-settings construct).
+  (detect protectable output in `work/` → refuse without an explicit override). This **revises** the
+  framework plan's earlier guard sketch (lines 216-220: a per-book `ENGINE_ALLOW_REGEN` env escape +
+  `.claude` deny entries) — the detection-based refusal is the settled core, **not** a copy of the
+  live TTY / deny-list / `PER_LA_LIBERTA_ALLOW_REGEN` construct (a live-tree + Claude-settings
+  mechanism). The two reconcile: the "explicit override" can *be* `ENGINE_ALLOW_REGEN`, so the open
+  M4b decision is the **override's form** (env flag? deny entries? both?), not whether detection-based
+  refusal is the mechanism.
 - **Revisit:** M4b (cleanup) and M4c (translate/refine) — each decides its guard before its first run
   that can overwrite expensive/hand-tuned output. Pairs with the live regen-guard rationale (CLAUDE.md).
 

@@ -138,7 +138,8 @@ Constant → config destination (the parameterization map):
 | Bibliographic metadata and edition colophon/body copy (`typeset.py`) | `manifest.edition` |
 | `it_core_news_lg` (`cleanup.py:67` +4 sites), `it_combined.txt` (`cleanup.py:56,90`), accento-facoltativo skip, consonant-cluster regex (`validate.py:235`), english_markers/skip_words (`validate.py:221-232`) | `LanguageProfile` |
 | Zingarelli/Edgren/Hoare dirs + IA URLs (`adjudicate.py:19`, `edgren.py:16`, `hoare.py:30`), ≥2-of-3 oracle | `LanguageProfile.period_dictionaries[]` + `oracle_min` |
-| `BOUNDARY_SUBSTITUTIONS` (`cleanup.py:76-78`), `SUBSTITUTION_RULES` (`cleanup.py:20-47`), `NOISE_LINE_PATTERN` (`cleanup.py:14-16`), page-marker regex, `PAGE_MARKER` (`ocr.py:20`) | `ScanProfile` |
+| `BOUNDARY_SUBSTITUTIONS` (`cleanup.py:76-78`), `SUBSTITUTION_RULES` (`cleanup.py:20-47`), `NOISE_LINE_PATTERN` (`cleanup.py:14-16`) | `ScanProfile` |
+| `PAGE_MARKER` (`ocr.py:20`) + the reconcile-side page-marker regex | **code default** (internal tag protocol, not scan-observable noise — per the Approach section's "internal tag protocols stay as code defaults"). *Superseded 2026-06-22:* an earlier draft routed these to `ScanProfile`; M3 baked the marker as a shared code constant (`reconcile.py:21`). See `ENGINE_M4_PLAN.md` F6. |
 | Live font/CSS paths (`static/bilingual.css`, `docs/assets/fonts/`); dead `FONT_DIR` is not elevated | `OutputTypefaceProfile` |
 | Italian `ORDINALS`/`COMPOUND_ORDINALS`/`ORDINAL_FIXES`/`WORD_FIXES` + heading regex (`utils.py:13-69,209`), `_ITALIAN_NUMBERS`/title→English (`translate.py:297-359`), boilerplate markers | `lang/italian.py` (LanguagePlugin) |
 
@@ -214,7 +215,7 @@ the package namespace.
   live roots before/after, and fails on any mutation outside the workspace. A grep for repo-root
   dir names remains as a cheap lint, not the primary guarantee.
 - Guarded steps (`cleanup`, `translate`, `all`) write only to disposable `work/`, so they don't
-  endanger the live edition. Still port a per-book overwrite guard (`ENGINE_ALLOW_REGEN`). Add deny
+  endanger the live edition. Still port a per-book overwrite guard — its mechanism is refined to a **workspace-internal detect-and-refuse** check at M4b/M4c (branch register **BR-012**), with `ENGINE_ALLOW_REGEN` as a candidate explicit override. Add deny
   entries to `.claude/settings.local.json` for `engine/cli.py … --book per_la_liberta` cleanup/translate/all
   (note: `.claude/` is gitignored and protects only local Claude usage; the portable guarantees are
   the code-level regen guard and path isolation).

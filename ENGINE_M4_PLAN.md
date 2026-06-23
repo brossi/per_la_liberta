@@ -19,8 +19,11 @@
   `copy{1,2,3}` witnesses that M3's `reconcile` currently reads from frozen `inputs/`. Porting
   them closes the same producer/consumer inversion M3 closed for `validate` — and lets us prove
   the **acquisition → reconcile** contract on engine-produced witnesses. They are also the two
-  *smallest* M4 steps and the ones that force the two pieces of new machinery the rest of M4
-  inherits (prompt templating; the network/LLM backend seam), so building them first de-risks
+  *smallest* M4 steps and the ones that force the new machinery the rest of M4 inherits — the
+  **prompt-templating machinery** (reused by every later prompt) and the **backend-injection
+  pattern** (inject a backend for offline tests). The *specific* acquisition seams
+  (`Fetcher`/`PageRenderer`/`OcrBackend`) do **not** propagate — per BR-009 the chat-seam is
+  re-decided at M4c; the *pattern* carries forward, not the seams. So building them first de-risks
   M4b/M4c.
 - **Why one plan, not three.** The user asked for `ENGINE_M4_PLAN.md`. This covers the arc so the
   shape is visible, details M4a, and holds M4b/M4c at altitude. If M4b (cleanup, the codebase's
@@ -110,8 +113,10 @@ deterministic core (F5). Validation leans on property + separability with the ba
 **F3 — `manifest.prompt_context` is already seeded; M4a's OCR template binds the first subset.**
 The PLL manifest already carries `book_title`, `author`, `year`, `language_name`, `subject`,
 `entities` (`books/per_la_liberta/manifest.json:53-66`). The live `OCR_PROMPT` (`ocr.py:27-38`)
-interpolates *year + language_name + book_title + author* plus a language accent inventory
-(`à è ì ò ù é`). So M4a's template consumes a **subset** of an already-declared context — it does
+**bakes those facts in as literal text** — *year (1913), language name (Italian), book title,
+author*, plus a language accent inventory (`à è ì ò ù é`) — all hardcoded, none interpolated (which
+makes the templating case *stronger*: nothing is parameterized today, so the port must *extract* the
+baked literals into the book/language layers). So M4a's template consumes a **subset** of an already-declared context — it does
 not invent the keys, it ratifies them (the translate/triage/refine prompts later bind `subject` +
 `entities`). The accent inventory comes from the **language profile**, not `prompt_context` (it is
 a cross-title language fact, like `word_score_accents` — BR-004 logic). **D2/BR-008 reshapes the
@@ -134,10 +139,22 @@ equivalence → the floor **requires** it (D4). The `use_llm=True` correction pa
 → property only.
 
 **F6 — substrate already in place for M4 (from M3 + M0).**
-- The `⟨PAGE:N⟩` marker is **one protocol shared by producer and consumer**: `ocr` emits it
-  (`ocr.py:20`), `reconcile` parses it (`reconcile.py:21`, a code default in M3). M4a must factor
-  it into one shared constant so producer/consumer cannot drift (property test: `ocr` output is
-  parseable by `reconcile._strip_page_markers` + the page-map consumer).
+- **Two emit/parse protocols span producer↔consumer here**, both needing shared-constant
+  discipline so emitter and parser cannot silently drift:
+  - **`⟨PAGE:N⟩` page marker** — `ocr` emits it (`ocr.py:20`), `reconcile` parses it
+    (`reconcile.py:21`, a code default in M3). M4a must single-source the marker grammar (the literal
+    `⟨PAGE:{}⟩`) — `ocr`'s emit-format and `reconcile`'s parse-regex *derived* from it, since they
+    are a `.format()` string and a compiled regex, not one interchangeable object (property test:
+    `ocr` output is parseable by `reconcile._strip_page_markers` + the page-map consumer). This is a **code default** — superseding the framework plan's constant map, which
+    earlier routed `PAGE_MARKER` → `ScanProfile`; internal tag protocols stay code defaults per that
+    plan's own Approach, and M3 already baked the marker as a shared code constant.
+  - **`[BLANK]` / `[OCR_ERROR]` page sentinels** — easy to miss because `[BLANK]` *crosses the
+    template boundary*: `OCR_PROMPT` instructs the model to emit it (`ocr.py:36`) and
+    `_stitch_pages` matches it (`ocr.py:244`), so once the prompt becomes a book-neutral template
+    the sentinel sits in the *template* while the stitcher checks it in *code* — drift with nothing
+    turning red, the same hazard as the page marker. (`[OCR_ERROR]` is code↔code: emitted
+    `ocr.py:172`, prefix-matched `:244`.) M4a factors both as shared sentinel constants the template
+    references and the stitcher asserts.
 - `adjudicate.DictionaryOracle.lookup` / `dictionary_context_for_flags` were ported in M3
   *specifically so cleanup can reuse them* (M3 plan §adjudicate). M4b's cleanup receives the oracle
   from config rather than re-deriving Zingarelli context.
@@ -186,7 +203,8 @@ given page texts → unit-tested directly.
 | Live constant (file:line) | → destination |
 |---|---|
 | `DEFAULT_PDF` (`ocr.py:17`) | **`manifest.scan.pdf`** (already present) resolved to a per-book scan path (D7). |
-| `PAGE_MARKER = ⟨PAGE:{}⟩` (`ocr.py:20`) | **shared code-default protocol** — one constant co-owned with `reconcile.py:21` (F6), so emitter/parser can't drift. |
+| `PAGE_MARKER = ⟨PAGE:{}⟩` (`ocr.py:20`) | **shared code-default protocol** — a single-sourced marker *grammar*: `ocr`'s emit-format + `reconcile`'s parse-regex (`reconcile.py:21`) derived from one literal (F6), so emitter/parser can't drift. |
+| `[BLANK]` / `[OCR_ERROR]` sentinels (`ocr.py:36,172,244`) | **shared code-default sentinels** (F6) — `[BLANK]` crosses the template↔stitcher boundary, so it is a referenced constant, not a free literal duplicated in template and `_stitch_pages`. |
 | `GEMINI_MODELS` flash/pro ids (`ocr.py:22-25`) | **config, no engine default** (D3) — frontier ids are not baked (framework risk note). |
 | `OCR_PROMPT` (`ocr.py:27-38`) | **prompt template** (D2): book facts from `prompt_context`, accent inventory from the language profile, generic rules in the template body. |
 | `dpi=200` / JPEG `quality=85` (`ocr.py:47,52`) | **code defaults** (scan-render tuning); promotable to the `ocr` config block later if a book needs them (noted, not elevated). |
@@ -205,15 +223,19 @@ routing it to `state/` is a two-way door, aligned to the engine's area semantics
 - **`prompts/templating.py`:** a `PromptTemplate` over **Jinja2 `StrictUndefined`** (per the stub's
   declared design). StrictUndefined makes a template referencing an absent context key a **hard
   error**, not a silent empty string — validate-bindings at render time.
-- **Templates are engine-level and book-neutral** (`prompts/ocr.txt.j2`, the framework plan's
-  established `prompts/*.txt.j2` convention): the *engine* owns
-  the prompt structure; the *book/language* supply values. This keeps the engine core free of book
-  identity (engine-agnostic memory). A future book needing a structurally different OCR prompt pulls
-  a per-book template override — deferred until one does (BR-008 note).
+- **Template *files* are book-neutral and profile-resident** — `engine/profiles/prompts/ocr.txt.j2`,
+  the framework layout's shared `profiles/prompts/*.txt.j2` home for reusable knowledge that outlives
+  any one book (the dir already exists, `.gitkeep`-empty). This is **distinct from the rendering
+  *machinery*** at `src/engine/prompts/templating.py`: the template *engine* is engine-package-owned;
+  the *templates* are one shared profile-level set (not per-book, D2a); the *book/language* supply
+  only values. This keeps the engine core free of book identity (engine-agnostic memory). A future
+  book needing a structurally different OCR prompt pulls a per-book template override — deferred until
+  one does (BR-008 note).
 - **Context assembly (BR-008 boundary):** a **namespaced merge** — `{{ book.* }}` from
   `manifest.prompt_context` (book identity), `{{ language.* }}` from the language profile (display
   name + accent inventory). `language_name` is dropped from `prompt_context` and the profile gains a
-  display-name field. One builder function, reused by every later prompt (triage/cleanup/translate/refine).
+  display-name field. One builder function, reused by every later prompt that renders book/language facts
+  (triage/cleanup/translate/refine in M4b/M4c; multi-eval/synthesis/provenance in M5).
 - **Separability/leakage test (the genericity bite the stub names):** render `ocr.txt.j2` with the
   **synthetic** book's context → assert **no PLL string leaks** (`Per la libertà`, `Crespi`,
   `Orsini`, `1913`, the Italian accent list). This is the prompt's separability tier and the reason
@@ -223,7 +245,10 @@ routing it to `state/` is a two-way door, aligned to the engine's area semantics
 
 - **Exception taxonomy:** a small `engine.errors` set (e.g. `MissingInputError`,
   `AcquisitionError`, `BackendError`) → distinct non-zero exit codes; fold in reconcile's
-  missing-copies case (replacing its bare `FileNotFoundError`).
+  missing-copies case (replacing its bare `FileNotFoundError`). **Keep it minimal — one type per
+  concrete M4a raiser** (`MissingInputError` = reconcile's missing copies; `AcquisitionError` =
+  `download` network failure; `BackendError` = `ocr` Gemini failure); do not add categories "for
+  completeness" without a raiser (YAGNI).
 - **Step options:** extend the parser + `_run_step` to thread `--workers / --model / --pages /
   --api-key` into `run(*, ws, cfg, lang, **opts)`.
 
@@ -233,8 +258,9 @@ routing it to `state/` is a two-way door, aligned to the engine's area semantics
   - `download`: writes exactly the fetcher's bytes to `copy{1,2}_raw.txt`; URL-derivation fallback
     equals the explicit `url` for a source that omits it.
   - `ocr`: `_stitch_pages` page-map invariants (every page has a marker; `char_start/char_end`
-    bound that page's text; `[BLANK]`/`[OCR_ERROR]` pages contribute a marker but no body);
-    resume skips completed pages.
+    bound that page's text; `[BLANK]`/`[OCR_ERROR]` pages contribute a marker but no body); the
+    blank/error sentinels the template+backend emit equal the ones `_stitch_pages` matches (no
+    template↔code drift); resume skips completed pages.
   - **`ocr` → `reconcile` contract** (closes the inversion): a canned multi-page OCR run produces
     output that `reconcile._strip_page_markers` + the page-map consumer accept — i.e. the marker
     protocol round-trips between the two ported steps.
@@ -242,8 +268,12 @@ routing it to `state/` is a two-way door, aligned to the engine's area semantics
   `OcrBackend`) on the **synthetic** book → produces `copy{1,2,3}` + page map in `work/data`; then
   the existing M3 synthetic `reconcile` runs on them. The injected backends are *seeded from the
   frozen synthetic `inputs/`* (so `inputs/copy{1,2,3}` are the **expected acquisition output**, read
-  as canned-response seed — they are **not** re-frozen; single-owner intact). Plus the prompt
-  leakage test above.
+  as canned-response seed — they are **not** re-frozen; single-owner intact). **Per-page `OcrBackend`
+  responses are sourced by splitting the frozen synthetic `copy3` on its `⟨PAGE:N⟩` markers** —
+  porting must confirm the synthetic `copy3` carries them (author per-page responses if it is flat).
+  **The synthetic fixture also takes the schema additions** (its manifest an `ocr` block, BR-010; its
+  language profile the display-name field, BR-008 — the schema changes apply to every
+  manifest/profile, fixtures included). Plus the prompt leakage test above.
 - **Isolation:** `download.run` / `ocr.run` against a temp workspace; the five protected roots
   (`data/output/state/docs/static`) unchanged before/after. (`ocr`'s real-render path is the lone
   `integration` test, D7; everything else is fast.)
@@ -257,6 +287,22 @@ backends + the one real-`fitz` render smoke. **No regen-guard prompt is needed**
 cleanup/translate): the `BookWorkspace` sandbox already makes a stray engine acquisition run
 harmless — it writes to `work/`, which cannot reach `inputs/` or the live tree. The guard was a
 live-tree concern; the engine has no live tree to endanger.
+
+### M4a — done when
+
+- `download` + `ocr` pass **property + separability + isolation** (the non-deterministic floor; no
+  equivalence golden, F1), all with injected backends.
+- The **`ocr` → `reconcile`** marker round-trip **and** the `[BLANK]`/`[OCR_ERROR]` sentinel
+  template↔stitcher sync pass (the two shared protocols, F6).
+- One real-`fitz` **`integration`** render smoke passes (PyMuPDF binding exercised, not
+  shape-asserted, D7).
+- The **prompt-leakage** render test passes — no PLL strings leak from `ocr.txt.j2` under the
+  synthetic book (the templating-machinery + namespaced-context separability proof, BR-008).
+- CLI **exception taxonomy** + **step-option threading** (F7) land, folding in reconcile's
+  missing-input case.
+- Isolation holds: the five protected roots unchanged before/after any `download`/`ocr` run.
+- The synthetic book runs acquisition with **no special invocation** (D6); M4a is **not** run against
+  PLL's real IA/Gemini sources.
 
 ---
 
@@ -350,8 +396,9 @@ translation abstraction blind against OCR-only — the single-fixture blind spot
 
 **D2 — prompt templates: engine-level Jinja2 `StrictUndefined`, and the book/language boundary.**
 **Resolved 2026-06-22 (user): (a) engine-owned book-neutral templates; (b) clean two-layer
-boundary.** Templates are engine-owned `prompts/*.txt.j2` rendered with StrictUndefined (one engine,
-many templates). The render context is a **namespaced merge** drawing a clean line:
+boundary.** The template *files* are book-neutral and profile-resident
+(`engine/profiles/prompts/*.txt.j2`), rendered by the engine-owned Jinja2 machinery
+(`src/engine/prompts/templating.py`) with StrictUndefined — one engine, many templates. The render context is a **namespaced merge** drawing a clean line:
 `{{ book.* }}` = book-identity facts (`book_title, author, year, subject, entities`) from
 `manifest.prompt_context`; `{{ language.* }}` = cross-title language facts (display name, accent
 inventory) from the language profile. `language_name` leaves `prompt_context`; a language display
@@ -439,8 +486,9 @@ points; per-producer keep-or-retire for deterministic outputs; hard coherence de
 - **Equivalence (golden):** `test_cleanup_detcore_golden` only (D4) — `use_llm=False` over frozen
   `reconciled_chapters.json`, freshly generated reference, marker `golden`.
 - **Contract / property (fast, injected backends):** download byte-faithfulness + URL fallback;
-  `_stitch_pages` page-map invariants; **`ocr`→`reconcile`** marker round-trip; triage plausibility
-  check; translate `parse/title/assemble/source_pages`; refine `_parse_changes` + snapshot/revert.
+  `_stitch_pages` page-map invariants + blank/error sentinel template↔stitcher sync;
+  **`ocr`→`reconcile`** marker round-trip; triage plausibility check; translate
+  `parse/title/assemble/source_pages`; refine `_parse_changes` + snapshot/revert.
 - **Separability:** acquisition (download+ocr, injected backends) runs the **synthetic** book and
   feeds M3's synthetic `reconcile`; **prompt leakage** render test (no PLL strings); cleanup runs the
   synthetic book end-to-end (the BR-002 non-Italian fixture is built here once cleanup defines what
