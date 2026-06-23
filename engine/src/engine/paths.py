@@ -57,6 +57,18 @@ class BookWorkspace:
     def state(self) -> Path:
         return self.root / "state"
 
+    @property
+    def scans(self) -> Path:
+        """Per-book source scans (``books/<id>/scans/``) — the large PDFs ``ocr`` renders (D7).
+
+        A read-only *input* sibling of the ``work`` tree (gitignored), distinct from the frozen
+        ``inputs/`` fixtures. It sits outside the write-sandbox by design: ``ocr`` only *reads* the
+        PDF, and a book supplies it out-of-band, so it is never produced into ``work``. Reading it
+        needs no containment check (``resolve`` guards *writes*); a missing PDF is a clean
+        ``MissingInputError`` raised by ``ocr``, not a path-escape.
+        """
+        return self.root.parent / "scans"
+
     def ensure(self) -> BookWorkspace:
         """Create the work tree (the three areas). Idempotent."""
         for area in _AREAS:

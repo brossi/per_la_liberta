@@ -5,7 +5,7 @@
   "additionalProperties": false,
   "required": [
     "schema_version", "id", "title", "language", "profiles",
-    "sources", "scan", "structure", "edition", "prompt_context"
+    "sources", "scan", "ocr", "structure", "edition", "prompt_context"
   ],
   "properties": {
     "schema_version": {"type": "integer", "const": 1},
@@ -55,6 +55,22 @@
         "page_image_template": {"type": "string"},
         "leaf_offset": {"type": "integer"},
         "last_scan_page_default": {"type": "integer"}
+      }
+    },
+    "ocr": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["models"],
+      "properties": {
+        "models": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["flash", "pro"],
+          "properties": {
+            "flash": {"type": "string", "minLength": 1},
+            "pro": {"type": "string", "minLength": 1}
+          }
+        }
       }
     },
     "structure": {

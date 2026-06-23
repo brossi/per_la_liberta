@@ -29,7 +29,7 @@ from pathlib import Path
 from engine.config.loader import load_book
 from engine.lang.registry import get_language_plugin
 from engine.paths import BookWorkspace
-from engine.steps import adjudicate, reconcile, validate
+from engine.steps import adjudicate, download, ocr, reconcile, validate
 
 ENGINE_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = ENGINE_ROOT.parent
@@ -123,6 +123,47 @@ def test_reconcile_leaves_live_tree_untouched(tmp_path):
     assert written.is_file()
     assert tmp_path in written.parents
     assert REPO_ROOT not in written.parents
+
+
+def test_download_leaves_live_tree_untouched(tmp_path, acq):
+    # download writes only ws.data via an injected fetcher (no network). The snapshot covers all
+    # five live trees: the proof is that it cannot reach any of them.
+    cfg = load_book("synthetic")
+    lang = get_language_plugin(cfg.language_id)
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+    url_map = {download.source_url(s): f"x-{s.role}" for s in cfg.manifest.sources}
+
+    before = _snapshot(REPO_ROOT)
+    download.run(workspace=ws, cfg=cfg, lang=lang, fetcher=acq.Fetcher(url_map))
+    after = _snapshot(REPO_ROOT)
+
+    assert before == after, "download wrote into a live PLL tree"
+    written = ws.data / "copy1_raw.txt"
+    assert written.is_file()
+    assert tmp_path in written.parents and REPO_ROOT not in written.parents
+
+
+def test_ocr_leaves_live_tree_untouched(tmp_path, monkeypatch, acq):
+    # ocr with injected render+transcribe (no PDF, no network). Progress lands in ws.state, the
+    # witness + page map in ws.data; no live tree is reachable.
+    monkeypatch.setattr(ocr, "_PAGE_DELAY", 0)
+    cfg = load_book("synthetic")
+    lang = get_language_plugin(cfg.language_id)
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+    page_texts = acq.split((acq.inputs / "copy3_raw.txt").read_text(encoding="utf-8"))
+    last = max(page_texts)
+
+    before = _snapshot(REPO_ROOT)
+    ocr.run(
+        workspace=ws, cfg=cfg, lang=lang, model="pro", pages=(1, last),
+        renderer=acq.Renderer(last), backend=acq.Backend(page_texts),
+    )
+    after = _snapshot(REPO_ROOT)
+
+    assert before == after, "ocr wrote into a live PLL tree"
+    written = ws.data / "copy3_raw.txt"
+    assert written.is_file()
+    assert tmp_path in written.parents and REPO_ROOT not in written.parents
 
 
 class _FakeOracle:

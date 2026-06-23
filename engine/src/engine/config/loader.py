@@ -25,6 +25,7 @@ from .models import (
     CoverageSpec,
     Edition,
     LanguageProfile,
+    OcrConfig,
     PartStructure,
     PeriodDictionary,
     ResolvedConfig,
@@ -90,6 +91,7 @@ def _build_manifest(data: dict) -> BookManifest:
             leaf_offset=data["scan"]["leaf_offset"],
             last_scan_page_default=data["scan"]["last_scan_page_default"],
         ),
+        ocr=OcrConfig(models=dict(data["ocr"]["models"])),
         structure=Structure(
             h2_min=structure["h2_min"],
             h3_count=structure["h3_count"],
@@ -119,6 +121,7 @@ def _build_manifest(data: dict) -> BookManifest:
 def _build_language(data: dict) -> LanguageProfile:
     return LanguageProfile(
         language_id=data["language_id"],
+        display_name=data["display_name"],
         spacy_model=data["spacy_model"],
         spacy_distribution=data["spacy_distribution"],
         frequency_dictionary=data["frequency_dictionary"],
@@ -126,6 +129,7 @@ def _build_language(data: dict) -> LanguageProfile:
         skip_words=tuple(data["skip_words"]),
         consonant_alphabet=data["consonant_alphabet"],
         word_score_accents=data["word_score_accents"],
+        accent_inventory=tuple(data["accent_inventory"]),
         coverage=CoverageSpec(
             ascii_letters=data["coverage"]["ascii_letters"],
             digits=data["coverage"]["digits"],

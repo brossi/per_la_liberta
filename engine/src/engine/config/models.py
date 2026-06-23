@@ -40,6 +40,19 @@ class ScanFacts:
 
 
 @dataclass(frozen=True, slots=True)
+class OcrConfig:
+    """Per-book OCR provenance (``manifest.ocr``; consumed by ocr in M4a, BR-010).
+
+    ``models`` maps the model *role* (``"flash"``/``"pro"``) to the concrete backend model
+    id. Model ids live in per-book config — not a baked engine default — because frontier ids
+    change on a reasonable cadence and a declared id is provenance for which model produced
+    ``copy3`` (D3/BR-010). ``dpi``/render tuning stay code defaults until a book needs them.
+    """
+
+    models: dict  # {"flash": <id>, "pro": <id>}
+
+
+@dataclass(frozen=True, slots=True)
 class PartStructure:
     name: str
     chapters: int
@@ -92,6 +105,7 @@ class BookManifest:
     profile_refs: dict  # {"language": <id>, "source_noise": <id>, "typeface": <id>}
     sources: tuple[Source, ...]
     scan: ScanFacts
+    ocr: OcrConfig
     structure: Structure
     edition: Edition
     prompt_context: dict  # free-form; keys defined by the M4 prompt templates
@@ -132,9 +146,19 @@ class LanguageProfile:
     ``coverage`` (char-coverage), and ``spacy_model``/``frequency_dictionary`` are read by M2
     ``validate``; ``word_score_accents`` feeds M3 reconcile's OCR word scorer; the period
     dictionaries + ``oracle_min`` feed the M6 membership oracle.
+
+    ``display_name`` (the human-readable language name, e.g. ``"Italian"``) and
+    ``accent_inventory`` (the accented characters a prompt asks the model to preserve) are the
+    cross-title language facts the M4 prompt templates render as ``{{ language.* }}`` — distinct
+    from book identity (``{{ book.* }}`` from ``manifest.prompt_context``). ``display_name``
+    replaces the per-book ``prompt_context.language_name`` the live OCR prompt baked in, so a
+    language fact can no longer vary book-to-book (BR-008). ``accent_inventory`` is a
+    prompt-display set, deliberately separate from ``word_score_accents`` (the scorer's set,
+    which mixes case) and ``coverage.letters`` (char-coverage's set).
     """
 
     language_id: str
+    display_name: str
     spacy_model: str
     spacy_distribution: str
     frequency_dictionary: str
@@ -142,6 +166,7 @@ class LanguageProfile:
     skip_words: tuple[str, ...]
     consonant_alphabet: str
     word_score_accents: str
+    accent_inventory: tuple[str, ...]
     coverage: CoverageSpec
     accent_optional: bool
     period_dictionaries: tuple[PeriodDictionary, ...]

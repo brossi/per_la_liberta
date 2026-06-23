@@ -28,6 +28,12 @@
     "leaf_offset": 6,
     "last_scan_page_default": 278
   },
+  "ocr": {
+    "models": {
+      "flash": "gemini-2.5-flash",
+      "pro": "gemini-3.1-pro-preview"
+    }
+  },
   "structure": {
     "h2_min": 3,
     "h3_count": 57,
@@ -54,7 +60,6 @@
     "book_title": "Per la libertà!",
     "author": "Cesare Crespi",
     "year": 1913,
-    "language_name": "Italian",
     "subject": "Italian unification, the Risorgimento, and the Orsini conspiracy against Napoleon III",
     "entities": [
       "Carlo di Rudio",

@@ -29,6 +29,8 @@ from functools import lru_cache
 from statistics import median
 
 from ..config.models import ResolvedConfig
+from ..contracts.markers import PAGE_MARKER_RE
+from ..errors import MissingInputError
 from ..lang.base import LanguagePlugin
 from ..paths import BookWorkspace
 from ..util.jsonio import atomic_write_json
@@ -46,9 +48,8 @@ FLAGGED_FILE = "flagged_segments.json"
 CHAPTER_PAGES_FILE = "chapter_pages.json"
 RECONCILED_RAW_FILE = "reconciled_raw.txt"
 
-# OCR page-marker emitted by ocr.py (``⟨PAGE:N⟩``) — an internal tag protocol, not a
-# book/language fact, so it stays a code constant (plan §"internal tag protocols").
-PAGE_MARKER_RE = re.compile(r"⟨PAGE:(\d+)⟩")
+# The OCR ``⟨PAGE:N⟩`` page marker grammar (``PAGE_MARKER_RE``) is single-sourced in
+# ``contracts.markers`` so the ``ocr`` emitter and this parser cannot drift (plan F6).
 
 # Bracket/paren noise inside a word — the one language-neutral score_word penalty pattern.
 _BRACKET_NOISE = re.compile(r"[(){}[\]|\\^~`]")
@@ -514,6 +515,15 @@ def run(
     """
     ws = workspace
     accents = cfg.language.word_score_accents
+
+    # The two djvu-text witnesses are required (produced by ``download``); a missing copy is a
+    # clean ``MissingInputError`` (CLI exit 3), not a bare ``FileNotFoundError`` traceback (F7).
+    missing = [name for name in (COPY1_FILE, COPY2_FILE) if not (ws.data / name).is_file()]
+    if missing:
+        raise MissingInputError(
+            f"reconcile needs the OCR copies in {ws.data}; missing: {', '.join(missing)} "
+            f"(run `--step download` first)"
+        )
 
     copy1_text = (ws.data / COPY1_FILE).read_text(encoding="utf-8")
     copy2_text = (ws.data / COPY2_FILE).read_text(encoding="utf-8")

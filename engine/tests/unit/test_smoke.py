@@ -26,7 +26,7 @@ def test_package_imports_and_has_version():
 
 # Steps ported to a real run(); the rest are still scaffold stubs. As each lands in its
 # milestone, it moves here and its behaviour is covered by a golden/unit test instead.
-PORTED = {"validate", "reconcile", "adjudicate"}  # M2, M3
+PORTED = {"validate", "reconcile", "adjudicate", "download", "ocr"}  # M2, M3, M4a
 
 
 @pytest.mark.parametrize("step", [s for s in engine.STEPS if s not in PORTED])
@@ -87,3 +87,40 @@ def test_cli_unknown_language_is_exit_1(monkeypatch):
 
     monkeypatch.setattr(cli, "get_language_plugin", _raise)
     assert cli.main(["--step", "validate", "--book", "per_la_liberta"]) == 1
+
+
+# --- F7: step-option threading + exception taxonomy ------------------------------------- #
+
+def test_collect_step_opts_includes_only_set_options():
+    ns = cli.build_parser().parse_args(
+        ["--step", "ocr", "--model", "flash", "--workers", "4", "--pages", "1", "2"]
+    )
+    assert cli._collect_step_opts(ns) == {"model": "flash", "workers": 4, "pages": (1, 2)}
+    # an unset option (--api-key) is omitted, so the step default stands
+    assert "api_key" not in cli._collect_step_opts(ns)
+
+
+def test_collect_step_opts_empty_when_none_set():
+    ns = cli.build_parser().parse_args(["--step", "validate"])
+    assert cli._collect_step_opts(ns) == {}
+
+
+def test_accepted_opts_filters_by_step_signature():
+    from engine.steps import download, ocr, reconcile
+
+    opts = {"model": "pro", "workers": 2, "pages": (1, 2), "api_key": "k"}
+    assert cli._accepted_opts(ocr.run, opts) == opts          # ocr declares all four
+    assert cli._accepted_opts(download.run, opts) == {}        # download declares none of them
+    assert cli._accepted_opts(reconcile.run, opts) == {}       # reconcile declares none
+
+
+def test_cli_engine_error_maps_to_its_exit_code(monkeypatch):
+    # A typed EngineError from a step is surfaced as its own exit code, not a traceback.
+    from engine import errors
+    from engine.steps import validate as validate_mod
+
+    def _boom(**_kw):
+        raise errors.MissingInputError("nope")
+
+    monkeypatch.setattr(validate_mod, "run", _boom)
+    assert cli.main(["--step", "validate", "--book", "synthetic"]) == 3

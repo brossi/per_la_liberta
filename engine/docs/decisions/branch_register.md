@@ -192,6 +192,24 @@
   render-context contract every later prompt reads (the M4b/M4c prompts triage/cleanup/translate/refine
   plus M5's multi-eval/synthesis/provenance); deciding the boundary before they bind to a blurred one
   is the point of maximum leverage. The user called it.
+- **Resolved at M4a porting (2026-06-22):** the two-way-door field choices landed as —
+  `prompt_context` dropped `language_name`; `LanguageProfile` gained `display_name` (`"Italian"`)
+  **and a dedicated `accent_inventory` list** (`["à","è","ì","ò","ù","é"]`), *not* a derived lowercase
+  run of `word_score_accents` (which mixes case and serves the OCR scorer) — a dedicated prompt-facing
+  field reproduces the live prompt's accent list exactly and keeps the three accent sets purpose-named.
+  Render context is the namespaced `{{ book.* }}`/`{{ language.* }}` merge (`prompts.templating.build_prompt_context`);
+  templates live at `profiles/prompts/*.txt.j2`, rendered by `prompts/templating.py` under
+  `StrictUndefined`. The rendered PLL OCR prompt is **byte-identical to the live `OCR_PROMPT`**
+  (`test_ocr_engine::test_render_ocr_prompt_is_faithful_to_live_for_pll`).
+- **Separability-proof refinement (M4a):** the plan's single "no PLL string leaks (… *the Italian
+  accent list*)" assertion was **split**, because the synthetic fixture *is* Italian (shares the
+  profile, BR-002) — so the accent list is a shared *language* fact that correctly appears for any
+  Italian book; its presence is **not** a leak. The tier is proven as two checks
+  (`test_templating.py`): **book-identity** separability (synthetic render → PLL identity absent,
+  synthetic identity present) and **language-baking** separability (a hand-built *foreign* language
+  context → Italian accents/display-name absent, foreign ones present). Full non-Italian *book*
+  separability stays BR-002 (M4b). The `ENGINE_M4_PLAN.md` separability bullet still carries the
+  pre-port phrasing and is superseded by this note.
 - **Revisit:** only if a later prompt needs a fact that fits neither layer (e.g. a scan /
   source-noise fact) — extend the namespaced context with a *third* source rather than collapsing
   the boundary.
@@ -223,6 +241,14 @@
   question — whether M4b/M4c's **chat** calls (triage / cleanup-LLM / translate / refine, all
   text→text) should share the seam `providers.py` generalizes — is the real `providers.py`-prefiguring
   decision and is **deferred to M4c's formal development**, not settled here.
+- **Resolved at M4a porting (2026-06-22):** shipped as specified — `download.Fetcher` (default
+  `RequestsFetcher`), `ocr.PageRenderer` (default `FitzPageRenderer`: `page_count` + `render`→JPEG)
+  and `ocr.OcrBackend` (default `GeminiOcrBackend`, model id from `manifest.ocr.models`), each a
+  `typing.Protocol` co-located with its step and injected via `run(*, …, fetcher/renderer/backend=None)`.
+  `providers.py` untouched. The page identity is threaded renderer→backend through the rendered bytes
+  (fakes encode/decode the page number), so canned responses are order- and resume-independent. All of
+  property/separability/isolation run offline against injected doubles seeded from the frozen synthetic
+  `inputs/`; one `integration`-marked test exercises the real PyMuPDF render path.
 - **Revisit:** M4c (chat-seam ↔ `providers.py` relationship); M5 (the unified provider family
   itself). The acquisition seams themselves revisit only if a backend's modality changes.
 
@@ -240,9 +266,15 @@
 - **One-way door:** config-schema shape (manifest gains an `ocr` block → schema + loader + models).
 - **Why decide now (not defer):** the user called it; model-id rot is a standing concern, not
   something a second book clarifies.
-- **Revisit:** the block's field-level shape (does `dpi` / JPEG quality / a prompt-template ref live
-  here?) is finalized at **M4a porting** (two-way door); the *existence* of a per-book model-id block
-  is settled.
+- **Resolved at M4a porting (2026-06-22):** the block shipped as **`{"models": {"flash", "pro"}}`
+  only** — `dpi` / JPEG quality stay code defaults (`ocr._DEFAULT_DPI` / `_JPEG_QUALITY`), and there is
+  **no `prompt_ref`** (the OCR template is profile-resident at a fixed path) — each omitted per YAGNI
+  until a book needs it. Schema-**required** (consistent with the sibling `scan` block); modelled as
+  `OcrConfig(models: dict)` (role → id); both PLL and synthetic declare it. The role drives the output
+  name (`pro`→`copy3_raw.txt`, `flash`→`copy3_flash.txt`) and is the provenance of which model produced
+  `copy3`.
+- **Revisit:** if a book needs per-book `dpi`/quality or a structurally different prompt, promote those
+  into the block then (additive, two-way). The *existence* of the per-book model-id block is settled.
 
 ## BR-011 — triage disagreement taxonomy: general code-default, not a deferred-language item
 - **Opened:** 2026-06-22 (M4 planning; decided with the user, `ENGINE_M4_PLAN.md` D5). Executed at
