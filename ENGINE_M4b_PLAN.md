@@ -683,3 +683,30 @@ Left as-is (deliberate): the LOC `ia_item_id` duplicated across `sources[0]` ↔
 roles — download witness vs typeset scan-link — same value), and the year embedded in `colophon`
 prose (display text, not a parsed field). Both are weaker than the bibliographic-identity case and
 not worth structuring now.
+
+## 15. Adversarial audit + corrections (2026-06-23)
+
+Red-teamed the session's work against the plan contract (port discipline, neutrality, YAGNI, I3,
+sandbox). **Verified clean** (probed, not asserted): I3 root-of-trust — the committed detcore golden
+is **byte-identical** to a fresh regenerate-from-live, so `engine == golden == live` holds at the
+root; the bibliographic guard is **not bypassable** via `overrides` (those flow only into
+`_load_profile`); `ConfigError` is caught at `cli.py:123` (clean exit, no traceback); the commit
+touched only `engine/` + this plan doc (sandbox intact). **Corrections landed:**
+
+- **Pruned the unwired `corrections.json` helpers** (`apply_corrections` /
+  `extract_corrections_from_diff`) + their 3 tests — they were a YAGNI/half-port (run() omits the
+  corrections.json behavior, yet the helpers were kept on future-need justification only). A Note in
+  `cleanup.py` records the deliberate omission; re-port if a real per-book overrides input lands.
+- **Documented the `title_it`/`book_title` coupling** as the softest of the three bibliographic pairs,
+  with an explicit "relax here, consciously" escape hatch for a future book whose prompt title must
+  differ from its typeset title.
+- **Documented why `word_letter_class` gets no parallel per-codepoint guard** (range, strongly
+  golden-bound — a contract assertion there would be belt-and-suspenders, unlike the enumerated
+  `accented_letters` where 9/12 letters are golden-silent).
+- **Config→exit 1 was a MISREAD, not a gap:** `errors.py` documents "exit codes 1 (config) and 2
+  (unported stub) are owned by the CLI; step failures start at 3." Config errors returning 1 is the
+  deliberate F7 taxonomy — **no change** (changing it would contradict a documented decision).
+- **render_markdown layout-as-template** folded into the M3b task (can't template until typeset's
+  machinery lands).
+
+Net: no correctness defects; one real prune; the rest documentation/no-change. Suite stays green.

@@ -91,6 +91,10 @@ def test_cleanup_accented_letters_is_the_full_canonical_set():
     assert len(lp.accented_letters) == len(canonical), "duplicate letter in accented_letters"
     # Tie to Audit 1: the live restrictive subset plus exactly the proven-inert +É extension.
     assert set(lp.accented_letters) - set("àèìòùéÀÈÌÒÙ") == {"É"}
+    # Deliberately no parallel guard for the sibling word_letter_class (the permissive a-zA-ZÀ-ÿ
+    # range): unlike enumerated accented_letters (9/12 letters golden-silent → it needs this guard),
+    # the range is strongly golden-bound (narrowing it diverges 10 chapters) and a single-codepoint
+    # boundary typo is not a realistic edit — a contract assertion there would be belt-and-suspenders.
 
 
 def _write_book(tmp_path, name, manifest: dict):

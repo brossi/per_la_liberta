@@ -136,39 +136,6 @@ def test_strip_preamble_removes_known_lead_only():
     assert cleanup.strip_preamble("Nel mezzo del cammin") == "Nel mezzo del cammin"
 
 
-def test_extract_corrections_captures_change_and_skips_whitespace():
-    # A single changed region → one correction; the find/replace carry the surrounding context.
-    corrs = cleanup.extract_corrections_from_diff("abc def", "abc xef", "ch1", context_chars=2)
-    assert len(corrs) == 1
-    c = corrs[0]
-    assert c["source"] == "llm" and c["reason"] == "llm_correction"
-    assert "d" in c["find"] and "x" in c["replace"]
-    # whitespace-only diffs are not corrections
-    assert cleanup.extract_corrections_from_diff("a b", "a  b", "ch") == []
-
-
-def test_apply_corrections_applies_suppresses_and_drops_stale():
-    text = "il gatto nero corre"
-    corrs = {"ch1": [{"find": "nero", "replace": "bianco"}]}
-    flags = [
-        {"token": "nero", "context": "gatto nero corre"},   # suppressed (matches the correction)
-        {"token": "corre", "context": "bianco corre"},       # survives (still in text)
-        {"token": "sparito", "context": "x sparito y"},       # stale-dropped (absent from new text)
-    ]
-    out, remaining, applied = cleanup.apply_corrections(text, "ch1", corrs, flags)
-    assert out == "il gatto bianco corre"
-    assert applied == 1
-    assert [f["token"] for f in remaining] == ["corre"]
-
-
-def test_apply_corrections_override_suppresses_without_editing_text():
-    text = "il gatto nero"
-    corrs = {"ch1": [{"find": "nero", "replace": ":override"}]}
-    flags = [{"token": "nero", "context": "gatto nero"}]
-    out, remaining, applied = cleanup.apply_corrections(text, "ch1", corrs, flags)
-    assert out == "il gatto nero" and applied == 1 and remaining == []
-
-
 def test_build_batch_requests_skips_cached_and_builds_params():
     chapters = [{"id": "a", "title": "A"}, {"id": "b", "title": "B"}]
     reqs = cleanup.build_batch_requests(

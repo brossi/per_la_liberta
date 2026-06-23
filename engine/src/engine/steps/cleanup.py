@@ -702,62 +702,10 @@ def strip_preamble(text: str) -> str:
     return _PREAMBLE_RE.sub("", text, count=1)
 
 
-def extract_corrections_from_diff(
-    original: str, corrected: str, chapter_id: str, context_chars: int = 40
-) -> list[dict]:
-    """Diff original vs LLM-corrected text into individual correction entries (each with enough
-    surrounding context to be unique). Verbatim from live ``extract_corrections_from_diff``."""
-    sm = difflib.SequenceMatcher(None, original, corrected, autojunk=False)
-    corrections = []
-    for tag, i1, i2, j1, j2 in sm.get_opcodes():
-        if tag == "equal":
-            continue
-        orig_snippet = original[i1:i2]
-        new_snippet = corrected[j1:j2]
-        if orig_snippet.strip() == new_snippet.strip():
-            continue
-        ctx_start = max(0, i1 - context_chars)
-        ctx_end = min(len(original), i2 + context_chars)
-        corrections.append({
-            "find": original[ctx_start:ctx_end],
-            "replace": original[ctx_start:i1] + new_snippet + original[i2:ctx_end],
-            "reason": "llm_correction",
-            "source": "llm",
-        })
-    return corrections
-
-
-def apply_corrections(
-    text: str, chapter_id: str, corrections: dict[str, list[dict]], review_flags: list[dict]
-) -> tuple[str, list[dict], int]:
-    """Apply saved corrections (manual overrides) and suppress resolved flags. Returns
-    ``(text, remaining_flags, applied_count)``. Verbatim from live ``apply_corrections``."""
-    chapter_corrections = corrections.get(chapter_id, [])
-    if not chapter_corrections:
-        return text, review_flags, 0
-
-    applied = 0
-    suppressed_tokens: set[str] = set()
-    for entry in chapter_corrections:
-        find = entry["find"]
-        replace = entry["replace"]
-        if find not in text:
-            continue
-        if replace == ":override":
-            suppressed_tokens.add(find)
-            applied += 1
-        else:
-            text = text.replace(find, replace, 1)
-            suppressed_tokens.add(find)
-            applied += 1
-
-    if suppressed_tokens:
-        review_flags = [
-            f for f in review_flags
-            if not any(t in f.get("token", "") or t in f.get("context", "") for t in suppressed_tokens)
-        ]
-    review_flags = [f for f in review_flags if f.get("token", "") in text]
-    return text, review_flags, applied
+# Note: the live ``apply_corrections`` / ``extract_corrections_from_diff`` (the corrections.json
+# manual-override mechanism) are deliberately NOT ported — ``run`` omits the deprecated/stale
+# corrections.json path entirely (the full-text LLM cache supersedes it). They would be re-ported
+# alongside a real per-book overrides input, not kept as unwired dead code (M4b audit, YAGNI).
 
 
 # --- Batch API (default-only; pure request-building is property-tested) ------------------- #

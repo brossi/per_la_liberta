@@ -188,6 +188,11 @@ def _load_profile(
 #: ``prompt_context`` (LLM-prompt identity). The two namespaces are kept separate by design
 #: (BR-008: book identity for prompts vs typed display metadata), so the same fact is declared
 #: in each — and must agree. Pairs are ``(edition_key, prompt_context_key)``.
+#:
+#: ``author``/``year`` are hard invariants (one fact, no reason to differ). ``title_it``/
+#: ``book_title`` is the softest pair: a future book could legitimately want a different
+#: prompt-facing title than its typeset title (e.g. a simplified or transliterated form for the
+#: model). If that need ever arises, drop the title pair here — consciously, not by silent drift.
 _BIBLIOGRAPHIC_PAIRS = (("title_it", "book_title"), ("author", "author"), ("year", "year"))
 
 
