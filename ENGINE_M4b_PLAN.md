@@ -479,3 +479,70 @@ Two findings, verified against the live tree:
   + schema updated.
 - Branch register + invariants log updated (§8/§9). Full suite green from `engine/`:
   `cd engine && uv run pytest`.
+
+---
+
+## 11. In-flight port progress + refinements (recorded for continuity, 2026-06-23)
+
+**Committed on `engine-framework` (full suite 190 green throughout):**
+- `ea0c3c7` — **triage** ported: `steps/triage.py` (injectable `Chat` seam BR-014; `CATEGORIES` +
+  tool schema as code defaults BR-011), `profiles/prompts/triage.txt.j2`, `util/retry.py`, synthetic
+  `flagged_segments.json`, `test_triage_engine.py` + isolation. Tiers: property + separability +
+  leakage + isolation (no golden — LLM). The prompt **drops the live Italian confusion *example
+  words*** (`più`, `pàtria`): they'd render under the Italian-profiled synthetic book and trip the
+  no-Italian-leak render test; the category set + witnesses + the `accent_optional`-gated rule carry
+  the guidance.
+- `10cceeb` — cleanup **config foundation**: `language.accent_fold` / `accented_letters` /
+  `word_letter_class`; `source_noise.noise_line_pattern` / `ligature_substitutions`;
+  `dictionaries/symspell.py` (D4 loader); `util.text.build_fold_table`. All byte-match live.
+- `368c308` — `word_letter_class` sourced from config in **validate + adjudicate** (was inline
+  `À-ÿ`); both goldens green. `74a7175` — adjudicate `_ACCENT_MAP` → `cfg.language.accent_fold`
+  (oracle-held), identical on all exercised data.
+
+**Refinements decided during the port — honor these in the cleanup-core write:**
+1. **Detcore golden = `clean_text` per chapter** (`{id: {text, flags}}`), NOT the full wrapped
+   `.md`. The wrapper bakes book identity inconsistent with config (`# Per la Libertà!` cap-L vs
+   `edition.title_it` `Per la libertà!`); isolating the algorithm keeps the equivalence check honest
+   and sidesteps freezing `chapter_pages.json`. Wrapper = config-driven + property-tested. I3
+   anti-cheat preserved (expected values come from the live `clean_text`).
+2. **Chapter sort = stable on the existing `ch["part"]` field**, not id parsing — synthetic uses
+   long ids (`p1_capitolo_primo`), PLL short (`p1_ch01`); the live `chapter_sort_key` crashes on
+   long ids.
+3. **Markdown wrapper from config**: `# {edition.title_it}`, `*{edition.subtitle_it}*`,
+   `**{edition.author}**`; part headers from `structure.parts[N-1].name` (part 2 gets a `---`
+   separator); `part==0` chapter → `## {title}`, others → `### {title}`; page markers
+   `<!-- pages:a-b -->` from `chapter_pages`.
+4. **Source-noise relocations → `source_noise` config, in M4b (golden-guarded), not M7** — sharpens
+   §10's done-criterion to **no Italian _or_ source-noise literal** in `steps/cleanup.py`:
+   - `£→E` (`:575`) → `source_noise.char_substitutions` (list of `[regex, repl]`; bodoni:
+     `[["£(?!\\d)", "E"]]`). Confirmed live source-noise: 17 `£` in source → 0 in output.
+   - `:601-603` inline page-marker subs → `source_noise.inline_page_marker_patterns` (list).
+   - `:241` compound noise class → `source_noise.page_marker_line_pattern` (str; the `len<30` /
+     `≤1 real word` / `has-digit` guard stays in code).
+   - `:14` `NOISE_LINE_PATTERN` + `:248` separator + `:251` `Disp.` furniture → a
+     `source_noise.noise_line_patterns` **list** (match→noise). The committed singular
+     `noise_line_pattern` folds into this list (restructure).
+   - The real-word-recognition checks (`:231`, `:244`, `:257`) use `language.accented_letters` /
+     `word_letter_class`; the noise-class accents ride along in `source_noise` as scan-garbage.
+5. **D1 accent mechanics**: cleanup folds via `build_fold_table(cfg.language.accent_fold)` (NOT NFKD
+   `strip_accents`). `:486` redundant `or first_char in "àèéìòù"` → `.islower()`. `:684` lowercase
+   range → match `word_letter_class`, filter `.islower()` in the loop.
+6. **D4 loaders**: delete `_get_word_set` / `_get_ner_nlp` / `_get_spellchecker` →
+   `frequency.load_word_set` + `lang.load_spacy(disable=["parser","lemmatizer"])` +
+   `symspell.load_symspell`.
+7. **Oracle reuse (F6)**: import `DictionaryOracle` + `dictionary_context_for_flags` + `_build_oracle`
+   from `steps.adjudicate`.
+8. **LLM path**: single-model `llm_correct_italian` + Batch API via a per-step chat seam (BR-014);
+   `_LLM_CORRECT_SYSTEM` → `profiles/prompts/cleanup_correct.txt.j2`; cache →
+   `ws.state/llm_cleaned/{id}.txt`, batch → `ws.state/llm_batch.json`. `reconcile_flags` ported
+   (deterministic, post-LLM bookkeeping, `--llm-cleanup`-gated). Multi-witness flag-review duo
+   excluded → M5 (D5, verified orphaned).
+9. **Regen-guard**: `RegenerationGuardError` (new `EngineError`, exit 6) + `allow_regen` kwarg +
+   `ENGINE_ALLOW_REGEN` env (D2); top-of-run refusal to clobber an existing
+   `ws.output/italian_clean.md`.
+10. **Neutrality test** scans `cleanup.py` for *functional* Italian/source-noise literals — must
+    exclude docstrings/comments, which legitimately *name* `À-ÿ` etc. when describing the change.
+
+**Next:** write `steps/cleanup.py` (deterministic core + wrapper) + the source_noise config additions
+(§4 above) + the detcore golden generator/test + the neutrality test, as one unit so the golden
+validates every relocation on arrival; then the LLM path + reconcile_flags; then the regen-guard.
