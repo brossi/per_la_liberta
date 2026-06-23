@@ -1,15 +1,14 @@
-"""Prompt-templating machinery: namespaced context, StrictUndefined, and the separability bite.
+"""Prompt-templating machinery: namespaced context, StrictUndefined, and the separability tier.
 
-The OCR template is the first consumer. Two separability concerns are distinct:
-
-  - **book-identity** separability — the template bakes no *book* identity; rendered under the
-    synthetic book, no PLL identity string appears and the synthetic identity does. Proven here
-    against the real synthetic fixture.
-  - **language-baking** separability — the template body bakes no *language* specifics either;
-    rendered against a hand-built foreign language context, the Italian accents/display name are
-    absent and the foreign ones appear. A full non-Italian *book* fixture is BR-002 (deferred to
-    M4b, where cleanup defines what it must differ on); the template body's genericity does not
-    need that fixture — a foreign context dict proves it now.
+The OCR template is the first consumer. The separability/leakage tier (the decided design, BR-008)
+is a **single** render of the synthetic book's *own loaded context* asserting **no PLL string leaks
+at all** — book identity (`Per la libertà`, `Crespi`, `1913`) *and* language facts (the name
+`Italian`, the accent list `à è ì ò ù é`). For the language-fact half to bite while the synthetic
+book keeps the Italian *plugin* (it must — only `it` is registered, BR-002), the synthetic manifest
+**overrides** its prompt-facing language facts (`display_name`, `accent_inventory`) to non-Italian
+values; `language_id` stays `it`, so reconcile/validate's Italian word-scoring is untouched. A baked
+Italian name or accent then surfaces here as a leak. Full non-Italian *book* separability (the
+language-axis seams cleanup consumes) remains BR-002.
 """
 
 from __future__ import annotations
@@ -22,10 +21,9 @@ from engine.contracts.markers import SENTINEL_BLANK
 from engine.prompts.templating import PROMPTS_DIR, PromptTemplate, build_prompt_context
 
 
-def _render_ocr(book_id="synthetic", **overrides) -> str:
+def _render_ocr(book_id: str) -> str:
     tmpl = PromptTemplate.load("ocr")
     ctx = build_prompt_context(load_book(book_id))
-    ctx.update(overrides)  # a test may swap a whole namespace (book/language) wholesale
     return tmpl.render(**ctx, blank_sentinel=SENTINEL_BLANK)
 
 
@@ -63,25 +61,26 @@ def test_strict_undefined_raises_on_missing_context_key():
         )
 
 
-def test_no_book_identity_leaks_under_synthetic_render():
-    rendered = _render_ocr("synthetic")
-    # PLL book identity must be absent — the template pulled identity from book.* (synthetic's).
-    for pll in ("Per la libertà", "Crespi", "1913"):
-        assert pll not in rendered, f"PLL identity {pll!r} leaked from the template"
-    # ...and the synthetic identity is present, proving the facts are interpolated, not hardcoded.
-    for syn in ("Libro di Prova", "Autore Sintetico", "1901"):
-        assert syn in rendered
-
-
-def test_template_body_bakes_no_language_specifics():
-    # Hand-built foreign context (no non-Italian *book* needed — BR-002): if the template body
-    # baked Italian, these Italian facts would survive a foreign render. They must not.
-    rendered = _render_ocr(
-        "synthetic",
-        book={"book_title": "Aklat", "author": "May-akda", "year": 1801},
-        language={"display_name": "Tagalog", "accent_inventory": ["ñ"]},
+def test_synthetic_fixture_carries_non_pll_language_facts_for_separability():
+    # The override that makes the single leakage render bite: distinct prompt-facing language facts,
+    # while language_id stays 'it' (so the Italian plugin / reconcile word-scoring are unchanged).
+    lp = load_book("synthetic").language
+    assert lp.language_id == "it"
+    assert lp.display_name == "Sintetico"
+    assert lp.accent_inventory == ("ñ", "ç", "ø")
+    assert not (set("àèìòùéÀÈÌÒÙÉ") & set("".join(lp.accent_inventory))), (
+        "synthetic accent inventory must share no Italian accent, or the leak test can't bite"
     )
-    assert "Tagalog" in rendered and "ñ" in rendered
-    assert "Italian" not in rendered
-    for it_accent in ("à", "è", "ì", "ò", "ù", "é"):
-        assert it_accent not in rendered, "an Italian accent is baked into the template body"
+
+
+def test_no_pll_string_leaks_under_synthetic_render():
+    # The decided separability tier (BR-008): one render of the synthetic book's own context leaks
+    # NO PLL string — book identity AND language facts. A baked Italian name or accent shows here.
+    rendered = _render_ocr("synthetic")
+    for leaked in (
+        "Per la libertà", "Crespi", "1913", "Italian", "à", "è", "ì", "ò", "ù", "é",
+    ):
+        assert leaked not in rendered, f"PLL/Italian string {leaked!r} leaked from the template"
+    # ...and the synthetic book's own identity + language facts ARE present (interpolation works).
+    for present in ("Libro di Prova", "Autore Sintetico", "1901", "Sintetico", "ñ"):
+        assert present in rendered

@@ -59,6 +59,16 @@ def test_cli_main_with_no_step_is_a_noop_error():
     assert cli.main([]) == 1
 
 
+def test_cli_step_without_book_is_an_error():
+    # No book is baked as the default (book-agnostic): running a step needs an explicit --book.
+    assert cli.main(["--step", "validate"]) == 1
+
+
+def test_cli_list_books_needs_no_book():
+    # --list-books is the discovery path — it must work without --book (else you couldn't find ids).
+    assert cli.main(["--list-books"]) == 0
+
+
 def test_cli_resolves_real_book_then_hits_stub():
     # M1 wiring: a real --step run resolves PLL's manifest + profiles + plugin +
     # workspace (no crash), then surfaces a not-yet-ported step stub as exit 2.

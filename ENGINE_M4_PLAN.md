@@ -236,10 +236,17 @@ routing it to `state/` is a two-way door, aligned to the engine's area semantics
   name + accent inventory). `language_name` is dropped from `prompt_context` and the profile gains a
   display-name field. One builder function, reused by every later prompt that renders book/language facts
   (triage/cleanup/translate/refine in M4b/M4c; multi-eval/synthesis/provenance in M5).
-- **Separability/leakage test (the genericity bite the stub names):** render `ocr.txt.j2` with the
-  **synthetic** book's context → assert **no PLL string leaks** (`Per la libertà`, `Crespi`,
-  `Orsini`, `1913`, the Italian accent list). This is the prompt's separability tier and the reason
-  the template work waited for a non-PLL fixture.
+- **Separability/leakage test (the genericity bite the stub names):** a **single** render of
+  `ocr.txt.j2` with the **synthetic** book's *own loaded context* → assert **no PLL string leaks at
+  all**: book identity (`Per la libertà`, `Crespi`, `1913`) **and** language facts (the name
+  `Italian`, the accent list `à è ì ò ù é`). For the language-fact half to bite while the synthetic
+  book keeps the Italian *plugin* (it must — only `it` is registered, BR-002), the synthetic manifest
+  **overrides** its prompt-facing language facts (`display_name`, `accent_inventory`) to non-Italian
+  values; `language_id` stays `it`, so reconcile/validate's Italian word-scoring is untouched. A baked
+  Italian name or accent then shows up here as a leak. This is the prompt's separability tier and the
+  reason the template work waited for a non-PLL fixture. (The fixture, not the assertion, is what
+  carries the non-PLL-ness — splitting the tier or exempting the accent list would be weakening the
+  measurement; the synthetic fixture is built so the one decided assertion holds.)
 
 ### CLI hardening (F7)
 

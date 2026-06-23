@@ -1,12 +1,13 @@
 """book-engine — a book/language-agnostic OCR → reconcile → clean → translate →
 typeset framework.
 
-Forked (deliberately, one-way) from the *Per la Libertà!* pipeline at the parent
+Forked (deliberately, one-way) from the source translation pipeline at the parent
 repo root. Every book/language/scan-specific constant leaves the core and lives in
 a per-book manifest + shared profiles; the core reads ``cfg`` (ResolvedConfig) and
 the active ``LanguagePlugin`` only. See ENGINE_FRAMEWORK_PLAN.md for the staged
-build (M0–M7). M0 is scaffold: the package imports cleanly and the step modules are
-stubs that raise NotImplementedError until ported.
+build (M0–M7). Steps are ported milestone by milestone; an unported step module is a
+scaffold stub whose ``run`` raises ``NotImplementedError`` naming the milestone that
+ports it.
 """
 
 from __future__ import annotations

@@ -1,1 +1,1 @@
-"""Reusable review primitives ported from the PLL review phase. See M6."""
+"""Reusable review primitives ported from the source pipeline's review phase. See M6."""

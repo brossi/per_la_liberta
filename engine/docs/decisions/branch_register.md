@@ -201,15 +201,19 @@
   templates live at `profiles/prompts/*.txt.j2`, rendered by `prompts/templating.py` under
   `StrictUndefined`. The rendered PLL OCR prompt is **byte-identical to the live `OCR_PROMPT`**
   (`test_ocr_engine::test_render_ocr_prompt_is_faithful_to_live_for_pll`).
-- **Separability-proof refinement (M4a):** the plan's single "no PLL string leaks (… *the Italian
-  accent list*)" assertion was **split**, because the synthetic fixture *is* Italian (shares the
-  profile, BR-002) — so the accent list is a shared *language* fact that correctly appears for any
-  Italian book; its presence is **not** a leak. The tier is proven as two checks
-  (`test_templating.py`): **book-identity** separability (synthetic render → PLL identity absent,
-  synthetic identity present) and **language-baking** separability (a hand-built *foreign* language
-  context → Italian accents/display-name absent, foreign ones present). Full non-Italian *book*
-  separability stays BR-002 (M4b). The `ENGINE_M4_PLAN.md` separability bullet still carries the
-  pre-port phrasing and is superseded by this note.
+- **Separability proof — realized as decided (M4a):** the decided tier stands unchanged — a
+  **single** render of the synthetic book's *own loaded context* asserting **no PLL string leaks at
+  all**, book identity *and* language facts (the name `Italian`, the accent list `à è ì ò ù é`). For
+  the language-fact half to bite while the synthetic book keeps the Italian *plugin* (required — only
+  `it` is registered, BR-002), the synthetic manifest **overrides** its prompt-facing language facts
+  (`display_name` → `"Sintetico"`, `accent_inventory` → `["ñ","ç","ø"]`) via the existing
+  shallow-replace override mechanism; `language_id` stays `it`, so reconcile/validate's Italian
+  word-scoring is untouched. `test_templating.py::test_no_pll_string_leaks_under_synthetic_render`
+  renders that context and asserts every PLL/Italian string is absent and the synthetic identity +
+  facts present. *(Correction: an earlier port build left the synthetic facts Italian, hit the wall
+  that the accent list then legitimately appears, and "fixed" it by splitting the tier into two and
+  declaring the accent list "not a leak" — a measurement change, not the decided design. Reverted:
+  the fixture, not the test, was the thing to fix.)*
 - **Revisit:** only if a later prompt needs a fact that fits neither layer (e.g. a scan /
   source-noise fact) — extend the namespaced context with a *third* source rather than collapsing
   the boundary.

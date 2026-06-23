@@ -6,7 +6,7 @@ Faithful ports of the language-specific logic the live pipeline scatters across
 
 Caveat (recorded as **BR-006**): the OCR-garble fixes (``ORDINAL_FIXES``, ``WORD_FIXES``, the
 garble entries in ``_ITALIAN_NUMBERS``, and ``_HEADING_RE``'s ``[GC]…pitolo`` tolerance) are
-PLL's Bodoni *scan-noise*, not Italian-language facts — they live here by the plan's
+the source book's Bodoni *scan-noise*, not Italian-language facts — they live here by the plan's
 parameterization map, but their cleaner home is the ``source_noise`` profile. Moving them is
 deferred until a second Italian/same-typeface book gives a concrete seam to design against; they
 are inert (not wrong) for a book that doesn't share the garbles. The book *title* that the live
@@ -85,7 +85,7 @@ _HEADING_NOISE_RE = re.compile(r"[^a-zA-ZàèìòùéÀÈÌÒÙÈ\s]")
 
 # Structural markers in the raw OCR (utils.py:249-266) — these are Italian structural *words*
 # (preface / part divisions), genuinely cross-title, so the plugin owns them. The running head
-# the live code also dropped here was the book *title* ("PER LA LIBERTÀ!"); it is book-level and
+# the live code also dropped here was the book *title* (a running head); it is book-level and
 # now comes from ``cfg.structure.running_heads`` via ``split_raw_chapters`` (BR-004).
 _PREFAZIONE_RE = re.compile(r"\s*PREFAZIONE\s*$")
 _PARTE_SECONDA_RE = re.compile(r"\s*PARTE\s+SECONDA\s*$")

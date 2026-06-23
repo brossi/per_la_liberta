@@ -5,7 +5,8 @@ In the top-level tree the same chapter is named three different ways, derived in
 different modules, with no shared object — the highest-regression-risk seam in the port
 (plan §"The hard cases"). Here every form is computed once, together, by the active
 ``LanguagePlugin`` (which owns the language-specific recognition) using only generic
-mechanics. ``test_chapterids_golden`` freezes all forms for PLL and asserts reproduction.
+mechanics. ``test_chapterids_golden`` freezes all forms for the example book and asserts
+reproduction.
 
 The three forms (see engine/docs/constant_inventory.md for code provenance):
   short      ``p1_ch01`` / ``prefazione``        — keys ``chapter_pages.json``

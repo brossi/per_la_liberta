@@ -319,7 +319,7 @@ def check_word_quality(
     # The high-severity line is the *gate-failure explanation* — it fires iff the gate fails.
     # The live code coupled them implicitly (``passed = len==0`` + ``if high_severity:``, so it
     # warned iff it failed); generalising the gate to ``> high_severity_max`` preserves that
-    # coupling at the configurable threshold (identical to live at PLL's max=0). The separate
+    # coupling at the configurable threshold (identical to live at the example book's max=0). The separate
     # total-flagged line below is the only purely-advisory one (it can fire on a passing check).
     if len(high_severity) > high_severity_max:
         issues.append(f"{len(high_severity)} high-severity flags (noise/garble patterns)")

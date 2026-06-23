@@ -6,9 +6,9 @@ Responsibilities (built out across milestones):
   3. derive an isolated ``BookWorkspace`` under ``books/<id>/work/`` (M1);
   4. dispatch to ``engine.steps.<step>.run(ws, cfg, lang, **opts)``.
 
-M0 scaffold: this provides the real argparse shape and step dispatch, but the
-steps themselves are stubs (each ``run`` raises NotImplementedError until ported),
-and book resolution / workspace derivation arrive in M1.
+The four responsibilities above are wired (book resolution + workspace derivation
+landed in M1). Each step is dispatched as it is ported; an unported step's ``run``
+raises ``NotImplementedError`` (surfaced as exit 2), naming the milestone that ports it.
 """
 
 from __future__ import annotations
@@ -44,10 +44,15 @@ def build_parser() -> argparse.ArgumentParser:
         prog="engine",
         description="Book/language-agnostic OCR → translate → typeset framework.",
     )
+    # --book has no default (the engine is book-agnostic — no "primary" book to bake, and at
+    # extraction there is none to point at). It is deliberately NOT argparse `required=True`:
+    # that would force --book onto `--list-books` too, but discovery must work without a book id.
+    # So it stays optional at parse time and `main()` enforces it only when a step actually runs.
+    # (Do not "tidy" this to required=True — it would break `--list-books`.)
     parser.add_argument(
         "--book",
-        default="per_la_liberta",
-        help="Book id under engine/books/ (default: per_la_liberta).",
+        default=None,
+        help="Book id under engine/books/ (required to run a step; see --list-books).",
     )
     parser.add_argument(
         "--step",
@@ -144,6 +149,12 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.step:
         print("engine: nothing to do (pass --step or --list-books).", file=sys.stderr)
+        return 1
+
+    # No book is baked as the default (the engine is book-agnostic): running a step needs an
+    # explicit --book. (--list-books, handled above, deliberately needs none.)
+    if not args.book:
+        print("engine: --book is required to run a step (see --list-books).", file=sys.stderr)
         return 1
 
     opts = _collect_step_opts(args)

@@ -13,7 +13,7 @@ monolingual dictionary:
 **Two seams carry the language/book opinion, both injected:**
 
   - the dictionary membership check ("is W a real period word?") is a ``DictionaryOracle``.
-    M3 binds it to the **monolingual** period dictionary (Zingarelli 1922 for PLL); M6 will
+    M3 binds it to the **monolingual** period dictionary (Zingarelli 1922, the example book's); M6 will
     re-express it on the ≥2-of-N period-dictionary oracle (branch register **BR-001**) without
     touching the classifier, which depends only on the oracle's ``(found, matches)`` contract.
   - the OCR boundary substitutions used by the correction passes come from
@@ -320,7 +320,7 @@ def _build_oracle(cfg: ResolvedConfig) -> DictionaryOracle:
     """Bind the membership oracle to the language's **monolingual** period dictionary.
 
     adjudicate needs an "is this a real Italian word?" membership test; the monolingual period
-    dictionary (Zingarelli 1922 for PLL) is that, whereas the bilingual IT→EN dictionaries are a
+    dictionary (Zingarelli 1922, the example book's) is that, whereas the bilingual IT→EN dictionaries are a
     different shape. The ≥2-of-N combination across all period dictionaries is M6's job (BR-001).
     """
     mono = [d for d in cfg.language.period_dictionaries if d.kind == "monolingual"]

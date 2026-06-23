@@ -8,6 +8,12 @@
     "source_noise": "bodoni_didone",
     "typeface": "spectral_fraunces"
   },
+  "overrides": {
+    "language": {
+      "display_name": "Sintetico",
+      "accent_inventory": ["ñ", "ç", "ø"]
+    }
+  },
   "sources": [
     {
       "role": "copy1",

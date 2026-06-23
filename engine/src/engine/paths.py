@@ -1,8 +1,8 @@
 """``BookWorkspace`` — every generated artifact lives under ``books/<id>/work/``.
 
 This is the isolation primitive the whole forward-fork rests on (plan §"Keeping the live
-edition safe"): the engine must never write into the live PLL tree (``data/``, ``output/``,
-``state/``, …) at the repo root. A step asks the workspace for an output path via
+edition safe"): the engine must never write into the parent repo's live tree (``data/``,
+``output/``, ``state/``, …) at the repo root. A step asks the workspace for an output path via
 ``resolve``, which *asserts the path stays inside the work tree* and raises on any escape
 (``..`` traversal or an absolute path). The three areas mirror the live pipeline's
 ``DATA_DIR``/``OUTPUT_DIR``/``STATE_DIR`` seam (``pipeline.py:12-15``), now per-book and
