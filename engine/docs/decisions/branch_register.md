@@ -442,3 +442,53 @@
   "siblings, not a premature unification" logic M4a used; they are cheap two-way doors.
 - **Revisit:** **M4c** decides whether triage/cleanup/translate/refine share one `ChatBackend` that
   M5's `providers.py` generalizes (BR-009's open half). Until then each step owns its minimal seam.
+
+## BR-021 — document-structure is an under-abstracted axis: engine direction = position-based chapter identity (one-way door)
+- **Opened:** 2026-06-23 (M4c pre-port coverage audit + design discussion with the user). *(Numbering:
+  BR-015–020 are reserved by `ENGINE_M4c_PLAN.md` §9 for M4c's porting entries; this is a
+  framework-level decision opened ahead of them, so it takes 021.)*
+- **Context:** **language** got a clean engine abstraction (`LanguagePlugin`) and **typeface** a clean
+  profile, but **document structure did not.** The part→chapter→paragraph model and "a chapter's
+  identity is its printed ordinal" ride in as an un-examined default, smeared across three homes: the
+  language plugin (`is_chapter_heading`, `structural_part`, the ordinal tables — *entangling structure
+  with language*), the manifest (`structure.h3_count`, `structure.parts`), and a baked markdown
+  convention (`##`=part, `###`=chapter). The M4c audit's F-A/F-B/F-C are leaks from this single gap:
+  the same chapter is encoded ≥4 ways — printed-ordinal int (`parse_chapter_number`/`ORDINALS`),
+  positional counter (`chapter_identities.number`), lexical title-slug (`parse_md`), and a separate
+  English-word table (`title_to_english`/`_ITALIAN_NUMBERS`) — kept in sync by hand, with persistence
+  keyed on the **most fragile** encoding (the lexical slug). The robust ordinal resolver sits unused
+  beside the brittle one; two code paths even derive the *same* `short` id two different ways
+  (positional counter in `chapter_identities` vs. parsed ordinal in `split_raw_chapters`), never
+  cross-checked.
+- **Taken now (direction):** chapter identity = **position in its container** (`p{part}_ch{NN}`), with
+  the printed ordinal **demoted to a display projection** — the source-language title stays verbatim
+  source, the English title is *formatted* from the resolved integer by a total function (no per-form
+  lookup table). Position-in-container is the more universal primitive: it survives named, dated, or
+  non-ordinal divisions where ordinal-identity does not. This is the through-line behind the
+  M4c-plan consequences **BR-019** (stable persistence id) and **BR-020** (single ordinal model); they
+  are *downstream* of this entry.
+- **Not taken — and deliberately:** (a) keep the status quo (≥4 hand-synced encodings keyed on the
+  fragile slug); (b) **design a universal document model now** — rejected as the mirror trap
+  (speculative generality with one real book; the port plan forbids claiming generality without a
+  second book). We do **not** factor structure into its own plugin/profile axis yet, nor fix a
+  containment depth or an identity scheme beyond what PLL needs.
+- **Why decide the *direction* now (not defer):** the audit surfaced the gap concretely and M4c is
+  about to harden an id contract (the `state/translations/` key + the sidecar keys). Choosing
+  position-based identity *before* the engine binds to the slug is the point of maximum leverage and
+  **zero migration cost** (the engine is a fresh build). Deferring the *extent* (does structure become
+  its own axis?) is information-not-effort: only a structurally-different second book tells us which
+  pieces are PLL-specific.
+- **Discipline note (the trap this guards):** for **model** decisions — distinct from the equivalence
+  regression net — the live PLL is **one data point, not the spec.** The faithfulness tier proves "we
+  didn't change behavior," never "the behavior is right." This entry exists so the part/chapter/ordinal
+  model is a **named, revisitable** choice rather than an immutable default that rode in on the port
+  (`port_discipline.md` §1: equivalence is the net, not the definition of done).
+- **Revisit / validate when:** the first structurally-different book is in hand. **Near-term validation
+  step (before M4c hardens the id contract):** pressure-test the part/chapter/position model against a
+  real second structure — **Athanor's Kybalion** (a real second corpus whose *actual* structure the
+  test reads; it is *expected* — not yet verified this session — to break the ordinal-identity
+  assumption, e.g. named rather than ordinal-numbered divisions) — to learn which pieces are
+  PLL-specific and whether *structure* must become its own plugin axis. Pairs with
+  BR-004 (book title lifted out of the plugin — precedent for structure facts leaking in, extracted
+  case-by-case), BR-006 (ordinal garbles entangled in the plugin), BR-002 (generalization unproven
+  with one fixture). Children: BR-019, BR-020.

@@ -65,6 +65,18 @@ duplication/divergence, which is acceptable because the top-level tree is frozen
   **divergence ledger** and a **branch register** (`engine/docs/decisions/`) — record behavioral
   changes made and forks deferred, so we never silently reproduce *or* silently "fix" PLL. Canonical
   statement: `engine/docs/port_discipline.md`; each milestone plan *applies* it, it is not re-argued.
+- **Document-structure axis (discovered 2026-06-23, M4c audit).** Language and typeface each became a
+  clean engine axis; **document structure did not** — the part→chapter→paragraph model and
+  ordinal-derived chapter identity rode in as an un-examined default, entangled across the language
+  plugin, the manifest, and a baked markdown convention (`##`=part, `###`=chapter). **Direction
+  taken:** chapter identity = **position in container**, with the printed ordinal demoted to a display
+  projection (the more universal primitive — it survives named/dated/non-ordinal divisions).
+  **Not taken:** designing a universal document model now (speculative generality with one real book).
+  Recorded as **BR-021** with a near-term validation step — pressure-test against a candidate second
+  corpus (Athanor's Kybalion; its structural difference is *expected but not yet verified*, the test
+  reads its actual structure) *before* M4c hardens the id contract. Guards the standing
+  trap: for *model* decisions the live PLL is one data point, not the spec — equivalence proves we
+  didn't change behavior, never that the behavior is right.
 
 ## Approach
 
