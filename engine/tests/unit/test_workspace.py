@@ -49,3 +49,26 @@ def test_resolve_rejects_absolute_part(tmp_path):
     ws = BookWorkspace.for_book("demo", tmp_path)
     with pytest.raises(ValueError, match="must be relative"):
         ws.resolve("data", "/etc/passwd")
+
+
+# --- resolve_root: the area-less work-root resolver (S0.1 structure artifacts) ---------- #
+
+def test_resolve_root_returns_paths_at_the_work_root(tmp_path):
+    ws = BookWorkspace.for_book("demo", tmp_path)
+    p = ws.resolve_root("structure_map.json")
+    assert p == ws.root / "structure_map.json"
+    assert p.parent == ws.root  # at the root, not under data/output/state
+    assert p.is_relative_to(ws.root)
+
+
+@pytest.mark.parametrize("escape", ["../../../etc/passwd", "../sibling", "a/../../x"])
+def test_resolve_root_rejects_traversal_escape(tmp_path, escape):
+    ws = BookWorkspace.for_book("demo", tmp_path)
+    with pytest.raises(ValueError, match="escapes workspace"):
+        ws.resolve_root(escape)
+
+
+def test_resolve_root_rejects_absolute_part(tmp_path):
+    ws = BookWorkspace.for_book("demo", tmp_path)
+    with pytest.raises(ValueError, match="must be relative"):
+        ws.resolve_root("/etc/passwd")

@@ -94,6 +94,24 @@ class BookWorkspace:
             (self.root / area).mkdir(parents=True, exist_ok=True)
         return self
 
+    def _contained(self, base: Path, parts: tuple[str, ...]) -> Path:
+        """Join ``parts`` onto ``base`` and assert the result stays inside the work tree.
+
+        The single containment chokepoint behind ``resolve``/``resolve_root`` — the assertion
+        that makes the live tree unreachable lives here and *only* here, so it cannot be hardened
+        in one resolver and missed in the other. ``base`` is itself always inside ``root``.
+        Raises ``ValueError`` on an absolute part or any ``..`` traversal that escapes ``root``.
+        """
+        if any(Path(p).is_absolute() for p in parts):
+            raise ValueError(f"workspace path parts must be relative, got {parts!r}")
+
+        candidate = base.joinpath(*parts).resolve()
+        if candidate != self.root and not candidate.is_relative_to(self.root):
+            raise ValueError(
+                f"path {candidate} escapes workspace {self.root} (rejected)"
+            )
+        return candidate
+
     def resolve(self, area: str, *parts: str) -> Path:
         """Resolve ``<work>/<area>/<*parts>``, guaranteeing the result stays in the work tree.
 
@@ -102,12 +120,16 @@ class BookWorkspace:
         """
         if area not in _AREAS:
             raise ValueError(f"unknown workspace area {area!r}; expected one of {_AREAS}")
-        if any(Path(p).is_absolute() for p in parts):
-            raise ValueError(f"workspace path parts must be relative, got {parts!r}")
+        return self._contained(self.root / area, parts)
 
-        candidate = (self.root / area).joinpath(*parts).resolve()
-        if candidate != self.root and not candidate.is_relative_to(self.root):
-            raise ValueError(
-                f"path {candidate} escapes workspace {self.root} (rejected)"
-            )
-        return candidate
+    def resolve_root(self, *parts: str) -> Path:
+        """Resolve ``<work>/<*parts>`` at the work-tree **root**, with the same escape guard.
+
+        The area-less counterpart to ``resolve``, for the few artifacts pinned at the work root
+        rather than under ``data``/``output``/``state`` (e.g. the structure substrate's durable
+        ``structure_map.json`` and ``relations.json`` — ENGINE_STRUCTURE_PLAN §11.2/§11.3). Same
+        containment contract via the shared ``_contained`` guard: an absolute part, or a ``..``
+        traversal that would escape ``root``, raises ``ValueError`` — the live tree stays
+        unreachable through this resolver too.
+        """
+        return self._contained(self.root, parts)
