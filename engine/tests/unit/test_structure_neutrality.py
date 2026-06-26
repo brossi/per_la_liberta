@@ -11,8 +11,13 @@ plugin) / F2 (fixed-shape validator) anti-patterns this axis exists to remove.
 Distinct from ``test_core_neutrality`` (book *entities* + typeface, across all of core); this one
 targets the structure axis's specific failure mode. Like that guard, the denylist is the
 known-leak set, not a completeness proof — semantic leakage (an Italian-only segmentation
-assumption with no literal) is caught by profile-extraction review, not this scan. The planted-leak
-test below proves the scan is not vacuous (it would catch a real reintroduction).
+assumption with no literal) is caught by profile-extraction review, not this scan.
+
+Invariant (proven red below — red-first, §9): no source-language heading, guillemet (literal char
+OR ``\\u00ab``/``\\xab`` escape form), or baked part/chapter count appears in ``structure/`` core.
+``test_no_language_or_structure_literal_…`` is green on the package; ``test_guard_catches_a_planted_literal``
+is the non-vacuity red-proof — it plants each forbidden term and asserts the scan flags it, so the
+guard is known to go red on a real reintroduction, not merely green on a clean tree.
 """
 
 from __future__ import annotations
@@ -30,8 +35,11 @@ PY_FILES = sorted(STRUCTURE_SRC.rglob("*.py"))
 FORBIDDEN = [
     # source-language heading + matter grammar (PLL's, but the rule is general: no source headings)
     "capitolo", "prefazione", "parte prima", "parte seconda",
-    # guillemets used as quote/structure markers (the profile declares a book's quote marks)
-    "«", "»",
+    # guillemets used as quote/structure markers (the profile declares a book's quote marks),
+    # BOTH as the literal char and as the unicode/hex escape forms — live validate.py writes them
+    # as "«"/"»" (validate.py:108-109), which a char-only scan would miss: the exact
+    # reintroduction path the pipeline actually uses.
+    "«", "»", "\\u00ab", "\\u00bb", "\\xab", "\\xbb",
     # PLL's baked structure shape (F2): the live validator's `check_chapter_count` hard-codes the
     # part/chapter count (its `h3_count` result key; the 24+33=57 literals). The general tree model
     # replaces that — either token reappearing in structure/ core is book opinion leaking back in.

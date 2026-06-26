@@ -5,6 +5,17 @@ schema version, and the artifact accessors resolve to their pinned work-tree loc
 the workspace (ENGINE_STRUCTURE_PLAN §11.1–§11.3): atoms under the ``data`` area, the structure
 map and relations at the work root. The containment guard on ``resolve_root`` itself (the
 work-root resolver these accessors ride on) is exercised in ``test_workspace.py``, where it lives.
+
+Invariants (each proven red on violation below — red-first, ENGINE_STRUCTURE_PLAN §9):
+  - package imports as a real namespace — ``test_structure_package_imports``.
+  - each persisted layer exposes a positive, non-bool int schema version — 0 fails ``>= 1``,
+    ``True`` fails the bool exclusion (``test_each_layer_…``).
+  - the three versions are independently addressable on the public surface — drop a constant from
+    the package re-export and ``test_the_three_versions_…`` + ``test_all_public_exports_…`` go red.
+  - accessors resolve to their §11 locations (atoms→``data/atoms``, map/relations→work root) and
+    the three are distinct — a wrong location fails the ``==`` (the four location tests).
+  - every ``__all__`` name imports as ``structure.X`` — a broken re-export AttributeErrors in
+    ``test_all_public_exports_…`` rather than passing green (feedback_validate_bindings).
 """
 
 from __future__ import annotations
@@ -38,7 +49,9 @@ def test_the_three_versions_are_independently_addressable():
     # another. Their *values* coincide at v1 — a value-distinctness assertion would be hollow — so
     # the real invariant is that all three are present, distinct names on the package's public
     # surface, independently referenceable. That is what lets S1.5/S4.4/S7.1c bump one in isolation.
-    assert len(set(VERSION_NAMES)) == 3                          # three distinct names, not aliases
+    # Red-proof: drop any of these names from __init__'s re-export and both this and
+    # test_all_public_exports_… go red. No value-distinctness assertion — values coincide at v1,
+    # so that would test nothing; independence is that each is a separately-rebindable name.
     assert set(VERSION_NAMES) <= set(structure.__all__)          # each is part of the exported API
     assert all(hasattr(structure, n) for n in VERSION_NAMES)     # each resolves to its own binding
 
@@ -75,3 +88,12 @@ def test_the_three_artifact_locations_are_distinct(tmp_path):
         structure.relations_path(ws),
     }
     assert len(locations) == 3
+
+
+def test_all_public_exports_resolve_on_the_package():
+    # Every name in __all__ actually imports as ``structure.X``. A re-export listed in __all__ but
+    # dropped from the import block would AttributeError here, not pass green — the four string
+    # constants (ATOMS_AREA, ATOMS_SUBDIR, STRUCTURE_MAP_FILENAME, RELATIONS_FILENAME) are
+    # otherwise reached only transitively through the accessors (feedback_validate_bindings).
+    for name in structure.__all__:
+        assert hasattr(structure, name), f"{name!r} is in __all__ but not importable from engine.structure"

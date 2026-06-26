@@ -527,6 +527,21 @@ further sign-off.
 
 ## 9. Test strategy
 
+**Red-first, invariant-driven — the method over every tier below.** A test that has never been
+red is a claim, not a check. (1) **Enumerate** invariants from the done-when *before* writing
+tests, in the module docstring (an `Invariants (proven red below)` block). (2) For each, **see it
+red on violation** before trusting green: TDD for new code (the test fails with the code absent); a
+**permanent** negative / planted-violation control for a guard over existing code (mutate the
+input / monkeypatch the mechanism / drop the binding) — never a throwaway probe. (3) Name the input
+that turns each assertion red; if it is "edit the test's own literal" or "a stdlib bug," it is a
+tautology — rewrite it against the code under test. Enumeration-first catches the
+*missing-invariant* class (the symlink-canonicalization vector was implied by "live tree
+unreachable" yet had no test); the red-proof catches the *weak-test* class (tautologies, tests that
+exercise stdlib not the code). The mechanical form of (2) is **mutation testing** — a surviving
+mutant is a line no test discriminates; adopt scoped where cost permits. Worked examples:
+the S0.1–S0.3 module docstrings (`test_workspace`, `test_structure_artifacts`,
+`test_structure_tiers`, `test_structure_neutrality`).
+
 Per the house tiers (`tests/unit` property/separability/isolation/neutrality; `tests/golden`):
 
 - **Golden** — reproduce PLL's current chapter boundaries and identities through the new
