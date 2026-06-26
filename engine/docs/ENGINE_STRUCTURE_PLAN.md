@@ -164,9 +164,9 @@ durable catalogue is B; its relations are C).
 ### 3.0 Coordinate space & capture completeness
 
 - **Every L1 atom carries a durable address:** `{witness_id, raw_codepoint_span,
-  page/scan_range, geom (word-box bbox), normalization_layer_id}`, plus a `raw_source_hash`
-  pinning the raw witness text the span addresses. Atoms remain addressable across all
-  downstream stages because nothing recomputes these from mutated text.
+  page/scan_range, geom (optional word-box bbox + match-provenance), normalization_layer_id}`,
+  plus a `raw_source_hash` pinning the raw witness text the span addresses. Atoms remain
+  addressable across all downstream stages because nothing recomputes these from mutated text.
 - The existing port's only coordinate seed is `_strip_page_markers`'s `{clean_offset → page}`
   map (`reconcile.py:485`) — built *after* normalization, page-granular, witness-untagged.
   It becomes one projection over this address space, not the only one. `collapse_spaces`
@@ -174,17 +174,27 @@ durable catalogue is B; its relations are C).
   destroys line structure), and `strip_boilerplate` (`lang/italian.py`) are string→string
   with no offset map today; the address space is what replaces that loss.
 - **"Everything is brought in" = captured-with-role.** Gutenberg wrappers, running heads
-  (`Structure.running_heads`, BR-004), and scan furniture are captured atoms carrying a
-  `provenance_class` ∈ {`source-wrapper`, `page-furniture`, …} and a `processing_scope`
-  that excludes them downstream (§3.3) — **captured-but-excluded is distinct from
-  never-captured**, and that distinction is what makes the no-loss round-trip checkable (§9).
+  (`Structure.running_heads`, BR-004), and scan furniture are captured atoms carrying an L1
+  **capture-provenance** class ∈ {`source-wrapper`, `page-furniture`, …} (the L1 field of the
+  L1/L2 split in §3.3) and a `processing_scope` that excludes them downstream (§3.3) —
+  **captured-but-excluded is distinct from never-captured**, and that distinction is what
+  makes the no-loss round-trip checkable (§9).
 - `normalization_layer_id` (`norm_layer`) is a human-readable label, **never** the loss
   guarantee. The binding guarantee is `raw_source_hash` + the byte-exact raw round-trip tier
   (§9) and a reversible transform map for normalized text.
 - **Geometry (`geom`, D30)** is a physical fact of the witness scan: the **primary
   re-binding signal** (§3.4) and the base layer for space/fragment reconstruction. It is
   available when a scan exists (PLL has the LOC PDF); the portability floor for text-only
-  sources is content + structural-path.
+  sources is content + structural-path. **The slot is `Optional`, and absence is a
+  first-class state — never invented coordinates:** one of PLL's three witnesses (copy3,
+  Gemini-vision text) has no word-box layer at all, before any failed OCR-box match. And
+  because the boxes come from a *different* OCR pass (PyMuPDF) than the witness text
+  (IA-Tesseract / Gemini), `geom` is not a fact *about the witness text* until a matcher
+  proves it: each value therefore carries match-provenance — `{geometry_engine,
+  matched_witness_id, match_method, match_confidence}` and a `{present | absent}` state — and
+  an **unmatched box is unusable as a primary re-bind anchor**. The probe that measures this
+  text↔box alignment quality, and the demotion path when it misses threshold, are the
+  build-now gate of the geometry pole (task tracker S2.0/S2.1).
 
 ### 3.1 Container tree
 
@@ -230,13 +240,24 @@ durable catalogue is B; its relations are C).
   - **role** — `front | body | back`, *structural matter only* (never `excluded`).
   - **authorship** — who, at scope `work | witness | translation | span`; overridable, not a
     book-level constant (Pepys editor splices mid-sentence; EB per-sub-section signatures).
-  - **provenance_class** — editorial status: `authorial | editorial | translator-note |
+  - **content provenance** — editorial status: `authorial | editorial | translator-note |
     transcriber | generated-TOC | scan-OCR-furniture | source-wrapper | renderer-added`.
+- **L1 and L2 provenance are distinct semantic fields.** L1 records **capture / source
+  provenance** for atoms (§3.0 — how/whence the bytes were captured); L2 records **content /
+  editorial status** for projections (the axis above). Implementations **must use distinct
+  identifiers or otherwise enforce the distinction by schema** — they are not one shared
+  `provenance_class` reused at both layers — so a consumer cannot grab the convenient field
+  and bypass the rollup. *(Provisional names: L1 `capture_provenance_class`, L2
+  `content_provenance_class`; final names are an implementation choice, the binding
+  requirement is the distinctness.)*
 - **Pipeline participation is *derived*, not a `role` value.** Policy computes behavioral
   flags `translatable` / `alignable` / `counts_for_retention` / `rendered`, and validators
-  switch on *those* — so `provenance_class` can grow without hardcoding `translator-note`
-  into every step. `validate.check_word_count_preservation` keys on `counts_for_retention`,
-  not on a `provenance_class` literal.
+  switch on *those* — so the content-provenance vocabulary can grow without hardcoding
+  `translator-note` into every step. **Derived flags read the L2 content status *plus* an
+  explicit L1 rollup rule:** a node mixing authorial-body atoms with furniture/wrapper atoms
+  must either split the projection (preferred) or carry an explicit, tested mixed-rollup —
+  silent rollup of a mixed node is the failure mode. `validate.check_word_count_preservation`
+  keys on `counts_for_retention`, not on a raw provenance literal.
 
 ### 3.4 Identity — durable `node_id` + handle policy (keystone — DECIDED, Option A / D33)
 
@@ -425,7 +446,7 @@ coherent. (This supersedes the earlier "build only what PLL exercises" framing.)
 | Graph cross-ref edge type (may dangle / resolve externally) | EB | Mechanism now | concern-C edges, external/unresolved semantics |
 | Heterogeneous children | Atlantic | Yes | tree must not assume homogeneity |
 | Per-node / per-span authorship attribute | EB, Pepys, Atlantic | Mechanism now; PLL has a few overrides | Mazzini-letter override |
-| Three status axes + derived behavioral flags | all | Yes | role / authorship / provenance_class (§3.3) |
+| Three status axes + derived behavioral flags | all | Yes | role / authorship / provenance (L1 capture + L2 content, §3.3) |
 | Lineage manifest + stale-fail governance | all | Yes | §3.6 |
 | **Overlapping / interleaved hierarchy** | Hamlet | **Deferred (genuinely unsolved)** | reserved `participates-in` hook only (D15/D32) — the one deferral line |
 | Second-structure synthetic fixture (depth-0 + designation-string handle) | — | **Build-now GATE** | schema + adapter only; the schema is not "born" until it passes (D18) |
@@ -509,7 +530,13 @@ further sign-off.
 Per the house tiers (`tests/unit` property/separability/isolation/neutrality; `tests/golden`):
 
 - **Golden** — reproduce PLL's current chapter boundaries and identities through the new
-  model (no regression on the live target).
+  model (no regression on the live target). **Reserved for live-parity assertions only**
+  (I3 anti-cheat: expected values come from the live implementation), so it applies *only*
+  where a live referent exists — the chapter-identity rework, the legacy adapter, the PLL
+  identity golden. The net-new substrate (atoms, geometry, projections, relations) has **no
+  live referent**; a hand-authored synthetic artifact is a **fixture** or a
+  reference-integrity test, **never** a "golden" — calling it golden would invite invented
+  expected outputs wearing a parity badge (`feedback_no_cheating_results`).
 - **Property** — structure operations over synthetic trees (ragged depth, heterogeneous
   children, recursion-in-body).
 - **Neutrality** — no language/structure literals in core (the model carries no
@@ -555,7 +582,7 @@ Per the house tiers (`tests/unit` property/separability/isolation/neutrality; `t
 | D10 | Three-layer substrate: immutable addressed L1 atoms → versioned L2 projections → L3 annotations/spans/fields/relations | Decided (user) |
 | D11 | Durable opaque `node_id` is internal identity; F3 handles + provenance/revision keys are renderings of `(node_id, handle policy)` with an alias table | Decided (user) — via D33/O1 |
 | D12 | "Basis" demotes to a per-node-class handle policy with inheritance; `content-key` dropped (no forcing witness) | Decided (user) — via D33/O1 |
-| D13 | Orthogonal `provenance_class` axis, separate from role and authorship; capture-with-role for excluded matter | Decided (user) |
+| D13 | Orthogonal provenance axis, separate from role and authorship; capture-with-role for excluded matter. **L1 capture-provenance and L2 content/editorial provenance are distinct semantic fields** (distinct identifiers or schema-enforced), and derived flags read L2 status + an explicit L1 rollup rule (§3.3) | Decided (user) |
 | D14 | Lifecycle/governance spine: lineage manifest; stale = fail-loud; C-corrections are reviewer-approved patches, never auto-rewrite of L1; reference-integrity + round-trip tests | Decided (user) |
 | D15 | Overlapping hierarchy stays unsolved (no tree overlap) but a `participates-in` relation hook (`contiguous:false`, typed members) is reserved now | Decided (user) — confirmed by D32 |
 | D16 | Block model lands behind reconcile with a read-only `blocks → reconciled_chapters.json` adapter; consumers migrate one BR at a time | Decided (user) — resolves O5 |
@@ -565,13 +592,13 @@ Per the house tiers (`tests/unit` property/separability/isolation/neutrality; `t
 | D20 | L1 identity is `atom_id`; structural identity is `node_id` (L2/L3) — kept distinct; overlays pin by evidence type | Decided (user) — via D33/O1 |
 | D21 | Structure-map header is a lineage manifest (raw + atom-stream + canonical-projection hashes, profile + recognizer versions), referencing one `canonical_stream_id` | Decided (user) |
 | D22 | No-loss round-trip is two-tier: raw (byte-exact) + normalized (reversible transform map); plus negative tests | Decided (user) |
-| D23 | `role` = `front\|body\|back` only; pipeline participation is derived behavioral flags; validators switch on flags, not on `provenance_class` | Decided (user) |
+| D23 | `role` = `front\|body\|back` only; pipeline participation is derived behavioral flags; validators switch on flags, not on a raw provenance class (either layer — L1 capture or L2 content, D13/§3.3) | Decided (user) |
 | D24 | Aliases are records `{handle_type,value,scope,locale_or_witness,target_node_id,valid_from,valid_to,status}`; integrity = every active alias resolves to one node in its scope | Decided (user) — via D33/O1 |
 | D25 | L1 is never mutated in place, but may be superseded by a new stream version (re-capture); old ids stay addressable, refs migrate/tombstone | Decided (user) |
 | D26 | The legacy adapter is read-only; `triage` (in-place rewriter) migrates first off it, its edits becoming governed L2/L3 patches | Decided (user) |
 | D27 | Declarative profile holds data primitives only; stateful parsing crosses a hard line into the code escape hatch — no control flow in JSON, no structure DSL | Decided (user) |
 | **D28** | **Engine purpose: the production pipeline for a re-translated PLL (v2).** PLL is a real build target, not a study object — so B/C governance is not premature | **Decided (user)** |
-| **D29** | **Structure assignment (B) runs BEFORE cleanup/triage.** Layout/content-block structure is geometric base-truth before linguistic truth; `node_id` minted early, before text mutation | **Decided (user)** |
+| **D29** | **Structure assignment (B) runs BEFORE cleanup/triage** — i.e. before any *linguistic mutation*, **not** before raw capture or before the L1 substrate exists (A still precedes B in build order). Layout/content-block structure is geometric base-truth before linguistic truth; `node_id` minted early, before text mutation | **Decided (user)** |
 | **D30** | Space/fragment reconstruction = geometry at L1 (word bboxes; PyMuPDF/Fitz) + Zipf-cost DP word-segmentation over the frequency dictionary, oracle-gated — not by inverting `collapse_spaces`/`rejoin_lines`; raw tier stays the byte-exact floor | **Decided (user)** |
 | **D31** | Build enough of the spec to avoid PLL-shaped lock-in — build the general mechanism for each capability, instantiate what PLL needs; the deferral line is the genuinely-unsolved (overlap), not "untouched by PLL" | **Decided (user)** |
 | **D32** | Overlapping/interleaved hierarchy parked for future support (reserved hook only, D15/D19) | **Decided (user)** |
@@ -602,34 +629,44 @@ references **only** the canonical stream; per-witness atoms relate to it through
   { "atom_id": "a1_0007", "witness": "copy1", "text": "Capitolo Primo",
     "raw_span": [10432, 10446], "raw_source_hash": "sha256:…copy1",
     "page_range": [12, 12], "norm_layer": "rejoin+collapse",
-    "geom": { "page": 12, "bbox": [72.0, 118.4, 523.1, 134.8] },      // D30: Fitz/OCR word-box union
-    "provenance_class": "authorial" }
-  // a1_0008 (body), a1_0042 (letter body), … parallel
+    "geom": { "present": true, "page": 12, "bbox": [72.0, 118.4, 523.1, 134.8],   // D30: Fitz/OCR word-box
+              "geometry_engine": "pymupdf-ocr", "matched_witness_id": "copy1",     //   union, matched to
+              "match_method": "token-bbox", "match_confidence": 0.97 },            //   THIS witness text
+    "capture_provenance_class": "authorial" }
+  // a1_0008 (body), a1_0042 (letter body), … parallel.
+  // copy3 (Gemini-vision text, no word-box layer) carries  "geom": { "present": false }  — never invented.
 ]
 
 // data/atoms/canonical.json  — the reconciled projection the structure map keys on
 [
   { "atom_id": "ac_0007", "text": "Capitolo Primo", "page_range": [12, 12],
-    "norm_layer": "rejoin+collapse", "provenance_class": "authorial",
-    "geom": { "page": 12, "bbox": [72.0, 118.4, 523.1, 134.8] },      // primary-witness box, for re-bind
+    "norm_layer": "rejoin+collapse", "capture_provenance_class": "authorial",
+    "geom": { "present": true, "page": 12, "bbox": [72.0, 118.4, 523.1, 134.8],   // primary-witness box
+              "geometry_engine": "pymupdf-ocr", "matched_witness_id": "copy1",     //   (matched), for
+              "match_method": "token-bbox", "match_confidence": 0.97 },            //   re-bind
     "derived_from": [ { "witness": "copy1", "atom_id": "a1_0007" },
                       { "witness": "copy2", "atom_id": "a2_0007" } ] },
   { "atom_id": "ac_0008", "text": "Carlo di Rudio nacque a Belluno…", "page_range": [12, 13],
-    "provenance_class": "authorial", "derived_from": [ /* … */ ] },
+    "capture_provenance_class": "authorial", "derived_from": [ /* … */ ] },
   { "atom_id": "ac_0042", "text": "Fratelli, l'ora è giunta…", "page_range": [19, 20],
-    "provenance_class": "authorial", "derived_from": [ /* … */ ] }
+    "capture_provenance_class": "authorial", "derived_from": [ /* … */ ] }
 ]
 ```
 
 `atom_id` is **L1 identity** (text evidence + coordinates), distinct from the structural
 `node_id` of §11.2. `raw_span` + `raw_source_hash` make the **raw** round-trip tier
 byte-exact; `norm_layer` is human-readable provenance only, never the loss guarantee. `geom`
-(D30) is the word-box geometry every atom carries — the **primary re-binding signal** (§3.4)
-and the base layer for space/fragment reconstruction; it is a physical fact of the witness
-scan, so the canonical atom carries its primary witness's box. Page furniture and source
-wrappers are captured atoms too, with `provenance_class: "page-furniture"` / `"source-wrapper"`
-and a `processing_scope` that excludes them from translate/retention — captured-but-excluded,
-never dropped.
+(D30) is the **optional** word-box geometry, the **primary re-binding signal** (§3.4) and the
+base layer for space/fragment reconstruction; it is a physical fact of the witness scan, so
+the canonical atom carries its primary witness's box **where a matcher confidently aligns the
+box to that witness's text** — otherwise `geom.present` is `false` (copy3 has no box layer at
+all), never invented. Each present box records its `geometry_engine` / `matched_witness_id` /
+`match_method` / `match_confidence`, and an unmatched box is unusable as a primary re-bind
+anchor (§3.0). Page furniture and source
+wrappers are captured atoms too, with `capture_provenance_class: "page-furniture"` /
+`"source-wrapper"` (the L1 capture field; L2 content/editorial provenance is a *distinct*
+field, §3.3) and a `processing_scope` that excludes them from translate/retention —
+captured-but-excluded, never dropped.
 
 ### 11.2 Artifact B — structure map (B's output, the durable catalogue)
 
