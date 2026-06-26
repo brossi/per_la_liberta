@@ -11,15 +11,21 @@ code-verified, per point. Sections are numbered and claims are kept atomic so an
 audit block can target one line. Findings about the live tree are cited as
 `file · symbol`; findings about the existing engine port are cited the same way.
 
-## Status — NOT signed off
+## Status — keystone decided; not yet fully signed off
 
 - **Agreed by the user (this session):** the *two-layer* framing — extraction
   ("everything is brought in") then a durable tracking/structural model ("how it is
   durably catalogued").
-- **Open / proposed (this session):** the three-concern decomposition (§2), the five
-  rulings (§4), the build-now vs joint-only scope (§6), and the engine integration
-  (§7). The user is *open to* — not committed to — human-in-the-loop structural
-  tagging (§3.5). Nothing below is final.
+- **Decided by the user (rulings):** engine = PLL v2 production pipeline (D28); structure-first
+  pipeline order (D29); geometry + Zipf-DP reconstruction (D30); build-enough-of-spec scope (D31);
+  overlapping hierarchy parked (D32); **O1 identity keystone = Option A "store-and-rebind" (D33),
+  with the identity cluster D11/D12/D20/D24 it entails.** HITL structural tagging is now *committed
+  for PLL* (D28/D29) — only its scale-ceiling/inference-fallback for large non-PLL validators stays
+  open (O3).
+- **Still proposed (await a sign-off pass):** the three-concern decomposition (§2), R2–R5 (§4), the
+  build-now vs joint-only scope (§6), the engine integration (§7), and D-rows D2, D4–D10, D13–D19,
+  D21–D23, D25–D27. Editorial gaps remain: §3.0/§3.6 are referenced but unwritten, and §6/§7/§11
+  partly lag the rulings (§6↔D31, §7↔D29).
 - **PLL is a reference, not a spec.** The other ten corpus witnesses are co-equal
   structural witnesses used as conformance validators, not a build backlog.
 - **Evidence base:** `structure_corpus/findings/*.md` (ten close-reads) +
@@ -560,13 +566,18 @@ Validators switch on those flags, **not** on the `provenance_class` enum — so 
 "scan-OCR-furniture"`. §3.3 corrected (no `role=excluded`).
 ======
 
-### 3.4 Identity — durable `node_id` + handle policy (the keystone)
+### 3.4 Identity — durable `node_id` + handle policy (keystone — DECIDED, Option A / D33)
 
-*Revised post-round-2 (D11/D12; Codex #9): "basis" no longer means identity.*
+*Revised post-round-2 (D11/D12; Codex #9): "basis" no longer means identity. O1 resolved by user
+ruling D33 — Option A ("store-and-rebind"); see the decision note at the end of this section.*
 
 - **Internal identity is an opaque, durable `node_id`** — assigned once (at B-time), persisted in the
   structure map, never re-derived from position, designation, or content. It is the root every overlay,
   relation, and revision key pins to. (Atom-level evidence pins to a distinct L1 `atom_id` — Codex #4.)
+  **Minting split (D33):** humans author/approve the *container* tree (~61 nodes for PLL, the §3.5
+  HITL-tractable scale); the extractor *machine-mints* leaf `node_id`s (counter/ULID) and persists them
+  in the same map — humans spot-check, never hand-key thousands. No `node_id` carries a positional
+  component; the readable `p1_ch01.p3`-style string is a handle (below), not the id.
 - **Designation / position / headword are handle policies and citation semantics, not identity.** Each
   node-class carries a `handle_policy` (`position-path` | `designation-string` | `title` | …), inherited
   down the tree unless overridden, declared in the structure map — a **policy per node class** (RT#9),
@@ -583,19 +594,24 @@ Validators switch on those flags, **not** on the `provenance_class` enum — so 
   content-derived handles, that is a future handle policy with collision/migration behavior defined then.
 - Identity is **depth-varying in the stability of its handle**, not in whether identity exists: container
   handles are reliable; block-granularity correspondence is alignment-mediated (§4 R5).
+- **Re-binding — the residual hard part (D33).** Each node stores `rebind_anchors` — *checkpoints, not
+  identity* (R2): a **geometry** anchor (page + bbox region, from D30's Fitz word-boxes — the signal most
+  invariant to OCR re-tokenization, hence primary), a **fuzzy/fail-loud content fingerprint** (never the
+  exact-substring the live tree tombstoned), and a **structural-path** tie-break. On re-extraction a node
+  re-attaches to the fresh atoms occupying its stored region, verified by fingerprint; unique + confident
+  → bind; ambiguous or below threshold → **fail loud → human re-approval** (D14 governance). Geometry is a
+  *strength when a scan exists* (PLL has the LOC PDF); the portability floor for text-only sources is
+  content + structural-path.
 
-> **O1 note — a path that may dissolve the minting paradox (for the user's call, not yet decided).**
-> The open worry was: how to mint an opaque `node_id` that is stable across re-extraction *and*
-> reproducible *and* not derived from position/content. If `node_id` is **assigned once by the
-> human-authored structure map and persisted** there (the `typography.json` precedent the plan already
-> leans on, §3.5) rather than *computed* each run, the paradox largely dissolves: the id is stable
-> because it is stored, reproducible because the map is a committed/versioned artifact, and derived from
-> neither position nor content because it is an assigned label. D29 (structure-first) makes this concrete
-> — the map is authored *early*, before cleanup. The residual hard part is not minting but **re-binding**:
-> when extraction re-runs and emits fresh atoms, they must re-attach to the existing map's `node_id`s via
-> geometry + fuzzy/fail-loud content checkpoints (R2) — a problem already in scope. This reframes O1 from
-> "design a magic id function" to "persist ids in B's artifact + make re-binding robust." Open until the
-> user rules.
+> **O1 — DECIDED (user ruling D33): Option A, "store-and-rebind."** `node_id` is an opaque label
+> *stored* in B's structure map (the `typography.json` precedent), not *computed* from raw — so it is
+> stable (stored), reproducible *as committed/versioned data*, and derived from neither position nor
+> content (R2-clean). The rejected alternative was a hash/derivation (Option B): from-scratch
+> recomputability at the cost of the exact mutable-basis churn R1/R2 killed. **Acknowledged one-way
+> gate:** the structure map is therefore a hand-tuned, *irreproducible* artifact and **joins the
+> regeneration-guard family** (translations, `typography.json`) — never blown away and regenerated;
+> deleting and re-authoring it mints *different* ids by design. The user accepts this as a one-way gate,
+> revisitable ("tweak the door") only after the initial build-out shows how it behaves in practice.
 
 @@@@@@
 **Red-team #9 — a single per-book identity basis is too coarse.**
@@ -1213,7 +1229,7 @@ failure modes the substrate exists to make unmissable. §9 updated.
 |---|---|---|
 | D1 | Two-layer framing: extraction → durable structural model | Agreed (user) |
 | D2 | Three-concern decomposition A/B/C, non-linear | Proposed |
-| D3 | Identity per-book basis; designation off the identity path (R1) | Proposed (O1) |
+| D3 | Identity per-book basis; designation off the identity path (R1) | Superseded by D11/D12/D33 — Decided (user) |
 | D4 | Content anchor checkpoints, never defines, identity (R2) | Proposed |
 | D5 | Stage A typed + correctable by B (R3) | Proposed |
 | D6 | Contiguous embedding build-now; overlapping hierarchy unsolved (R4) | Proposed (O4) |
@@ -1221,8 +1237,8 @@ failure modes the substrate exists to make unmissable. §9 updated.
 | D8 | Structure recognition split out of LanguagePlugin | Proposed (O2) |
 | D9 | HITL structural tagging as first-pass authoring | User open, not committed (O3) |
 | D10 | Three-layer substrate: immutable addressed L1 atoms → versioned L2 block projections → L3 annotations/spans/fields/relations (replaces flat "typed blocks + spans") | Proposed (RT#4/7/13) |
-| D11 | Durable opaque `node_id` is internal identity; F3 handles + provenance/revision keys are renderings of `(node_id, handle policy)` with an alias table | Proposed — revises O1 (RT#10) |
-| D12 | "Basis" demotes to a per-node-class handle policy with inheritance; `content-key` dropped (no forcing witness) | Proposed — revises O1 (RT#9) |
+| D11 | Durable opaque `node_id` is internal identity; F3 handles + provenance/revision keys are renderings of `(node_id, handle policy)` with an alias table | Decided (user) — entailed by D33/O1 |
+| D12 | "Basis" demotes to a per-node-class handle policy with inheritance; `content-key` dropped (no forcing witness) | Decided (user) — entailed by D33/O1 |
 | D13 | Orthogonal `provenance_class` axis (authorial/editorial/translator/furniture/…), separate from role and authorship; capture-with-role for excluded matter | Proposed (RT#3/8) |
 | D14 | Lifecycle/governance spine: structure map declares source hash; stale = fail-loud; C-corrections are reviewer-approved patches, never auto-rewrite of L1; reference-integrity + round-trip tests | Proposed (RT#5/11/17) |
 | D15 | Overlapping hierarchy stays unsolved (no tree overlap) but a `participates-in` relation hook (`contiguous:false`) is reserved now | Proposed — narrows O4 (RT#12) |
@@ -1230,11 +1246,11 @@ failure modes the substrate exists to make unmissable. §9 updated.
 | D17 | O2 reframed: declarative structure profile first, narrow code escape hatch only (Hamlet); PLL = profile + relocated ordinal reader | Proposed — revises O2 (RT#15) |
 | D18 | Second-structure synthetic fixture (depth-0 + designation-string node) is a build-now gate, not a §9 add-on | Proposed (RT#14) |
 | D19 | `SpanRef = {atom_id,start,end}` is a first-class L3 endpoint; relation endpoints are a typed union `atom_range\|projection_node\|span_ref` | Proposed (Codex #2/#7/#12/#13) |
-| D20 | L1 identity is `atom_id`; structural identity is `node_id` (L2/L3) — kept distinct; overlays pin by evidence type | Proposed — corrects D10/D11 wording (Codex #4) |
+| D20 | L1 identity is `atom_id`; structural identity is `node_id` (L2/L3) — kept distinct; overlays pin by evidence type | Decided (user) — entailed by D33/O1 (corrects D10/D11 wording, Codex #4) |
 | D21 | Structure-map header is a lineage manifest (raw+atom-stream+canonical-projection hashes, profile + recognizer versions), not one `source_hash`; references one `canonical_stream_id` | Proposed (Codex #1/#11) |
 | D22 | No-loss round-trip is two-tier: raw (byte-exact from `raw_span`+`raw_source_hash`) + normalized (declared reversible transform map); plus negative tests for alias collision / unresolved endpoint / stale lineage | Proposed (Codex #3/#17) |
 | D23 | `role` = `front\|body\|back` only; pipeline participation is derived behavioral flags (`translatable`/`alignable`/`counts_for_retention`/`rendered`); validators switch on flags, not on `provenance_class` | Proposed — corrects RT#3/#8 `role=excluded` (Codex #8) |
-| D24 | Aliases are records `{handle_type,value,scope,locale_or_witness,target_node_id,valid_from,valid_to,status}`; integrity = every active alias resolves to one node in its scope | Proposed (Codex #10) |
+| D24 | Aliases are records `{handle_type,value,scope,locale_or_witness,target_node_id,valid_from,valid_to,status}`; integrity = every active alias resolves to one node in its scope | Decided (user) — entailed by D33/O1 (Codex #10) |
 | D25 | L1 is never mutated in place, but may be **superseded by a new stream version** (re-capture) when a capture atom is missing/malformed; old ids stay addressable, refs migrate/tombstone | Proposed — extends D14 (Codex #5) |
 | D26 | The legacy adapter is a **read-only** projection; `triage` (in-place rewriter) migrates **first** off it, its edits becoming governed L2/L3 patches | Proposed — sharpens D16 (Codex #16) |
 | D27 | Declarative profile holds data primitives only; stateful parsing crosses a hard line into the code escape hatch — no control flow in JSON, no structure DSL | Proposed — bounds D17 (Codex #15) |
@@ -1243,13 +1259,18 @@ failure modes the substrate exists to make unmissable. §9 updated.
 | **D30** | Space/fragment reconstruction is achieved by capturing **geometry at L1** (word bboxes; PyMuPDF/Fitz, already a dep) + **Zipf-cost DP word-segmentation** over the existing frequency dictionary, gated by the period-dictionary oracle — NOT by inverting `collapse_spaces`/`rejoin_lines`. Raw tier stays the byte-exact floor | **Decided (user) — withdraws the round-trip-impossibility concern** |
 | **D31** | Build-scope rule: build **enough of the spec to avoid one-way (PLL-shaped) lock-in** — up to all specimen structures if needed. Overrides the narrow "build only what PLL exercises"; the deferral line is the genuinely-unsolved (overlapping), not "untouched by PLL" | **Decided (user) — supersedes my RT#14/Codex-#14 scope framing** |
 | **D32** | Overlapping/interleaved hierarchy stays parked for future support (reserved hook only, D15/D19). Trigger cases: discontiguous interleaving (Hamlet inner play) and geometrically-parallel marginalia; extensive footnotes are mostly the `note-of` relation, not overlap | **Decided (user) — confirms O4 park** |
+| **D33** | **O1 resolved — Option A "store-and-rebind."** `node_id` is an opaque label stored in B's map (not derived); stable (stored) + reproducible-as-committed-data + R2-clean. Humans mint the container tree, extractor mints leaves; re-extraction re-binds via stored geometry (D30) + fuzzy content fingerprint + struct-path, fail-loud into D14. Rejected Option B (hash-derived → churn). **One-way gate: the map joins the regen-guard family (irreproducible, never regenerated); revisitable after the initial build-out.** Entails the identity model D11/D12/D20/D24 | **Decided (user)** |
 
 The O-ruling states after user round 3: **O3 premise DECIDED** — B/HITL will be built for PLL (D28);
 the open remainder is only the *scale ceiling + inference fallback* for large non-PLL validators (Pepys
 ~4,000), deferrable since PLL is the target. **O5 / pipeline order DECIDED** structure-first (D29). **O4**
-parked by user (D32). **O2** reframed (D17/D27). **O1 remains the sole live keystone** — the user is
-still considering the `node_id` *minting* mechanism (D29 fixes *when* it is minted — early, at B — but
-not *how*; see the persisted-map note in §3.4). Nothing else blocks.
+parked by user (D32). **O2** reframed (D17/D27). **O1 DECIDED** (D33, Option A "store-and-rebind") —
+`node_id` is stored in B's map and re-bound on re-extraction via geometry + fuzzy content checkpoints;
+the map joins the regen-guard family (one-way gate, revisitable post-build-out). The identity cluster it
+entails (D11/D12/D20/D24) is Decided with it. **No open ruling now blocks task decomposition** — the
+remaining gating work is editorial: write §3.0/§3.6 (referenced but unwritten), reconcile §6↔D31 and
+§7↔D29, fold the geometry layer through §3, and a sign-off pass on the still-Proposed D-rows (D2,
+D4–D10, D13–D19, D21–D23, D25–D27).
 
 ---
 
@@ -1277,6 +1298,7 @@ directly.
   { "atom_id": "a1_0007", "witness": "copy1", "text": "Capitolo Primo",
     "raw_span": [10432, 10446], "raw_source_hash": "sha256:…copy1",   // Codex #3: raw tier
     "page_range": [12, 12], "norm_layer": "rejoin+collapse",
+    "geom": { "page": 12, "bbox": [72.0, 118.4, 523.1, 134.8] },      // D30/D33: Fitz word-box union
     "provenance_class": "authorial" }
   // a1_0008 (body), a1_0042 (letter body), … parallel
 ]
@@ -1285,6 +1307,7 @@ directly.
 [
   { "atom_id": "ac_0007", "text": "Capitolo Primo", "page_range": [12, 12],
     "norm_layer": "rejoin+collapse", "provenance_class": "authorial",
+    "geom": { "page": 12, "bbox": [72.0, 118.4, 523.1, 134.8] },      // primary-witness box, for re-bind
     "derived_from": [ { "witness": "copy1", "atom_id": "a1_0007" },
                       { "witness": "copy2", "atom_id": "a2_0007" } ] },
   { "atom_id": "ac_0008", "text": "Carlo di Rudio nacque a Belluno…", "page_range": [12, 13],
@@ -1296,7 +1319,10 @@ directly.
 
 `atom_id` is **L1 identity** (text evidence + coordinates), distinct from the structural `node_id` of
 §11.2 (Codex #4). `raw_span` + `raw_source_hash` make the **raw** round-trip tier byte-exact
-(Codex #3/#17); `norm_layer` is human-readable provenance only, never the loss guarantee. Page
+(Codex #3/#17); `norm_layer` is human-readable provenance only, never the loss guarantee. `geom`
+(D30/D33) is the word-box geometry every atom carries — the **primary re-binding signal** (§3.4) and the
+base layer for D30 space/fragment reconstruction; it is a physical fact of the witness scan, so the
+canonical atom carries its primary witness's box. Page
 furniture and source wrappers are captured atoms too, with `provenance_class: "page-furniture"` /
 `"source-wrapper"` and a `processing_scope` that excludes them from translate/retention (Codex #8) —
 captured-but-excluded, never dropped.
@@ -1326,15 +1352,19 @@ captured-but-excluded, never dropped.
                      "scope": "edition", "status": "active", "target_node_id": "n_pref" } ],
       "children": ["n_pref_p1", "n_pref_p2"] },
 
-    { "node_id": "n_chap", "class": "chapter", "role": "body",
+    { "node_id": "n_chap", "class": "chapter", "role": "body", "minted_by": "human",   // D33
       "designation": { "kind": "ordinal-word", "raw": "Capitolo Primo", "value": 1 },
       "title": null, "handle": "p1_ch01",       // rendered from node_id + policy (Codex #9)
       "aliases": [ { "handle_type": "html_slug", "value": "parte-prima-capitolo-primo",
                      "scope": "edition", "status": "active", "target_node_id": "n_chap" } ],
+      "rebind_anchors": { "geom": { "page": 12, "bbox_region": [70, 110, 525, 140] },   // D33: checkpoints,
+                          "content_fp": "fnv1a:…", "struct_path": "body/0" },           //   not identity (R2)
       "heading_atoms": ["ac_0007"],             // container owns the heading atom only (Codex #6)
       "children": ["n_chap_p1", "n_letter"] },
 
-    { "node_id": "n_chap_p1", "class": "paragraph", "parent": "n_chap",
+    { "node_id": "n_chap_p1", "class": "paragraph", "parent": "n_chap", "minted_by": "machine",  // D33
+      "rebind_anchors": { "geom": { "page": 12, "bbox_region": [70, 145, 525, 360] },
+                          "content_fp": "fnv1a:…", "struct_path": "body/0/0" },
       "body_atoms": ["ac_0008"] },              // leaf projection owns body atoms (Codex #6)
 
     { "node_id": "n_letter", "class": "embedded-letter", "role": "embedded",
@@ -1353,6 +1383,11 @@ leaf projection owns body atoms. `n_letter` is a **container node** (contiguous,
 natively — no relation). Queries: "all letter text" = subtree of `n_letter`; "all chapter paragraphs" =
 `paragraph`-class descendants of `n_chap` (letter included); "source order, letter once" = in-order walk
 of canonical atoms (`ac_0042` appears once).
+
+Each node carries `minted_by` (`human` for the container tree, `machine` for leaves — D33) and
+`rebind_anchors` (geometry + fuzzy content fingerprint + structural path) that re-attach the stored
+`node_id` to fresh atoms on re-extraction. The `node_id` itself is opaque and never recomputed; the
+anchors are R2 *checkpoints*, and a failed/ambiguous re-bind fails loud into the D14 governance path.
 
 ### 11.3 Artifact C — relations (graph + alignment), typed endpoints
 
