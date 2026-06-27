@@ -6,8 +6,9 @@ the workspace (ENGINE_STRUCTURE_PLAN §11.1–§11.3): atoms under the ``data`` 
 map and relations at the work root. The containment guard on ``resolve_root`` itself (the
 work-root resolver these accessors ride on) is exercised in ``test_workspace.py``, where it lives.
 
-Invariants (each proven red on violation below — red-first, ENGINE_STRUCTURE_PLAN §9):
-  - package imports as a real namespace — ``test_structure_package_imports``.
+Invariants (each proven red on violation below — red-first, ENGINE_STRUCTURE_PLAN §9). That the
+package imports as a real namespace needs no separate test: every test here imports it, so a
+broken package fails the whole module at collection.
   - each persisted layer exposes a positive, non-bool int schema version — 0 fails ``>= 1``,
     ``True`` fails the bool exclusion (``test_each_layer_…``).
   - the three versions are independently addressable on the public surface — drop a constant from
@@ -30,10 +31,6 @@ VERSION_NAMES = (
     "STRUCTURE_MAP_SCHEMA_VERSION",
     "RELATION_STORE_SCHEMA_VERSION",
 )
-
-
-def test_structure_package_imports():
-    assert structure.__doc__  # a real package, not an empty namespace
 
 
 @pytest.mark.parametrize("name", VERSION_NAMES)
