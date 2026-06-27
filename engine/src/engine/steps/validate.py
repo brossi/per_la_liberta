@@ -188,10 +188,9 @@ def check_no_ascii_remnants(text: str, page_marker_pattern: str) -> dict:
         )
 
     # Uppercase+digit runs that look like noise — but only when they contain a digit (pure
-    # all-caps words like ANGELES/POPOLO are legitimate). Roman numerals are excluded.
+    # all-caps words like ANGELES/POPOLO are legitimate). A roman-numeral run is excluded for
+    # free: the lookahead requires a digit, and roman numerals have none, so they never match.
     noise_runs = re.findall(r"\b(?=[A-Z\d]*\d)[A-Z\d]{5,}\b", text)
-    roman = re.compile(r"^[IVXLCDM]+$")
-    noise_runs = [r for r in noise_runs if not roman.match(r)]
     if noise_runs:
         issues.append(f"{len(noise_runs)} potential OCR noise runs (e.g., {noise_runs[:3]})")
 
