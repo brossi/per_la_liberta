@@ -89,6 +89,17 @@ def test_no_ascii_remnants_reads_page_marker_pattern():
     assert clean["passed"]
 
 
+def test_no_ascii_remnants_flags_uppercase_digit_noise_runs():
+    # The check's SECOND arm, independent of the page-marker arm and never reached by the page-marker
+    # tests above: an uppercase+digit run (≥5, contains a digit) is OCR noise, while a pure all-caps
+    # word with no digit is legitimate. With a page-marker pattern that matches nothing, only this
+    # arm can fire — so deleting it would otherwise ship green.
+    noisy = validate.check_no_ascii_remnants("testo ABC12DEF altro", page_marker_pattern=r"ZZ_NEVER")
+    assert not noisy["passed"]
+    allcaps = validate.check_no_ascii_remnants("testo ANGELES POPOLO", page_marker_pattern=r"ZZ_NEVER")
+    assert allcaps["passed"]
+
+
 def test_word_count_preservation_reads_retention_floor(tmp_path):
     recon = tmp_path / "reconciled.json"
     recon.write_text(json.dumps([{"text": "uno due tre quattro cinque sei sette otto"}]),
@@ -110,6 +121,10 @@ def test_no_empty_chapters_flags_short_and_passes_full():
 def test_quote_balance_detects_imbalance():
     assert validate.check_quote_balance("«chiuso»")["passed"]
     assert not validate.check_quote_balance("«aperto senza chiusura")["passed"]
+    # the smart-double-quote arm, independent of the guillemet arm — the PLL corpus has no curly
+    # quotes, so the golden can never reach it and only this unit test protects it:
+    assert validate.check_quote_balance("“chiuso”")["passed"]
+    assert not validate.check_quote_balance("“aperto senza chiusura")["passed"]
 
 
 class _NoEntities:
