@@ -25,6 +25,12 @@ from engine.structure.artifacts import (
     relations_path,
     structure_map_path,
 )
+from engine.structure.atoms import (
+    Atom,
+    AtomDerivation,
+    Geom,
+    duplicate_atom_ids,
+)
 from engine.structure.classify import (
     DEGENERATE_CLASSIFIER_NAME,
     UNKNOWN,
@@ -44,6 +50,11 @@ __all__ = [
     "atoms_dir",
     "structure_map_path",
     "relations_path",
+    # S1.1 — L1 atom model (concern A capture)
+    "Atom",
+    "Geom",
+    "AtomDerivation",
+    "duplicate_atom_ids",
     # S0.4 — block-classifier seam (concern A typing)
     "BlockClassifier",
     "BlockClassification",
