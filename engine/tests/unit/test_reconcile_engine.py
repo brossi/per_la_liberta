@@ -154,6 +154,20 @@ def test_is_near_duplicate_identical_and_distinct():
     assert reconcile._is_near_duplicate(b, [a]) is False
 
 
+def test_is_near_duplicate_catches_a_window_merged_paragraph():
+    # The concatenated-window branch (reconcile.py:126-134): a long paragraph one witness merged is
+    # caught against several shorter prior norms that, concatenated, reconstruct it — even though no
+    # single prior norm matches. If this branch silently breaks, a page-boundary dittography survives
+    # into the text (false) or a real paragraph is dropped (false-positive) — both silent fidelity
+    # errors. The per-inc checks above cannot fire here (norm is longer than every fragment and no
+    # single fragment is similar), so only the window branch can return True.
+    norm = "abcdefghij" * 22  # 220 chars (>= the 200-char window gate)
+    fragments = [norm[:74], norm[74:148], norm[148:]]  # 3 contiguous pieces; concatenation == norm
+    assert reconcile._is_near_duplicate(norm, fragments) is True
+    # a genuinely distinct long paragraph against the same fragments is NOT a duplicate
+    assert reconcile._is_near_duplicate("z" * 220, fragments) is False
+
+
 # --- _strip_page_markers: removal + clean-offset → page map ----------------------------- #
 
 def test_strip_page_markers_removes_and_maps():

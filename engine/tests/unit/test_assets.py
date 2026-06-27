@@ -28,6 +28,10 @@ def test_frequency_dictionary_resolves_to_a_file():
 
 def test_period_dictionaries_resolve_to_dirs():
     cfg = load_book("per_la_liberta")
+    # Non-empty guard FIRST: without it, an emptied list makes the loop below cover nothing and pass
+    # green — while the ≥2-of-3 period oracle silently loses every dictionary and misclassifies the
+    # whole corpus as OCR garble. The vacuous-pass is more dangerous than a missing test.
+    assert cfg.language.period_dictionaries, "no period dictionaries configured — oracle would be empty"
     for d in cfg.language.period_dictionaries:
         p = paths.asset_path(d.dir)
         assert p.is_dir(), f"period dictionary {d.name!r} not found at {p}"

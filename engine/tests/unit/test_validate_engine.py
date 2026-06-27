@@ -111,6 +111,17 @@ def test_word_count_preservation_reads_retention_floor(tmp_path):
     assert lax["passed"]
 
 
+def test_word_count_preservation_fails_closed_on_zero_reconciled_words(tmp_path):
+    # The zero-word guard (validate.py:368-370) must fail CLOSED: a reconciled witness with no words
+    # means a broken pipeline, and this is the quality gate. Asserting `passed is False` (not just
+    # "doesn't ZeroDivisionError") catches a regression that flips the guard to passed=True — the
+    # gate failing OPEN, letting an empty book validate green.
+    recon = tmp_path / "reconciled.json"
+    recon.write_text(json.dumps([{"text": ""}]), encoding="utf-8")
+    result = validate.check_word_count_preservation("anything", recon, retention_min=0.60)
+    assert result["passed"] is False
+
+
 def test_no_empty_chapters_flags_short_and_passes_full():
     short = "### Capitolo Primo\n\nbreve.\n"
     assert not validate.check_no_empty_chapters(short, ["Parte Prima"])["passed"]
