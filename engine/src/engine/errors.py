@@ -60,3 +60,17 @@ class RegenerationGuardError(EngineError):
     """
 
     exit_code = 6
+
+
+class RoundTripError(EngineError):
+    """An L1 atom's raw/normalized round-trip floor failed (``structure.roundtrip``; §9, D22).
+
+    Distinct from the operational step failures above: this is an *integrity* violation, not a
+    missing input or a backend fault. Raised when the byte-exact raw tier fails — an out-of-bounds
+    ``raw_span`` or a slice whose hash does not match ``raw_source_hash`` (the source artifact
+    drifted, or the span is wrong) — or when the normalized tier fails (the declared transforms do
+    not produce the stored text, or their inverses do not recover the raw). The floor a ``norm_layer``
+    label cannot fake; failing it loud is the point.
+    """
+
+    exit_code = 7

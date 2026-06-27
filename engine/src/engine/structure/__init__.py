@@ -38,6 +38,15 @@ from engine.structure.classify import (
     BlockClassifier,
     DegenerateBlockClassifier,
 )
+from engine.structure.roundtrip import (
+    ReversibleTransform,
+    apply_forward,
+    apply_inverse,
+    hash_raw,
+    is_reversible,
+    reconstruct_raw,
+    verify_atom_roundtrip,
+)
 
 __all__ = [
     "ATOM_STORE_SCHEMA_VERSION",
@@ -61,4 +70,12 @@ __all__ = [
     "DegenerateBlockClassifier",
     "UNKNOWN",
     "DEGENERATE_CLASSIFIER_NAME",
+    # S1.2 — raw/normalized round-trip floor (concern A capture)
+    "hash_raw",
+    "reconstruct_raw",
+    "ReversibleTransform",
+    "apply_forward",
+    "apply_inverse",
+    "is_reversible",
+    "verify_atom_roundtrip",
 ]
