@@ -144,7 +144,12 @@ def test_try_corrections_covers_each_pass():
     assert join == "benessere"
 
     boundary = adjudicate._try_corrections("seri", "o", FakeOracle({"serro": 1}), {"i": ["r"]})
-    assert boundary == "serro"
+    assert boundary == "serro"  # pass 2: boundary sub at the END of the left fragment
+
+    # pass 3: boundary sub at the START of the right fragment — reachable only here (join "bene" is
+    # unknown; left "be" has no substitutable boundary char, so pass 2 can't fire).
+    boundary_right = adjudicate._try_corrections("be", "ne", FakeOracle({"bere": 1}), {"n": ["r"]})
+    assert boundary_right == "bere"
 
     drop_i = adjudicate._try_corrections("ali", "ato", FakeOracle({"alato": 1}), {"i": ["r", "e"]})
     assert drop_i == "alato"  # pass 4a: drop the boundary 'i'
