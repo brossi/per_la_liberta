@@ -283,6 +283,47 @@ def test_cleanup_llm_path_drives_chat_seam_and_caches(tmp_path):
 
 
 @pytest.mark.integration
+def test_cleanup_llm_failure_degrades_to_deterministic_text(tmp_path):
+    # The LLM per-chapter failure branch (cleanup.py:951): a chat.correct() exception must degrade to
+    # the deterministic clean_text output — not crash, not poison the cache. The happy-path LLM test
+    # never raises, so this branch was untested; a regression that let the exception propagate, or
+    # wrote a sentinel/empty cache, would ship green.
+    cfg = load_book("synthetic")
+    lang = get_language_plugin(cfg.language_id)
+
+    class _BoomChat:
+        def __init__(self) -> None:
+            self.calls = 0
+
+        def correct(self, *, system: str, user: str) -> str:
+            self.calls += 1
+            raise RuntimeError("model-unavailable")
+
+    # run 1: use_llm=True but every chat.correct() raises → degradation
+    ws1 = BookWorkspace.for_book("synthetic", tmp_path / "a").ensure()
+    _seed_reconciled(ws1)
+    chat = _BoomChat()
+    result = cleanup.run(
+        workspace=ws1, cfg=cfg, lang=lang, use_llm=True, chat=chat, oracle=_FakeOracle()
+    )
+    assert result["used_llm"] is True
+    assert chat.calls == 3  # every uncached chapter was attempted, none silently skipped
+    cache = ws1.state / "llm_cleaned"
+    assert not cache.exists() or not list(cache.glob("*.txt"))  # failure must not poison the cache
+
+    # run 2: the no-LLM deterministic baseline
+    ws2 = BookWorkspace.for_book("synthetic", tmp_path / "b").ensure()
+    _seed_reconciled(ws2)
+    cleanup.run(workspace=ws2, cfg=cfg, lang=lang)
+
+    # the degraded output is byte-identical to the deterministic baseline — the branch falls back
+    # cleanly to clean_text, adding nothing and dropping nothing.
+    assert (ws1.output / cleanup.CLEAN_FILE).read_text(encoding="utf-8") == (
+        ws2.output / cleanup.CLEAN_FILE
+    ).read_text(encoding="utf-8")
+
+
+@pytest.mark.integration
 def test_cleanup_cache_wins_over_fresh_clean(tmp_path):
     cfg = load_book("synthetic")
     lang = get_language_plugin(cfg.language_id)
