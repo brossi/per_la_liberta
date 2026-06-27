@@ -16,8 +16,6 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-import pytest
-
 from engine.config.loader import load_book
 from engine.lang.italian import ItalianLanguagePlugin
 
@@ -27,12 +25,13 @@ SIDECAR = INPUTS / "chapter_start_pages.json"
 CLEAN = INPUTS / "clean.md"
 RECONCILED = INPUTS / "reconciled_chapters.json"
 
-pytestmark = pytest.mark.skipif(
-    not SIDECAR.is_file(), reason="frozen PLL sidecar not present"
-)
-
 
 def _sidecar() -> dict:
+    # Hard, not skipped: chapter_start_pages.json is committed and required (typeset reads it; no
+    # code writes it). A module-level skipif here would silently turn all five contracts green if the
+    # file ever moved — a latent vacuous-green. This matches the discipline
+    # test_reconciled_chapters_well_formed already states for its own frozen input.
+    assert SIDECAR.is_file(), f"frozen PLL sidecar missing: {SIDECAR}"
     return json.loads(SIDECAR.read_text(encoding="utf-8"))
 
 
@@ -72,6 +71,7 @@ def test_content_chapter_ids_resolve_to_real_chapters():
     # Every sidecar id that names a content chapter (prefazione / p1_* / p2_*) must be a
     # real parse_md id produced from the text — catches a stale/typo'd sidecar entry that
     # the golden test would silently tolerate (it would just yield page_range=None).
+    assert CLEAN.is_file(), f"frozen PLL clean text missing: {CLEAN}"
     known = {
         ci.parse_md
         for ci in ItalianLanguagePlugin().chapter_identities(

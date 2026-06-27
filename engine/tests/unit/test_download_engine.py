@@ -52,6 +52,9 @@ def test_writes_exactly_the_fetched_bytes(tmp_path, acq):
     cfg, lang = _cfg_lang()
     ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
 
+    # Non-empty guard: the byte-faithfulness assertions live inside the `for s in sources` loop
+    # below. An empty manifest would run it zero times — green while verifying nothing. Fail loud.
+    assert cfg.manifest.sources, "synthetic manifest must declare sources"
     canned = {
         download.source_url(s): f"CANNED-{s.role}-µ-à\n"  # non-ASCII to prove utf-8 round-trip
         for s in cfg.manifest.sources
@@ -68,6 +71,7 @@ def test_writes_exactly_the_fetched_bytes(tmp_path, acq):
 def test_idempotent_skip_if_exists(tmp_path, acq):
     cfg, lang = _cfg_lang()
     ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+    assert cfg.manifest.sources, "synthetic manifest must declare sources"  # else the loop is vacuous
     canned = {download.source_url(s): f"v1-{s.role}" for s in cfg.manifest.sources}
     download.run(workspace=ws, cfg=cfg, lang=lang, fetcher=acq.Fetcher(canned))
 
