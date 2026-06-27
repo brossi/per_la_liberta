@@ -110,17 +110,24 @@ def test_geom_present_carries_full_provenance():
     assert g.match_confidence == 0.97
 
 
-def test_geom_absent_must_not_carry_coordinates():
-    # The core invariant: an absent geom that still carries a coordinate is *invented geometry* and
-    # must be unrepresentable. Each coordinate/provenance field, independently, trips the guard.
+@pytest.mark.parametrize(
+    "field, value",
+    [
+        ("page", 12),
+        ("bbox", _BBOX),
+        ("geometry_engine", "pymupdf-ocr"),
+        ("matched_witness_id", "copy1"),
+        ("match_method", "token-bbox"),
+        ("match_confidence", 0.97),
+    ],
+)
+def test_geom_absent_must_not_carry_coordinates(field, value):
+    # The core invariant: an absent geom that still carries ANY coordinate/provenance field is
+    # *invented geometry* and must be unrepresentable. Each of the six fields independently trips the
+    # guard — so dropping any single field from the absent-branch coords check is caught here, not
+    # just a whole-clause removal (the per-field granularity the discrimination sweep missed).
     with pytest.raises(ValueError):
-        Geom(present=False, bbox=_BBOX)
-    with pytest.raises(ValueError):
-        Geom(present=False, page=12)
-    with pytest.raises(ValueError):
-        Geom(present=False, geometry_engine="pymupdf-ocr")
-    with pytest.raises(ValueError):
-        Geom(present=False, match_confidence=0.97)
+        Geom(present=False, **{field: value})
 
 
 def test_geom_present_must_carry_coordinates():
@@ -204,6 +211,9 @@ def test_atom_is_frozen():
 def test_atom_is_hashable():
     # frozen + tuple fields → hashable, so atoms can key sets/dicts (the store relies on this).
     assert len({_atom("ac_0001"), _atom("ac_0002")}) == 2
+    # value equality, not identity: two atoms built the same dedup to one — guards an eq=False /
+    # identity-hash regression that the two-distinct-atoms case alone would pass through.
+    assert len({_atom("ac_0001"), _atom("ac_0001")}) == 1
 
 
 def test_atom_sequence_fields_are_tuples():
