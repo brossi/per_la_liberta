@@ -9,6 +9,7 @@ string leaks — the engine-agnostic invariant, mirroring the OCR template's lea
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
@@ -145,6 +146,34 @@ def test_apply_resolutions_is_idempotent(tmp_path):
 
     second = triage.apply_resolutions(ws, resolved)  # word already gone → no-op
     assert (first, second) == (1, 0)
+
+
+def test_apply_resolutions_is_occurrence_safe(tmp_path):
+    # The apply path's headline invariant (triage.py:314-321), which the idempotency test cannot see
+    # (its word occurs once): a correction replaces only the FIRST uncorrected occurrence of a
+    # recurring word, and N same-word corrections land on N DISTINCT positions — never replace-all,
+    # never both on index 0.
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+    chapter = {"id": "p1_capitolo_primo", "title": "X", "part": 1,
+               "text": "alfa comuni beta comuni gamma comuni"}
+
+    def seed():
+        (ws.data / "reconciled_chapters.json").write_text(json.dumps([chapter]), encoding="utf-8")
+
+    one = {"chapter": "p1_capitolo_primo", "paragraph": 0, "chosen": "comuni", "resolved": "comune"}
+
+    # one correction → only the first "comuni" changes (a replace-all regression is caught here)
+    seed()
+    n1 = triage.apply_resolutions(ws, [one])
+    text1 = read_json(ws.data / "reconciled_chapters.json")[0]["text"]
+    assert (n1, text1) == (1, "alfa comune beta comuni gamma comuni")
+
+    # two same-word corrections → first two occurrences, distinct positions (dropping the
+    # corrected_positions guard makes the second a no-op on index 0, leaving position 3 unchanged)
+    seed()
+    n2 = triage.apply_resolutions(ws, [one, dict(one)])
+    text2 = read_json(ws.data / "reconciled_chapters.json")[0]["text"]
+    assert (n2, text2) == (2, "alfa comune beta comune gamma comuni")
 
 
 # --- separability: synthetic flagged segments through an injected chat -------------------- #
