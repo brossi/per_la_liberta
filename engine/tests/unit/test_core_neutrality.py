@@ -33,6 +33,19 @@ FORBIDDEN = [
 ]
 
 
+def _hits(term: str, files: list[Path]) -> list[str]:
+    """Every ``file:lineno: line`` where ``term`` appears (case-insensitive) — the leak report. The
+    real-scan test and the planted-literal proof share this one function, so the proof exercises the
+    *same* path the guard does (not a re-implemented copy that could drift)."""
+    pat = re.compile(re.escape(term), re.IGNORECASE)
+    hits: list[str] = []
+    for f in files:
+        for lineno, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+            if pat.search(line):
+                hits.append(f"{f.name}:{lineno}: {line.strip()}")
+    return hits
+
+
 def test_engine_src_has_python_files():
     # Guard the scan against a vacuous green: if the glob found nothing, every assertion below
     # would pass by examining nothing (the single-fixture-blind-spot trap).
@@ -41,13 +54,18 @@ def test_engine_src_has_python_files():
 
 @pytest.mark.parametrize("term", FORBIDDEN)
 def test_no_book_or_typeface_opinion_in_core(term):
-    pat = re.compile(re.escape(term), re.IGNORECASE)
-    hits: list[str] = []
-    for f in PY_FILES:
-        for lineno, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
-            if pat.search(line):
-                hits.append(f"{f.relative_to(SRC)}:{lineno}: {line.strip()}")
+    hits = _hits(term, PY_FILES)
     assert not hits, (
         f"book/typeface opinion {term!r} leaked into engine core — move it to "
         f"manifest/profile:\n" + "\n".join(hits)
     )
+
+
+@pytest.mark.parametrize("term", FORBIDDEN)
+def test_guard_catches_a_planted_literal(tmp_path, term):
+    # The non-vacuity proof this guard lacked (its structure/cleanup siblings have one): plant each
+    # forbidden term and assert the SAME scan flags it. Without this, a regex/loop regression passes
+    # green on a clean tree — exactly how "bodoni" survived in three docstrings before this control.
+    planted = tmp_path / "leak.py"
+    planted.write_text(f'BOOK_OPINION = "{term} ..."\n', encoding="utf-8")
+    assert _hits(term, [planted]), f"the guard failed to catch a planted {term!r} — scan is vacuous"

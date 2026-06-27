@@ -57,31 +57,36 @@ def _functional_lines(path: Path) -> list[tuple[int, str]]:
     ]
 
 
-def test_no_italian_or_source_noise_literal_in_cleanup():
-    hits = [
-        f"cleanup.py:{lineno}: {line.strip()}  (contains {ch!r})"
-        for lineno, line in _functional_lines(CLEANUP)
+def _scan(path: Path) -> list[str]:
+    """Forbidden-char hits in ``path``'s functional code (comments blanked, docstrings dropped) —
+    the scan the guard and its non-vacuity proof share, so the proof runs the *real* path, not a
+    set-membership stand-in that can't catch an over-blanking bug in ``_functional_lines``."""
+    return [
+        f"{path.name}:{lineno}: {line.strip()}  (contains {ch!r})"
+        for lineno, line in _functional_lines(path)
         for ch in line
         if ch in FORBIDDEN
     ]
+
+
+def test_no_italian_or_source_noise_literal_in_cleanup():
+    hits = _scan(CLEANUP)
     assert not hits, (
         "Italian/source-noise literal leaked into cleanup's functional code — source it from "
         "cfg.language / cfg.source_noise instead:\n" + "\n".join(hits)
     )
 
 
-def test_scan_actually_excludes_docstrings_and_finds_real_leaks():
-    # Guard the scan against a vacuous green two ways: (1) the source must be non-trivial; (2) the
-    # forbidden-char test must actually fire on a planted leak, and the docstring-exclusion must
-    # actually drop a docstring line that names a forbidden char.
-    functional = _functional_lines(CLEANUP)
-    assert len(functional) > 100, "functional-line extraction returned too little — scan is hollow"
+def test_scan_actually_excludes_docstrings_and_finds_real_leaks(tmp_path):
+    # Two vacuity guards, BOTH through the real scan path (no set-membership tautology):
+    # (1) the live source must be non-trivial; (2) a planted leak in functional code is flagged while
+    # the same char in a docstring/comment is excluded — so an over-blanking regression in
+    # _functional_lines (which would silently make the real scan miss leaks) reddens right here.
+    assert len(_functional_lines(CLEANUP)) > 100, "functional-line extraction too small — scan hollow"
 
-    planted = "x = 'à'  # à literal in code"  # an à in functional position
-    rows = planted
-    assert any(ch in FORBIDDEN for ch in rows), "the forbidden set must catch a planted à"
-
-    # The module docstring names 'À-ÿ' and '£'; those lines must be excluded from the functional set
-    # (else this very file's port-prose would self-fail the scan).
-    functional_text = "\n".join(line for _, line in functional)
-    assert "À" not in functional_text and "£" not in functional_text
+    leaky = tmp_path / "leak.py"
+    leaky.write_text('"""Doc names à and £ legitimately."""\nx = "à"  # tail à\n', encoding="utf-8")
+    hits = _scan(leaky)
+    assert any('x = "' in h for h in hits), "a functional à must be flagged by the real scan"
+    assert not any("Doc names" in h for h in hits), "a docstring à/£ must be excluded"
+    assert all("tail" not in h for h in hits), "a comment à must be blanked, not flagged"

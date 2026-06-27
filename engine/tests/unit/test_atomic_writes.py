@@ -40,11 +40,12 @@ def test_atomic_write_text_failure_leaves_nothing_partial(tmp_path):
     assert list(tmp_path.iterdir()) == []
 
 
-def _open_mode(call: ast.Call) -> str | None:
-    if len(call.args) >= 2 and isinstance(call.args[1], ast.Constant) and isinstance(
-        call.args[1].value, str
+def _open_mode(call: ast.Call, pos: int = 1) -> str | None:
+    # mode is positional arg `pos` (1 for builtin open(path, "w"); 0 for path.open("w")) or mode=.
+    if len(call.args) > pos and isinstance(call.args[pos], ast.Constant) and isinstance(
+        call.args[pos].value, str
     ):
-        return call.args[1].value
+        return call.args[pos].value
     for kw in call.keywords:
         if kw.arg == "mode" and isinstance(kw.value, ast.Constant) and isinstance(kw.value.value, str):
             return kw.value.value
@@ -59,8 +60,12 @@ def _raw_writes_in(path: Path) -> list[str]:
         func = node.func
         if isinstance(func, ast.Attribute) and func.attr in ("write_text", "write_bytes"):
             hits.append(f"{path.name}:{node.lineno}: .{func.attr}(...)")
+        elif isinstance(func, ast.Attribute) and func.attr == "open":
+            mode = _open_mode(node, 0)  # path.open("w"): mode is the first positional arg
+            if mode and any(c in mode for c in "wax"):
+                hits.append(f"{path.name}:{node.lineno}: .open(..., {mode!r})")
         elif isinstance(func, ast.Name) and func.id == "open":
-            mode = _open_mode(node)
+            mode = _open_mode(node)  # open(path, "w"): mode is the second positional arg
             if mode and any(c in mode for c in "wax"):
                 hits.append(f"{path.name}:{node.lineno}: open(..., {mode!r})")
     return hits
@@ -80,3 +85,20 @@ def test_no_raw_artifact_writes_in_steps():
         "util.jsonio.atomic_write_{json,text} so a crash can't truncate a consumed artifact:\n"
         + "\n".join(offenders)
     )
+
+
+def test_detector_catches_pathlib_open_write(tmp_path):
+    # The detector must flag the pathlib `.open("w")` write idiom, not only `.write_text` / bare
+    # `open()` — else a step could bypass the atomic helper through the most idiomatic raw write and
+    # stay green. This proves the AST scan's reach matches its claim ("anywhere under steps/").
+    probe = tmp_path / "probe.py"
+    probe.write_text(
+        "from pathlib import Path\n"
+        "def w(p):\n"
+        "    Path(p).open('w').write('x')\n"   # raw write — must be flagged
+        "    Path(p).open('r').read()\n",      # read — must NOT be flagged
+        encoding="utf-8",
+    )
+    hits = _raw_writes_in(probe)
+    assert any(".open(..., 'w')" in h for h in hits), "pathlib .open('w') must be detected"
+    assert not any("'r'" in h for h in hits), "a read-mode .open must not be flagged"
