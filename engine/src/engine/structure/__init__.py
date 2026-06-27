@@ -25,6 +25,13 @@ from engine.structure.artifacts import (
     relations_path,
     structure_map_path,
 )
+from engine.structure.classify import (
+    DEGENERATE_CLASSIFIER_NAME,
+    UNKNOWN,
+    BlockClassification,
+    BlockClassifier,
+    DegenerateBlockClassifier,
+)
 
 __all__ = [
     "ATOM_STORE_SCHEMA_VERSION",
@@ -37,4 +44,10 @@ __all__ = [
     "atoms_dir",
     "structure_map_path",
     "relations_path",
+    # S0.4 — block-classifier seam (concern A typing)
+    "BlockClassifier",
+    "BlockClassification",
+    "DegenerateBlockClassifier",
+    "UNKNOWN",
+    "DEGENERATE_CLASSIFIER_NAME",
 ]
