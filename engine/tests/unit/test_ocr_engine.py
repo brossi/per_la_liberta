@@ -118,6 +118,38 @@ def test_failing_backend_yields_ocr_error_sentinel_then_drops_body(tmp_path, mon
     assert "vision-down" not in text
 
 
+def test_transient_backend_failure_retries_then_recovers(tmp_path, monkeypatch, acq):
+    # The retry loop's RECOVERY path (ocr.py:183-194), which the always-failing backend above never
+    # reaches: a transient transcribe failure is retried and a later success transcribes the page
+    # normally — it does NOT become a permanent OCR_ERROR sentinel. Guards a regression that disables
+    # the retry (e.g. range(1)), which would turn every transient blip into a dropped page.
+    monkeypatch.setattr(ocr, "_RETRY_BACKOFF", (0, 0, 0))
+    monkeypatch.setattr(ocr, "_PAGE_DELAY", 0)
+    cfg, lang = _cfg_lang()
+    ws = BookWorkspace.for_book("synthetic", tmp_path).ensure()
+
+    class _FlakyOnce:
+        def __init__(self):
+            self.calls = 0
+
+        def transcribe(self, image_bytes, prompt):
+            self.calls += 1
+            if self.calls == 1:
+                raise RuntimeError("transient-blip")
+            return "recovered page text"
+
+    backend = _FlakyOnce()
+    ocr.run(
+        workspace=ws, cfg=cfg, lang=lang, model="pro", pages=(1, 1),
+        renderer=acq.Renderer(1), backend=backend,
+    )
+
+    pf = read_json(ws.state / "ocr_pro_pages" / "page_0001.json")
+    assert pf["text"] == "recovered page text"
+    assert not pf["text"].startswith(SENTINEL_OCR_ERROR_PREFIX)
+    assert backend.calls == 2  # one failure + one successful retry
+
+
 def test_unreadable_pdf_page_count_failure_is_a_backend_error(tmp_path, acq):
     # A present-but-corrupt PDF (page_count raises) is a whole-document failure → typed BackendError
     # (exit 5), not a raw fitz traceback. Distinct from the missing-PDF MissingInputError (exit 3).
