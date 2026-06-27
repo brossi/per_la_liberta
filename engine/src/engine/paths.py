@@ -106,7 +106,9 @@ class BookWorkspace:
             raise ValueError(f"workspace path parts must be relative, got {parts!r}")
 
         candidate = base.joinpath(*parts).resolve()
-        if candidate != self.root and not candidate.is_relative_to(self.root):
+        # is_relative_to is reflexive (root is relative to itself), so this already permits the
+        # no-parts resolve_root() == root case without a separate `candidate != self.root` clause.
+        if not candidate.is_relative_to(self.root):
             raise ValueError(
                 f"path {candidate} escapes workspace {self.root} (rejected)"
             )
