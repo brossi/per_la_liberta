@@ -26,10 +26,19 @@ from engine.structure.artifacts import (
     structure_map_path,
 )
 from engine.structure.atoms import (
+    PROCESSING_SCOPE_EXCLUDED,
+    PROCESSING_SCOPE_INCLUDED,
     Atom,
     AtomDerivation,
     Geom,
     duplicate_atom_ids,
+)
+from engine.structure.capture import (
+    PAGE_UNMAPPED,
+    align_streams,
+    assert_capture_tiles,
+    build_canonical,
+    capture_witness,
 )
 from engine.structure.classify import (
     DEGENERATE_CLASSIFIER_NAME,
@@ -64,6 +73,8 @@ __all__ = [
     "Geom",
     "AtomDerivation",
     "duplicate_atom_ids",
+    "PROCESSING_SCOPE_INCLUDED",
+    "PROCESSING_SCOPE_EXCLUDED",
     # S0.4 — block-classifier seam (concern A typing)
     "BlockClassifier",
     "BlockClassification",
@@ -78,4 +89,10 @@ __all__ = [
     "apply_inverse",
     "is_reversible",
     "verify_atom_roundtrip",
+    # S1.3a — raw addressed capture (per-witness streams + canonical projection)
+    "capture_witness",
+    "build_canonical",
+    "align_streams",
+    "assert_capture_tiles",
+    "PAGE_UNMAPPED",
 ]

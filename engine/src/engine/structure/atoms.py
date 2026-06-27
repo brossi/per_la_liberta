@@ -27,6 +27,15 @@ from __future__ import annotations
 from collections.abc import Iterable
 from dataclasses import dataclass
 
+# ``processing_scope`` vocabulary (S1.3a; §3.0/§3.3). Capture-time inclusion of an atom's bytes in
+# downstream processing — the field that makes *captured-but-excluded* distinct from *never-captured*
+# (the distinction the no-loss round-trip checks against, §9). ``included`` is the body default;
+# furniture/wrapper atoms (page markers, running heads) are captured with ``excluded``. These are
+# neutral process labels, not the derived behavioral flags (translatable/alignable/…) policy computes
+# at S6 — those switch on this plus L2 content provenance.
+PROCESSING_SCOPE_INCLUDED = "included"
+PROCESSING_SCOPE_EXCLUDED = "excluded"
+
 
 @dataclass(frozen=True, slots=True)
 class Geom:
@@ -123,8 +132,10 @@ class Atom:
     ``capture_provenance_class`` (the L1 *capture* provenance — how/whence the bytes were captured;
     a field deliberately distinct from L2's content/editorial provenance, S6.1). ``witness`` and
     ``derived_from`` are the per-witness vs canonical discriminators (§11.1) and default to the
-    canonical-less / un-derived case. Sequence fields are normalized to tuples so the frozen
-    guarantee cannot be undermined by a retained mutable handle.
+    canonical-less / un-derived case. ``processing_scope`` (S1.3a) is the capture-time inclusion
+    label — ``"included"`` body default, ``"excluded"`` for captured-but-not-processed furniture
+    (§3.0; ``PROCESSING_SCOPE_*``). Sequence fields are normalized to tuples so the frozen guarantee
+    cannot be undermined by a retained mutable handle.
     """
 
     atom_id: str
@@ -137,6 +148,7 @@ class Atom:
     capture_provenance_class: str
     witness: str | None = None
     derived_from: tuple[AtomDerivation, ...] = ()
+    processing_scope: str = PROCESSING_SCOPE_INCLUDED
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "raw_span", tuple(self.raw_span))

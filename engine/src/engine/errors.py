@@ -74,3 +74,17 @@ class RoundTripError(EngineError):
     """
 
     exit_code = 7
+
+
+class CaptureError(EngineError):
+    """An L1 atom *stream*'s capture-completeness or span topology is violated (``structure.capture``;
+    S1.3a, §3.0/§9).
+
+    A stream-level integrity violation, the complement of :class:`RoundTripError`'s per-atom check:
+    raised when a witness's atoms do not *tile* their source — a span out of bounds, an
+    overlap/out-of-order span, or an uncovered non-whitespace gap (a *silent loss*: source bytes
+    captured into no atom, the failure mode "everything is brought in" exists to forbid). The
+    captured-but-excluded vs never-captured distinction is what makes this checkable (§3.0).
+    """
+
+    exit_code = 8
