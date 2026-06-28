@@ -233,6 +233,17 @@ Immutable, addressed capture units — the floor everything pins to.
 | S1.4 | **Production-stream round-trip GATE (real-input floor):** reconstruct each of `copy{1,2,3}_raw` byte-for-byte **through the atom-store's public read path consumers use** (witness iteration, filter-by-witness, canonical-projection load — exercise the shapes S10.2's consumers call; never a private helper, never re-reading raw source). Assert the **capture-completeness invariant** (every source byte is inside an atom's `raw_span` or recorded as declared inter-atom/furniture) **and span topology** (ordered, non-overlapping coverage with explicit gap records) | §3.0, §9; D22 | S1.3a | round-trip + negative tiers: byte-exact via the public read path; overlap/implicit-gap/back-door read each fail loud | `GATE` | `TODO` |
 | S1.5 | **Atom-store persisted schema + independent version** (per-witness + canonical streams), its own lineage entry + **its own S8.1 stale class** (M3); store round-trip asserts **serialization-invariance** of `raw_span` / `raw_source_hash` / `geom` / `derived_from` (not just text); reference-integrity (every `derived_from` back-link resolves) | §3.5, §3.6, §11.1; D21 | S1.3a | reference-integrity + round-trip tiers: schema validates, version registered, serialization-invariant, back-links resolve | `BUILD` | `TODO` |
 
+> **S1.4 has a delivered first slice — build on it, don't re-derive.** The S1.2 model floor was
+> already extended to **real PLL bytes**: `tests/unit/test_roundtrip_real_input.py` (`56f9cba`, landed
+> under issue #15) proves the byte-exact floor on the committed copy3 witness (frozen page-61 anchor —
+> span + `sha256` + verbatim head/tail via an independent hash) plus a capture-completeness/topology
+> chokepoint (`assert_page_map_tiles_witness`: in-bounds/monotonic/non-overlapping spans, `⟨PAGE:N⟩`
+> count == map pages, every uncovered char marker-or-whitespace — 278==278, 99.6% covered, 0 residue).
+> What remains for the full GATE: reconstruct through the **atom-store public read path** (needs
+> **S1.5**) over the S1.3a stream, with explicit inter-atom **gap records** — the whole-artifact
+> byte-exactness the S1.2 per-atom slice hashes do **not** pin (the listed dep is S1.3a; sequence S1.5
+> accordingly).
+
 > **S1.3a is not a read-only re-projection.** reconcile segments copy1/2/3 in memory and
 > **discards** the per-witness structural streams (§1 multi-witness fact), persisting only
 > the merged `reconciled_chapters.json` + word-flags. So per-witness atom streams must be
