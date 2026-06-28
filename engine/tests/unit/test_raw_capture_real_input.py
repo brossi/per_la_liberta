@@ -22,8 +22,10 @@ What real bytes verify that synthetic cannot:
    round-trips byte-exact against its primary witness's source.
 
 Tiers (each proven red, PLAN §9): completeness (``assert_capture_tiles`` over the real witness) +
-negatives (a tampered overlap / silent loss on real bytes share that chokepoint). Frozen counts are
-derived from the committed fixtures; **refresh them if the witnesses/page map are regenerated.**
+negatives (a tampered overlap / silent loss on real bytes share that chokepoint). Each frozen count is
+bound to an independent in-test oracle (S1.3a.3 — regex / blank-block split / opcode algebra) so a
+segmenter regression reds the binding; the ints stay as legible scale anchors — **refresh them if the
+witnesses/page map are regenerated.**
 """
 
 from __future__ import annotations
@@ -31,6 +33,7 @@ from __future__ import annotations
 import json
 import re
 from bisect import bisect_right
+from collections.abc import Callable
 from difflib import SequenceMatcher
 from pathlib import Path
 
@@ -49,6 +52,11 @@ from engine.structure import (
     reconstruct_raw,
 )
 
+# The canonical projection's default block-comparison key — imported (not replicated) so the canonical
+# count oracle below keys with the *identical* comparison build_canonical uses, staying faithful if the
+# default key ever changes (S1.3a.3).
+from engine.structure.capture import _alignment_key
+
 INPUTS = Path(__file__).resolve().parents[2] / "books" / "per_la_liberta" / "inputs"
 COPY1 = INPUTS / "copy1_raw.txt"
 COPY2 = INPUTS / "copy2_raw.txt"
@@ -60,9 +68,49 @@ PAGE_MARKER = re.compile(r"⟨PAGE:(\d+)⟩")
 # Frozen counts, derived from the committed fixtures (segmentation of the witness bytes). A change to
 # the witnesses, the page map, or capture_witness's segmentation reds the bound assertion.
 FROZEN_COPY3_FURNITURE = 278       # == independent regex marker count (the binding oracle)
-FROZEN_COPY3_BODY = 521
-FROZEN_COPY1_ATOMS = 3621
-FROZEN_COPY2_ATOMS = 3356
+FROZEN_COPY3_BODY = 521            # == blank/furniture-delimited block oracle (_count_body_blocks)
+FROZEN_COPY1_ATOMS = 3621          # == blank-delimited block oracle
+FROZEN_COPY2_ATOMS = 3356          # == blank-delimited block oracle
+FROZEN_CANONICAL_ATOMS = 4786      # == opcode-algebra oracle (_alignment_pair_count, autojunk=True)
+
+
+# --- independent oracles for the frozen counts (S1.3a.3, #16 audit Thread 3A) ------------- #
+# Each frozen count is bound to a re-derivation by a *different* mechanism than capture_witness, so a
+# segmentation regression reds the binding rather than the count silently tracking a magic int. The
+# independence is graded honestly (mirroring S1.3a.2's value-not-explicitness candor):
+#   - furniture: genuinely cross-architecture — a regex *occurrence* count vs capture's line-classified
+#     *atom* count; the two diverge exactly when a marker is welded into a body block (the probe risk).
+#   - body / copy1 / copy2: implementation-independent (a regex blank-block split vs capture's stateful
+#     line-walk) but specification-shared — catches a walk-implementation bug, not a shared spec error.
+#   - canonical: independent of build_canonical's per-pair emission loop (the opcode->pair algebra),
+#     recomputing only the alignment; catches a drop/dup in emission. The frozen scale anchor catches a
+#     capture-segmentation drift the same-input algebra would otherwise track silently.
+# A localized capture mutation is proven to red these bindings (PLAN §9). The copy3 body oracle masks
+# furniture lines with the genuinely-independent furniture regex, so it inherits that independence on
+# its furniture-boundary axis.
+
+def _count_body_blocks(text: str, *, mask_furniture: Callable[[str], bool] | None = None) -> int:
+    """Count blank-line-delimited non-blank blocks via ``re.split`` — a different mechanism than
+    capture's stateful line-walk. Furniture lines are masked to blank first (capture flushes the body
+    run at a furniture line exactly as at a blank line), so this predicts capture's body-atom count."""
+    if mask_furniture is not None:
+        text = "\n".join("" if mask_furniture(line) else line for line in text.split("\n"))
+    return sum(1 for block in re.split(r"\n\s*\n", text) if block.strip())
+
+
+def _alignment_pair_count(kp: list[str], ks: list[str], *, autojunk: bool) -> int:
+    """The number of aligned pairs the difflib opcode algebra yields over two key streams — the
+    canonical-count oracle, independent of ``build_canonical``'s emission loop (it recomputes only the
+    alignment). ``kp``/``ks`` must be keyed with the same comparison the projection uses."""
+    n = 0
+    for tag, i1, i2, j1, j2 in SequenceMatcher(None, kp, ks, autojunk=autojunk).get_opcodes():
+        if tag == "insert":
+            n += j2 - j1
+        elif tag == "replace":
+            n += max(i2 - i1, j2 - j1)
+        else:  # equal | delete
+            n += i2 - i1
+    return n
 
 
 def _read(path: Path) -> str:
@@ -113,7 +161,9 @@ def test_copy3_segments_and_tiles_with_zero_silent_loss():
     assert duplicate_atom_ids(atoms) == []
     body = [a for a in atoms if a.processing_scope == PROCESSING_SCOPE_INCLUDED]
     furniture = [a for a in atoms if a.processing_scope == PROCESSING_SCOPE_EXCLUDED]
-    assert len(body) == FROZEN_COPY3_BODY
+    is_marker = lambda ln: bool(PAGE_MARKER.fullmatch(ln.strip()))  # noqa: E731 — local oracle mask
+    # body count bound to the independent block oracle (furniture-masked), not just the frozen int
+    assert len(body) == _count_body_blocks(text, mask_furniture=is_marker) == FROZEN_COPY3_BODY
     assert len(furniture) == FROZEN_COPY3_FURNITURE
 
 
@@ -153,7 +203,8 @@ def test_copy1_copy2_tile_and_are_page_unmapped():
         text = _read(path)
         atoms = capture_witness(text, witness)   # no markers, no page map → all-body, unmapped
         assert_capture_tiles(atoms, text)
-        assert len(atoms) == frozen
+        # count bound to the independent blank-block oracle, not just the frozen int
+        assert len(atoms) == _count_body_blocks(text) == frozen
         assert all(a.page_range == PAGE_UNMAPPED for a in atoms)
         assert all(a.processing_scope == PROCESSING_SCOPE_INCLUDED for a in atoms)
         assert duplicate_atom_ids(atoms) == []
@@ -190,6 +241,13 @@ def test_real_canonical_every_atom_derived_and_round_trips():
     a2 = capture_witness(t2, "copy2")
     canon = build_canonical({"copy1": a1, "copy2": a2}, ["copy1", "copy2"])
     assert canon, "canonical projection is empty"
+    # the canonical count is bound to the opcode-algebra oracle (independent of build_canonical's
+    # emission loop) and to a documented scale anchor — a drop/dup in emission, or a fixture/segmenter
+    # drift, reds it. kp/ks use build_canonical's own default key (imported, not replicated).
+    included = lambda s: [a for a in s if a.processing_scope == PROCESSING_SCOPE_INCLUDED]  # noqa: E731
+    kp = [_alignment_key(a.text) for a in included(a1)]
+    ks = [_alignment_key(a.text) for a in included(a2)]
+    assert len(canon) == _alignment_pair_count(kp, ks, autojunk=True) == FROZEN_CANONICAL_ATOMS
     # the S1.3a done-when, on real divergent OCR streams: no canonical atom is orphaned
     assert all(len(a.derived_from) >= 1 for a in canon)
     assert all(a.witness is None for a in canon)
@@ -224,20 +282,8 @@ def test_align_streams_pins_explicit_autojunk_and_it_is_load_bearing():
     kp = [key(a.text) for a in a1]
     ks = [key(a.text) for a in a2]
 
-    def pair_count(*, autojunk: bool) -> int:
-        # the number of aligned pairs align_streams would emit under this junk policy
-        n = 0
-        for tag, i1, i2, j1, j2 in SequenceMatcher(None, kp, ks, autojunk=autojunk).get_opcodes():
-            if tag == "insert":
-                n += j2 - j1
-            elif tag == "replace":
-                n += max(i2 - i1, j2 - j1)
-            else:  # equal | delete
-                n += i2 - i1
-        return n
-
     chosen = align_streams(a1, a2, key=key)
-    # align_streams uses the True policy (its emitted pair count matches autojunk=True) ...
-    assert len(chosen) == pair_count(autojunk=True)
+    # align_streams uses the True policy (its emitted pair count matches the autojunk=True algebra) ...
+    assert len(chosen) == _alignment_pair_count(kp, ks, autojunk=True)
     # ... and on these real streams the policy is load-bearing (True and False genuinely differ).
-    assert pair_count(autojunk=True) != pair_count(autojunk=False)
+    assert _alignment_pair_count(kp, ks, autojunk=True) != _alignment_pair_count(kp, ks, autojunk=False)
