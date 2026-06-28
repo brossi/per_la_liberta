@@ -33,6 +33,7 @@ from engine.structure import (
     PROCESSING_SCOPE_EXCLUDED,
     PROCESSING_SCOPE_INCLUDED,
     assert_production_roundtrip,
+    build_canonical,
     capture_witness,
     gap_records,
     reconstruct_raw,
@@ -86,6 +87,10 @@ def test_copy3_real_furniture_round_trips_and_clears_exclusion_floor():
     # witness — body atoms + excluded ⟨PAGE:N⟩ furniture atoms + whitespace gaps — reconstructs exact
     gaps = assert_production_roundtrip(atoms, text)
     assert reconstruct_source(atoms, gaps) == text
+    # bind the headroom the floor's docstring claims (~0.99), not just the bare >= 0.5 pass
+    included_nonws = sum(1 for a in included for c in a.text if not c.isspace())
+    total_nonws = sum(1 for c in text if not c.isspace())
+    assert included_nonws / total_nonws > 0.9
 
 
 # --- negative tier: real bytes, each failure mode fails loud --------------------------------- #
@@ -129,6 +134,24 @@ def test_real_implicit_gap_fails_reconstruction():
     assert gaps, "copy1 has inter-atom whitespace gaps to drop"
     with pytest.raises(RoundTripError, match="undeclared gap"):
         reconstruct_source(atoms, gaps[1:])  # drop a declared gap → a hole opens, no longer tiling
+
+
+def test_canonical_stream_is_out_of_whole_artifact_scope_until_s1_5():
+    # Greppable boundary marker (mirrors S1.3a.4's tripwire). The canonical/reconciled stream is OUT
+    # of the whole-artifact gate's scope: its atoms adopt their derived_from[0] witness's address, so
+    # different atoms point into different witness sources and no single `source` tiles them. Feeding
+    # it to the gate raises (loud — though the message reads "silent loss", the wrong cause). Canonical
+    # atoms are verified per-atom against each derived_from witness by the S1.2 floor, never here. When
+    # S1.5 wires "canonical-projection load" into the store read path, this marks the boundary it must
+    # NOT route through assert_production_roundtrip.
+    t1, t2 = _read(COPY1), _read(COPY2)
+    canon = build_canonical(
+        {"copy1": capture_witness(t1, "copy1"), "copy2": capture_witness(t2, "copy2")},
+        ["copy1", "copy2"],
+    )
+    assert canon, "canonical projection is empty"
+    with pytest.raises(CaptureError):
+        assert_production_roundtrip(canon, t1)  # copy1 source cannot tile copy2-addressed atoms
 
 
 def test_real_wholesale_exclusion_raises_when_all_atoms_excluded():

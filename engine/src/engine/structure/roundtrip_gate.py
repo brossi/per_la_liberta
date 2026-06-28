@@ -12,20 +12,37 @@ a gate (S1.4) needs both gaps:
   them. The completeness claim ("every source byte is inside an atom or a declared inter-atom gap")
   is only auditable if those gaps are first-class records.
 
-This module is that promotion, over a plain ``Sequence[Atom]`` — so it composes unchanged whether the
-stream is the S1.3a in-memory capture or (S1.4's closure) the atom store's public read path:
+This module is that promotion, over a plain ``Sequence[Atom]``:
 
-- :class:`GapRecord` — one declared inter-atom/leading/trailing gap (span + verbatim text).
+- :class:`GapRecord` — one declared inter-atom/leading/trailing gap (span + verbatim whitespace text;
+  the whitespace-only invariant is enforced **at construction**, so a record read back from a store
+  fails loud if it carries content).
 - :func:`gap_records` — the canonical completeness + span-topology walk; raises ``CaptureError`` on an
   out-of-bounds span, an overlap/misorder, or a non-whitespace gap (silent loss), and **returns** the
   ordered gaps. :func:`~engine.structure.capture.assert_capture_tiles` delegates here, so the
   invariant has one owner.
 - :func:`reconstruct_source` — rebuild the whole source byte-for-byte from atom + gap text; fail loud
-  (``RoundTripError``) on an undeclared (implicit) gap or an overlap.
+  (``RoundTripError``) on an out-of-order atom stream, an undeclared (implicit) interior gap, or an
+  overlap.
 - :func:`assert_no_wholesale_exclusion` — own "you excluded everything" (the seam deferred from
   S1.3b): a capture that mis-tags all body as furniture passes tiling + per-atom round-trip +
   ``check_completeness`` *vacuously*; this guard catches it.
 - :func:`assert_production_roundtrip` — the single gate entry tying the three together.
+
+**Scope — a single-witness stream that tiles one source.** Every function here reconstructs *one*
+``source`` from *one* witness's atoms. The **canonical** (reconciled) stream is **out of scope**: its
+atoms adopt their ``derived_from[0]`` witness's address, so different atoms point into different
+witness sources and there is no single ``source`` to tile — feeding it here raises (loud, but the
+message reads "silent loss", which is the wrong cause). Canonical atoms are verified per-atom against
+each ``derived_from`` witness by the S1.2 floor, never through this whole-artifact gate.
+
+**S1.5 composition (the closure).** The *primitives* (:func:`gap_records`, :func:`reconstruct_source`)
+compose unchanged over atoms read from the store's public read path. The *bundled* entry
+:func:`assert_production_roundtrip` derives the gap bytes by slicing ``source``; to honor S1.4's "never
+re-reading raw source", the store must surface those bytes itself — either by **persisting the gap
+records** (the leading choice; gap whitespace is *not* recoverable from span widths, so the store
+cannot rebuild a witness from atoms alone) or by persisting the witness ``source`` — an S1.5 schema
+decision (tracker S1.4-closure note). Until then this composes against the in-memory S1.3a capture.
 
 Pure core: no language, ordinal, or book-structure opinion — only atom/source arithmetic (the S0.2
 neutrality guard scans this module). Page-marker grammar and the page-map tiling check are per-book
@@ -41,10 +58,13 @@ from engine.errors import CaptureError, RoundTripError
 from engine.structure.atoms import PROCESSING_SCOPE_EXCLUDED, Atom
 
 #: Default floor for :func:`assert_no_wholesale_exclusion`: the processed (non-excluded) atoms must
-#: carry at least this fraction of the source's non-whitespace content. ``0.5`` is the natural "body
-#: dominates furniture" boundary — furniture (page markers, running heads) is by nature a minority of
-#: a real page's bytes — **not** a PLL-tuned constant (PLL clears it ~0.99). A per-book binding may
-#: tighten it; loosening below 0.5 would assert furniture outweighs body, which no real source does.
+#: carry at least this fraction of the source's non-whitespace content. ``0.5`` is a conservative,
+#: source-agnostic "processed content is the majority" boundary — **not** a PLL-tuned constant (a
+#: PLL-tuned value would sit near PLL's measured ~0.99, not at a generic majority line). It assumes the
+#: common case where excluded matter (page markers, running heads, scan furniture) is a minority of a
+#: source's bytes. A source whose binding legitimately excludes the *majority* of bytes — a variorum
+#: with a vast critical apparatus, an interlinear, a concordance — must pass ``min_included_fraction``
+#: explicitly; the floor then fails **loud** (never silent), naming the override in its message.
 DEFAULT_MIN_INCLUDED_FRACTION = 0.5
 
 
@@ -52,10 +72,13 @@ DEFAULT_MIN_INCLUDED_FRACTION = 0.5
 class GapRecord:
     """One declared inter-atom region: source bytes covered by no atom (leading, between, trailing).
 
-    ``text`` is the verbatim source slice the span addresses; the completeness invariant requires it
-    be whitespace-only (a non-whitespace gap is silent loss — :func:`gap_records` raises before it
-    would ever build such a record). Recording gaps makes the no-loss claim **auditable**: the atoms
-    plus the gaps tile the source, and :func:`reconstruct_source` proves it byte-exact.
+    ``text`` is the verbatim source slice the span addresses and **must be whitespace-only** — a
+    non-whitespace gap is content captured into no atom (silent loss). That invariant is enforced
+    **here, at construction**, not merely by the :func:`gap_records` producer: a gap record is a
+    durable shape an atom store will persist and read back (S1.5), so a record that carries content
+    must fail loud the moment it is built, never splice that content into a faked round-trip via
+    :func:`reconstruct_source`. Recording gaps makes the no-loss claim **auditable**: the atoms plus
+    the gaps tile the source, and :func:`reconstruct_source` proves it byte-exact.
     """
 
     raw_span: tuple[int, int]
@@ -70,6 +93,11 @@ class GapRecord:
             raise ValueError(
                 f"GapRecord text length {len(self.text)} disagrees with span width {end - start} "
                 f"({self.raw_span}) — a gap record must address exactly the bytes it carries"
+            )
+        if self.text.strip():
+            raise ValueError(
+                f"GapRecord text {self.text[:40]!r} is not whitespace-only — an inter-atom gap is "
+                f"declared whitespace; content captured into no atom is silent loss, never a gap"
             )
 
 
@@ -124,16 +152,27 @@ def gap_records(atoms: Sequence[Atom], source: str) -> list[GapRecord]:
 def reconstruct_source(atoms: Sequence[Atom], gaps: Sequence[GapRecord]) -> str:
     """Rebuild the whole source byte-for-byte from the **stored** atom + gap text.
 
-    Orders every atom and gap by start offset and concatenates their ``text``, requiring the pieces to
-    tile contiguously from offset 0 with no **interior** hole and no overlap. An undeclared (implicit)
-    interior gap — a hole between two pieces — or an overlap fails loud
-    (:class:`~engine.errors.RoundTripError`): the coverage failure mode the per-atom hash floor cannot
-    see (it re-slices the source; this uses the stored text). A *trailing* shortfall (pieces that stop
-    before the source ends) leaves no following piece to reveal the hole, so it is caught one level up
-    by :func:`assert_production_roundtrip`'s ``== source`` assertion — which is also what catches an
-    ``atom.text`` drifted off its span (a drift the per-atom hash, re-slicing the source, passes).
-    Whole-artifact completeness is therefore the gate's ``== source`` boundary, not this primitive's.
+    ``atoms`` must arrive in source order (non-decreasing ``raw_span`` start), the contract
+    :func:`gap_records` enforces; an out-of-order stream fails loud rather than being silently
+    reordered — otherwise this would *accept* a misordered capture ``gap_records`` rejects, a false
+    green for a standalone (e.g. store-read) caller. Interleaves the declared gaps by offset and
+    concatenates every piece's ``text``, requiring them to tile contiguously from offset 0 with no
+    **interior** hole and no overlap. An undeclared (implicit) interior gap — a hole between two
+    pieces — or an overlap fails loud (:class:`~engine.errors.RoundTripError`): the coverage failure
+    mode the per-atom hash floor cannot see (it re-slices the source; this uses the stored text). A
+    *trailing* shortfall (pieces that stop before the source ends) leaves no following piece to reveal
+    the hole, so it is caught one level up by :func:`assert_production_roundtrip`'s ``== source``
+    assertion — which is also what catches an ``atom.text`` drifted off its span (a drift the per-atom
+    hash, re-slicing the source, passes). Whole-artifact completeness is therefore the gate's
+    ``== source`` boundary, not this primitive's.
     """
+    atom_starts = [a.raw_span[0] for a in atoms]
+    if any(b < a for a, b in zip(atom_starts, atom_starts[1:])):
+        raise RoundTripError(
+            "atoms must be passed in source order (non-decreasing raw_span start); reconstruct_source "
+            "interleaves declared gaps but does not reorder a misordered capture — pair it with "
+            "gap_records, which enforces ordering"
+        )
     pieces = sorted(
         [(a.raw_span[0], a.raw_span[1], a.text) for a in atoms]
         + [(g.raw_span[0], g.raw_span[1], g.text) for g in gaps]
@@ -201,8 +240,12 @@ def assert_production_roundtrip(
     """The S1.4 gate entry: completeness + topology, whole-artifact byte-exactness, and the
     wholesale-exclusion guard, in one call returning the declared gap records.
 
-    This is the single surface S1.4's S1.5 closure (reconstruct through the atom store's public read
-    path) and downstream consumers invoke. Raises :class:`~engine.errors.CaptureError` /
+    ``atoms`` must be a **single-witness** stream tiling this one ``source`` (see the module
+    docstring's scope note): the canonical/reconciled stream is verified per-atom by the S1.2 floor,
+    not here. The S1.5 closure runs this over atoms read from the store's public read path; because
+    the gap bytes are derived from ``source`` here, that ``source`` must itself come from the store
+    (persisted gaps or persisted source), never re-read from the raw witness file — an S1.5 schema
+    decision (tracker S1.4-closure note). Raises :class:`~engine.errors.CaptureError` /
     :class:`~engine.errors.RoundTripError` on any violation.
     """
     gaps = gap_records(atoms, source)

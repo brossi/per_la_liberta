@@ -124,8 +124,16 @@ def test_gap_records_rejects_trailing_non_whitespace_as_silent_loss():
 
 
 def test_gap_record_rejects_width_text_mismatch():
-    with pytest.raises(ValueError, match="length"):
+    with pytest.raises(ValueError, match="disagrees with span width"):
         GapRecord((1, 3), "\n")  # span width 2, text width 1 — a self-inconsistent record
+
+
+def test_gap_record_rejects_non_whitespace_text():
+    # whitespace-only is enforced at CONSTRUCTION (not just by the gap_records producer): a gap record
+    # is a durable shape S1.5 persists + reads back, so a content-bearing "gap" must fail loud the
+    # moment it is built, never splice content into a faked reconstruct_source round-trip
+    with pytest.raises(ValueError, match="not whitespace-only"):
+        GapRecord((1, 3), "ab")  # width matches (2 == 2) but carries content
 
 
 # --- reconstruct_source: whole-artifact byte-exactness + implicit-gap / overlap raises ----- #
@@ -148,10 +156,34 @@ def test_reconstruct_source_rejects_undeclared_implicit_gap():
 
 
 def test_reconstruct_source_rejects_overlap():
-    gaps = gap_records(ATOMS, SOURCE)
-    overlapping = ATOMS + [_atom("XX", 4, 6, aid="w_overlap")]
+    # an IN-ORDER overlap (second atom's start is within the first's span, but starts are
+    # non-decreasing) — so the reconstruct overlap guard fires, not the out-of-order guard
+    overlapping = [_atom("AAA", 0, 3), _atom("BB", 2, 4, aid="w_overlap")]
     with pytest.raises(RoundTripError, match="overlaps"):
-        reconstruct_source(overlapping, gaps)
+        reconstruct_source(overlapping, [])
+
+
+def test_reconstruct_source_rejects_out_of_order_atoms():
+    # reconstruct_source must NOT silently reorder a misordered stream — it would false-green a capture
+    # gap_records rejects (the standalone / store-read caller risk). Even with complete matching gaps,
+    # out-of-order atoms raise rather than being sorted into a passing reconstruction.
+    src = "  BB AA  "
+    a_bb, a_aa = _atom("BB", 2, 4), _atom("AA", 5, 7)
+    gaps = [GapRecord((0, 2), "  "), GapRecord((4, 5), " "), GapRecord((7, 9), "  ")]
+    assert reconstruct_source([a_bb, a_aa], gaps) == src              # in order: tiles
+    with pytest.raises(RoundTripError, match="source order"):
+        reconstruct_source([a_aa, a_bb], gaps)                        # out of order: fails loud
+
+
+def test_reconstruct_source_trailing_shortfall_shows_only_in_the_gate_compare():
+    # the documented seam: reconstruct_source can't see a TRAILING shortfall (no following piece
+    # reveals the hole), so it returns a short string without raising; the gate's == source catches it
+    src = "\nXY\n"
+    atoms = [_atom("XY", 1, 3)]
+    gaps = gap_records(atoms, src)                  # [(0,1)"\n", (3,4)"\n"]
+    short = reconstruct_source(atoms, gaps[:-1])    # drop the trailing gap
+    assert short == "\nXY"                          # silently short — reconstruct_source does not raise
+    assert short != src                             # ... so whole-artifact completeness is the gate's job
 
 
 def test_text_drift_passes_per_atom_but_fails_whole_artifact():
