@@ -18,8 +18,11 @@ What real bytes verify that synthetic cannot:
    no map) carry :data:`~engine.structure.PAGE_UNMAPPED` throughout.
 3. **The canonical projection over real divergence** — aligning the full copy1/copy2 streams (~3.6K vs
    ~3.4K paragraphs of independently-OCR'd text) yields a canonical stream where **every atom has ≥1
-   witness derivation** (the S1.3a done-when), ~46% link both witnesses, ids are unique, and each atom
-   round-trips byte-exact against its primary witness's source.
+   witness derivation** (the S1.3a done-when), ~46% are derived from both witnesses (a **structural /
+   positional** pairing — *not* content agreement: only ~6% are content-anchored `equal` matches; the
+   rest are positionally-aligned but textually-divergent `replace` pairs that word-level reconciliation,
+   S7.1b, resolves), ids are unique, and each atom round-trips byte-exact against its primary witness's
+   source.
 
 Tiers (each proven red, PLAN §9): completeness (``assert_capture_tiles`` over the real witness) +
 negatives (a tampered overlap / silent loss on real bytes share that chokepoint). Each frozen count is
@@ -252,9 +255,13 @@ def test_real_canonical_every_atom_derived_and_round_trips():
     assert all(len(a.derived_from) >= 1 for a in canon)
     assert all(a.witness is None for a in canon)
     assert duplicate_atom_ids(canon) == []
-    # a meaningful fraction reconcile both witnesses (not a degenerate copy1-only projection)
+    # a meaningful fraction are derived from BOTH witnesses — a structural/positional pairing, NOT
+    # content agreement (only ~6% are content-anchored `equal` matches; word-level reconciliation is
+    # S7.1b's job). This guards against a degenerate copy1-only projection, nothing more.
     both = sum(1 for a in canon if len(a.derived_from) == 2)
-    assert both > len(canon) // 4, f"only {both}/{len(canon)} canonical atoms link both witnesses"
+    assert both > len(canon) // 4, (
+        f"only {both}/{len(canon)} canonical atoms are derived from both witnesses (positional pairing)"
+    )
     # every canonical atom round-trips byte-exact against the source of its primary derivation
     sources = {"copy1": t1, "copy2": t2}
     for a in canon:
