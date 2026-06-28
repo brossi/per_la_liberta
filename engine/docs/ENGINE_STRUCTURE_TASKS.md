@@ -343,26 +343,28 @@ Immutable, addressed capture units — the floor everything pins to.
 >   than asserting S6 subsumption. **The done-when wording is a spec tension to resolve at S6/S8.1**,
 >   not just prose — flagged, not silently rewritten.
 >
-> **Cross-file recommendations from the 5-lens audit (out of S1.3b's files — left for a decision,
-> not silently applied):**
-> - **Neutrality: `capture.py`'s `body_class="authorial"` default (S1.3a, `DONE`).** "Authorial" is a
->   *content/editorial* word ("who authored it") baked as the default in a *capture-provenance* field
->   (which `atoms.py` says is distinct from L2 content provenance) — S0.2's literal scan misses it, and
->   it is asymmetric with `boundary_classes` (required, no default). Generalizes poorly (anthology,
->   letters-edition, dictionary). **Recommend:** drop the default (require it, mirroring
->   `boundary_classes`) or rename to slot-neutral `"body"`. Ripples to S1.3a tests asserting
->   `"authorial"`.
-> - **Robustness: validate `Atom.processing_scope ∈ {included, excluded}` at the model (S1.1, `DONE`).**
->   The free-`str` field is the root cause behind the whitelist hole S1.3b closed locally (`!= excluded`);
->   a closed vocabulary at `Atom.__post_init__` (like the existing `raw_span`/`page_range` checks) would
->   fix the class, not the instance.
-> - **Stated-but-unenforced: `BlockClassification.typed_by` "never anonymous" (S0.4, `DONE`).** The
->   `classify.py` prose promises it; nothing rejects `typed_by=""`. **Recommend** a non-empty check in
->   `BlockClassification.__post_init__`.
-> - **Unowned seam: "wholesale-wrong-exclusion" (→ S1.4).** A capture that mis-tags all body as
->   furniture passes `assert_capture_tiles`, the byte round-trip, AND `check_completeness` (vacuously
->   complete, `processed_count=0`). No tier owns "you excluded everything." Belongs to S1.4's
->   capture-completeness gate, not S1.3b's typing-completeness.
+> **Cross-file items from the 5-lens audit — THREE APPLIED this pass (authorized), two remain:**
+> - **APPLIED — Neutrality: `capture.py`'s `body_class` default `"authorial"` → `"body"` (S1.3a).**
+>   "Authorial" is a *content/editorial* word ("who authored it") that was baked as the default in a
+>   *capture-provenance* field (`atoms.py` defines that field as distinct from L2 content provenance);
+>   S0.2's literal scan misses it, and it was asymmetric with `boundary_classes` (required, no default).
+>   Renamed to the slot-neutral `"body"`. (Ripple: `test_raw_capture` default assertion + the S1.3b
+>   real-capture test updated; hand-built fixtures keep an arbitrary class, proving the field is free.)
+> - **APPLIED — Robustness: `Atom.__post_init__` now validates `processing_scope ∈ {included,
+>   excluded}` (S1.1).** The free-`str` field was the root cause behind the whitelist hole; the closed
+>   vocabulary at the model fixes the class, not the instance — a typo'd scope now fails at
+>   construction, so it can never reach `check_completeness` and vanish. (The S1.3b `!= excluded` filter
+>   stays as defense-in-depth + the semantic scoping.)
+> - **APPLIED — Stated-but-unenforced: `BlockClassification.__post_init__` now rejects an empty
+>   `typed_by` (S0.4).** The "never an anonymous label" guarantee is enforced, not just prose — B's
+>   override attribution (R3/D5) can no longer be blank.
+> - **REMAINS — Unowned seam: "wholesale-wrong-exclusion" (→ S1.4).** A capture that mis-tags all body
+>   as furniture passes `assert_capture_tiles`, the byte round-trip, AND `check_completeness`
+>   (vacuously complete, `processed_count=0`). No tier owns "you excluded everything." Belongs to
+>   S1.4's capture-completeness gate, not S1.3b's typing-completeness.
+> - **REMAINS — spec tension:** the done-when's "reuses the S6 truth-table machinery" vs the audit's
+>   finding that `to_review` belongs at the S8.1-style governance surface (layer/axis mismatch) —
+>   resolve at S6/S8.1, flagged above.
 
 | ID | Deliverable | Refs | Deps | Done-when (tier) | Tag | St |
 |---|---|---|---|---|---|---|

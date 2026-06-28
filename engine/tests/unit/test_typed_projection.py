@@ -37,9 +37,10 @@ Invariants (each proven red by a targeted SUT mutation — red-first, ENGINE_STR
 
 Audit-hardening invariants (5-lens adversarial pass; each mutation-proven red):
   - count guard catches too-MANY, not only too-few: ``!=``→``<`` → ``…rejects_too_many…`` reds.
-  - ``processing_scope`` filter is ``!= excluded`` not ``== included``: an out-of-vocab scope stays
-    in scope (no reopened degenerate green) — revert to the whitelist →
-    ``test_out_of_vocabulary_processing_scope_stays_in_scope`` reds.
+  - ``processing_scope`` vocabulary is closed at the ``Atom`` model (S1.1): a typo can no longer
+    reach this check and vanish (the audit's reopened degenerate green) — bound at the root by
+    ``test_atom_rejects_out_of_vocabulary_processing_scope`` (test_atoms.py). The ``!= excluded``
+    filter is the remaining semantic scoping, bound by the furniture-exemption tests.
   - ``boundary_classes`` rejects a bare ``str`` (char-set trap): drop the guard →
     ``test_boundary_classes_rejects_a_bare_str`` reds.
   - route-to-review "count + location" bound above cardinality 1: cap to first →
@@ -88,10 +89,10 @@ from engine.structure import (
 )
 
 # Generic, profile-supplied capture-provenance classes. "heading" stands in for a structural
-# boundary slot; "authorial" for a plain body leaf. Neither is a source-language literal (the
-# neutrality guard's denylist is `capitolo`/`prefazione`/guillemets/baked counts, not these).
+# boundary slot; "body" for a plain body leaf (the neutral capture default — see capture.py). Neither
+# is a source-language literal (the neutrality guard's denylist is `capitolo`/guillemets/counts).
 BOUNDARY = "heading"
-BODY = "authorial"
+BODY = "body"
 BOUNDARY_CLASSES = frozenset({BOUNDARY})
 
 
@@ -267,7 +268,7 @@ def test_boundary_classes_accepts_any_iterable():
 # on hand-built ones. `[[MARK:N]]` mirrors test_raw_capture's synthetic marker grammar.
 
 _CAPTURE_SOURCE = (
-    "Nel mezzo del cammin\n"        # body para 1 (included, capture class "authorial")
+    "Nel mezzo del cammin\n"        # body para 1 (included, capture class "body")
     "di nostra vita.\n"
     "\n"
     "[[MARK:7]]\n"                  # furniture line (excluded, capture class "page-furniture")
@@ -420,17 +421,11 @@ def test_boundary_classes_accepts_a_generator():
         check_completeness(typed, boundary_classes=(c for c in [BOUNDARY]))  # one-shot generator
 
 
-def test_out_of_vocabulary_processing_scope_stays_in_scope():
-    # A typo'd / unknown processing_scope must NOT silently vanish (== "included" whitelist bug):
-    # it stays in scope (!= "excluded"), so an all-unknown stream carrying it still hard-fails
-    # rather than passing green — the reopened-degenerate hole the audit found.
-    bad = Atom(
-        atom_id="x_0", text="hi", raw_span=(0, 2), raw_source_hash=hash_raw("hi"),
-        page_range=(1, 1), norm_layer="raw", geom=Geom.absent(),
-        capture_provenance_class=BODY, processing_scope="include",  # typo of "included"
-    )
-    with pytest.raises(IncompleteTypingError, match="degenerate"):
-        check_completeness([TypedAtom(bad, _cls(UNKNOWN, confidence=0.0))], boundary_classes=frozenset())
+# NB: the reopened-degenerate-green hole the audit found (a typo'd processing_scope slipping past the
+# scope filter and vanishing from the check) is now closed at the *root* — the Atom model rejects an
+# out-of-vocabulary processing_scope at construction (S1.1), so it can never reach this check. That
+# stronger guarantee is bound by ``test_atom_rejects_out_of_vocabulary_processing_scope`` in
+# test_atoms.py; check_completeness's ``!= excluded`` filter is the remaining semantic scoping.
 
 
 def test_multiple_body_leaf_unknowns_are_all_routed_with_locations():
@@ -483,7 +478,7 @@ def test_real_capture_routes_a_body_leaf_to_review():
     report = check_completeness(typed_projection(atoms, _PartialByOrder()), boundary_classes=frozenset())
     assert report.review_count == 1
     assert report.to_review[0].atom_id == target
-    assert report.to_review[0].capture_provenance_class == "authorial"
+    assert report.to_review[0].capture_provenance_class == BODY  # capture_witness's default body class
 
 
 @pytest.mark.parametrize("scope", [PROCESSING_SCOPE_INCLUDED, PROCESSING_SCOPE_EXCLUDED])

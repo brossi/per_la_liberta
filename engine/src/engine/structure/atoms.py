@@ -158,6 +158,14 @@ class Atom:
             raise ValueError("raw_span must be [start, end] codepoint offsets")
         if len(self.page_range) != 2:
             raise ValueError("page_range must be [first_page, last_page]")
+        if self.processing_scope not in (PROCESSING_SCOPE_INCLUDED, PROCESSING_SCOPE_EXCLUDED):
+            # Closed vocabulary: an out-of-vocab value (a typo, a stray label) must fail at
+            # construction, not silently slip past downstream filters keyed on these two states
+            # (e.g. the S1.3b completeness scope) and vanish from a check that should have seen it.
+            raise ValueError(
+                f"processing_scope must be {PROCESSING_SCOPE_INCLUDED!r} or "
+                f"{PROCESSING_SCOPE_EXCLUDED!r}, got {self.processing_scope!r}"
+            )
 
 
 def duplicate_atom_ids(atoms: Iterable[Atom]) -> list[str]:

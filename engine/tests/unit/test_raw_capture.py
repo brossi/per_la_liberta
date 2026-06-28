@@ -110,7 +110,7 @@ def test_capture_witness_defaults_to_all_body_and_unmapped_pages():
     # carries the unmapped page sentinel.
     src = "alpha line\n\nbeta line\n"
     atoms = capture_witness(src, "copy1")
-    assert [a.capture_provenance_class for a in atoms] == ["authorial", "authorial"]
+    assert [a.capture_provenance_class for a in atoms] == ["body", "body"]
     assert all(a.processing_scope == PROCESSING_SCOPE_INCLUDED for a in atoms)
     assert all(a.page_range == PAGE_UNMAPPED for a in atoms)
     assert_capture_tiles(atoms, src)

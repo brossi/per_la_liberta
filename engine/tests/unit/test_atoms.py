@@ -39,7 +39,14 @@ import dataclasses
 import pytest
 
 import engine.structure as structure
-from engine.structure import Atom, AtomDerivation, Geom, duplicate_atom_ids
+from engine.structure import (
+    PROCESSING_SCOPE_EXCLUDED,
+    PROCESSING_SCOPE_INCLUDED,
+    Atom,
+    AtomDerivation,
+    Geom,
+    duplicate_atom_ids,
+)
 
 # A well-formed present geom + its illustrative box. Neutral values — no book/language content.
 _BBOX = (72.0, 118.4, 523.1, 134.8)
@@ -237,6 +244,17 @@ def test_atom_raw_span_must_be_a_pair():
 def test_atom_page_range_must_be_a_pair():
     with pytest.raises(ValueError):
         _atom(page_range=(1,))
+
+
+def test_atom_rejects_out_of_vocabulary_processing_scope():
+    # processing_scope is a closed vocabulary {included, excluded}: a typo'd / stray value fails at
+    # construction, so it can never slip past a downstream filter keyed on those two states (e.g.
+    # the S1.3b completeness scope) and vanish from a check that should have seen it.
+    with pytest.raises(ValueError, match="processing_scope must be"):
+        _atom(processing_scope="include")  # typo of "included"
+    # the two valid states construct fine
+    assert _atom(processing_scope=PROCESSING_SCOPE_INCLUDED).processing_scope == PROCESSING_SCOPE_INCLUDED
+    assert _atom(processing_scope=PROCESSING_SCOPE_EXCLUDED).processing_scope == PROCESSING_SCOPE_EXCLUDED
 
 
 def test_derivation_is_frozen():

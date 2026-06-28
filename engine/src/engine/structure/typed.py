@@ -13,9 +13,10 @@ records **who** typed it, never an anonymous label.
 (:data:`~engine.structure.classify.UNKNOWN`) is the engine's first-class *incomplete* state, not a
 real class. Only **processed** atoms are in scope — those **not** ``processing_scope``-excluded:
 furniture and wrappers are captured-with-role and *excluded* downstream (§3.0), so an excluded atom
-left ``unknown`` is out of scope — never routed to review, never a hard-fail. (The test is
-``!= excluded``, not ``== included``, so an out-of-vocabulary scope stays in scope and fails loud
-rather than vanishing.) Whether a *processed* ``unknown`` atom
+left ``unknown`` is out of scope — never routed to review, never a hard-fail. (The filter is
+``!= excluded`` — "process everything not opted out"; the scope vocabulary is closed at the ``Atom``
+model, S1.1, so a stray value fails at construction, never here.) Whether a *processed* ``unknown``
+atom
 is fatal is the profile's call, scoped by its declared ``boundary_classes`` set (S9.1; passed in as
 **data**, never a literal here, so the core stays book-agnostic). The discriminator is the atom's L1
 ``capture_provenance_class`` — the structural slot the bytes were captured into — matched against
@@ -36,7 +37,7 @@ is fatal is the profile's call, scoped by its declared ``boundary_classes`` set 
 keys on ``capture_provenance_class``, the only per-atom axis *independent* of the typed
 ``block_class`` (an atom is never both ``block_class in boundary_classes`` **and**
 ``block_class == UNKNOWN``). But today's S1.3a capture tags every non-furniture line with one body
-class (``capture_witness``'s ``body_class``, default ``"authorial"``) and forces every *named*
+class (``capture_witness``'s ``body_class``, default ``"body"``) and forces every *named*
 ``classify_line`` result to ``processing_scope="excluded"`` — so no real capture stream yet carries
 an *included* boundary class. Until S9 makes capture granular (tagging heading / footnote-call /
 embedded-letter-boundary lines with their own included ``capture_provenance_class``, which requires
@@ -164,8 +165,8 @@ def check_completeness(
     character set). Only **processed** atoms are in scope — those *not* ``processing_scope``-excluded:
     furniture/wrappers are captured-with-role and excluded downstream (§3.0), so an excluded atom
     left ``unknown`` is *not* an incompleteness — it is never routed to review and never a hard-fail.
-    An out-of-vocabulary scope stays in scope (``!= excluded``), failing loud rather than vanishing.
-    Over the processed atoms: raises
+    (The scope vocabulary is closed at the ``Atom`` model, S1.1, so a stray value fails at
+    construction, not here.) Over the processed atoms: raises
     :class:`~engine.errors.IncompleteTypingError` when they are **all-unknown** (degenerate —
     resolved nothing) or when any **boundary-class** atom is ``unknown``; otherwise returns a
     :class:`CompletenessReport` listing the body-leaf ``unknown`` atoms routed to review (count +
@@ -181,12 +182,11 @@ def check_completeness(
             f"({boundary_classes!r}); pass {{'heading'}}, not 'heading'."
         )
     boundary = frozenset(boundary_classes)
-    # Scope to the processable structure (see docstring): excluded furniture is exempt. The test is
-    # `!= excluded` (excluded is the *explicit* opt-out, §3.0), not `== included`, so an
-    # out-of-vocabulary `processing_scope` (a typo, a future third value) stays **in scope** and is
-    # caught by the degenerate/boundary checks rather than silently dropped — silently dropping it
-    # would reopen the "all-unknown passes green" hole this check exists to close. Filtered here, not
-    # in `typed_projection`, so the typed stream stays complete ("everything is brought in").
+    # Scope to the processable structure (see docstring): excluded furniture is exempt. `!= excluded`
+    # (excluded is the explicit opt-out, §3.0) rather than `== included` — "process everything not
+    # opted out". The scope vocabulary is closed at the `Atom` model (S1.1 validates it), so a typo'd
+    # value cannot reach here and silently vanish from the check; `!= excluded` keeps that intent as
+    # defense-in-depth. Filtered here, not in `typed_projection`, so the typed stream stays complete.
     processed = [t for t in typed if t.atom.processing_scope != PROCESSING_SCOPE_EXCLUDED]
     total = len(processed)
     unknown = [t for t in processed if t.classification.block_class == UNKNOWN]

@@ -98,6 +98,13 @@ def test_classification_is_frozen():
         c.block_class = "body"  # type: ignore[misc]
 
 
+def test_classification_rejects_anonymous_typed_by():
+    # typed_by is the attribution B weighs to override a typing (R3/D5); an empty one is anonymous,
+    # which the "never an anonymous label" guarantee forbids — enforced at construction.
+    with pytest.raises(ValueError, match="never anonymous"):
+        BlockClassification(UNKNOWN, typed_by="", confidence=0.0)
+
+
 def test_public_exports_resolve():
     for name in (
         "BlockClassifier",

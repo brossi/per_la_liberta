@@ -44,6 +44,15 @@ class BlockClassification:
     typed_by: str
     confidence: float
 
+    def __post_init__(self) -> None:
+        # ``typed_by`` is the attribution B relies on to override a typing (R3/D5); an empty one is
+        # an anonymous classification, which the "never an anonymous label" guarantee above forbids.
+        if not self.typed_by:
+            raise ValueError(
+                "BlockClassification.typed_by must name the classifier (never anonymous) — a "
+                "re-type by B stays attributable only if every classification records who typed it."
+            )
+
 
 class BlockClassifier(Protocol):
     """Concern A's typing seam: map a source-ordered atom stream to one ``BlockClassification``

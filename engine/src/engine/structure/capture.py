@@ -84,7 +84,7 @@ def capture_witness(
     *,
     classify_line: ClassifyLine = _all_body,
     page_of: PageOf = _unmapped,
-    body_class: str = "authorial",
+    body_class: str = "body",
 ) -> list[Atom]:
     """Segment one raw witness into a complete, tiling stream of addressed L1 atoms.
 
