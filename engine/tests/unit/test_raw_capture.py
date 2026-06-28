@@ -257,6 +257,22 @@ def test_canonical_atom_round_trips_against_its_primary_witness_source():
         assert reconstruct_raw(a, sources[primary]) == a.text
 
 
+def test_canonical_adopts_primary_page_so_the_unmapped_tripwire_is_non_vacuous():
+    # S1.3a.4 non-vacuity control (the permanent planted violation for the real-input PAGE_UNMAPPED
+    # tripwire). Page provenance flows primary->canonical: build_canonical adopts the primary witness's
+    # page_range, so the canonical stream carries a REAL page exactly when its primary does. A
+    # page-mapped primary here yields a page-mapped canonical — the very condition that reds the
+    # real-input marker once S7.1b page-attributes the canonical stream. So "uniformly PAGE_UNMAPPED"
+    # on real bytes is a genuine constraint, not `assert True`.
+    src = "alpha\n\nbeta\n"
+    prim = capture_witness(src, "copy1", page_of=lambda _s, _e: (7, 7))   # primary carries real pages
+    sec = capture_witness(src, "copy2")                                   # secondary is unmapped
+    canon = build_canonical({"copy1": prim, "copy2": sec}, ["copy1", "copy2"])
+    assert canon
+    assert all(a.page_range == (7, 7) for a in canon)                    # adopted from the primary ...
+    assert all(a.page_range != PAGE_UNMAPPED for a in canon)             # ... so NOT unmapped
+
+
 def test_build_canonical_excludes_furniture_from_alignment():
     # Furniture atoms (excluded scope) must not become canonical body atoms — only included atoms
     # align. copy1 here carries a marker; the canonical has no furniture-derived atom.

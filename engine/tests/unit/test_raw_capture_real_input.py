@@ -261,6 +261,28 @@ def test_real_canonical_every_atom_derived_and_round_trips():
         assert reconstruct_raw(a, sources[a.derived_from[0].witness]) == a.text
 
 
+# --- the canonical-page tripwire: S7.1b's worklist marker (S1.3a.4) ---------------------- #
+
+def test_real_canonical_is_uniformly_page_unmapped_until_s7_1b():
+    """S1.3a.4 — the S7.1b worklist marker. Today the canonical projection is uniformly PAGE_UNMAPPED:
+    build_canonical aligns the two **structural** witnesses (copy1/copy2), both page-less, and copy3 —
+    the only page-addressable witness — is the word-level adjudicator, absent from the structural
+    alignment (S1.3a.1), so no page can reach canonical. When S7.1b establishes the copy3<->canonical
+    word-level linkage and back-fills canonical page-attribution, this assertion **reds** — the signal
+    that the page-attribution change is intentional, not an accident (see ENGINE_STRUCTURE_TASKS S7.1b
+    and the PAGE_PENDING_ANCHOR deferral note). The assertion is **not vacuous**: page provenance flows
+    primary->canonical, proven by ``test_canonical_adopts_primary_page_so_the_unmapped_tripwire_is_non_vacuous``
+    in the model floor — a page-mapped primary yields a page-mapped canonical."""
+    a1 = capture_witness(_read(COPY1), "copy1")
+    a2 = capture_witness(_read(COPY2), "copy2")
+    canon = build_canonical({"copy1": a1, "copy2": a2}, ["copy1", "copy2"])
+    assert canon, "canonical projection is empty"
+    assert all(a.page_range == PAGE_UNMAPPED for a in canon), (
+        "a canonical atom gained a real page — if this is S7.1b's page-attribution, update this marker "
+        "intentionally; otherwise a page leaked from a witness into the structural projection"
+    )
+
+
 # --- the SequenceMatcher junk policy is explicit + load-bearing on real-scale streams ----- #
 
 def test_align_streams_pins_explicit_autojunk_and_it_is_load_bearing():
