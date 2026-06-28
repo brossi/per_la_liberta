@@ -56,6 +56,13 @@ from engine.structure.roundtrip import (
     reconstruct_raw,
     verify_atom_roundtrip,
 )
+from engine.structure.typed import (
+    CompletenessReport,
+    ReviewItem,
+    TypedAtom,
+    check_completeness,
+    typed_projection,
+)
 
 __all__ = [
     "ATOM_STORE_SCHEMA_VERSION",
@@ -95,4 +102,10 @@ __all__ = [
     "align_streams",
     "assert_capture_tiles",
     "PAGE_UNMAPPED",
+    # S1.3b — typed projection over the raw atoms (concern A typing + completeness)
+    "TypedAtom",
+    "typed_projection",
+    "ReviewItem",
+    "CompletenessReport",
+    "check_completeness",
 ]

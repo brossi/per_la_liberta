@@ -88,3 +88,19 @@ class CaptureError(EngineError):
     """
 
     exit_code = 8
+
+
+class IncompleteTypingError(EngineError):
+    """A *typed* L1 projection is structurally incomplete (``structure.typed``; S1.3b, §2-A/§9, R3).
+
+    The completeness complement of :class:`CaptureError` (which checks the *raw* stream tiles its
+    source): once the raw atoms are typed via a ``BlockClassifier``, ``unknown`` is a first-class
+    *incomplete* state, never a quiet green. Raised when the typing leaves the structure unresolved
+    in a way the profile cannot tolerate — an atom in one of the profile's declared
+    ``boundary_classes`` (a structurally load-bearing slot) typed ``unknown``, or an **all-unknown**
+    projection that resolved nothing (the degenerate stub's output). A body-leaf ``unknown`` is the
+    *non*-fatal case: it does not raise, it routes to review (count + location) in the returned
+    report. This is the failure a confidence label cannot fake.
+    """
+
+    exit_code = 9
