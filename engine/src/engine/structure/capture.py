@@ -44,6 +44,7 @@ from engine.structure.atoms import (
     Geom,
 )
 from engine.structure.roundtrip import hash_raw
+from engine.structure.roundtrip_gate import gap_records
 
 # The page range an atom carries when its witness has no page addressing at all (no page map, no
 # form feeds — PLL's copy1/copy2). A first-class "unmapped" sentinel, distinct from any real page,
@@ -263,36 +264,12 @@ def assert_capture_tiles(atoms: Sequence[Atom], source: str) -> None:
     """The capture-completeness + span-topology floor (§9): raise :class:`CaptureError` unless the
     atoms tile ``source`` with no silent loss.
 
-    Checks, in source order: every ``raw_span`` is in-bounds (``0 <= start <= end <= len``), spans do
-    not overlap or run backwards, and every byte *between* atoms (and before the first / after the
-    last) is whitespace — a non-whitespace gap is captured into no atom, the silent-loss failure mode
+    Delegates to :func:`engine.structure.roundtrip_gate.gap_records` — the single owner of the tiling
+    invariant S1.4 promotes to the production gate — discarding the returned gap records. Checks, in
+    source order: every ``raw_span`` is in-bounds (``0 <= start <= end <= len``), spans do not overlap
+    or run backwards, and every byte *between* atoms (and before the first / after the last) is
+    whitespace — a non-whitespace gap is captured into no atom, the silent-loss failure mode
     "everything is brought in" forbids. Because furniture is captured as atoms (not left in gaps),
-    this needs no furniture grammar; it is the neutral invariant S1.4 promotes to the production gate.
+    this needs no furniture grammar; it stays the neutral invariant.
     """
-    n = len(source)
-    prev = 0
-    for atom in atoms:
-        start, end = atom.raw_span
-        if not 0 <= start <= end <= n:
-            raise CaptureError(
-                f"atom {atom.atom_id!r} span {atom.raw_span} is out of bounds for a source of "
-                f"length {n}"
-            )
-        if start < prev:
-            raise CaptureError(
-                f"atom {atom.atom_id!r} span {atom.raw_span} overlaps or precedes the prior atom's "
-                f"end {prev} — spans must be ordered and non-overlapping"
-            )
-        gap = source[prev:start].strip()
-        if gap:
-            raise CaptureError(
-                f"{len(gap)} uncovered non-whitespace char(s) before atom {atom.atom_id!r} "
-                f"(silent loss — captured into no atom): {gap[:60]!r}"
-            )
-        prev = end
-    tail = source[prev:n].strip()
-    if tail:
-        raise CaptureError(
-            f"{len(tail)} uncovered non-whitespace char(s) after the last atom "
-            f"(silent loss — captured into no atom): {tail[:60]!r}"
-        )
+    gap_records(atoms, source)

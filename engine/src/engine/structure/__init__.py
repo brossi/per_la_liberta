@@ -56,6 +56,14 @@ from engine.structure.roundtrip import (
     reconstruct_raw,
     verify_atom_roundtrip,
 )
+from engine.structure.roundtrip_gate import (
+    DEFAULT_MIN_INCLUDED_FRACTION,
+    GapRecord,
+    assert_no_wholesale_exclusion,
+    assert_production_roundtrip,
+    gap_records,
+    reconstruct_source,
+)
 from engine.structure.typed import (
     CompletenessReport,
     ReviewItem,
@@ -102,6 +110,13 @@ __all__ = [
     "align_streams",
     "assert_capture_tiles",
     "PAGE_UNMAPPED",
+    # S1.4 — production round-trip gate (explicit gaps + whole-artifact byte-exactness)
+    "GapRecord",
+    "gap_records",
+    "reconstruct_source",
+    "assert_no_wholesale_exclusion",
+    "assert_production_roundtrip",
+    "DEFAULT_MIN_INCLUDED_FRACTION",
     # S1.3b — typed projection over the raw atoms (concern A typing + completeness)
     "TypedAtom",
     "typed_projection",
