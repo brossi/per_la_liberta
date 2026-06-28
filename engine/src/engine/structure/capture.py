@@ -180,7 +180,12 @@ def align_streams(
     kp = [key(a.text) for a in primary]
     ks = [key(a.text) for a in secondary]
     aligned: list[tuple[Atom | None, Atom | None]] = []
-    for tag, i1, i2, j1, j2 in SequenceMatcher(None, kp, ks).get_opcodes():
+    # autojunk=True is explicit + load-bearing, never the silent default: on real >=200-element
+    # streams difflib junks any key appearing in >1% of the sequence (high-frequency OCR-noise
+    # keys), which shifts the alignment — a material swing in the canonical count on real witnesses.
+    # Mirrors reconcile.align_paragraphs' identical call; revisiting the policy (True / False /
+    # per-book junk predicate) is a carried S1.3a concern, pinned True here.
+    for tag, i1, i2, j1, j2 in SequenceMatcher(None, kp, ks, autojunk=True).get_opcodes():
         if tag == "equal":
             for k in range(i2 - i1):
                 aligned.append((primary[i1 + k], secondary[j1 + k]))

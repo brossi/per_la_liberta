@@ -31,6 +31,7 @@ from __future__ import annotations
 import json
 import re
 from bisect import bisect_right
+from difflib import SequenceMatcher
 from pathlib import Path
 
 import pytest
@@ -40,6 +41,7 @@ from engine.structure import (
     PAGE_UNMAPPED,
     PROCESSING_SCOPE_EXCLUDED,
     PROCESSING_SCOPE_INCLUDED,
+    align_streams,
     assert_capture_tiles,
     build_canonical,
     capture_witness,
@@ -199,3 +201,43 @@ def test_real_canonical_every_atom_derived_and_round_trips():
     sources = {"copy1": t1, "copy2": t2}
     for a in canon:
         assert reconstruct_raw(a, sources[a.derived_from[0].witness]) == a.text
+
+
+# --- the SequenceMatcher junk policy is explicit + load-bearing on real-scale streams ----- #
+
+def test_align_streams_pins_explicit_autojunk_and_it_is_load_bearing():
+    """`align_streams`'s **effective** junk policy is ``autojunk=True`` (mirrors
+    ``reconcile.align_paragraphs``), and on real >=200-element streams that policy is
+    **load-bearing**. One key is held fixed so the *junk value* is the only variable.
+
+    Scope, stated honestly: this pins the **value**, not the **explicitness**. Flipping the call to
+    ``autojunk=False`` reds it (the pair count diverges from the True oracle: 5226 != 4786); but
+    *removing* the explicit arg reverts to difflib's default — also ``True`` — so this test stays
+    **green** on that change. Explicit-vs-implicit is a source-level intent, not behaviorally
+    observable, and is carried by the call-site comment + review. The opcode->pair *mapping* is
+    covered by the synthetic opcode-shape tests; this real-input test's marginal job is the one
+    behavior invisible at synthetic scale — the junk value — plus the data-property guard (B) that
+    keeps the "load-bearing" comment from going stale."""
+    a1 = capture_witness(_read(COPY1), "copy1")
+    a2 = capture_witness(_read(COPY2), "copy2")
+    key = lambda s: re.sub(r"\s+", " ", s.casefold()).strip()  # noqa: E731 — local, one-line
+    kp = [key(a.text) for a in a1]
+    ks = [key(a.text) for a in a2]
+
+    def pair_count(*, autojunk: bool) -> int:
+        # the number of aligned pairs align_streams would emit under this junk policy
+        n = 0
+        for tag, i1, i2, j1, j2 in SequenceMatcher(None, kp, ks, autojunk=autojunk).get_opcodes():
+            if tag == "insert":
+                n += j2 - j1
+            elif tag == "replace":
+                n += max(i2 - i1, j2 - j1)
+            else:  # equal | delete
+                n += i2 - i1
+        return n
+
+    chosen = align_streams(a1, a2, key=key)
+    # align_streams uses the True policy (its emitted pair count matches autojunk=True) ...
+    assert len(chosen) == pair_count(autojunk=True)
+    # ... and on these real streams the policy is load-bearing (True and False genuinely differ).
+    assert pair_count(autojunk=True) != pair_count(autojunk=False)

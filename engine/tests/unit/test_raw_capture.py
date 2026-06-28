@@ -15,9 +15,13 @@ secondary-only), so an alignment branch that dropped a derivation reds the headl
 
 from __future__ import annotations
 
+import ast
+from pathlib import Path
+
 import pytest
 
 import engine.structure as structure
+import engine.structure.capture as capture_mod
 from engine.errors import CaptureError
 from engine.structure import (
     PAGE_UNMAPPED,
@@ -279,6 +283,60 @@ def test_build_canonical_rejects_more_than_two_witnesses():
     t, _ = _body(["alpha", "beta"], "copy3")
     with pytest.raises(CaptureError, match="exactly two structural witnesses"):
         build_canonical({"copy1": p, "copy2": s, "copy3": t}, ["copy1", "copy2", "copy3"])
+
+
+# --- the junk policy is owned, not inherited: explicit autojunk at the source layer ----- #
+
+def _align_streams_passes_explicit_autojunk(tree_or_module) -> bool:
+    """True iff every ``SequenceMatcher`` call inside ``align_streams`` passes ``autojunk``
+    explicitly. Accepts a parsed AST (for planted fixtures) or the live capture module (parsed from
+    its own source). Returns False if the function or the call is absent — a guard that cannot find
+    its target must fail, not pass vacuously."""
+    tree = (
+        tree_or_module
+        if isinstance(tree_or_module, ast.AST)
+        else ast.parse(Path(tree_or_module.__file__).read_text(encoding="utf-8"))
+    )
+    fn = next(
+        (n for n in ast.walk(tree) if isinstance(n, ast.FunctionDef) and n.name == "align_streams"),
+        None,
+    )
+    if fn is None:
+        return False
+    calls = [
+        n for n in ast.walk(fn)
+        if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == "SequenceMatcher"
+    ]
+    if not calls:
+        return False
+    return all("autojunk" in {kw.arg for kw in c.keywords} for c in calls)
+
+
+def test_align_streams_owns_its_junk_policy_explicitly():
+    """Source-layer guard (S1.3a.2): the ``SequenceMatcher`` call inside ``align_streams`` must pass
+    ``autojunk`` **explicitly**. The behavioral test pins the *value* (and difflib's default is
+    ``True``), but explicit-vs-implicit is not behaviorally observable — yet the value is
+    load-bearing for the canonical projection (~9% pair-count swing). Left implicit, a parameter
+    that swings the projection is delegated to a default the engine does not own, so a future or
+    cross-interpreter default change would be a *silent* shift. Own it. This is the same family as
+    the S0.2 neutrality guard: a standing assertion over ``structure/`` source."""
+    assert _align_streams_passes_explicit_autojunk(capture_mod), (
+        "align_streams must pass autojunk explicitly to SequenceMatcher: the default is "
+        "load-bearing for the canonical projection and must be owned, not inherited (S1.3a.2)"
+    )
+
+
+def test_junk_policy_guard_discriminates_explicit_from_implicit():
+    """Non-vacuity red-proof (mirrors ``test_structure_neutrality``'s planted-literal proof): the
+    guard above is green on the clean tree only because the *same predicate* goes red on the
+    implicit form. Plant both forms and assert the predicate splits them — without this, a vacuous
+    guard that can never red would pass unnoticed."""
+    implicit = ast.parse("def align_streams():\n    return SequenceMatcher(None, a, b).get_opcodes()\n")
+    explicit = ast.parse(
+        "def align_streams():\n    return SequenceMatcher(None, a, b, autojunk=True).get_opcodes()\n"
+    )
+    assert _align_streams_passes_explicit_autojunk(implicit) is False  # the silent-default regression reds
+    assert _align_streams_passes_explicit_autojunk(explicit) is True   # the owned form greens
 
 
 # --- exports ---------------------------------------------------------------------------- #
