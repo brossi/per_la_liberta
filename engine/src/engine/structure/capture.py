@@ -218,9 +218,11 @@ def build_canonical(
     that witness's source. Word-level cross-witness reconciliation (and any third, word-level witness)
     is ``reconcile``'s separate job — not done here.
     """
-    if len(witness_order) < 2:
+    if len(witness_order) != 2:
         raise CaptureError(
-            f"build_canonical needs two structural witnesses to align, got {list(witness_order)!r}"
+            f"build_canonical aligns exactly two structural witnesses; got {len(witness_order)} "
+            f"({list(witness_order)!r}). N-way structural alignment is unbuilt — a word-level third "
+            f"witness (PLL's copy3) is reconciled separately, never passed here (S1.3a.1)."
         )
     primary_w, secondary_w = witness_order[0], witness_order[1]
     primary = [a for a in streams[primary_w] if a.processing_scope == PROCESSING_SCOPE_INCLUDED]

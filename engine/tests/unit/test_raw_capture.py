@@ -270,6 +270,17 @@ def test_build_canonical_requires_two_witnesses():
         build_canonical({"copy1": p}, ["copy1"])
 
 
+def test_build_canonical_rejects_more_than_two_witnesses():
+    # >2 structural witnesses must FAIL LOUD (S1.3a.1): N-way structural alignment is unbuilt, and
+    # the prior behavior silently used only witness_order[0:2], dropping the third witness without a
+    # trace. A word-level third witness (PLL's copy3) is reconciled separately, never passed here.
+    p, _ = _body(["alpha", "beta"], "copy1")
+    s, _ = _body(["alpha", "beta"], "copy2")
+    t, _ = _body(["alpha", "beta"], "copy3")
+    with pytest.raises(CaptureError, match="exactly two structural witnesses"):
+        build_canonical({"copy1": p, "copy2": s, "copy3": t}, ["copy1", "copy2", "copy3"])
+
+
 # --- exports ---------------------------------------------------------------------------- #
 
 def test_public_exports_resolve():
