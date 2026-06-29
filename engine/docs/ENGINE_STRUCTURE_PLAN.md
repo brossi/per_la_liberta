@@ -182,8 +182,9 @@ durable catalogue is B; its relations are C).
 - `normalization_layer_id` (`norm_layer`) is a human-readable label, **never** the loss
   guarantee. The binding guarantee is `raw_source_hash` + the byte-exact raw round-trip tier
   (§9) and a reversible transform map for normalized text.
-- **Geometry (`geom`, D30)** is a physical fact of the witness scan: the **primary
-  re-binding signal** (§3.4) and the base layer for space/fragment reconstruction. It is
+- **Geometry (`geom`, D30)** is a physical fact of the witness scan: D30's **intended primary
+  re-binding signal** (§3.4) — *conditionally confirmed* by S2.0 (outcome below, not settled) — and
+  the base layer for space/fragment reconstruction. It is
   available when a scan exists (PLL has the LOC PDF); the portability floor for text-only
   sources is content + structural-path. **The slot is `Optional`, and absence is a
   first-class state — never invented coordinates:** one of PLL's three witnesses (copy3,
@@ -195,6 +196,15 @@ durable catalogue is B; its relations are C).
   an **unmatched box is unusable as a primary re-bind anchor**. The probe that measures this
   text↔box alignment quality, and the demotion path when it misses threshold, are the
   build-now gate of the geometry pole (task tracker S2.0/S2.1).
+  **S2.0 outcome (2026-06-29, `docs/probes/s2_0_geometry_alignment.md` + `…_adversarial_audit.md`):**
+  geometry is **viable** (token anchorability ~0.92 content-token; column reading-order recoverable
+  from box coords, mean 0.92 / 87% pass on two-column body pages) but rated **conditional-primary,
+  not settled** — the order-extraction half is **re-gated at S2.2** on the as-built detector (mean +
+  per-page pass-rate over a breadth sample), not asserted now. Reading order is sourced two ways:
+  from a column-correct **text witness** when one exists (geometry cross-checks), from the
+  **geometric detector + human-in-loop** when none does (the engine must not presume a witness).
+  So "primary re-binding signal" above is the design intent this gate conditionally confirmed, not a
+  proven property.
 
 ### 3.1 Container tree
 
