@@ -31,6 +31,11 @@ from engine.paths import BookWorkspace
 
 #: L1 atom-store schema version (per-witness + canonical streams). Bound by S1.5.
 ATOM_STORE_SCHEMA_VERSION = 1
+#: The L1 atom-store stale class — the M3 stale-class identifier the lineage governance (S8.1) routes
+#: on, and the discriminator a persisted stream's envelope declares so a load can reject a file that
+#: is structurally JSON but not an atom store. Distinct from the structure-map (B) and relation-store
+#: (C) classes, so a schema change to one names *which* layer changed (§3.6). Bound by S1.5.
+ATOM_STORE_STALE_CLASS = "atom-stream"
 #: L2 structure-map schema version (containers/projections + lineage manifest). Bound by S4.4.
 STRUCTURE_MAP_SCHEMA_VERSION = 1
 #: L3 relation-store schema version (graph + cross-language alignment). Bound by S7.1c.

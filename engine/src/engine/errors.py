@@ -84,7 +84,10 @@ class CaptureError(EngineError):
     raised when a witness's atoms do not *tile* their source — a span out of bounds, an
     overlap/out-of-order span, or an uncovered non-whitespace gap (a *silent loss*: source bytes
     captured into no atom, the failure mode "everything is brought in" exists to forbid). The
-    captured-but-excluded vs never-captured distinction is what makes this checkable (§3.0).
+    captured-but-excluded vs never-captured distinction is what makes this checkable (§3.0). Also
+    covers the **cross-stream** reference-integrity tier of the atom store (S1.5): a canonical atom
+    that derives from no witness, or whose ``derived_from`` back-link resolves to no atom in the named
+    witness stream — the same "the streams don't hang together" family as a within-stream tiling fault.
     """
 
     exit_code = 8
@@ -104,3 +107,22 @@ class IncompleteTypingError(EngineError):
     """
 
     exit_code = 9
+
+
+class StaleArtifactError(EngineError):
+    """A persisted structure-substrate artifact cannot be loaded as a valid current-schema stream
+    (``structure.atom_store``; S1.5, §3.5/§3.6, D21).
+
+    The fail-loud the lineage governance rests on (§3.6 "Stale = fail-loud"): a *load* boundary
+    failure, distinct from the in-memory integrity violations above. Raised when a persisted atom
+    store carries a ``schema_version`` that is not the current registered one (genuinely **stale** —
+    refresh or migrate, the M3/S8.1 stale-class hook), declares the wrong ``stale_class``, is missing a
+    required envelope key, or is otherwise structurally malformed (a model-invariant violation a
+    ``ValueError`` would raise in memory is wrapped here at the load boundary, so ``from_json`` has a
+    total contract: a valid ``AtomStream`` or this error). One human action — do not trust the file —
+    so one exit code; the message distinguishes a stale version from a corrupt envelope. A *missing*
+    store file is :class:`MissingInputError` (absent, not stale); a persisted stream whose text drifted
+    off its span is :class:`RoundTripError` (the anchored round-trip self-check).
+    """
+
+    exit_code = 10

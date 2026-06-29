@@ -40,8 +40,14 @@ def _atomic_write(path: Path, render) -> None:
 
 
 def atomic_write_json(path: Path, data: dict | list) -> None:
-    """Write JSON atomically: temp file in the same dir, then os.replace."""
-    _atomic_write(path, lambda f: json.dump(data, f, indent=2, ensure_ascii=False))
+    """Write JSON atomically: temp file in the same dir, then os.replace.
+
+    ``allow_nan=False`` so a non-finite float (``NaN`` / ``±inf``) fails **loud** at write rather than
+    emitting the bare ``NaN``/``Infinity`` tokens (which are not RFC-8259 JSON — a strict or
+    cross-language reader rejects the whole file, and ``NaN`` silently breaks every ``==`` round-trip
+    check since ``NaN != NaN``). A finite-float producer is unaffected.
+    """
+    _atomic_write(path, lambda f: json.dump(data, f, indent=2, ensure_ascii=False, allow_nan=False))
 
 
 def atomic_write_text(path: Path, text: str) -> None:

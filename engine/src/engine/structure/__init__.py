@@ -15,6 +15,7 @@ from __future__ import annotations
 
 from engine.structure.artifacts import (
     ATOM_STORE_SCHEMA_VERSION,
+    ATOM_STORE_STALE_CLASS,
     ATOMS_AREA,
     ATOMS_SUBDIR,
     RELATION_STORE_SCHEMA_VERSION,
@@ -24,6 +25,18 @@ from engine.structure.artifacts import (
     atoms_dir,
     relations_path,
     structure_map_path,
+)
+from engine.structure.atom_store import (
+    CANONICAL,
+    WITNESS,
+    AtomStream,
+    assert_atom_hashes,
+    assert_reference_integrity,
+    assert_stream_roundtrip,
+    load_stream,
+    save_stream,
+    stream_ids,
+    stream_path,
 )
 from engine.structure.atoms import (
     PROCESSING_SCOPE_EXCLUDED,
@@ -74,6 +87,7 @@ from engine.structure.typed import (
 
 __all__ = [
     "ATOM_STORE_SCHEMA_VERSION",
+    "ATOM_STORE_STALE_CLASS",
     "STRUCTURE_MAP_SCHEMA_VERSION",
     "RELATION_STORE_SCHEMA_VERSION",
     "ATOMS_AREA",
@@ -123,4 +137,15 @@ __all__ = [
     "ReviewItem",
     "CompletenessReport",
     "check_completeness",
+    # S1.5 — persisted atom store (per-witness + canonical streams, versioned + integrity-checked)
+    "AtomStream",
+    "WITNESS",
+    "CANONICAL",
+    "save_stream",
+    "load_stream",
+    "stream_path",
+    "stream_ids",
+    "assert_stream_roundtrip",
+    "assert_atom_hashes",
+    "assert_reference_integrity",
 ]
