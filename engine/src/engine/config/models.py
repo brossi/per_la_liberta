@@ -179,6 +179,11 @@ class LanguageProfile:
         (``a-zA-ZÀ-ÿ``) cleanup's tokenisation regexes use. A *script* fact (a non-Latin book needs
         a different class), so config not code — the one documented exception to ``CoverageSpec``'s
         no-regex rule, because its consumer is a compiled regex, not a membership set.
+
+    ``case_fold`` (S3.0) is the case axis of the pre-lookup fold — ``"lower"`` | ``"casefold"`` |
+    ``"none"`` — the literal previously baked as ``.lower()`` in the dictionary-oracle path. A
+    non-Latin or case-sensitive book needs ``"none"``/``"casefold"``, so it is a profile fact, not
+    code (the case sibling to ``accent_fold``; the S3.0 normalization policy reads exactly these two).
     """
 
     language_id: str
@@ -192,6 +197,7 @@ class LanguageProfile:
     accent_inventory: tuple[str, ...]
     coverage: CoverageSpec
     accent_optional: bool
+    case_fold: str              # case axis of the pre-lookup fold: "lower"|"casefold"|"none" (S3.0)
     accent_fold: dict           # {"from": "àá…", "to": "aa…"} — fixed fold table (M4b-D1)
     accented_letters: str       # canonical superset of accented letters (M4b-D1)
     word_letter_class: str      # "any word letter" regex class fragment (M4b-D1)

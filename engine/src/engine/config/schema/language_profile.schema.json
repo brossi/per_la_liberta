@@ -7,7 +7,7 @@
     "language_id", "display_name", "spacy_model", "frequency_dictionary",
     "english_markers", "skip_words", "consonant_alphabet", "word_score_accents",
     "accent_inventory", "coverage",
-    "accent_optional", "accent_fold", "accented_letters", "word_letter_class",
+    "accent_optional", "case_fold", "accent_fold", "accented_letters", "word_letter_class",
     "period_dictionaries", "oracle_min"
   ],
   "properties": {
@@ -32,6 +32,11 @@
       }
     },
     "accent_optional": {"type": "boolean"},
+    "case_fold": {
+      "$comment": "Case axis of the S3.0 pre-lookup fold (was a baked .lower()). Enum-bound to the modes the normalization policy implements; a non-Latin/case-sensitive book uses 'none'/'casefold'.",
+      "type": "string",
+      "enum": ["lower", "casefold", "none"]
+    },
     "accent_fold": {
       "$comment": "Fixed accent->base fold table cleanup uses (M4b-D1). Parallel equal-length strings; NOT NFKD (byte-stable on non-folded glyphs).",
       "type": "object",

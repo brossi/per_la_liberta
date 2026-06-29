@@ -23,6 +23,7 @@
     "punctuation": ".,;:!?-—–'’‘\"«»“”()[]/…"
   },
   "accent_optional": true,
+  "case_fold": "lower",
   "accent_fold": {
     "from": "àáâèéêìíîòóôùúûÀÁÂÈÉÊÌÍÎÒÓÔÙÚÛ",
     "to": "aaaeeeiiiooouuuAAAEEEIIIOOOUUU"

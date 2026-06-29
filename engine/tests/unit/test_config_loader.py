@@ -48,6 +48,8 @@ def test_resolves_real_pll_constants():
     assert "à" in lp.coverage.letters and "É" in lp.coverage.letters
     assert "«" in lp.coverage.punctuation and "…" in lp.coverage.punctuation
     assert lp.accent_optional is True
+    # S3.0: the pre-lookup fold's case axis, sourced from the profile (was a baked `.lower()`).
+    assert lp.case_fold == "lower"
     assert lp.oracle_min == 2
     assert {d.name for d in lp.period_dictionaries} == {
         "Zingarelli 1922", "Edgren 1901", "Hoare 1915"
@@ -324,6 +326,52 @@ def test_language_profile_requires_a_monolingual_period_dictionary(tmp_path):
     books = _write_book(tmp_path, "nomono", _real_manifest())
     with pytest.raises(ConfigError, match="schema validation"):
         load_book("nomono", books_dir=books, profiles_dir=prof)
+
+
+def test_case_fold_is_required(tmp_path):
+    # case_fold is a required language-profile field (S3.0): the normalization policy reads it, so a
+    # profile omitting it must fail at LOAD (ConfigError) — not later as a KeyError in _build_language
+    # nor a silent fallback to a baked default. Same gate as test_missing_edition_year_…: schema-first.
+    prof = _stage_profiles(tmp_path)
+    lp = prof / "languages" / "italian_1900_1922.json"
+    data = json.loads(lp.read_text())
+    del data["case_fold"]
+    lp.write_text(json.dumps(data), encoding="utf-8")
+    books = _write_book(tmp_path, "nocf", _real_manifest())
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("nocf", books_dir=books, profiles_dir=prof)
+
+
+def test_case_fold_enum_rejects_an_unknown_value(tmp_path):
+    # case_fold is enum-constrained to the fold modes the normalization policy implements
+    # ("lower"|"casefold"|"none"); a typo'd/unsupported mode fails at LOAD, not later as a value the
+    # fold path would silently mis-apply or crash on. Exercises the enum failure branch.
+    prof = _stage_profiles(tmp_path)
+    lp = prof / "languages" / "italian_1900_1922.json"
+    data = json.loads(lp.read_text())
+    data["case_fold"] = "uppercase"  # not one of the supported modes
+    lp.write_text(json.dumps(data), encoding="utf-8")
+    books = _write_book(tmp_path, "badcf", _real_manifest())
+    with pytest.raises(ConfigError, match="schema validation"):
+        load_book("badcf", books_dir=books, profiles_dir=prof)
+
+
+@pytest.mark.parametrize("mode", ["lower", "casefold", "none"])
+def test_case_fold_enum_accepts_every_supported_mode(tmp_path, mode):
+    # Positive acceptance for ALL three fold modes — not just the "lower" the real Italian profile
+    # ships (single-fixture blind spot: the non-default config value is otherwise born untested). A
+    # non-default mode loads and round-trips to the model. This pins the enum at the config tier,
+    # independent of #25's behavioural fold test: NARROWING the schema enum (dropping/typo'ing
+    # "casefold"/"none") fails HERE, not only when the synthetic-profile battery later runs. Pairs
+    # with test_case_fold_enum_rejects_an_unknown_value (which guards WIDENING) to fix the set exactly.
+    prof = _stage_profiles(tmp_path)
+    lp = prof / "languages" / "italian_1900_1922.json"
+    data = json.loads(lp.read_text())
+    data["case_fold"] = mode
+    lp.write_text(json.dumps(data), encoding="utf-8")
+    books = _write_book(tmp_path, f"cf_{mode}", _real_manifest())
+    cfg = load_book(f"cf_{mode}", books_dir=books, profiles_dir=prof)
+    assert cfg.language.case_fold == mode
 
 
 def test_unimplemented_but_consistent_language_reaches_unknown_language_error(tmp_path):

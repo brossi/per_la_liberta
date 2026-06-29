@@ -137,6 +137,7 @@ def _build_language(data: dict) -> LanguageProfile:
             punctuation=data["coverage"]["punctuation"],
         ),
         accent_optional=data["accent_optional"],
+        case_fold=data["case_fold"],
         accent_fold={"from": data["accent_fold"]["from"], "to": data["accent_fold"]["to"]},
         accented_letters=data["accented_letters"],
         word_letter_class=data["word_letter_class"],
