@@ -17,6 +17,13 @@ stale classes (ENGINE_STRUCTURE_TASKS M3; the stores land in S1.5 / S4.4 / S7.1c
 the S0.1 skeleton: it fixes the locations and the version constants now; the stores, JSON schemas,
 and lineage manifest that read them arrive with those later tasks.
 
+Beyond the three persisted layers, this module also carries the **resource + normalization-policy
+lineage** constants (S3.0): a schema version and two further stale classes (``resource-set``,
+``normalization-policy``) that version the *inputs* — the profile-declared dictionaries and the
+pre-lookup fold policy — rather than a persisted layer. They have no work-tree location of their
+own; the lineage record holding them is embedded in the structure-map header (S4.4) and routed by
+governance (S8.1) as repairs distinct from any layer's.
+
 Engine-agnostic by construction: artifact *names* and *layout* only — no language, ordinal, or
 book-structure opinion (the recognizer and the structure profile carry that, never this core).
 """
@@ -40,6 +47,23 @@ ATOM_STORE_STALE_CLASS = "atom-stream"
 STRUCTURE_MAP_SCHEMA_VERSION = 1
 #: L3 relation-store schema version (graph + cross-language alignment). Bound by S7.1c.
 RELATION_STORE_SCHEMA_VERSION = 1
+
+# --- resource + normalization-policy lineage (S3.0) ------------------------------------- #
+
+#: Schema version of the resource/normalizer lineage record (``ResourceLineage`` — structure/lineage.py).
+#: Independent of the three persisted-layer versions above: S4.4 embeds this record in the
+#: structure-map header, and a change to its shape bumps only this constant. Bound by S3.0.
+RESOURCE_LINEAGE_SCHEMA_VERSION = 1
+#: Stale class for the *resource set* — the frequency dictionary + the period dictionaries resolved
+#: through the language profile. A content change (member swap/add/remove, re-OCR, ``oracle_min``)
+#: trips this class so the lineage governance (S8.1) routes the *re-segment* repair. Distinct from
+#: the normalizer class below and from every persisted-layer class. Bound by S3.0.
+RESOURCE_STALE_CLASS = "resource-set"
+#: Stale class for the *normalization policy* — the pre-lookup fold (case + accent) built from the
+#: profile. A policy change trips this class so S8.1 routes the *re-derive offsets* repair, a
+#: different migration from a resource swap (§3.6). Distinct from the resource class above and from
+#: every persisted-layer class. Bound by S3.0.
+NORMALIZER_STALE_CLASS = "normalization-policy"
 
 # --- fixed work-tree locations ---------------------------------------------------------- #
 

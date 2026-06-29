@@ -307,6 +307,15 @@ red input. Home: `tests/unit/test_resource_lineage.py` (+ the normalization-neut
 17. **Descriptor-keys == ops' inputs (no hollow version).** `normalizer_descriptor`'s keys equal
     exactly the profile fields the fold ops read (`{case_fold, accent_fold}`); a field hashed-but-unused
     or used-but-unhashed turns the suite red. (Operationalizes D-F.)
+18. **Stale-class wire values pinned (persisted contract).** The literal strings `to_json()` emits for
+    `resource_stale_class` / `normalizer_stale_class` equal exactly `"resource-set"` /
+    `"normalization-policy"` — pinned at the **serialization site** (the emitted record), *not* against
+    the bare constants (which would only restate their own literal). Mirrors the atom-store envelope pin
+    (`test_atom_store.py`: `env["stale_class"] == "atom-stream"`). *Red:* rename either discriminator and
+    the persisted value drifts while distinctness (5) / diffability (14) / version-binding (7) all stay
+    green — this is the invariant that catches it. S4.4 writes these into `structure_map.json` and S8.1
+    routes on them, so the literal is a wire contract, not an internal name. (From the #23 pre-commit
+    audit, F1; written red in #25 against the stub `to_json`, greened at #27.)
 
 ### Done-when → proof map
 
@@ -315,7 +324,7 @@ red input. Home: `tests/unit/test_resource_lineage.py` (+ the normalization-neut
 | resources load via the profile | 9 (binding, hard) + 1 + 15 |
 | normalizer loads via the profile | 8, 10, 17 |
 | both hashes enter lineage | 7 (binding) + 14 |
-| two distinct stale classes | 2, 4, 5 |
+| two distinct stale classes | 2, 4, 5, 18 (wire-value pin) |
 | neutrality tier green | 10 (behavioural) + 11 |
 
 ---
@@ -332,12 +341,12 @@ red input. Home: `tests/unit/test_resource_lineage.py` (+ the normalization-neut
    So the red battery *collects and runs* and each test fails **on its own assertion**, not on an
    `ImportError` at collection (a collection error is one uninformative red, not invariant-by-invariant
    — the same skeleton-first pattern `artifacts.py` / the M6 stubs already use).
-4. `tests/unit/test_resource_lineage.py` — the full red battery (1–17) against those stubs.
+4. `tests/unit/test_resource_lineage.py` — the full red battery (1–18) against those stubs.
 5. `_sha256_bytes` + the `_canonical` helper (green 6, 16; the binding half of 7).
 6. `dictionaries/normalization.py` `NormalizationPolicy` — `chunk_key` + `probe_forms` (green 3, 4, 8,
    10, 17).
 7. Resource digest over `index.json` `chunks[*].file` + fail-loud (green 1, 13, 15).
-8. `structure/lineage.py` `ResourceLineage.build`/`to_json` (green 2, 7, 9, 14).
+8. `structure/lineage.py` `ResourceLineage.build`/`to_json` (green 2, 7, 9, 14, 18).
 9. Neutrality + mutation pass (11, 12); full suite + ruff green.
 
 ---
@@ -356,3 +365,7 @@ hashed bytes); `resource_descriptor` is surfaced for localizable diffs; the stal
 distinctness test references existing classes only; and the test battery gained the same-path content
 test, the recompute-binding test, the strengthened not-Italian-only fixture, and the fail-loud,
 canonicalizer-idempotence, and descriptor-keys==ops-inputs invariants.
+
+A follow-up **#23 pre-commit audit** (2026-06-29) added invariant 18 — the stale-class wire-value pin
+— on the atom-store precedent (`test_atom_store.py:169`), closing the gap that a discriminator rename
+would pass 5/7/14 green while silently changing the value S4.4 persists and S8.1 routes on.
