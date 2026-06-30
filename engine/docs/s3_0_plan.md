@@ -90,7 +90,13 @@ The seam in one line: **S3.0 = fold; S3.1 = tokenize + search.**
   `.txt`), and `raw.txt` (the regenerable download — present in Edgren/Hoare, **absent** in Zingarelli;
   tracked-vs-ignored status is parent-repo-governed and varies). That present-or-absent variance is
   exactly why a glob would be unstable and `chunks[*].file` is the rule — the digest is independent of
-  any file's git status. So `chunks[*].file` is exactly the consumed file set.
+  any file's git status. So `chunks[*].file` is the **declared** set the digest versions. (Caveat, F1
+  audit: the *current* `DictionaryOracle` loads `{word[0]}.txt` directly and never reads `index.json`,
+  and Hoare's `_INDEX → en_index.txt` back-index is declared+hashed but not loaded by that `{letter}.txt`
+  path — so the declared set is the versioned set *by construction*, not provably identical to the
+  live-consumed set. Reconciling the two is M6/S3.1's, when the oracle's `index.json`-reading contract
+  is fixed; until then the digest versions the declared set, and F1's chunk-key-in-identity keeps it
+  sensitive to a routing-key remap.)
 - Neutrality guards: `test_structure_neutrality` scans `src/engine/structure/**` (covers
   `structure/lineage.py`); `test_core_neutrality` scans all `src/engine/**` for book/typeface terms
   only — **neither** language-scans `dictionaries/normalization.py` (D-F / test 11).
@@ -143,11 +149,15 @@ deep-merge).
   `read_text` would hide a CRLF/encoding change behind universal-newline translation.
 - **Frequency dict** → `_sha256_bytes` of the file.
 - **Each period member** → digest over the files declared by its `index.json` `chunks[*].file`,
-  **sorted by chunk key** for determinism, hashing the ordered list of `(declared-file-identity,
-  content_hash)` pairs. So adding/removing a declared chunk trips the version (identity in), a chunk's
-  content change trips it (content in), and `index.json`'s own incidental metadata (counts/sizes) does
-  **not** (manifest bytes out). This excludes every undeclared file — `raw.txt`, `00_front_matter.txt`,
-  the derived JSON — regardless of its git status; only the oracle-consumed set is hashed.
+  **sorted by chunk key** for determinism, hashing the ordered list of `(chunk-key,
+  declared-file-identity, content_hash)` triples. The **chunk key** is part of the identity, not only
+  the sort order (F1, #27 audit): it is the oracle's routing bucket (`word[0]`→`{letter}.txt`), so
+  re-declaring the same file+bytes under a different key is a routing change a filename-only digest
+  would miss. So adding/removing a declared chunk trips the version (identity in), a routing-key remap
+  trips it (key in), a chunk's content change trips it (content in), and `index.json`'s own incidental
+  metadata (counts/sizes) does **not** (manifest bytes out). This excludes every undeclared file —
+  `raw.txt`, `00_front_matter.txt`, the derived JSON — regardless of its git status; only the declared
+  set is hashed.
 - **Fail-loud, never silent-skip.** A file declared in `chunks` but **absent on disk** →
   `MissingInputError` (a truncated dictionary must not hash as complete). A member dir with **no
   `index.json`** → `MissingInputError` (never a glob fallback — the bare glob is exactly the instability
@@ -190,7 +200,7 @@ does **not** carry the literal hashed string; the binding is re-established by r
 ```
 ResourceLineage(
     resource_version: str,            # "sha256:…" rolled-up over the resource descriptor
-    resource_descriptor: str,         # canonical JSON: {oracle_min, members:[{name,kind,dir,hash}, …]}
+    resource_descriptor: str,         # canonical JSON: {oracle_min, frequency, members:[{name,kind,dir,hash}, …]}
     resource_stale_class: str,        # RESOURCE_STALE_CLASS
     normalizer_version: str,          # "sha256:…" over the normalizer descriptor
     normalizer_descriptor: str,       # canonical JSON: {case_fold, accent_fold}  (D-F)
@@ -207,8 +217,16 @@ ResourceLineage(
 - **Journal-readiness.** S3.0 builds a *diffable record*, not a history log (history = S8.1). Three
   properties make it journalable: `schema_version` (schema evolution), canonical serialization (byte-
   diffable), and per-member + per-axis descriptors (a diff is *localizable* — "Zingarelli changed",
-  "case_fold lower→casefold" — not just "something moved"). The `oracle_min` and per-member `dir`/`hash`
-  are surfaced in `resource_descriptor` so every input to `resource_version` is visible to a diff.
+  "case_fold lower→casefold" — not just "something moved"). The `oracle_min`, the frequency-dict
+  content hash (carried as a sibling `frequency` key — a flat file has no `{name,kind,dir}` member
+  shape to fit, so it rides the descriptor beside `members` rather than overloading those fields), and
+  per-member `dir`/`hash` are surfaced in `resource_descriptor` so every input to `resource_version`
+  is visible to a diff. Note (F2, #27 audit, kept-by-decision): a member's `name`/`kind`/`dir` are
+  hashed *into* `resource_version`, not merely surfaced — so resource-version tracks the member's
+  **declaration identity**, not only its oracle-observable content, and a cosmetic rename re-segments.
+  That is a deliberate false-positive on the over-migration side (re-derive needlessly, never miss a
+  real change), accepted not fixed; contrast the normalizer tier (invariant 17 — versions exactly the
+  applied axes) and the frequency hash (content-only).
 
 ### D-F — The normalization policy = the oracle fold path
 
