@@ -40,3 +40,44 @@ period-dictionary oracle gate, the boundary-search predicate (`word_letter_class
   pair); (b) model `accent_fold` as a tuple-of-pairs so the frozen dataclass is genuinely hashable. Pairs
   with `s3_0_plan.md` D-F (the policy's op/descriptor contract) and S3.0's deferral of the canonical
   membership key.
+- **Second motivation (perf) — the same fix unblocks a hot-path win.** The S3.0.4 (#26) adversarial pass
+  (forward-durability facet, F4) measured `chunk_key`/`probe_forms` each rebuilding the fold table inline
+  via `build_fold_table(self.accent_fold)` on *every* call — ~78% of `chunk_key`'s cost, ~5.7× a prebuilt
+  table. The frozen policy's table is invariant, so the natural fix is to memoize it (`@lru_cache` / a
+  cached attribute) — but that is **blocked by the same unhashable `dict` field** (an `lru_cache` keyed on
+  the policy needs `hash(policy)`). So resolution **(b)** (tuple-of-pairs) unblocks *both* hashability and
+  per-call memoization at once. Academic today; at S3.1's "millions of tokens × 2 ops" it is not. Same
+  revisit trigger — the segmenter both keys-on a policy *and* rebuilds the fold per call.
+
+### Q-S3.1-2 — S3.1's segmentation/search version must cover `spacy_model` + `word_letter_class`
+- **Opened:** 2026-06-29 (S3.0.4 / #26 five-facet adversarial pass, forward-durability facet, finding F6).
+- **Question:** S3.0's normalizer descriptor is exactly `{case_fold, accent_fold}` (the fold ops' inputs)
+  and **deliberately excludes** the tokenizer identity (`spacy_model`) and the boundary-search predicate
+  (`word_letter_class`) — correctly, because those are S3.1's segmentation/search concern, not the fold
+  policy's (D-F). But until S3.1 *ships its own* segmentation/search version object, a `spacy_model` or
+  `word_letter_class` swap moves **no version at all** — a genuine system-level governance under-detection
+  (S8.1 would not route a re-segment on a tokenizer/predicate change).
+- **State at S3.0 (why not here):** out of scope by construction — S3.0 versions the fold inputs only; the
+  segmentation/search inputs have no consumer yet. Flagged so it is not silently lost between S3.0 and S3.1.
+- **Revisit when:** S3.1 builds the segmentation/search version — it **must** fold in `spacy_model` and
+  `word_letter_class` (and carry its own stale class), or governance under-detects a tokenizer/predicate swap.
+- **Note (direction, not under-detection):** a behavior-preserving reorder of the `accent_fold` parallel
+  strings (`"àá"` vs `"áà"`, identical `str.maketrans`) *does* move the normalizer version — the descriptor
+  hashes the declaration, not the derived behavior. That is over-migration (the safe bias for governance:
+  re-derive offsets needlessly, never miss a real change), so it is acceptable, not a defect.
+
+---
+
+## Carried implementation notes for S3.1 consumers
+_(S3.0.4 / #26 forward-durability facet — minor, not blocking, captured so they are not rediscovered cold.)_
+
+- **`descriptor()` returns a live alias of the profile's `accent_fold` dict, not a copy** (F2). Safe for
+  #27 (`ResourceLineage.build` canonicalizes-then-discards, read-only), but a later consumer that mutates
+  `descriptor()`'s return before hashing would silently corrupt `cfg.language.accent_fold` — every oracle/
+  cleanup call *and* the hash. Contract for S3.1: treat the descriptor as read-only; never mutate the
+  return. (A defensive `dict(...)` copy in `descriptor()` is the alternative if a mutating consumer appears.)
+- **`chunk_key("")` raises a bare `IndexError`; `probe_forms("")` returns `[""]`** (F3). The asymmetry
+  matches the live oracle (which short-circuits sub-3-char words before the fold, so `chunk_key`'s non-empty
+  precondition is the caller's to honor), but S3.1's Zipf-DP segmenter is a *different* consumer than the
+  guarded oracle. If the segmenter can ever present an empty span, guard upstream or consider a typed domain
+  error over the bare `IndexError` when S3.1 is scoped.

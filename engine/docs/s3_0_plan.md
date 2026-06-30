@@ -343,8 +343,11 @@ red input. Home: `tests/unit/test_resource_lineage.py` (+ the normalization-neut
    — the same skeleton-first pattern `artifacts.py` / the M6 stubs already use).
 4. `tests/unit/test_resource_lineage.py` — the full red battery (1–18) against those stubs.
 5. `_sha256_bytes` + the `_canonical` helper (green 6, 16; the binding half of 7).
-6. `dictionaries/normalization.py` `NormalizationPolicy` — `chunk_key` + `probe_forms` (green 3, 4, 8,
-   10, 17).
+6. `dictionaries/normalization.py` `NormalizationPolicy` — `chunk_key`/`probe_forms`/`descriptor`
+   (green 8, 17; **advances** 3, 4, 10 — they complete at #27 once `build`/`_sha256_bytes`/`_canonical`
+   land: 3/4 route through `ResourceLineage.build` (step 8), 10's fold-op assertions green here but its
+   `_normalizer_version` tail needs `_canonical`/`_sha256_bytes` (step 5). The GitHub #26/#27 split folds
+   plan step 5 into #27, so neither exists at #26.).
 7. Resource digest over `index.json` `chunks[*].file` + fail-loud (green 1, 13, 15).
 8. `structure/lineage.py` `ResourceLineage.build`/`to_json` (green 2, 7, 9, 14, 18).
 9. Neutrality + mutation pass (11, 12); full suite + ruff green.
