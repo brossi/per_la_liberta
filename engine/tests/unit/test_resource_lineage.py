@@ -10,11 +10,19 @@ the red-first evidence, not a regression. It also pins two resource-digest desig
 states but §4 never numbered — ``oracle_min`` as a resource-version input, and index.json
 manifest-bytes-out — surfaced by the #25 adversarial audit as "passes even if the impl drops them".
 
-Two invariants are **not** here: 11 (a targeted source-language scan over ``normalization.py``,
-unguarded by the existing neutrality tiers) and 12 (the hand-mutation pass) are green-*down*
-validation, not fail-against-stub assertions, so they land with the neutrality + mutation pass in
-#28 (§5.9). The structure-half of 11 needs no new test — ``test_structure_neutrality`` already globs
-``structure/lineage.py``.
+Two invariants were **not** seated against the stubs: 11 (a targeted source-language scan) and 12
+(the hand-mutation pass) are green-*down* validation, not fail-against-stub assertions, so they
+landed with the #28 neutrality + mutation pass (§5.9). **Invariant 12** is the "#28 mutation
+green-down" section at the foot of this file — the four survivors the #27 pre-commit audit's
+mutation hunt left green (the impl was correct, the red-first pins were missing): sha256-KAT,
+``_canonical`` key-order, intra-member chunk-order, and declared-filename identity. **Invariant 11**
+lives in ``test_resource_neutrality.py`` — a targeted source-language *resource*-literal scan over
+``dictionaries/normalization.py`` **and** ``structure/lineage.py`` (the #27 audit found the existing
+``test_structure_neutrality`` / ``test_core_neutrality`` denylists would not catch a baked dictionary
+dir / ``it_combined.txt`` / source-language name / accent-fold literal in either module, so it widened
+the plan's normalization-only §11 scope to both). The structure-half of 11's *structural* terms
+(headings/guillemets/counts) is still covered by ``test_structure_neutrality`` globbing
+``structure/lineage.py``; the new scan adds the orthogonal resource/language axis.
 
 The ``to_json()`` shape the battery pins (the contract #27 implements, the fragment S4.4 embeds)::
 
@@ -531,6 +539,12 @@ def test_normalizer_descriptor_keys_are_exactly_the_fold_ops_inputs():
     # field hashed-but-unused (a hollow version) or used-but-unhashed turns this red.
     policy = NormalizationPolicy(case_fold="lower", accent_fold={"from": "à", "to": "a"})
     assert set(policy.descriptor().keys()) == {"case_fold", "accent_fold"}
+    # …and each key maps to its OWN axis value, not merely the right key SET: a descriptor that swaps
+    # the two axis values (``{"case_fold": self.accent_fold, "accent_fold": self.case_fold}``) keeps
+    # the key set but mislabels which axis is which — the emitted normalizer descriptor would then
+    # version the wrong axis under each name. Distinct value types (str vs dict) make the swap
+    # observable. (#28 audit, narrow mutation-hunt, MED.)
+    assert policy.descriptor() == {"case_fold": "lower", "accent_fold": {"from": "à", "to": "a"}}
 
 
 # --- invariant 18 — stale-class wire values pinned at the serialization site --------------- #
@@ -544,3 +558,127 @@ def test_stale_class_wire_values_are_pinned_at_the_serialization_site(fake_asset
     # distinctness (5) / diffability (14) / version-binding (7) all stay green — this catches it.
     assert rec["resource"]["stale_class"] == "resource-set"
     assert rec["normalizer"]["stale_class"] == "normalization-policy"
+
+
+# --- invariant 12 — #28 mutation green-down (the four #27-audit survivors) ------------------ #
+# The #27 pre-commit audit's mutation hunt left four mutations green: the impl was *correct*, the
+# red-first PINS were missing (exactly invariant 12's remit — "hand-mutate the hashing + descriptor
+# assembly ⇒ 0 survivors"). Each test below goes red under precisely one mutation, closing one gap.
+# (The audit also confirmed two EQUIVALENT mutants that need no pin — the `name`-primary member sort,
+# and `_canonical`'s separators/ensure_ascii — see the per-test notes / feedback_no_cheating_results.)
+
+def test_sha256_is_the_pinned_algorithm():
+    # M1b: invariant 9 asserts only the ``"sha256:"`` PREFIX (a hardcoded f-string label, not derived
+    # from the algorithm), so a ``hashlib.sha256`` → ``md5``/``sha1`` swap stays green. Pin the digest
+    # BYTES to the NIST SHA-256 known-answer vectors so the algorithm itself is bound. ("abc" and the
+    # empty input are two distinct known answers — the empty case also kills a constant-return mutant.)
+    assert _sha256_bytes(b"abc") == (
+        "sha256:ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+    )
+    assert _sha256_bytes(b"") == (
+        "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    )
+
+
+def test_canonical_is_key_order_independent():
+    # M2: ``build`` constructs every descriptor in fixed literal key order, so dropping
+    # ``sort_keys=True`` survives the whole battery — until a future descriptor is assembled from a
+    # dict whose key order varies (a member built from a mapping, say). Pin ``sort_keys`` directly:
+    # the same items in different insertion order must canonicalize identically (flat and nested).
+    assert _canonical({"a": 1, "b": 2}) == _canonical({"b": 2, "a": 1})
+    assert _canonical({"x": {"p": 1, "q": 2}}) == _canonical({"x": {"q": 2, "p": 1}})
+    # ``separators=(",",":")`` and ``ensure_ascii=False`` are deterministic-but-EQUIVALENT mutants
+    # here: nothing pins the canonical string (or its hash) to an external constant for a non-ASCII /
+    # whitespace-sensitive descriptor, so flipping either stays self-consistent and unobservable. They
+    # are left unpinned by design (not overlooked) — only key-order stability is load-bearing.
+
+
+def test_chunk_order_within_a_member_does_not_move_the_version(fake_assets):
+    # M6: every fixture member has a SINGLE chunk, so dropping ``sorted(chunks)`` in ``_digest_member``
+    # survives — a one-element declaration is trivially canonical. Stage a 2-chunk member and permute
+    # its ``index.json`` KEY ORDER (same files, same bytes): an index regen that reorders keys must NOT
+    # move the version (D-C "manifest bytes out"), so the per-member hash and the roll-up both hold.
+    cfg, root = fake_assets
+    member = root / "dictionary" / "zingarelli_1922"
+    (member / "a.txt").write_bytes(b"abaco\n")
+    (member / "b.txt").write_bytes(b"baco\n")
+    index = member / "index.json"
+    index.write_text(json.dumps({"chunks": {"A": {"file": "a.txt"}, "B": {"file": "b.txt"}}}), encoding="utf-8")
+    ordered = ResourceLineage.build(cfg)
+    h_ordered = {m["name"]: m["hash"] for m in ordered.to_json()["resource"]["descriptor"]["members"]}
+    # same file→content bindings, only the manifest key order permuted (B before A on disk)
+    index.write_text(json.dumps({"chunks": {"B": {"file": "b.txt"}, "A": {"file": "a.txt"}}}), encoding="utf-8")
+    assert list(json.loads(index.read_text(encoding="utf-8"))["chunks"]) == ["B", "A"]  # order really permuted on disk
+    after = ResourceLineage.build(cfg)
+    h_after = {m["name"]: m["hash"] for m in after.to_json()["resource"]["descriptor"]["members"]}
+    assert h_after["Zingarelli 1922"] == h_ordered["Zingarelli 1922"]  # per-member hash stable under reorder
+    assert after.resource_version == ordered.resource_version          # and the roll-up with it
+
+
+def test_resource_version_tracks_a_declared_filename_rename(fake_assets):
+    # M7: no test renames a declared file while holding the chunk key + bytes fixed, so dropping
+    # ``filename`` from the ``(chunk_key, filename, content_hash)`` triple survives. But the declared
+    # filename IS the file an ``index.json``-reading oracle opens for that key, so a key-stable,
+    # byte-stable rename is a real change to the declared key→file binding (F1) ⇒ the version must
+    # move. Complements ``test_resource_version_tracks_the_chunk_routing_key`` (the key half of the
+    # same (key, file, content) identity).
+    cfg, root = fake_assets
+    member = root / "dictionary" / "zingarelli_1922"
+    index = member / "index.json"
+    assert list(json.loads(index.read_text(encoding="utf-8"))["chunks"]) == ["A"]  # single-chunk precondition
+    before = ResourceLineage.build(cfg)
+    h0 = {m["name"]: m["hash"] for m in before.to_json()["resource"]["descriptor"]["members"]}
+    # rename the declared file, same chunk key "A", same bytes
+    (member / "renamed.txt").write_bytes((member / "a.txt").read_bytes())
+    (member / "a.txt").unlink()
+    index.write_text(json.dumps({"chunks": {"A": {"file": "renamed.txt"}}}), encoding="utf-8")
+    after = ResourceLineage.build(cfg)
+    h1 = {m["name"]: m["hash"] for m in after.to_json()["resource"]["descriptor"]["members"]}
+    assert h1["Zingarelli 1922"] != h0["Zingarelli 1922"]  # the rename moved the member hash
+    assert h1["Edgren 1901"] == h0["Edgren 1901"]          # the other members untouched
+    assert after.resource_version != before.resource_version
+
+
+def test_every_declared_chunk_contributes_to_the_member_digest(fake_assets):
+    # #1 (#28 audit, narrow mutation-hunt, HIGH): the M6 reorder pin proves chunk ORDER is canonical,
+    # but every other fixture member is single-chunk, so a digest hashing only a SUBSET of the declared
+    # chunks (e.g. ``sorted(chunks)[:1]`` — the first only) survives the whole suite. The real period
+    # dictionaries are 22–26 chunks (A–Z), so that regression would leave ``resource_version`` blind to
+    # ~21/22 of each dictionary's bytes. Pin CONTENT-sensitivity of EACH declared chunk: mutate one
+    # chunk at a time and assert the member hash AND the roll-up move every time — killing a first-only
+    # (``[:1]``), a non-first-only (``[1:]``), or any other proper-subset digest.
+    cfg, root = fake_assets
+    member = root / "dictionary" / "zingarelli_1922"
+    (member / "a.txt").write_bytes(b"alpha\n")
+    (member / "b.txt").write_bytes(b"beta\n")
+    index = member / "index.json"
+    index.write_text(json.dumps({"chunks": {"A": {"file": "a.txt"}, "B": {"file": "b.txt"}}}), encoding="utf-8")
+
+    def _member_state():
+        res = ResourceLineage.build(cfg)
+        members = res.to_json()["resource"]["descriptor"]["members"]
+        return {m["name"]: m["hash"] for m in members}["Zingarelli 1922"], res.resource_version
+
+    h0, v0 = _member_state()
+    # mutating the FIRST declared chunk moves both the member hash and the roll-up (kills a [1:] digest)
+    (member / "a.txt").write_bytes(b"alpha MUTATED\n")
+    h1, v1 = _member_state()
+    assert h1 != h0 and v1 != v0
+    # …and mutating the SECOND declared chunk does too (kills a [:1] digest — the HIGH gap). Restore the
+    # first chunk so ONLY the second differs from the baseline, isolating the second chunk's contribution.
+    (member / "a.txt").write_bytes(b"alpha\n")
+    (member / "b.txt").write_bytes(b"beta MUTATED\n")
+    h2, v2 = _member_state()
+    assert h2 != h0 and v2 != v0
+
+
+def test_resource_descriptor_and_schema_version_wire_shape_is_pinned(fake_assets):
+    # #3/#4 (#28 audit, narrow mutation-hunt, LOW): the resource-descriptor's top-level key labels and
+    # the record's schema_version are a wire contract (S4.4 embeds the fragment, S8.1 routes on it), but
+    # nothing pinned them at the SERIALIZATION site — a ``build`` that renamed ``oracle_min``/
+    # ``frequency``, or a ``to_json`` emitting a wrong schema_version (e.g. +1), stayed green. Mirror
+    # invariant 18's stale-class wire pin (the emitted record, not the bare constant) for these shapes.
+    cfg, _ = fake_assets
+    rec = ResourceLineage.build(cfg).to_json()
+    assert set(rec["resource"]["descriptor"]) == {"oracle_min", "frequency", "members"}
+    assert rec["schema_version"] == 1  # the persisted wire value; a schema bump must update this pin

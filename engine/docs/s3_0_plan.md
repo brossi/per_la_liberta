@@ -310,10 +310,15 @@ red input. Home: `tests/unit/test_resource_lineage.py` (+ the normalization-neut
     **case-sensitive** profile (catches a hardcoded `.lower()`), and an **accent-fold table unlike
     Italian's** (catches a baked `_ACCENT_MAP`) — yields a correspondingly different `normalizer_version`
     and fold output, exercising every branch behaviourally.
-11. **Neutrality green.** `structure/lineage.py` trips no `test_structure_neutrality` term. For
-    `dictionaries/normalization.py` (unguarded by both existing scans), the **behavioural** guard is
-    test 10 (the real guard); a targeted source-language literal scan is added belt-and-suspenders only
-    (a naive `.lower()`/`a-z` scan false-positives on neutral code).
+11. **Neutrality green.** `structure/lineage.py` trips no `test_structure_neutrality` term (its
+    structural heading/guillemet/count axis). For the **resource-identity** axis — a baked dictionary
+    dir / frequency filename / source-language name / accent-fold literal, which *neither* existing
+    scan covers — the **behavioural** guard is test 10 (the real guard); a targeted source-language
+    *resource*-literal scan (`test_resource_neutrality.py`) is added belt-and-suspenders only (a naive
+    `.lower()`/`a-z` scan false-positives on neutral code). The #27 pre-commit audit **widened that
+    scan's scope from `normalization.py`-only to both `dictionaries/normalization.py` and
+    `structure/lineage.py`**, since the same resource-identity gap applies to `lineage.py` (the
+    `test_structure_neutrality` glob covers it for *structural* terms, but not for resource literals).
 12. **Mutation proof.** Hand-mutate the hashing + the descriptor assembly (drop a descriptor field,
     weaken the fold, collapse the two stale classes) ⇒ the suite kills each (0 survivors).
 13. **Per-member tier localizes a change.** Changing one period member's bytes moves that member's hash
