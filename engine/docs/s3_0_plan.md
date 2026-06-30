@@ -81,7 +81,8 @@ The seam in one line: **S3.0 = fold; S3.1 = tokenize + search.**
   **not** copy this caching, D-C). `membership_oracle.py` / `period_dict.py` are M6 stubs.
 - `steps/adjudicate.py` `DictionaryOracle` — the live fold path S3.0's policy reproduces: `chunk_key`
   = `word[0].lower().translate(fold)` (adjudicate.py:114); probe forms `[word, word.translate(fold)]`
-  (:116–122); `word_letter_class` used only by `_search_chunk`'s boundary regex (:68–70) — the
+  — the folded form only when it differs from `word` (:116–122); `word_letter_class` used only by
+  `_search_chunk`'s boundary regex (:68–70) — the
   *search*, not the fold.
 - Dictionary `index.json` (verified): top-level `chunks` is a **chunk-keyed dict** (letter keys, plus
   Hoare's `_INDEX`), each value `{file, lines, …}`. Zingarelli/Edgren expose Italian letters; Hoare adds
@@ -151,9 +152,12 @@ deep-merge).
 - **Each period member** → digest over the files declared by its `index.json` `chunks[*].file`,
   **sorted by chunk key** for determinism, hashing the ordered list of `(chunk-key,
   declared-file-identity, content_hash)` triples. The **chunk key** is part of the identity, not only
-  the sort order (F1, #27 audit): it is the oracle's routing bucket (`word[0]`→`{letter}.txt`), so
-  re-declaring the same file+bytes under a different key is a routing change a filename-only digest
-  would miss. So adding/removing a declared chunk trips the version (identity in), a routing-key remap
+  the sort order (F1, #27 audit): it versions the declared *key→file binding* (re-declaring the same
+  file+bytes under a different key moves the version — a filename-only digest would miss it). The
+  *current* `DictionaryOracle` routes by filename (`word[0]`→`{letter}.txt`) and never reads this key,
+  so this is conservative forward-coverage for a future `index.json`-reading oracle (see the §2
+  consumed-set caveat), not a change the present system routes on. So adding/removing a declared chunk
+  trips the version (identity in), a routing-key remap
   trips it (key in), a chunk's content change trips it (content in), and `index.json`'s own incidental
   metadata (counts/sizes) does **not** (manifest bytes out). This excludes every undeclared file —
   `raw.txt`, `00_front_matter.txt`, the derived JSON — regardless of its git status; only the declared
@@ -243,7 +247,8 @@ Operations exposed (all reading **only** `{case_fold, accent_fold}`), each with 
 - **`chunk_key(token)`** — first-char case+accent fold → which chunk to load (oracle's
   `word[0].lower().translate(fold)`).
 - **`probe_forms(token)`** — the ordered `[original, accent-folded]` forms the legacy oracle
-  boundary-searches (oracle's `[word, word.translate(fold)]`).
+  boundary-searches (oracle's `[word, word.translate(fold)]`, the folded form appended only when it
+  differs from the original — an unaccented token yields a single form).
 
 A *single canonical membership key* (full token, case+accent folded — the form S3.1's Zipf-DP would
 consult) is **deferred to S3.1**, not exposed here: it has **no S3.0 consumer** and **no live oracle op
@@ -294,7 +299,8 @@ red input. Home: `tests/unit/test_resource_lineage.py` (+ the normalization-neut
    exact equality. (Not "non-empty exists".)
 8. **Fold ops reproduce the oracle fold path.** `chunk_key` and `probe_forms` match `DictionaryOracle`'s
    fold behaviour on representative tokens (incl. an accented one) — bound to the *live oracle ops
-   specifically* (`word[0].lower().translate(fold)` and `[word, word.translate(fold)]`), not a vague
+   specifically* (`word[0].lower().translate(fold)` and `[word, word.translate(fold)]` — folded form
+   only when it differs), not a vague
    "live behaviour". No `lookup_key` here — it is deferred to S3.1 (D-F), having no live oracle referent.
 9. **Loads via the profile; bindings resolve (hard, no skip).** `build(load_book("per_la_liberta"))`
    succeeds; the frequency dict + every period-dictionary dir resolve via `require_asset`

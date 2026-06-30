@@ -427,13 +427,27 @@ def test_an_undeclared_stray_file_is_ignored(fake_assets):
 def test_fail_loud_when_a_member_index_is_malformed(fake_assets):
     cfg, root = fake_assets
     index = root / "dictionary" / "edgren_1901" / "index.json"
-    # valid JSON, but no top-level "chunks" key
-    index.write_text(json.dumps({"version": 1}), encoding="utf-8")
-    with pytest.raises(MissingInputError):
-        ResourceLineage.build(cfg)
-    # a declared chunk lacking its "file" identity is equally malformed
-    index.write_text(json.dumps({"chunks": {"A": {"lines": 10}}}), encoding="utf-8")
-    with pytest.raises(MissingInputError):
+
+    def _expect_malformed(write):
+        write(index)
+        with pytest.raises(MissingInputError, match="malformed dictionary manifest"):
+            ResourceLineage.build(cfg)
+
+    # Every arm of the except must map to the clean MissingInputError (message-pinned), not just the
+    # KeyError arms a no-`chunks`/no-`file` test would reach — the JSONDecodeError / TypeError /
+    # UnicodeError arms a KeyError-only test would leave free to be silently deleted (#27 audit-2,
+    # R1/R2). The truncated-JSON case is the "half-written manifest" this fail-loud path most targets.
+    _expect_malformed(lambda p: p.write_text(json.dumps({"version": 1}), encoding="utf-8"))         # no "chunks"  → KeyError
+    _expect_malformed(lambda p: p.write_text(json.dumps({"chunks": {"A": {"x": 1}}}), encoding="utf-8"))  # chunk w/o "file" → KeyError
+    _expect_malformed(lambda p: p.write_text('{"chunks": {', encoding="utf-8"))                     # truncated     → JSONDecodeError
+    _expect_malformed(lambda p: p.write_text(json.dumps({"chunks": [1, 2, 3]}), encoding="utf-8"))  # non-dict chunks → TypeError
+    _expect_malformed(lambda p: p.write_bytes(b"\xff\xfe not utf-8\n"))                             # non-UTF-8     → UnicodeError
+
+    # R4: a well-formed manifest declaring ZERO chunks can't be content-hashed — a constant digest
+    # blind to disk content is the "silent partial hash" D-C forbids, so it fails loud too (distinct
+    # message, distinct cause from the malformed shapes above).
+    index.write_text(json.dumps({"chunks": {}}), encoding="utf-8")
+    with pytest.raises(MissingInputError, match="declares no chunks"):
         ResourceLineage.build(cfg)
 
 
@@ -477,12 +491,22 @@ def test_resource_version_tracks_the_chunk_routing_key(fake_assets):
     # identity + content are unchanged), so this pins the chunk-key half of the (key, file, content)
     # identity D-C now hashes.
     cfg, root = fake_assets
-    v0 = ResourceLineage.build(cfg).resource_version
+    before = ResourceLineage.build(cfg)
+    v0 = before.resource_version
+    h0 = {m["name"]: m["hash"] for m in before.to_json()["resource"]["descriptor"]["members"]}
     index = root / "dictionary" / "zingarelli_1922" / "index.json"
     data = json.loads(index.read_text(encoding="utf-8"))
+    assert list(data["chunks"]) == ["A"]  # single-chunk precondition the pin's strength rests on
     data["chunks"]["B"] = data["chunks"].pop("A")  # same file (a.txt) + bytes, new routing key
     index.write_text(json.dumps(data), encoding="utf-8")
-    assert ResourceLineage.build(cfg).resource_version != v0
+    after = ResourceLineage.build(cfg)
+    # the changed member's per-member hash moves, the others don't — pins chunk-key *membership* in
+    # the digest, not merely a roll-up shift (a wrong "hash the whole index.json" impl is separately
+    # forbidden by test_index_metadata_churn_does_not_move_the_version, the complementary pin).
+    h1 = {m["name"]: m["hash"] for m in after.to_json()["resource"]["descriptor"]["members"]}
+    assert h1["Zingarelli 1922"] != h0["Zingarelli 1922"]
+    assert h1["Edgren 1901"] == h0["Edgren 1901"]
+    assert after.resource_version != v0
 
 
 # --- invariant 16 — canonicalizer round-trip stability ------------------------------------- #

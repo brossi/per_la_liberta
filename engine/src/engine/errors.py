@@ -24,12 +24,14 @@ class EngineError(Exception):
 
 
 class MissingInputError(EngineError):
-    """A step's required input artifact — or a config-referenced asset — is absent.
+    """A step's required input artifact — or a config-referenced asset — is absent or unusable.
 
-    Covers an absent workspace input (``reconcile``'s OCR copies, ``ocr``'s scan PDF) and a
+    Covers an absent workspace input (``reconcile``'s OCR copies, ``ocr``'s scan PDF), a
     referenced asset that does not resolve (``validate``'s frequency dictionary, ``adjudicate``'s
-    period-dictionary dir — via ``paths.require_asset``). Both are known, user-facing failures,
-    so they exit cleanly (code 3) instead of as a bare ``FileNotFoundError`` traceback.
+    period-dictionary dir — via ``paths.require_asset``), and a present-but-structurally-unusable
+    input (a malformed/non-UTF-8 dictionary ``index.json``, or one declaring no chunks —
+    ``structure.lineage``). All are known, user-facing failures, so they exit cleanly (code 3)
+    instead of as a bare ``FileNotFoundError`` / ``KeyError`` / ``UnicodeDecodeError`` traceback.
     """
 
     exit_code = 3

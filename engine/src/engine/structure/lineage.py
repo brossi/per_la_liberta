@@ -32,8 +32,9 @@ hash (which covers the descriptor only — a schema bump does not move a descrip
 
 Engine-agnostic: this module reads paths and fold tables from the profile and carries no language,
 ordinal, or book-structure literal. The load-bearing neutrality proof is *behavioural* — a baked
-asset path breaks the binding tests (``test_build_resolves_real_assets`` / ``fake_assets``) and a
-baked accent table or case rule breaks ``test_synthetic_profile_breaks_on_any_bake``. The S0.2
+asset path breaks the real-asset binding test (``test_build_resolves_real_assets_and_fails_loud_on_a_typo``)
+and the ``fake_assets``-fixture tests, and a baked accent table or case rule breaks
+``test_synthetic_profile_breaks_on_any_bake``. The S0.2
 structure-neutrality scan also globs this file, but its denylist (structural heading/punctuation/count
 terms) would not catch a baked dictionary dir or accent map, so it is belt-and-suspenders here, not
 the primary guard.
@@ -94,13 +95,16 @@ def _digest_member(member: PeriodDictionary) -> str:
     """Content digest of one period-dictionary member, over the files its ``index.json`` declares.
 
     Resolves the member dir + its ``index.json`` through ``require_asset`` (fail-loud:
-    ``MissingInputError`` on an absent dir, a missing manifest, a declared-but-absent chunk file, or a
-    structurally malformed manifest — never a bare ``KeyError``/``JSONDecodeError`` from inside the
-    loop), then hashes the ordered ``[chunk-key, declared-filename, content-hash]`` triples for the
-    files named in ``chunks[*].file``, sorted by chunk key for determinism. The **chunk key** is part
-    of the identity (not only the sort order) because it is the oracle's routing bucket — ``word[0]``
-    selects ``{letter}.txt`` — so re-declaring the same file+bytes under a different key is a routing
-    change that must move the version (D-C, F1). Only key + declared filename + bytes enter the digest
+    ``MissingInputError`` on an absent dir, a missing manifest, a declared-but-absent chunk file, a
+    structurally malformed or non-UTF-8 manifest, or a manifest declaring no chunks — never a bare
+    ``KeyError``/``JSONDecodeError``/``UnicodeDecodeError`` from inside the loop), then hashes the
+    ordered ``[chunk-key, declared-filename, content-hash]`` triples for the files named in
+    ``chunks[*].file``, sorted by chunk key for determinism. The **chunk key** is part of the identity
+    (not only the sort order): it versions the declared *key→file binding*, so re-declaring the same
+    file+bytes under a different key moves the version (D-C, F1). (The *current* ``DictionaryOracle``
+    routes by filename — ``word[0]`` selects ``{letter}.txt`` — and never reads this key; hashing it is
+    conservative forward-coverage for an ``index.json``-reading oracle, not a change the present system
+    routes on — see the §2 consumed-set caveat.) Only key + declared filename + bytes enter the digest
     — the manifest's incidental metadata (``lines``/``size_kb``/…) never enters it, so a no-op index
     regeneration does not move it (D-C "manifest bytes out"), and a present-but-undeclared stray file
     (e.g. the regenerable ``raw.txt``) is ignored.
@@ -110,10 +114,14 @@ def _digest_member(member: PeriodDictionary) -> str:
     try:
         chunks = json.loads(index_path.read_text(encoding="utf-8"))["chunks"]
         declared = [(key, chunks[key]["file"]) for key in sorted(chunks)]
-    except (json.JSONDecodeError, KeyError, TypeError) as exc:
+    except (json.JSONDecodeError, UnicodeError, KeyError, TypeError) as exc:
         raise MissingInputError(
             f"malformed dictionary manifest {member.dir}/index.json ({exc})"
         ) from exc
+    if not declared:
+        raise MissingInputError(
+            f"dictionary manifest {member.dir}/index.json declares no chunks"
+        )
     triples = []
     for chunk_key, filename in declared:
         chunk_path = require_asset(f"{member.dir}/{filename}", kind="file")
