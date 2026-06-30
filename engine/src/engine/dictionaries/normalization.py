@@ -27,15 +27,18 @@ S3.1** — it has no live oracle op to bind against here (D-F).
 
 The tokenizer identity (``spacy_model``) and the boundary-search predicate (``word_letter_class``)
 are **not** this policy's — they belong to S3.1's segmentation/search version. This module carries
-no language literal: the fold axes are data read from the profile, never baked here.
+no language literal: the fold axes are data read from the profile (``case_fold`` /
+``accent_fold``), never baked here.
 
-Scaffold stub (S3.0.3 / #25): the operations are importable real signatures raising
-``NotImplementedError``; the fold behaviour lands in S3.0.4 (#26).
+The fold ops land in S3.0.4 (#26); the normalizer-version hash over :meth:`descriptor` is
+``structure.lineage``'s (S3.0.5 / #27).
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
+
+from engine.util.text import build_fold_table
 
 
 @dataclass(frozen=True, slots=True)
@@ -51,30 +54,51 @@ class NormalizationPolicy:
     """
 
     case_fold: str
-    accent_fold: dict  # {"from": "àá…", "to": "aa…"} — the profile's fixed fold table
+    accent_fold: dict  # the profile's fixed {"from": ..., "to": ...} accented->base fold table
 
     def chunk_key(self, token: str) -> str:
         """The folded first-character chunk key for ``token`` (case+accent fold of ``token[0]``).
 
         Reproduces ``DictionaryOracle``'s ``word[0].lower().translate(fold)`` with ``.lower()``
-        generalised to ``case_fold``. Raises ``NotImplementedError`` until S3.0.4 (#26).
+        generalised to ``case_fold`` — case first, then the accent fold, so a case-folded base
+        char still routes through the same accent table the live oracle uses for chunk selection.
+        Precondition: ``token`` is non-empty (``token[0]``); the live oracle never folds an
+        empty/sub-3-char word (it short-circuits before the fold), so the caller owns that guard.
         """
-        raise NotImplementedError("NormalizationPolicy.chunk_key lands in S3.0.4 (#26)")
+        return self._fold_case(token[0]).translate(build_fold_table(self.accent_fold))
 
     def probe_forms(self, token: str) -> list[str]:
         """The ordered, de-duplicated probe forms ``[token, accent-folded token]``.
 
-        Reproduces the legacy oracle's ``word`` then ``word.translate(fold)`` search forms (the
-        folded form only when it differs from the original; case is not applied). Raises
-        ``NotImplementedError`` until S3.0.4 (#26).
+        Reproduces the legacy oracle's ``word`` then ``word.translate(fold)`` search forms — the
+        folded form is appended only when it differs from the original (so an unaccented token
+        yields a single form). Case is **not** applied: the live oracle searches case-insensitively
+        via a regex flag, a *search* concern (S3.1), not by folding the probe form here.
         """
-        raise NotImplementedError("NormalizationPolicy.probe_forms lands in S3.0.4 (#26)")
+        folded = token.translate(build_fold_table(self.accent_fold))
+        return [token] if folded == token else [token, folded]
 
     def descriptor(self) -> dict:
         """The versionable descriptor — ``{case_fold, accent_fold}``, exactly the ops' inputs.
 
         The normalizer version is a hash of this descriptor (``structure.lineage``); its key set
-        equals the profile fields the fold ops actually read (invariant 17). Raises
-        ``NotImplementedError`` until S3.0.4 (#26).
+        equals the profile fields the fold ops actually read (invariant 17).
         """
-        raise NotImplementedError("NormalizationPolicy.descriptor lands in S3.0.4 (#26)")
+        return {"case_fold": self.case_fold, "accent_fold": self.accent_fold}
+
+    def _fold_case(self, char: str) -> str:
+        """Apply the ``case_fold`` axis to ``char`` — the generalised ``.lower()`` chunk_key bakes.
+
+        The schema enum-bounds ``case_fold`` to these three modes, so an unknown value can only mean
+        a schema/policy drift (a new mode added without an op): fail loud rather than silently
+        leaving the case un-folded, which would mis-route the chunk key.
+        """
+        if self.case_fold == "lower":
+            return char.lower()
+        if self.case_fold == "casefold":
+            return char.casefold()
+        if self.case_fold == "none":
+            return char
+        raise ValueError(
+            f"unknown case_fold mode {self.case_fold!r} (expected 'lower' | 'casefold' | 'none')"
+        )

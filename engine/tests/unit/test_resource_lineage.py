@@ -282,6 +282,51 @@ def test_synthetic_profile_breaks_on_any_bake():
     assert _normalizer_version(policy) != _normalizer_version(italian)
 
 
+# --- fold-op robustness: an unsupported case_fold mode fails loud (not a numbered §4 invariant) #
+# case_fold is enum-bound at the schema, but a policy constructed directly (as this battery does)
+# can carry a drifted mode — e.g. a 4th mode added to the schema without a matching fold op. The op
+# must reject it loudly, not mis-route the chunk key by leaving the case unfolded. Exercises the
+# _fold_case failure branch #26 adds; red if that branch falls through to a bare None.translate.
+
+def test_chunk_key_fails_loud_on_an_unsupported_case_fold_mode():
+    policy = NormalizationPolicy(case_fold="titlecase", accent_fold={"from": "à", "to": "a"})
+    with pytest.raises(ValueError):
+        policy.chunk_key("Àncora")
+
+
+# The "lower" path has a live oracle referent (test 8); these two pin the case-axis branches the real
+# Italian profile never exercises (feedback_red_first_tests / single-fixture blind spots — a
+# non-default config value is born untested). The module docstring motivates "casefold" for a
+# non-Latin/case-sensitive book, and the chunk_key docstring states the case-before-accent order;
+# without these, a `casefold→lower` swap and an order reversal both survive the suite green.
+
+def test_chunk_key_casefold_mode_differs_from_lower():
+    # ẞ (capital sharp s) casefolds to "ss" but lowercases to "ß" — so this pins that "casefold" is
+    # str.casefold, not a hardcoded .lower(). Fold table chosen not to touch the result.
+    policy = NormalizationPolicy(case_fold="casefold", accent_fold={"from": "à", "to": "a"})
+    assert policy.chunk_key("ẞoo") == "ss"          # casefold; a `.lower()` bake yields "ß"
+    assert policy.chunk_key("ẞoo") != "ẞoo"[0].lower()
+
+
+def test_chunk_key_lower_mode_differs_from_casefold():
+    # The symmetric pin: the "lower" path — the one the real profile uses and the live oracle bakes
+    # (adjudicate.py:114 word[0].lower()) — must be str.lower, not str.casefold. Without this, a
+    # `.lower()`→`.casefold()` swap in the lower branch survives green (it diverges only on ẞ-like
+    # chars absent from the all-"lower" Italian fixture), mis-routing "ß" to a 2-char "ss" chunk.
+    policy = NormalizationPolicy(case_fold="lower", accent_fold={"from": "à", "to": "a"})
+    assert policy.chunk_key("ẞoo") == "ß"           # lower; a `.casefold()` bake yields "ss"
+    assert policy.chunk_key("ẞoo") != "ẞoo"[0].casefold()
+
+
+def test_chunk_key_applies_case_before_accent():
+    # A lowercase-only fold table makes the order observable: case-first lowers À→à then folds à→a
+    # ("a"); accent-first would translate À (absent from the table) unchanged then lower it ("à").
+    # Every real profile's table is case-complete (À→A and à→a both present), so the order is a no-op
+    # there and only a synthetic asymmetric table can pin the docstring's load-bearing claim.
+    policy = NormalizationPolicy(case_fold="lower", accent_fold={"from": "à", "to": "a"})
+    assert policy.chunk_key("Àncora") == "a"        # case→accent; reversed order yields "à"
+
+
 # --- invariant 13 — per-member tier localizes a change ------------------------------------- #
 
 def test_per_member_hash_localizes_a_change(fake_assets):
