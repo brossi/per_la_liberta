@@ -21,7 +21,7 @@ The ``to_json()`` shape the battery pins (the contract #27 implements, the fragm
     {
       "schema_version": <int>,
       "resource":   {"version": "sha256:…", "stale_class": "resource-set",
-                     "descriptor": {"oracle_min": <int>,
+                     "descriptor": {"oracle_min": <int>, "frequency": "sha256:…",
                                     "members": [{"name","kind","dir","hash"}, …]}},
       "normalizer": {"version": "sha256:…", "stale_class": "normalization-policy",
                      "descriptor": {"case_fold": <str>, "accent_fold": {"from","to"}}},
@@ -52,6 +52,7 @@ import pytest
 import engine.structure as structure
 from engine import paths
 from engine.config.loader import load_book
+from engine.config.models import PeriodDictionary
 from engine.dictionaries.normalization import NormalizationPolicy
 from engine.errors import MissingInputError
 from engine.structure.lineage import ResourceLineage, _canonical, _sha256_bytes
@@ -208,6 +209,29 @@ def test_build_is_deterministic_and_reorder_invariant(fake_assets):
         ResourceLineage.build(reordered).resource_version
         == ResourceLineage.build(cfg).resource_version
     )
+
+
+# --- invariant 6 (extended) — reorder-invariance survives a duplicate member name ---------- #
+# The base reorder test above uses the three real members, whose names are distinct — so sorting
+# members by `name` alone is enough there. But the sort is STABLE, so two members sharing a `name`
+# keep their input order and a profile reorder flips them, moving resource_version. A realistic
+# trigger is a manifest `override` that appends a dictionary under a name already present (D-C cites
+# exactly this swap path). The sort key must be a TOTAL order — (name, kind, dir) — so a duplicate
+# name still resolves deterministically by the unique `dir`. (#27 pre-commit audit, portability MED-1.)
+
+def test_reorder_invariance_survives_a_duplicate_member_name(fake_assets):
+    cfg, _ = fake_assets
+    # same name AND same kind, differing only in dir — so the pin requires `dir` in the sort key
+    # (a (name) or (name, kind) key both stay input-order-dependent and go red).
+    dup = (
+        PeriodDictionary(name="Dup", kind="monolingual", dir="dictionary/zingarelli_1922"),
+        PeriodDictionary(name="Dup", kind="monolingual", dir="dictionary/edgren_1901"),
+    )
+    fwd = ResourceLineage.build(_with_language(cfg, period_dictionaries=dup)).resource_version
+    rev = ResourceLineage.build(
+        _with_language(cfg, period_dictionaries=tuple(reversed(dup)))
+    ).resource_version
+    assert fwd == rev
 
 
 # --- invariant 7 — versions correspond to descriptors (binding, not shape) ----------------- #
@@ -392,6 +416,27 @@ def test_an_undeclared_stray_file_is_ignored(fake_assets):
     assert ResourceLineage.build(cfg).resource_version == v0
 
 
+# --- invariant 15 (extended) — fail loud on a malformed manifest, not a bare KeyError ------ #
+# D-C's fail-loud surface enumerates "declared-but-absent file" and "no index.json"; both are
+# covered above. But a present-but-STRUCTURALLY-malformed index.json (a half-written / hand-edited
+# manifest — the likeliest corruption) must also raise the clean MissingInputError (exit 3) the
+# engine raises for every unusable input asset, not a bare KeyError/JSONDecodeError from deep in the
+# digest loop (the I1/require_asset "no raw traceback from a loader" contract). (#27 pre-commit
+# audit, portability MED-2 + spec-seam OBS-2.)
+
+def test_fail_loud_when_a_member_index_is_malformed(fake_assets):
+    cfg, root = fake_assets
+    index = root / "dictionary" / "edgren_1901" / "index.json"
+    # valid JSON, but no top-level "chunks" key
+    index.write_text(json.dumps({"version": 1}), encoding="utf-8")
+    with pytest.raises(MissingInputError):
+        ResourceLineage.build(cfg)
+    # a declared chunk lacking its "file" identity is equally malformed
+    index.write_text(json.dumps({"chunks": {"A": {"lines": 10}}}), encoding="utf-8")
+    with pytest.raises(MissingInputError):
+        ResourceLineage.build(cfg)
+
+
 # --- D-C resource-digest design properties (not promoted to a numbered §4 invariant) ------- #
 # oracle_min and index.json's incidental metadata are resource-digest guarantees the plan states
 # (D-C) but §4 never numbered. Without a red-first pin, an #27 impl that drops oracle_min from the
@@ -421,6 +466,23 @@ def test_index_metadata_churn_does_not_move_the_version(fake_assets):
     # D-C "manifest bytes out": the digest hashes chunks[*].file identity + content, not the index
     # bytes — so a no-op index regeneration must not trip a false re-segment.
     assert ResourceLineage.build(cfg).resource_version == v0
+
+
+def test_resource_version_tracks_the_chunk_routing_key(fake_assets):
+    # F1 (#27 audit, forward consumer-seam): the chunk key is the oracle's ROUTING bucket
+    # (DictionaryOracle loads word[0]→`{letter}.txt`, adjudicate.py:102/114), so it must enter the
+    # per-member digest — not just the declared filename. Re-declaring the same file + same bytes
+    # under a different routing key (A→B) is a real routing change an index.json-reading oracle would
+    # resolve differently, so resource_version must move. A filename-only digest misses it (the file
+    # identity + content are unchanged), so this pins the chunk-key half of the (key, file, content)
+    # identity D-C now hashes.
+    cfg, root = fake_assets
+    v0 = ResourceLineage.build(cfg).resource_version
+    index = root / "dictionary" / "zingarelli_1922" / "index.json"
+    data = json.loads(index.read_text(encoding="utf-8"))
+    data["chunks"]["B"] = data["chunks"].pop("A")  # same file (a.txt) + bytes, new routing key
+    index.write_text(json.dumps(data), encoding="utf-8")
+    assert ResourceLineage.build(cfg).resource_version != v0
 
 
 # --- invariant 16 — canonicalizer round-trip stability ------------------------------------- #
