@@ -72,6 +72,13 @@ skip-masking).
 > it golden would invite invented expected outputs wearing a parity badge —
 > `feedback_no_cheating_results`). Each task's *Done-when* names its binding tier accordingly.
 
+> **Adversarial-audit gate (§9, D36).** A `BUILD`/`GATE` task's *Done-when* is not met until a
+> pre-commit adversarial pass is clean — the mutation hunt + overlapping wide/narrow reviewers, with
+> any *behavior-changing* remediation re-audited **to a fixpoint** (docs/test-only changes terminate)
+> and the apertures re-aimed at the delta. Proportional to surface (a fleet for substantial behavior,
+> a single check for a one-liner; signal, not ceremony), self-applied, forward-only — like red-first.
+> The S1.3b / S1.4 / S1.5 rows already record this practice; D36 makes it the standing gate.
+
 ## Orientation — what the axis builds
 
 Three concerns, non-linear (spec §2); a three-layer substrate (spec §3.2):

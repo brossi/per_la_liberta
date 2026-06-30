@@ -552,6 +552,24 @@ mutant is a line no test discriminates; adopt scoped where cost permits. Worked 
 the S0.1–S0.3 module docstrings (`test_workspace`, `test_structure_artifacts`,
 `test_structure_tiers`, `test_structure_neutrality`).
 
+**Adversarial-audit gate — the review method, sibling to red-first.** Red-first governs the *tests*;
+this governs the *review* a `BUILD`/`GATE` task passes before commit. Run a pre-commit adversarial
+pass: the mechanical **mutation hunt** (the narrow form of red-first, above) plus several
+**overlapping read-only reviewers** at two complementary apertures — **wide** (seam / consumer /
+cross-artifact plan↔code / boundary) and **narrow** (exact branch / exception class / per-line mutant
+/ single-fixture coupling). Two rules, because a pass certifies only the bytes it saw: (A) re-audit
+any *behavior-changing* remediation it produces — a new branch, error path, or contract is itself
+unaudited — and **iterate to a fixpoint**: stop when a pass yields no behavior-changing change (a
+clean pass, or remediation that is docs/comments/test-only). (B) re-aim the apertures at the delta — a
+narrow delta wants the microscope, a wide delta the telescope; weight by aperture agreement
+(convergence → act, lone-lens → verify-first). **Proportionality** bounds it: depth scales with
+surface — a substantial behavioral task warrants several lenses, a one-line mechanical or doc-only
+change a single proportional check, never a fleet (signal, not ceremony; the cost is real).
+Self-applied, like red-first — a DoD discipline, **not** a mechanical hook; forward-only. Worked
+example: S3.0.5 (#27) — the first pass caught a wrong-identity digest (wide); the *re-audit of its
+own fix* caught a `UnicodeDecodeError` escaping the new `except` (narrow).
+`feedback_adversarial_audit_cadence`.
+
 Per the house tiers (`tests/unit` property/separability/isolation/neutrality; `tests/golden`):
 
 - **Golden** — reproduce PLL's current chapter boundaries and identities through the new
@@ -630,6 +648,7 @@ Per the house tiers (`tests/unit` property/separability/isolation/neutrality; `t
 | **D33** | **O1 resolved — Option A "store-and-rebind."** `node_id` is an opaque label stored in B's map (not derived); humans mint containers, extractor mints leaves; re-extraction re-binds via geometry + fuzzy fingerprint + struct-path, fail-loud. Rejected Option B (hash-derived → churn). One-way gate (regen-guard family), revisitable after build-out. Entails D11/D12/D20/D24 | **Decided (user)** |
 | **D34** | **Cross-language alignment is general source↔target (LANG_A↔LANG_B); IT↔EN is PLL's instance, not the design.** Core carries no language pair (`feedback_engine_agnostic`); refines D7/R5 | **Decided (user)** |
 | **D35** | **The structural model is designed for a reasonably unbounded unit count (target order ~100k units):** machine-minted leaf identity, flat addressable node storage, no super-linear structure ops. The O3 HITL scale ceiling is therefore a resource/cost question, not an architectural limit | **Decided (user)** |
+| **D36** | **Adversarial-audit gate (§9):** a `BUILD`/`GATE` task is not DONE until a pre-commit adversarial pass (mutation hunt + overlapping wide/narrow reviewers) is clean; re-audit any behavior-changing remediation **to a fixpoint** (docs/test-only terminates), re-aiming apertures at the delta; proportional to surface, self-applied (not a hook), **forward-only (does not reopen DONE tasks)**. Codifies the de-facto 5-lens practice in the S1.3b/S1.4/S1.5 rows + `feedback_adversarial_audit_cadence` | **Decided (user)** |
 
 ---
 
